@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="site_wrapper">
+      <header class="site_header">
+        <h1>Raymond Thompson</h1>
+        <h2>Web Developer</h2>
+      </header>
+      <main class="site_content">
+        <h2></h2>
+        <article class="intro">
+          <h2>Hello</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+        </article>
+        <section class="container_1">
+          <img src="images/home-page-image.jpg" alt="" />
+        </section>
+        <section class="container_2">
+          <div class="parent">
+            <div class="div1 box">
+              <img src="images/codecademy-js.png" alt="" />
+            </div>
+            <div class="div2 box">
+              <img
+                src="images/freecodecamp-org-certification-javascript.png"
+                alt=""
+              />
+            </div>
+            <div class="div3 box">
+              <img
+                src="images/freecodecamp-org-certification-responsive-web-design.png"
+                alt=""
+              />
+            </div>
+            <div class="div4 box">
+              <img src="images/lynda_logo1r-d_72x72.png" alt="" />
+            </div>
+            <div class="div5 box">
+              <img src="images/nothing.jpg" alt="" />
+            </div>
+            <div class="div6 box">
+              <img src="images/nothing.jpg" alt="" />
+            </div>
+          </div>
+        </section>
+        <article class="whyidoit">
+          <h2>What I do</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+        </article>
+        <article class="outro">
+          <h2>Why I applied</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
+            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
+            perferendis odit voluptates autem non culpa porro quae. Iste,
+            quibusdam.
+          </p>
+          <a href="">GitHUB Link</a>
+        </article>
+      </main>
+      <br />
+      <footer class="site_footer"></footer>
+    </div>
+
+    <script>
+      var boxes = window.document.getElementsByClassName("box");
+
+      for (var box of boxes) {
+        box.addEventListener("click", function (e) {
+          e.preventDefault();
+          let x = this;
+          x.style.display = "block";
+          console.log(e, this);
+        });
+      }
+    </script>
+  </body>
+</html>
