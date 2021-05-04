@@ -1,3 +1,41 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+  -moz-box-sizing: $type; // Firefox < 29
+  box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+@mixin boredrady($shadow...) {
+  -webkit-border-radius: $shadow;
+  -moz-border-radius: $shadow;
+  -o-border-radius: $shadow;
+  border-radius: $shadow;
+}
+
+@mixin transitioner($transitioner...) {
+  -webkit-transition: $transitioner;
+  -moz-transition: $transitioner;
+  -o-transition: $transitioner;
+  transition: $transitioner;
+}
+
+@mixin transforming-things($transforming-things...) {
+  transform: $transforming-things;
+  -webkit-transform: $transforming-things;
+  -moz-transform: $transforming-things;
+  -o-transform: $transforming-things;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -161,7 +199,7 @@ body {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  gap: 1em 10px;
+  gap: 1em 20px;
   min-height: 80vh;
 
   h2 {
@@ -172,7 +210,7 @@ body {
   .intro {
     width: 49%;
     flex: 1 0 auto;
-    padding: 0 1.5em;
+    padding: 0;
     border-radius: 50px;
     display: flex;
     flex-flow: column;
@@ -206,34 +244,135 @@ body {
       grid-row-gap: 5px;
     }
 
-    .box {
-      cursor: pointer;
-      transition: all 2s;
+    @keyframes example {
+      0% {
+        transform: scale(0);
+      }
+      25% {
+        transform: scale(0.25);
+      }
+      50% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .pill {
+      animation-name: example;
+      animation-duration: 1s;
     }
 
     .div1 {
       grid-area: 1 / 1 / 2 / 2;
+      background-image: url("images/codecademy-js.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
     .div2 {
       grid-area: 1 / 2 / 2 / 3;
+      background-image: url("images/freecodecamp-org-certification-javascript.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
     .div3 {
       grid-area: 1 / 3 / 2 / 4;
+      background-image: url("images/freecodecamp-org-certification-responsive-web-design.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
     .div4 {
       grid-area: 2 / 1 / 3 / 2;
+      background-image: url("images/lynda_logo1r-d_72x72.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
     .div5 {
       grid-area: 2 / 2 / 3 / 3;
+      background-image: url("images/codewars.png");
+      background-repeat: no-repeat;
+      //background-size: cover;
+      background-position: 20% 50%;
     }
     .div6 {
       grid-area: 2 / 3 / 3 / 4;
+      background-image: url("images/codecademy-ruby.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    figure.box {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      height: 150px;
+      padding: 0;
+      margin: 0;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    figcaption.cover {
+      position: absolute;
+      z-index: 10;
+      background: rgba(51, 51, 51, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0;
+      @include transitioner(all 200ms ease-in-out);
+      @include transforming-things(scale(0));
+      font-family: "Ruda", Sans-Serif;
+      a.cert_link {
+        width: 86%;
+        border: none;
+        font-size: 0.85em;
+        cursor: pointer;
+        float: none;
+        margin: 0 auto;
+        text-decoration: none;
+        display: block;
+        line-height: 40px;
+        font-weight: normal;
+        background-color: #fff;
+        color: #000;
+        text-align: center;
+
+        &:hover {
+          font-size: 0.95em;
+          font-weight: normal;
+        }
+      }
+
+      h1.cert_title {
+        width: 100%;
+        font-size: 1em;
+        margin: 0.5em 0;
+        line-height: 40px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    figure.box:hover figcaption.cover {
+      opacity: 1;
+      @include transforming-things(scale(1));
+      cursor: pointer;
     }
   }
   .whyidoit {
     width: 54%;
     flex: 1 0 auto;
-    padding: 0 1.5em;
+    padding: 0;
     border-radius: 50px;
     display: flex;
     flex-flow: row wrap;
@@ -247,7 +386,7 @@ body {
   .outro {
     width: 93%;
     flex: 1 0 auto;
-    padding: 0 1.5em;
+    padding: 0;
     border-radius: 50px;
     display: flex;
     flex-flow: column;
