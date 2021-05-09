@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda"
       rel="stylesheet"
@@ -17,9 +17,57 @@
         <h1>Raymond Thompson</h1>
         <h2>Web Developer</h2>
       </header>
+
+      <nav class="site_navigation">
+        <button
+          class="tablink"
+          onclick="openPage('banner', this, 'red')"
+          id="defaultOpen"
+        >
+          Home
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('about_content', this, 'green')"
+        >
+          What I Do
+        </button>
+        <button class="tablink" onclick="openPage('outro', this, 'blue')">
+          Why I Applied
+        </button>
+      </nav>
       <main class="site_content">
-        <article class="intro">
-          <img class="main_image" src="images/home-page-image.jpg" alt="" />
+        <article id="banner" class="tabcontent">
+          <figure>
+            <picture>
+              <source
+                media="(max-width: 1024px)"
+                srcset="img/home-page-image-medium.jpg"
+              />
+              <source
+                media="(max-width: 800px)"
+                srcset="img/home-page-image-small.jpg"
+              />
+              <img
+                src="img/home-page-image-large.jpg"
+                alt="raythompsonwebdev"
+              />
+            </picture>
+
+            <!-- use $0.currentSrc or $0.naturalWidth in console to find out which image is showing -->
+            <!-- <img
+              class="main_image"
+              src="images/home-page-image.jpg"
+              srcset="
+                img/home-page-image-large.jpg  100w,
+                img/home-page-image-medium.jpg  50w,
+                img/home-page-image-small.jpg   25w
+              "
+              sizes="(max-width:1024px) 100vw, (min-width:1023px) 50vw"
+              alt=""
+            /> -->
+          </figure>
+
           <h2>Hello</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
@@ -40,29 +88,34 @@
             quibusdam.
           </p>
         </article>
-        <article class="whyidoit">
+        <article id="about_content" class="tabcontent">
           <h2>What I do</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-        </article>
-        <section class="container_2">
+          <div class="text_box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum
+              enim nam dolore, accusamus ipsa, nulla ratione delectus illo
+              similique, perferendis odit voluptates autem non culpa porro quae.
+              Iste, quibusdam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum
+              enim nam dolore, accusamus ipsa, nulla ratione delectus illo
+              similique, perferendis odit voluptates autem non culpa porro quae.
+              Iste, quibusdam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum
+              enim nam dolore, accusamus ipsa, nulla ratione delectus illo
+              similique, perferendis odit voluptates autem non culpa porro quae.
+              Iste, quibusdam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum
+              enim nam dolore, accusamus ipsa, nulla ratione delectus illo
+              similique, perferendis odit voluptates autem non culpa porro quae.
+              Iste, quibusdam.
+            </p>
+          </div>
           <div class="parent">
             <figure class="div1 box">
               <img src="images/codecademy-js.png" alt="" />
@@ -144,20 +197,18 @@
               </figcaption>
             </figure>
           </div>
-        </section>
-        <article class="outro">
+        </article>
+
+        <article id="outro" class="tabcontent">
           <h2>Why I applied</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
             nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
             perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
+            quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            A eum enim nam dolore, accusamus ipsa, nulla ratione delectus illo
+            similique, perferendis odit voluptates autem non culpa porro quae.
+            Iste, quibusdam.
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
@@ -171,5 +222,33 @@
       <br />
       <footer class="site_footer"></footer>
     </div>
+    <script>
+      function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+          tabcontent[i].style.opacity = 0;
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+        document.getElementById(pageName).style.opacity = 1;
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>

@@ -72,7 +72,7 @@ p {
   line-height: 1.7em;
   font-size: 1rem;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   color: $colorblack;
 }
 
@@ -83,7 +83,7 @@ a {
 
 @media (max-width: 1680px) {
   #site_wrapper {
-    width: 90%;
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -99,6 +99,29 @@ a {
     h2 {
       font-size: 1.5rem;
       text-align: center;
+    }
+  }
+
+  .site_navigation {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 0.5em;
+    /* Style tab links */
+    .tablink {
+      background-color: #555;
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 17px;
+      width: 25%;
+      display: inline-block;
+      line-height: 50px;
+    }
+
+    .tablink:hover {
+      background-color: #777;
     }
   }
 
@@ -164,12 +187,15 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 2em 20px;
+    gap: 1em 0;
+    height: 70vh;
+    width: 100%;
 
     h2 {
       text-align: left;
@@ -179,28 +205,73 @@ a {
       width: 100%;
     }
 
-    .intro {
-      width: 100%;
+    @keyframes example {
+      0% {
+        transform: scale(0);
+      }
+      25% {
+        transform: scale(0.25);
+      }
+      50% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+      height: auto;
+      animation-name: example;
+      animation-duration: 0.5s;
+    }
+
+    article#banner {
+      z-index: 0;
+      width: 97.7%;
       flex: 0 0 auto;
-      padding: 0;
-      img.main_image {
+      padding: 1em;
+      background-color: red;
+      figure {
         width: 13%;
+        margin: 0;
+        padding: 0;
+        margin: 0 0.5em 0 0;
         float: left;
+      }
+      img.main_image {
         display: block;
-        margin: 0 0.5em 0.25em 0;
-        //border-radius: 50%;
+        width: auto;
       }
       p {
         width: 100%;
       }
     }
 
-    .container_2 {
-      width: 50%;
+    article#about_content {
+      width: 97.7%;
       flex: 0 0 auto;
       display: flex;
-      flex-flow: column;
-      justify-content: center;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      padding: 1em;
+      background-color: green;
+
+      h2 {
+        align-self: flex-start;
+        width: 100%;
+      }
+      .text_box {
+        width: 49%;
+        float: left;
+        display: block;
+
+        p {
+          width: calc(100% - 1%);
+        }
+      }
+
       .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -210,6 +281,7 @@ a {
         grid-row-gap: 5px;
         padding: 0.25em;
         background-color: $colorblack;
+        width: 50%;
       }
       img {
         margin: auto;
@@ -302,20 +374,12 @@ a {
         @include raytransform(scale(1.1));
       }
     }
-    .whyidoit {
-      width: 47%;
-      flex: 0 0 auto;
-      padding: 0;
-      border-radius: 50px;
-      p {
-        width: 100%;
-      }
-    }
-    .outro {
-      width: 100%;
+
+    article#outro {
+      width: 97.7%;
       flex: 1 0 auto;
-      padding: 0;
-      border-radius: 50px;
+      padding: 1em;
+      background-color: blue;
       p {
         width: 100%;
       }
@@ -326,6 +390,7 @@ a {
     background-color: rgb(89, 4, 122);
     width: 100%;
     height: 50px;
+    clear: both;
   }
 }
 
@@ -377,26 +442,33 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.5rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 13%;
+      }
       img.main_image {
-        width: 14%;
+        display: block;
       }
       p {
         width: 100%;
       }
     }
 
-    .container_2 {
-      width: 50%;
+    article.about_content {
       flex: 0 0 auto;
+      .text_box {
+        p {
+          width: 100%;
+        }
+      }
       .parent {
         padding: 0.25em;
       }
@@ -448,14 +520,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 47%;
 
-      p {
-        width: 100%;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -517,17 +583,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.3rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 14%;
+      }
       img.main_image {
-        width: 15%;
+        display: block;
       }
 
       p {
@@ -536,9 +605,13 @@ a {
       }
     }
 
-    .container_2 {
-      width: 50%;
+    article.about_content {
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.9em;
+        }
+      }
       .parent {
         padding: 0.25em;
       }
@@ -587,15 +660,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 47%;
 
-      p {
-        width: 100%;
-        font-size: 0.9em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -658,17 +724,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.2rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 13%;
+      }
       img.main_image {
-        width: 16%;
+        display: block;
       }
       p {
         width: 100%;
@@ -676,9 +745,13 @@ a {
       }
     }
 
-    .container_2 {
-      width: 55%;
+    article.about_content {
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.85em;
+        }
+      }
       .parent {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -731,14 +804,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 40%;
 
-      p {
-        font-size: 0.85em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -800,17 +867,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.2rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 13%;
+      }
       img.main_image {
-        width: 14%;
+        display: block;
       }
       p {
         width: 100%;
@@ -818,9 +888,14 @@ a {
       }
     }
 
-    .container_2 {
+    article.about_content {
       width: 100%;
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.85em;
+        }
+      }
       .parent {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -875,14 +950,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 100%;
 
-      p {
-        font-size: 0.85em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -944,17 +1013,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.2rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 20%;
+      }
       img.main_image {
-        width: 21%;
+        display: block;
       }
       p {
         width: 100%;
@@ -962,14 +1034,16 @@ a {
       }
     }
 
-    .container_2 {
+    article.about_content {
       width: 100%;
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.85em;
+        }
+      }
       .parent {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         width: 98%;
-        margin: auto;
       }
       img {
         width: 80%;
@@ -1019,14 +1093,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 100%;
 
-      p {
-        font-size: 0.85em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -1088,17 +1156,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.2rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 20%;
+      }
       img.main_image {
-        width: 19%;
+        display: block;
       }
       p {
         width: 100%;
@@ -1106,9 +1177,14 @@ a {
       }
     }
 
-    .container_2 {
+    article.about_content {
       width: 100%;
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.85em;
+        }
+      }
       .parent {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -1163,14 +1239,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 100%;
 
-      p {
-        font-size: 0.85em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {
@@ -1232,17 +1302,20 @@ a {
     }
   }
 
-  .site_content {
+  main.site_content {
     gap: 2em 20px;
 
     h2 {
       font-size: 1.2rem;
     }
 
-    .intro {
+    article.banner {
       width: 100%;
+      figure {
+        width: 20%;
+      }
       img.main_image {
-        width: 21%;
+        display: block;
       }
       p {
         width: 100%;
@@ -1250,14 +1323,16 @@ a {
       }
     }
 
-    .container_2 {
+    article.about_content {
       width: 100%;
       flex: 0 0 auto;
+      .text_box {
+        p {
+          font-size: 0.85em;
+        }
+      }
       .parent {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
         width: 98%;
-        margin: auto;
       }
       img {
         width: 80%;
@@ -1307,14 +1382,8 @@ a {
         opacity: 1;
       }
     }
-    .whyidoit {
-      width: 100%;
 
-      p {
-        font-size: 0.85em;
-      }
-    }
-    .outro {
+    article.outro {
       width: 100%;
 
       p {

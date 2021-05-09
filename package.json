@@ -1,0 +1,44 @@
+{
+  "name": "raythompsonwebsite",
+  "version": "1.0.0",
+  "main": " ",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "grunt": "^1.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  },
+  "author": "raymond thompson",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": "https://github.com/raythompsonwebdev/raythompsonwebsite-fc.git",
+  "bugs": {
+    "url": "https://github.com/raythompsonwebdev/raythompsonwebsite-fc/issues"
+  },
+  "homepage": "https://github.com/raythompsonwebdev/raythompsonwebsite-fc#readme",
+  "description": "portfolio website",
+  "scripts": {
+    "compile-sass": "grunt sass",
+    "compile-images": "grunt responsive_images",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio"
+  ]
+}
