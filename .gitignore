@@ -109,4 +109,4 @@ style.css.map
 node_modules/
 public/
 img/
-.sass-cache/*
+.sass-cache/

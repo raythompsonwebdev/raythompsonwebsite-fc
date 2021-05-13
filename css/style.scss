@@ -81,6 +81,13 @@ a {
   font-family: "Ruda", Sans-Serif;
 }
 
+hr {
+  margin: 2em auto;
+  width: 80%;
+  display: block;
+  color: $colorblack;
+}
+
 @media (max-width: 1680px) {
   #site_wrapper {
     width: 92%;
@@ -199,8 +206,8 @@ a {
 
     h2 {
       text-align: left;
-      font-size: 1.5rem;
-      line-height: 40px;
+      font-size: 4.5rem;
+      line-height: auto;
       align-self: flex-start;
       width: 100%;
     }
@@ -220,7 +227,6 @@ a {
       }
     }
 
-    /* Style the tab content (and add height:100% for full page content) */
     .tabcontent {
       height: auto;
       animation-name: example;
@@ -234,15 +240,17 @@ a {
       padding: 1em;
       background-color: red;
       figure {
-        width: 13%;
-        margin: 0;
+        //width: 13%;
+        display: block;
         padding: 0;
         margin: 0 0.5em 0 0;
         float: left;
       }
-      img.main_image {
+      img,
+      picture {
         display: block;
         width: auto;
+        margin: 0 auto;
       }
       p {
         width: 100%;

@@ -9,19 +9,19 @@ module.exports = function (grunt) {
           sizes: [
             {
               name: "small",
-              width: 100,
+              width: 110,
             },
             {
               name: "medium",
-              width: 150,
+              width: 140,
             },
             {
               name: "large",
-              width: 200,
+              width: 170,
             },
             {
               name: "large_2x",
-              width: 400,
+              width: 340,
             },
           ],
         },

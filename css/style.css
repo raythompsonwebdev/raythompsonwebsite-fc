@@ -42,6 +42,13 @@ a {
   font-family: "Ruda", Sans-Serif;
 }
 
+hr {
+  margin: 2em auto;
+  width: 80%;
+  display: block;
+  color: #000;
+}
+
 @media (max-width: 1680px) {
   #site_wrapper {
     width: 92%;
@@ -152,12 +159,11 @@ a {
     gap: 1em 0;
     height: 70vh;
     width: 100%;
-    /* Style the tab content (and add height:100% for full page content) */
   }
   main.site_content h2 {
     text-align: left;
-    font-size: 1.5rem;
-    line-height: 40px;
+    font-size: 4.5rem;
+    line-height: auto;
     align-self: flex-start;
     width: 100%;
   }
@@ -188,15 +194,16 @@ a {
     background-color: red;
   }
   main.site_content article#banner figure {
-    width: 13%;
-    margin: 0;
+    display: block;
     padding: 0;
     margin: 0 0.5em 0 0;
     float: left;
   }
-  main.site_content article#banner img.main_image {
+  main.site_content article#banner img,
+  main.site_content article#banner picture {
     display: block;
     width: auto;
+    margin: 0 auto;
   }
   main.site_content article#banner p {
     width: 100%;
