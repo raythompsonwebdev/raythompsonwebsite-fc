@@ -41,6 +41,18 @@ module.exports = function (grunt) {
       },
     },
 
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ["@babel/preset-env"],
+      },
+      dist: {
+        files: {
+          "js/main.js": "js/dev/main.js",
+        },
+      },
+    },
+
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
@@ -90,8 +102,8 @@ module.exports = function (grunt) {
         separator: ";",
       },
       public: {
-        src: ["js/main.js"],
-        dest: "public/js/<%= pkg.name %>.js",
+        src: ["js/dev/*.js"],
+        dest: "js/<%= pkg.name %>.js",
       },
     },
 
@@ -106,7 +118,7 @@ module.exports = function (grunt) {
 
       my_target: {
         files: {
-          "public/js/main.min.js": ["scripts/main.js"],
+          "js/main.min.js": ["js/dev/main.js"],
         },
       },
     },
@@ -122,18 +134,7 @@ module.exports = function (grunt) {
         },
 
         files: {
-          "css/style.css": "css/style.scss",
-          /*where file goes-----/where file from*/
-        },
-      },
-
-      public: {
-        options: {
-          style: "compressed",
-          sourcemap: "auto",
-        },
-        files: {
-          "public/css/style.css": "css/style.scss",
+          "css/style.css": "sass/style.scss",
           /*where file goes-----/where file from*/
         },
       },
@@ -144,8 +145,8 @@ module.exports = function (grunt) {
      */
     watch: {
       css: {
-        files: ["css/*.scss"],
-        tasks: ["sass"],
+        files: ["sass/*.scss", "js/dev/*.js"],
+        tasks: ["sass", "babel"],
       },
     },
   });
@@ -159,6 +160,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-concat");
+  grunt.loadNpmTasks("grunt-babel");
 
   grunt.registerTask("default", [
     "concat",
@@ -166,6 +168,7 @@ module.exports = function (grunt) {
     "clean",
     "mkdir",
     "htmlmin",
+    "babel",
   ]);
   grunt.registerTask("default", ["sass", "watch", "responsive_images"]);
 };

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda"
       rel="stylesheet"
@@ -178,7 +178,7 @@
                 <h1 class="cert_title">Codepen</h1>
                 <a
                   class="cert_link"
-                  href="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
+                  href="https://codepen.io/raythompweb/pens/"
                   target="_blank"
                   >See Pens</a
                 >
@@ -252,33 +252,34 @@
       <br />
       <footer class="site_footer"></footer>
     </div>
+    <script src="js/main.js"></script>
     <script>
-      function openPage(pageName, elmnt, color) {
-        // Hide all elements with class="tabcontent" by default */
+      // function openPage(pageName, elmnt, color) {
+      //   // Hide all elements with class="tabcontent" by default */
 
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-          tabcontent[i].style.opacity = 0;
-        }
+      //   var i, tabcontent, tablinks;
+      //   tabcontent = document.getElementsByClassName("tabcontent");
+      //   for (i = 0; i < tabcontent.length; i++) {
+      //     tabcontent[i].style.display = "none";
+      //     tabcontent[i].style.opacity = 0;
+      //   }
 
-        // Remove the background color of all tablinks/buttons
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
+      //   // Remove the background color of all tablinks/buttons
+      //   tablinks = document.getElementsByClassName("tablink");
+      //   for (i = 0; i < tablinks.length; i++) {
+      //     tablinks[i].style.backgroundColor = "";
+      //   }
 
-        // Show the specific tab content
-        document.getElementById(pageName).style.display = "block";
-        document.getElementById(pageName).style.opacity = 1;
+      //   // Show the specific tab content
+      //   document.getElementById(pageName).style.display = "block";
+      //   document.getElementById(pageName).style.opacity = 1;
 
-        // Add the specific color to the button used to open the tab content
-        elmnt.style.backgroundColor = color;
-      }
+      //   // Add the specific color to the button used to open the tab content
+      //   elmnt.style.backgroundColor = color;
+      // }
 
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
+      // // Get the element with id="defaultOpen" and click on it
+      // document.getElementById("defaultOpen").click();
     </script>
   </body>
 </html>

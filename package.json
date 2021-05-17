@@ -11,6 +11,7 @@
     "@babel/node": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "grunt": "^1.3.0",
+    "grunt-babel": "^8.0.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -36,6 +37,8 @@
   "scripts": {
     "compile-sass": "grunt sass",
     "compile-images": "grunt responsive_images",
+    "compile-js": "grunt babel",
+    "minify-files": "grunt uglify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
