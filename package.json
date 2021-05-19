@@ -20,8 +20,12 @@
     "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^23.0.0",
     "grunt-mkdir": "^1.0.0",
-    "grunt-responsive-images": "^1.10.1"
+    "grunt-responsive-images": "^1.10.1",
+    "grunt-stylelint": "^0.16.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   },
   "author": "raymond thompson",
   "license": "MIT",

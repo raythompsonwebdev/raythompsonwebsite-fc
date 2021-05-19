@@ -9,37 +9,28 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Home</title>
   </head>
   <body>
     <div id="site_wrapper">
       <header class="site_header">
-        <h1>Raymond Thompson</h1>
-        <h2>Web Developer</h2>
+        <hgroup class="site-title">
+          <h1>Raymond Thompson</h1>
+          <h2>Web Developer</h2>
+        </hgroup>
+        <nav class="site_navigation">
+          <ul>
+            <li class="tablink"><a href="index.html">Home</a></li>
+            <li class="tablink"><a href="about.html">About</a></li>
+            <li class="tablink"><a href="why.html">Why</a></li>
+          </ul>
+        </nav>
       </header>
 
-      <nav class="site_navigation">
-        <button
-          class="tablink"
-          onclick="openPage('banner', this, 'red')"
-          id="defaultOpen"
-        >
-          Home
-        </button>
-        <button
-          class="tablink"
-          onclick="openPage('about_content', this, 'green')"
-        >
-          What I Do
-        </button>
-        <button class="tablink" onclick="openPage('outro', this, 'blue')">
-          Why I Applied
-        </button>
-      </nav>
       <main class="site_content">
         <article id="banner" class="tabcontent">
           <figure>
-            <picture>
+            <!-- <picture>
               <source
                 media="(min-width: 1280px)"
                 srcset="img/home-page-image-large.jpg"
@@ -53,7 +44,7 @@
                 srcset="img/home-page-image-small.jpg"
               />
               <img src="img/home-page-image.jpg" alt="raythompsonwebdev" />
-            </picture>
+            </picture> -->
 
             <!-- use $0.currentSrc or $0.naturalWidth in console to find out which image is showing -->
             <!-- <img
@@ -70,216 +61,18 @@
             /> -->
           </figure>
 
-          <h2>Hello</h2>
+          <h2>Hello, I'm Raymond</h2>
           <p>
             As a Web Developer I create web applications and website interfaces
             that provide effective solutions to meet your on-line needs. I use
             clean semantic code and follow the latest web standards compliances
             and best practices.
           </p>
-
-          <p>
-            I have a fondness for using PHP, Javascript, WordPress and React
-            but, can use many others tools to create elegant and maintainable
-            web applications and websites. I can ensure that websites and web
-            applications can be found by most search engines, viewed within in
-            most modern browsers and load pages quickly for a better user
-            experience.
-          </p>
-
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum enim
-            nam dolore, accusamus ipsa, nulla ratione delectus illo similique,
-            perferendis odit voluptates autem non culpa porro quae. Iste,
-            quibusdam.
-          </p>
-        </article>
-        <article id="about_content" class="tabcontent">
-          <h2>What I do</h2>
-          <div class="text_box">
-            <p>
-              I code in my spare time in the evenings and at weekends and during
-              the day when I am temporarily out of work. I practice building
-              websites and web applications using languages HTML, CSS, SASS,
-              JavaScript, jQuery, PHP and MySQL.
-            </p>
-            <hr />
-            <p>
-              I have spent lots of spare time teaching myself web development
-              and programming. I have watched lots of video tutorials, listened
-              to podcasts and read blogs and books relating to coding.
-            </p>
-            <hr />
-            <p>
-              I attended a WordPress WordCamp in London in 2018 as a volunteer
-              and made a samll contribution to the Theme Review Team helping
-              them review WordPress Themes. I have also attended various on-line
-              WordPress conferences like WordCampEU 2020 Contributors Day held
-              recently to give members of the public a chance find out more
-              about the review process WordPress themes submitted by other
-              developers go through before being added to Wordpress.org theme
-              directory.
-            </p>
-          </div>
-          <div class="parent">
-            <figure class="div1 box">
-              <img src="images/codecademy-js.png" alt="" />
-              <figcaption class="cover">
-                <h1 class="cert_title">Learn Javascript</h1>
-
-                <a
-                  class="cert_link"
-                  href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
-                  target="_blank"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div2 box">
-              <img
-                src="images/freecodecamp-org-certification-javascript.png"
-                alt=""
-              />
-              <figcaption class="cover">
-                <h1 class="cert_title">Javascript Algorithims</h1>
-                <a
-                  class="cert_link"
-                  href="https://freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures"
-                  target="_blank"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div3 box">
-              <img
-                src="images/freecodecamp-org-certification-responsive-web-design.png"
-                alt=""
-              />
-              <figcaption class="cover">
-                <h1 class="cert_title">Responsive Design</h1>
-                <a
-                  class="cert_link"
-                  href="https://freecodecamp.org/certification/raythompsonwebdev/responsive-web-design"
-                  target="_blank"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div4 box">
-              <img src="images/Button-Fill-Black-Large.png" alt="" />
-              <figcaption class="cover">
-                <h1 class="cert_title">Codepen</h1>
-                <a
-                  class="cert_link"
-                  href="https://codepen.io/raythompweb/pens/"
-                  target="_blank"
-                  >See Pens</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div5 box">
-              <img src="images/codewars.png" alt="" />
-              <figcaption class="cover">
-                <h1 class="cert_title">Code Wars</h1>
-                <a
-                  class="cert_link"
-                  href="https://www.codewars.com/users/raythompsonwebdev/badges/large"
-                  target="_blank"
-                  >6th Kyu</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div6 box">
-              <img src="images/codecademy-ruby.png" alt="" />
-              <figcaption class="cover">
-                <h1 class="cert_title">Learn Ruby</h1>
-                <a
-                  class="cert_link"
-                  href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd"
-                  target="_blank"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article id="outro" class="tabcontent">
-          <h2>Why I applied</h2>
-          <p>
-            because it would be an opportunity to gain hands on experience of
-            working in software development within an enviroment that provides
-            support and learning opportunities. I am particularly interested in
-            learning more about agile methologies and seeing how they are
-            applied to software development, learning ways to solve complex
-            problems and working along side a team to deliver features and add
-            value to a team.
-          </p>
-          <hr />
-          <p>
-            I do have a passion for coding and web development and have obtained
-            years of useful experience in the provision of high standard service
-            and business support to a diverse range of customers in various work
-            environments, including local government revenues and benefits and
-            public sector customer service.
-          </p>
-
-          <hr />
-          <p>
-            I am an active learner whose technological skills are at a
-            proficient level and I am confident in the use of various software
-            applications, coding languages, as well as various in-house systems
-            and databases. I code in my spare time in the evenings and at
-            weekends and during the day when I am temporarily out of work. I
-            practice building websites and web applications using languages
-            HTML, CSS, SASS, JavaScript, jQuery, PHP and MySQL.
-          </p>
-          <p>
-            I am keen to utilise my acquired skills and knowledge in a
-            challenging position within an organisation like Expedia that
-            encourages staff development and inclusion.
-          </p>
-          <a href="">GitHUB Link</a>
         </article>
       </main>
       <br />
       <footer class="site_footer"></footer>
     </div>
-    <script src="js/main.js"></script>
-    <script>
-      // function openPage(pageName, elmnt, color) {
-      //   // Hide all elements with class="tabcontent" by default */
-
-      //   var i, tabcontent, tablinks;
-      //   tabcontent = document.getElementsByClassName("tabcontent");
-      //   for (i = 0; i < tabcontent.length; i++) {
-      //     tabcontent[i].style.display = "none";
-      //     tabcontent[i].style.opacity = 0;
-      //   }
-
-      //   // Remove the background color of all tablinks/buttons
-      //   tablinks = document.getElementsByClassName("tablink");
-      //   for (i = 0; i < tablinks.length; i++) {
-      //     tablinks[i].style.backgroundColor = "";
-      //   }
-
-      //   // Show the specific tab content
-      //   document.getElementById(pageName).style.display = "block";
-      //   document.getElementById(pageName).style.opacity = 1;
-
-      //   // Add the specific color to the button used to open the tab content
-      //   elmnt.style.backgroundColor = color;
-      // }
-
-      // // Get the element with id="defaultOpen" and click on it
-      // document.getElementById("defaultOpen").click();
-    </script>
+    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>

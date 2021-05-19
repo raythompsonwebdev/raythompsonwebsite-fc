@@ -1,10 +1,10 @@
 @mixin clearfix {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     display: table;
   }
-  &:after {
+  &::after {
     clear: both;
   }
 }
@@ -36,6 +36,16 @@
   -o-transform: $raytransform;
 }
 
+$textcolor1: #000;
+$textcolor2: #fff;
+$textcolor3: #464866;
+$textcolor4: #aaabb8;
+$bgcolor: #25274d;
+$maincontentcolor: #25274d;
+$Homepagebgcolor: #2e9cca;
+$pageTwobgcolor: #29648a;
+$pageThreebgcolor: #287386;
+
 $colorblack: #000;
 $colorwhite: #fff;
 
@@ -51,7 +61,7 @@ html {
 }
 
 body {
-  background-color: $colorwhite;
+  background-color: $bgcolor;
 }
 
 img {
@@ -61,24 +71,25 @@ img {
 
 h1,
 h2 {
-  font-family: "Ruda", Sans-Serif;
+  font-family: "Ruda", sans-serif;
   padding: 0;
   margin: 0;
-  color: $colorblack;
+  color: $textcolor2;
 }
 
 p {
-  font-family: "Roboto Slab", Serif;
+  font-family: "Roboto Slab", serif;
   line-height: 1.7em;
   font-size: 1rem;
   margin: 0;
   margin-bottom: 0.5em;
-  color: $colorblack;
+  color: $textcolor2;
 }
 
 a {
   text-decoration: none;
-  font-family: "Ruda", Sans-Serif;
+  font-family: "Ruda", sans-serif;
+  color: $textcolor2;
 }
 
 hr {
@@ -86,6 +97,17 @@ hr {
   width: 80%;
   display: block;
   color: $colorblack;
+}
+
+.screenreader-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media (max-width: 1680px) {
@@ -98,40 +120,61 @@ hr {
     height: 100px;
     width: 100%;
     margin-bottom: 0.5em;
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-      line-height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    hgroup.site-title {
+      width: 23%;
+      flex: 0 0 auto;
+      h1 {
+        font-size: 2rem;
+        text-align: left;
+        line-height: 40px;
+      }
+      h2 {
+        font-size: 1rem;
+        text-align: left;
+      }
     }
-    h2 {
-      font-size: 1.5rem;
-      text-align: center;
+
+    .site_navigation {
+      width: 40%;
+      flex: 0 0 auto;
+      height: auto;
+      margin-bottom: 0.5em;
+      /* Style tab links */
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .tablink {
+          background-color: #555;
+          color: white;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-size: 1em;
+          flex: 0 0 auto;
+          width: 33%;
+          line-height: 50px;
+          margin: 0;
+          a {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+
+      .tablink:hover {
+        background-color: #777;
+        cursor: pointer;
+      }
     }
   }
-
-  .site_navigation {
-    width: 100%;
-    display: block;
-    height: auto;
-    margin-bottom: 0.5em;
-    /* Style tab links */
-    .tablink {
-      background-color: #555;
-      color: white;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      font-size: 17px;
-      width: 25%;
-      display: inline-block;
-      line-height: 50px;
-    }
-
-    .tablink:hover {
-      background-color: #777;
-    }
-  }
-
   #collection-boxes {
     position: relative;
     z-index: 1;
@@ -197,16 +240,17 @@ hr {
   main.site_content {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
+    flex-flow: column;
+    justify-content: center;
+    align-content: stretch;
     gap: 1em 0;
-    height: 70vh;
+    min-height: 80vh;
     width: 100%;
+    margin-bottom: 0.5em;
 
     h2 {
       text-align: left;
-      font-size: 4.5rem;
+      font-size: 1.5rem;
       line-height: auto;
       align-self: flex-start;
       width: 100%;
@@ -238,13 +282,13 @@ hr {
       width: 97.7%;
       flex: 0 0 auto;
       padding: 1em;
-      background-color: red;
+      background-color: $Homepagebgcolor;
+      height: 100%;
       figure {
         //width: 13%;
         display: block;
         padding: 0;
-        margin: 0 0.5em 0 0;
-        float: left;
+        margin: 0 auto;
       }
       img,
       picture {
@@ -264,7 +308,8 @@ hr {
       flex-flow: row wrap;
       align-content: flex-start;
       padding: 1em;
-      background-color: green;
+      background-color: $pageTwobgcolor;
+      height: 100%;
 
       h2 {
         align-self: flex-start;
@@ -288,7 +333,7 @@ hr {
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         padding: 0.25em;
-        background-color: $colorblack;
+        background-color: $colorwhite;
         width: 50%;
       }
       img {
@@ -321,7 +366,7 @@ hr {
         overflow: hidden;
         padding: 0;
         margin: 0;
-        background-color: $colorwhite;
+        background-color: $maincontentcolor;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -330,7 +375,7 @@ hr {
       figcaption.cover {
         position: absolute;
         z-index: 10;
-        //background: rgba(250, 250, 250, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         top: 0;
         left: 0;
         width: 100%;
@@ -339,7 +384,7 @@ hr {
         opacity: 0;
         @include raytransition(all 200ms ease-in-out);
         @include raytransform(scale(0));
-        font-family: "Ruda", Sans-Serif;
+        font-family: "Ruda", sans-serif;
         a.cert_link {
           width: 86%;
           border: none;
@@ -366,7 +411,7 @@ hr {
           font-size: 1em;
           margin: 0.5em 0;
           line-height: 40px;
-          color: $colorblack;
+          color: $colorwhite;
           text-align: center;
         }
       }
@@ -387,7 +432,8 @@ hr {
       width: 97.7%;
       flex: 1 0 auto;
       padding: 1em;
-      background-color: blue;
+      background-color: $pageThreebgcolor;
+      height: 100%;
       p {
         width: 100%;
       }
@@ -408,12 +454,25 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.9rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.9rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
     }
-    h2 {
-      font-size: 1.4rem;
+    .site_navigation {
+      /* Style tab links */
+      ul {
+        .tablink {
+          font-size: 0.9em;
+
+          a {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -549,12 +608,13 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.8rem;
-    }
-    h2 {
-      font-size: 1.3rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -690,12 +750,25 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.7rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
-    h2 {
-      font-size: 1.2rem;
+    .site_navigation {
+      /* Style tab links */
+      ul {
+        .tablink {
+          font-size: 0.85em;
+
+          a {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -833,12 +906,13 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.7rem;
-    }
-    h2 {
-      font-size: 1.2rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -979,12 +1053,25 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.7rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
-    h2 {
-      font-size: 1.2rem;
+    .site_navigation {
+      /* Style tab links */
+      ul {
+        .tablink {
+          font-size: 0.8em;
+
+          a {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -1122,12 +1209,13 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.7rem;
-    }
-    h2 {
-      font-size: 1.2rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -1268,12 +1356,13 @@ hr {
   }
   .site_header {
     height: 100px;
-
-    h1 {
-      font-size: 1.7rem;
-    }
-    h2 {
-      font-size: 1.2rem;
+    hgroup.site-title {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
     }
   }
 

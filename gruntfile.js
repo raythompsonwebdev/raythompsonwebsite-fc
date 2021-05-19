@@ -53,6 +53,24 @@ module.exports = function (grunt) {
       },
     },
 
+    stylelint: {
+      options: {
+        configFile: ".stylelintrc.json",
+        formatter: "string",
+        ignoreDisables: false,
+        failOnError: true,
+        outputFile: "",
+        reportNeedlessDisables: false,
+        fix: false,
+        syntax: "",
+      },
+      src: ["css/**/*.css", "sass/**/*.scss"],
+    },
+
+    eslint: {
+      target: ["js/dev/*.js"],
+    },
+
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
@@ -138,6 +156,17 @@ module.exports = function (grunt) {
           /*where file goes-----/where file from*/
         },
       },
+      public: {
+        options: {
+          style: "compressed",
+          sourcemap: "auto",
+        },
+
+        files: {
+          "css/style.min.css": "sass/style.scss",
+          /*where file goes-----/where file from*/
+        },
+      },
     },
 
     /**
@@ -161,8 +190,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-babel");
+  grunt.loadNpmTasks("grunt-eslint");
+  grunt.loadNpmTasks("grunt-stylelint");
 
   grunt.registerTask("default", [
+    "eslint",
     "concat",
     "uglify",
     "clean",
