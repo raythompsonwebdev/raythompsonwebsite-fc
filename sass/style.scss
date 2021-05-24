@@ -19,6 +19,7 @@
     text-indent: 0.5em;
     font-size: 90%;
     z-index: 10;
+    background-color: $textcolor2;
   }
   .site_header {
     height: 100px;
@@ -27,7 +28,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    background-color: $bgcolor;
+    background-color: $textcolor2;
     left: 0;
     hgroup.site-title {
       width: 23%;
@@ -244,6 +245,7 @@
       width: 100%;
       height: 100%;
       opacity: 0.9;
+      filter: grayscale(75%);
       background-image: url('../images/pexels-pixabay-270360.jpg');
       background-repeat: no-repeat;
       background-position: center; /* Center the image */
@@ -258,13 +260,13 @@
       align-content: center;
       justify-content: space-between;
       padding: 0.5em;
-      background-color: $pageTwobgcolor;
+      background-color: $textcolor2;
 
       article#abouttext {
         width: 48%;
         float: left;
         display: block;
-        background-color: $textcolor2;
+        background-color: $bgcolor;
         padding: 0.25em;
 
         h2 {
@@ -290,7 +292,7 @@
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         padding: 0.25em;
-        background-color: $textcolor2;
+        background-color: $textcolor1;
         width: 50%;
       }
 
@@ -338,6 +340,7 @@
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        background-color: $bgcolor;
       }
 
       figcaption.cover {
@@ -413,12 +416,12 @@
       align-content: center;
       justify-content: space-between;
       padding: 0.5em;
-      background-color: $pageTwobgcolor;
+      background-color: $textcolor2;
       height: 100%;
       article#outrotext {
         display: block;
         width: 99.5%;
-        background-color: $textcolor2;
+        background-color: $bgcolor;
         padding: 0.25em;
         h2 {
           font-size: 1.5rem;
@@ -452,10 +455,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
     }
     .site_navigation {
@@ -581,10 +584,10 @@
     hgroup.site-title {
       width: 27%;
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -694,10 +697,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
     .site_navigation {
@@ -817,10 +820,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -956,10 +959,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
     .site_navigation {
@@ -1077,10 +1080,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -1229,10 +1232,10 @@
     height: 100px;
     hgroup.site-title {
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }

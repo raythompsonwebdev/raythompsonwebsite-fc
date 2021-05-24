@@ -7,8 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -81,6 +81,7 @@ hr {
     text-indent: 0.5em;
     font-size: 90%;
     z-index: 10;
+    background-color: #fff;
   }
 
   .site_header {
@@ -90,7 +91,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    background-color: #efefef;
+    background-color: #fff;
     left: 0;
   }
   .site_header hgroup.site-title {
@@ -287,8 +288,8 @@ hr {
     margin: 0 auto;
     vertical-align: bottom;
   }
-  main.site_content section#banner:before {
-    content: " ";
+  main.site_content section#banner::before {
+    content: ' ';
     display: block;
     position: absolute;
     left: 0;
@@ -296,6 +297,7 @@ hr {
     width: 100%;
     height: 100%;
     opacity: 0.9;
+    filter: grayscale(75%);
     background-image: url("../images/pexels-pixabay-270360.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -311,13 +313,13 @@ hr {
     align-content: center;
     justify-content: space-between;
     padding: 0.5em;
-    background-color: #844f62;
+    background-color: #fff;
   }
   main.site_content section#about_content article#abouttext {
     width: 48%;
     float: left;
     display: block;
-    background-color: #fff;
+    background-color: #efefef;
     padding: 0.25em;
   }
   main.site_content section#about_content article#abouttext h2 {
@@ -340,7 +342,7 @@ hr {
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     padding: 0.25em;
-    background-color: #fff;
+    background-color: #000;
     width: 50%;
   }
   main.site_content section#about_content .div1 {
@@ -379,6 +381,7 @@ hr {
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    background-color: #efefef;
   }
   main.site_content section#about_content figcaption.cover {
     position: absolute;
@@ -398,7 +401,7 @@ hr {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -o-transform: scale(0);
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
   main.site_content section#about_content figcaption.cover a.cert_link {
     width: 86%;
@@ -456,13 +459,13 @@ hr {
     align-content: center;
     justify-content: space-between;
     padding: 0.5em;
-    background-color: #844f62;
+    background-color: #fff;
     height: 100%;
   }
   main.site_content section#outro article#outrotext {
     display: block;
     width: 99.5%;
-    background-color: #fff;
+    background-color: #efefef;
     padding: 0.25em;
   }
   main.site_content section#outro article#outrotext h2 {
@@ -473,7 +476,6 @@ hr {
     line-height: 50px;
   }
   main.site_content section#outro article#outrotext p {
-    width: 100%;
     font-size: 1em;
     width: calc(100% - 1%);
     line-height: 1.8em;
@@ -495,10 +497,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .site_header .site_navigation {
     /* Style tab links */
@@ -606,10 +608,10 @@ hr {
     width: 27%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   #collection-boxes {
@@ -701,10 +703,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .site_header .site_navigation {
     /* Style tab links */
@@ -803,10 +805,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   #collection-boxes {
@@ -921,10 +923,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .site_header .site_navigation {
     /* Style tab links */
@@ -965,9 +967,6 @@ hr {
 
   main.site_content {
     gap: 2em 20px;
-  }
-  main.site_content h2 {
-    font-size: 1.2rem;
   }
   main.site_content section#banner {
     width: 100%;
@@ -1024,10 +1023,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #collection-boxes {
@@ -1148,10 +1147,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #collection-boxes {
@@ -1183,9 +1182,6 @@ hr {
 
   main.site_content {
     gap: 2em 20px;
-  }
-  main.site_content h2 {
-    font-size: 1.2rem;
   }
   main.site_content section#banner {
     width: 100%;
