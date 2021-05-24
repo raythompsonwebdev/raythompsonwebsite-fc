@@ -26,7 +26,7 @@ h2 {
   font-family: "Ruda", sans-serif;
   padding: 0;
   margin: 0;
-  color: $textcolor2;
+  color: $textcolor1;
 }
 
 p {
@@ -35,20 +35,20 @@ p {
   font-size: 1rem;
   margin: 0;
   margin-bottom: 0.5em;
-  color: $textcolor2;
+  color: $textcolor1;
 }
 
 a {
   text-decoration: none;
   font-family: "Ruda", sans-serif;
-  color: $textcolor2;
+  color: $textcolor1;
 }
 
 hr {
-  margin: 2em auto;
+  margin: 1em auto;
   width: 80%;
   display: block;
-  color: $colorblack;
+  color: $textcolor1;
 }
 
 .screenreader-visible {

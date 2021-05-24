@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         fix: false,
         syntax: "",
       },
-      src: ["css/**/*.css", "sass/**/*.scss"],
+      src: ["sass/**/*.scss"],
     },
 
     eslint: {

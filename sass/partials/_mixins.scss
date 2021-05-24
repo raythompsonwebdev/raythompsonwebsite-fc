@@ -15,7 +15,7 @@
   box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
 }
 
-@mixin rayborder($shadow...) {
+@mixin boredrady($shadow...) {
   -webkit-border-radius: $shadow;
   -moz-border-radius: $shadow;
   -o-border-radius: $shadow;
@@ -34,13 +34,6 @@
   -webkit-transform: $raytransform;
   -moz-transform: $raytransform;
   -o-transform: $raytransform;
-}
-//Box Shadow
-@mixin boxShadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
-  -o-box-shadow: $shadow;
-  box-shadow: $shadow;
 }
 
 @mixin transformerorigin($transformerorigin) {
