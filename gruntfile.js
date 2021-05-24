@@ -81,7 +81,7 @@ module.exports = function (grunt) {
       },
     },
 
-    /* Generate the images directory if it is missing */
+    /* Generate the directory if it is missing */
     mkdir: {
       dev: {
         options: {

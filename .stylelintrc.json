@@ -6,6 +6,8 @@
     "number-leading-zero": null,
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    "rule-empty-line-before": "always"
+    "unit-allowed-list": ["em", "rem", "%", "px", "fr", "vh", "ms", "s"],
+    "rule-empty-line-before": null,
+    "at-rule-empty-line-before": null
   }
 }

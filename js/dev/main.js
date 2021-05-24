@@ -4,13 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   let navLinks = document.getElementsByClassName("tablink");
   // get body and html elements
   let scrollScreen = document.querySelector(["body", "html"]);
+  // get header element
   let siteHeader = document.querySelector(".site_header");
+
+  // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
 
   // scrollElements.forEach((el) => {
   //   el.style.opacity = 0;
   // });
 
+  //detect page scroll function
   const elementInView = (el, scrollOffset = 100) => {
     const elementTop = el.getBoundingClientRect().top;
 
@@ -21,14 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   };
 
+  //display element on page scroll
   const displayScrollElement = (element) => {
     element.classList.add("scrolled");
   };
 
+  //hide element on page scroll
   const hideScrollElement = (element) => {
     element.classList.remove("scrolled");
   };
 
+  //add animation to element on page scroll
   const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
       if (elementInView(el, 100)) {
