@@ -1,0 +1,63 @@
+html {
+  @include box-sizing(border-box);
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $bgcolor;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "Ruda", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: $textcolor2;
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.7em;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: $textcolor2;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Ruda", sans-serif;
+  color: $textcolor2;
+}
+
+hr {
+  margin: 2em auto;
+  width: 80%;
+  display: block;
+  color: $colorblack;
+}
+
+.screenreader-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

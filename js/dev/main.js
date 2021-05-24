@@ -10,15 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onscroll = function () {
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
-
       /* eslint-disable no-console */
       console.log("done");
       /* eslint-enabe no-console */
     } else {
       siteHeader.classList.remove("fixed-header");
-      /* eslint-disable no-console */
-
-      /* eslint-enabe no-console */
     }
   };
   // scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
