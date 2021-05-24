@@ -35,6 +35,84 @@
   -moz-transform: $raytransform;
   -o-transform: $raytransform;
 }
+//Box Shadow
+@mixin boxShadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transformerorigin($transformerorigin) {
+  transform-origin: $transformerorigin;
+  -webkit-transform-origin: $transformerorigin;
+  -moz-transform-origin: $transformerorigin;
+  -o-transform-origin: $transformerorigin;
+}
+
+@mixin anime-mode($anime-mode) {
+  animation-name: $anime-mode;
+  -webkit-animation-name: $anime-mode;
+  -moz-animation-name: $anime-mode;
+  -o-animation-name: $anime-mode;
+}
+
+@mixin Timing($timing) {
+  animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -o-animation-timing-function: $timing;
+}
+
+@mixin delayer($delayer) {
+  animation-delay: $delayer;
+  -webkit-animation-delay: $delayer;
+  -moz-animation-delay: $delayer;
+  -o-animation-animation-delay: $delayer;
+}
+
+@mixin durationer($durationer) {
+  animation-duration: $durationer;
+  -webkit-animation-duration: $durationer;
+  -moz-animation-duration: $durationer;
+  -o-animation-duration: $durationer;
+}
+
+@mixin directions($directions) {
+  animation-direction: $directions;
+  -webkit-animation-direction: $directions;
+  -moz-animation-direction: $directions;
+  -o-animation-direction: $directions;
+}
+
+@mixin fillermode($fillermode) {
+  animation-fill-mode: $fillermode;
+  -webkit-animation-fill-mode: $fillermode;
+  -moz-animation-fill-mode: $fillermode;
+  -o-animation-fill-mode: $fillermode;
+}
+
+@mixin iteration-mode($iteration-mode) {
+  animation-iteration-count: $iteration-mode;
+  -webkit-animation-iteration-count: $iteration-mode;
+  -moz-animation-iteration-count: $iteration-mode;
+  -o-animation-iteration-count: $iteration-mode;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{ $name } {
+    @content;
+  }
+  @-moz-keyframes #{ $name } {
+    @content;
+  }
+  @-o-keyframes #{ $name } {
+    @content;
+  }
+  @keyframes #{ $name } {
+    @content;
+  }
+}
 
 $textcolor1: #000;
 $textcolor2: #fff;
@@ -53,6 +131,7 @@ html {
   @include box-sizing(border-box);
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 *:before,
@@ -62,6 +141,8 @@ html {
 
 body {
   background-color: $bgcolor;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -115,6 +196,17 @@ hr {
     width: 92%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    text-indent: 0.5em;
+    font-size: 90%;
+    z-index: 10;
   }
   .site_header {
     height: 100px;
@@ -123,6 +215,8 @@ hr {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    background-color: red;
+    left: 0;
     hgroup.site-title {
       width: 23%;
       flex: 0 0 auto;
@@ -142,6 +236,7 @@ hr {
       flex: 0 0 auto;
       height: auto;
       margin-bottom: 0.5em;
+
       /* Style tab links */
       ul {
         margin: 0;
@@ -237,12 +332,18 @@ hr {
     }
   }
 
+  article#banner,
+  article#about_content,
+  article#outro {
+    min-height: 82vh;
+  }
+
   main.site_content {
     position: relative;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-content: stretch;
+    align-content: center;
     gap: 1em 0;
     min-height: 80vh;
     width: 100%;
@@ -272,7 +373,6 @@ hr {
     }
 
     .tabcontent {
-      height: auto;
       animation-name: example;
       animation-duration: 0.5s;
     }
@@ -284,6 +384,11 @@ hr {
       padding: 1em;
       background-color: $Homepagebgcolor;
       height: 100%;
+      h2 {
+        font-size: 5.5rem;
+        align-self: flex-start;
+        width: auto;
+      }
       figure {
         //width: 13%;
         display: block;
@@ -298,6 +403,7 @@ hr {
       }
       p {
         width: 100%;
+        font-size: 1.5em;
       }
     }
 
@@ -309,7 +415,6 @@ hr {
       align-content: flex-start;
       padding: 1em;
       background-color: $pageTwobgcolor;
-      height: 100%;
 
       h2 {
         align-self: flex-start;
