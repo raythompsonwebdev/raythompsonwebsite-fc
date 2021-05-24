@@ -5,17 +5,50 @@ document.addEventListener("DOMContentLoaded", function () {
   // get body and html elements
   let scrollScreen = document.querySelector(["body", "html"]);
   let siteHeader = document.querySelector(".site_header");
+  const scrollElements = document.querySelectorAll(".tabcontent");
+
+  // scrollElements.forEach((el) => {
+  //   el.style.opacity = 0;
+  // });
+
+  const elementInView = (el, scrollOffset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) -
+        scrollOffset
+    );
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+  };
+
+  const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
+
+  handleScrollAnimation();
 
   //In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
   window.onscroll = function () {
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
-      /* eslint-disable no-console */
-      console.log("done");
-      /* eslint-enabe no-console */
     } else {
       siteHeader.classList.remove("fixed-header");
     }
+    handleScrollAnimation();
   };
   // scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
   const scrollTo = (element) => {
@@ -49,21 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-//      /* JavaScript */
-//      element.style.transition = 'margin-left 2s';
-//      element.addEventListener('transitionend',
-//        (event) => {  //When animation is finished });
-//      element.style.marginLeft = '100px';
-
-// $("button#myBtn").on("click", function (event) {
-//   $("html,body").animate({ scrollTop: 0 }, 800);
-// });
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById("myBtn").style.display = "block";
-//   } else {
-//     document.getElementById("myBtn").style.display = "none";
-//   }
-// }

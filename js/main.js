@@ -6,18 +6,45 @@ document.addEventListener("DOMContentLoaded", function () {
   var navLinks = document.getElementsByClassName("tablink"); // get body and html elements
 
   var scrollScreen = document.querySelector(["body", "html"]);
-  var siteHeader = document.querySelector(".site_header"); //In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
+  var siteHeader = document.querySelector(".site_header");
+  var scrollElements = document.querySelectorAll(".tabcontent"); // scrollElements.forEach((el) => {
+  //   el.style.opacity = 0;
+  // });
+
+  var elementInView = function elementInView(el) {
+    var scrollOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+    var elementTop = el.getBoundingClientRect().top;
+    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset;
+  };
+
+  var displayScrollElement = function displayScrollElement(element) {
+    element.classList.add("scrolled");
+  };
+
+  var hideScrollElement = function hideScrollElement(element) {
+    element.classList.remove("scrolled");
+  };
+
+  var handleScrollAnimation = function handleScrollAnimation() {
+    scrollElements.forEach(function (el) {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
+
+  handleScrollAnimation(); //In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
 
   window.onscroll = function () {
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
-      /* eslint-disable no-console */
-
-      console.log("done");
-      /* eslint-enabe no-console */
     } else {
       siteHeader.classList.remove("fixed-header");
     }
+
+    handleScrollAnimation();
   }; // scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
 
 
@@ -52,19 +79,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
   });
-}); //      /* JavaScript */
-//      element.style.transition = 'margin-left 2s';
-//      element.addEventListener('transitionend',
-//        (event) => {  //When animation is finished });
-//      element.style.marginLeft = '100px';
-// $("button#myBtn").on("click", function (event) {
-//   $("html,body").animate({ scrollTop: 0 }, 800);
-// });
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById("myBtn").style.display = "block";
-//   } else {
-//     document.getElementById("myBtn").style.display = "none";
-//   }
-// }
+});
 //# sourceMappingURL=main.js.map
