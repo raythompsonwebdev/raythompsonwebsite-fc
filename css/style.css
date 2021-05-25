@@ -282,7 +282,7 @@ hr {
     display: block;
     padding: 0;
     margin: 1em auto;
-    width: 170px;
+    width: 340px;
     border: 10px solid #fff;
   }
   main.site_content div#banner figure > img,
@@ -669,7 +669,7 @@ hr {
   }
   main.site_content div#banner figure {
     margin: 1em auto;
-    width: 140px;
+    width: 280px;
   }
   main.site_content div#banner figure > img,
   main.site_content div#banner figure > picture {
@@ -871,7 +871,7 @@ hr {
     font-size: 0.95em;
   }
   main.site_content div#banner figure {
-    width: 110px;
+    width: 220px;
   }
   main.site_content div#banner figure > img,
   main.site_content div#banner figure > picture {
@@ -1245,9 +1245,6 @@ hr {
     width: 60%;
   }
 
-  main.site_content {
-    gap: 2em 20px;
-  }
   main.site_content div#banner {
     width: 100%;
   }

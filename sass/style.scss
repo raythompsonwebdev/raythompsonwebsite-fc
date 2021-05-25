@@ -227,7 +227,7 @@
         display: block;
         padding: 0;
         margin: 1em auto;
-        width: 170px;
+        width: 340px;
         border: 10px solid #fff;
       }
 
@@ -661,7 +661,7 @@
 
       figure {
         margin: 1em auto;
-        width: 140px;
+        width: 280px;
       }
       figure > img,
       figure > picture {
@@ -902,7 +902,7 @@
       }
 
       figure {
-        width: 110px;
+        width: 220px;
       }
       figure > img,
       figure > picture {
@@ -1338,8 +1338,6 @@
   }
 
   main.site_content {
-    gap: 2em 20px;
-
     div#banner {
       width: 100%;
       figure {
