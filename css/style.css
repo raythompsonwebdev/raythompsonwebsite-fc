@@ -64,7 +64,8 @@ hr {
   border: 0;
 }
 
-@media (max-width: 1680px) {
+/* 1680px */
+@media (max-width: 105em) {
   .menu-toggle {
     display: none;
   }
@@ -206,9 +207,9 @@ hr {
     margin: auto;
   }
 
-  section#banner,
-  section#about_content,
-  section#outro {
+  div#banner,
+  div#about_content,
+  div#outro {
     min-height: 82vh;
   }
 
@@ -246,7 +247,7 @@ hr {
     animation-name: example;
     animation-duration: 1s;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -256,26 +257,26 @@ hr {
     flex: 0 0 auto;
     height: 100%;
   }
-  main.site_content section#banner article#bannertext {
+  main.site_content div#banner article#bannertext {
     width: calc(100% - 5%);
     position: relative;
     background-color: #fff;
     padding: 1%;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 3rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.9rem;
     width: auto;
     text-align: center;
     color: #000000;
     text-shadow: 1px 1px #ffffff;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 1.1em;
     width: calc(100% - 1%);
     color: #000000;
     text-shadow: 1px 1px #ffffff;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     position: relative;
     z-index: 10;
     display: block;
@@ -284,13 +285,13 @@ hr {
     width: 170px;
     border: 10px solid #fff;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     width: auto;
     margin: 0 auto;
     vertical-align: bottom;
   }
-  main.site_content section#banner::before {
+  main.site_content div#banner::before {
     content: " ";
     display: block;
     position: absolute;
@@ -307,7 +308,7 @@ hr {
     background-size: cover;
     /* Resize the background image to cover the entire container */
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 97.7%;
     flex: 0 0 auto;
     display: flex;
@@ -317,26 +318,26 @@ hr {
     padding: 0.5em;
     background-color: #ffffff;
   }
-  main.site_content section#about_content article#abouttext {
+  main.site_content div#about_content article#abouttext {
     width: 48%;
     float: left;
     display: block;
     background-color: #efefef;
     padding: 0.25em;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.5rem;
     text-align: left;
     align-self: flex-start;
     width: 100%;
     line-height: 50px;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 1em;
     width: calc(100% - 1%);
     line-height: 1.8em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -347,34 +348,34 @@ hr {
     background-color: #000000;
     width: 50%;
   }
-  main.site_content section#about_content .div1 {
+  main.site_content div#about_content .div1 {
     grid-area: 1 / 1 / 2 / 2;
   }
-  main.site_content section#about_content .div2 {
+  main.site_content div#about_content .div2 {
     grid-area: 1 / 2 / 2 / 3;
   }
-  main.site_content section#about_content .div3 {
+  main.site_content div#about_content .div3 {
     grid-area: 1 / 3 / 2 / 4;
   }
-  main.site_content section#about_content .div4 {
+  main.site_content div#about_content .div4 {
     grid-area: 2 / 1 / 3 / 2;
   }
-  main.site_content section#about_content .div5 {
+  main.site_content div#about_content .div5 {
     grid-area: 2 / 2 / 3 / 3;
   }
-  main.site_content section#about_content .div6 {
+  main.site_content div#about_content .div6 {
     grid-area: 2 / 3 / 3 / 4;
   }
-  main.site_content section#about_content .div7 {
+  main.site_content div#about_content .div7 {
     grid-area: 3 / 1 / 3 / 2;
   }
-  main.site_content section#about_content .div8 {
+  main.site_content div#about_content .div8 {
     grid-area: 3 / 2 / 3 / 3;
   }
-  main.site_content section#about_content .div9 {
+  main.site_content div#about_content .div9 {
     grid-area: 3 / 3 / 3 / 4;
   }
-  main.site_content section#about_content figure.box {
+  main.site_content div#about_content figure.box {
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -385,7 +386,7 @@ hr {
     backface-visibility: hidden;
     background-color: #efefef;
   }
-  main.site_content section#about_content figcaption.cover {
+  main.site_content div#about_content figcaption.cover {
     position: absolute;
     z-index: 10;
     background: rgba(0, 0, 0, 0.5);
@@ -405,7 +406,7 @@ hr {
     -o-transform: scale(0);
     font-family: "Ruda", sans-serif;
   }
-  main.site_content section#about_content figcaption.cover a.cert_link {
+  main.site_content div#about_content figcaption.cover a.cert_link {
     width: 86%;
     border: none;
     font-size: 0.85em;
@@ -420,11 +421,11 @@ hr {
     color: #ffffff;
     text-align: center;
   }
-  main.site_content section#about_content figcaption.cover a.cert_link:hover {
+  main.site_content div#about_content figcaption.cover a.cert_link:hover {
     font-size: 0.95em;
     font-weight: bold;
   }
-  main.site_content section#about_content figcaption.cover h1.cert_title {
+  main.site_content div#about_content figcaption.cover h2.cert_title {
     width: 100%;
     font-size: 1em;
     margin: 0.5em 0;
@@ -432,7 +433,7 @@ hr {
     color: #ffffff;
     text-align: center;
   }
-  main.site_content section#about_content figure.box:hover figcaption.cover {
+  main.site_content div#about_content figure.box:hover figcaption.cover {
     opacity: 1;
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -440,11 +441,11 @@ hr {
     -o-transform: scale(1);
     cursor: pointer;
   }
-  main.site_content section#about_content figure.box > img {
+  main.site_content div#about_content figure.box > img {
     margin: 0 auto;
     display: block;
   }
-  main.site_content section#about_content figure.box:hover img {
+  main.site_content div#about_content figure.box:hover img {
     margin: 0 auto;
     display: block;
     opacity: 1;
@@ -453,7 +454,7 @@ hr {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 97.7%;
     flex: 1 0 auto;
     display: flex;
@@ -464,20 +465,20 @@ hr {
     background-color: #ffffff;
     height: 100%;
   }
-  main.site_content section#outro article#outrotext {
+  main.site_content div#outro article#outrotext {
     display: block;
     width: 99.5%;
     background-color: #efefef;
     padding: 0.25em;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.5rem;
     text-align: left;
     align-self: flex-start;
     width: 100%;
     line-height: 50px;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     font-size: 1em;
     width: calc(100% - 1%);
     line-height: 1.8em;
@@ -490,7 +491,8 @@ hr {
     clear: both;
   }
 }
-@media (max-width: 1440px) {
+/* 1440px */
+@media (max-width: 90em) {
   #site_wrapper {
     width: 92%;
   }
@@ -508,7 +510,7 @@ hr {
     /* Style tab links */
   }
   .site_header .site_navigation ul .tablink {
-    font-size: 1em;
+    font-size: 0.95em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
@@ -544,44 +546,44 @@ hr {
   main.site_content {
     gap: 1em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.9rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.7rem;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 1.1em;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 1em auto;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 97.7%;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.45em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 0.95em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     padding: 0.25em;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content section#outro article#outrotext {
+  main.site_content div#outro article#outrotext {
     width: 100%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.45em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     font-size: 0.95em;
   }
 
@@ -589,10 +591,11 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 1280px) {
-  section#banner,
-  section#about_content,
-  section#outro {
+/* 1280px */
+@media (max-width: 80em) {
+  div#banner,
+  div#about_content,
+  div#outro {
     min-height: 80vh;
   }
 
@@ -619,13 +622,10 @@ hr {
     margin: 0;
   }
   .site_header .site_navigation ul .tablink {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
   .site_header .site_navigation ul .tablink a {
     text-align: center;
-  }
-  .site_header .site_navigation .tablink:hover {
-    cursor: pointer;
   }
 
   #collection-boxes {
@@ -658,46 +658,46 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.8rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.5rem;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 1.05em;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 1em auto;
     width: 140px;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 97.7%;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.4em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 0.9em;
     line-height: 1.8em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     padding: 0.25em;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content section#outro article#outrotext {
+  main.site_content div#outro article#outrotext {
     width: 100%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.4em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     font-size: 0.9em;
     line-height: 1.8em;
   }
@@ -706,7 +706,8 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 1024px) {
+/* 1024px */
+@media (max-width: 64em) {
   #site_wrapper {
     width: 96%;
   }
@@ -724,7 +725,7 @@ hr {
     /* Style tab links */
   }
   .site_header .site_navigation ul .tablink {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
@@ -760,53 +761,53 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content section#banner article#bannertext {
+  main.site_content div#banner article#bannertext {
     width: calc(100% - 5%);
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.7rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.3rem;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 1em;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 1em auto;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 97.7%;
   }
-  main.site_content section#about_content article#abouttext {
+  main.site_content div#about_content article#abouttext {
     width: 100%;
     margin-bottom: 1em;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.35em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     line-height: 1.8em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     padding: 0.25em;
     width: 80%;
     margin: auto;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content section#outro article#outrotext {
+  main.site_content div#outro article#outrotext {
     width: 100%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.35em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     line-height: 1.8em;
   }
 
@@ -814,7 +815,8 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 800px) {
+/* 800px */
+@media (max-width: 50em) {
   #site_wrapper {
     width: 98%;
   }
@@ -859,45 +861,45 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.6rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.2rem;
   }
-  main.site_content section#banner article#bannertext p {
-    font-size: 1em;
+  main.site_content div#banner article#bannertext p {
+    font-size: 0.95em;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     width: 110px;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 97.7%;
     flex: 0 0 auto;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.3em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 0.85em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     margin: auto;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content section#outro article#outrotext {
+  main.site_content div#outro article#outrotext {
     width: 100%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.3em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     line-height: 1.8em;
   }
 
@@ -905,7 +907,8 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 600px) {
+/* 600px */
+@media (max-width: 37.5em) {
   #site_wrapper {
     width: 98%;
   }
@@ -924,7 +927,7 @@ hr {
     /* Style tab links */
   }
   .site_header .site_navigation ul .tablink {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
@@ -960,41 +963,41 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     width: 100%;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 1em auto;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.5rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2.1rem;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 0.9em;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 95%;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.2em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 0.85em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     width: 85%;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 95%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.2em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     font-size: 0.85em;
     line-height: 1.8em;
   }
@@ -1003,7 +1006,8 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 480px) {
+/* 480px */
+@media (max-width: 30em) {
   .menu-toggle {
     position: relative;
     z-index: 105;
@@ -1142,55 +1146,55 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     width: 100%;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 1em auto;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#banner article#bannertext h2 {
-    font-size: 2.4rem;
+  main.site_content div#banner article#bannertext h2 {
+    font-size: 2rem;
   }
-  main.site_content section#banner article#bannertext p {
-    font-size: 0.9em;
-  }
-  main.site_content section#about_content {
-    width: 95%;
-  }
-  main.site_content section#about_content article#abouttext h2 {
-    font-size: 1.2em;
-  }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 0.85em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content {
+    width: 95%;
+  }
+  main.site_content div#about_content article#abouttext h2 {
+    font-size: 1.2em;
+  }
+  main.site_content div#about_content article#abouttext p {
+    font-size: 0.85em;
+  }
+  main.site_content div#about_content .parent {
     width: 90%;
     margin: auto;
   }
-  main.site_content section#about_content figcaption.cover {
+  main.site_content div#about_content figcaption.cover {
     position: absolute;
   }
-  main.site_content section#about_content figcaption.cover a.cert_link {
+  main.site_content div#about_content figcaption.cover a.cert_link {
     width: 90%;
     font-size: 0.8em;
   }
-  main.site_content section#about_content figcaption.cover a.cert_link:hover {
+  main.site_content div#about_content figcaption.cover a.cert_link:hover {
     font-size: 0.9em;
   }
-  main.site_content section#about_content figcaption.cover h1.cert_title {
+  main.site_content div#about_content figcaption.cover h2.cert_title {
     font-size: 0.9em;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 95%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.15em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     line-height: 1.8em;
   }
 
@@ -1198,7 +1202,8 @@ hr {
     height: 50px;
   }
 }
-@media (max-width: 360px) {
+/* 360px */
+@media (max-width: 22.5em) {
   #site_wrapper {
     width: 98%;
   }
@@ -1243,41 +1248,41 @@ hr {
   main.site_content {
     gap: 2em 20px;
   }
-  main.site_content section#banner {
+  main.site_content div#banner {
     width: 100%;
   }
-  main.site_content section#banner figure {
+  main.site_content div#banner figure {
     margin: 0 auto;
   }
-  main.site_content section#banner figure > img,
-  main.site_content section#banner figure > picture {
+  main.site_content div#banner figure > img,
+  main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content section#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h2 {
     font-size: 2.6rem;
   }
-  main.site_content section#banner article#bannertext p {
+  main.site_content div#banner article#bannertext p {
     font-size: 1em;
   }
-  main.site_content section#about_content {
+  main.site_content div#about_content {
     width: 95%;
   }
-  main.site_content section#about_content article#abouttext h2 {
+  main.site_content div#about_content article#abouttext h2 {
     font-size: 1.1em;
   }
-  main.site_content section#about_content article#abouttext p {
+  main.site_content div#about_content article#abouttext p {
     font-size: 0.8em;
   }
-  main.site_content section#about_content .parent {
+  main.site_content div#about_content .parent {
     width: 90%;
   }
-  main.site_content section#outro {
+  main.site_content div#outro {
     width: 95%;
   }
-  main.site_content section#outro article#outrotext h2 {
+  main.site_content div#outro article#outrotext h2 {
     font-size: 1.1em;
   }
-  main.site_content section#outro article#outrotext p {
+  main.site_content div#outro article#outrotext p {
     font-size: 0.8em;
     line-height: 1.8em;
   }

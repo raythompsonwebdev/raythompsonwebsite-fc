@@ -2,7 +2,8 @@
 @import "partials/mixins";
 @import "partials/base";
 
-@media (max-width: 1680px) {
+/* 1680px */
+@media (max-width: 105em) {
   .menu-toggle {
     display: none;
   }
@@ -146,9 +147,9 @@
       }
     }
   }
-  section#banner,
-  section#about_content,
-  section#outro {
+  div#banner,
+  div#about_content,
+  div#outro {
     min-height: 82vh;
   }
 
@@ -189,7 +190,7 @@
       animation-duration: 1s;
     }
 
-    section#banner {
+    div#banner {
       position: relative;
       display: flex;
       flex-flow: column;
@@ -206,7 +207,7 @@
         padding: 1%;
 
         h2 {
-          font-size: 3rem;
+          font-size: 2.9rem;
           width: auto;
           text-align: center;
           color: $textcolor1;
@@ -238,7 +239,7 @@
       }
     }
 
-    section#banner::before {
+    div#banner::before {
       content: " ";
       display: block;
       position: absolute;
@@ -254,7 +255,7 @@
       background-size: cover; /* Resize the background image to cover the entire container */
     }
 
-    section#about_content {
+    div#about_content {
       width: 97.7%;
       flex: 0 0 auto;
       display: flex;
@@ -380,7 +381,7 @@
           }
         }
 
-        h1.cert_title {
+        h2.cert_title {
           width: 100%;
           font-size: 1em;
           margin: 0.5em 0;
@@ -410,7 +411,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 97.7%;
       flex: 1 0 auto;
       display: flex;
@@ -449,7 +450,8 @@
   }
 }
 
-@media (max-width: 1440px) {
+/* 1440px */
+@media (max-width: 90em) {
   #site_wrapper {
     width: 92%;
   }
@@ -467,7 +469,7 @@
       /* Style tab links */
       ul {
         .tablink {
-          font-size: 1em;
+          font-size: 0.95em;
 
           a {
             display: block;
@@ -513,12 +515,12 @@
   main.site_content {
     gap: 1em 20px;
 
-    section#banner {
+    div#banner {
       flex: 0 0 auto;
 
       article#bannertext {
         h2 {
-          font-size: 2.9rem;
+          font-size: 2.7rem;
         }
         p {
           font-size: 1.1em;
@@ -534,7 +536,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 97.7%;
 
       article#abouttext {
@@ -552,7 +554,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 97.7%;
       article#outrotext {
         width: 100%;
@@ -571,10 +573,11 @@
   }
 }
 
-@media (max-width: 1280px) {
-  section#banner,
-  section#about_content,
-  section#outro {
+/* 1280px */
+@media (max-width: 80em) {
+  div#banner,
+  div#about_content,
+  div#outro {
     min-height: 80vh;
   }
   #site_wrapper {
@@ -598,16 +601,12 @@
         margin: 0;
 
         .tablink {
-          font-size: 0.95em;
+          font-size: 0.9em;
 
           a {
             text-align: center;
           }
         }
-      }
-
-      .tablink:hover {
-        cursor: pointer;
       }
     }
   }
@@ -648,12 +647,12 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       flex: 0 0 auto;
 
       article#bannertext {
         h2 {
-          font-size: 2.8rem;
+          font-size: 2.5rem;
         }
         p {
           font-size: 1.05em;
@@ -670,7 +669,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 97.7%;
 
       article#abouttext {
@@ -689,7 +688,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 97.7%;
       article#outrotext {
         width: 100%;
@@ -709,7 +708,8 @@
   }
 }
 
-@media (max-width: 1024px) {
+/* 1024px */
+@media (max-width: 64em) {
   #site_wrapper {
     width: 96%;
   }
@@ -727,7 +727,7 @@
       /* Style tab links */
       ul {
         .tablink {
-          font-size: 0.9em;
+          font-size: 0.85em;
 
           a {
             display: block;
@@ -773,13 +773,13 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       flex: 0 0 auto;
 
       article#bannertext {
         width: calc(100% - 5%);
         h2 {
-          font-size: 2.7rem;
+          font-size: 2.3rem;
         }
         p {
           font-size: 1em;
@@ -795,7 +795,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 97.7%;
 
       article#abouttext {
@@ -817,7 +817,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 97.7%;
       article#outrotext {
         width: 100%;
@@ -836,7 +836,8 @@
   }
 }
 
-@media (max-width: 800px) {
+/* 800px */
+@media (max-width: 50em) {
   #site_wrapper {
     width: 98%;
   }
@@ -888,15 +889,15 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       flex: 0 0 auto;
 
       article#bannertext {
         h2 {
-          font-size: 2.6rem;
+          font-size: 2.2rem;
         }
         p {
-          font-size: 1em;
+          font-size: 0.95em;
         }
       }
 
@@ -909,7 +910,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 97.7%;
       flex: 0 0 auto;
 
@@ -927,7 +928,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 97.7%;
       article#outrotext {
         width: 100%;
@@ -946,7 +947,8 @@
   }
 }
 
-@media (max-width: 600px) {
+/* 600px */
+@media (max-width: 37.5em) {
   #site_wrapper {
     width: 98%;
   }
@@ -965,7 +967,7 @@
       /* Style tab links */
       ul {
         .tablink {
-          font-size: 0.85em;
+          font-size: 0.8em;
 
           a {
             display: block;
@@ -1011,7 +1013,7 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       width: 100%;
       figure {
         margin: 1em auto;
@@ -1023,7 +1025,7 @@
 
       article#bannertext {
         h2 {
-          font-size: 2.5rem;
+          font-size: 2.1rem;
         }
         p {
           font-size: 0.9em;
@@ -1031,7 +1033,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 95%;
 
       article#abouttext {
@@ -1048,7 +1050,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 95%;
       article#outrotext {
         h2 {
@@ -1066,8 +1068,8 @@
     height: 50px;
   }
 }
-
-@media (max-width: 480px) {
+/* 480px */
+@media (max-width: 30em) {
   .menu-toggle {
     position: relative;
     z-index: 105;
@@ -1212,7 +1214,7 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       width: 100%;
       figure {
         margin: 1em auto;
@@ -1223,15 +1225,15 @@
       }
       article#bannertext {
         h2 {
-          font-size: 2.4rem;
+          font-size: 2rem;
         }
         p {
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 95%;
 
       article#abouttext {
@@ -1260,13 +1262,13 @@
           }
         }
 
-        h1.cert_title {
+        h2.cert_title {
           font-size: 0.9em;
         }
       }
     }
 
-    section#outro {
+    div#outro {
       width: 95%;
 
       article#outrotext {
@@ -1285,7 +1287,8 @@
   }
 }
 
-@media (max-width: 360px) {
+/* 360px */
+@media (max-width: 22.5em) {
   #site_wrapper {
     width: 98%;
   }
@@ -1337,7 +1340,7 @@
   main.site_content {
     gap: 2em 20px;
 
-    section#banner {
+    div#banner {
       width: 100%;
       figure {
         margin: 0 auto;
@@ -1356,7 +1359,7 @@
       }
     }
 
-    section#about_content {
+    div#about_content {
       width: 95%;
       article#abouttext {
         h2 {
@@ -1372,7 +1375,7 @@
       }
     }
 
-    section#outro {
+    div#outro {
       width: 95%;
       article#outrotext {
         h2 {

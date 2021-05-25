@@ -12,24 +12,24 @@
     <title>Raymond Thompson - Web Developer</title>
   </head>
   <body>
-    <!---Wrrapper--->
+    <!--Wrapper-->
     <div id="site_wrapper">
-      <!---Header--->
+      <!--Header-->
       <header class="site_header">
-        <!---Site Title--->
+        <!--Site Title-->
         <hgroup class="site-title">
           <h1>Raymond Thompson</h1>
           <h2>Web Developer</h2>
         </hgroup>
-        <!---Navigation--->
+        <!--Navigation-->
         <button
           class="menu-toggle"
-          aria-controls="primary-menu"
+          aria-controls="site_navigation"
           aria-expanded="false"
         >
           menu
         </button>
-        <nav class="site_navigation hide">
+        <nav id="site_navigation" class="site_navigation hide">
           <ul>
             <li class="tablink"><a href="#banner">Home</a></li>
             <li class="tablink"><a href="#about_content">About</a></li>
@@ -39,37 +39,27 @@
       </header>
 
       <main class="site_content">
-        <!---Banner--->
-        <section id="banner" class="tabcontent">
+        <!--Banner-->
+        <div id="banner" class="tabcontent">
           <figure>
             <picture>
               <source
                 media="(min-width: 1280px)"
-                srcset="img/home-page-image-large.jpg"
+                srcset="images/home/home-page-image-large.jpg"
               />
               <source
                 media="(min-width: 800px)"
-                srcset="img/home-page-image-medium.jpg"
+                srcset="images/home/home-page-image-medium.jpg"
               />
               <source
                 media="(min-width: 600px)"
-                srcset="img/home-page-image-small.jpg"
+                srcset="images/home/home-page-image-small.jpg"
               />
-              <img src="images/home-page-image.jpg" alt="raythompsonwebdev" />
+              <img
+                src="images/home/home-page-image.jpg"
+                alt="raythompsonwebdev"
+              />
             </picture>
-            <!-- use $0.currentSrc or $0.naturalWidth in console to find out which image is showing -->
-            <!-- <img
-              class="main_image"
-              src="img/home-page-image.jpg"
-              srcset="
-                img/home-page-image-large_2x.jpg 400w,
-                img/home-page-image-large.jpg    200w,
-                img/home-page-image-medium.jpg   150w,
-                img/home-page-image-small.jpg    100w
-              "
-              sizes="(min-width:1440px) 400px, (min-width:1024px) 200px, (min-width:800px) 150px, (min-width:600px) 100px, 10vw"
-              alt=""
-            /> -->
           </figure>
           <article id="bannertext">
             <h2>Hello, I'm Raymond</h2>
@@ -81,9 +71,9 @@
               and can be viewed on most browsers and mobile devices.
             </p>
           </article>
-        </section>
-        <!---About--->
-        <section id="about_content" class="tabcontent">
+        </div>
+        <!--About-->
+        <div id="about_content" class="tabcontent">
           <article id="abouttext">
             <h2>About Me</h2>
             <p>
@@ -121,7 +111,7 @@
             <figure class="div1 box">
               <img src="images/codecademy-js.png" alt="" />
               <figcaption class="cover">
-                <h1 class="cert_title">Learn Javascript</h1>
+                <h2 class="cert_title">Learn Javascript</h2>
 
                 <a
                   class="cert_link"
@@ -137,7 +127,7 @@
                 alt=""
               />
               <figcaption class="cover">
-                <h1 class="cert_title">Javascript Algorithims</h1>
+                <h2 class="cert_title">Javascript Algorithims</h2>
                 <a
                   class="cert_link"
                   href="https://freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures"
@@ -152,7 +142,7 @@
                 alt=""
               />
               <figcaption class="cover">
-                <h1 class="cert_title">Responsive Design</h1>
+                <h2 class="cert_title">Responsive Design</h2>
                 <a
                   class="cert_link"
                   href="https://freecodecamp.org/certification/raythompsonwebdev/responsive-web-design"
@@ -164,7 +154,7 @@
             <figure class="div4 box">
               <img src="images/Button-Fill-Black-Large.png" alt="" />
               <figcaption class="cover">
-                <h1 class="cert_title">Codepen</h1>
+                <h2 class="cert_title">Codepen</h2>
                 <a
                   class="cert_link"
                   href="https://codepen.io/raythompweb/pens/"
@@ -176,7 +166,7 @@
             <figure class="div5 box">
               <img src="images/codewars.png" alt="" />
               <figcaption class="cover">
-                <h1 class="cert_title">Code Wars</h1>
+                <h2 class="cert_title">Code Wars</h2>
                 <a
                   class="cert_link"
                   href="https://www.codewars.com/users/raythompsonwebdev/badges/large"
@@ -188,7 +178,7 @@
             <figure class="div6 box">
               <img src="images/codecademy-ruby.png" alt="" />
               <figcaption class="cover">
-                <h1 class="cert_title">Learn Ruby</h1>
+                <h2 class="cert_title">Learn Ruby</h2>
                 <a
                   class="cert_link"
                   href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd"
@@ -203,7 +193,7 @@
                 alt=""
               />
               <figcaption class="cover">
-                <h1 class="cert_title">Digital Futures 2017</h1>
+                <h2 class="cert_title">Digital Futures 2017</h2>
                 <a class="cert_link" href="" target="_blank">See Video</a>
               </figcaption>
             </figure>
@@ -219,7 +209,7 @@
             <figure class="div9 box">
               <img src="images/raythompsonwebdev-co-uk-2021.png" alt="" />
               <figcaption class="cover">
-                <h1 class="cert_title">My Projects</h1>
+                <h2 class="cert_title">My Projects</h2>
                 <a
                   class="cert_link"
                   href="https://raythompsonwebdev.co.uk/"
@@ -229,9 +219,9 @@
               </figcaption>
             </figure>
           </div>
-        </section>
-        <!---Outro--->
-        <section id="outro" class="tabcontent">
+        </div>
+        <!--Outro-->
+        <div id="outro" class="tabcontent">
           <article id="outrotext">
             <h2>Why I applied</h2>
             <p>
@@ -271,10 +261,10 @@
             </p>
             <a href="">GitHUB Link</a>
           </article>
-        </section>
+        </div>
       </main>
       <br />
-      <!---Footer--->
+      <!--Footer-->
       <footer class="site_footer"></footer>
     </div>
     <script src="js/main.js"></script>
