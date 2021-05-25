@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add smooth scrolling to all links
   let navLinks = document.getElementsByClassName("tablink");
   // get body and html elements
-  let scrollScreen = document.querySelector(["body", "html"]);
+  const scrollScreen = document.querySelector(["body", "html"]);
   // get header element
-  let siteHeader = document.querySelector(".site_header");
+  const siteHeader = document.querySelector(".site_header");
+
+  const menuToggle = document.querySelector(".menu-toggle");
 
   // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
@@ -50,11 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
   window.onscroll = function () {
+    //fixes header to top of page on page scroll.
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
     } else {
       siteHeader.classList.remove("fixed-header");
     }
+    //handle scroll animation
     handleScrollAnimation();
   };
   // scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
@@ -66,6 +70,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  // create menu variables
+  const slideoutMenu = document.querySelector(".site_navigation");
+  const slideoutMenuHeight = slideoutMenu.offsetHeight;
+
+  //mobile menu toggle button
+  menuToggle.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // toggle open class
+    slideoutMenu.classList.toggle("open");
+
+    slideoutMenu.style.transition = "all 0.3s ease-in 0s";
+
+    // slide menu
+    if (slideoutMenu.classList.contains("open")) {
+      slideoutMenu.style.top = "0px";
+    } else {
+      slideoutMenu.style.transition = "all 0.3s ease-in 0s";
+      slideoutMenu.style.top = -slideoutMenuHeight + "px";
+    }
+  });
+
   // turn HTML collection list of objects into an array
   // Iterated over array with forEach.
   Array.from(navLinks).forEach((link) => {
@@ -73,19 +99,40 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       // Store hash
       let hash = event.target.hash;
-
       //check if has empty
       if (hash !== "") {
         // if not, Prevent default anchor click behavior
         event.preventDefault();
 
-        /* eslint-disable no-console */
-        console.log(hash, location.href);
-        /* eslint-enabe no-console */
-
         // select element id converting hash to string using template literal and use as argument in scrolling function.
         scrollTo(document.querySelector(`${hash}`));
       } // End if
+
+      // hide menu when link is clicked
+      if (slideoutMenu.classList.contains("open")) {
+        slideoutMenu.style.top = -slideoutMenuHeight + "px";
+        slideoutMenu.classList.remove("open");
+      } else {
+        slideoutMenu.style.top = "0px";
+      }
     });
   });
 });
+
+// (function () {
+//   // Hide/show toggle button on scroll
+
+//   let prevScrollpos = window.pageYOffset;
+
+//   window.onscroll = function () {
+//     const currentScrollPos = window.pageYOffset;
+
+//     if (prevScrollpos > currentScrollPos) {
+//       document.querySelector(".menu-toggle").classList.remove("hide");
+//     } else {
+//       document.querySelector(".menu-toggle").classList.add("hide");
+//     }
+
+//     prevScrollpos = currentScrollPos;
+//   };
+// })();
