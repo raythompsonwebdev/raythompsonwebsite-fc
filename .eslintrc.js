@@ -16,7 +16,12 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    "no-console": 1,
-    "no-unused-vars": ["error", { args: "after-used" }],
+    "no-console": "off",
+    "no-inline-comments": "off",
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "double"],
+    semi: ["error", "always"],
+    "no-empty": "warn",
   },
 };

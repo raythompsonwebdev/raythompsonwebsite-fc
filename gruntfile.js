@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         },
 
         /*
-            You don't need to change this part if you don't change
+            You don"t need to change this part if you don"t change
             the directory structure.
             */
         files: [
@@ -62,13 +62,17 @@ module.exports = function (grunt) {
         outputFile: "",
         reportNeedlessDisables: false,
         fix: false,
-        syntax: "",
+        syntax: "sass",
       },
       src: ["sass/**/*.scss"],
     },
 
     eslint: {
-      target: ["js/dev/*.js"],
+      options: {
+        configFile: ".eslintrc.js",
+        fix: true,
+      },
+      target: ["js/dev/*.js", "gruntfile.js", "js/main.js"],
     },
 
     /* Clear out the images directory if it exists */
@@ -106,7 +110,7 @@ module.exports = function (grunt) {
         },
         files: {
           // Dictionary of files
-          // 'destination': 'source'
+          // "destination": "source"
           "public/index.html": "index.html",
         },
       },
@@ -131,7 +135,7 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         banner:
-          '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+          "/*! <%= pkg.name %> <%= grunt.template.today('d-mm-yyyy') %> */\n",
       },
 
       my_target: {
@@ -174,7 +178,7 @@ module.exports = function (grunt) {
      */
     watch: {
       css: {
-        files: ["sass/*.scss", "js/dev/*.js"],
+        files: ["sass/*.scss", "js/dev/*.js", "gruntfile.js"],
         tasks: ["sass", "babel"],
       },
     },
@@ -194,6 +198,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-stylelint");
 
   grunt.registerTask("default", [
+    "sass",
+    "watch",
+    "responsive_images",
     "eslint",
     "concat",
     "uglify",
@@ -202,7 +209,6 @@ module.exports = function (grunt) {
     "htmlmin",
     "babel",
   ]);
-  grunt.registerTask("default", ["sass", "watch", "responsive_images"]);
 };
 
 /* add bag (!) to wordpress css theme top-title so that it shows on minified file*/

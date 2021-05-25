@@ -1,22 +1,23 @@
 {
   "name": "raythompsonwebsite",
-  "version": "1.0.0",
-  "main": " ",
+  "version": "1.1.0",
+  "main": "index.html",
   "dependencies": {
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.0",
+    "postcss": "^8.2.10",
+    "stylelint": "^13.13.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
-    "grunt": "^1.4.0",
+    "grunt": "^1.4.1",
     "grunt-babel": "^8.0.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-nodeunit": "^3.0.0",
     "grunt-contrib-sass": "^2.0.0",
     "grunt-contrib-uglify": "^5.0.1",
     "grunt-contrib-watch": "^1.1.0",
@@ -24,7 +25,6 @@
     "grunt-mkdir": "^1.1.0",
     "grunt-responsive-images": "^1.10.1",
     "grunt-stylelint": "^0.16.0",
-    "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0"
   },
@@ -43,7 +43,9 @@
     "compile-sass": "grunt sass",
     "compile-images": "grunt responsive_images",
     "compile-js": "grunt babel",
-    "minify-files": "grunt uglify",
+    "minify-jsfiles": "grunt uglify",
+    "lint-js": "grunt eslint",
+    "lint-sass": "grunt stylelint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
