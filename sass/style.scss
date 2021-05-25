@@ -89,6 +89,7 @@
 
   #collection-boxes {
     position: relative;
+
     z-index: 1;
     height: auto;
   }
@@ -223,7 +224,7 @@
 
       figure {
         position: relative;
-        z-index: 10;
+        z-index: 9;
         display: block;
         padding: 0;
         margin: 1em auto;
@@ -283,7 +284,7 @@
         p {
           font-size: 1em;
           width: calc(100% - 1%);
-          line-height: 1.8em;
+          line-height: 1.9em;
         }
       }
 
@@ -348,7 +349,7 @@
 
       figcaption.cover {
         position: absolute;
-        z-index: 10;
+        z-index: 9;
         background: rgba(0, 0, 0, 0.5);
         top: 0;
         left: 0;
