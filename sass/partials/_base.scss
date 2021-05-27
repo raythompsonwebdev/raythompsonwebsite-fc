@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  font-family: "FontName", Helvetica, Arial, sans-serif;
   background-color: $bgcolor;
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ img {
 
 h1,
 h2 {
-  font-family: "Arial Black", sans-serif;
+  font-family: "Arvo", Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
   color: $textcolor1;
@@ -31,7 +32,7 @@ h2 {
 }
 
 p {
-  font-family: "Arial", serif;
+  font-family: "Lato", serif;
   line-height: 1.7em;
   font-size: 1rem;
   margin: 0;
@@ -41,7 +42,7 @@ p {
 
 a {
   text-decoration: none;
-  font-family: "Arial Black", sans-serif;
+  font-family: "Arvo", sans-serif;
   color: $textcolor1;
 }
 

@@ -118,21 +118,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// (function () {
-//   // Hide/show toggle button on scroll
-
-//   let prevScrollpos = window.pageYOffset;
-
-//   window.onscroll = function () {
-//     const currentScrollPos = window.pageYOffset;
-
-//     if (prevScrollpos > currentScrollPos) {
-//       document.querySelector(".menu-toggle").classList.remove("hide");
-//     } else {
-//       document.querySelector(".menu-toggle").classList.add("hide");
-//     }
-
-//     prevScrollpos = currentScrollPos;
-//   };
-// })();

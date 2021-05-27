@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  font-family: "FontName", Helvetica, Arial, sans-serif;
   background-color: #efefef;
   margin: 0;
   padding: 0;
@@ -25,7 +26,7 @@ img {
 
 h1,
 h2 {
-  font-family: "Arial Black", sans-serif;
+  font-family: "Arvo", Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
   color: #000000;
@@ -33,7 +34,7 @@ h2 {
 }
 
 p {
-  font-family: "Arial", serif;
+  font-family: "Lato", serif;
   line-height: 1.7em;
   font-size: 1rem;
   margin: 0;
@@ -43,7 +44,7 @@ p {
 
 a {
   text-decoration: none;
-  font-family: "Arial Black", sans-serif;
+  font-family: "Arvo", sans-serif;
   color: #000000;
 }
 
@@ -100,11 +101,11 @@ hr {
     left: 0;
   }
   .site_header hgroup.site-title {
-    width: 23%;
+    width: 25%;
     flex: 0 0 auto;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
     line-height: 40px;
   }
@@ -149,6 +150,51 @@ hr {
     font-weight: bold;
     color: #000000;
     cursor: pointer;
+  }
+  .site_header span.social {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+  .site_header span.social ul#social {
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    list-style: none;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 33%;
+    height: auto;
+    margin-right: 0.2em;
+    text-align: center;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .site_header span.social ul#social li.social-item a {
+    margin: 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    height: auto;
+    vertical-align: middle;
+    width: 50%;
   }
 
   #collection-boxes {
@@ -259,7 +305,7 @@ hr {
     height: 100%;
   }
   main.site_content div#banner article#bannertext {
-    width: calc(100% - 5%);
+    width: calc(60% - 5%);
     position: relative;
     background-color: #fff;
     padding: 1%;
@@ -267,15 +313,17 @@ hr {
   main.site_content div#banner article#bannertext h2 {
     font-size: 2.9rem;
     width: auto;
-    text-align: center;
+    text-align: left;
     color: #000000;
     text-shadow: 1px 1px #ffffff;
+    line-height: 70px;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1.1em;
     width: calc(100% - 1%);
     color: #000000;
     text-shadow: 1px 1px #ffffff;
+    line-height: 1.8em;
   }
   main.site_content div#banner figure {
     position: relative;
@@ -302,7 +350,7 @@ hr {
     height: 100%;
     opacity: 0.9;
     filter: grayscale(75%);
-    background-image: url("../images/pexels-pixabay-270360.jpg");
+    background-image: url("../images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     /* Center the image */
@@ -408,9 +456,9 @@ hr {
     font-family: "Ruda", sans-serif;
   }
   main.site_content div#about_content figcaption.cover a.cert_link {
-    width: 86%;
+    width: 85%;
     border: none;
-    font-size: 0.85em;
+    font-size: 1em;
     cursor: pointer;
     float: none;
     margin: 0 auto;
@@ -423,7 +471,6 @@ hr {
     text-align: center;
   }
   main.site_content div#about_content figcaption.cover a.cert_link:hover {
-    font-size: 0.95em;
     font-weight: bold;
   }
   main.site_content div#about_content figcaption.cover h2.cert_title {
@@ -442,7 +489,8 @@ hr {
     -o-transform: scale(1);
     cursor: pointer;
   }
-  main.site_content div#about_content figure.box > img {
+  main.site_content div#about_content figure.box > img,
+  main.site_content div#about_content figure > picture {
     margin: 0 auto;
     display: block;
   }
@@ -484,12 +532,65 @@ hr {
     width: calc(100% - 1%);
     line-height: 1.8em;
   }
+  main.site_content div#outro article#outrotext p a {
+    display: inline-block;
+    width: auto;
+    font-weight: bold;
+  }
+  main.site_content div#outro article#outrotext p a:hover {
+    text-decoration: underline;
+    font-weight: normal;
+    cursor: pointer;
+  }
 
   .site_footer {
-    background-color: #59047a;
+    background-color: #ffffff;
     width: 100%;
     height: 50px;
     clear: both;
+  }
+  .site_footer ul {
+    list-style: none;
+    margin: auto 0;
+    padding: 0;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .site_footer ul li {
+    float: left;
+    height: 50px;
+    width: 12%;
+    margin: 0;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .site_footer ul li a {
+    line-height: 50px;
+    color: #000000;
+    background-color: #ffffff;
+    display: block;
+    font-size: 1em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  .site_footer ul li a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: none;
   }
 }
 /* 1440px */
@@ -502,10 +603,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.8rem;
+    font-size: 1.45rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .site_header .site_navigation {
     /* Style tab links */
@@ -515,6 +616,24 @@ hr {
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
+  }
+  .site_header span.social {
+    height: 40px;
+  }
+  .site_header span.social ul#social {
+    width: 13%;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 33%;
+  }
+  .site_header span.social ul#social li.social-item a {
+    font-size: 0.9em;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    vertical-align: middle;
   }
 
   #collection-boxes {
@@ -591,6 +710,15 @@ hr {
   .site_footer {
     height: 50px;
   }
+  .site_footer ul {
+    width: 80%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 1em;
+  }
 }
 /* 1280px */
 @media (max-width: 80em) {
@@ -608,10 +736,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title {
-    width: 27%;
+    width: 30%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
   .site_header hgroup.site-title h2 {
     font-size: 1rem;
@@ -684,10 +812,16 @@ hr {
   }
   main.site_content div#about_content article#abouttext p {
     font-size: 0.9em;
-    line-height: 1.8em;
+    line-height: 1.9em;
   }
   main.site_content div#about_content .parent {
     padding: 0.25em;
+  }
+  main.site_content div#about_content figcaption.cover a.cert_link {
+    font-size: 1em;
+  }
+  main.site_content div#about_content figcaption.cover h2.cert_title {
+    font-size: 1em;
   }
   main.site_content div#outro {
     width: 97.7%;
@@ -706,6 +840,15 @@ hr {
   .site_footer {
     height: 50px;
   }
+  .site_footer ul {
+    width: 80%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.9em;
+  }
 }
 /* 1024px */
 @media (max-width: 64em) {
@@ -717,7 +860,7 @@ hr {
     width: 35%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.65rem;
+    font-size: 1.35rem;
   }
   .site_header hgroup.site-title h2 {
     font-size: 1rem;
@@ -730,6 +873,25 @@ hr {
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
+  }
+  .site_header span.social {
+    height: 40px;
+  }
+  .site_header span.social ul#social {
+    width: 15%;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 33%;
+  }
+  .site_header span.social ul#social li.social-item a {
+    font-size: 0.9em;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    vertical-align: middle;
+    width: 60%;
   }
 
   #collection-boxes {
@@ -796,7 +958,7 @@ hr {
   }
   main.site_content div#about_content .parent {
     padding: 0.25em;
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   main.site_content div#outro {
@@ -826,7 +988,7 @@ hr {
     width: 40%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.55rem;
+    font-size: 1.3rem;
   }
   .site_header hgroup.site-title h2 {
     font-size: 0.9rem;
@@ -886,10 +1048,16 @@ hr {
     font-size: 1.3em;
   }
   main.site_content div#about_content article#abouttext p {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   main.site_content div#about_content .parent {
     margin: auto;
+  }
+  main.site_content div#about_content figcaption.cover a.cert_link {
+    font-size: 1em;
+  }
+  main.site_content div#about_content figcaption.cover h2.cert_title {
+    font-size: 0.9em;
   }
   main.site_content div#outro {
     width: 97.7%;
@@ -901,11 +1069,20 @@ hr {
     font-size: 1.3em;
   }
   main.site_content div#outro article#outrotext p {
-    line-height: 1.8em;
+    font-size: 0.9em;
   }
 
   .site_footer {
     height: 50px;
+  }
+  .site_footer ul {
+    width: 80%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.85em;
   }
 }
 /* 600px */
@@ -918,7 +1095,7 @@ hr {
     width: 50%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     line-height: 35px;
   }
   .site_header hgroup.site-title h2 {
@@ -932,6 +1109,25 @@ hr {
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
+  }
+  .site_header span.social {
+    height: 40px;
+  }
+  .site_header span.social ul#social {
+    width: 20%;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 33%;
+  }
+  .site_header span.social ul#social li.social-item a {
+    font-size: 0.9em;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    vertical-align: middle;
+    width: 65%;
   }
 
   #collection-boxes {
@@ -990,7 +1186,13 @@ hr {
     font-size: 0.85em;
   }
   main.site_content div#about_content .parent {
-    width: 85%;
+    width: 95%;
+  }
+  main.site_content div#about_content figcaption.cover a.cert_link {
+    font-size: 0.9em;
+  }
+  main.site_content div#about_content figcaption.cover h2.cert_title {
+    font-size: 0.9em;
   }
   main.site_content div#outro {
     width: 95%;
@@ -1005,6 +1207,15 @@ hr {
 
   .site_footer {
     height: 50px;
+  }
+  .site_footer ul {
+    width: 80%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.8em;
   }
 }
 /* 480px */
@@ -1051,10 +1262,10 @@ hr {
     width: 65%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .site_header .show {
     top: 0;
@@ -1116,6 +1327,25 @@ hr {
     padding: 1em;
     margin-bottom: 3em;
   }
+  .site_header span.social {
+    height: 40px;
+  }
+  .site_header span.social ul#social {
+    width: 20%;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 33%;
+  }
+  .site_header span.social ul#social li.social-item a {
+    font-size: 0.9em;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    vertical-align: middle;
+    width: 75%;
+  }
 
   #collection-boxes {
     position: relative;
@@ -1173,17 +1403,42 @@ hr {
     font-size: 0.85em;
   }
   main.site_content div#about_content .parent {
-    width: 90%;
+    width: 98%;
     margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  main.site_content div#about_content .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  main.site_content div#about_content .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  main.site_content div#about_content .div3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  main.site_content div#about_content .div4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  main.site_content div#about_content .div5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  main.site_content div#about_content .div6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  main.site_content div#about_content .div7 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  main.site_content div#about_content .div8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  main.site_content div#about_content .div9 {
+    grid-area: 5 / 1 / 6 / 2;
   }
   main.site_content div#about_content figcaption.cover {
     position: absolute;
   }
   main.site_content div#about_content figcaption.cover a.cert_link {
-    width: 90%;
-    font-size: 0.8em;
-  }
-  main.site_content div#about_content figcaption.cover a.cert_link:hover {
     font-size: 0.9em;
   }
   main.site_content div#about_content figcaption.cover h2.cert_title {
@@ -1216,7 +1471,7 @@ hr {
     font-size: 1.2rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   #collection-boxes {
@@ -1257,7 +1512,7 @@ hr {
     display: block;
   }
   main.site_content div#banner article#bannertext h2 {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
@@ -1272,7 +1527,16 @@ hr {
     font-size: 0.8em;
   }
   main.site_content div#about_content .parent {
-    width: 90%;
+    width: 98%;
+  }
+  main.site_content div#about_content figcaption.cover {
+    position: absolute;
+  }
+  main.site_content div#about_content figcaption.cover a.cert_link {
+    font-size: 0.8em;
+  }
+  main.site_content div#about_content figcaption.cover h2.cert_title {
+    font-size: 0.8em;
   }
   main.site_content div#outro {
     width: 95%;
