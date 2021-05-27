@@ -567,7 +567,7 @@ hr {
   .site_footer ul li {
     float: left;
     height: 50px;
-    width: 12%;
+    width: 10%;
     margin: 0;
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
@@ -584,11 +584,12 @@ hr {
     font-size: 1em;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    text-align: center;
   }
   .site_footer ul li a:hover {
-    color: #ffffff;
-    background-color: #000000;
+    font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
   }
 }
 /* 1440px */
