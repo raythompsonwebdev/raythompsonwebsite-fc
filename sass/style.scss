@@ -95,7 +95,7 @@
       justify-content: flex-end;
 
       ul#social {
-        width: 12%;
+        width: 11%;
         margin: 0;
         padding: 0;
         height: 100%;
@@ -120,13 +120,11 @@
             line-height: 40px;
             &:hover {
               cursor: pointer;
-              color: $textcolor2;
-              background-color: $textcolor1;
             }
             object {
               height: auto;
               vertical-align: middle;
-              width: 50%;
+              width: 40%;
             }
           }
         }
