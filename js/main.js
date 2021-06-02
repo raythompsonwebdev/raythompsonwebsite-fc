@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollScreen.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: element.offsetTop - 110 // deduct height of header.
+      top: element.offsetTop - 100 // deduct height of header.
 
     });
   }; // create menu variables
