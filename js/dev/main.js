@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   //detect page scroll function
-  const elementInView = (el, scrollOffset = 100) => {
+  const elementInView = (el, scrollOffset = 110) => {
     const elementTop = el.getBoundingClientRect().top;
 
     return (
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //add animation to element on page scroll
   const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
-      if (elementInView(el, 100)) {
+      if (elementInView(el, 110)) {
         displayScrollElement(el);
       } else {
         hideScrollElement(el);
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollScreen.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: element.offsetTop - 100, // deduct height of header.
+      top: element.offsetTop - 105, // deduct height of header.
     });
   };
 

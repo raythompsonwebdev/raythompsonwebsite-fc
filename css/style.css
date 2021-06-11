@@ -90,6 +90,7 @@ hr {
     font-size: 90%;
     z-index: 10;
     background-color: #ffffff;
+    height: 100px;
   }
 
   .site_header {
