@@ -89,22 +89,21 @@ hr {
     text-indent: 0.5em;
     font-size: 90%;
     z-index: 10;
-    background-color: #ffffff;
+    background-color: #fff;
     height: 100px;
   }
 
   .site_header {
     height: 100px;
     width: 100%;
-    margin-bottom: 0.5em;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     left: 0;
   }
   .site_header hgroup.site-title {
-    width: 25%;
-    flex: 0 0 auto;
+    width: 20%;
+    flex: 1 0 auto;
   }
   .site_header hgroup.site-title h1 {
     font-size: 1.5rem;
@@ -116,18 +115,19 @@ hr {
     text-align: left;
   }
   .site_header .site_navigation {
-    width: 40%;
-    flex: 0 0 auto;
+    width: 60%;
+    flex: 1 0 auto;
     height: auto;
     margin-bottom: 0.5em;
   }
   .site_header .site_navigation ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    width: 50%;
   }
   .site_header .site_navigation ul .tablink {
     color: #000000;
@@ -155,14 +155,15 @@ hr {
   }
   .site_header span.social {
     height: 40px;
-    width: 100%;
+    width: 20%;
+    flex: 1 0 auto;
     text-align: center;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
   }
   .site_header span.social ul#social {
-    width: 11%;
+    width: 100%;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -170,7 +171,7 @@ hr {
     list-style: none;
   }
   .site_header span.social ul#social li.social-item {
-    width: 33%;
+    width: 32%;
     height: auto;
     margin-right: 0.2em;
     text-align: center;
@@ -187,14 +188,16 @@ hr {
     width: 100%;
     height: 100%;
     line-height: 40px;
-  }
-  .site_header span.social ul#social li.social-item a:hover {
-    cursor: pointer;
+    background-color: #000;
   }
   .site_header span.social ul#social li.social-item a object {
     height: auto;
     vertical-align: middle;
-    width: 40%;
+    color: #fff;
+    width: 25%;
+  }
+  .site_header span.social ul#social li.social-item a object:hover {
+    cursor: pointer;
   }
 
   #collection-boxes {
@@ -254,12 +257,6 @@ hr {
     margin: auto;
   }
 
-  div#banner,
-  div#about_content,
-  div#outro {
-    min-height: 82vh;
-  }
-
   main.site_content {
     position: relative;
     display: flex;
@@ -270,7 +267,6 @@ hr {
     min-height: 80vh;
     width: 100%;
     margin-bottom: 0.5em;
-    padding-top: 0.25em;
   }
   @keyframes example {
     0% {
@@ -295,6 +291,12 @@ hr {
     animation-name: example;
     animation-duration: 1s;
   }
+  main.site_content div#banner,
+  main.site_content div#about_content,
+  main.site_content div#outro {
+    min-height: 82vh;
+    margin-bottom: 100px;
+  }
   main.site_content div#banner {
     position: relative;
     display: flex;
@@ -304,6 +306,7 @@ hr {
     width: 100%;
     flex: 0 0 auto;
     height: 100%;
+    padding-top: 2em;
   }
   main.site_content div#banner article#bannertext {
     width: calc(60% - 5%);
@@ -365,8 +368,7 @@ hr {
     flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
-    padding: 0.5em;
-    background-color: #ffffff;
+    padding-top: 2em;
   }
   main.site_content div#about_content article#abouttext {
     width: 48%;
@@ -434,7 +436,7 @@ hr {
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-color: #efefef;
+    background-color: #ffffff;
   }
   main.site_content div#about_content figcaption.cover {
     position: absolute;
@@ -512,8 +514,8 @@ hr {
     align-content: flex-start;
     justify-content: space-between;
     padding: 0.5em;
-    background-color: #ffffff;
     height: 100%;
+    padding-top: 2em;
   }
   main.site_content div#outro article#outrotext {
     display: block;
@@ -605,10 +607,10 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .site_header .site_navigation {
     /* Style tab links */
@@ -622,11 +624,8 @@ hr {
   .site_header span.social {
     height: 40px;
   }
-  .site_header span.social ul#social {
-    width: 13%;
-  }
   .site_header span.social ul#social li.social-item {
-    width: 33%;
+    width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
@@ -738,19 +737,19 @@ hr {
     height: 100px;
   }
   .site_header hgroup.site-title {
-    width: 30%;
+    width: 25%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .site_header .site_navigation {
-    width: 40%;
+    width: 55%;
   }
   .site_header .site_navigation ul {
-    margin: 0;
+    width: 60%;
   }
   .site_header .site_navigation ul .tablink {
     font-size: 0.9em;
@@ -859,16 +858,19 @@ hr {
   }
 
   .site_header hgroup.site-title {
-    width: 35%;
+    width: 30%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .site_header .site_navigation {
-    /* Style tab links */
+    width: 50%;
+  }
+  .site_header .site_navigation ul {
+    width: 70%;
   }
   .site_header .site_navigation ul .tablink {
     font-size: 0.85em;
@@ -878,12 +880,10 @@ hr {
   }
   .site_header span.social {
     height: 40px;
-  }
-  .site_header span.social ul#social {
-    width: 15%;
+    width: 20%;
   }
   .site_header span.social ul#social li.social-item {
-    width: 33%;
+    width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
@@ -893,7 +893,7 @@ hr {
   }
   .site_header span.social ul#social li.social-item a object {
     vertical-align: middle;
-    width: 60%;
+    width: 35%;
   }
 
   #collection-boxes {
@@ -987,13 +987,37 @@ hr {
   }
 
   .site_header hgroup.site-title {
-    width: 40%;
+    width: 35%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  .site_header .site_navigation {
+    width: 45%;
+  }
+  .site_header .site_navigation ul {
+    width: 80%;
+  }
+  .site_header .site_navigation ul .tablink {
+    font-size: 0.8em;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+  }
+  .site_header span.social {
+    height: 40px;
+  }
+  .site_header span.social ul#social li.social-item {
+    width: 32%;
+  }
+  .site_header span.social ul#social li.social-item a {
+    font-size: 0.8em;
+  }
+  .site_header span.social ul#social li.social-item a object {
+    width: 45%;
   }
 
   #collection-boxes {
@@ -1094,32 +1118,30 @@ hr {
   }
 
   .site_header hgroup.site-title {
-    width: 50%;
+    width: 35%;
   }
   .site_header hgroup.site-title h1 {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
     line-height: 35px;
   }
   .site_header hgroup.site-title h2 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .site_header .site_navigation {
-    /* Style tab links */
+    width: 45%;
   }
   .site_header .site_navigation ul .tablink {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
   }
   .site_header span.social {
     height: 40px;
-  }
-  .site_header span.social ul#social {
-    width: 20%;
+    width: 15%;
   }
   .site_header span.social ul#social li.social-item {
-    width: 33%;
+    width: 31%;
   }
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
@@ -1129,7 +1151,6 @@ hr {
   }
   .site_header span.social ul#social li.social-item a object {
     vertical-align: middle;
-    width: 65%;
   }
 
   #collection-boxes {
@@ -1238,6 +1259,7 @@ hr {
     width: 25%;
     text-align: center;
     padding: 0;
+    left: calc(75% - 2%);
   }
 
   .menu-toggle.hide {
@@ -1333,7 +1355,7 @@ hr {
     height: 40px;
   }
   .site_header span.social ul#social {
-    width: 20%;
+    width: 100%;
   }
   .site_header span.social ul#social li.social-item {
     width: 33%;
@@ -1346,7 +1368,6 @@ hr {
   }
   .site_header span.social ul#social li.social-item a object {
     vertical-align: middle;
-    width: 75%;
   }
 
   #collection-boxes {

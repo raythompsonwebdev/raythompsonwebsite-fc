@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //detect page scroll function
 
   var elementInView = function elementInView(el) {
-    var scrollOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 110;
+    var scrollOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
     var elementTop = el.getBoundingClientRect().top;
-    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset;
+    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset + 1;
   }; //display element on page scroll
 
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var handleScrollAnimation = function handleScrollAnimation() {
     scrollElements.forEach(function (el) {
-      if (elementInView(el, 110)) {
+      if (elementInView(el, 100)) {
         displayScrollElement(el);
       } else {
         hideScrollElement(el);
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollScreen.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: element.offsetTop - 105 // deduct height of header.
+      top: element.offsetTop - 100 // deduct height of header.
 
     });
   }; // create menu variables
