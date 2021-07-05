@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var elementInView = function elementInView(el) {
     var scrollOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
     var elementTop = el.getBoundingClientRect().top;
-    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset + 1;
+    return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset;
   }; //display element on page scroll
 
 

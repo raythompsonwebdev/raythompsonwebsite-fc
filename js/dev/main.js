@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return (
       elementTop <=
       (window.innerHeight || document.documentElement.clientHeight) -
-        scrollOffset + 1
+        scrollOffset
     );
   };
 
