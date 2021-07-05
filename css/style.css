@@ -192,71 +192,14 @@ hr {
   }
   .site_header span.social ul#social li.social-item a object {
     line-height: 40px;
-    height: auto;
     color: #ffffff;
     width: 25%;
     height: 40px;
     display: block;
-  }
-  .site_header span.social ul#social li.social-item a object:hover {
-    cursor: pointer;
-  }
-
-  #collection-boxes {
-    position: relative;
-    z-index: 1;
-    height: auto;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    display: inline-flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
-    justify-content: flex-start;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    transition: all 1s;
-  }
-  #mask3 article.collection-box h1 {
-    display: block;
-    height: auto;
-    margin: 0.5em auto;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 0;
-    line-height: 50px;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
-    display: block;
     margin: auto;
+  }
+  .site_header span.social ul#social li.social-item a:hover {
+    cursor: pointer;
   }
 
   main.site_content {
@@ -629,38 +572,8 @@ hr {
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
   }
-  .site_header span.social ul#social li.social-item a:hover {
-    cursor: pointer;
-  }
   .site_header span.social ul#social li.social-item a object {
     margin: auto;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -755,33 +668,6 @@ hr {
   }
   .site_header .site_navigation ul .tablink a {
     text-align: center;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -887,38 +773,8 @@ hr {
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
   }
-  .site_header span.social ul#social li.social-item a:hover {
-    cursor: pointer;
-  }
   .site_header span.social ul#social li.social-item a object {
     width: 35%;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -1016,33 +872,6 @@ hr {
   }
   .site_header span.social ul#social li.social-item a object {
     width: 45%;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -1144,38 +973,8 @@ hr {
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
   }
-  .site_header span.social ul#social li.social-item a:hover {
-    cursor: pointer;
-  }
   .site_header span.social ul#social li.social-item a object {
     width: 55%;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -1362,38 +1161,8 @@ hr {
   .site_header span.social ul#social li.social-item a {
     font-size: 0.9em;
   }
-  .site_header span.social ul#social li.social-item a:hover {
-    cursor: pointer;
-  }
   .site_header span.social ul#social li.social-item a object {
     width: 50%;
-  }
-
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
   }
 
   main.site_content {
@@ -1424,7 +1193,7 @@ hr {
     font-size: 1.2em;
   }
   main.site_content div#about_content article#abouttext p {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   main.site_content div#about_content .parent {
     width: 98%;
@@ -1516,33 +1285,6 @@ hr {
     margin-bottom: 3em;
   }
 
-  #collection-boxes {
-    position: relative;
-  }
-
-  #mask3 {
-    width: 100%;
-    min-height: 300px;
-  }
-  #mask3 .unfade {
-    opacity: 0;
-  }
-  #mask3 .fade {
-    opacity: 1;
-  }
-  #mask3 article.collection-box {
-    position: absolute;
-  }
-  #mask3 article.collection-box h1 {
-    font-size: 1.3em;
-  }
-  #mask3 article.collection-box h1:hover {
-    cursor: pointer;
-  }
-  #mask3 article.collection-box img {
-    width: 60%;
-  }
-
   main.site_content div#banner {
     width: 100%;
   }
@@ -1566,7 +1308,7 @@ hr {
     font-size: 1.1em;
   }
   main.site_content div#about_content article#abouttext p {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   main.site_content div#about_content .parent {
     width: 98%;
