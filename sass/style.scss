@@ -23,7 +23,7 @@
     text-indent: 0.5em;
     font-size: 90%;
     z-index: 10;
-    background-color: #fff;
+    background-color: $bgcolor;
     height: 100px;
   }
   .site_header {
@@ -123,10 +123,12 @@
             background-color: $colorwhite;
 
             object {
+              line-height: 40px;
               height: auto;
-              vertical-align: middle;
-              color: #fff;
+              color: $colorwhite;
               width: 25%;
+              height: 40px;
+              display: block;
 
               &:hover {
                 cursor: pointer;
@@ -601,7 +603,7 @@
               cursor: pointer;
             }
             object {
-              vertical-align: middle;
+              margin: auto;
             }
           }
         }
@@ -912,7 +914,6 @@
               cursor: pointer;
             }
             object {
-              vertical-align: middle;
               width: 35%;
             }
           }
@@ -1427,6 +1428,7 @@
           width: 100%;
           display: block;
           margin-bottom: 0;
+          font-size: 1em;
 
           a {
             line-height: 60px;
@@ -1464,7 +1466,7 @@
               cursor: pointer;
             }
             object {
-              vertical-align: middle;
+              width: 50%;
             }
           }
         }
@@ -1507,6 +1509,8 @@
 
   main.site_content {
     gap: 2em 20px;
+    min-height: unset;
+    height: auto;
 
     div#banner {
       width: 100%;
@@ -1535,7 +1539,7 @@
           font-size: 1.2em;
         }
         p {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
       }
 
@@ -1621,6 +1625,29 @@
         font-size: 0.9rem;
       }
     }
+    .site_navigation {
+      height: 180px;
+
+      ul {
+        height: 100%;
+
+        .tablink {
+          a {
+            font-size: 0.9em;
+          }
+        }
+        .tablink:hover {
+          font-weight: bold;
+          color: $textcolor1;
+          cursor: pointer;
+        }
+      }
+
+      .nav-menu {
+        padding: 1em;
+        margin-bottom: 3em;
+      }
+    }
   }
 
   #collection-boxes {
@@ -1683,7 +1710,7 @@
           font-size: 1.1em;
         }
         p {
-          font-size: 0.8em;
+          font-size: 0.85em;
         }
       }
 

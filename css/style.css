@@ -89,7 +89,7 @@ hr {
     text-indent: 0.5em;
     font-size: 90%;
     z-index: 10;
-    background-color: #fff;
+    background-color: #efefef;
     height: 100px;
   }
 
@@ -191,10 +191,12 @@ hr {
     background-color: #ffffff;
   }
   .site_header span.social ul#social li.social-item a object {
+    line-height: 40px;
     height: auto;
-    vertical-align: middle;
-    color: #fff;
+    color: #ffffff;
     width: 25%;
+    height: 40px;
+    display: block;
   }
   .site_header span.social ul#social li.social-item a object:hover {
     cursor: pointer;
@@ -631,7 +633,7 @@ hr {
     cursor: pointer;
   }
   .site_header span.social ul#social li.social-item a object {
-    vertical-align: middle;
+    margin: auto;
   }
 
   #collection-boxes {
@@ -889,7 +891,6 @@ hr {
     cursor: pointer;
   }
   .site_header span.social ul#social li.social-item a object {
-    vertical-align: middle;
     width: 35%;
   }
 
@@ -1328,6 +1329,7 @@ hr {
     width: 100%;
     display: block;
     margin-bottom: 0;
+    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
     line-height: 60px;
@@ -1364,7 +1366,7 @@ hr {
     cursor: pointer;
   }
   .site_header span.social ul#social li.social-item a object {
-    vertical-align: middle;
+    width: 50%;
   }
 
   #collection-boxes {
@@ -1396,6 +1398,8 @@ hr {
 
   main.site_content {
     gap: 2em 20px;
+    min-height: unset;
+    height: auto;
   }
   main.site_content div#banner {
     width: 100%;
@@ -1492,6 +1496,24 @@ hr {
   }
   .site_header hgroup.site-title h2 {
     font-size: 0.9rem;
+  }
+  .site_header .site_navigation {
+    height: 180px;
+  }
+  .site_header .site_navigation ul {
+    height: 100%;
+  }
+  .site_header .site_navigation ul .tablink a {
+    font-size: 0.9em;
+  }
+  .site_header .site_navigation ul .tablink:hover {
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+  }
+  .site_header .site_navigation .nav-menu {
+    padding: 1em;
+    margin-bottom: 3em;
   }
 
   #collection-boxes {
