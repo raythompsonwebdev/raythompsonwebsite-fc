@@ -1150,7 +1150,7 @@ hr {
     cursor: pointer;
   }
   .site_header span.social ul#social li.social-item a object {
-    vertical-align: middle;
+    width: 55%;
   }
 
   #collection-boxes {
