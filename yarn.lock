@@ -2599,7 +2599,7 @@ grunt-babel@^8.0.0:
   resolved "https://registry.yarnpkg.com/grunt-babel/-/grunt-babel-8.0.0.tgz#92ef63aafadf938c488dc2f926ac9846e0c93d1b"
   integrity sha512-WuiZFvGzcyzlEoPIcY1snI234ydDWeWWV5bpnB7PZsOLHcDsxWKnrR1rMWEUsbdVPPjvIirwFNsuo4CbJmsdFQ==
 
-grunt-cli@~1.4.2:
+grunt-cli@^1.4.3, grunt-cli@~1.4.2:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/grunt-cli/-/grunt-cli-1.4.3.tgz#22c9f1a3d2780bf9b0d206e832e40f8f499175ff"
   integrity sha512-9Dtx/AhVeB4LYzsViCjUQkd0Kw0McN2gYpdmGYKtE2a5Yt7v1Q+HYZVWhqXc/kGnxlMtqKDxSwotiGeFmkrCoQ==

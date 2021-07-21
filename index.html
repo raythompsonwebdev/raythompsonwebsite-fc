@@ -28,19 +28,43 @@
         <!--Navigation-->
         <nav id="site_navigation" class="site_navigation hide">
           <ul>
-            <li class="tablink"><a href="#banner" title="Home Page">Home</a></li>
-          <li class="tablink"><a href="#about_content" title="about">About</a></li>
-          <li class="tablink"><a href="#outro" title="Why I applied">Mission</a></li>
+            <li class="tablink">
+              <a href="#banner" title="Home Page">Home</a>
+            </li>
+            <li class="tablink">
+              <a href="#about_content" title="about">About</a>
+            </li>
+            <li class="tablink">
+              <a href="#outro" title="Why I applied">Mission</a>
+            </li>
           </ul>
         </nav>
         <span class="social">
           <ul id="social">
-            <li class="social-item"><a href="https://www.facebook.com/raythompsonwebdeveloper"><object data="icons/social-1_logo-facebook.svg" type="image/svg+xml">
-            </object></a></li>
-            <li class="social-item"><a href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8"><object data="icons/social-1_logo-linkedin.svg" type="image/svg+xml">
-            </object></a></li>
-            <li class="social-item"><a href="http://twitter.com/RayThompWeb"><object data="icons/social-1_logo-twitter.svg" type="image/svg+xml">
-            </object></a></li>
+            <li class="social-item">
+              <a href="https://www.facebook.com/raythompsonwebdeveloper"
+                ><object
+                  data="icons/social-1_logo-facebook.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8"
+                ><object
+                  data="icons/social-1_logo-linkedin.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="http://twitter.com/RayThompWeb"
+                ><object
+                  data="icons/social-1_logo-twitter.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
           </ul>
         </span>
         <button
@@ -50,8 +74,6 @@
         >
           menu
         </button>
-
-
       </header>
 
       <main class="site_content">
@@ -280,51 +302,130 @@
         <!--Outro-->
         <div id="outro" class="tabcontent">
           <article id="outrotext">
-            <h2>Why I am applying</h2>
+            <h2>Contact</h2>
 
-            </figure>
-            <p>
-              I have always used a computer in some form or another since
-              windows 95 whether through work or through hobbies like when I
-              used how to make dance and hip hop beats using Fruity Loops, Later
-              FL Studio) but never thought about learning to code or even
-              becoming a programmer.
-            </p>
-            <hr />
-            <p>
-              Working within software development really appeals to me because
-              It involves working by yourself or with others to produce
-              solutions to simple and complex problems, thinking methodically
-              and learning something new everyday . I also like Learning about
-              the different programming languages available and what they can
-              and can't do. And enjoy working as part of a team to be able to
-              share what I have learnt to help colleagues and discover new
-              things from colleagues.
-            </p>
-            <hr />
-            <p>
-              I enjoy developing websites and web applications in my spare time
-              and get a sense of accomplishment when I am able to put into
-              practice what I have learnt and it works. I also enjoyed attending
-              the workshop on javascript objects held by coders and have found
-              coders founder community very helpful and friendly.
-            </p>
-
-            <hr />
-
-            <p>
-              Attending an apprenticeship at coders and founders I feel would
-              provide me with the enviroment I need get experience working in a
-              software development enviroment and working with other on a project. My passion for web development,
-              programming and providing high quality services to the general
-              public through previous work experience are a couple of reasons
-              why I am seeking a progressive opportunity in the IT sector,
-              particularly software development. I am keen to utilise my
-              acquired skills and knowledge in a challenging position within an
-              organisation that encourages development.
-            </p>
-            <hr/>
-            <p>To see the code for this website, visit the git hub repository by clicking your mouse <a href="https://github.com/raythompsonwebdev/raythompsonwebsite-fc" title="link to code on github">here</a>.</p>
+            <form
+              id="myform"
+              name="theform"
+              class="group"
+              action="http://iviewsource.com"
+              method="POST"
+            >
+              <fieldset id="login" title="Login Info">
+                <legend>Contact Info</legend>
+                <span id="formerror" class="error"></span>
+                <ol>
+                  <li>
+                    <label for="myname">Name *</label>
+                    <input
+                      type="text"
+                      name="myname"
+                      id="myname"
+                      title="Please enter your name"
+                      pattern="[A-Za-z ]+, [A-Za-z ]+"
+                      autofocus
+                      required
+                      placeholder="Last, First"
+                    />
+                  </li>
+                  <li>
+                    <label for="myemail">Email *</label>
+                    <input
+                      type="email"
+                      name="myemail"
+                      required
+                      id="myemail"
+                      autocomplete="off"
+                    />
+                  </li>
+                  <li>
+                    <label for="mypassword">Password</label>
+                    <input type="password" name="mypassword" id="mypassword" />
+                  </li>
+                  <li>
+                    <label for="mypasswordconf">Password</label>
+                    <input
+                      type="password"
+                      name="mypasswordconf"
+                      id="mypasswordconf"
+                    />
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset id="other" class="hidden" title="Other Info">
+                <legend>Other</legend>
+                <ol>
+                  <li>
+                    <label for="myurl">Website</label>
+                    <input type="url" name="myurl" id="myurl" />
+                  </li>
+                  <li>
+                    <label for="mytelephone">Telephone</label>
+                    <input
+                      type="tel"
+                      name="mytelephone"
+                      id="mytelephone"
+                      pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                      placeholder="xxx-xxx-xxxx"
+                    />
+                  </li>
+                  <li class="singleline">
+                    <label for="subscribeitem"
+                      >Subscribe to our mailing list?</label
+                    >
+                    <input
+                      type="checkbox"
+                      id="subscribeitem"
+                      name="subscribe"
+                      checked
+                      value="yes"
+                    />
+                  </li>
+                  <li>
+                    <label for="reference">How did you hear about us?</label>
+                    <select name="reference" id="reference">
+                      <option>Choose...</option>
+                      <option value="friend">A friend</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="twitter">Twitter</option>
+                    </select>
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset id="comments" class="hidden" title="Comments">
+                <legend>Comments</legend>
+                <ol>
+                  <li>
+                    <div class="grouphead">Request Type</div>
+                    <ol>
+                      <li>
+                        <label for="questionitem">Question</label>
+                        <input
+                          type="radio"
+                          name="requesttype"
+                          value="question"
+                          id="questionitem"
+                        />
+                      </li>
+                      <li>
+                        <label for="questionitem">Question</label>
+                        <input
+                          type="radio"
+                          name="requesttype"
+                          value="comment"
+                          id="commentitem"
+                        />
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <label for="mycomments">Comment</label>
+                    <textarea name="mycomments" id="mycomments"></textarea>
+                  </li>
+                </ol>
+                <button type="submit">send</button>
+              </fieldset>
+            </form>
           </article>
         </div>
       </main>
@@ -333,10 +434,13 @@
       <footer class="site_footer">
         <ul>
           <li class="tablink"><a href="#banner" title="Home Page">Home</a></li>
-          <li class="tablink"><a href="#about_content" title="about">About</a></li>
-          <li class="tablink"><a href="#outro" title="Why I applied">Mission</a></li>
+          <li class="tablink">
+            <a href="#about_content" title="about">About</a>
+          </li>
+          <li class="tablink">
+            <a href="#outro" title="Why I applied">Mission</a>
+          </li>
         </ul>
-
       </footer>
     </div>
     <script src="js/main.js"></script>
