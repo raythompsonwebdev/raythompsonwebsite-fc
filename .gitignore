@@ -108,7 +108,9 @@ spare.txt
 style.css.map
 node_modules/
 public/
+images/
 img/
+icons/
 .sass-cache/
 textfiles/
 images/unused-images/

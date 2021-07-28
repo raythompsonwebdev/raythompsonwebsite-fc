@@ -251,8 +251,8 @@ textarea:focus {
     animation-duration: 1s;
   }
   main.site_content div#banner,
-  main.site_content div#about_content,
-  main.site_content div#outro {
+main.site_content div#about_content,
+main.site_content div#outro {
     min-height: 82vh;
     margin-bottom: 100px;
   }
@@ -297,7 +297,7 @@ textarea:focus {
     border: 10px solid #fff;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     width: auto;
     margin: 0 auto;
     vertical-align: bottom;
@@ -358,31 +358,31 @@ textarea:focus {
     width: 50%;
   }
   main.site_content div#about_content .div1 {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1/1/2/2;
   }
   main.site_content div#about_content .div2 {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1/2/2/3;
   }
   main.site_content div#about_content .div3 {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: 1/3/2/4;
   }
   main.site_content div#about_content .div4 {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2/1/3/2;
   }
   main.site_content div#about_content .div5 {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2/2/3/3;
   }
   main.site_content div#about_content .div6 {
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: 2/3/3/4;
   }
   main.site_content div#about_content .div7 {
-    grid-area: 3 / 1 / 3 / 2;
+    grid-area: 3/1/3/2;
   }
   main.site_content div#about_content .div8 {
-    grid-area: 3 / 2 / 3 / 3;
+    grid-area: 3/2/3/3;
   }
   main.site_content div#about_content .div9 {
-    grid-area: 3 / 3 / 3 / 4;
+    grid-area: 3/3/3/4;
   }
   main.site_content div#about_content figure.box {
     position: relative;
@@ -450,7 +450,7 @@ textarea:focus {
     cursor: pointer;
   }
   main.site_content div#about_content figure.box > img,
-  main.site_content div#about_content figure > picture {
+main.site_content div#about_content figure > picture {
     margin: 0 auto;
     display: block;
   }
@@ -501,59 +501,64 @@ textarea:focus {
     font-weight: normal;
     cursor: pointer;
   }
+  main.site_content div#outro article#outrotext .error {
+    line-height: 35px;
+    background: #fff;
+    margin-bottom: 0.2em;
+    display: block;
+    color: red;
+    border: 2px red solid;
+  }
   main.site_content div#outro article#outrotext form#myform {
-    width: 50%;
+    width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset legend {
-    font-size: 1.1em;
-  }
-  main.site_content div#outro article#outrotext form#myform fieldset ol {
+  main.site_content div#outro article#outrotext form#myform ol {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li {
+  main.site_content div#outro article#outrotext form#myform ol li {
     height: auto;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li label,
-  main.site_content div#outro article#outrotext form#myform fieldset ol li .grouphead {
+  main.site_content div#outro article#outrotext form#myform ol li label,
+main.site_content div#outro article#outrotext form#myform ol li .grouphead {
     display: block;
     width: 100%;
     line-height: 30px;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li ol {
+  main.site_content div#outro article#outrotext form#myform ol li ol {
     padding: 0.5em 0;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li label[for="questionitem"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li label[for="subscribeitem"] {
+  main.site_content div#outro article#outrotext form#myform ol li label[for=questionitem],
+main.site_content div#outro article#outrotext form#myform ol li label[for=subscribeitem] {
     float: left;
     width: 60%;
     line-height: 20px;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="text"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="url"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="email"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="tel"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="password"] {
+  main.site_content div#outro article#outrotext form#myform ol li input[type=text],
+main.site_content div#outro article#outrotext form#myform ol li input[type=url],
+main.site_content div#outro article#outrotext form#myform ol li input[type=email],
+main.site_content div#outro article#outrotext form#myform ol li input[type=tel],
+main.site_content div#outro article#outrotext form#myform ol li input[type=password] {
     display: block;
     line-height: 35px;
     width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="radio"],
-  main.site_content div#outro article#outrotext form#myform fieldset ol li input[type="checkbox"] {
+  main.site_content div#outro article#outrotext form#myform ol li input[type=radio],
+main.site_content div#outro article#outrotext form#myform ol li input[type=checkbox] {
     display: inline-block;
     line-height: 35px;
     width: 10%;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset ol li select,
-  main.site_content div#outro article#outrotext form#myform fieldset ol li textarea {
+  main.site_content div#outro article#outrotext form#myform ol li select,
+main.site_content div#outro article#outrotext form#myform ol li textarea {
     width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset button[type="submit"] {
+  main.site_content div#outro article#outrotext form#myform button[type=submit] {
     width: 100%;
     height: 35px;
   }
-  main.site_content div#outro article#outrotext form#myform fieldset button[type="submit"]:hover {
+  main.site_content div#outro article#outrotext form#myform button[type=submit]:hover {
     cursor: pointer;
   }
 
@@ -661,7 +666,7 @@ textarea:focus {
     margin: 1em auto;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#about_content {
@@ -705,8 +710,8 @@ textarea:focus {
 /* 1280px */
 @media (max-width: 80em) {
   div#banner,
-  div#about_content,
-  div#outro {
+div#about_content,
+div#outro {
     min-height: 80vh;
   }
 
@@ -756,7 +761,7 @@ textarea:focus {
     width: 280px;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#about_content {
@@ -865,7 +870,7 @@ textarea:focus {
     margin: 1em auto;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#about_content {
@@ -959,7 +964,7 @@ textarea:focus {
     width: 220px;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#about_content {
@@ -1056,7 +1061,7 @@ textarea:focus {
     margin: 1em auto;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#banner article#bannertext h2 {
@@ -1134,7 +1139,7 @@ textarea:focus {
 
   /* Make sure the button doesn't hide when menu is open. */
   .menu-toggle:hover,
-  .menu-toggle:focus {
+.menu-toggle:focus {
     text-decoration: underline;
     border: solid 2px #000000;
     cursor: pointer;
@@ -1246,7 +1251,7 @@ textarea:focus {
     margin: 1em auto;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#banner article#bannertext h2 {
@@ -1271,31 +1276,31 @@ textarea:focus {
     grid-template-rows: repeat(5, 1fr);
   }
   main.site_content div#about_content .div1 {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1/1/2/2;
   }
   main.site_content div#about_content .div2 {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1/2/2/3;
   }
   main.site_content div#about_content .div3 {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2/1/3/2;
   }
   main.site_content div#about_content .div4 {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2/2/3/3;
   }
   main.site_content div#about_content .div5 {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3/1/4/2;
   }
   main.site_content div#about_content .div6 {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 3/2/4/3;
   }
   main.site_content div#about_content .div7 {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 4/1/5/2;
   }
   main.site_content div#about_content .div8 {
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 4/2/5/3;
   }
   main.site_content div#about_content .div9 {
-    grid-area: 5 / 1 / 6 / 2;
+    grid-area: 5/1/6/2;
   }
   main.site_content div#about_content figcaption.cover {
     position: absolute;
@@ -1361,7 +1366,7 @@ textarea:focus {
     margin: 0 auto;
   }
   main.site_content div#banner figure > img,
-  main.site_content div#banner figure > picture {
+main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#banner article#bannertext h2 {

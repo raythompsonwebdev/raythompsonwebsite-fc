@@ -1,0 +1,11 @@
+{
+    "eslint.run": "onSave",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "markdown"
+    ]
+}

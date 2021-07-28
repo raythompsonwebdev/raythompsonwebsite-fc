@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,6 +76,7 @@
           menu
         </button>
       </header>
+
 
       <main class="site_content">
         <!--Banner-->
@@ -303,128 +305,106 @@
         <div id="outro" class="tabcontent">
           <article id="outrotext">
             <h2>Contact</h2>
-
+<span id="formerror" class="error"></span>
             <form
               id="myform"
               name="theform"
               class="group"
-              action="http://iviewsource.com"
+              action=""
               method="POST"
             >
-              <fieldset id="login" title="Login Info">
-                <legend>Contact Info</legend>
-                <span id="formerror" class="error"></span>
-                <ol>
-                  <li>
-                    <label for="myname">Name *</label>
-                    <input
-                      type="text"
-                      name="myname"
-                      id="myname"
-                      title="Please enter your name"
-                      pattern="[A-Za-z ]+, [A-Za-z ]+"
-                      autofocus
-                      required
-                      placeholder="Last, First"
-                    />
-                  </li>
-                  <li>
-                    <label for="myemail">Email *</label>
-                    <input
-                      type="email"
-                      name="myemail"
-                      required
-                      id="myemail"
-                      autocomplete="off"
-                    />
-                  </li>
-                  <li>
-                    <label for="mypassword">Password</label>
-                    <input type="password" name="mypassword" id="mypassword" />
-                  </li>
-                  <li>
-                    <label for="mypasswordconf">Password</label>
-                    <input
-                      type="password"
-                      name="mypasswordconf"
-                      id="mypasswordconf"
-                    />
-                  </li>
-                </ol>
-              </fieldset>
-              <fieldset id="other" class="hidden" title="Other Info">
-                <legend>Other</legend>
-                <ol>
-                  <li>
-                    <label for="myurl">Website</label>
-                    <input type="url" name="myurl" id="myurl" />
-                  </li>
-                  <li>
-                    <label for="mytelephone">Telephone</label>
-                    <input
-                      type="tel"
-                      name="mytelephone"
-                      id="mytelephone"
-                      pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-                      placeholder="xxx-xxx-xxxx"
-                    />
-                  </li>
-                  <li class="singleline">
-                    <label for="subscribeitem"
-                      >Subscribe to our mailing list?</label
-                    >
-                    <input
-                      type="checkbox"
-                      id="subscribeitem"
-                      name="subscribe"
-                      checked
-                      value="yes"
-                    />
-                  </li>
-                  <li>
-                    <label for="reference">How did you hear about us?</label>
-                    <select name="reference" id="reference">
-                      <option>Choose...</option>
-                      <option value="friend">A friend</option>
-                      <option value="facebook">Facebook</option>
-                      <option value="twitter">Twitter</option>
-                    </select>
-                  </li>
-                </ol>
-              </fieldset>
-              <fieldset id="comments" class="hidden" title="Comments">
-                <legend>Comments</legend>
-                <ol>
-                  <li>
-                    <div class="grouphead">Request Type</div>
-                    <ol>
-                      <li>
-                        <label for="questionitem">Question</label>
-                        <input
-                          type="radio"
-                          name="requesttype"
-                          value="question"
-                          id="questionitem"
-                        />
-                      </li>
-                      <li>
-                        <label for="questionitem">Question</label>
-                        <input
-                          type="radio"
-                          name="requesttype"
-                          value="comment"
-                          id="commentitem"
-                        />
-                      </li>
-                    </ol>
-                  </li>
-                  <li>
-                    <label for="mycomments">Comment</label>
-                    <textarea name="mycomments" id="mycomments"></textarea>
-                  </li>
-                </ol>
-                <button type="submit">send</button>
-              </fieldset>
+              
+              
+              <ol>
+                <li>
+                  <label for="myname">Name *</label>
+                  <input
+                    type="text"
+                    name="myname"
+                    id="myname"
+                    title="Please enter your name"
+                    pattern="[A-Za-z ]+ [A-Za-z ]+"
+                    autofocus                    
+                    placeholder="First Name, Last name"
+                  />
+                </li>
+                <li>
+                  <label for="myemail">Email *</label>
+                  <input
+                    type="email"
+                    name="myemail"
+                    id="myemail"  
+                    autofocus             
+                    
+                    placeholder="email address"
+                    
+                  />
+                </li>                
+                <li>
+                  <label for="myurl">Website</label>
+                  <input type="url" name="myurl" id="myurl" placeholder="website address" />
+                </li>                
+                <li>
+                  <label for="subscribeitem"
+                    >Subscribe to our mailing list?</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="subscribeitem"
+                    name="subscribe"
+                    checked
+                    value="yes"
+                  />
+                </li>
+                <li>
+                  <label for="reference">How did you hear about us?</label>
+                  <select name="reference" id="reference">
+                    <option>Choose...</option>
+                    <option value="friend">A friend</option>
+                    <option value="facebook">Google</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="facebook">Discord</option>
+                  </select>
+                </li>
+                <li>
+                  <div class="grouphead">Comment Type</div>
+                  <ol>
+                    <li>
+                      <label for="questionitem">Website</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="question"
+                        id="questionitem"
+                      />
+                    </li>
+                    <li>
+                      <label for="questionitem">Blog</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="comment"
+                        id="commentitem"
+                      />
+                    </li>
+                    <li>
+                      <label for="questionitem">General</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="comment"
+                        id="commentitem"
+                      />
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <label for="mycomments">Comment</label>
+                  <textarea name="mycomments" id="mycomments" rows="10"></textarea>
+                </li>
+              </ol>              
+              <button type="submit" id="submit">send</button>
             </form>
           </article>
         </div>
@@ -444,5 +424,6 @@
       </footer>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/dev/contact.js"></script>
   </body>
 </html>

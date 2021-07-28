@@ -152,7 +152,7 @@ module.exports = function (grunt) {
       dev: {
         options: {
           style: "expanded",
-          sourcemap: "auto",
+          //sourcemap: "auto",
         },
 
         files: {
@@ -163,7 +163,7 @@ module.exports = function (grunt) {
       public: {
         options: {
           style: "compressed",
-          sourcemap: "auto",
+          //sourcemap: "auto",
         },
 
         files: {
