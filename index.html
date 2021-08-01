@@ -305,15 +305,14 @@
         <div id="outro" class="tabcontent">
           <article id="outrotext">
             <h2>Contact</h2>
-<span id="formerror" class="error"></span>
+            <span id="formerror" class="error"></span>
             <form
               id="myform"
               name="theform"
               class="group"
               action=""
               method="POST"
-            >
-              
+            >         
               
               <ol>
                 <li>
@@ -322,10 +321,11 @@
                     type="text"
                     name="myname"
                     id="myname"
-                    title="Please enter your name"
-                    pattern="[A-Za-z ]+ [A-Za-z ]+"
-                    autofocus                    
-                    placeholder="First Name, Last name"
+                    title="Please enter : Full Name"                    
+                    pattern="[A-Za-z]{2-30}"
+                    autofocus 
+                    required                   
+                    placeholder="Please enter : Full Name"
                   />
                 </li>
                 <li>
@@ -333,16 +333,26 @@
                   <input
                     type="email"
                     name="myemail"
-                    id="myemail"  
-                    autofocus             
-                    
-                    placeholder="email address"
+                    id="myemail"
+                    title="Please enter your email"
+                    required
+                    pattern="^(\w\.?)+@[\w\.-]+\.\w{2,4}"  
+                    autofocus                     
+                    placeholder="Please enter valid email address"
                     
                   />
                 </li>                
                 <li>
                   <label for="myurl">Website</label>
-                  <input type="url" name="myurl" id="myurl" placeholder="website address" />
+                  <input 
+                    type="url" 
+                    name="myurl" 
+                    id="myurl" 
+                    title="Please enter your website address"
+                    required
+                    pattern="^(?!www\.[^.]+\.?$)(?:https?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w._~:/?#[\\\]@!$&'()*+,;=.-]+$"
+                    autofocus                    
+                    placeholder="Please enter valid website address" />
                 </li>                
                 <li>
                   <label for="subscribeitem"
@@ -401,7 +411,13 @@
                 </li>
                 <li>
                   <label for="mycomments">Comment</label>
-                  <textarea name="mycomments" id="mycomments" rows="10"></textarea>
+                  <textarea 
+                    name="mycomments" 
+                    id="mycomments" 
+                    rows="10"
+                    pattern="/[A-Za-z ]+/"
+                    placeholder="Please enter valid text"
+                  ></textarea>
                 </li>
               </ol>              
               <button type="submit" id="submit">send</button>

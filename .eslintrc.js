@@ -16,7 +16,15 @@ module.exports = {
     "ecmaVersion": 2018,
     "sourceType": "module",
   },
+  
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "public"
+  ],
   "rules": {
+
     "no-console": "off",
     "no-inline-comments": "off",
     "indent": ["error", 2],

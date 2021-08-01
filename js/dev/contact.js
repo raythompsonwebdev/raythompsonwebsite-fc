@@ -1,46 +1,67 @@
 const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("formerror");
-const urlRegEx = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
-const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-// var formData = new FormData(myForm);
-// formData.append("username", "Chris");
-
+//const urlRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const [text, email, url, , , , , ,  ] = myForm;
+//var formData = new FormData(myForm);
 error.style.display = "none";  
 console.log(myForm);
 
 // deconstruct array of form elements
-//subscribed, select, comtype1, comtype2, comtype3, comment
-const [text, email, url  ] = myForm;
+//subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 
-function emptyFields(e) {
 
+function validateForm(e) {
   e.preventDefault();
 
-  console.log(text.validity);
   
-  if(text.value == "" && email.value == ""){
+  if (email.validity.valueMissing && text.validity.valueMissing) {    
     error.style.display = "block";
-    error.innerHTML = "Form cannot be submitted with empty text fields";
+    error.textContent = "Fields cannot be empty.";
+  } else {
+    error.style.display = "none";
+    error.textContent = "";       
   }
 
-  if(text.value != "" && text.value != "/[A-Za-z ]+ [A-Za-z ]+/"){
-    error.style.display = "block";
-    error.innerHTML = `Please enter ${text.placeholder}`;
+  if (text.validity.typeMismatch || text.validity.patternMismatch) {
+    text.setCustomValidity("I am expecting an full name!");
+        
+  } else {    
+    text.setCustomValidity("");   
+    
   }
 
-  if(email.value != "" && email.value != emailRegEx){
-    error.style.display = "block";
-    error.innerHTML = `Please enter ${email.placeholder}`;
+  if (email.validity.typeMismatch || email.validity.patternMismatch) {
+    email.setCustomValidity("I am expecting an e-mail address!");
+        
+  } else {    
+    email.setCustomValidity("");   
+    
   }
 
-  if(url.value != "" && url.value != urlRegEx){
-    error.style.display = "block";
-    error.innerHTML = `Please enter ${url.placeholder}`;
+  if (url.validity.patternMismatch || url.validity.typeMismatch) {
+    url.setCustomValidity("I am expecting a valid web address!");
+        
+  } else {    
+    url.setCustomValidity("");   
+    
   }
+
+  email.reportValidity("");
+  text.reportValidity("");
+
 
   
-
 }
-mySubmit.addEventListener("click", emptyFields);
+
+mySubmit.addEventListener("click", validateForm);
+
+text.addEventListener("mousedown", (e)=>{
+  e.preventDefault(e);
+  if(error.style.display == "block"){
+    error.style.display = "none";
+    error.textContent = "";
+  }
+});
+
+
