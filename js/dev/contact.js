@@ -1,57 +1,55 @@
 const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("formerror");
-//const urlRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const [text, email, url, , , , , ,  ] = myForm;
-//var formData = new FormData(myForm);
-error.style.display = "none";  
-console.log(myForm);
 
 // deconstruct array of form elements
 //subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
+const [text, email, url, , , , , ,  ] = myForm;
+
+//var formData = new FormData(myForm);
+error.style.display = "none";
+console.log(myForm);
+
 
 
 function validateForm(e) {
   e.preventDefault();
 
-  
-  if (email.validity.valueMissing && text.validity.valueMissing) {    
+  if (email.validity.valueMissing && text.validity.valueMissing) {
     error.style.display = "block";
     error.textContent = "Fields cannot be empty.";
   } else {
     error.style.display = "none";
-    error.textContent = "";       
+    error.textContent = "";
   }
 
   if (text.validity.typeMismatch || text.validity.patternMismatch) {
     text.setCustomValidity("I am expecting an full name!");
-        
-  } else {    
-    text.setCustomValidity("");   
-    
+
+  } else {
+    text.setCustomValidity("");
+
   }
 
   if (email.validity.typeMismatch || email.validity.patternMismatch) {
     email.setCustomValidity("I am expecting an e-mail address!");
-        
-  } else {    
-    email.setCustomValidity("");   
-    
+
+  } else {
+    email.setCustomValidity("");
+
   }
 
   if (url.validity.patternMismatch || url.validity.typeMismatch) {
     url.setCustomValidity("I am expecting a valid web address!");
-        
-  } else {    
-    url.setCustomValidity("");   
-    
+
+  } else {
+    url.setCustomValidity("");
+
   }
 
   email.reportValidity("");
   text.reportValidity("");
-
-
-  
+  url.reportValidity("");
 }
 
 mySubmit.addEventListener("click", validateForm);
