@@ -472,36 +472,36 @@ main.site_content div#about_content figure > picture {
     justify-content: space-between;
     padding: 0.5em;
     height: 100%;
-  }
-  main.site_content div#outro article#outrotext {
-    display: block;
-    width: 99.5%;
     background-color: #efefef;
-    padding: 0.25em;
   }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.5rem;
     text-align: left;
     align-self: flex-start;
     width: 100%;
     line-height: 50px;
   }
-  main.site_content div#outro article#outrotext p {
-    font-size: 1em;
-    width: calc(100% - 1%);
-    line-height: 1.8em;
+  main.site_content div#outro section#contact-details {
+    width: 50%;
   }
-  main.site_content div#outro article#outrotext p a {
-    display: inline-block;
-    width: auto;
-    font-weight: bold;
+  main.site_content div#outro section#contact-details address {
+    height: auto;
   }
-  main.site_content div#outro article#outrotext p a:hover {
-    text-decoration: underline;
-    font-weight: normal;
-    cursor: pointer;
+  main.site_content div#outro section#contact-details address ul {
+    display: block;
+    list-style: none;
   }
-  main.site_content div#outro article#outrotext .error {
+  main.site_content div#outro section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content div#outro section#contact-details address ul li a {
+    line-height: 40px;
+    display: block;
+  }
+  main.site_content div#outro form#myform {
+    width: 50%;
+  }
+  main.site_content div#outro form#myform .error {
     line-height: 35px;
     background: #fff;
     margin-bottom: 0.2em;
@@ -509,80 +509,75 @@ main.site_content div#about_content figure > picture {
     color: red;
     border: 2px red solid;
   }
-  main.site_content div#outro article#outrotext form#myform {
-    width: 100%;
-  }
-  main.site_content div#outro article#outrotext form#myform ol {
+  main.site_content div#outro form#myform ol {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 96%;
     margin: 0.5em auto;
   }
-  main.site_content div#outro article#outrotext form#myform ol li {
+  main.site_content div#outro form#myform ol li {
     height: auto;
   }
-  main.site_content div#outro article#outrotext form#myform ol li label,
-main.site_content div#outro article#outrotext form#myform ol li .grouphead {
+  main.site_content div#outro form#myform ol li label,
+main.site_content div#outro form#myform ol li .grouphead {
     display: block;
     width: 100%;
     line-height: 40px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li ol {
+  main.site_content div#outro form#myform ol li ol {
     padding: 0.5em 0;
   }
-  main.site_content div#outro article#outrotext form#myform ol li label[for=questionitem],
-main.site_content div#outro article#outrotext form#myform ol li label[for=subscribeitem] {
+  main.site_content div#outro form#myform ol li label[for=questionitem],
+main.site_content div#outro form#myform ol li label[for=subscribeitem] {
     float: left;
     width: 60%;
     line-height: 40px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=text]:required,
-main.site_content div#outro article#outrotext form#myform ol li input[type=email]:required {
-    border: blue solid 3px;
-  }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=text]:user-invalid,
-main.site_content div#outro article#outrotext form#myform ol li input[type=email]:user-invalid {
-    border: red solid 3px;
-  }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=url]:invalid {
+  main.site_content div#outro form#myform ol li input[type=text]:invalid,
+main.site_content div#outro form#myform ol li input[type=email]:invalid,
+main.site_content div#outro form#myform ol li input[type=url]:invalid,
+main.site_content div#outro form#myform ol li textarea:invalid {
     border: #df0724 solid 3px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=text]:valid,
-main.site_content div#outro article#outrotext form#myform ol li input[type=email]:valid,
-main.site_content div#outro article#outrotext form#myform ol li input[type=url]:valid {
+  main.site_content div#outro form#myform ol li input[type=text]:required,
+main.site_content div#outro form#myform ol li input[type=email]:required {
+    border: blue solid 3px;
+  }
+  main.site_content div#outro form#myform ol li input[type=text]:valid,
+main.site_content div#outro form#myform ol li input[type=email]:valid {
     border: #9cdf82 solid 3px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=text],
-main.site_content div#outro article#outrotext form#myform ol li input[type=url],
-main.site_content div#outro article#outrotext form#myform ol li input[type=email] {
+  main.site_content div#outro form#myform ol li input[type=text],
+main.site_content div#outro form#myform ol li input[type=url],
+main.site_content div#outro form#myform ol li input[type=email] {
     display: block;
     line-height: 35px;
     width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform ol li input[type=radio],
-main.site_content div#outro article#outrotext form#myform ol li input[type=checkbox] {
+  main.site_content div#outro form#myform ol li input[type=radio],
+main.site_content div#outro form#myform ol li input[type=checkbox] {
     display: inline-block;
     height: 20px;
     width: 10%;
     margin: 10px 0px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li select {
+  main.site_content div#outro form#myform ol li select {
     line-height: 30px;
     height: 30px;
     width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform ol li textarea:invalid {
+  main.site_content div#outro form#myform ol li textarea:invalid {
     border: #df0724 solid 3px;
   }
-  main.site_content div#outro article#outrotext form#myform ol li textarea {
+  main.site_content div#outro form#myform ol li textarea {
     width: 100%;
   }
-  main.site_content div#outro article#outrotext form#myform button[type=submit] {
+  main.site_content div#outro form#myform button[type=submit] {
     width: 100%;
     height: 35px;
   }
-  main.site_content div#outro article#outrotext form#myform button[type=submit]:hover {
+  main.site_content div#outro form#myform button[type=submit]:hover {
     cursor: pointer;
   }
 
@@ -708,13 +703,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content div#outro article#outrotext {
-    width: 100%;
-  }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.45em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     font-size: 0.95em;
   }
 
@@ -810,13 +802,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content div#outro article#outrotext {
-    width: 100%;
-  }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.4em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     font-size: 0.9em;
     line-height: 1.8em;
   }
@@ -918,13 +907,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content div#outro article#outrotext {
-    width: 100%;
-  }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.35em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     line-height: 1.8em;
   }
 
@@ -1013,13 +999,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 97.7%;
   }
-  main.site_content div#outro article#outrotext {
-    width: 100%;
-  }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.3em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     font-size: 0.9em;
   }
 
@@ -1115,10 +1098,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 95%;
   }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.2em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     font-size: 0.85em;
     line-height: 1.8em;
   }
@@ -1338,10 +1321,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 95%;
   }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.15em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     line-height: 1.8em;
   }
 
@@ -1423,10 +1406,10 @@ main.site_content div#banner figure > picture {
   main.site_content div#outro {
     width: 95%;
   }
-  main.site_content div#outro article#outrotext h2 {
+  main.site_content div#outro h2 {
     font-size: 1.1em;
   }
-  main.site_content div#outro article#outrotext p {
+  main.site_content div#outro p {
     font-size: 0.8em;
     line-height: 1.8em;
   }

@@ -413,130 +413,124 @@
       justify-content: space-between;
       padding: 0.5em;
       height: 100%;
-      article#outrotext {
-        display: block;
-        width: 99.5%;
-        background-color: $bgcolor;
-        padding: 0.25em;
-        h2 {
-          font-size: 1.5rem;
-          text-align: left;
-          align-self: flex-start;
-          width: 100%;
-          line-height: 50px;
-        }
-        p {
-          font-size: 1em;
-          width: calc(100% - 1%);
-          line-height: 1.8em;
-          a {
-            display: inline-block;
-            width: auto;
-            font-weight: bold;
-            &:hover {
-              text-decoration: underline;
-              font-weight: normal;
-              cursor: pointer;
-            }
-          }
-        }
-        .error {
-          line-height: 35px;
-          background: #fff;
-          margin-bottom: 0.2em;
-          display: block;
-          color: red;
-          border: 2px red solid;
-        }
-        form#myform {
-          width: 100%;         
-          
-          ol {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            width:96%;
-            margin:0.5em auto;
-            li {
-              height: auto;
-              label,
-              .grouphead {
-                display: block;
-                width: 100%;
-                line-height: 40px;
-              }
+			background-color: $bgcolor;
+			h2 {
+				font-size: 1.5rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
+			}
+			section#contact-details{
+				width:50%;
+				address{
+					height:auto;
+					ul{
+						display:block;
+						list-style:none;
+						li{
+							height:auto;
+							a{
+								line-height:40px;
+								display:block;
+							}
+						}
+					}
+				}
+			}
 
-              ol {
-                padding: 0.5em 0;
-              }
+			form#myform {
+				width:50%;
+				.error {
+					line-height: 35px;
+					background: #fff;
+					margin-bottom: 0.2em;
+					display: block;
+					color: red;
+					border: 2px red solid;
+				}
+				ol {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					width:96%;
+					margin:0.5em auto;
+					li {
+						height: auto;
+						label,
+						.grouphead {
+							display: block;
+							width: 100%;
+							line-height: 40px;
+						}
 
-              label[for="questionitem"],
-              label[for="subscribeitem"] {
-                float: left;
-                width: 60%;
-                line-height: 40px;
-              }
+						ol {
+							padding: 0.5em 0;
+						}
 
-              input[type="text"]:required,
-              input[type="email"]:required {
-                border: blue solid 3px;
-              }
+						label[for="questionitem"],
+						label[for="subscribeitem"] {
+							float: left;
+							width: 60%;
+							line-height: 40px;
+						}
 
-              input[type="text"]:user-invalid,
-              input[type="email"]:user-invalid {
-                border: red solid 3px;
-              }
+						input[type="text"]:invalid,
+						input[type="email"]:invalid,
+						input[type="url"]:invalid,
+						textarea:invalid{
+							border: rgb(223, 7, 36) solid 3px;
+						}
+						input[type="text"]:required,
+						input[type="email"]:required {
+							border: blue solid 3px;
+						}
+						input[type="text"]:valid,
+						input[type="email"]:valid{
+							border: rgb(156, 223, 130) solid 3px;
+						}
 
-              input[type="url"]:invalid{
-                border: rgb(223, 7, 36) solid 3px;
-              }
-              input[type="text"]:valid,
-              input[type="email"]:valid,
-              input[type="url"]:valid{
-                border: rgb(156, 223, 130) solid 3px;
-              }
-              
-              
 
-              input[type="text"],
-              input[type="url"],
-              input[type="email"]{
-                display: block;
-                line-height: 35px;
-                width: 100%;
-              }
-              input[type="radio"],
-              input[type="checkbox"] {
-                display: inline-block;
-                height: 20px;
-                width: 10%;
-                margin: 10px 0px
-              }
 
-              select{
-                line-height:30px;
-                height:30px;
-                width:100%;
-              }
+						input[type="text"],
+						input[type="url"],
+						input[type="email"]{
+							display: block;
+							line-height: 35px;
+							width: 100%;
+						}
+						input[type="radio"],
+						input[type="checkbox"] {
+							display: inline-block;
+							height: 20px;
+							width: 10%;
+							margin: 10px 0px
+						}
 
-              textarea:invalid{
-                border: rgb(223, 7, 36) solid 3px;
-              }
-              textarea {
-                width: 100%;
-              }
-            }
-          }            
-          
-          button[type="submit"] {
-            width: 100%;
-            height: 35px;
-            &:hover {
-              cursor: pointer;
-            }
-          }
-        }
-      }
+						select{
+							line-height:30px;
+							height:30px;
+							width:100%;
+						}
+
+						textarea:invalid{
+							border: rgb(223, 7, 36) solid 3px;
+						}
+						textarea {
+							width: 100%;
+						}
+					}
+				}
+
+				button[type="submit"] {
+					width: 100%;
+					height: 35px;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+
     }
   }
 
@@ -686,15 +680,15 @@
 
     div#outro {
       width: 97.7%;
-      article#outrotext {
-        width: 100%;
+
+
         h2 {
           font-size: 1.45em;
         }
         p {
           font-size: 0.95em;
         }
-      }
+
     }
   }
 
@@ -807,8 +801,7 @@
 
     div#outro {
       width: 97.7%;
-      article#outrotext {
-        width: 100%;
+
         h2 {
           font-size: 1.4em;
         }
@@ -816,7 +809,7 @@
           font-size: 0.9em;
           line-height: 1.8em;
         }
-      }
+
     }
   }
 
@@ -933,15 +926,14 @@
 
     div#outro {
       width: 97.7%;
-      article#outrotext {
-        width: 100%;
+
         h2 {
           font-size: 1.35em;
         }
         p {
           line-height: 1.8em;
         }
-      }
+
     }
   }
 
@@ -1048,15 +1040,14 @@
 
     div#outro {
       width: 97.7%;
-      article#outrotext {
-        width: 100%;
+
         h2 {
           font-size: 1.3em;
         }
         p {
           font-size: 0.9em;
         }
-      }
+
     }
   }
 
@@ -1176,7 +1167,7 @@
 
     div#outro {
       width: 95%;
-      article#outrotext {
+
         h2 {
           font-size: 1.2em;
         }
@@ -1184,7 +1175,7 @@
           font-size: 0.85em;
           line-height: 1.8em;
         }
-      }
+
     }
   }
 
@@ -1419,14 +1410,14 @@
     div#outro {
       width: 95%;
 
-      article#outrotext {
+
         h2 {
           font-size: 1.15em;
         }
         p {
           line-height: 1.8em;
         }
-      }
+
     }
   }
 
@@ -1524,7 +1515,6 @@
 
     div#outro {
       width: 95%;
-      article#outrotext {
         h2 {
           font-size: 1.1em;
         }
@@ -1532,7 +1522,7 @@
           font-size: 0.8em;
           line-height: 1.8em;
         }
-      }
+
     }
   }
 
