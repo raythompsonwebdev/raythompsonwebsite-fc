@@ -1,6 +1,6 @@
 "use strict";
 
-//Your code to run since DOM is loaded and ready
+// Your code to run since DOM is loaded and ready
 document.addEventListener("DOMContentLoaded", function () {
   // Add smooth scrolling to all links
   var navLinks = document.getElementsByClassName("tablink"); // get body and html elements
@@ -13,23 +13,23 @@ document.addEventListener("DOMContentLoaded", function () {
   var scrollElements = document.querySelectorAll(".tabcontent"); // scrollElements.forEach((el) => {
   //   el.style.opacity = 0;
   // });
-  //detect page scroll function
+  // detect page scroll function
 
   var elementInView = function elementInView(el) {
     var scrollOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
     var elementTop = el.getBoundingClientRect().top;
     return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset;
-  }; //display element on page scroll
+  }; // display element on page scroll
 
 
   var displayScrollElement = function displayScrollElement(element) {
     element.classList.add("scrolled");
-  }; //hide element on page scroll
+  }; // hide element on page scroll
 
 
   var hideScrollElement = function hideScrollElement(element) {
     element.classList.remove("scrolled");
-  }; //add animation to element on page scroll
+  }; // add animation to element on page scroll
 
 
   var handleScrollAnimation = function handleScrollAnimation() {
@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  handleScrollAnimation(); //In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
+  handleScrollAnimation(); // In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
 
   window.onscroll = function () {
-    //fixes header to top of page on page scroll.
+    // fixes header to top of page on page scroll.
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
     } else {
       siteHeader.classList.remove("fixed-header");
-    } //handle scroll animation
+    } // handle scroll animation
 
 
     handleScrollAnimation();
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   var slideoutMenu = document.querySelector(".site_navigation");
-  var slideoutMenuHeight = slideoutMenu.offsetHeight; //mobile menu toggle button
+  var slideoutMenuHeight = slideoutMenu.offsetHeight; // mobile menu toggle button
 
   menuToggle.addEventListener("click", function (event) {
     event.preventDefault(); // toggle open class
@@ -80,16 +80,16 @@ document.addEventListener("DOMContentLoaded", function () {
       slideoutMenu.style.top = "0px";
     } else {
       slideoutMenu.style.transition = "all 0.3s ease-in 0s";
-      slideoutMenu.style.top = -slideoutMenuHeight + "px";
+      slideoutMenu.style.top = "".concat(-slideoutMenuHeight, "px");
     }
   }); // turn HTML collection list of objects into an array
   // Iterated over array with forEach.
 
   Array.from(navLinks).forEach(function (link) {
-    //add event listener to each link
+    // add event listener to each link
     link.addEventListener("click", function (event) {
       // Store hash
-      var hash = event.target.hash; //check if has empty
+      var hash = event.target.hash; // check if has empty
 
       if (hash !== "") {
         // if not, Prevent default anchor click behavior
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       if (slideoutMenu.classList.contains("open")) {
-        slideoutMenu.style.top = -slideoutMenuHeight + "px";
+        slideoutMenu.style.top = "".concat(-slideoutMenuHeight, "px");
         slideoutMenu.classList.remove("open");
       } else {
         slideoutMenu.style.top = "0px";

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,19 +29,46 @@
         <!--Navigation-->
         <nav id="site_navigation" class="site_navigation hide">
           <ul>
-            <li class="tablink"><a href="#banner" title="Home Page">Home</a></li>
-          <li class="tablink"><a href="#about_content" title="about">About</a></li>
-          <li class="tablink"><a href="#outro" title="Why I applied">Mission</a></li>
+            <li class="tablink">
+              <a href="#banner" title="home page">Home</a>
+            </li>
+						<li class="tablink">
+              <a href="#project_page" title="projects page">Projects</a>
+            </li>
+            <li class="tablink">
+              <a href="#about_content" title="about page">About</a>
+            </li>
+            <li class="tablink">
+              <a href="#outro" title="contact page">Contact</a>
+            </li>
           </ul>
         </nav>
         <span class="social">
           <ul id="social">
-            <li class="social-item"><a href="https://www.facebook.com/raythompsonwebdeveloper"><object data="icons/social-1_logo-facebook.svg" type="image/svg+xml">
-            </object></a></li>
-            <li class="social-item"><a href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8"><object data="icons/social-1_logo-linkedin.svg" type="image/svg+xml">
-            </object></a></li>
-            <li class="social-item"><a href="http://twitter.com/RayThompWeb"><object data="icons/social-1_logo-twitter.svg" type="image/svg+xml">
-            </object></a></li>
+            <li class="social-item">
+              <a href="https://www.facebook.com/raythompsonwebdeveloper"
+                ><object
+                  data="icons/social-1_logo-facebook.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8"
+                ><object
+                  data="icons/social-1_logo-linkedin.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
+            <li class="social-item">
+              <a href="http://twitter.com/RayThompWeb"
+                ><object
+                  data="icons/social-1_logo-twitter.svg"
+                  type="image/svg+xml"
+                ></object
+              ></a>
+            </li>
           </ul>
         </span>
         <button
@@ -50,9 +78,8 @@
         >
           menu
         </button>
-
-
       </header>
+
 
       <main class="site_content">
         <!--Banner-->
@@ -74,6 +101,184 @@
             <p>I also create other cool stuff for the web.</p>
           </article>
         </div>
+
+				<!--Projects-->
+				<div id="project_page" class="tabcontent">
+
+					<ul id="project_tabs">
+						<li><button id="all" class="project_tab">all</button></li>
+						<li><button id="codeacademy" class="project_tab">codeacademy</button></li>
+						<li><button id="freecodecamp" class="project_tab">freecodecamp</button></li>
+						<li><button id="wordpress" class="project_tab">wordpress</button></li>
+						<li><button id="vue" class="project_tab">vue</button></li>
+					</ul>
+
+					<div class="parent">
+						<figure class="div1 box" data-id="codeacademy">
+							<img
+								src="images/codecademy-js.png"
+								alt="code academy certificate"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Learn Javascript</h2>
+
+								<a
+									class="cert_link"
+									href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
+									target="_blank"
+									rel="noopener"
+									>See certificate</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div2 box" data-id="freecodecamp">
+							<img
+								src="images/freecodecamp-org-certification-javascript.png"
+								alt="javascript algorithim and data structures certificate"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Javascript Algorithims</h2>
+								<a
+									class="cert_link"
+									href="https://freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures"
+									target="_blank"
+									rel="noopener"
+									>See certificate</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div3 box" data-id="freecodecamp">
+							<img
+								src="images/freecodecamp-org-certification-responsive-web-design.png"
+								alt="respnsive design certificate"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Responsive Design</h2>
+								<a
+									class="cert_link"
+									href="https://freecodecamp.org/certification/raythompsonwebdev/responsive-web-design"
+									target="_blank"
+									rel="noopener"
+									>See certificate</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div4 box" data-id="codepen">
+							<img
+								src="images/Button-Fill-Black-Large.png"
+								alt="codepen pens"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Codepen</h2>
+								<a
+									class="cert_link"
+									href="https://codepen.io/raythompweb/pens/"
+									target="_blank"
+									rel="noopener"
+									>See Pens</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div5 box" data-id="codewars">
+							<img
+								src="images/codewars.png"
+								alt="code war katas"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Code Wars</h2>
+								<a
+									class="cert_link"
+									href="https://www.codewars.com/users/raythompsonwebdev/badges/large"
+									target="_blank"
+									rel="noopener"
+									>5th Kyu</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div6 box" data-id="codeacademy">
+							<img
+								src="images/codecademy-ruby.png"
+								alt="code academy ruby certificate"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Learn Ruby</h2>
+								<a
+									class="cert_link"
+									href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd"
+									target="_blank"
+									rel="noopener"
+									>See certificate</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div7 box" data-id="digitalfutures">
+							<img
+								src="images/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
+								alt="digital futures participation certificate"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">Digital Futures 2017</h2>
+								<a
+									class="cert_link"
+									rel="noopener"
+									href="https://vimeo.com/232481032"
+									target="_blank"
+									>See Video</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div8 box" data-id="github">
+							<img
+								src="images/Git-Logo-1788C.png"
+								alt="github respositories"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">GitHub</h2>
+								<a
+									class="cert_link"
+									rel="noopener"
+									href="https://github.com/raythompsonwebdev"
+									target="_blank"
+									>See Repositories</a
+								>
+							</figcaption>
+						</figure>
+						<figure class="div9 box" data-id="portfolio">
+							<img
+								src="images/raythompsonwebdev-co-uk-2021.png"
+								alt="personal portfolio website"
+								width="170"
+								height="170"
+							/>
+							<figcaption class="cover">
+								<h2 class="cert_title">My Projects</h2>
+								<a
+									class="cert_link"
+									href="https://raythompsonwebdev.co.uk/"
+									target="_blank"
+									rel="noopener"
+									>See Projects</a
+								>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
 
         <!--About-->
         <div id="about_content" class="tabcontent">
@@ -110,235 +315,161 @@
               learning code.
             </p>
           </article>
-          <div class="parent">
-            <figure class="div1 box">
-              <img
-                src="images/codecademy-js.png"
-                alt="code academy certificate"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Learn Javascript</h2>
-
-                <a
-                  class="cert_link"
-                  href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
-                  target="_blank"
-                  rel="noopener"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div2 box">
-              <img
-                src="images/freecodecamp-org-certification-javascript.png"
-                alt="javascript algorithim and data structures certificate"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Javascript Algorithims</h2>
-                <a
-                  class="cert_link"
-                  href="https://freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures"
-                  target="_blank"
-                  rel="noopener"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div3 box">
-              <img
-                src="images/freecodecamp-org-certification-responsive-web-design.png"
-                alt="respnsive design certificate"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Responsive Design</h2>
-                <a
-                  class="cert_link"
-                  href="https://freecodecamp.org/certification/raythompsonwebdev/responsive-web-design"
-                  target="_blank"
-                  rel="noopener"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div4 box">
-              <img
-                src="images/Button-Fill-Black-Large.png"
-                alt="codepen pens"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Codepen</h2>
-                <a
-                  class="cert_link"
-                  href="https://codepen.io/raythompweb/pens/"
-                  target="_blank"
-                  rel="noopener"
-                  >See Pens</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div5 box">
-              <img
-                src="images/codewars.png"
-                alt="code war katas"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Code Wars</h2>
-                <a
-                  class="cert_link"
-                  href="https://www.codewars.com/users/raythompsonwebdev/badges/large"
-                  target="_blank"
-                  rel="noopener"
-                  >5th Kyu</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div6 box">
-              <img
-                src="images/codecademy-ruby.png"
-                alt="code academy ruby certificate"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Learn Ruby</h2>
-                <a
-                  class="cert_link"
-                  href="https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd"
-                  target="_blank"
-                  rel="noopener"
-                  >See certificate</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div7 box">
-              <img
-                src="images/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
-                alt="digital futures participation certificate"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">Digital Futures 2017</h2>
-                <a
-                  class="cert_link"
-                  rel="noopener"
-                  href="https://vimeo.com/232481032"
-                  target="_blank"
-                  >See Video</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div8 box">
-              <img
-                src="images/Git-Logo-1788C.png"
-                alt="github respositories"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">GitHub</h2>
-                <a
-                  class="cert_link"
-                  rel="noopener"
-                  href="https://github.com/raythompsonwebdev"
-                  target="_blank"
-                  >See Repositories</a
-                >
-              </figcaption>
-            </figure>
-            <figure class="div9 box">
-              <img
-                src="images/raythompsonwebdev-co-uk-2021.png"
-                alt="personal portfolio website"
-                width="170"
-                height="170"
-              />
-              <figcaption class="cover">
-                <h2 class="cert_title">My Projects</h2>
-                <a
-                  class="cert_link"
-                  href="https://raythompsonwebdev.co.uk/"
-                  target="_blank"
-                  rel="noopener"
-                  >See Projects</a
-                >
-              </figcaption>
-            </figure>
-          </div>
         </div>
 
         <!--Outro-->
         <div id="outro" class="tabcontent">
-          <article id="outrotext">
-            <h2>Why I am applying</h2>
 
-            </figure>
-            <p>
-              I have always used a computer in some form or another since
-              windows 95 whether through work or through hobbies like when I
-              used how to make dance and hip hop beats using Fruity Loops, Later
-              FL Studio) but never thought about learning to code or even
-              becoming a programmer.
-            </p>
-            <hr />
-            <p>
-              Working within software development really appeals to me because
-              It involves working by yourself or with others to produce
-              solutions to simple and complex problems, thinking methodically
-              and learning something new everyday . I also like Learning about
-              the different programming languages available and what they can
-              and can't do. And enjoy working as part of a team to be able to
-              share what I have learnt to help colleagues and discover new
-              things from colleagues.
-            </p>
-            <hr />
-            <p>
-              I enjoy developing websites and web applications in my spare time
-              and get a sense of accomplishment when I am able to put into
-              practice what I have learnt and it works. I also enjoyed attending
-              the workshop on javascript objects held by coders and have found
-              coders founder community very helpful and friendly.
-            </p>
+            <h2>Contact</h2>
 
-            <hr />
+						<section id="contact-details">
 
-            <p>
-              Attending an apprenticeship at coders and founders I feel would
-              provide me with the enviroment I need get experience working in a
-              software development enviroment and working with other on a project. My passion for web development,
-              programming and providing high quality services to the general
-              public through previous work experience are a couple of reasons
-              why I am seeking a progressive opportunity in the IT sector,
-              particularly software development. I am keen to utilise my
-              acquired skills and knowledge in a challenging position within an
-              organisation that encourages development.
-            </p>
-            <hr/>
-            <p>To see the code for this website, visit the git hub repository by clicking your mouse <a href="https://github.com/raythompsonwebdev/raythompsonwebsite-fc" title="link to code on github">here</a>.</p>
-          </article>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum animi magni expedita? Vel cumque nisi, iure officia at minima et! Quia rerum eos possimus dolorum nesciunt recusandae voluptate quidem fugiat.</p>
+
+							<address>
+								<ul>
+									<li><a href="">Email</a></li>
+									<li><a href="">GitHub</a></li>
+									<li><a href="">Discord</a></li>
+									<li><a href="">LinkedIn</a></li>
+								</ul>
+							</address>
+
+						</section>
+
+            <form
+              id="myform"
+              name="theform"
+              class="group"
+              action=""
+              method="POST"
+            >
+            <span id="formerror" class="error"></span>
+              <ol>
+                <li>
+                  <label for="myname">Name *</label>
+                  <input
+                    type="text"
+                    name="myname"
+                    id="myname"
+                    title="Please enter : Full Name"
+                    pattern="[A-Za-z]{3,40}"
+                    required
+                    placeholder="Please enter : Full Name"
+                  />
+                </li>
+                <li>
+                  <label for="myemail">Email *</label>
+                  <input
+                    type="email"
+                    name="myemail"
+                    id="myemail"
+                    title="Please enter your email"
+                    required
+                    pattern="^(\w\.?)+@[\w\.-]+\.\w{2,4}"
+
+                    placeholder="Please enter a valid email address"
+
+                  />
+                </li>
+                <li>
+                  <label for="myurl">Website</label>
+                  <input
+                    type="url"
+                    name="myurl"
+                    id="myurl"
+                    title="Please enter your website address"
+                    pattern="^(?!www\.[^.]+\.?$)(?:https?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w._~:/?#[\\\]@!$&'()*+,;=.-]+$"
+                    placeholder="Please enter a valid website address" />
+                </li>
+                <li>
+                  <label for="subscribeitem"
+                    >Subscribe to our mailing list?</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="subscribeitem"
+                    name="subscribe"
+                    checked
+                    value="yes"
+                  />
+                </li>
+                <li>
+                  <label for="reference">How did you hear about us?</label>
+                  <select name="reference" id="reference">
+                    <option>Choose...</option>
+                    <option value="friend">A friend</option>
+                    <option value="facebook">Google</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="facebook">Discord</option>
+                  </select>
+                </li>
+                <li>
+                  <div class="grouphead">Comment Type</div>
+                  <ol>
+                    <li>
+                      <label for="questionitem">Website</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="question"
+                        id="questionitem"
+                      />
+                    </li>
+                    <li>
+                      <label for="questionitem">Blog</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="comment"
+                        id="commentitem"
+                      />
+                    </li>
+                    <li>
+                      <label for="questionitem">General</label>
+                      <input
+                        type="radio"
+                        name="requesttype"
+                        value="comment"
+                        id="commentitem"
+                      />
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <label for="mycomments">Comment</label>
+                  <textarea
+                    name="mycomments"
+                    id="mycomments"
+                    rows="10"
+                    placeholder="Please enter valid text"
+
+                  ></textarea>
+                </li>
+              </ol>
+              <button type="submit" id="submit">send</button>
+            </form>
+
         </div>
+
       </main>
       <br />
       <!--Footer-->
       <footer class="site_footer">
         <ul>
           <li class="tablink"><a href="#banner" title="Home Page">Home</a></li>
-          <li class="tablink"><a href="#about_content" title="about">About</a></li>
-          <li class="tablink"><a href="#outro" title="Why I applied">Mission</a></li>
+          <li class="tablink">
+            <a href="#about_content" title="about">About</a>
+          </li>
+          <li class="tablink">
+            <a href="#outro" title="Why I applied">Mission</a>
+          </li>
         </ul>
-
       </footer>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/dev/contact.js"></script>
+		<script src="js/dev/projects.js"></script>
   </body>
 </html>
