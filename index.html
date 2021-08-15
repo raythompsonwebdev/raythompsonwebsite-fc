@@ -307,6 +307,7 @@
             <h2>Contact</h2>
 
 						<section id="contact-details">
+
 							<address>
 								<ul>
 									<li><a href="">Email</a></li>
@@ -334,8 +335,7 @@
                     name="myname"
                     id="myname"
                     title="Please enter : Full Name"
-                    pattern="[A-Za-z]{2-30}"
-                    autofocus
+                    pattern="[A-Za-z]{3,40}"
                     required
                     placeholder="Please enter : Full Name"
                   />
@@ -349,8 +349,8 @@
                     title="Please enter your email"
                     required
                     pattern="^(\w\.?)+@[\w\.-]+\.\w{2,4}"
-                    autofocus
-                    placeholder="Please enter valid email address"
+
+                    placeholder="Please enter a valid email address"
 
                   />
                 </li>
@@ -361,10 +361,8 @@
                     name="myurl"
                     id="myurl"
                     title="Please enter your website address"
-
                     pattern="^(?!www\.[^.]+\.?$)(?:https?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w._~:/?#[\\\]@!$&'()*+,;=.-]+$"
-                    autofocus
-                    placeholder="Please enter valid website address" />
+                    placeholder="Please enter a valid website address" />
                 </li>
                 <li>
                   <label for="subscribeitem"
@@ -427,8 +425,7 @@
                     name="mycomments"
                     id="mycomments"
                     rows="10"
-                    minlength="5"
-										maxlength="200"
+										pattern="&#60;[^>]*>"
                     placeholder="Please enter valid text"
                   ></textarea>
                 </li>

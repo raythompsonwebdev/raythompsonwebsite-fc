@@ -2,6 +2,14 @@
 @import "partials/mixins";
 @import "partials/base";
 
+:root {
+
+	--text-error: none;
+  --email-error: none;
+	--url-error: none;
+	--comment-error:none;
+}
+
 /* 1680px */
 @media (max-width: 105em) {
   .menu-toggle {
@@ -440,7 +448,7 @@
 			}
 
 			form#myform {
-				width:50%;
+				width:48%;
 				.error {
 					line-height: 35px;
 					background: #fff;
@@ -448,6 +456,7 @@
 					display: block;
 					color: red;
 					border: 2px red solid;
+					text-align:center;
 				}
 				ol {
 					list-style: none;
@@ -475,30 +484,26 @@
 							line-height: 40px;
 						}
 
-						input[type="text"]:invalid,
-						input[type="email"]:invalid,
-						input[type="url"]:invalid,
-						textarea:invalid{
-							border: rgb(223, 7, 36) solid 3px;
-						}
-						input[type="text"]:required,
-						input[type="email"]:required {
-							border: blue solid 3px;
-						}
-						input[type="text"]:valid,
-						input[type="email"]:valid{
-							border: rgb(156, 223, 130) solid 3px;
-						}
-
-
-
-						input[type="text"],
-						input[type="url"],
-						input[type="email"]{
+						input#myname,
+						input#myemail,
+						input#myurl{
 							display: block;
 							line-height: 35px;
 							width: 100%;
 						}
+						input#myname{
+							border: var(--text-error);
+						}
+
+						input#myemail{
+							border: var(--email-error);
+						}
+
+						input#myurl{
+							border: var(--url-error);
+						}
+
+
 						input[type="radio"],
 						input[type="checkbox"] {
 							display: inline-block;
@@ -513,12 +518,12 @@
 							width:100%;
 						}
 
-						textarea:invalid{
-							border: rgb(223, 7, 36) solid 3px;
-						}
-						textarea {
+						textarea#mycomments {
 							width: 100%;
+							border: var(--comment-error);
 						}
+
+
 					}
 				}
 

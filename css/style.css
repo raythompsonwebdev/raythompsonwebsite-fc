@@ -81,6 +81,13 @@ textarea:focus {
   display: block;
 }
 
+:root {
+  --text-error: none;
+  --email-error: none;
+  --url-error: none;
+  --comment-error:none;
+}
+
 /* 1680px */
 @media (max-width: 105em) {
   .menu-toggle {
@@ -499,7 +506,7 @@ main.site_content div#about_content figure > picture {
     display: block;
   }
   main.site_content div#outro form#myform {
-    width: 50%;
+    width: 48%;
   }
   main.site_content div#outro form#myform .error {
     line-height: 35px;
@@ -508,6 +515,7 @@ main.site_content div#about_content figure > picture {
     display: block;
     color: red;
     border: 2px red solid;
+    text-align: center;
   }
   main.site_content div#outro form#myform ol {
     list-style: none;
@@ -534,26 +542,21 @@ main.site_content div#outro form#myform ol li label[for=subscribeitem] {
     width: 60%;
     line-height: 40px;
   }
-  main.site_content div#outro form#myform ol li input[type=text]:invalid,
-main.site_content div#outro form#myform ol li input[type=email]:invalid,
-main.site_content div#outro form#myform ol li input[type=url]:invalid,
-main.site_content div#outro form#myform ol li textarea:invalid {
-    border: #df0724 solid 3px;
-  }
-  main.site_content div#outro form#myform ol li input[type=text]:required,
-main.site_content div#outro form#myform ol li input[type=email]:required {
-    border: blue solid 3px;
-  }
-  main.site_content div#outro form#myform ol li input[type=text]:valid,
-main.site_content div#outro form#myform ol li input[type=email]:valid {
-    border: #9cdf82 solid 3px;
-  }
-  main.site_content div#outro form#myform ol li input[type=text],
-main.site_content div#outro form#myform ol li input[type=url],
-main.site_content div#outro form#myform ol li input[type=email] {
+  main.site_content div#outro form#myform ol li input#myname,
+main.site_content div#outro form#myform ol li input#myemail,
+main.site_content div#outro form#myform ol li input#myurl {
     display: block;
     line-height: 35px;
     width: 100%;
+  }
+  main.site_content div#outro form#myform ol li input#myname {
+    border: var(--text-error);
+  }
+  main.site_content div#outro form#myform ol li input#myemail {
+    border: var(--email-error);
+  }
+  main.site_content div#outro form#myform ol li input#myurl {
+    border: var(--url-error);
   }
   main.site_content div#outro form#myform ol li input[type=radio],
 main.site_content div#outro form#myform ol li input[type=checkbox] {
@@ -567,11 +570,9 @@ main.site_content div#outro form#myform ol li input[type=checkbox] {
     height: 30px;
     width: 100%;
   }
-  main.site_content div#outro form#myform ol li textarea:invalid {
-    border: #df0724 solid 3px;
-  }
-  main.site_content div#outro form#myform ol li textarea {
+  main.site_content div#outro form#myform ol li textarea#mycomments {
     width: 100%;
+    border: var(--comment-error);
   }
   main.site_content div#outro form#myform button[type=submit] {
     width: 100%;
