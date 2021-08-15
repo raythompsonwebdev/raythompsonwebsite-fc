@@ -2,9 +2,13 @@ const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("formerror");
 
+const commentFormRegEX = /^[^<>,<|>]+$/;
+
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 const [text, email, url, , , , , , comment] = myForm;
+
+console.log(comment.value);
 
 error.style.display = "none";
 
@@ -23,7 +27,7 @@ text.addEventListener("blur", (e) => {
 	} else {
 		error.style.display = "none";
 		error.textContent = "";
-		text.style.setProperty("--text-error", "solid 3px green");
+		text.style.setProperty("--text-error", "none");
 	}
 });
 
@@ -31,6 +35,7 @@ email.addEventListener("blur", (e) => {
 	e.preventDefault();
 	error.style.display = "none";
 	error.textContent = "";
+
 	email.style.setProperty("--email-error", "none");
 	if (email.validity.typeMismatch) {
 		error.style.display = "block";
@@ -43,7 +48,7 @@ email.addEventListener("blur", (e) => {
 	} else {
 		error.style.display = "none";
 		error.textContent = "";
-		email.style.setProperty("--email-error", "solid 3px green");
+		email.style.setProperty("--email-error", "none");
 	}
 });
 
@@ -54,16 +59,16 @@ url.addEventListener("blur", (e) => {
 	url.style.setProperty("--url-error", "none");
 	if (url.validity.typeMismatch) {
 		error.style.display = "block";
-		error.textContent = "I am expecting a valid web pattern!";
+		error.textContent = "I am expecting a valid web address!";
 		url.style.setProperty("--url-error", "solid 3px red");
 	} else if (url.validity.patternMismatch) {
 		error.style.display = "block";
-		error.textContent = "I am expecting an e-mail pattern!";
+		error.textContent = "I am expecting an va;id web pattern!";
 		url.style.setProperty("--url-error", "solid 3px yellow");
 	} else {
 		error.style.display = "none";
 		error.textContent = "";
-		url.style.setProperty("--url-error", "solid 3px green");
+		url.style.setProperty("--url-error", "none");
 	}
 });
 
@@ -72,9 +77,10 @@ comment.addEventListener("blur", (e) => {
 	error.style.display = "none";
 	error.textContent = "";
 	comment.style.setProperty("--comment-error", "none");
-	if (comment.validity.patternMismatch) {
+
+	if (!commentFormRegEX.test(comment.value)) {
 		error.style.display = "block";
-		error.textContent = "I am expecting valid text!";
+		error.textContent = "No HTML Tags Allowed";
 		comment.style.setProperty("--comment-error", "solid 3px red");
 	} else {
 		error.style.display = "none";

@@ -542,6 +542,10 @@ main.site_content div#outro form#myform ol li label[for=subscribeitem] {
     width: 60%;
     line-height: 40px;
   }
+  main.site_content div#outro form#myform ol li input#myname:valid,
+main.site_content div#outro form#myform ol li input#myemail:valid {
+    border: solid 3px green;
+  }
   main.site_content div#outro form#myform ol li input#myname,
 main.site_content div#outro form#myform ol li input#myemail,
 main.site_content div#outro form#myform ol li input#myurl {

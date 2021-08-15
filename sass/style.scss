@@ -484,6 +484,11 @@
 							line-height: 40px;
 						}
 
+						input#myname:valid,
+						input#myemail:valid	{
+							border: solid 3px green;
+						}
+
 						input#myname,
 						input#myemail,
 						input#myurl{
@@ -491,6 +496,7 @@
 							line-height: 35px;
 							width: 100%;
 						}
+
 						input#myname{
 							border: var(--text-error);
 						}
