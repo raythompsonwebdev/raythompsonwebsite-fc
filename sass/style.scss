@@ -10,11 +10,12 @@
 	--comment-error:none;
 }
 
-.hide{
+
+.block_hide{
 	display:none;
 }
 
-.show{
+.block_show{
 	display:block;
 }
 
@@ -269,6 +270,7 @@
 
 
 		div#project_page{
+			height:80vh;
 
 
 			ul#project_tabs{
@@ -280,8 +282,8 @@
 				justify-content: start;
 				-webkit-align-items: stretch;
 				align-items: stretch;
-
 				list-style:none;
+				padding:0;
 				li{
 					width:auto;
 					margin-right:0.2em;
@@ -301,32 +303,34 @@
 				-webkit-flex-flow: row wrap;
 				-ms-flex-flow: row wrap;
 				flex-flow: row wrap;
-				-webkit-justify-content: space-evenly;
-				-ms-flex-pack: space-evenly;
-				justify-content: space-evenly;
-				-webkit-align-items: stretch;
-				align-items: stretch;
+				-webkit-justify-content: flex-start;
+				justify-content: flex-start;
+				-webkit-align-items: flex-start;
+				align-items: flex-start;
         padding: 0.2em;
-        background-color: $textcolor1;
-        width: 90%;
+        background-color: $textcolor4;
+        width: 98%;
 				margin:auto;
+				//@include raytransition(all 2s linear 0s);
+
       }
 
       figure.box {
         position: relative;
         cursor: pointer;
         overflow: hidden;
-				display:none;
+				//display:none;
         padding: 0;
-        margin: 0 0 0.2em 0;
+        margin: 0 0.25% 0.2em 0;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         background-color: $textcolor2;
-				width:33%;
+				width:24.75%;
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
 				flex: 0 1 auto;
+
       }
 
       figcaption.cover {

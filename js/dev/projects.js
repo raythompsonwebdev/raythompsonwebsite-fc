@@ -11,10 +11,14 @@ arrayTabs.forEach((element1) => {
 	// console.log(element1);
 	element1.addEventListener("click", (e) => {
 		e.preventDefault();
+
 		arrayBoxes.filter((element2) => {
 			// console.log(element2.dataset.id == element1.id);
-			if (element2.dataset.id === element1.id) {
+			if (element2.dataset.all === element1.id) {
 				// eslint  - "no-param-reassign": "off"
+
+				element2.style.display = "block";
+			} else if (element2.dataset.id === element1.id) {
 				element2.style.display = "block";
 			} else {
 				element2.style.display = "none";

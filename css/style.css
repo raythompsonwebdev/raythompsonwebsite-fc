@@ -88,11 +88,11 @@ textarea:focus {
   --comment-error:none;
 }
 
-.hide {
+.block_hide {
   display: none;
 }
 
-.show {
+.block_show {
   display: block;
 }
 
@@ -334,6 +334,9 @@ main.site_content div#banner figure > picture {
     background-size: cover;
     /* Resize the background image to cover the entire container */
   }
+  main.site_content div#project_page {
+    height: 80vh;
+  }
   main.site_content div#project_page ul#project_tabs {
     display: -webkit-flex;
     display: flex;
@@ -344,6 +347,7 @@ main.site_content div#banner figure > picture {
     -webkit-align-items: stretch;
     align-items: stretch;
     list-style: none;
+    padding: 0;
   }
   main.site_content div#project_page ul#project_tabs li {
     width: auto;
@@ -362,28 +366,26 @@ main.site_content div#banner figure > picture {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    -webkit-align-items: stretch;
-    align-items: stretch;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
     padding: 0.2em;
-    background-color: #000000;
-    width: 90%;
+    background-color: #aaabb8;
+    width: 98%;
     margin: auto;
   }
   main.site_content div#project_page figure.box {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    display: none;
     padding: 0;
-    margin: 0 0 0.2em 0;
+    margin: 0 0.25% 0.2em 0;
     -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: #ffffff;
-    width: 33%;
+    width: 24.75%;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
