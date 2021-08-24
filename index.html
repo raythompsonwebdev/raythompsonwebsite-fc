@@ -46,18 +46,29 @@
         </nav>
         <span class="social">
           <ul id="social">
-            <li class="social-item"><a href="https://twitter.com/RayThompWeb" title="Follow me on Twitter" target="blank"><i class="fa fa-twitter"> </i></a></li>
-          <li class="social-item"><a href="https://www.facebook.com" title="Follow me on Facebook" target="blank"><i class="fa fa-facebook"> </i></a></li>
-          <li class="social-item"><a href="https://www.linkedin.com/in/raymond-thompson-1b42b7b8" title="Follow me on LinkedIn" target="blank"><i class="fa fa-linkedin" > </i></a></li>
-          <li class="social-item"><a href="" title="Follow me on discord " target="blank"><i class="fa fa-discord"> </i></a></li>
+            <li class="social-item">
+							<a href="https://twitter.com/RayThompWeb" title="Follow me on Twitter" target="blank"><i class="fa fa-twitter"> </i>
+							</a>
+						</li>
+          <li class="social-item">
+						<a href="https://www.facebook.com" title="Follow me on Facebook" target="blank"><i class="fa fa-facebook"> </i>
+						</a>
+					</li>
+          <li class="social-item">
+						<a href="https://www.linkedin.com/in/raymond-thompson-1b42b7b8" title="Follow me on LinkedIn" target="blank"><i class="fa fa-linkedin" > </i>
+						</a>
+					</li>
+          <li class="social-item">
+						<a href="" title="Follow me on discord " target="blank"><i class="fa fa-discord"> </i>
+						</a>
+					</li>
           </ul>
         </span>
         <button
           class="menu-toggle"
           aria-controls="site_navigation"
-          aria-expanded="false"
-        >
-          menu
+          aria-expanded="false">
+          <i class="fa fa-hamburger"></i>
         </button>
       </header>
 
@@ -360,7 +371,7 @@
               action=""
               method="POST"
             >
-            <span id="formerror" class="error"></span>
+            <span id="form-error" class="hide-error"></span>
               <ol>
                 <li>
                   <label for="myname">Name *</label>
@@ -369,7 +380,7 @@
                     name="myname"
                     id="myname"
                     title="Please enter:First Name"
-                    pattern="[A-Za-z]{3,40}$"
+                    pattern="[A-Za-z]{3,40}"
                     required
                     placeholder="Please enter:First Name"
                   />
@@ -386,7 +397,7 @@
                     placeholder="Please enter a valid email address"
                   />
                 </li>
-                <li>
+                <!-- <li>
                   <label for="myurl">Website</label>
                   <input
                     type="url"
@@ -395,7 +406,7 @@
                     title="Please enter: Website Address"
                     pattern="^(?!www\.[^.]+\.?$)(?:https?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w._~:/?#[\\\]@!$&'()*+,;=.-]+$"
                     placeholder="Please enter a valid website URL" />
-                </li>
+                </li> -->
 
                 <li>
                   <label for="reference">How did you hear about this site?</label>
