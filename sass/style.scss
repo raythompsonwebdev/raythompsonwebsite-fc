@@ -120,6 +120,7 @@
         height: 100%;
         display: flex;
         list-style: none;
+				font-family: "FontAwesome";
         li.social-item {
           width: 32%;
           height: auto;
@@ -138,19 +139,27 @@
             height: 100%;
             line-height: 40px;
             background-color: $colorwhite;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-linkedin {
+							display: block;
+							width: 100%;
+							height: 100%;
+							text-align: center;
+							line-height: 40px;
+							font-size: 1.25em;
+							//color: $colorsocmedhov;
+							@include raytransition(all 0.2s ease-in 0s);
 
-            object {
-              line-height: 40px;
-              color: $colorwhite;
-              width: 25%;
-              height: 40px;
-              display: block;
-              margin: auto;
-            }
+							&:hover {
+								transform: scale(1.2);
+								font-weight: bold;
+								//text-shadow: 0 0 0 $header-shadow;
+								cursor: pointer;
+							}
+						}
 
-            &:hover {
-              cursor: pointer;
-            }
+
           }
         }
       }
@@ -183,7 +192,7 @@
       }
     }
 
-    .tabcontent {
+		.tabcontent {
       opacity: 0;
       transition: opacity 500ms;
     }
@@ -191,7 +200,7 @@
     .tabcontent.scrolled {
       opacity: 1;
       animation-name: example;
-      animation-duration: 1s;
+      animation-duration: 0.5s;
     }
     div#banner,
     div#about_content,
@@ -272,7 +281,6 @@
 		div#project_page{
 			height:80vh;
 
-
 			ul#project_tabs{
 				display: -webkit-flex;
 				display: flex;
@@ -284,6 +292,7 @@
 				align-items: stretch;
 				list-style:none;
 				padding:0;
+				@include raytransition(all 0.2s ease-in 0s);
 				li{
 					width:auto;
 					margin-right:0.2em;
@@ -307,19 +316,28 @@
 				justify-content: flex-start;
 				-webkit-align-items: flex-start;
 				align-items: flex-start;
-        padding: 0.2em;
-        background-color: $textcolor4;
-        width: 98%;
+        padding: 0;
+        //background-color: $textcolor4;
+        width: 100%;
 				margin:auto;
-				//@include raytransition(all 2s linear 0s);
-
       }
+
+			.box-show{
+				display:block;
+				opacity:1;
+				animation-name: example;
+      	animation-duration: 0.5s;
+			}
+
+			.box-hide{
+				display:none;
+				opacity:0;
+			}
 
       figure.box {
         position: relative;
         cursor: pointer;
         overflow: hidden;
-				//display:none;
         padding: 0;
         margin: 0 0.25% 0.2em 0;
         -moz-backface-visibility: hidden;
@@ -451,6 +469,7 @@
       padding: 0.5em;
       height: 100%;
 			background-color: $bgcolor;
+
 			h2 {
 				font-size: 1.5rem;
 				text-align: left;
@@ -461,17 +480,44 @@
 
 			section#contact-details{
 				width:40%;
+				flex: 1 0 auto;
 				address{
 					height:auto;
+					width: 90%;
+					margin: auto;
 					ul{
 						display:block;
 						list-style:none;
 						padding: 0;
 						li{
 							height:auto;
-							a{
-								line-height:40px;
-								display:block;
+							font-family: "FontAwesome";
+
+							a {
+								width: auto;
+								display: inline-block;
+								font-size: 1em;
+								line-height: 40px;
+							}
+
+							a[href~='mailto']::before {
+									content: '\f466';
+									font-size: 1.3em;
+							}
+
+							a[title~='follow me on github']::before {
+								content: '\f301';
+								font-size: 1.4em;
+							}
+
+							a[href~='www.linkedin.com']::before {
+								content: '\f18d';
+								font-size: 1.4em;
+							}
+
+							a[href~='github.com']::before {
+								content: '\f237';
+								font-size: 1.4em;
 							}
 						}
 					}
@@ -480,6 +526,7 @@
 
 			form#myform {
 				width:50%;
+				flex: 1 0 auto;
 				padding:0.5em;
 				.error {
 					line-height: 35px;
@@ -560,8 +607,11 @@
 							padding: 0;
 							display:flex;
 							flex-flow: row;
+							align-items: flex-start;
+							justify-content: flex-start;
 							li{
 								width:33%;
+								flex: 1 0 auto;
 								height: 30px;
 								margin:0;
 								label{
@@ -572,6 +622,7 @@
 								input[type="radio"]{
 									display: inline-block;
 									height: 30px;
+									flex: 1 0 auto;
 									width: 7%;
 									padding:0;
 									margin:0;
@@ -698,15 +749,24 @@
       height: 40px;
 
       ul#social {
+        height: 100%;
         li.social-item {
           width: 32%;
 
           a {
-            font-size: 0.9em;
+            line-height: 40px;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-google,
+						i.fa-instagram {
+							font-size: 1.25em;
 
-            object {
-              margin: auto;
-            }
+							&:hover {
+								transform: scale(1.2);
+							}
+						}
+
+
           }
         }
       }
@@ -738,7 +798,7 @@
     }
 		div#project_page{
 			.parent {
-        padding: 0.25em;
+        padding: 0;
       }
 		}
     div#about_content {
@@ -851,7 +911,7 @@
 
 		div#project_page{
 			.parent {
-        padding: 0.25em;
+        padding: 0;
       }
 
       figcaption.cover {
@@ -944,15 +1004,24 @@
       width: 20%;
 
       ul#social {
+        height: 100%;
         li.social-item {
           width: 32%;
 
           a {
-            font-size: 0.9em;
+            line-height: 40px;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-google,
+						i.fa-instagram {
+							font-size: 1.15em;
 
-            object {
-              width: 35%;
-            }
+							&:hover {
+								transform: scale(1.2);
+							}
+						}
+
+
           }
         }
       }
@@ -985,8 +1054,8 @@
     }
 		div#project_page{
 			.parent {
-        padding: 0.25em;
-        width: 90%;
+        padding: 0;
+        width: 98%;
         margin: auto;
       }
 		}
@@ -1057,13 +1126,24 @@
       height: 40px;
 
       ul#social {
+        height: 100%;
         li.social-item {
           width: 32%;
+
           a {
-            font-size: 0.8em;
-            object {
-              width: 45%;
-            }
+            line-height: 40px;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-google,
+						i.fa-instagram {
+							font-size: 1em;
+
+							&:hover {
+								transform: scale(1.2);
+							}
+						}
+
+
           }
         }
       }
@@ -1185,15 +1265,24 @@
       height: 40px;
       width: 15%;
       ul#social {
+        height: 100%;
         li.social-item {
-          width: 31%;
+          width: 32%;
 
           a {
-            font-size: 0.9em;
+            line-height: 40px;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-google,
+						i.fa-instagram {
+							font-size: 0.9em;
 
-            object {
-              width: 55%;
-            }
+							&:hover {
+								transform: scale(1.2);
+							}
+						}
+
+
           }
         }
       }
@@ -1225,7 +1314,7 @@
 
 		div#project_page{
 			.parent {
-        width: 95%;
+        width: 96%;
       }
 
       figcaption.cover {
@@ -1395,15 +1484,24 @@
       height: 40px;
 
       ul#social {
-        width: 100%;
+        height: 100%;
         li.social-item {
-          width: 33%;
-          a {
-            font-size: 0.9em;
+          width: 32%;
 
-            object {
-              width: 50%;
-            }
+          a {
+            line-height: 40px;
+						i.fa-twitter,
+						i.fa-facebook,
+						i.fa-google,
+						i.fa-instagram {
+							font-size: 0.8em;
+
+							&:hover {
+								transform: scale(1.2);
+							}
+						}
+
+
           }
         }
       }

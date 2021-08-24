@@ -16,12 +16,14 @@ arrayTabs.forEach((element1) => {
 			// console.log(element2.dataset.id == element1.id);
 			if (element2.dataset.all === element1.id) {
 				// eslint  - "no-param-reassign": "off"
-
-				element2.style.display = "block";
+				element2.classList.remove("box-hide");
+				element2.classList.add("box-show");
 			} else if (element2.dataset.id === element1.id) {
-				element2.style.display = "block";
+				element2.classList.remove("box-hide");
+				element2.classList.add("box-show");
 			} else {
-				element2.style.display = "none";
+				element2.classList.remove("box-show");
+				element2.classList.add("box-hide");
 			}
 			return element2;
 		});

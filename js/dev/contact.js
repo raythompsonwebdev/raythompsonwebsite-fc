@@ -2,7 +2,7 @@ const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("formerror");
 
-const commentFormRegEX = /^[^<>,<|>]+$/;
+// const commentFormRegEX = /^[^<>,<|>]+$/;
 
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
@@ -72,22 +72,22 @@ url.addEventListener("blur", (e) => {
 	}
 });
 
-comment.addEventListener("blur", (e) => {
-	e.preventDefault();
-	error.style.display = "none";
-	error.textContent = "";
-	comment.style.setProperty("--comment-error", "none");
+// comment.addEventListener("blur", (e) => {
+// 	e.preventDefault();
+// 	error.style.display = "none";
+// 	error.textContent = "";
+// 	comment.style.setProperty("--comment-error", "none");
 
-	if (!commentFormRegEX.test(comment.value)) {
-		error.style.display = "block";
-		error.textContent = "No HTML Tags Allowed";
-		comment.style.setProperty("--comment-error", "solid 3px red");
-	} else {
-		error.style.display = "none";
-		error.textContent = "";
-		comment.style.setProperty("--comment-error", "none");
-	}
-});
+// 	if (!commentFormRegEX.test(comment.value)) {
+// 		error.style.display = "block";
+// 		error.textContent = "No HTML Tags Allowed";
+// 		comment.style.setProperty("--comment-error", "solid 3px red");
+// 	} else {
+// 		error.style.display = "none";
+// 		error.textContent = "";
+// 		comment.style.setProperty("--comment-error", "none");
+// 	}
+// });
 
 function showError() {
 	if (text.validity.valueMissing && email.validity.valueMissing) {

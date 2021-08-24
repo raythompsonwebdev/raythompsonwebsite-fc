@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -184,6 +185,7 @@ hr {
     height: 100%;
     display: flex;
     list-style: none;
+    font-family: "FontAwesome";
   }
   .site_header span.social ul#social li.social-item {
     width: 32%;
@@ -205,15 +207,25 @@ hr {
     line-height: 40px;
     background-color: #ffffff;
   }
-  .site_header span.social ul#social li.social-item a object {
-    line-height: 40px;
-    color: #ffffff;
-    width: 25%;
-    height: 40px;
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-linkedin {
     display: block;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.25em;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
   }
-  .site_header span.social ul#social li.social-item a:hover {
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-linkedin:hover {
+    transform: scale(1.2);
+    font-weight: bold;
     cursor: pointer;
   }
 
@@ -249,7 +261,7 @@ hr {
   main.site_content .tabcontent.scrolled {
     opacity: 1;
     animation-name: example;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   main.site_content div#banner,
 main.site_content div#about_content,
@@ -334,6 +346,10 @@ main.site_content div#banner figure > picture {
     align-items: stretch;
     list-style: none;
     padding: 0;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
   }
   main.site_content div#project_page ul#project_tabs li {
     width: auto;
@@ -356,10 +372,19 @@ main.site_content div#banner figure > picture {
     justify-content: flex-start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
-    padding: 0.2em;
-    background-color: #aaabb8;
-    width: 98%;
+    padding: 0;
+    width: 100%;
     margin: auto;
+  }
+  main.site_content div#project_page .box-show {
+    display: block;
+    opacity: 1;
+    animation-name: example;
+    animation-duration: 0.5s;
+  }
+  main.site_content div#project_page .box-hide {
+    display: none;
+    opacity: 0;
   }
   main.site_content div#project_page figure.box {
     position: relative;
@@ -499,9 +524,12 @@ main.site_content div#project_page figure > picture {
   }
   main.site_content div#outro section#contact-details {
     width: 40%;
+    flex: 1 0 auto;
   }
   main.site_content div#outro section#contact-details address {
     height: auto;
+    width: 90%;
+    margin: auto;
   }
   main.site_content div#outro section#contact-details address ul {
     display: block;
@@ -510,13 +538,33 @@ main.site_content div#project_page figure > picture {
   }
   main.site_content div#outro section#contact-details address ul li {
     height: auto;
+    font-family: "FontAwesome";
   }
   main.site_content div#outro section#contact-details address ul li a {
+    width: auto;
+    display: inline-block;
+    font-size: 1em;
     line-height: 40px;
-    display: block;
+  }
+  main.site_content div#outro section#contact-details address ul li a[href~=mailto]::before {
+    content: "";
+    font-size: 1.3em;
+  }
+  main.site_content div#outro section#contact-details address ul li a[title~="follow me on github"]::before {
+    content: "";
+    font-size: 1.4em;
+  }
+  main.site_content div#outro section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+    content: "";
+    font-size: 1.4em;
+  }
+  main.site_content div#outro section#contact-details address ul li a[href~="github.com"]::before {
+    content: "";
+    font-size: 1.4em;
   }
   main.site_content div#outro form#myform {
     width: 50%;
+    flex: 1 0 auto;
     padding: 0.5em;
   }
   main.site_content div#outro form#myform .error {
@@ -590,9 +638,12 @@ main.site_content div#outro form#myform ol li input#myurl {
     padding: 0;
     display: flex;
     flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   main.site_content div#outro form#myform ol li ol#comment-box li {
     width: 33%;
+    flex: 1 0 auto;
     height: 30px;
     margin: 0;
   }
@@ -603,6 +654,7 @@ main.site_content div#outro form#myform ol li input#myurl {
   main.site_content div#outro form#myform ol li ol#comment-box li input[type=radio] {
     display: inline-block;
     height: 30px;
+    flex: 1 0 auto;
     width: 7%;
     padding: 0;
     margin: 0;
@@ -705,14 +757,26 @@ main.site_content div#outro form#myform ol li input#myurl {
   .site_header span.social {
     height: 40px;
   }
+  .site_header span.social ul#social {
+    height: 100%;
+  }
   .site_header span.social ul#social li.social-item {
     width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
-    font-size: 0.9em;
+    line-height: 40px;
   }
-  .site_header span.social ul#social li.social-item a object {
-    margin: auto;
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-google,
+.site_header span.social ul#social li.social-item a i.fa-instagram {
+    font-size: 1.25em;
+  }
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-google:hover,
+.site_header span.social ul#social li.social-item a i.fa-instagram:hover {
+    transform: scale(1.2);
   }
 
   main.site_content {
@@ -735,7 +799,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#project_page .parent {
-    padding: 0.25em;
+    padding: 0;
   }
   main.site_content div#about_content {
     width: 97.7%;
@@ -827,7 +891,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#project_page .parent {
-    padding: 0.25em;
+    padding: 0;
   }
   main.site_content div#project_page figcaption.cover a.cert_link {
     font-size: 1em;
@@ -900,14 +964,26 @@ main.site_content div#banner figure > picture {
     height: 40px;
     width: 20%;
   }
+  .site_header span.social ul#social {
+    height: 100%;
+  }
   .site_header span.social ul#social li.social-item {
     width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
-    font-size: 0.9em;
+    line-height: 40px;
   }
-  .site_header span.social ul#social li.social-item a object {
-    width: 35%;
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-google,
+.site_header span.social ul#social li.social-item a i.fa-instagram {
+    font-size: 1.15em;
+  }
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-google:hover,
+.site_header span.social ul#social li.social-item a i.fa-instagram:hover {
+    transform: scale(1.2);
   }
 
   main.site_content {
@@ -933,8 +1009,8 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#project_page .parent {
-    padding: 0.25em;
-    width: 90%;
+    padding: 0;
+    width: 98%;
     margin: auto;
   }
   main.site_content div#about_content {
@@ -994,14 +1070,26 @@ main.site_content div#banner figure > picture {
   .site_header span.social {
     height: 40px;
   }
+  .site_header span.social ul#social {
+    height: 100%;
+  }
   .site_header span.social ul#social li.social-item {
     width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
-    font-size: 0.8em;
+    line-height: 40px;
   }
-  .site_header span.social ul#social li.social-item a object {
-    width: 45%;
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-google,
+.site_header span.social ul#social li.social-item a i.fa-instagram {
+    font-size: 1em;
+  }
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-google:hover,
+.site_header span.social ul#social li.social-item a i.fa-instagram:hover {
+    transform: scale(1.2);
   }
 
   main.site_content {
@@ -1094,14 +1182,26 @@ main.site_content div#banner figure > picture {
     height: 40px;
     width: 15%;
   }
+  .site_header span.social ul#social {
+    height: 100%;
+  }
   .site_header span.social ul#social li.social-item {
-    width: 31%;
+    width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
+    line-height: 40px;
+  }
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-google,
+.site_header span.social ul#social li.social-item a i.fa-instagram {
     font-size: 0.9em;
   }
-  .site_header span.social ul#social li.social-item a object {
-    width: 55%;
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-google:hover,
+.site_header span.social ul#social li.social-item a i.fa-instagram:hover {
+    transform: scale(1.2);
   }
 
   main.site_content {
@@ -1124,7 +1224,7 @@ main.site_content div#banner figure > picture {
     font-size: 0.9em;
   }
   main.site_content div#project_page .parent {
-    width: 95%;
+    width: 96%;
   }
   main.site_content div#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
@@ -1280,16 +1380,25 @@ main.site_content div#banner figure > picture {
     height: 40px;
   }
   .site_header span.social ul#social {
-    width: 100%;
+    height: 100%;
   }
   .site_header span.social ul#social li.social-item {
-    width: 33%;
+    width: 32%;
   }
   .site_header span.social ul#social li.social-item a {
-    font-size: 0.9em;
+    line-height: 40px;
   }
-  .site_header span.social ul#social li.social-item a object {
-    width: 50%;
+  .site_header span.social ul#social li.social-item a i.fa-twitter,
+.site_header span.social ul#social li.social-item a i.fa-facebook,
+.site_header span.social ul#social li.social-item a i.fa-google,
+.site_header span.social ul#social li.social-item a i.fa-instagram {
+    font-size: 0.8em;
+  }
+  .site_header span.social ul#social li.social-item a i.fa-twitter:hover,
+.site_header span.social ul#social li.social-item a i.fa-facebook:hover,
+.site_header span.social ul#social li.social-item a i.fa-google:hover,
+.site_header span.social ul#social li.social-item a i.fa-instagram:hover {
+    transform: scale(1.2);
   }
 
   main.site_content {
