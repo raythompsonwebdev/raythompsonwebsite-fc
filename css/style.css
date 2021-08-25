@@ -188,7 +188,7 @@ hr {
   }
   .site_header ul#social {
     height: 40px;
-    width: 15%;
+    width: 12%;
     margin: 0;
     padding: 0;
     flex: 1 0 auto;
@@ -219,7 +219,8 @@ hr {
   }
   .site_header ul#social li.social-item a i.fa-twitter,
 .site_header ul#social li.social-item a i.fa-facebook,
-.site_header ul#social li.social-item a i.fa-linkedin {
+.site_header ul#social li.social-item a i.fa-linkedin,
+.site_header ul#social li.social-item a i.far.fa-discord {
     display: block;
     width: 100%;
     height: 100%;
@@ -233,7 +234,8 @@ hr {
   }
   .site_header ul#social li.social-item a i.fa-twitter:hover,
 .site_header ul#social li.social-item a i.fa-facebook:hover,
-.site_header ul#social li.social-item a i.fa-linkedin:hover {
+.site_header ul#social li.social-item a i.fa-linkedin:hover,
+.site_header ul#social li.social-item a i.far.fa-discord:hover {
     transform: scale(1.2);
     font-weight: bold;
     cursor: pointer;
@@ -528,7 +530,6 @@ main.site_content div#project_page figure > picture {
     background-color: #efefef;
   }
   main.site_content div#contact section#contact_container {
-    flex: 1 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -785,9 +786,7 @@ main.site_content div#contact section#contact_container form#myform ol li input#
   }
   .site_header ul#social {
     height: 40px;
-  }
-  .site_header ul#social li.social-item {
-    width: 32%;
+    width: 13%;
   }
   .site_header ul#social li.social-item a {
     line-height: 40px;
@@ -999,7 +998,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content div#about_content article#abouttext p {
     font-size: 0.9em;
-    line-height: 2.5em;
+    line-height: 2.2em;
   }
   main.site_content div#contact {
     width: 100%;
@@ -1115,9 +1114,6 @@ main.site_content div#contact section#contact_container form#myform ol li input#
   .site_header ul#social {
     width: 15%;
   }
-  .site_header ul#social li.social-item {
-    width: 32%;
-  }
   .site_header ul#social li.social-item a {
     line-height: 40px;
   }
@@ -1166,10 +1162,10 @@ main.site_content div#banner figure > picture {
     margin-bottom: 1em;
   }
   main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.35em;
+    font-size: 1.3em;
   }
   main.site_content div#about_content article#abouttext p {
-    line-height: 1.8em;
+    line-height: 2.1em;
   }
   main.site_content div#contact {
     width: 100%;
@@ -1214,34 +1210,24 @@ main.site_content div#banner figure > picture {
   }
   .site_header ul#social {
     position: fixed;
-    top: 160px;
+    top: 80px;
     z-index: 100;
-    left: 2vw;
-    height: 40px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: stretch;
+    left: 83vw;
+    height: 35px;
     margin: 0;
-    width: 25%;
+    width: 15%;
   }
   .site_header ul#social li.social-item {
-    width: 32%;
+    width: 32.3%;
   }
   .site_header ul#social li.social-item a {
-    line-height: 40px;
+    line-height: 35px;
   }
   .site_header ul#social li.social-item a i.fa-twitter,
 .site_header ul#social li.social-item a i.fa-facebook,
 .site_header ul#social li.social-item a i.fa-google,
 .site_header ul#social li.social-item a i.fa-instagram {
-    font-size: 1.3em;
-  }
-  .site_header ul#social li.social-item a i.fa-twitter:hover,
-.site_header ul#social li.social-item a i.fa-facebook:hover,
-.site_header ul#social li.social-item a i.fa-google:hover,
-.site_header ul#social li.social-item a i.fa-instagram:hover {
-    transform: scale(1.2);
+    font-size: 1.2em;
   }
 
   main.site_content div#banner,
@@ -1281,13 +1267,14 @@ main.site_content div#banner figure > picture {
     flex: 0 0 auto;
   }
   main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   main.site_content div#about_content article#abouttext p {
     font-size: 0.9em;
   }
   main.site_content div#contact {
     width: 100%;
+    padding: 0;
   }
   main.site_content div#contact section#contact_container {
     display: flex;
@@ -1326,6 +1313,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content div#contact section#contact_container form#myform {
     width: 90%;
+    margin-bottom: 2em;
   }
   main.site_content div#contact section#contact_container form#myform ol {
     margin: 0;
@@ -1380,6 +1368,11 @@ main.site_content div#contact section#contact_container form#myform ol li input#
   }
   .site_footer ul li a {
     font-size: 0.85em;
+  }
+}
+@media (max-width: 667px) {
+  main.site_content div#project_page figure.box {
+    width: 49.75%;
   }
 }
 /* 600px */
@@ -1452,7 +1445,7 @@ main.site_content div#banner figure > picture {
     width: 95%;
   }
   main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
   main.site_content div#about_content article#abouttext p {
     font-size: 0.85em;

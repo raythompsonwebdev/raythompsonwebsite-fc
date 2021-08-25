@@ -105,7 +105,7 @@
 
     ul#social {
         height: 40px;
-      	width: 15%;
+      	width: 12%;
         margin: 0;
         padding: 0;
 				flex: 1 0 auto;
@@ -133,7 +133,8 @@
 						text-align: center;
 						i.fa-twitter,
 						i.fa-facebook,
-						i.fa-linkedin {
+						i.fa-linkedin,
+						i.far.fa-discord{
 							display: block;
 							width: 100%;
 							height: 100%;
@@ -466,7 +467,6 @@
 			background-color: $bgcolor;
 
 			section#contact_container{
-				flex: 1 0 auto;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: center;
@@ -759,8 +759,9 @@
 
 		ul#social {
 			height: 40px;
+			width: 13%;
 			li.social-item {
-				width: 32%;
+
 				a {
 					line-height: 40px;
 					i.fa-twitter,
@@ -1037,7 +1038,7 @@
 
         p {
           font-size: 0.9em;
-          line-height: 2.5em;
+          line-height: 2.2em;
         }
       }
 
@@ -1187,7 +1188,7 @@
 		ul#social {
 			width: 15%;
 			li.social-item {
-				width: 32%;
+
 				a {
 					line-height: 40px;
 					i.fa-twitter,
@@ -1242,11 +1243,11 @@
         width: 100%;
         margin-bottom: 1em;
         h2 {
-          font-size: 1.35em;
+          font-size: 1.3em;
         }
 
         p {
-          line-height: 1.8em;
+          line-height: 2.1em;
         }
       }
 
@@ -1303,28 +1304,21 @@
 
 		ul#social  {
 			position:fixed;
-			top:160px;
+			top:80px;
 			z-index:100;
-			left:2vw;
-			height: 40px;
-			display: flex;
-			flex-flow:column;
-			justify-content: center;
-			align-items: stretch;
+			left:83vw;
+			height: 35px;
 			margin:0;
-			width: 25%;
+			width: 15%;
 			li.social-item {
-				width: 32%;
+				width: 32.3%;
 				a {
-					line-height: 40px;
+					line-height: 35px;
 					i.fa-twitter,
 					i.fa-facebook,
 					i.fa-google,
 					i.fa-instagram {
-						font-size: 1.3em;
-						&:hover {
-							transform: scale(1.2);
-						}
+						font-size: 1.2em;
 					}
 				}
 			}
@@ -1382,7 +1376,7 @@
 
       article#abouttext {
         h2 {
-          font-size: 1.3em;
+          font-size: 1.2em;
         }
         p {
           font-size: 0.9em;
@@ -1392,6 +1386,7 @@
 
     div#contact {
       width:100%;
+			padding:0;
 			section#contact_container{
 				display: flex;
 				flex-flow: column;
@@ -1431,6 +1426,7 @@
 				}
 				form#myform {
 					width:90%;
+					margin-bottom: 2em;
 
 					ol {
 						margin: 0;
@@ -1503,6 +1499,17 @@
       }
     }
   }
+}
+
+@media(max-width: 667px){
+
+	main.site_content {
+		div#project_page{
+			figure.box {
+				width: 49.75%;
+			}
+		}
+	}
 }
 
 /* 600px */
@@ -1594,7 +1601,7 @@
 
       article#abouttext {
         h2 {
-          font-size: 1.2em;
+          font-size: 1.15em;
         }
         p {
           font-size: 0.85em;
