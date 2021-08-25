@@ -72,8 +72,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        width: 50%;
-
+    		width: 80%;
         .tablink {
           color: $textcolor1;
           border: none;
@@ -88,6 +87,11 @@
           a {
             display: block;
             text-align: center;
+						&:hover{
+							background-color:$textcolor1;
+							color:$textcolor2;
+
+						}
           }
         }
       }
@@ -99,20 +103,12 @@
       }
     }
 
-    span.social {
-      height: 40px;
-      width: 15%;
-      flex: 1 0 auto;
-      text-align: center;
-      display: flex;
-      flex-flow: row;
-      justify-content: flex-end;
-
-      ul#social {
-        width: 100%;
+    ul#social {
+        height: 40px;
+      	width: 15%;
         margin: 0;
         padding: 0;
-        height: 100%;
+				flex: 1 0 auto;
         display: flex;
         list-style: none;
 				font-family: "FontAwesome";
@@ -134,6 +130,7 @@
             height: 100%;
             line-height: 40px;
             background-color: $colorwhite;
+						text-align: center;
 						i.fa-twitter,
 						i.fa-facebook,
 						i.fa-linkedin {
@@ -145,7 +142,6 @@
 							font-size: 1.25em;
 							//color: $colorsocmedhov;
 							@include raytransition(all 0.2s ease-in 0s);
-
 							&:hover {
 								transform: scale(1.2);
 								font-weight: bold;
@@ -157,8 +153,9 @@
 
           }
         }
-      }
+
     }
+
   }
 
   main.site_content {
@@ -197,10 +194,12 @@
       animation-name: example;
       animation-duration: 0.5s;
     }
+
     div#banner,
+		div#project_page,
     div#about_content,
-    div#outro {
-      min-height: 82vh;
+    div#contact {
+      min-height: 90vh;
       margin-bottom: 100px;
     }
 
@@ -212,7 +211,6 @@
       align-items: center;
       width: 100%;
       flex: 0 0 auto;
-      height: 100%;
 
       article#bannertext {
         width: calc(60% - 5%);
@@ -271,10 +269,7 @@
       background-size: cover; /* Resize the background image to cover the entire container */
     }
 
-
-
 		div#project_page{
-			height:80vh;
 			display: flex;
 			flex-flow: column ;
 			-webkit-justify-content: center;
@@ -282,7 +277,7 @@
 			-webkit-align-items: center;
 			align-items: center;
 
-			h1{
+			h2{
 				align-self: flex-start;
 			}
 
@@ -465,215 +460,217 @@
 
     }
 
-    div#outro {
-      width: 97.7%;
-      flex: 1 0 auto;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
+    div#contact {
+      width: 100%;
       padding: 0.5em;
-      height: 100%;
 			background-color: $bgcolor;
 
-
-			h2 {
-				font-size: 1.5rem;
-				text-align: left;
-				align-self: flex-start;
-				width: 100%;
-				line-height: 50px;
-			}
-
-			section#contact-details{
-				width: 25%;
+			section#contact_container{
 				flex: 1 0 auto;
-				address{
-					height:auto;
-					width: 90%;
-					margin: auto;
-					ul{
-						display:block;
-						list-style:none;
-						padding: 0;
-						li{
-							height:auto;
-							font-family: "FontAwesome";
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				width:98%;
+				h2 {
+					font-size: 1.5rem;
+					text-align: left;
+					align-self: flex-start;
+					width: 100%;
+					line-height: 50px;
 
-							a {
-								width: auto;
-								display: inline-block;
-								font-size: 1em;
+				}
+				section#contact-details{
+					width: 40%;
+					flex: 1 0 auto;
+					h3{
+						text-indent: 1em;
+						font-size: 1.25rem;
+					}
+					address{
+						height:auto;
+						width: 90%;
+						margin: auto;
+						ul{
+							display:block;
+							list-style:none;
+							padding: 0;
+							li{
+								height:auto;
+								font-family: "FontAwesome";
+
+								a {
+									width: auto;
+									display: inline-block;
+									font-size: 1em;
+									line-height: 40px;
+									margin-left: 1em;
+								}
+
+								a[href~='mailto']::before {
+										content: '\f466';
+										font-size: 1em;
+								}
+
+								a[title~='follow me on github']::before {
+									content: '\f301';
+									font-size: 1em;
+								}
+
+								a[href~='www.linkedin.com']::before {
+									content: '\f18d';
+									font-size: 1em;
+								}
+
+								a[href~='github.com']::before {
+									content: '\f237';
+									font-size: 1em;
+								}
+							}
+						}
+					}
+				}
+				.hide-error {
+					display: none;
+				}
+				.show-error{
+					line-height: 35px;
+					background: #fff;
+					margin-bottom: 0.2em;
+					display: block;
+					color: red;
+					border: 2px red solid;
+					text-align:center;
+					animation-name: example;
+					animation-duration: 0.2s;
+
+				}
+				form#myform {
+					width:50%;
+					flex: 1 0 auto;
+					padding:0.5em;
+
+					ol {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						width:100%;
+
+
+						li {
+							height: auto;
+							margin-bottom:0.5em;
+							label,
+							#comment-header {
+								display: block;
+								width: 100%;
 								line-height: 40px;
 							}
 
-							a[href~='mailto']::before {
-									content: '\f466';
-									font-size: 1.3em;
+							label[for="questionitem"]{
+								float: left;
+								width: 80%;
+								line-height: 30px;
 							}
 
-							a[title~='follow me on github']::before {
-								content: '\f301';
-								font-size: 1.4em;
+							input#myname:hover,
+							input#myemail:hover,
+							input#myurl:hover,
+							input[type="radio"]:hover,
+							input[type="radio"]:focus,
+							input#myname:focus,
+							input#myemail:focus,
+							input#myurl:focus,
+							select{
+								border-color: $pageTwobgcolor;
+								-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
+								-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
+								box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
+								background-color: $pageTwobgcolor;
+								outline: none;
+								display: block;
 							}
 
-							a[href~='www.linkedin.com']::before {
-								content: '\f18d';
-								font-size: 1.4em;
+							input#myname:valid,
+							input#myemail:valid	{
+								border: solid 3px green;
 							}
 
-							a[href~='github.com']::before {
-								content: '\f237';
-								font-size: 1.4em;
+							input#myname,
+							input#myemail,
+							input#myurl{
+								display: block;
+								line-height: 35px;
+								width: 100%;
 							}
-						}
-					}
-				}
-			}
 
-			.hide-error {
-				display: none;
-			}
+							input#myname{
+								border: var(--text-error);
+							}
 
-			.show-error{
-				line-height: 35px;
-				background: #fff;
-				margin-bottom: 0.2em;
-				display: block;
-				color: red;
-				border: 2px red solid;
-				text-align:center;
-				animation-name: example;
-      	animation-duration: 0.2s;
+							input#myemail{
+								border: var(--email-error);
+							}
 
-			}
+							input#myurl{
+								border: var(--url-error);
+							}
 
-			form#myform {
-				width:50%;
-				flex: 1 0 auto;
-				padding:0.5em;
-
-				ol {
-					list-style: none;
-					margin: 0;
-					padding: 0;
-					width:100%;
-
-
-					li {
-						height: auto;
-						margin-bottom:0.5em;
-						label,
-						#comment-header {
-							display: block;
-							width: 100%;
-							line-height: 40px;
-						}
-
-						label[for="questionitem"]{
-							float: left;
-							width: 80%;
-							line-height: 30px;
-						}
-
-						input#myname:hover,
-						input#myemail:hover,
-						input#myurl:hover,
-						input[type="radio"]:hover,
-						input[type="radio"]:focus,
-						input#myname:focus,
-						input#myemail:focus,
-						input#myurl:focus,
-						select{
-							border-color: $pageTwobgcolor;
-							-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
-							-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
-							box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
-							background-color: $pageTwobgcolor;
-							outline: none;
-							display: block;
-						}
-
-						input#myname:valid,
-						input#myemail:valid	{
-							border: solid 3px green;
-						}
-
-						input#myname,
-						input#myemail,
-						input#myurl{
-							display: block;
-							line-height: 35px;
-							width: 100%;
-						}
-
-						input#myname{
-							border: var(--text-error);
-						}
-
-						input#myemail{
-							border: var(--email-error);
-						}
-
-						input#myurl{
-							border: var(--url-error);
-						}
-
-						ol#comment-box {
-							padding: 0;
-							display:flex;
-							flex-flow: row;
-							align-items: flex-start;
-							justify-content: flex-start;
-							li{
-								width:33%;
-								flex: 1 0 auto;
-								height: 30px;
-								margin:0;
-								label{
-									width: 50%;
-									height: 100%;
-								}
-
-								input[type="radio"]{
-									display: inline-block;
-									height: 30px;
+							ol#comment-box {
+								padding: 0;
+								display:flex;
+								flex-flow: row;
+								align-items: flex-start;
+								justify-content: flex-start;
+								li{
+									width:33%;
 									flex: 1 0 auto;
-									width: 5%;
-									padding:0;
+									height: 30px;
 									margin:0;
+									label{
+										width: 50%;
+										height: 100%;
+									}
+
+									input[type="radio"]{
+										display: inline-block;
+										height: 30px;
+										flex: 1 0 auto;
+										width: 5%;
+										padding:0;
+										margin:0;
+									}
 								}
 							}
+
+
+
+							select{
+								line-height:40px;
+								height:40px;
+								width:100%;
+							}
+
+							textarea#mycomments {
+								width: 100%;
+								border: var(--comment-error);
+							}
+
+
 						}
-
-
-
-						select{
-							line-height:40px;
-							height:40px;
-							width:100%;
-						}
-
-						textarea#mycomments {
-							width: 100%;
-							border: var(--comment-error);
-						}
-
-
 					}
-				}
-				button#submit {
-					display:block;
-					width: 100%;
-					height: 35px;
-					margin:auto;
-					font-size:1.1em;
-					&:hover {
-						cursor: pointer;
+					button#submit {
+						display:block;
+						width: 100%;
+						height: 35px;
+						margin:auto;
+						font-size:1.1em;
+						&:hover {
+							cursor: pointer;
 
+						}
 					}
 				}
 			}
-
     }
   }
 
@@ -760,36 +757,31 @@
       }
     }
 
-    span.social {
-      height: 40px;
+		ul#social {
+			height: 40px;
+			li.social-item {
+				width: 32%;
+				a {
+					line-height: 40px;
+					i.fa-twitter,
+					i.fa-facebook,
+					i.fa-google,
+					i.fa-instagram {
+						font-size: 1.25em;
 
-      ul#social {
-        height: 100%;
-        li.social-item {
-          width: 32%;
-
-          a {
-            line-height: 40px;
-						i.fa-twitter,
-						i.fa-facebook,
-						i.fa-google,
-						i.fa-instagram {
-							font-size: 1.25em;
-
-							&:hover {
-								transform: scale(1.2);
-							}
+						&:hover {
+							transform: scale(1.2);
 						}
+					}
 
 
-          }
-        }
-      }
-    }
+				}
+			}
+		}
+
   }
 
   main.site_content {
-    gap: 1em 20px;
 
     div#banner {
       flex: 0 0 auto;
@@ -832,9 +824,9 @@
 
     }
 
-    div#outro {
-      width: 97.7%;
-
+    div#contact {
+      width: 100%;
+			section#contact_container{
 
         h2 {
           font-size: 1.45em;
@@ -842,6 +834,101 @@
         p {
           font-size: 0.95em;
         }
+				section#contact_details{
+					width: 40%;
+					h3{
+						text-indent: 1em;
+						font-size: 1.2rem;
+					}
+
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+
+								a {
+									font-size: 1em;
+								}
+
+								a[href~='mailto']::before {
+										font-size: 1em;
+								}
+
+								a[title~='follow me on github']::before {
+									font-size: 1em;
+								}
+
+								a[href~='www.linkedin.com']::before {
+									font-size: 1em;
+								}
+
+								a[href~='github.com']::before {
+									font-size: 1em;
+								}
+							}
+						}
+					}
+				}
+
+				form#myform {
+					width:50%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
 
     }
   }
@@ -864,18 +951,14 @@
 
 /* 1280px */
 @media (max-width: 80em) {
-  div#banner,
-  div#about_content,
-  div#outro {
-    min-height: 80vh;
-  }
+
   #site_wrapper {
     width: 94%;
   }
   .site_header {
     height: 100px;
     hgroup.site-title {
-      width: 25%;
+      width: 20%;
       h1 {
         font-size: 1.2rem;
       }
@@ -887,7 +970,7 @@
       width: 55%;
 
       ul {
-        width: 60%;
+
         .tablink {
           font-size: 0.9em;
 
@@ -900,7 +983,7 @@
   }
 
   main.site_content {
-    gap: 2em 20px;
+
 
     div#banner {
       flex: 0 0 auto;
@@ -925,8 +1008,12 @@
     }
 
 		div#project_page{
+			height:auto;
 			.parent {
         padding: 0;
+      }
+			figure.box {
+				width:32.75%;
       }
 
       figcaption.cover {
@@ -956,8 +1043,9 @@
 
     }
 
-    div#outro {
-      width: 97.7%;
+    div#contact {
+      width: 100%;
+			section#contact_container{
 
         h2 {
           font-size: 1.4em;
@@ -966,6 +1054,87 @@
           font-size: 0.9em;
           line-height: 1.8em;
         }
+				section#contact-details{
+					width: 40%;
+					h3{
+						text-indent: 1em;
+						font-size: 1.15rem;
+					}
+
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+
+								a {
+									font-size: 1em;
+								}
+
+
+							}
+						}
+					}
+				}
+
+				form#myform {
+					width:50%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
 
     }
   }
@@ -993,7 +1162,7 @@
   }
   .site_header {
     hgroup.site-title {
-      width: 30%;
+      width: 20%;
       h1 {
         font-size: 1.2rem;
       }
@@ -1004,7 +1173,7 @@
     .site_navigation {
       width: 50%;
       ul {
-        width: 70%;
+
         .tablink {
           font-size: 0.85em;
 
@@ -1014,37 +1183,29 @@
         }
       }
     }
-    span.social {
-      height: 40px;
-      width: 15%;
 
-      ul#social {
-        height: 100%;
-        li.social-item {
-          width: 32%;
-
-          a {
-            line-height: 40px;
-						i.fa-twitter,
-						i.fa-facebook,
-						i.fa-google,
-						i.fa-instagram {
-							font-size: 1.15em;
-
-							&:hover {
-								transform: scale(1.2);
-							}
+		ul#social {
+			width: 15%;
+			li.social-item {
+				width: 32%;
+				a {
+					line-height: 40px;
+					i.fa-twitter,
+					i.fa-facebook,
+					i.fa-google,
+					i.fa-instagram {
+						font-size: 1.15em;
+						&:hover {
+							transform: scale(1.2);
 						}
+					}
+				}
+			}
+		}
 
-
-          }
-        }
-      }
-    }
   }
 
   main.site_content {
-    gap: 2em 20px;
 
     div#banner {
       flex: 0 0 auto;
@@ -1070,7 +1231,7 @@
 		div#project_page{
 			.parent {
         padding: 0;
-        width: 98%;
+        width: 100%;
         margin: auto;
       }
 		}
@@ -1091,8 +1252,9 @@
 
     }
 
-    div#outro {
-      width: 97.7%;
+    div#contact {
+      width: 100%;
+			section#contact_container{
 
         h2 {
           font-size: 1.35em;
@@ -1100,6 +1262,7 @@
         p {
           line-height: 1.8em;
         }
+			}
 
     }
   }
@@ -1116,7 +1279,7 @@
   }
   .site_header {
     hgroup.site-title {
-      width: 35%;
+      width: 20%;
       h1 {
         font-size: 1.1rem;
       }
@@ -1127,7 +1290,7 @@
     .site_navigation {
       width: 45%;
       ul {
-        width: 80%;
+				width:100%;
         .tablink {
           font-size: 0.8em;
 
@@ -1137,36 +1300,45 @@
         }
       }
     }
-    span.social {
-      height: 40px;
 
-      ul#social {
-        height: 100%;
-        li.social-item {
-          width: 32%;
-
-          a {
-            line-height: 40px;
-						i.fa-twitter,
-						i.fa-facebook,
-						i.fa-google,
-						i.fa-instagram {
-							font-size: 1em;
-
-							&:hover {
-								transform: scale(1.2);
-							}
+		ul#social  {
+			position:fixed;
+			top:160px;
+			z-index:100;
+			left:2vw;
+			height: 40px;
+			display: flex;
+			flex-flow:column;
+			justify-content: center;
+			align-items: stretch;
+			margin:0;
+			width: 25%;
+			li.social-item {
+				width: 32%;
+				a {
+					line-height: 40px;
+					i.fa-twitter,
+					i.fa-facebook,
+					i.fa-google,
+					i.fa-instagram {
+						font-size: 1.3em;
+						&:hover {
+							transform: scale(1.2);
 						}
-
-
-          }
-        }
-      }
-    }
+					}
+				}
+			}
+		}
   }
 
   main.site_content {
-    gap: 2em 20px;
+		div#banner,
+		div#project_page,
+    div#about_content,
+    div#contact {
+			height:auto;
+      margin-bottom: 100px;
+    }
 
     div#banner {
       flex: 0 0 auto;
@@ -1218,16 +1390,102 @@
       }
     }
 
-    div#outro {
-      width: 97.7%;
-
+    div#contact {
+      width:100%;
+			section#contact_container{
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				align-items: center;
         h2 {
           font-size: 1.3em;
         }
         p {
           font-size: 0.9em;
         }
+				section#contact-details{
+					width: 90%;
+					h3{
+						text-indent: 0;
+						font-size: 1rem;
+					}
 
+
+					address{
+						width: 100%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+								font-family: "FontAwesome";
+								a {
+									font-size: 1em;
+									&:hover{
+										cursor:pointer;
+									}
+								}
+
+							}
+						}
+					}
+				}
+				form#myform {
+					width:90%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
     }
   }
 
@@ -1276,36 +1534,24 @@
       }
     }
 
-    span.social {
-      height: 40px;
-      width: 15%;
-      ul#social {
-        height: 100%;
-        li.social-item {
-          width: 32%;
-
-          a {
-            line-height: 40px;
-						i.fa-twitter,
-						i.fa-facebook,
-						i.fa-google,
-						i.fa-instagram {
-							font-size: 0.9em;
-
-							&:hover {
-								transform: scale(1.2);
-							}
-						}
-
-
-          }
-        }
-      }
-    }
+		ul#social {
+			height: auto;
+			li.social-item {
+				width: 32%;
+				a {
+					line-height: 40px;
+					i.fa-twitter,
+					i.fa-facebook,
+					i.fa-google,
+					i.fa-instagram {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
   }
 
   main.site_content {
-    gap: 2em 20px;
 
     div#banner {
       width: 100%;
@@ -1356,8 +1602,9 @@
       }
     }
 
-    div#outro {
-      width: 95%;
+    div#contact {
+      width: 100%;
+			section#contact_container{
 
         h2 {
           font-size: 1.2em;
@@ -1366,7 +1613,86 @@
           font-size: 0.85em;
           line-height: 1.8em;
         }
+				section#contact-details{
+					width: 25%;
+					h3{
+						text-indent: 0;
+						font-size: 1rem;
+					}
 
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+
+								a {
+									font-size: 1em;
+								}
+
+
+							}
+						}
+					}
+				}
+				form#myform {
+					width:94%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
     }
   }
 
@@ -1457,6 +1783,7 @@
 
       ul {
         height: 100%;
+				width:100%;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
         flex-flow: column;
@@ -1495,39 +1822,24 @@
         margin-bottom: 3em;
       }
     }
-    span.social {
-      height: 40px;
 
-      ul#social {
-        height: 100%;
-        li.social-item {
-          width: 32%;
-
-          a {
-            line-height: 40px;
-						i.fa-twitter,
-						i.fa-facebook,
-						i.fa-google,
-						i.fa-instagram {
-							font-size: 0.8em;
-
-							&:hover {
-								transform: scale(1.2);
-							}
-						}
-
-
-          }
-        }
-      }
-    }
+		ul#social {
+			li.social-item {
+				a {
+					line-height: 40px;
+					i.fa-twitter,
+					i.fa-facebook,
+					i.fa-google,
+					i.fa-instagram {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
   }
 
   main.site_content {
-    gap: 2em 20px;
-    min-height: unset;
     height: auto;
-
     div#banner {
       width: 100%;
       figure {
@@ -1578,9 +1890,9 @@
       }
     }
 
-    div#outro {
-      width: 95%;
-
+    div#contact {
+      width: 100%;
+			section#contact_container{
 
         h2 {
           font-size: 1.15em;
@@ -1588,7 +1900,82 @@
         p {
           line-height: 1.8em;
         }
+				section#contact-details{
+					width: 25%;
 
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+
+								a {
+									font-size: 1em;
+								}
+
+
+							}
+						}
+					}
+				}
+				form#myform {
+					width:94%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
     }
   }
 
@@ -1674,7 +2061,7 @@
 		}
 
     div#about_content {
-      width: 95%;
+      width: 94%;
       article#abouttext {
         h2 {
           font-size: 1.1em;
@@ -1685,8 +2072,10 @@
       }
     }
 
-    div#outro {
-      width: 95%;
+    div#contact {
+      width: 100%;
+			section#contact_container{
+
         h2 {
           font-size: 1.1em;
         }
@@ -1694,7 +2083,82 @@
           font-size: 0.8em;
           line-height: 1.8em;
         }
+				section#contact-details{
+					width: 25%;
 
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+
+								a {
+									font-size: 1em;
+								}
+
+
+							}
+						}
+					}
+				}
+				form#myform {
+					width:98%;
+
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+
+							label[for="questionitem"]{
+								width: 80%;
+							}
+
+
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									height: 30px;
+									label{
+										width: 50%;
+									}
+
+									input[type="radio"]{
+										height: 30px;
+										width: 5%;
+									}
+								}
+							}
+
+
+
+							select{
+								line-height:40px;
+							}
+
+
+						}
+					}
+					button#submit {
+						font-size:1em;
+						&:hover {
+							cursor: pointer;
+
+						}
+					}
+				}
+			}
     }
   }
 

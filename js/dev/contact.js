@@ -8,8 +8,6 @@ const error = document.getElementById("form-error");
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 const [text, email, url, , , , , ,] = myForm;
 
-// console.log(comment.value);
-
 error.classList.add("hide-error");
 error.textContent = "";
 

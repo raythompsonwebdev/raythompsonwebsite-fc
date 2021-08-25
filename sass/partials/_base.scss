@@ -48,6 +48,27 @@ a {
   color: $textcolor1;
 }
 
+ /* unvisited link */
+ a:link {
+  color: $textcolor1;
+	}
+
+	/* visited link */
+	a:visited {
+		color: $textcolor1;
+		border: $textcolor1 dotted 1px;
+	}
+
+	a:hover{
+		cursor:pointer;
+	}
+
+	/* selected link */
+	a:active {
+		color: $textcolor1;
+		border: $textcolor1 dotted 1px;
+	}
+
 hr {
   margin: 1em auto;
   width: 80%;
