@@ -104,14 +104,11 @@ dist
 .tern-port
 
 
-spare.txt
-style.css.map
+textfiles/
+css/style.css.map
 node_modules/
-public/
-images/
 img/
 icons/
 .sass-cache/
-textfiles/
 images/unused-images/
 package-lock.json
