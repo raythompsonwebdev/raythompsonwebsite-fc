@@ -20,7 +20,7 @@ text.addEventListener("blur", (e) => {
 		error.classList.remove("hide-error");
 		error.classList.add("show-error");
 		error.textContent = "name too short or more than 40 characters. ";
-		text.style.setProperty("--text-error", "solid 3px red");
+		text.style.setProperty("--text-error", "solid 2px #f38383cb");
 	} else {
 		error.classList.add("hide-error");
 		error.classList.remove("show-error");
@@ -37,12 +37,12 @@ email.addEventListener("blur", (e) => {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
 		error.textContent = "I am expecting an e-mail address!";
-		email.style.setProperty("--email-error", "solid 3px red");
+		email.style.setProperty("--email-error", "solid 2px #f38383cb");
 	} else if (email.validity.patternMismatch) {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
 		error.textContent = "I am expecting a valid e-mail address!";
-		email.style.setProperty("--email-error", "solid 3px yellow");
+		email.style.setProperty("--email-error", "solid 2px rgb(250, 250, 135)");
 	} else {
 		error.classList.remove("show-error");
 		error.classList.add("hide-error");
@@ -58,12 +58,12 @@ url.addEventListener("blur", (e) => {
 		error.classList.remove("hide-error");
 		error.classList.add("show-error");
 		error.textContent = "I am expecting a web address!";
-		url.style.setProperty("--url-error", "solid 3px red");
+		url.style.setProperty("--url-error", "solid 2px #f38383cb");
 	} else if (url.validity.patternMismatch) {
 		error.classList.remove("hide-error");
 		error.classList.add("show-error");
 		error.textContent = "I am expecting an valid web pattern!";
-		url.style.setProperty("--url-error", "solid 3px yellow");
+		url.style.setProperty("--url-error", "solid 2px rgb(250, 250, 135)");
 	} else {
 		error.classList.remove("show-error");
 		error.classList.add("hide-error");
@@ -94,15 +94,15 @@ function showError() {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
 		error.textContent = "name and email address are required!";
-		text.style.setProperty("--text-error", "solid 3px blue");
-		email.style.setProperty("--email-error", "solid 3px blue");
+		text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
+		email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
 	} else if (!text.validity.valid && !email.validity.valid) {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
 		error.textContent =
 			"name and email address are required and need to be valid!";
-		text.style.setProperty("--text-error", "solid 3px blue");
-		email.style.setProperty("--email-error", "solid 3px blue");
+		text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
+		email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
 	} else {
 		myForm.submit();
 	}

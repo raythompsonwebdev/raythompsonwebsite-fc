@@ -87,6 +87,15 @@
           a {
             display: block;
             text-align: center;
+							/* visited link */
+						&:visited {
+							border: $textcolor1 dotted 1px;
+						}
+						/* selected link */
+						&:active {
+							background-color:$textcolor1;
+							color:$textcolor2;
+						}
 						&:hover{
 							background-color:$textcolor1;
 							color:$textcolor2;
@@ -206,6 +215,7 @@
 
     div#banner {
       position: relative;
+			flex: 0 0 auto;
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -272,10 +282,11 @@
 
 		section#project_page{
 			display: flex;
+			flex: 0 0 auto;
 			flex-flow: column;
 			justify-content: flex-start;
 			align-items: center;
-			gap: 4em;
+			gap: 2em;
 			h2{
 				align-self: flex-start;
 			}
@@ -299,12 +310,21 @@
 				@include raytransition(all 0.2s ease-in 0s);
 
 				li{
-					width:auto;
+					width:20%;
+					flex:0 0 auto;
 					margin-right:0.2em;
+					font-family: "Lato", serif;
 					button.project_tab{
-						padding: 1em 2em;
+						display:block;
+						background-color: $colorwhite;
+						line-height:35px;
+						width:100%;
+						border: none;
+						font-size:1em;
+						text-transform: uppercase;
 						&:hover{
 							cursor:pointer;
+							font-weight:bold;
 						}
 					}
 				}
@@ -426,9 +446,10 @@
       width: 100%;
       flex: 0 0 auto;
       display: flex;
-      flex-flow: row wrap;
-      align-content: flex-start;
-      justify-content: space-between;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 2em;
 			h2 {
 				font-size: 1.5rem;
 				text-align: left;
@@ -452,6 +473,20 @@
 
 				a{
 					font-weight:bold;
+					&:visited {
+						color: $textcolor1;
+						text-decoration:underline;
+					}
+					/* selected link */
+					&:active {
+						color: $textcolor1;
+						text-decoration:underline;
+					}
+					&:hover{
+						cursor:pointer;
+						text-decoration:underline;
+					}
+
 				}
 
         p {
@@ -490,6 +525,7 @@
 					h3{
 						text-indent: 1em;
 						font-size: 1.25rem;
+						background-color: $colorwhite;
 					}
 					address{
 						height:auto;
@@ -548,11 +584,10 @@
 				}
 				.show-error{
 					line-height: 35px;
-					background: #fff;
 					margin-bottom: 0.2em;
 					display: block;
 					color: red;
-					border: 2px red solid;
+					background-color: #f38383cb;
 					text-align:center;
 					animation-name: example;
 					animation-duration: 0.2s;
@@ -568,8 +603,6 @@
 						margin: 0;
 						padding: 0;
 						width:100%;
-
-
 						li {
 							height: auto;
 							margin-bottom:0.5em;
@@ -578,6 +611,8 @@
 								display: block;
 								width: 100%;
 								line-height: 40px;
+								background-color: $colorwhite;
+								margin-bottom:0.5em;
 							}
 
 							label[for="questionitem"]{
@@ -606,7 +641,7 @@
 
 							input#myname:valid,
 							input#myemail:valid	{
-								border: solid 3px green;
+								border: solid 3px rgb(176, 241, 176);
 							}
 
 							input#myname,
@@ -615,6 +650,8 @@
 								display: block;
 								line-height: 35px;
 								width: 100%;
+								padding: 0;
+								margin:0;
 							}
 
 							input#myname{
@@ -667,6 +704,7 @@
 							textarea#mycomments {
 								width: 100%;
 								border: var(--comment-error);
+								padding: 0;
 							}
 
 
@@ -678,8 +716,13 @@
 						height: 35px;
 						margin:auto;
 						font-size:1.1em;
+						border:none;
+						background-color: $colorwhite;
 						&:hover {
+							background-color: $colorblack;
+							color: $colorwhite;
 							cursor: pointer;
+							font-weight:bold;
 
 						}
 					}
@@ -721,10 +764,17 @@
           letter-spacing: 0.01em;
           text-transform: uppercase;
           text-align: center;
-
+					text-decoration: none;
+					&:visited {
+						border: $textcolor1 dotted 1px;
+					}
+					/* selected link */
+					&:active {
+						background-color:$textcolor1;
+						color:$textcolor2;
+					}
           &:hover {
             font-weight: bold;
-            text-decoration: none;
             cursor: pointer;
           }
         }

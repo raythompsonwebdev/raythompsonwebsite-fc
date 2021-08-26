@@ -176,6 +176,15 @@ hr {
   .site_header .site_navigation ul .tablink a {
     display: block;
     text-align: center;
+    /* visited link */
+    /* selected link */
+  }
+  .site_header .site_navigation ul .tablink a:visited {
+    border: #000000 dotted 1px;
+  }
+  .site_header .site_navigation ul .tablink a:active {
+    background-color: #000000;
+    color: #ffffff;
   }
   .site_header .site_navigation ul .tablink a:hover {
     background-color: #000000;
@@ -284,6 +293,7 @@ main.site_content section#contact {
   }
   main.site_content div#banner {
     position: relative;
+    flex: 0 0 auto;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -346,10 +356,11 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page {
     display: flex;
+    flex: 0 0 auto;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 4em;
+    gap: 2em;
   }
   main.site_content section#project_page h2 {
     align-self: flex-start;
@@ -375,14 +386,23 @@ main.site_content div#banner figure > picture {
     transition: all 0.2s ease-in 0s;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: auto;
+    width: 20%;
+    flex: 0 0 auto;
     margin-right: 0.2em;
+    font-family: "Lato", serif;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
-    padding: 1em 2em;
+    display: block;
+    background-color: #ffffff;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    text-transform: uppercase;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
     cursor: pointer;
+    font-weight: bold;
   }
   main.site_content section#project_page .parent {
     display: -webkit-flex;
@@ -496,9 +516,10 @@ main.site_content section#project_page figure > picture {
     width: 100%;
     flex: 0 0 auto;
     display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
   }
   main.site_content section#about_content h2 {
     font-size: 1.5rem;
@@ -521,6 +542,19 @@ main.site_content section#project_page figure > picture {
   }
   main.site_content section#about_content div#abouttext a {
     font-weight: bold;
+    /* selected link */
+  }
+  main.site_content section#about_content div#abouttext a:visited {
+    color: #000000;
+    text-decoration: underline;
+  }
+  main.site_content section#about_content div#abouttext a:active {
+    color: #000000;
+    text-decoration: underline;
+  }
+  main.site_content section#about_content div#abouttext a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 1em;
@@ -557,6 +591,7 @@ main.site_content section#project_page figure > picture {
   main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 1em;
     font-size: 1.25rem;
+    background-color: #ffffff;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
     height: auto;
@@ -608,11 +643,10 @@ main.site_content section#project_page figure > picture {
   }
   main.site_content section#contact div#contact_container .show-error {
     line-height: 35px;
-    background: #fff;
     margin-bottom: 0.2em;
     display: block;
     color: red;
-    border: 2px red solid;
+    background-color: #f38383cb;
     text-align: center;
     animation-name: example;
     animation-duration: 0.2s;
@@ -637,6 +671,8 @@ main.site_content section#contact div#contact_container form#myform ol li #comme
     display: block;
     width: 100%;
     line-height: 40px;
+    background-color: #ffffff;
+    margin-bottom: 0.5em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     float: left;
@@ -662,7 +698,7 @@ main.site_content section#contact div#contact_container form#myform ol li select
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
-    border: solid 3px green;
+    border: solid 3px #b0f1b0;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail,
@@ -670,6 +706,8 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     display: block;
     line-height: 35px;
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname {
     border: var(--text-error);
@@ -713,6 +751,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
     border: var(--comment-error);
+    padding: 0;
   }
   main.site_content section#contact div#contact_container form#myform button#submit {
     display: block;
@@ -720,9 +759,14 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 35px;
     margin: auto;
     font-size: 1.1em;
+    border: none;
+    background-color: #ffffff;
   }
   main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
+    font-weight: bold;
   }
 
   .site_footer {
@@ -759,10 +803,18 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     letter-spacing: 0.01em;
     text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
+    /* selected link */
+  }
+  .site_footer ul li a:visited {
+    border: #000000 dotted 1px;
+  }
+  .site_footer ul li a:active {
+    background-color: #000000;
+    color: #ffffff;
   }
   .site_footer ul li a:hover {
     font-weight: bold;
-    text-decoration: none;
     cursor: pointer;
   }
 }
