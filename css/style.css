@@ -276,9 +276,9 @@ hr {
     animation-duration: 0.5s;
   }
   main.site_content div#banner,
-main.site_content div#project_page,
-main.site_content div#about_content,
-main.site_content div#contact {
+main.site_content section#project_page,
+main.site_content section#about_content,
+main.site_content section#contact {
     min-height: 90vh;
     margin-bottom: 100px;
   }
@@ -344,18 +344,21 @@ main.site_content div#banner figure > picture {
     background-size: cover;
     /* Resize the background image to cover the entire container */
   }
-  main.site_content div#project_page {
+  main.site_content section#project_page {
     display: flex;
     flex-flow: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 4em;
   }
-  main.site_content div#project_page h2 {
+  main.site_content section#project_page h2 {
     align-self: flex-start;
   }
-  main.site_content div#project_page ul#project_tabs {
+  main.site_content section#project_page div#project_page_container {
+    width: 100%;
+    display: block;
+  }
+  main.site_content section#project_page ul#project_tabs {
     display: flex;
     -webkit-flex-flow: row;
     flex-flow: row;
@@ -371,17 +374,17 @@ main.site_content div#banner figure > picture {
     -o-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
   }
-  main.site_content div#project_page ul#project_tabs li {
+  main.site_content section#project_page ul#project_tabs li {
     width: auto;
     margin-right: 0.2em;
   }
-  main.site_content div#project_page ul#project_tabs li button.project_tab {
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
     padding: 1em 2em;
   }
-  main.site_content div#project_page ul#project_tabs li button.project_tab:hover {
+  main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
     cursor: pointer;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -396,17 +399,17 @@ main.site_content div#banner figure > picture {
     width: 100%;
     margin: auto;
   }
-  main.site_content div#project_page .box-show {
+  main.site_content section#project_page .box-show {
     display: block;
     opacity: 1;
     animation-name: example;
     animation-duration: 0.5s;
   }
-  main.site_content div#project_page .box-hide {
+  main.site_content section#project_page .box-hide {
     display: none;
     opacity: 0;
   }
-  main.site_content div#project_page figure.box {
+  main.site_content section#project_page figure.box {
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -421,7 +424,7 @@ main.site_content div#banner figure > picture {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
   }
-  main.site_content div#project_page figcaption.cover {
+  main.site_content section#project_page figcaption.cover {
     position: absolute;
     z-index: 9;
     background: rgba(0, 0, 0, 0.5);
@@ -441,7 +444,7 @@ main.site_content div#banner figure > picture {
     -o-transform: scale(0);
     font-family: "Ruda", sans-serif;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     width: 85%;
     border: none;
     font-size: 1em;
@@ -456,10 +459,10 @@ main.site_content div#banner figure > picture {
     color: #ffffff;
     text-align: center;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link:hover {
+  main.site_content section#project_page figcaption.cover a.cert_link:hover {
     font-weight: bold;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     width: 100%;
     font-size: 1em;
     margin: 0.5em 0;
@@ -467,7 +470,7 @@ main.site_content div#banner figure > picture {
     color: #ffffff;
     text-align: center;
   }
-  main.site_content div#project_page figure.box:hover figcaption.cover {
+  main.site_content section#project_page figure.box:hover figcaption.cover {
     opacity: 1;
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -475,12 +478,12 @@ main.site_content div#banner figure > picture {
     -o-transform: scale(1);
     cursor: pointer;
   }
-  main.site_content div#project_page figure.box > img,
-main.site_content div#project_page figure > picture {
+  main.site_content section#project_page figure.box > img,
+main.site_content section#project_page figure > picture {
     margin: 0 auto;
     display: block;
   }
-  main.site_content div#project_page figure.box:hover img {
+  main.site_content section#project_page figure.box:hover img {
     margin: 0 auto;
     display: block;
     opacity: 1;
@@ -489,108 +492,121 @@ main.site_content div#project_page figure > picture {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
   }
-  main.site_content div#about_content {
-    width: 97.7%;
+  main.site_content section#about_content {
+    width: 100%;
     flex: 0 0 auto;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
   }
-  main.site_content div#about_content article#abouttext {
+  main.site_content section#about_content h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 50px;
+  }
+  main.site_content section#about_content div#abouttext {
     width: 100%;
     float: left;
     display: block;
     background-color: #efefef;
     padding: 0.25em;
   }
-  main.site_content div#about_content article#abouttext h2 {
+  main.site_content section#about_content div#abouttext figure {
+    display: block;
+    float: left;
+    margin: 0 0.5em 0 0;
+  }
+  main.site_content section#about_content div#abouttext a {
+    font-weight: bold;
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 1em;
+    width: calc(100% - 1%);
+    line-height: 2.5em;
+  }
+  main.site_content section#contact {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #efefef;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
+  }
+  main.site_content section#contact h2 {
     font-size: 1.5rem;
     text-align: left;
     align-self: flex-start;
     width: 100%;
     line-height: 50px;
   }
-  main.site_content div#about_content article#abouttext figure {
-    display: block;
-    float: left;
-    margin: 0 0.5em 0 0;
-  }
-  main.site_content div#about_content article#abouttext a {
-    font-weight: bold;
-  }
-  main.site_content div#about_content article#abouttext p {
-    font-size: 1em;
-    width: calc(100% - 1%);
-    line-height: 2.5em;
-  }
-  main.site_content div#contact {
-    width: 100%;
-    padding: 0.5em;
-    background-color: #efefef;
-  }
-  main.site_content div#contact section#contact_container {
+  main.site_content section#contact div#contact_container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 98%;
   }
-  main.site_content div#contact section#contact_container h2 {
-    font-size: 1.5rem;
-    text-align: left;
-    align-self: flex-start;
-    width: 100%;
-    line-height: 50px;
-  }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 40%;
     flex: 1 0 auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details h3 {
+  main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 1em;
     font-size: 1.25rem;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     height: auto;
     width: 90%;
     margin: auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     display: block;
     list-style: none;
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
     font-family: "FontAwesome";
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     width: auto;
     display: inline-block;
     font-size: 1em;
     line-height: 40px;
     margin-left: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a[href~=mailto]::before {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
     content: "";
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
     content: "";
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
     content: "";
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a[href~="github.com"]::before {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
     content: "";
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container .hide-error {
+  main.site_content section#contact div#contact_container section#contact-details #map_image {
+    width: 90%;
+    margin: 1em auto;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image img {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container .hide-error {
     display: none;
   }
-  main.site_content div#contact section#contact_container .show-error {
+  main.site_content section#contact div#contact_container .show-error {
     line-height: 35px;
     background: #fff;
     margin-bottom: 0.2em;
@@ -601,41 +617,41 @@ main.site_content div#project_page figure > picture {
     animation-name: example;
     animation-duration: 0.2s;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 50%;
     flex: 1 0 auto;
     padding: 0.5em;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
     margin-bottom: 0.5em;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
     width: 100%;
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     float: left;
     width: 80%;
     line-height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname:hover,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail:hover,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl:hover,
-main.site_content div#contact section#contact_container form#myform ol li input[type=radio]:hover,
-main.site_content div#contact section#contact_container form#myform ol li input[type=radio]:focus,
-main.site_content div#contact section#contact_container form#myform ol li input#myname:focus,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail:focus,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl:focus,
-main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
+main.site_content section#contact div#contact_container form#myform ol li select {
     border-color: #dee2f7;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px;
@@ -644,44 +660,44 @@ main.site_content div#contact section#contact_container form#myform ol li select
     outline: none;
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname:valid,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail:valid {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
     border: solid 3px green;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     display: block;
     line-height: 35px;
     width: 100%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname {
     border: var(--text-error);
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myemail {
+  main.site_content section#contact div#contact_container form#myform ol li input#myemail {
     border: var(--email-error);
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     border: var(--url-error);
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
     display: flex;
     flex-flow: row;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     flex: 1 0 auto;
     height: 30px;
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
     height: 100%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     display: inline-block;
     height: 30px;
     flex: 1 0 auto;
@@ -689,23 +705,23 @@ main.site_content div#contact section#contact_container form#myform ol li input#
     padding: 0;
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
     height: 40px;
     width: 100%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li textarea#mycomments {
+  main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
     border: var(--comment-error);
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     display: block;
     width: 100%;
     height: 35px;
     margin: auto;
     font-size: 1.1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
@@ -722,14 +738,8 @@ main.site_content div#contact section#contact_container form#myform ol li input#
     height: 100%;
     width: 80%;
     margin: auto;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row;
-    -ms-flex-flow: row;
     flex-flow: row;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .site_footer ul li {
@@ -737,11 +747,7 @@ main.site_content div#contact section#contact_container form#myform ol li input#
     height: 50px;
     width: 10%;
     margin: 0;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   .site_footer ul li a {
@@ -820,100 +826,100 @@ main.site_content div#contact section#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     padding: 0;
   }
-  main.site_content div#about_content {
-    width: 97.7%;
-  }
-  main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.45em;
-  }
-  main.site_content div#about_content article#abouttext p {
-    font-size: 0.95em;
-  }
-  main.site_content div#contact {
+  main.site_content section#about_content {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#about_content h2 {
     font-size: 1.45em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#about_content div#abouttext p {
     font-size: 0.95em;
   }
-  main.site_content div#contact section#contact_container section#contact_details {
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.45em;
+  }
+  main.site_content section#contact div#contact_container p {
+    font-size: 0.95em;
+  }
+  main.site_content section#contact div#contact_container section#contact_details {
     width: 40%;
   }
-  main.site_content div#contact section#contact_container section#contact_details h3 {
+  main.site_content section#contact div#contact_container section#contact_details h3 {
     text-indent: 1em;
     font-size: 1.2rem;
   }
-  main.site_content div#contact section#contact_container section#contact_details address {
+  main.site_content section#contact div#contact_container section#contact_details address {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul {
+  main.site_content section#contact div#contact_container section#contact_details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li {
+  main.site_content section#contact div#contact_container section#contact_details address ul li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li a {
+  main.site_content section#contact div#contact_container section#contact_details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li a[href~=mailto]::before {
+  main.site_content section#contact div#contact_container section#contact_details address ul li a[href~=mailto]::before {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li a[title~="follow me on github"]::before {
+  main.site_content section#contact div#contact_container section#contact_details address ul li a[title~="follow me on github"]::before {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li a[href~="www.linkedin.com"]::before {
+  main.site_content section#contact div#contact_container section#contact_details address ul li a[href~="www.linkedin.com"]::before {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact_details address ul li a[href~="github.com"]::before {
+  main.site_content section#contact div#contact_container section#contact_details address ul li a[href~="github.com"]::before {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
@@ -975,102 +981,101 @@ main.site_content div#contact section#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#project_page {
+  main.site_content section#project_page {
     height: auto;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     padding: 0;
   }
-  main.site_content div#project_page figure.box {
+  main.site_content section#project_page figure.box {
     width: 32.75%;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 1em;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     font-size: 1em;
   }
-  main.site_content div#about_content {
-    width: 97.7%;
+  main.site_content section#about_content {
+    width: 100%;
   }
-  main.site_content div#about_content article#abouttext h2 {
+  main.site_content section#about_content h2 {
     font-size: 1.4em;
   }
-  main.site_content div#about_content article#abouttext p {
+  main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
     line-height: 2.2em;
   }
-  main.site_content div#contact {
+  main.site_content section#contact {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#contact h2 {
     font-size: 1.4em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#contact div#contact_container p {
     font-size: 0.9em;
     line-height: 1.8em;
   }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 40%;
   }
-  main.site_content div#contact section#contact_container section#contact-details h3 {
-    text-indent: 1em;
+  main.site_content section#contact div#contact_container section#contact-details h3 {
     font-size: 1.15rem;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
@@ -1149,36 +1154,102 @@ main.site_content div#contact section#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     padding: 0;
     width: 100%;
     margin: auto;
   }
-  main.site_content div#about_content {
-    width: 97.7%;
+  main.site_content section#about_content {
+    width: 100%;
   }
-  main.site_content div#about_content article#abouttext {
+  main.site_content section#about_content h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#about_content div#abouttext {
     width: 100%;
     margin-bottom: 1em;
   }
-  main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.3em;
-  }
-  main.site_content div#about_content article#abouttext p {
+  main.site_content section#about_content div#abouttext p {
     line-height: 2.1em;
   }
-  main.site_content div#contact {
+  main.site_content section#contact {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#contact h2 {
     font-size: 1.35em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#contact div#contact_container p {
     line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 40%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    font-size: 1.15rem;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    width: 5%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
   }
 
   .site_footer {
     height: 50px;
+  }
+  .site_footer ul {
+    width: 90%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.85em;
   }
 }
 /* 800px */
@@ -1231,9 +1302,9 @@ main.site_content div#banner figure > picture {
   }
 
   main.site_content div#banner,
-main.site_content div#project_page,
-main.site_content div#about_content,
-main.site_content div#contact {
+main.site_content section#project_page,
+main.site_content section#about_content,
+main.site_content section#contact {
     height: auto;
     margin-bottom: 100px;
   }
@@ -1253,107 +1324,107 @@ main.site_content div#contact {
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     margin: auto;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 1em;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     font-size: 0.9em;
   }
-  main.site_content div#about_content {
-    width: 97.7%;
+  main.site_content section#about_content {
+    width: 100%;
     flex: 0 0 auto;
   }
-  main.site_content div#about_content article#abouttext h2 {
+  main.site_content section#about_content div#abouttext h2 {
     font-size: 1.2em;
   }
-  main.site_content div#about_content article#abouttext p {
+  main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
   }
-  main.site_content div#contact {
+  main.site_content section#contact {
     width: 100%;
     padding: 0;
   }
-  main.site_content div#contact section#contact_container {
+  main.site_content section#contact h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#contact div#contact_container {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
   }
-  main.site_content div#contact section#contact_container h2 {
-    font-size: 1.3em;
-  }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#contact div#contact_container p {
     font-size: 0.9em;
   }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact-details h3 {
+  main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 0;
     font-size: 1rem;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
     font-family: "FontAwesome";
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a:hover {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a:hover {
     cursor: pointer;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 90%;
     margin-bottom: 2em;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
@@ -1361,7 +1432,7 @@ main.site_content div#contact section#contact_container form#myform ol li input#
     height: 50px;
   }
   .site_footer ul {
-    width: 80%;
+    width: 90%;
   }
   .site_footer ul li {
     margin: 0;
@@ -1371,7 +1442,7 @@ main.site_content div#contact section#contact_container form#myform ol li input#
   }
 }
 @media (max-width: 667px) {
-  main.site_content div#project_page figure.box {
+  main.site_content section#project_page figure.box {
     width: 49.75%;
   }
 }
@@ -1432,95 +1503,95 @@ main.site_content div#banner figure > picture {
   main.site_content div#banner article#bannertext p {
     font-size: 0.9em;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     width: 96%;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     font-size: 0.9em;
   }
-  main.site_content div#about_content {
-    width: 95%;
-  }
-  main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.15em;
-  }
-  main.site_content div#about_content article#abouttext p {
-    font-size: 0.85em;
-  }
-  main.site_content div#contact {
+  main.site_content section#about_content {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#about_content h2 {
+    font-size: 1.15em;
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.85em;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
     font-size: 1.2em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#contact div#contact_container p {
     font-size: 0.85em;
     line-height: 1.8em;
   }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 25%;
   }
-  main.site_content div#contact section#contact_container section#contact-details h3 {
+  main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 0;
     font-size: 1rem;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 94%;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
@@ -1528,7 +1599,7 @@ main.site_content div#contact section#contact_container form#myform ol li input#
     height: 50px;
   }
   .site_footer ul {
-    width: 80%;
+    width: 90%;
   }
   .site_footer ul li {
     margin: 0;
@@ -1678,99 +1749,108 @@ main.site_content div#banner figure > picture {
   main.site_content div#banner article#bannertext p {
     font-size: 0.85em;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     width: 98%;
     margin: auto;
   }
-  main.site_content div#project_page figcaption.cover {
+  main.site_content section#project_page figcaption.cover {
     position: absolute;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     font-size: 0.9em;
   }
-  main.site_content div#about_content {
-    width: 95%;
-  }
-  main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.2em;
-  }
-  main.site_content div#about_content article#abouttext p {
-    font-size: 0.9em;
-  }
-  main.site_content div#contact {
+  main.site_content section#about_content {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#about_content h2 {
+    font-size: 1.2em;
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.9em;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
     font-size: 1.15em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#contact div#contact_container p {
     line-height: 1.8em;
   }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 25%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 94%;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
   .site_footer {
     height: 50px;
+  }
+  .site_footer ul {
+    width: 94%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.8em;
   }
 }
 /* 360px */
@@ -1823,99 +1903,108 @@ main.site_content div#banner figure > picture {
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
   }
-  main.site_content div#project_page .parent {
+  main.site_content section#project_page .parent {
     width: 98%;
   }
-  main.site_content div#project_page figcaption.cover {
+  main.site_content section#project_page figcaption.cover {
     position: absolute;
   }
-  main.site_content div#project_page figcaption.cover a.cert_link {
+  main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.8em;
   }
-  main.site_content div#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h2.cert_title {
     font-size: 0.8em;
   }
-  main.site_content div#about_content {
-    width: 94%;
-  }
-  main.site_content div#about_content article#abouttext h2 {
-    font-size: 1.1em;
-  }
-  main.site_content div#about_content article#abouttext p {
-    font-size: 0.85em;
-  }
-  main.site_content div#contact {
+  main.site_content section#about_content {
     width: 100%;
   }
-  main.site_content div#contact section#contact_container h2 {
+  main.site_content section#about_content h2 {
     font-size: 1.1em;
   }
-  main.site_content div#contact section#contact_container p {
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.85em;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container h2 {
+    font-size: 1.1em;
+  }
+  main.site_content section#contact div#contact_container p {
     font-size: 0.8em;
     line-height: 1.8em;
   }
-  main.site_content div#contact section#contact_container section#contact-details {
+  main.site_content section#contact div#contact_container section#contact-details {
     width: 25%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address {
+  main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul {
+  main.site_content section#contact div#contact_container section#contact-details address ul {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li {
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container section#contact-details address ul li a {
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform {
+  main.site_content section#contact div#contact_container form#myform {
     width: 98%;
   }
-  main.site_content div#contact section#contact_container form#myform ol {
+  main.site_content section#contact div#contact_container form#myform ol {
     margin: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li {
+  main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label,
-main.site_content div#contact section#contact_container form#myform ol li #comment-header {
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
   }
-  main.site_content div#contact section#contact_container form#myform ol li label[for=questionitem] {
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li input#myname,
-main.site_content div#contact section#contact_container form#myform ol li input#myemail,
-main.site_content div#contact section#contact_container form#myform ol li input#myurl {
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
     line-height: 35px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
     height: 30px;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li label {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
     width: 5%;
   }
-  main.site_content div#contact section#contact_container form#myform ol li select {
+  main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform button#submit {
     font-size: 1em;
   }
-  main.site_content div#contact section#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
     cursor: pointer;
   }
 
   .site_footer {
     height: 50px;
+  }
+  .site_footer ul {
+    width: 98%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.75em;
   }
 }
 

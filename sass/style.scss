@@ -197,9 +197,9 @@
     }
 
     div#banner,
-		div#project_page,
-    div#about_content,
-    div#contact {
+		section#project_page,
+    section#about_content,
+    section#contact{
       min-height: 90vh;
       margin-bottom: 100px;
     }
@@ -270,16 +270,19 @@
       background-size: cover; /* Resize the background image to cover the entire container */
     }
 
-		div#project_page{
+		section#project_page{
 			display: flex;
-			flex-flow: column ;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-align-items: center;
+			flex-flow: column;
+			justify-content: flex-start;
 			align-items: center;
-
+			gap: 4em;
 			h2{
 				align-self: flex-start;
+			}
+
+			div#project_page_container{
+				width:100%;
+				display:block;
 			}
 
 			ul#project_tabs{
@@ -416,30 +419,30 @@
         opacity: 1;
         @include raytransform(scale(1.1));
       }
+
 		}
 
-    div#about_content {
-      width: 97.7%;
+    section#about_content {
+      width: 100%;
       flex: 0 0 auto;
       display: flex;
       flex-flow: row wrap;
       align-content: flex-start;
       justify-content: space-between;
+			h2 {
+				font-size: 1.5rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
+			}
 
-      article#abouttext {
+      div#abouttext {
         width: 100%;
         float: left;
         display: block;
         background-color: $bgcolor;
         padding: 0.25em;
-
-        h2 {
-          font-size: 1.5rem;
-          text-align: left;
-          align-self: flex-start;
-          width: 100%;
-          line-height: 50px;
-        }
 
 				figure{
 					display:block;
@@ -457,28 +460,30 @@
           line-height: 2.5em;
         }
       }
-
-
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
       padding: 0.5em;
 			background-color: $bgcolor;
+			display:flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 4em;
+			h2 {
+				font-size: 1.5rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
 
-			section#contact_container{
+			}
+			div#contact_container{
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: center;
 				width:98%;
-				h2 {
-					font-size: 1.5rem;
-					text-align: left;
-					align-self: flex-start;
-					width: 100%;
-					line-height: 50px;
-
-				}
 				section#contact-details{
 					width: 40%;
 					flex: 1 0 auto;
@@ -526,6 +531,15 @@
 									font-size: 1em;
 								}
 							}
+						}
+					}
+
+					#map_image{
+						width: 90%;
+						margin: 1em auto;
+						padding: 0;
+						img{
+							width:100%;
 						}
 					}
 				}
@@ -686,14 +700,8 @@
       height: 100%;
       width: 80%;
       margin: auto;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-flow: row;
-      -ms-flex-flow: row;
       flex-flow: row;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
 
       li {
@@ -701,11 +709,7 @@
         height: 50px;
         width: 10%;
         margin: 0;
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
         flex: 1 0 auto;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
         align-items: center;
 
         a {
@@ -804,18 +808,18 @@
         display: block;
       }
     }
-		div#project_page{
+		section#project_page{
 			.parent {
         padding: 0;
       }
 		}
-    div#about_content {
-      width: 97.7%;
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.45em;
+			}
 
-      article#abouttext {
-        h2 {
-          font-size: 1.45em;
-        }
+      div#abouttext {
 
         p {
           font-size: 0.95em;
@@ -825,13 +829,13 @@
 
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
+			h2 {
+				font-size: 1.45em;
+			}
+			div#contact_container{
 
-        h2 {
-          font-size: 1.45em;
-        }
         p {
           font-size: 0.95em;
         }
@@ -1008,7 +1012,7 @@
       }
     }
 
-		div#project_page{
+		section#project_page{
 			height:auto;
 			.parent {
         padding: 0;
@@ -1028,13 +1032,13 @@
       }
 		}
 
-    div#about_content {
-      width: 97.7%;
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.4em;
+			}
 
-      article#abouttext {
-        h2 {
-          font-size: 1.4em;
-        }
+      div#abouttext {
 
         p {
           font-size: 0.9em;
@@ -1044,13 +1048,12 @@
 
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
-
-        h2 {
-          font-size: 1.4em;
-        }
+			h2 {
+				font-size: 1.4em;
+			}
+			div#contact_container{
         p {
           font-size: 0.9em;
           line-height: 1.8em;
@@ -1058,22 +1061,17 @@
 				section#contact-details{
 					width: 40%;
 					h3{
-						text-indent: 1em;
 						font-size: 1.15rem;
 					}
-
 					address{
 						width: 90%;
 						ul{
 							padding: 0;
 							li{
 								height:auto;
-
 								a {
 									font-size: 1em;
 								}
-
-
 							}
 						}
 					}
@@ -1136,7 +1134,6 @@
 					}
 				}
 			}
-
     }
   }
 
@@ -1229,22 +1226,22 @@
         display: block;
       }
     }
-		div#project_page{
+		section#project_page{
 			.parent {
         padding: 0;
         width: 100%;
         margin: auto;
       }
 		}
-    div#about_content {
-      width: 97.7%;
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.3em;
+			}
 
-      article#abouttext {
+      div#abouttext {
         width: 100%;
         margin-bottom: 1em;
-        h2 {
-          font-size: 1.3em;
-        }
 
         p {
           line-height: 2.1em;
@@ -1253,23 +1250,90 @@
 
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
-
-        h2 {
-          font-size: 1.35em;
-        }
+			h2 {
+				font-size: 1.35em;
+			}
+			div#contact_container{
         p {
           line-height: 1.8em;
         }
-			}
+				section#contact-details{
+					width: 40%;
+					h3{
+						font-size: 1.15rem;
+					}
+					address{
+						width: 90%;
+						ul{
+							padding: 0;
+							li{
+								height:auto;
+								a {
+									font-size: 1em;
+								}
+							}
+						}
+					}
+				}
 
+				form#myform {
+					width:50%;
+					ol {
+						margin: 0;
+						li {
+							height: auto;
+							label,
+							#comment-header {
+								display: block;
+							}
+							label[for="questionitem"]{
+								width: 80%;
+							}
+							input#myname,
+							input#myemail,
+							input#myurl{
+								line-height: 35px;
+							}
+							ol#comment-box {
+								padding: 0;
+								li{
+									width:33%;
+									label{
+										width: 50%;
+									}
+									input[type="radio"]{
+										width: 5%;
+									}
+								}
+							}
+							select{
+								line-height:40px;
+							}
+						}
+					}
+					button#submit {
+						font-size:1em;
+					}
+				}
+			}
     }
   }
 
   .site_footer {
     height: 50px;
+		ul {
+      width: 90%;
+
+      li {
+        margin: 0;
+
+        a {
+          font-size: 0.85em;
+        }
+      }
+    }
   }
 }
 
@@ -1327,9 +1391,9 @@
 
   main.site_content {
 		div#banner,
-		div#project_page,
-    div#about_content,
-    div#contact {
+		section#project_page,
+    section#about_content,
+    section#contact{
 			height:auto;
       margin-bottom: 100px;
     }
@@ -1355,7 +1419,7 @@
       }
     }
 
-		div#project_page{
+		section#project_page{
 			.parent {
         margin: auto;
       }
@@ -1370,11 +1434,10 @@
       }
 		}
 
-    div#about_content {
-      width: 97.7%;
+    section#about_content {
+      width: 100%;
       flex: 0 0 auto;
-
-      article#abouttext {
+      div#abouttext {
         h2 {
           font-size: 1.2em;
         }
@@ -1384,17 +1447,17 @@
       }
     }
 
-    div#contact {
+    section#contact{
       width:100%;
 			padding:0;
-			section#contact_container{
+			h2 {
+				font-size: 1.3em;
+			}
+			div#contact_container{
 				display: flex;
 				flex-flow: column;
 				justify-content: center;
 				align-items: center;
-        h2 {
-          font-size: 1.3em;
-        }
         p {
           font-size: 0.9em;
         }
@@ -1404,7 +1467,6 @@
 						text-indent: 0;
 						font-size: 1rem;
 					}
-
 
 					address{
 						width: 100%;
@@ -1419,7 +1481,6 @@
 										cursor:pointer;
 									}
 								}
-
 							}
 						}
 					}
@@ -1436,12 +1497,9 @@
 							#comment-header {
 								display: block;
 							}
-
 							label[for="questionitem"]{
 								width: 80%;
 							}
-
-
 							input#myname,
 							input#myemail,
 							input#myurl{
@@ -1463,14 +1521,9 @@
 									}
 								}
 							}
-
-
-
 							select{
 								line-height:40px;
 							}
-
-
 						}
 					}
 					button#submit {
@@ -1488,7 +1541,7 @@
   .site_footer {
     height: 50px;
     ul {
-      width: 80%;
+      width: 90%;
 
       li {
         margin: 0;
@@ -1504,7 +1557,7 @@
 @media(max-width: 667px){
 
 	main.site_content {
-		div#project_page{
+		section#project_page{
 			figure.box {
 				width: 49.75%;
 			}
@@ -1580,7 +1633,7 @@
       }
     }
 
-		div#project_page{
+		section#project_page{
 			.parent {
         width: 96%;
       }
@@ -1596,26 +1649,25 @@
       }
 		}
 
-    div#about_content {
-      width: 95%;
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.15em;
+			}
 
-      article#abouttext {
-        h2 {
-          font-size: 1.15em;
-        }
+      div#abouttext {
         p {
           font-size: 0.85em;
         }
       }
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
-
-        h2 {
-          font-size: 1.2em;
-        }
+			h2 {
+				font-size: 1.2em;
+			}
+			div#contact_container{
         p {
           font-size: 0.85em;
           line-height: 1.8em;
@@ -1637,8 +1689,6 @@
 								a {
 									font-size: 1em;
 								}
-
-
 							}
 						}
 					}
@@ -1658,7 +1708,6 @@
 							label[for="questionitem"]{
 								width: 80%;
 							}
-
 
 							input#myname,
 							input#myemail,
@@ -1682,20 +1731,15 @@
 								}
 							}
 
-
-
 							select{
 								line-height:40px;
 							}
-
-
 						}
 					}
 					button#submit {
 						font-size:1em;
 						&:hover {
 							cursor: pointer;
-
 						}
 					}
 				}
@@ -1706,7 +1750,7 @@
   .site_footer {
     height: 50px;
     ul {
-      width: 80%;
+      width: 90%;
 
       li {
         margin: 0;
@@ -1866,7 +1910,7 @@
       }
     }
 
-		div#project_page{
+		section#project_page{
 			.parent {
         width: 98%;
         margin: auto;
@@ -1885,31 +1929,29 @@
       }
 		}
 
-    div#about_content {
-      width: 95%;
-      article#abouttext {
-        h2 {
-          font-size: 1.2em;
-        }
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.2em;
+			}
+      div#abouttext {
         p {
           font-size: 0.9em;
         }
       }
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
-
-        h2 {
-          font-size: 1.15em;
-        }
+			h2 {
+				font-size: 1.15em;
+			}
+			div#contact_container{
         p {
           line-height: 1.8em;
         }
 				section#contact-details{
 					width: 25%;
-
 					address{
 						width: 90%;
 						ul{
@@ -1988,6 +2030,17 @@
 
   .site_footer {
     height: 50px;
+		ul {
+      width: 94%;
+
+      li {
+        margin: 0;
+
+        a {
+          font-size: 0.8em;
+        }
+      }
+    }
   }
 }
 
@@ -2050,7 +2103,8 @@
         }
       }
     }
-		div#project_page{
+
+		section#project_page{
 			.parent {
         width: 98%;
       }
@@ -2067,21 +2121,21 @@
       }
 		}
 
-    div#about_content {
-      width: 94%;
-      article#abouttext {
-        h2 {
-          font-size: 1.1em;
-        }
+    section#about_content {
+      width: 100%;
+			h2 {
+				font-size: 1.1em;
+			}
+      div#abouttext {
         p {
           font-size: 0.85em;
         }
       }
     }
 
-    div#contact {
+    section#contact{
       width: 100%;
-			section#contact_container{
+			div#contact_container{
 
         h2 {
           font-size: 1.1em;
@@ -2099,12 +2153,9 @@
 							padding: 0;
 							li{
 								height:auto;
-
 								a {
 									font-size: 1em;
 								}
-
-
 							}
 						}
 					}
@@ -2171,5 +2222,16 @@
 
   .site_footer {
     height: 50px;
+		ul {
+      width: 98%;
+
+      li {
+        margin: 0;
+
+        a {
+          font-size: 0.75em;
+        }
+      }
+    }
   }
 }
