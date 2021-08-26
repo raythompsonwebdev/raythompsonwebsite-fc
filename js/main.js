@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
   menuToggle.addEventListener("click", function (event) {
     event.preventDefault(); // toggle open class
 
-    slideoutMenu.classList.toggle("open");
+    slideoutMenu.classList.toggle("open"); // add css transition to menu
+
     slideoutMenu.style.transition = "all 0.3s ease-in 0s"; // slide menu
 
     if (slideoutMenu.classList.contains("open")) {
