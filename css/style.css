@@ -380,6 +380,7 @@ main.site_content div#banner figure > picture {
     list-style: none;
     padding: 0;
     margin: 0 0 0.5em 0;
+    width: 90%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
@@ -671,8 +672,10 @@ main.site_content section#contact div#contact_container form#myform ol li #comme
     display: block;
     width: 100%;
     line-height: 40px;
-    background-color: #ffffff;
+    color: #000000;
+    background-color: #e7e7e7;
     margin-bottom: 0.5em;
+    text-indent: 0.5em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     float: left;
@@ -739,9 +742,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     display: inline-block;
     height: 30px;
     flex: 1 0 auto;
-    width: 5%;
+    width: 8%;
+    margin: 0 1.5em;
     padding: 0;
-    margin: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -878,6 +881,16 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
+  main.site_content section#project_page ul#project_tabs {
+    width: 90%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    margin-right: 0.2em;
+    font-family: "Lato", serif;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.95em;
+  }
   main.site_content section#project_page .parent {
     padding: 0;
   }
@@ -963,7 +976,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -1035,6 +1047,15 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page {
     height: auto;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    width: 90%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    margin-right: 0.2em;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.9em;
   }
   main.site_content section#project_page .parent {
     padding: 0;
@@ -1119,7 +1140,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -1282,7 +1302,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 50%;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
-    width: 5%;
+    width: 9%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -1376,6 +1396,12 @@ main.site_content section#contact {
 main.site_content div#banner figure > picture {
     display: block;
   }
+  main.site_content section#project_page ul#project_tabs {
+    width: 90%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.85em;
+  }
   main.site_content section#project_page .parent {
     margin: auto;
   }
@@ -1468,7 +1494,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -1635,7 +1660,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -1880,7 +1904,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
@@ -2034,7 +2057,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
     height: 30px;
-    width: 5%;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
