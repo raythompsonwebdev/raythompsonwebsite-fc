@@ -73,7 +73,7 @@ a:active {
 
 hr {
   margin: 1em auto;
-  width: 80%;
+  width: 70%;
   display: block;
   color: #000000;
 }
@@ -320,7 +320,7 @@ main.site_content section#contact {
     width: calc(100% - 1%);
     color: #000000;
     text-shadow: 1px 1px #ffffff;
-    line-height: 1.8em;
+    line-height: 2em;
   }
   main.site_content div#banner figure {
     position: relative;
@@ -399,9 +399,10 @@ main.site_content div#banner figure > picture {
     width: 100%;
     border: none;
     font-size: 1em;
-    text-transform: uppercase;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
     font-weight: bold;
   }
@@ -1218,6 +1219,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
+    line-height: 2.1em;
   }
   main.site_content div#banner figure {
     margin: 1em auto;
@@ -1549,19 +1551,8 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     display: block;
   }
   .site_header ul#social {
-    height: auto;
-  }
-  .site_header ul#social li.social-item {
-    width: 32%;
-  }
-  .site_header ul#social li.social-item a {
-    line-height: 40px;
-  }
-  .site_header ul#social li.social-item a i.fa-twitter,
-.site_header ul#social li.social-item a i.fa-facebook,
-.site_header ul#social li.social-item a i.fa-google,
-.site_header ul#social li.social-item a i.fa-instagram {
-    font-size: 1.2em;
+    left: 79vw;
+    width: 20%;
   }
 
   main.site_content div#banner {
@@ -1579,9 +1570,19 @@ main.site_content div#banner figure > picture {
   }
   main.site_content div#banner article#bannertext p {
     font-size: 0.9em;
+    line-height: 2.2em;
   }
   main.site_content section#project_page .parent {
     width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 20%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.8em;
   }
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
@@ -1687,7 +1688,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 /* 480px */
 @media (max-width: 30em) {
   .menu-toggle {
-    position: relative;
+    position: absolute;
     z-index: 105;
     display: block;
     top: 1vh;
@@ -1796,14 +1797,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     padding: 1em;
     margin-bottom: 3em;
   }
-  .site_header ul#social li.social-item a {
-    line-height: 40px;
-  }
-  .site_header ul#social li.social-item a i.fa-twitter,
-.site_header ul#social li.social-item a i.fa-facebook,
-.site_header ul#social li.social-item a i.fa-google,
-.site_header ul#social li.social-item a i.fa-instagram {
-    font-size: 1.2em;
+  .site_header ul#social {
+    left: 69vw;
+    width: 30%;
   }
 
   main.site_content {
@@ -1961,6 +1957,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     padding: 1em;
     margin-bottom: 3em;
   }
+  .site_header ul#social {
+    left: 69vw;
+    width: 30%;
+  }
 
   main.site_content div#banner {
     width: 100%;
@@ -1980,6 +1980,18 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page .parent {
     width: 98%;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 20%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.75em;
+  }
+  main.site_content section#project_page figure.box {
+    width: 99.75%;
   }
   main.site_content section#project_page figcaption.cover {
     position: absolute;

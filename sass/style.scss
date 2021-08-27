@@ -242,7 +242,7 @@
           width: calc(100% - 1%);
           color: $textcolor1;
           text-shadow: 1px 1px $textcolor2;
-          line-height: 1.8em;
+          line-height: 2em;
         }
       }
 
@@ -322,8 +322,9 @@
 						width:100%;
 						border: none;
 						font-size:1em;
-						text-transform: uppercase;
 						&:hover{
+							background-color: $colorblack;
+							color: $colorwhite;
 							cursor:pointer;
 							font-weight:bold;
 						}
@@ -343,7 +344,6 @@
 				-webkit-align-items: flex-start;
 				align-items: flex-start;
         padding: 0;
-        //background-color: $textcolor4;
         width: 100%;
 				margin:auto;
       }
@@ -1287,6 +1287,7 @@
         }
         p {
           font-size: 1em;
+					line-height: 2.1em;
         }
       }
 
@@ -1677,19 +1678,8 @@
     }
 
 		ul#social {
-			height: auto;
-			li.social-item {
-				width: 32%;
-				a {
-					line-height: 40px;
-					i.fa-twitter,
-					i.fa-facebook,
-					i.fa-google,
-					i.fa-instagram {
-						font-size: 1.2em;
-					}
-				}
-			}
+			left: 79vw;
+			width: 20%;
 		}
   }
 
@@ -1711,6 +1701,7 @@
         }
         p {
           font-size: 0.9em;
+					line-height:2.2em;
         }
       }
     }
@@ -1719,6 +1710,16 @@
 			.parent {
         width: 96%;
       }
+			ul#project_tabs{
+				width: 96%;
+
+				li{
+					width:20%;
+					button.project_tab{
+						font-size:0.8em;
+					}
+				}
+			}
 
       figcaption.cover {
         a.cert_link {
@@ -1847,7 +1848,7 @@
 /* 480px */
 @media (max-width: 30em) {
   .menu-toggle {
-    position: relative;
+    position: absolute;
     z-index: 105;
     display: block;
     top: 1vh;
@@ -1957,17 +1958,8 @@
     }
 
 		ul#social {
-			li.social-item {
-				a {
-					line-height: 40px;
-					i.fa-twitter,
-					i.fa-facebook,
-					i.fa-google,
-					i.fa-instagram {
-						font-size: 1.2em;
-					}
-				}
-			}
+			left: 69vw;
+			width: 30%;
 		}
   }
 
@@ -2164,6 +2156,10 @@
         margin-bottom: 3em;
       }
     }
+		ul#social {
+			left: 69vw;
+			width: 30%;
+		}
   }
 
   main.site_content {
@@ -2190,6 +2186,20 @@
 			.parent {
         width: 98%;
       }
+			ul#project_tabs{
+				width: 96%;
+
+				li{
+					width:20%;
+					button.project_tab{
+						font-size:0.75em;
+					}
+				}
+			}
+
+			figure.box{
+				width:99.75%;;
+			}
       figcaption.cover {
         position: absolute;
 
