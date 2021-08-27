@@ -2,8 +2,6 @@ const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("form-error");
 
-// const commentFormRegEX = /^[^<>,<|>]+$/;
-
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 const [text, email, url, , , , , ,] = myForm;
@@ -11,7 +9,7 @@ const [text, email, url, , , , , ,] = myForm;
 error.classList.add("hide-error");
 error.textContent = "";
 
-// var formData = new FormData(myForm);
+// const formData = new FormData(myForm);
 
 text.addEventListener("blur", (e) => {
 	e.preventDefault();
@@ -71,23 +69,6 @@ url.addEventListener("blur", (e) => {
 		url.style.setProperty("--url-error", "none");
 	}
 });
-
-// comment.addEventListener("blur", (e) => {
-// 	e.preventDefault();
-// 	error.style.display = "none";
-// 	error.textContent = "";
-// 	comment.style.setProperty("--comment-error", "none");
-
-// 	if (!commentFormRegEX.test(comment.value)) {
-// 		error.style.display = "block";
-// 		error.textContent = "No HTML Tags Allowed";
-// 		comment.style.setProperty("--comment-error", "solid 3px red");
-// 	} else {
-// 		error.style.display = "none";
-// 		error.textContent = "";
-// 		comment.style.setProperty("--comment-error", "none");
-// 	}
-// });
 
 function showError() {
 	if (text.validity.valueMissing && email.validity.valueMissing) {

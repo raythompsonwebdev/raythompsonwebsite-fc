@@ -13,10 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// get all divs with class tab content.
 	const scrollElements = document.querySelectorAll(".tabcontent");
 
-	// scrollElements.forEach((el) => {
-	//   el.style.opacity = 0;
-	// });
-
 	// detect page scroll function
 	const elementInView = (el, scrollOffset = 100) => {
 		const elementTop = el.getBoundingClientRect().top;
