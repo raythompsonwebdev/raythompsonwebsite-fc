@@ -11,6 +11,7 @@
     "grunt-cli": "^1.4.3",
     "postcss": "^8.2.10",
     "prettier": "^2.3.2",
+    "sass": "^1.39.2",
     "stylelint": "^13.13.1"
   },
   "devDependencies": {

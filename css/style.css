@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -617,19 +616,19 @@ main.site_content section#project_page figure > picture {
     margin-left: 1em;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
-    content: "";
+    content: "\f466";
     font-size: 1em;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
-    content: "";
+    content: "\f301";
     font-size: 1em;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
-    content: "";
+    content: "\f18d";
     font-size: 1em;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
-    content: "";
+    content: "\f237";
     font-size: 1em;
   }
   main.site_content section#contact div#contact_container section#contact-details #map_image {
@@ -1610,7 +1609,7 @@ main.site_content div#banner figure > picture {
     line-height: 1.8em;
   }
   main.site_content section#contact div#contact_container section#contact-details {
-    width: 25%;
+    width: 94%;
   }
   main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 0;
@@ -1753,9 +1752,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header .site_navigation {
     position: fixed;
     z-index: 100;
-    top: -180px;
+    top: -240px;
     width: 100%;
-    height: 180px;
+    height: 240px;
     overflow: hidden;
     margin: 0;
     left: 0;
@@ -1852,9 +1851,6 @@ main.site_content div#banner figure > picture {
   main.site_content section#contact div#contact_container p {
     line-height: 1.8em;
   }
-  main.site_content section#contact div#contact_container section#contact-details {
-    width: 25%;
-  }
   main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
   }
@@ -1865,7 +1861,7 @@ main.site_content div#banner figure > picture {
     height: auto;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   main.site_content section#contact div#contact_container form#myform {
     width: 94%;
@@ -1940,7 +1936,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
-    height: 180px;
+    height: 240px;
   }
   .site_header .site_navigation ul {
     height: 100%;
@@ -2022,7 +2018,7 @@ main.site_content div#banner figure > picture {
     line-height: 1.8em;
   }
   main.site_content section#contact div#contact_container section#contact-details {
-    width: 25%;
+    width: 98%;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
     width: 90%;
@@ -2034,7 +2030,7 @@ main.site_content div#banner figure > picture {
     height: auto;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   main.site_content section#contact div#contact_container form#myform {
     width: 98%;

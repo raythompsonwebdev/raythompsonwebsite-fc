@@ -47,18 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	handleScrollAnimation();
 
-	// In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
-	window.onscroll = function () {
+	/**
+	 * Page Scroll Function
+	 * In JavaScript, using the addEventListener() method:  object.addEventListener("scroll", myScript);
+	 * scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
+	 */
+
+	window.onscroll = () => {
 		// fixes header to top of page on page scroll.
 		if (scrollScreen.scrollTop >= 100) {
 			siteHeader.classList.add("fixed-header");
 		} else {
 			siteHeader.classList.remove("fixed-header");
 		}
-		// handle scroll animation
 		handleScrollAnimation();
 	};
-	// scrolling function - (https://codepen.io/ugg0t/pen/mqBBBY)
+
 	const scrollTo = (element) => {
 		scrollScreen.scrollTo({
 			behavior: "smooth",
@@ -66,6 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			top: element.offsetTop - 100, // deduct height of header.
 		});
 	};
+
+	/**
+	 * Mobile menu
+	 */
 
 	// create menu variables
 	const slideoutMenu = document.querySelector(".site_navigation");
@@ -113,6 +121,128 @@ document.addEventListener("DOMContentLoaded", () => {
 			} else {
 				slideoutMenu.style.top = "0px";
 			}
+		});
+	});
+
+	/**
+	 * Contact Form
+	 */
+	const myForm = document.forms[0];
+	const mySubmit = document.getElementById("submit");
+	const error = document.getElementById("form-error");
+	// deconstruct array of form elements
+	// subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
+	const [text, email, url, , , , , ,] = myForm;
+
+	error.classList.add("hide-error");
+	error.textContent = "";
+
+	text.addEventListener("blur", (e) => {
+		e.preventDefault();
+		text.style.setProperty("--text-error", "none");
+		if (text.validity.patternMismatch) {
+			error.classList.remove("hide-error");
+			error.classList.add("show-error");
+			error.textContent = "name too short or more than 40 characters. ";
+			text.style.setProperty("--text-error", "solid 2px #f38383cb");
+		} else {
+			error.classList.add("hide-error");
+			error.classList.remove("show-error");
+			error.textContent = "";
+			text.style.setProperty("--text-error", "none");
+		}
+	});
+
+	email.addEventListener("blur", (e) => {
+		e.preventDefault();
+		error.textContent = "";
+		email.style.setProperty("--email-error", "none");
+		if (email.validity.typeMismatch) {
+			error.classList.add("show-error");
+			error.classList.remove("hide-error");
+			error.textContent = "I am expecting an e-mail address!";
+			email.style.setProperty("--email-error", "solid 2px #f38383cb");
+		} else if (email.validity.patternMismatch) {
+			error.classList.add("show-error");
+			error.classList.remove("hide-error");
+			error.textContent = "I am expecting a valid e-mail address!";
+			email.style.setProperty("--email-error", "solid 2px rgb(250, 250, 135)");
+		} else {
+			error.classList.remove("show-error");
+			error.classList.add("hide-error");
+			error.textContent = "";
+			email.style.setProperty("--email-error", "none");
+		}
+	});
+
+	url.addEventListener("blur", (e) => {
+		e.preventDefault();
+		url.style.setProperty("--url-error", "none");
+		if (url.validity.typeMismatch) {
+			error.classList.remove("hide-error");
+			error.classList.add("show-error");
+			error.textContent = "I am expecting a web address!";
+			url.style.setProperty("--url-error", "solid 2px #f38383cb");
+		} else if (url.validity.patternMismatch) {
+			error.classList.remove("hide-error");
+			error.classList.add("show-error");
+			error.textContent = "I am expecting an valid web pattern!";
+			url.style.setProperty("--url-error", "solid 2px rgb(250, 250, 135)");
+		} else {
+			error.classList.remove("show-error");
+			error.classList.add("hide-error");
+			error.textContent = "";
+			url.style.setProperty("--url-error", "none");
+		}
+	});
+
+	function showError() {
+		if (text.validity.valueMissing && email.validity.valueMissing) {
+			error.classList.add("show-error");
+			error.classList.remove("hide-error");
+			error.textContent = "name and email address are required!";
+			text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
+			email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
+		} else if (!text.validity.valid && !email.validity.valid) {
+			error.classList.add("show-error");
+			error.classList.remove("hide-error");
+			error.textContent =
+				"name and email address are required and need to be valid!";
+			text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
+			email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
+		} else {
+			myForm.submit();
+		}
+	}
+	mySubmit.addEventListener("click", showError);
+
+	/**
+	 * project page portfolio grid
+	 */
+
+	const boxes = document.querySelectorAll(".box");
+	const tabs = document.querySelectorAll(".project_tab");
+	const arrayTabs = Array.from(tabs);
+	const arrayBoxes = Array.from(boxes);
+
+	arrayTabs.forEach((element1) => {
+		element1.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			arrayBoxes.filter((element2) => {
+				if (element2.dataset.all === element1.id) {
+					// eslint  - "no-param-reassign": "off"
+					element2.classList.remove("box-hide");
+					element2.classList.add("box-show");
+				} else if (element2.dataset.id === element1.id) {
+					element2.classList.remove("box-hide");
+					element2.classList.add("box-show");
+				} else {
+					element2.classList.remove("box-show");
+					element2.classList.add("box-hide");
+				}
+				return element2;
+			});
 		});
 	});
 });
