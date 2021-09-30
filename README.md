@@ -1,15 +1,15 @@
-[Link](url) and ![Image](src)
+![Web Developer Website](/assets/fcc-drum-machine.png)
 
 # My portfolio
 
-Web Developer portfolio. Single page scrolling website.
+Web Developer portfolio. Single page scrolling website with portfolio gallery, contact form and has a responsive design that enables website to be viewed on most devices ( except watches).
 
 ## Technologies
 
-- HTML
-- CSS - Transitions
-- SASS
-- JavaScript ( ES2020)
+- HTML 
+- CSS -  css transitions, custom properties , css keyframes
+- SASS - nesting , mixins, variable, partials
+- JavaScript - ES2020
 
 ## Build Tools
 
@@ -20,6 +20,6 @@ Web Developer portfolio. Single page scrolling website.
 - Stylelint
 - NPM Scripts
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+

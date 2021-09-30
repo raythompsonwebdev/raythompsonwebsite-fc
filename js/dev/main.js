@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// get header element
 	const siteHeader = document.querySelector(".site_header");
-
 	const menuToggle = document.querySelector(".menu-toggle");
 
 	// get all divs with class tab content.
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// detect page scroll function
 	const elementInView = (el, scrollOffset = 100) => {
 		const elementTop = el.getBoundingClientRect().top;
-
 		return (
 			elementTop <=
 			(window.innerHeight || document.documentElement.clientHeight) -
@@ -224,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const tabs = document.querySelectorAll(".project_tab");
 	const arrayTabs = Array.from(tabs);
 	const arrayBoxes = Array.from(boxes);
-
 	arrayTabs.forEach((element1) => {
 		element1.addEventListener("click", (e) => {
 			e.preventDefault();
