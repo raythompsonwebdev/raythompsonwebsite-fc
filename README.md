@@ -1,4 +1,4 @@
-![Web Developer Website](/assets/fcc-drum-machine.png)
+![Ray Thompson Web Developer Website](/assets/raythompsonwebdev-home-page.png)
 
 # My portfolio
 
@@ -6,19 +6,23 @@ Web Developer portfolio. Single page scrolling website with portfolio gallery, c
 
 ## Technologies
 
-- HTML 
+- HTML - semantic html
 - CSS -  css transitions, custom properties , css keyframes
 - SASS - nesting , mixins, variable, partials
-- JavaScript - ES2020
+- JavaScript - ES6
 
-## Build Tools
+## Tools
 
-- Grunt
-- Babel
-- Prettier
-- ESLInt
-- Stylelint
-- NPM Scripts
+- [Grunt](https://gruntjs.com/) 
+- [Babel](https://babeljs.io/)
+- [Prettier](https://prettier.io/)
+- [ESLInt](https://eslint.org/)
+- [Stylelint](https://stylelint.io/)
+- [NPM Scripts](https://docs.npmjs.com/cli/v7/using-npm/scripts)
+- [EditorConfig](https://editorconfig.org/)
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
+- [Node Sass](https://www.npmjs.com/package/node-sass)
 
 
 
