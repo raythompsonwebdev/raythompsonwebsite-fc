@@ -528,7 +528,7 @@
 								.panel {
 									//font-family: $FontStyle;
 									width: 100%;
-									height: 360px;
+									height: 375px;
 									background-color: $bgcolor;
 
 									h2 {
@@ -549,22 +549,28 @@
 										margin: 0;
 										padding: 0;
 										float: none;
+										display: flex;
+										flex-direction: column;
+										justify-content: flex-end;
 
 										a.fancybox {
 											@include raytransition(
 												all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
 											);
+											align-self: flex-start;
+											width: 100%;
+											display: block;
 
 											span {
 												display: block;
 												width: 100%;
-												height: 80px;
+												height: 150px;
 												margin: 0;
 												outline: 0;
 												padding: 0;
-												background-color: #000;
+												background-color: rgb(224, 224, 224);
 												background-repeat: no-repeat;
-												background-position: center 20%;
+												background-position: center 15%;
 												background-size: cover;
 											}
 										}

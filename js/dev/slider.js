@@ -7,28 +7,39 @@ const panelContainer = document.querySelector(".slider-body");
 let currentIndex = 0;
 
 fetch("./js/dev/data/slider-data.json")
-	.then((response) => response.json())
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error("JSON data not received");
+		}
+		return response.json();
+	})
 	.then((data) => {
 		const slider = data.sliderdata;
 		slider.forEach((slide) => {
 			// eslint-disable-next-line no-console
 			// console.log(slide);
-
 			const panel = document.createElement("ARTICLE");
 			panel.setAttribute("class", "panel");
 			panel.setAttribute("id", `#${slide.hash}`);
 			const slidepanel = document.createElement("FIGURE");
 			slidepanel.setAttribute("class", "slider-panel");
-			const slidepanelImage = document.createElement("A");
-			slidepanelImage.setAttribute("href", "");
+			const slidepanelImgLink = document.createElement("A");
+			slidepanelImgLink.setAttribute("href", "");
+			slidepanelImgLink.setAttribute("class", "fancybox");
+
+			const slidepanelImg = document.createElement("SPAN");
+			slidepanelImg.setAttribute(
+				"style",
+				`background-image: url(${slide.bgimage})`
+			);
 
 			const slidepanelCaption = document.createElement("FIGCAPTION");
 
 			const slidepanelHeadingThree = document.createElement("H3");
 			slidepanelHeadingThree.innerHTML = `${slide.header}`;
 
-			const slidepanelHeadingFour = document.createElement("H4");
-			slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
+			// const slidepanelHeadingFour = document.createElement("H4");
+			// slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
 
 			const slidepanelList = document.createElement("UL");
 			const slidepanelListItem = document.createElement("lI");
@@ -49,10 +60,11 @@ fetch("./js/dev/data/slider-data.json")
 			panel.append(slidepanel);
 			panelContainer.append(panel);
 
-			slidepanel.append(slidepanelImage);
+			slidepanel.append(slidepanelImgLink);
+			slidepanelImgLink.append(slidepanelImg);
 			slidepanel.append(slidepanelCaption);
 			slidepanelCaption.append(slidepanelHeadingThree);
-			slidepanelCaption.append(slidepanelHeadingFour);
+			// slidepanelCaption.append(slidepanelHeadingFour);
 			slidepanelCaption.append(slidepanelList);
 			slidepanelList.append(slidepanelListItem);
 			slidepanelList.append(slidepanelListItem2);
@@ -65,7 +77,7 @@ fetch("./js/dev/data/slider-data.json")
 const panels = document.getElementsByClassName("panel");
 
 // eslint-disable-next-line no-console
-console.log(panels);
+// console.log(panels);
 
 const scrollTo = (element) => {
 	mask.scrollTo({

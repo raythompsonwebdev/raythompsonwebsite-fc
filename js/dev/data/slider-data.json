@@ -3,7 +3,7 @@
 	"sliderdata" : [
 			{
 				"id": "0",
-				"hash": "panel-1",
+				"hash": "panel-0",
 				"title": "Adobe Certified Associates",
 				"header": "Visual Communication: Photoshop CS4",
 				"subheader": "Topics",
@@ -14,43 +14,58 @@
 				"task5": "Evaluating Digital Images",
 				"buttonname": "Adobe",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/Large-Photoshop-Certicate.webp"
+					"images/certificates/Adobe-photoshop-large.png"
 			},
 			{
 				"id": "1",
-				"hash": "panel-2",
+				"hash": "panel-1",
 				"title": "ELATT",
-				"header": "City & Guilds ITQ Level 1,2,3 Web Design",
+				"header": "City & Guilds ITQ Level 1 IT User",
 				"subheader": "Topics",
 				"task1": "Improving productivity using IT",
 				"task2": "IT Communication Fundementals",
 				"task3": "Adding Content",
 				"task4": "IT User fundementals",
 				"task5": "Organizing Content",
-				"buttonname": "ELATT",
+				"buttonname": "ELATT 1",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/ITQ-USERS-LEVEL3-LARGE.webp"
+					"images/certificates/CityandGuildsLevelOne-large.png"
 			},
 			{
 				"id": "2",
-				"hash": "panel-3",
-				"title": "Codepen",
-				"header": "Various",
+				"hash": "panel-2",
+				"title": "ELATT",
+				"header": "City & Guilds ITQ Level 2 IT User",
 				"subheader": "Topics",
-				"task1": "Product Landing Page",
-				"task2": "Technical Documentation Page",
-				"task3": "WeatherApp",
-				"task4": "Random Quote Generator",
-				"task5": "Personal Portfolio",
-				"buttonname": "Codepen",
+				"task1": "Website Software",
+				"task2": "Database Software",
+				"task3": "Improving Productivity using IT",
+				"task4": "Database Management",
+				"task5": "Organizing Content",
+				"buttonname": "ELATT 2",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/codepen-io-your-work-2020-10-17-22.webp"
+					"images/certificates/CityandGuildsLevelTwo-large.png"
 			},
 			{
 				"id": "3",
+				"hash": "panel-3",
+				"title": "ELATT",
+				"header": "City & Guilds ITQ Level 3 IT User",
+				"subheader": "Topics",
+				"task1": "Website Software",
+				"task2": "Imaging Software (Flash)",
+				"task3": "Improving Productivity using IT",
+				"task4": "Design Software (Photoshop)",
+				"task5": "Organizing Content",
+				"buttonname": "ELATT 3",
+				"bgimage":
+					"images/certificates/CityandGuildsLevelThree-large.png"
+			},
+			{
+				"id": "4",
 				"hash": "panel-4",
 				"title": "FreeCodeCamp",
-				"header": "Frontend Developer Certificate",
+				"header": "Responsive Web Design Certificate",
 				"subheader": "Topics",
 				"task1": "Basic HTML and HTML 5",
 				"task2": "Basic CSS",
@@ -59,11 +74,26 @@
 				"task5": "Responsive Web Design Principles",
 				"buttonname": "FreeCodeCamp",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.webp"
+					"images/certificates/freecodecamp-org-certification-responsive-web-design-large.png"
 			},
 			{
-				"id": "4",
+				"id": "5",
 				"hash": "panel-5",
+				"title": "FreeCode Camp",
+				"header": "JavaScript Algorithms and Data Structures",
+				"subheader": "Topics",
+				"task1": "Basic Javascript",
+				"task2": "ES6",
+				"task3": "Regular Expressions",
+				"task4": "Basic Data Structures",
+				"task5": "Basic Algorithim Scripting",
+				"buttonname": "Udacity",
+				"bgimage":
+					"images/certificates/freecodecamp-org-certification-javascript-large.png"
+			},
+			{
+				"id": "6",
+				"hash": "panel-6",
 				"title": "Lynda.com",
 				"header": "Lynda.com",
 				"subheader": "Topics",
@@ -74,25 +104,10 @@
 				"task5": "Javascript Essentials",
 				"buttonname": "Lynda.com",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.webp"
+					"images/certificates/lynda-com-vanilla-javascript-large.png"
 			},
 			{
-				"id": "5",
-				"hash": "panel-6",
-				"title": "Codewars",
-				"header": "Codewars",
-				"subheader": "Topics",
-				"task1": "5th Kyu Katas",
-				"task2": "6th Kyu Katas",
-				"task3": "7th Kyu Katas",
-				"task4": "8th Kyu Katas",
-				"task5": "random Katas",
-				"buttonname": "Codewars",
-				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/large.png"
-			},
-			{
-				"id": "6",
+				"id": "7",
 				"hash": "panel-7",
 				"title": "Code Academy",
 				"header": "Javascript",
@@ -104,25 +119,40 @@
 				"task5": "Conditionals",
 				"buttonname": "Code Academy",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.webp"
+					"images/certificates/codecademy-js-large.png"
 			},
 			{
 				"id": "7",
-				"hash": "panel-8",
-				"title": "FreeCode Camp",
-				"header": "JavaScript Algorithms and Data Structures",
+				"hash": "panel-7",
+				"title": "Codewars",
+				"header": "Codewars",
 				"subheader": "Topics",
-				"task1": "Basic Javascript",
-				"task2": "ES6",
-				"task3": "Regular Expressions",
-				"task4": "Basic Data Structures",
-				"task5": "Basic Algorithim Scripting",
-				"buttonname": "Udacity",
+				"task1": "5th Kyu Katas",
+				"task2": "6th Kyu Katas",
+				"task3": "7th Kyu Katas",
+				"task4": "8th Kyu Katas",
+				"task5": "random Katas",
+				"buttonname": "Codewars",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures.webp"
+					"images/certificates/codewars-large.png"
 			},
 			{
 				"id": "8",
+				"hash": "panel-8",
+				"title": "Code Academy",
+				"header": "Ruby",
+				"subheader": "Topics",
+				"task1": "Arrays",
+				"task2": "Data Types",
+				"task3": "Classes",
+				"task4": "Methods",
+				"task5": "Conditionals",
+				"buttonname": "Code Academy",
+				"bgimage":
+					"images/certificates/codecademy-ruby-large.png"
+			},
+			{
+				"id": "9",
 				"hash": "panel-9",
 				"title": "Digital Futures 2017",
 				"header": "Interactive Programming",
@@ -134,22 +164,7 @@
 				"task5": "Music creation using Sonic Pi",
 				"buttonname": "Digital Futures",
 				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.webp"
-			},
-			{
-				"id": "9",
-				"hash": "panel-10",
-				"title": "Code Academy",
-				"header": "Ruby",
-				"subheader": "Topics",
-				"task1": "Arrays",
-				"task2": "Data Types",
-				"task3": "Classes",
-				"task4": "Methods",
-				"task5": "Conditionals",
-				"buttonname": "Code Academy",
-				"bgimage":
-					"wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates-ruby.webp"
+					"images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.png"
 			}
 	],
 	"sliderbuttons" :[
