@@ -1,5 +1,3 @@
-// eslint-disable-next-line func-names
-
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const mask = window.document.querySelector(".hero-slider > .mask");
@@ -16,8 +14,6 @@ fetch("./js/dev/data/slider-data.json")
 	.then((data) => {
 		const slider = data.sliderdata;
 		slider.forEach((slide) => {
-			// eslint-disable-next-line no-console
-			// console.log(slide);
 			const panel = document.createElement("ARTICLE");
 			panel.setAttribute("class", "panel");
 			panel.setAttribute("id", `#${slide.hash}`);
@@ -36,26 +32,26 @@ fetch("./js/dev/data/slider-data.json")
 			const slidepanelCaption = document.createElement("FIGCAPTION");
 
 			const slidepanelHeadingThree = document.createElement("H3");
-			slidepanelHeadingThree.innerHTML = `${slide.header}`;
+			slidepanelHeadingThree.textContent = `${slide.header}`;
 
 			// const slidepanelHeadingFour = document.createElement("H4");
 			// slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
 
 			const slidepanelList = document.createElement("UL");
 			const slidepanelListItem = document.createElement("lI");
-			slidepanelListItem.innerHTML = `${slide.task1}`;
+			slidepanelListItem.textContent = `${slide.task1}`;
 
 			const slidepanelListItem2 = document.createElement("lI");
-			slidepanelListItem2.innerHTML = `${slide.task2}`;
+			slidepanelListItem2.textContent = `${slide.task2}`;
 
 			const slidepanelListItem3 = document.createElement("lI");
-			slidepanelListItem3.innerHTML = `${slide.task3}`;
+			slidepanelListItem3.textContent = `${slide.task3}`;
 
 			const slidepanelListItem4 = document.createElement("lI");
-			slidepanelListItem4.innerHTML = `${slide.task4}`;
+			slidepanelListItem4.textContent = `${slide.task4}`;
 
 			const slidepanelListItem5 = document.createElement("lI");
-			slidepanelListItem5.innerHTML = `${slide.task5}`;
+			slidepanelListItem5.textContent = `${slide.task5}`;
 
 			panel.append(slidepanel);
 			panelContainer.append(panel);
@@ -75,9 +71,6 @@ fetch("./js/dev/data/slider-data.json")
 	});
 
 const panels = document.getElementsByClassName("panel");
-
-// eslint-disable-next-line no-console
-// console.log(panels);
 
 const scrollTo = (element) => {
 	mask.scrollTo({
@@ -124,8 +117,6 @@ next.addEventListener("click", (e) => {
 	// eslint-disable-next-line no-plusplus
 	for (let i = 0; i < panels.length; i++) {
 		if (i === currentIndex) {
-			// eslint-disable-next-line no-console
-			// console.log(panels[i]);
 			scrollTo(document.getElementById(`${panels[i].id}`));
 		}
 	}
@@ -140,8 +131,6 @@ prev.addEventListener("click", (e) => {
 	// eslint-disable-next-line no-plusplus
 	for (let i = 0; i < panels.length; i++) {
 		if (i === currentIndex) {
-			// eslint-disable-next-line no-console
-			// console.log(panels[i]);
 			scrollTo(document.getElementById(`${panels[i].id}`));
 		}
 	}
