@@ -111,4 +111,8 @@ img/
 icons/
 .sass-cache/
 images/unused-images/
-package-lock.json
+
+js/main.js.map
+css/style.min.css.map
+fontawesome/
+

@@ -1,15 +1,18 @@
+/**
+ * Contact Form
+ */
 const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("form-error");
-
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
+
+// eslint-disable-next-line no-console
+
 const [text, email, url, , , , , ,] = myForm;
 
 error.classList.add("hide-error");
 error.textContent = "";
-
-// const formData = new FormData(myForm);
 
 text.addEventListener("blur", (e) => {
 	e.preventDefault();

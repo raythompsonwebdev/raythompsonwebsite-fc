@@ -92,7 +92,7 @@ hr {
   --text-error: none;
   --email-error: none;
   --url-error: none;
-  --comment-error:none;
+  --comment-error: none;
 }
 
 /* 1680px */
@@ -222,7 +222,7 @@ hr {
     width: 100%;
     height: 100%;
     line-height: 40px;
-    background-color: #ffffff;
+    background-color: #f5f2e4;
     text-align: center;
   }
   .site_header ul#social li.social-item a i.fa-twitter,
@@ -393,15 +393,15 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
     display: block;
-    background-color: #ffffff;
+    background-color: #f5f2e4;
     line-height: 35px;
     width: 100%;
     border: none;
     font-size: 1em;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #262425;
+    color: #f5f2e4;
     cursor: pointer;
     font-weight: bold;
   }
@@ -519,7 +519,7 @@ main.site_content section#project_page figure > picture {
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 2em;
   }
   main.site_content section#about_content h2 {
@@ -531,12 +531,11 @@ main.site_content section#project_page figure > picture {
   }
   main.site_content section#about_content div#abouttext {
     width: 100%;
-    float: left;
-    display: block;
     background-color: #efefef;
     padding: 0.25em;
+    /* Hero-Slider */
   }
-  main.site_content section#about_content div#abouttext figure {
+  main.site_content section#about_content div#abouttext figure#page-image {
     display: block;
     float: left;
     margin: 0 0.5em 0 0;
@@ -559,8 +558,194 @@ main.site_content section#project_page figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 1em;
-    width: 99%;
+    width: auto;
     line-height: 2.5em;
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin-left: 0.5em;
+    float: right;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    height: 50px;
+    font-size: 1.3em;
+    line-height: 50px;
+    text-indent: 1.5%;
+    letter-spacing: 0.05em;
+    background-color: #262425;
+    color: #efefef;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #262425;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    display: block;
+    width: 100%;
+    height: 335px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+    position: relative;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    width: 100%;
+    height: 375px;
+    background-color: #efefef;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    text-transform: uppercase;
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+    background-color: #88a61c;
+    color: #262425;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    -webkit-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    -moz-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    -o-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    align-self: flex-start;
+    width: 100%;
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    background-repeat: no-repeat;
+    background-position: center 15%;
+    background-size: cover;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+    width: 100%;
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-weight: normal;
+    font-size: 1em;
+    background-color: #262425;
+    color: #f5f2e4;
+    text-indent: 0;
+    margin: 0;
+    letter-spacing: 0.01em;
+    text-align: center;
+    line-height: 40px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-weight: normal;
+    margin: 0 0 0.5em 0;
+    background-color: #88a61c;
+    color: #262425;
+    letter-spacing: 0.01em;
+    padding: 0;
+    line-height: 30px;
+    font-size: 0.95em;
+    display: block;
+    text-indent: 2%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    width: 99%;
+    background-color: #f5f2e4;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #262425;
+    display: block;
+    height: auto;
+    line-height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    content: "\f118";
+    font-size: 1em;
+    color: #262425;
+    margin: 0 0.5em;
+    line-height: 25px;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids {
+    margin: 0;
+    list-style: outside none none;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex: row;
+    text-align: center;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+    line-height: 40px;
+    height: 40px;
+    background-color: #262425;
+    color: #f5f2e4;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    background-color: #f5f2e4;
+    color: #262425;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+    line-height: 40px;
+    height: 40px;
+    background-color: #262425;
+    color: #f5f2e4;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    color: #262425;
+    background-color: #f5f2e4;
+    font-weight: bold;
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -592,7 +777,7 @@ main.site_content section#project_page figure > picture {
   main.site_content section#contact div#contact_container section#contact-details h3 {
     text-indent: 1em;
     font-size: 1.25rem;
-    background-color: #ffffff;
+    background-color: #f5f2e4;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
     height: auto;
@@ -672,7 +857,7 @@ main.site_content section#contact div#contact_container form#myform ol li #comme
     display: block;
     width: 100%;
     line-height: 40px;
-    color: #000000;
+    color: #262425;
     background-color: #e7e7e7;
     margin-bottom: 0.5em;
     text-indent: 0.5em;
@@ -763,11 +948,11 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     margin: auto;
     font-size: 1.1em;
     border: none;
-    background-color: #ffffff;
+    background-color: #f5f2e4;
   }
   main.site_content section#contact div#contact_container form#myform button#submit:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #262425;
+    color: #f5f2e4;
     cursor: pointer;
     font-weight: bold;
   }
@@ -1694,7 +1879,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     font-size: 1em;
     text-transform: uppercase;
     background-color: #000000;
-    color: #ffffff;
+    color: #f5f2e4;
     border: none;
     transition: all ease-out 0.4s;
     line-height: 50px;
