@@ -50,6 +50,9 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					"js/main.js": "js/dev/main.js",
+					"js/projects.js": "js/dev/projects.js",
+					"js/slider.js": "js/dev/slider.js",
+					"js/contact.js": "js/dev/contact.js",
 				},
 			},
 		},
@@ -142,6 +145,9 @@ module.exports = function (grunt) {
 			my_target: {
 				files: {
 					"js/main.min.js": ["js/dev/main.js"],
+					"js/projects.min.js": ["js/dev/projects.js"],
+					"js/slider.min.js": ["js/dev/slider.js"],
+					"js/contact.min.js": ["js/dev/contact.js"],
 				},
 			},
 		},
@@ -153,23 +159,23 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					style: "expanded",
-					//sourcemap: "auto",
+					// sourcemap: "auto",
 				},
 
 				files: {
 					"css/style.css": "sass/style.scss",
-					/*where file goes-----/where file from*/
+					/* where file goes-----/where file from */
 				},
 			},
 			public: {
 				options: {
 					style: "compressed",
-					//sourcemap: "auto",
+					// sourcemap: "auto",
 				},
 
 				files: {
 					"css/style.min.css": "sass/style.scss",
-					/*where file goes-----/where file from*/
+					/* where file goes-----/where file from */
 				},
 			},
 		},
@@ -212,4 +218,4 @@ module.exports = function (grunt) {
 	]);
 };
 
-/* add bag (!) to wordpress css theme top-title so that it shows on minified file*/
+/* add bag (!) to wordpress css theme top-title so that it shows on minified file */

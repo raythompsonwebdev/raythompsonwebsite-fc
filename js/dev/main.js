@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// create menu variables
 	const slideoutMenu = document.querySelector(".site_navigation");
 	const slideoutMenuHeight = slideoutMenu.offsetHeight;
-
 	// mobile menu toggle button
 	menuToggle.addEventListener("click", (event) => {
 		event.preventDefault();
@@ -106,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (hash !== "") {
 				// if not, Prevent default anchor click behavior
 				event.preventDefault();
-
 				// select element id converting hash to string using template literal and use as argument in scrolling function.
 				scrollTo(document.querySelector(`${hash}`));
 			} // End if

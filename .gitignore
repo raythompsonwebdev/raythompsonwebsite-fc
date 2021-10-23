@@ -105,7 +105,6 @@ dist
 
 
 textfiles/
-css/style.css.map
 node_modules/
 img/
 icons/
@@ -113,6 +112,10 @@ icons/
 images/unused-images/
 
 js/main.js.map
+js/contact.js.map
+js/projects.js.map
+js/slider.js.map
+
 css/style.min.css.map
 fontawesome/
 
