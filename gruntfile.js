@@ -9,20 +9,32 @@ module.exports = function (grunt) {
 					engine: "im",
 					sizes: [
 						{
+							name: "micro-small",
+							width: 65,
+						},
+						{
+							name: "x-small",
+							width: 80,
+						},
+						{
 							name: "small",
-							width: 130,
+							width: 90,
+						},
+						{
+							name: "medium-small",
+							width: 105,
 						},
 						{
 							name: "medium",
-							width: 150,
+							width: 120,
 						},
 						{
 							name: "large",
-							width: 170,
+							width: 130,
 						},
 						{
 							name: "large_2x",
-							width: 340,
+							width: 260,
 						},
 					],
 				},

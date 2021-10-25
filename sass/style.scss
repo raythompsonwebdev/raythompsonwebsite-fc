@@ -41,7 +41,7 @@
 		justify-content: space-between;
 		left: 0;
 
-		hgroup.site-title {
+		span.site-title {
 			width: 20%;
 			flex: 1 0 auto;
 			h1 {
@@ -977,7 +977,7 @@
 	}
 	.site_header {
 		height: 100px;
-		hgroup.site-title {
+		span.site-title {
 			h1 {
 				font-size: 1.4rem;
 			}
@@ -1064,6 +1064,87 @@
 			div#abouttext {
 				p {
 					font-size: 0.95em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 50%;
+
+					h1 {
+						font-size: 1.2em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 1em;
+											}
+
+											h4 {
+												font-size: 0.95em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.8em;
+
+													&::before {
+														font-size: 1em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1191,7 +1272,7 @@
 	}
 	.site_header {
 		height: 100px;
-		hgroup.site-title {
+		span.site-title {
 			width: 20%;
 			h1 {
 				font-size: 1.2rem;
@@ -1277,7 +1358,88 @@
 			div#abouttext {
 				p {
 					font-size: 0.9em;
-					line-height: 2.2em;
+					line-height: 2.7em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 50%;
+
+					h1 {
+						font-size: 1.2em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 1em;
+											}
+
+											h4 {
+												font-size: 0.95em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.8em;
+
+													&::before {
+														font-size: 1em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1386,7 +1548,7 @@
 		width: 96%;
 	}
 	.site_header {
-		hgroup.site-title {
+		span.site-title {
 			width: 20%;
 			h1 {
 				font-size: 1.2rem;
@@ -1468,7 +1630,88 @@
 				margin-bottom: 1em;
 
 				p {
-					line-height: 2.1em;
+					line-height: 2.5em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 50%;
+
+					h1 {
+						font-size: 1.1em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 0.95em;
+											}
+
+											h4 {
+												font-size: 0.9em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.75em;
+
+													&::before {
+														font-size: 0.9em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1566,7 +1809,7 @@
 		width: 98%;
 	}
 	.site_header {
-		hgroup.site-title {
+		span.site-title {
 			width: 20%;
 			h1 {
 				font-size: 1.1rem;
@@ -1674,6 +1917,89 @@
 				}
 				p {
 					font-size: 0.9em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 100%;
+					margin: auto;
+					float: none;
+
+					h1 {
+						font-size: 1.1em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 1em;
+											}
+
+											h4 {
+												font-size: 0.95em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.8em;
+
+													&::before {
+														font-size: 1em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1799,7 +2125,7 @@
 		width: 98%;
 	}
 	.site_header {
-		hgroup.site-title {
+		span.site-title {
 			width: 35%;
 			h1 {
 				font-size: 1.05rem;
@@ -1885,6 +2211,88 @@
 			div#abouttext {
 				p {
 					font-size: 0.85em;
+					line-height: 2.3em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 100%;
+
+					h1 {
+						font-size: 1.15em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 1em;
+											}
+
+											h4 {
+												font-size: 0.95em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.8em;
+
+													&::before {
+														font-size: 1em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2028,7 +2436,7 @@
 		width: 98%;
 	}
 	.site_header {
-		hgroup.site-title {
+		span.site-title {
 			width: 65%;
 			h1 {
 				font-size: 1.3rem;
@@ -2154,6 +2562,87 @@
 				p {
 					font-size: 0.9em;
 				}
+				/* Hero-Slider */
+				section#slider {
+					width: 100%;
+
+					h1 {
+						font-size: 1.05em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 0.9em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 0.95em;
+											}
+
+											h4 {
+												font-size: 0.9em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.75em;
+
+													&::before {
+														font-size: 0.9em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -2257,7 +2746,7 @@
 	}
 	.site_header {
 		height: 100px;
-		hgroup.site-title {
+		span.site-title {
 			h1 {
 				font-size: 1.2rem;
 			}
@@ -2351,6 +2840,87 @@
 			div#abouttext {
 				p {
 					font-size: 0.85em;
+				}
+				/* Hero-Slider */
+				section#slider {
+					width: 100%;
+
+					h1 {
+						font-size: 1.1em;
+					}
+					/* Hero Slider */
+					.hero-slider {
+						width: 100%;
+
+						.mask {
+							height: 335px;
+
+							/*position relative for scrolling*/
+							div.slider-body {
+								width: 100%;
+
+								.panel {
+									height: 375px;
+
+									h2 {
+										font-size: 1em;
+									}
+
+									figure.slider-panel {
+										margin: 0;
+
+										a.fancybox {
+											display: block;
+
+											span {
+												height: 150px;
+											}
+										}
+
+										figcaption {
+											clear: both;
+
+											h3 {
+												font-size: 0.95em;
+											}
+
+											h4 {
+												font-size: 0.9em;
+											}
+
+											ul {
+												width: 100%;
+
+												li {
+													font-size: 0.75em;
+
+													&::before {
+														font-size: 0.9em;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					div#slids {
+						a#next {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+						a#prev {
+							width: 50%;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
 				}
 			}
 		}

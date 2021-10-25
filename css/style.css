@@ -129,16 +129,16 @@ hr {
     justify-content: space-between;
     left: 0;
   }
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 20%;
     flex: 1 0 auto;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.5rem;
     text-align: left;
     line-height: 40px;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 1rem;
     text-align: left;
   }
@@ -1015,10 +1015,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header {
     height: 100px;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.4rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1085,8 +1085,73 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content h2 {
     font-size: 1.45em;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.2em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.8em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -1194,13 +1259,13 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header {
     height: 100px;
   }
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 20%;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.2rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1260,9 +1325,74 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content h2 {
     font-size: 1.4em;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
-    line-height: 2.2em;
+    line-height: 2.7em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.2em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.8em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -1355,13 +1485,13 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 96%;
   }
 
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 20%;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.2rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1426,9 +1556,72 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content div#abouttext {
     width: 100%;
     margin-bottom: 1em;
+    /* Hero-Slider */
   }
   main.site_content section#about_content div#abouttext p {
-    line-height: 2.1em;
+    line-height: 2.5em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -1516,13 +1709,13 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 98%;
   }
 
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 20%;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.1rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.8rem;
   }
   .site_header .site_navigation {
@@ -1601,11 +1794,78 @@ main.site_content div#banner figure > picture {
     width: 100%;
     flex: 0 0 auto;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext h2 {
     font-size: 1.2em;
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+    margin: auto;
+    float: none;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.8em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -1715,14 +1975,14 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 98%;
   }
 
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 35%;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.05rem;
     line-height: 35px;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.8rem;
   }
   .site_header .site_navigation {
@@ -1780,8 +2040,74 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content h2 {
     font-size: 1.15em;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.85em;
+    line-height: 2.3em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.15em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.8em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -1910,13 +2236,13 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 98%;
   }
 
-  .site_header hgroup.site-title {
+  .site_header span.site-title {
     width: 65%;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.3rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.9rem;
   }
   .site_header .show {
@@ -2024,8 +2350,73 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content h2 {
     font-size: 1.2em;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.05em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
@@ -2114,10 +2505,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header {
     height: 100px;
   }
-  .site_header hgroup.site-title h1 {
+  .site_header span.site-title h1 {
     font-size: 1.2rem;
   }
-  .site_header hgroup.site-title h2 {
+  .site_header span.site-title h2 {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -2189,8 +2580,73 @@ main.site_content div#banner figure > picture {
   main.site_content section#about_content h2 {
     font-size: 1.1em;
   }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.85em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
   }
   main.site_content section#contact {
     width: 100%;
