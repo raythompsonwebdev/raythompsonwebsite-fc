@@ -133,14 +133,17 @@ hr {
     width: 20%;
     flex: 1 0 auto;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.5rem;
     text-align: left;
-    line-height: 40px;
+    line-height: 35px;
+    margin: 0;
+    font-weight: bold;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 1rem;
     text-align: left;
+    margin: 0;
   }
   .site_header .site_navigation {
     width: 60%;
@@ -306,7 +309,7 @@ main.site_content section#contact {
     background-color: #fff;
     padding: 1%;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.9rem;
     width: auto;
     text-align: left;
@@ -386,7 +389,7 @@ main.site_content div#banner figure > picture {
     transition: all 0.2s ease-in 0s;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: 20%;
+    width: 15%;
     flex: 0 0 auto;
     margin-right: 0.2em;
     font-family: "Lato", serif;
@@ -483,12 +486,13 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link:hover {
     font-weight: bold;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     width: 100%;
     font-size: 1em;
     margin: 0.5em 0;
     line-height: 40px;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
   }
   main.site_content section#project_page figure.box:hover figcaption.cover {
@@ -1015,10 +1019,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header {
     height: 100px;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.4rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1053,7 +1057,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.7rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -1262,10 +1266,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header span.site-title {
     width: 20%;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.2rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1281,7 +1285,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.5rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -1316,7 +1320,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 1em;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     font-size: 1em;
   }
   main.site_content section#about_content {
@@ -1488,10 +1492,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header span.site-title {
     width: 20%;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.2rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -1528,7 +1532,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner article#bannertext {
     width: 95%;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.3rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -1712,10 +1716,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header span.site-title {
     width: 20%;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.1rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.8rem;
   }
   .site_header .site_navigation {
@@ -1762,7 +1766,7 @@ main.site_content section#contact {
   main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.2rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -1787,7 +1791,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 1em;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     font-size: 0.9em;
   }
   main.site_content section#about_content {
@@ -1978,11 +1982,11 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header span.site-title {
     width: 35%;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.05rem;
     line-height: 35px;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.8rem;
   }
   .site_header .site_navigation {
@@ -2009,7 +2013,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2.1rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -2023,7 +2027,7 @@ main.site_content div#banner figure > picture {
     width: 96%;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: 20%;
+    width: 15%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
     font-size: 0.8em;
@@ -2031,7 +2035,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     font-size: 0.9em;
   }
   main.site_content section#about_content {
@@ -2239,10 +2243,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header span.site-title {
     width: 65%;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.3rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.9rem;
   }
   .site_header .show {
@@ -2325,7 +2329,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 2rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -2341,7 +2345,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     font-size: 0.9em;
   }
   main.site_content section#about_content {
@@ -2505,10 +2509,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   .site_header {
     height: 100px;
   }
-  .site_header span.site-title h1 {
+  .site_header span.site-title p.logo {
     font-size: 1.2rem;
   }
-  .site_header span.site-title h2 {
+  .site_header span.site-title p {
     font-size: 0.9rem;
   }
   .site_header .site_navigation {
@@ -2544,7 +2548,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#banner article#bannertext h2 {
+  main.site_content div#banner article#bannertext h1 {
     font-size: 1.8rem;
   }
   main.site_content div#banner article#bannertext p {
@@ -2557,10 +2561,10 @@ main.site_content div#banner figure > picture {
     width: 96%;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: 20%;
+    width: 15%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   main.site_content section#project_page figure.box {
     width: 99.75%;
@@ -2571,7 +2575,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.8em;
   }
-  main.site_content section#project_page figcaption.cover h2.cert_title {
+  main.site_content section#project_page figcaption.cover h3.cert_title {
     font-size: 0.8em;
   }
   main.site_content section#about_content {
