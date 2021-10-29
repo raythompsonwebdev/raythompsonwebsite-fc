@@ -94,9 +94,6 @@ const updateIndex = () => {
 const undateIndex = () => {
 	const lowerlimit = 0;
 
-	// eslint-disable-next-line no-console
-	console.log(lowerlimit);
-
 	if (currentIndex === lowerlimit) {
 		currentIndex = 0;
 	} else {
