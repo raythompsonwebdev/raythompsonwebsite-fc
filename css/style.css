@@ -1969,6 +1969,12 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
 }
 @media (max-width: 667px) {
+  main.site_content section#project_page ul#project_tabs {
+    flex-flow: row wrap;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 24%;
+  }
   main.site_content section#project_page figure.box {
     width: 49.75%;
   }
@@ -2024,13 +2030,13 @@ main.site_content div#banner figure > picture {
     width: 96%;
   }
   main.site_content section#project_page ul#project_tabs {
-    width: 96%;
+    width: 100%;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: 15%;
+    width: 49%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
@@ -2339,6 +2345,15 @@ main.site_content div#banner figure > picture {
     width: 98%;
     margin: auto;
   }
+  main.site_content section#project_page ul#project_tabs {
+    width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 100%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.9em;
+  }
   main.site_content section#project_page figcaption.cover {
     position: absolute;
   }
@@ -2559,9 +2574,6 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page ul#project_tabs {
     width: 96%;
-  }
-  main.site_content section#project_page ul#project_tabs li {
-    width: 15%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
     font-size: 0.7em;

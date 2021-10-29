@@ -2115,6 +2115,12 @@
 @media (max-width: 667px) {
 	main.site_content {
 		section#project_page {
+			ul#project_tabs {
+				flex-flow: row wrap;
+				li {
+					width: 24%;
+				}
+			}
 			figure.box {
 				width: 49.75%;
 			}
@@ -2184,12 +2190,12 @@
 				width: 96%;
 			}
 			ul#project_tabs {
-				width: 96%;
+				width: 100%;
 
 				li {
-					width: 15%;
+					width: 49%;
 					button.project_tab {
-						font-size: 0.8em;
+						font-size: 0.85em;
 					}
 				}
 			}
@@ -2543,6 +2549,16 @@
 				width: 98%;
 				margin: auto;
 			}
+			ul#project_tabs {
+				width: 96%;
+
+				li {
+					width: 100%;
+					button.project_tab {
+						font-size: 0.9em;
+					}
+				}
+			}
 			figcaption.cover {
 				position: absolute;
 
@@ -2812,7 +2828,6 @@
 				width: 96%;
 
 				li {
-					width: 15%;
 					button.project_tab {
 						font-size: 0.7em;
 					}
