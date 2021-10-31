@@ -370,6 +370,7 @@
 				</div>
         </section>
 
+
         <!--Outro-->
         <section id="contact" class="tabcontent">
 					<h2>Contact</h2>
@@ -379,8 +380,9 @@
 							id="myform"
 							name="theform"
 							class="group"
+							action="php/validation.php"
 							method="POST"
-							action="./validation.php"
+
 						>
 						<span id="form-error" class="hide-error"></span>
 							<ol>
@@ -391,9 +393,10 @@
 										name="myname"
 										id="myname"
 										title="Please enter:First Name"
-										pattern="[A-Za-z]{3,40} [A-Za-z]{3,40}"
+										pattern="[A-Za-z]{3,40}"
 										required
 										placeholder="Please enter:First Name"
+										aria-describedby="form-error"
 									/>
 								</li>
 								<li>
@@ -406,6 +409,7 @@
 										required
 										pattern="^(\w\.?)+@[\w\.-]+\.\w{2,4}"
 										placeholder="Please enter a valid email address"
+										aria-describedby="form-error"
 									/>
 								</li>
 								<li>
@@ -413,10 +417,10 @@
 									<select name="reference" id="reference">
 										<option>Choose...</option>
 										<option value="friend">A friend</option>
-										<option value="facebook">Google</option>
+										<option value="google">Google</option>
 										<option value="facebook">Facebook</option>
 										<option value="twitter">Twitter</option>
-										<option value="facebook">Discord</option>
+										<option value="discord">Discord</option>
 									</select>
 								</li>
 								<li>
