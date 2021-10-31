@@ -1,89 +1,88 @@
 html {
-  @include box-sizing(border-box);
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
-  scroll-margin-top: 100px;
+	@include box-sizing(border-box);
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+	scroll-margin-top: 100px;
 }
 
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  font-family: "FontName", Helvetica, Arial, sans-serif;
-  background-color: $bgcolor;
-  margin: 0;
-  padding: 0;
+	font-family: $fallback;
+	background-color: $bgcolor;
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
 }
 
 img {
-  max-width: 100%;
-  margin: 0;
+	max-width: 100%;
+	margin: 0;
 }
 
 h1,
 h2 {
-  font-family: "Arvo", Helvetica, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-  color: $textcolor1;
-  letter-spacing: -0.01em;
+	font-family: $fontHeader;
+	padding: 0;
+	margin: 0;
+	color: $textcolor1;
+	letter-spacing: -0.01em;
 }
 
 p {
-  font-family: "Lato", serif;
-  line-height: 1.7em;
-  font-size: 1rem;
-  margin: 0;
-  margin-bottom: 0.5em;
-  color: $textcolor1;
+	font-family: $fontText;
+	line-height: 1.7em;
+	font-size: 1rem;
+	margin: 0;
+	margin-bottom: 0.5em;
+	color: $textcolor1;
 }
-
 
 a {
-  text-decoration: none;
-  font-family: "Arvo", sans-serif;
-  color: $textcolor1;
+	text-decoration: none;
+	font-family: $fontText;
+	color: $textcolor1;
 }
 
- /* unvisited link */
- a:link {
-  color: $textcolor1;
-	}
+/* unvisited link */
+a:link {
+	color: $textcolor1;
+}
 
-	/* visited link */
-	a:visited {
-		color: $textcolor1;
-		border: $textcolor1 dotted 1px;
-	}
+/* visited link */
+a:visited {
+	color: $textcolor1;
+	border: $textcolor1 dotted 1px;
+}
 
-	a:hover{
-		cursor:pointer;
-	}
+a:hover {
+	cursor: pointer;
+}
 
-	/* selected link */
-	a:active {
-		color: $textcolor1;
-		border: $textcolor1 dotted 1px;
-	}
+/* selected link */
+a:active {
+	color: $textcolor1;
+	border: $textcolor1 dotted 1px;
+}
 
 hr {
-  margin: 1em auto;
-  width: 70%;
-  display: block;
-  color: $textcolor1;
+	margin: 1em auto;
+	width: 70%;
+	display: block;
+	color: $textcolor1;
 }
 
 .screenreader-visible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
-

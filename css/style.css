@@ -14,10 +14,13 @@ html {
 }
 
 body {
-  font-family: "FontName", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #efefef;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
@@ -45,7 +48,7 @@ p {
 
 a {
   text-decoration: none;
-  font-family: "Arvo", sans-serif;
+  font-family: "Lato", serif;
   color: #000000;
 }
 
@@ -95,6 +98,16 @@ hr {
   --comment-error: none;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* 1680px */
 @media (max-width: 105em) {
   .menu-toggle {
@@ -132,9 +145,10 @@ hr {
   .site_header span.site-title {
     width: 20%;
     flex: 1 0 auto;
+    font-family: "Arvo", Helvetica, Arial, sans-serif;
   }
   .site_header span.site-title p.logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: left;
     line-height: 35px;
     margin: 0;
@@ -466,7 +480,6 @@ main.site_content div#banner figure > picture {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -o-transform: scale(0);
-    font-family: "Ruda", sans-serif;
   }
   main.site_content section#project_page figcaption.cover a.cert_link {
     width: 85%;
@@ -482,6 +495,7 @@ main.site_content div#banner figure > picture {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
+    font-family: "Arvo", Helvetica, Arial, sans-serif;
   }
   main.site_content section#project_page figcaption.cover a.cert_link:hover {
     font-weight: bold;
@@ -699,9 +713,10 @@ main.site_content section#project_page figure > picture {
     line-height: 25px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     margin-bottom: 0.1em;
+    font-family: "FontAwesome", "Lato", serif;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-    content: "\f118";
+    content: "\f02d";
     font-size: 1em;
     color: #262425;
     margin: 0 0.5em;

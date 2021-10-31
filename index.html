@@ -47,21 +47,23 @@
         <!--Social Icons-->
 				<ul id="social">
 					<li class="social-item">
-						<a href="https://twitter.com/RayThompWeb" title="Follow me on Twitter" target="blank"><i class="fa fa-twitter"> </i>
+						<a href="https://twitter.com/RayThompWeb" title="Follow me on Twitter" target="blank"><i class="fa fa-twitter"></i>
+							<span class="visually-hidden">Twitter Icon</span>
 						</a>
 					</li>
 				<li class="social-item">
-					<a href="https://www.facebook.com/raythompsonwebdeveloper" title="Follow me on Facebook" target="blank"><i class="fa fa-facebook"> </i>
+					<a href="https://www.facebook.com/raythompsonwebdeveloper" title="Follow me on Facebook" target="blank"><i class="fa fa-facebook"> </i><span class="visually-hidden">Facebook Icon</span>
 					</a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.linkedin.com/in/raymond-t-1b42b7b8" title="Follow me on LinkedIn" target="blank"><i class="fa fa-linkedin" > </i>
+					<a href="https://www.linkedin.com/in/raymond-t-1b42b7b8" title="Follow me on LinkedIn" target="blank"><i class="fa fa-linkedin" > </i><span class="visually-hidden">LinkedIn Icon</span>
 					</a>
 				</li>
 				</ul>
         <!--mobile  menu-->
         <button
           class="menu-toggle"
+					aria-label="menu"
           aria-controls="site_navigation"
           aria-expanded="false">
           Menu
@@ -92,13 +94,57 @@
 
 					<div id="project_page_container">
 						<ul id="project_tabs">
-							<li><button tab-index="0" id="all" class="project_tab">All</button></li>
-							<li><button id="javascript" class="project_tab">Javascript</button></li>
-							<li><button tab-index="0" id="php" class="project_tab">PHP</button></li>
-							<li><button tab-index="0" id="react" class="project_tab">React</button></li>
-							<li><button tab-index="0" id="vuejs" class="project_tab">VueJS</button></li>
-							<li><button tab-index="0" id="htmlcss" class="project_tab">HTML/CSS</button></li>
-							<li><button tab-index="0" id="wordpress" class="project_tab">WordPress</button></li>
+							<li>
+								<button
+								tab-index="0"
+								id="all"
+								class="project_tab"
+								aria-expanded="false"
+								>All</button>
+							</li>
+							<li>
+								<button
+								id="javascript"
+								class="project_tab"
+								aria-expanded="false"
+								>Javascript</button>
+							</li>
+							<li><button
+								tab-index="0"
+								id="php"
+								class="project_tab"
+								aria-expanded="false"
+								>PHP</button>
+							</li>
+							<li><button
+								tab-index="0"
+								id="react"
+								class="project_tab"
+								aria-expanded="false"
+								>React</button>
+							</li>
+							<li><button
+								tab-index="0"
+								id="vuejs"
+								class="project_tab"
+								aria-expanded="false"
+								>VueJS</button>
+							</li>
+							<li><button
+								tab-index="0"
+								id="htmlcss"
+								class="project_tab"
+								aria-expanded="false"
+								>HTML/CSS</button>
+							</li>
+							<li>
+								<button
+								tab-index="0"
+								id="wordpress"
+								class="project_tab"
+								aria-expanded="false"
+								>WordPress</button>
+							</li>
 						</ul>
 <br>
 						<div class="parent">
@@ -350,7 +396,11 @@
 						<section id="slider">
 							<div class="hero-slider">
 								<div class="mask">
-									<div class="slider-body">
+									<div
+										class="slider-body"
+										role="region"
+										aria-label="hero carousel"
+										>
 
 									</div>
 								</div>

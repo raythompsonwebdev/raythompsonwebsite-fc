@@ -1,121 +1,119 @@
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-const mask = window.document.querySelector(".hero-slider > .mask");
-const panelContainer = document.querySelector(".slider-body");
-let currentIndex = 0;
-fetch("./js/dev/data/slider-data.json")
-	.then((response) => {
-		if (!response.ok) {
-			throw new Error("JSON data not received");
-		}
+"use strict";
 
-		return response.json();
-	})
-	.then((data) => {
-		const slider = data.sliderdata;
-		slider.forEach((slide) => {
-			const panel = document.createElement("ARTICLE");
-			panel.setAttribute("class", "panel");
-			panel.setAttribute("id", "#".concat(slide.hash));
-			const slidepanel = document.createElement("FIGURE");
-			slidepanel.setAttribute("class", "slider-panel");
-			const slidepanelImgLink = document.createElement("A");
-			slidepanelImgLink.setAttribute("href", "");
-			slidepanelImgLink.setAttribute("class", "fancybox");
-			const slidepanelImg = document.createElement("SPAN");
-			slidepanelImg.setAttribute(
-				"style",
-				"background-image: url(".concat(slide.bgimage, ")")
-			);
-			const slidepanelCaption = document.createElement("FIGCAPTION");
-			const slidepanelHeadingThree = document.createElement("H3");
-			slidepanelHeadingThree.textContent = "".concat(slide.header); // const slidepanelHeadingFour = document.createElement("H4");
-			// slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
+var next = document.getElementById("next");
+var prev = document.getElementById("prev");
+var mask = window.document.querySelector(".hero-slider > .mask");
+var panelContainer = document.querySelector(".slider-body");
+var currentIndex = 0;
+fetch("./js/dev/data/slider-data.json").then(function (response) {
+  if (!response.ok) {
+    throw new Error("JSON data not received");
+  }
 
-			const slidepanelList = document.createElement("UL");
-			const slidepanelListItem = document.createElement("lI");
-			slidepanelListItem.textContent = "".concat(slide.task1);
-			const slidepanelListItem2 = document.createElement("lI");
-			slidepanelListItem2.textContent = "".concat(slide.task2);
-			const slidepanelListItem3 = document.createElement("lI");
-			slidepanelListItem3.textContent = "".concat(slide.task3);
-			const slidepanelListItem4 = document.createElement("lI");
-			slidepanelListItem4.textContent = "".concat(slide.task4);
-			const slidepanelListItem5 = document.createElement("lI");
-			slidepanelListItem5.textContent = "".concat(slide.task5);
-			panel.append(slidepanel);
-			panelContainer.append(panel);
-			slidepanel.append(slidepanelImgLink);
-			slidepanelImgLink.append(slidepanelImg);
-			slidepanel.append(slidepanelCaption);
-			slidepanelCaption.append(slidepanelHeadingThree); // slidepanelCaption.append(slidepanelHeadingFour);
+  return response.json();
+}).then(function (data) {
+  var slider = data.sliderdata;
+  slider.forEach(function (slide) {
+    var panel = document.createElement("ARTICLE");
+    panel.setAttribute("class", "panel");
+    panel.setAttribute("id", "#".concat(slide.hash));
+    var slidepanel = document.createElement("FIGURE");
+    slidepanel.setAttribute("class", "slider-panel");
+    var slidepanelImgLink = document.createElement("A");
+    slidepanelImgLink.setAttribute("href", "");
+    slidepanelImgLink.setAttribute("class", "fancybox");
+    var slidepanelImg = document.createElement("SPAN");
+    slidepanelImg.setAttribute("style", "background-image: url(".concat(slide.bgimage, ")"));
+    var slidepanelCaption = document.createElement("FIGCAPTION");
+    var slidepanelHeadingThree = document.createElement("H3");
+    slidepanelHeadingThree.textContent = "".concat(slide.header); // const slidepanelHeadingFour = document.createElement("H4");
+    // slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
 
-			slidepanelCaption.append(slidepanelList);
-			slidepanelList.append(slidepanelListItem);
-			slidepanelList.append(slidepanelListItem2);
-			slidepanelList.append(slidepanelListItem3);
-			slidepanelList.append(slidepanelListItem4);
-			slidepanelList.append(slidepanelListItem5);
-		});
-	});
-const panels = document.getElementsByClassName("panel");
+    var slidepanelList = document.createElement("UL");
+    var slidepanelListItem = document.createElement("lI");
+    slidepanelListItem.textContent = "".concat(slide.task1);
+    var slidepanelListItem2 = document.createElement("lI");
+    slidepanelListItem2.textContent = "".concat(slide.task2);
+    var slidepanelListItem3 = document.createElement("lI");
+    slidepanelListItem3.textContent = "".concat(slide.task3);
+    var slidepanelListItem4 = document.createElement("lI");
+    slidepanelListItem4.textContent = "".concat(slide.task4);
+    var slidepanelListItem5 = document.createElement("lI");
+    slidepanelListItem5.textContent = "".concat(slide.task5);
+    panel.append(slidepanel);
+    panelContainer.append(panel);
+    slidepanel.append(slidepanelImgLink);
+    slidepanelImgLink.append(slidepanelImg);
+    slidepanel.append(slidepanelCaption);
+    slidepanelCaption.append(slidepanelHeadingThree); // slidepanelCaption.append(slidepanelHeadingFour);
 
-const scrollTo = function scrollTo(element) {
-	mask.scrollTo({
-		behavior: "smooth",
-		left: 0,
-		top: element.offsetTop,
-	});
+    slidepanelCaption.append(slidepanelList);
+    slidepanelList.append(slidepanelListItem);
+    slidepanelList.append(slidepanelListItem2);
+    slidepanelList.append(slidepanelListItem3);
+    slidepanelList.append(slidepanelListItem4);
+    slidepanelList.append(slidepanelListItem5);
+  });
+});
+var panels = document.getElementsByClassName("panel");
+
+var scrollTo = function scrollTo(element) {
+  mask.scrollTo({
+    behavior: "smooth",
+    left: 0,
+    top: element.offsetTop
+  });
 };
 
-const updateIndex = function updateIndex() {
-	const upperlimit = panels.length - 1;
+var updateIndex = function updateIndex() {
+  var upperlimit = panels.length - 1;
 
-	if (currentIndex === upperlimit) {
-		currentIndex = 0;
-	} else {
-		// eslint-disable-next-line no-plusplus
-		currentIndex++;
-	}
+  if (currentIndex === upperlimit) {
+    currentIndex = 0;
+  } else {
+    // eslint-disable-next-line no-plusplus
+    currentIndex++;
+  }
 };
 
-const undateIndex = function undateIndex() {
-	const lowerlimit = 0; // eslint-disable-next-line no-console
+var undateIndex = function undateIndex() {
+  var lowerlimit = 0;
 
-	console.log(lowerlimit);
-
-	if (currentIndex === lowerlimit) {
-		currentIndex = 0;
-	} else {
-		// eslint-disable-next-line no-plusplus
-		currentIndex--;
-	}
+  if (currentIndex === lowerlimit) {
+    currentIndex = 0;
+  } else {
+    // eslint-disable-next-line no-plusplus
+    currentIndex--;
+  }
 }; // Hero Slider
 
-next.addEventListener("click", (e) => {
-	// prev.classList.remove("active");
-	// e.target.classList.add("active");
-	e.preventDefault();
-	updateIndex(); // eslint-disable-next-line no-plusplus
 
-	for (let i = 0; i < panels.length; i++) {
-		if (i === currentIndex) {
-			scrollTo(document.getElementById("".concat(panels[i].id)));
-		}
-	} // disable click event
+next.addEventListener("click", function (e) {
+  // prev.classList.remove("active");
+  // e.target.classList.add("active");
+  e.preventDefault();
+  updateIndex(); // eslint-disable-next-line no-plusplus
 
-	return false;
+  for (var i = 0; i < panels.length; i++) {
+    if (i === currentIndex) {
+      scrollTo(document.getElementById("".concat(panels[i].id)));
+    }
+  } // disable click event
+
+
+  return false;
 });
-prev.addEventListener("click", (e) => {
-	e.preventDefault();
-	undateIndex(); // eslint-disable-next-line no-plusplus
+prev.addEventListener("click", function (e) {
+  e.preventDefault();
+  undateIndex(); // eslint-disable-next-line no-plusplus
 
-	for (let i = 0; i < panels.length; i++) {
-		if (i === currentIndex) {
-			scrollTo(document.getElementById("".concat(panels[i].id)));
-		}
-	} // disable click event
+  for (var i = 0; i < panels.length; i++) {
+    if (i === currentIndex) {
+      scrollTo(document.getElementById("".concat(panels[i].id)));
+    }
+  } // disable click event
 
-	return false;
+
+  return false;
 });
-// # sourceMappingURL=slider.js.map
+//# sourceMappingURL=slider.js.map
