@@ -235,16 +235,16 @@
 				padding: 1%;
 
 				h1 {
-					font-size: 2.9rem;
+					font-size: calc(1rem + 2vw);
 					width: auto;
 					text-align: left;
 					color: $textcolor1;
-					text-shadow: 1px 1px $textcolor2;
+					//text-shadow: 1px 1px $textcolor2;
 					line-height: 70px;
 				}
 				p {
 					font-size: 1.1em;
-					width: calc(100% - 1%);
+					width: 100%;
 					color: $textcolor1;
 					text-shadow: 1px 1px $textcolor2;
 					line-height: 2em;
@@ -1037,9 +1037,9 @@
 			flex: 0 0 auto;
 
 			article#bannertext {
-				h1 {
-					font-size: 2.7rem;
-				}
+				// h1 {
+				// 	font-size: 2.7rem;
+				// }
 				p {
 					font-size: 1.1em;
 				}
@@ -1314,9 +1314,9 @@
 			flex: 0 0 auto;
 
 			article#bannertext {
-				h1 {
-					font-size: 2.5rem;
-				}
+				// h1 {
+				// 	font-size: 2.5rem;
+				// }
 				p {
 					font-size: 1.05em;
 				}
@@ -1608,9 +1608,9 @@
 
 			article#bannertext {
 				width: calc(100% - 5%);
-				h1 {
-					font-size: 2.3rem;
-				}
+				// h1 {
+				// 	font-size: 2.3rem;
+				// }
 				p {
 					font-size: 1em;
 					line-height: 2.1em;
@@ -1881,9 +1881,9 @@
 			flex: 0 0 auto;
 
 			article#bannertext {
-				h1 {
-					font-size: 2.2rem;
-				}
+				// h1 {
+				// 	font-size: 2.2rem;
+				// }
 				p {
 					font-size: 0.95em;
 				}
@@ -2185,9 +2185,9 @@
 			}
 
 			article#bannertext {
-				h1 {
-					font-size: 2.1rem;
-				}
+				// h1 {
+				// 	font-size: 2.1rem;
+				// }
 				p {
 					font-size: 0.9em;
 					line-height: 2.2em;
@@ -2545,9 +2545,9 @@
 				display: block;
 			}
 			article#bannertext {
-				h1 {
-					font-size: 2rem;
-				}
+				// h1 {
+				// 	font-size: 2rem;
+				// }
 				p {
 					font-size: 0.85em;
 				}
@@ -2821,9 +2821,9 @@
 				display: block;
 			}
 			article#bannertext {
-				h1 {
-					font-size: 1.8rem;
-				}
+				// h1 {
+				// 	font-size: 1.8rem;
+				// }
 				p {
 					font-size: 1em;
 				}

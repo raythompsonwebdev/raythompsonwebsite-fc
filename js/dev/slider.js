@@ -4,6 +4,20 @@ const mask = window.document.querySelector(".hero-slider > .mask");
 const panelContainer = document.querySelector(".slider-body");
 let currentIndex = 0;
 
+// // ASYNC-AWAIT fetch GET
+// const getData = async () => {
+// 	try {
+// 		const response = await fetch("./js/dev/data/slider-data.json");
+// 		if (response.ok) {
+// 			const jsonResponse = await response.json();
+// 			return jsonResponse;
+// 		}
+// 		throw new Error("Request failed!");
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
+
 fetch("./js/dev/data/slider-data.json")
 	.then((response) => {
 		if (!response.ok) {

@@ -40,7 +40,6 @@ h2 {
 p {
   font-family: "Lato", serif;
   line-height: 1.7em;
-  font-size: 1rem;
   margin: 0;
   margin-bottom: 0.5em;
   color: #000000;
@@ -78,17 +77,6 @@ hr {
   width: 70%;
   display: block;
   color: #000000;
-}
-
-.screenreader-visible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 :root {
@@ -324,16 +312,15 @@ main.site_content section#contact {
     padding: 1%;
   }
   main.site_content div#banner article#bannertext h1 {
-    font-size: 2.9rem;
+    font-size: calc(1rem + 2vw);
     width: auto;
     text-align: left;
     color: #000000;
-    text-shadow: 1px 1px #ffffff;
     line-height: 70px;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1.1em;
-    width: 99%;
+    width: 100%;
     color: #000000;
     text-shadow: 1px 1px #ffffff;
     line-height: 2em;
@@ -1072,9 +1059,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner {
     flex: 0 0 auto;
   }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2.7rem;
-  }
   main.site_content div#banner article#bannertext p {
     font-size: 1.1em;
   }
@@ -1299,9 +1283,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 
   main.site_content div#banner {
     flex: 0 0 auto;
-  }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2.5rem;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1.05em;
@@ -1547,9 +1528,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner article#bannertext {
     width: 95%;
   }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2.3rem;
-  }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
     line-height: 2.1em;
@@ -1780,9 +1758,6 @@ main.site_content section#contact {
   }
   main.site_content div#banner {
     flex: 0 0 auto;
-  }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2.2rem;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 0.95em;
@@ -2033,9 +2008,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner figure > img,
 main.site_content div#banner figure > picture {
     display: block;
-  }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2.1rem;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 0.9em;
@@ -2350,9 +2322,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 2rem;
-  }
   main.site_content div#banner article#bannertext p {
     font-size: 0.85em;
   }
@@ -2577,9 +2546,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner figure > img,
 main.site_content div#banner figure > picture {
     display: block;
-  }
-  main.site_content div#banner article#bannertext h1 {
-    font-size: 1.8rem;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;

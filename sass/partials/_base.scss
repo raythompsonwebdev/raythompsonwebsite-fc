@@ -36,7 +36,6 @@ h2 {
 p {
 	font-family: $fontText;
 	line-height: 1.7em;
-	font-size: 1rem;
 	margin: 0;
 	margin-bottom: 0.5em;
 	color: $textcolor1;
@@ -76,13 +75,13 @@ hr {
 	color: $textcolor1;
 }
 
-.screenreader-visible {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-}
+// .screenreader-visible {
+// 	position: absolute;
+// 	width: 1px;
+// 	height: 1px;
+// 	padding: 0;
+// 	margin: -1px;
+// 	overflow: hidden;
+// 	clip: rect(0, 0, 0, 0);
+// 	border: 0;
+// }
