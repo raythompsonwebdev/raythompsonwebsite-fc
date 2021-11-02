@@ -108,7 +108,7 @@ hr {
   width: 25%;
   text-align: center;
   padding: 0;
-  left: calc(71vw - 20px);
+  left: calc(75vw - 20px);
 }
 
 .menu-toggle.hide {
@@ -121,10 +121,6 @@ hr {
   text-decoration: underline;
   border: solid 2px #000000;
   cursor: pointer;
-}
-
-.toggled .menu-toggle.hide {
-  bottom: 1em;
 }
 
 #site_wrapper {
@@ -189,7 +185,7 @@ hr {
   position: fixed;
   z-index: 100;
   top: -240px;
-  width: 91%;
+  width: 100%;
   height: 240px;
   overflow: hidden;
   margin: 0;
@@ -305,7 +301,7 @@ main.site_content {
   align-content: center;
   gap: 1em 0;
   min-height: 100vh;
-  width: 93%;
+  width: 100%;
   margin-bottom: 0.5em;
 }
 @keyframes example {
@@ -468,7 +464,7 @@ main.site_content section#project_page div#project_page_container {
 main.site_content section#project_page .parent {
   display: flex;
   -webkit-flex-flow: column;
-  -ms-flex-flow: row wrap;
+  -ms-flex-flow: column;
   flex-flow: column;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
@@ -1061,8 +1057,1036 @@ main.site_content section#contact div#contact_container form#myform button#submi
   cursor: pointer;
 }
 
+@media only screen and (min-width: 46em) and (max-width: 1023px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #site_wrapper {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .fixed-header {
+    font-size: 90%;
+  }
+
+  .site_header {
+    height: 100px;
+  }
+  .site_header span.site-title {
+    width: 20%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.3rem;
+    line-height: 35px;
+  }
+  .site_header span.site-title p {
+    font-size: 0.8rem;
+  }
+  .site_header .site_navigation {
+    display: block;
+    width: 45%;
+    flex: 1 0 auto;
+    height: auto;
+    margin-bottom: 0.5em;
+    top: 0;
+    position: unset;
+  }
+  .site_header .site_navigation ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .site_header .site_navigation ul .tablink {
+    color: #000000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    flex: 0 0 auto;
+    width: 24%;
+    line-height: 50px;
+    margin: 0;
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+    text-align: center;
+    /* visited link */
+    /* selected link */
+  }
+  .site_header .site_navigation ul .tablink a:visited {
+    border: #000000 dotted 1px;
+  }
+  .site_header .site_navigation ul .tablink a:active {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .site_header .site_navigation ul .tablink a:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .site_header .site_navigation .tablink:hover {
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+  }
+  .site_header ul#social {
+    height: 40px;
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+    display: flex;
+    list-style: none;
+    font-family: "FontAwesome";
+    position: unset;
+    top: 0;
+    left: 0;
+  }
+  .site_header ul#social li.social-item {
+    width: 32%;
+    height: auto;
+    margin-right: 0.2em;
+    text-align: center;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .site_header ul#social li.social-item a {
+    margin: 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    background-color: #f5f2e4;
+    text-align: center;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter,
+.site_header ul#social li.social-item a i.fa-facebook,
+.site_header ul#social li.social-item a i.fa-linkedin,
+.site_header ul#social li.social-item a i.far.fa-discord {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.25em;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter:hover,
+.site_header ul#social li.social-item a i.fa-facebook:hover,
+.site_header ul#social li.social-item a i.fa-linkedin:hover,
+.site_header ul#social li.social-item a i.far.fa-discord:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  main.site_content {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    gap: 1em 0;
+    min-height: 80vh;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  main.site_content div#banner,
+main.site_content section#project_page,
+main.site_content section#about_content,
+main.site_content section#contact {
+    min-height: 90vh;
+    margin-bottom: 100px;
+  }
+  main.site_content div#banner {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  main.site_content div#banner article#bannertext {
+    width: 55%;
+  }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 70px;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 1.1em;
+  }
+  main.site_content div#banner figure {
+    position: relative;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    width: auto;
+  }
+  main.site_content div#banner::before {
+    width: 100%;
+  }
+  main.site_content section#project_page {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main.site_content section#project_page h2 {
+    align-self: flex-start;
+    font-size: 1.3rem;
+  }
+  main.site_content section#project_page div#project_page_container {
+    width: 100%;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: start;
+    justify-content: start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 15%;
+    flex: 0 0 auto;
+    margin-right: 0.2em;
+    font-family: "Lato", serif;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    display: block;
+    background-color: #f5f2e4;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
+    background-color: #262425;
+    color: #f5f2e4;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  main.site_content section#project_page .parent {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  main.site_content section#project_page figure.box {
+    width: 47.75%;
+  }
+  main.site_content section#project_page figcaption.cover {
+    position: absolute;
+  }
+  main.site_content section#project_page figcaption.cover a.cert_link {
+    font-size: 1em;
+  }
+  main.site_content section#project_page figcaption.cover a.cert_link:hover {
+    font-weight: bold;
+  }
+  main.site_content section#project_page figcaption.cover h3.cert_title {
+    font-size: 1em;
+  }
+  main.site_content section#project_page figure.box:hover figcaption.cover {
+    opacity: 1;
+  }
+  main.site_content section#project_page figure.box > img,
+main.site_content section#project_page figure > picture {
+    margin: 0 auto;
+  }
+  main.site_content section#project_page figure.box:hover img {
+    margin: 0 auto;
+  }
+  main.site_content section#about_content {
+    gap: 1em;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.3rem;
+  }
+  main.site_content section#about_content div#abouttext {
+    padding: 0.25em;
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext figure#page-image {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.9em;
+    line-height: 2em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin-left: 0.5em;
+    float: right;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    height: 50px;
+    font-size: 1.2em;
+    line-height: 50px;
+    text-indent: 0.5em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    width: 100%;
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    -webkit-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    -moz-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    -o-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    align-self: flex-start;
+    width: 100%;
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    display: block;
+    background-color: #e0e0e0;
+    background-repeat: no-repeat;
+    background-position: center 15%;
+    background-size: cover;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.85em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    width: 99%;
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids {
+    height: 40px;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    background-color: #f5f2e4;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    color: #262425;
+  }
+  main.site_content section#contact {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #efefef;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.3rem;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 50px;
+  }
+  main.site_content section#contact div#contact_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 98%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 40%;
+    flex: 1 0 auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    text-indent: 1em;
+    font-size: 1.25rem;
+    background-color: #f5f2e4;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+    font-family: "FontAwesome";
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    width: auto;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 40px;
+    margin-left: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
+    content: "\f466";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
+    content: "\f301";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+    content: "\f18d";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
+    content: "\f237";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image {
+    width: 90%;
+    margin: 1em auto;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image img {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container .hide-error {
+    display: none;
+  }
+  main.site_content section#contact div#contact_container .show-error {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    list-style: none;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    float: left;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
+main.site_content section#contact div#contact_container form#myform ol li select {
+    border-color: #dee2f7;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
+    border: solid 3px #b0f1b0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+    flex: 1 0 auto;
+    height: 30px;
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+    height: 100%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    display: inline-block;
+    height: 30px;
+    flex: 1 0 auto;
+    width: 8%;
+    margin: 0 1.5em;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1.1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    background-color: #262425;
+  }
+
+  .site_footer {
+    clear: both;
+  }
+  .site_footer ul {
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .site_footer ul li {
+    float: left;
+    width: 10%;
+  }
+  .site_footer ul li a {
+    line-height: 50px;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 37.5em) and (max-width: 735px) {
+  .menu-toggle {
+    left: calc(78vw - 20px);
+  }
+
+  #site_wrapper {
+    width: 98%;
+  }
+
+  .site_header span.site-title {
+    width: 3%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.2rem;
+    line-height: 35px;
+  }
+  .site_header span.site-title p {
+    font-size: 0.8rem;
+  }
+  .site_header .site_navigation {
+    width: 100%;
+  }
+  .site_header .site_navigation ul .tablink {
+    font-size: 0.9em;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+    font-size: 0.9em;
+  }
+  .site_header ul#social {
+    left: 79vw;
+    width: 20%;
+  }
+
+  main.site_content div#banner {
+    width: 100%;
+  }
+  main.site_content div#banner figure {
+    margin: 1em auto;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    display: block;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 0.9em;
+    line-height: 2.2em;
+  }
+  main.site_content section#project_page h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#project_page .parent {
+    width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    width: 100%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 49%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.85em;
+  }
+  main.site_content section#project_page figcaption.cover a.cert_link {
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page figcaption.cover h3.cert_title {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content {
+    width: 100%;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.85em;
+    line-height: 2.3em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.15em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.8em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#contact div#contact_container p {
+    font-size: 0.85em;
+    line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 94%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    text-indent: 0;
+    font-size: 1rem;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 94%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+    height: 30px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    height: 30px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    cursor: pointer;
+  }
+
+  .site_footer {
+    height: 50px;
+  }
+  .site_footer ul {
+    width: 90%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.8em;
+  }
+}
+/* 480px */
+@media only screen and (min-width: 30em) and (max-width: 599px) {
+  .menu-toggle {
+    font-size: 1em;
+    left: 73%;
+  }
+
+  .menu-toggle.hide {
+    left: 110vw;
+  }
+
+  #site_wrapper {
+    width: 98%;
+  }
+
+  .site_header span.site-title {
+    width: 65%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.3rem;
+  }
+  .site_header span.site-title p {
+    font-size: 0.9rem;
+  }
+  .site_header .site_navigation {
+    left: 0;
+  }
+  .site_header .site_navigation ul {
+    height: 100%;
+  }
+  .site_header .site_navigation ul .tablink {
+    font-size: 1em;
+  }
+  .site_header .site_navigation ul .tablink a {
+    font-size: 1em;
+  }
+  .site_header .site_navigation ul .tablink:hover {
+    cursor: pointer;
+  }
+  .site_header .site_navigation .nav-menu {
+    margin-bottom: 3em;
+  }
+
+  main.site_content {
+    height: auto;
+  }
+  main.site_content div#banner {
+    width: 100%;
+  }
+  main.site_content div#banner figure {
+    margin: 1em auto;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    display: block;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 0.85em;
+  }
+  main.site_content section#project_page h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#project_page .parent {
+    width: 98%;
+    margin: auto;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    width: 96%;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 48%;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page figcaption.cover {
+    position: absolute;
+  }
+  main.site_content section#project_page figcaption.cover a.cert_link {
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page figcaption.cover h3.cert_title {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content {
+    width: 100%;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#about_content div#abouttext {
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext p {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.05em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.2rem;
+  }
+  main.site_content section#contact div#contact_container p {
+    line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 0.9em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 94%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+    height: 30px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    height: 30px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    cursor: pointer;
+  }
+
+  .site_footer {
+    height: 50px;
+  }
+  .site_footer ul {
+    width: 94%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.8em;
+  }
+}
 /* 360px */
-@media (min-width: 22.5em) {
+@media only screen and (min-width: 22.5em) and (max-width: 479px) {
   #site_wrapper {
     width: 98%;
   }
@@ -1074,7 +2098,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
     font-size: 1.2rem;
   }
   .site_header span.site-title p {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
   .site_header .site_navigation {
     height: 240px;
@@ -1094,9 +2118,6 @@ main.site_content section#contact div#contact_container form#myform button#submi
     padding: 1em;
     margin-bottom: 3em;
   }
-  .site_header ul#social {
-    width: 30%;
-  }
 
   main.site_content div#banner {
     width: 100%;
@@ -1109,16 +2130,16 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content div#banner article#bannertext p {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   main.site_content section#project_page .parent {
     width: 100%;
   }
   main.site_content section#project_page ul#project_tabs {
-    width: 70%;
+    width: 100%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   main.site_content section#project_page figure.box {
     width: 99.75%;

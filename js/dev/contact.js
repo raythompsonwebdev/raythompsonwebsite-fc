@@ -4,6 +4,7 @@
 const myForm = document.forms[0];
 const mySubmit = document.getElementById("submit");
 const error = document.getElementById("form-error");
+
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 
@@ -73,7 +74,12 @@ url.addEventListener("blur", (e) => {
 	}
 });
 
-function showError() {
+function showError(e) {
+	// const myname = document.querySelector("#myname").value;
+	// const myemail = document.querySelector("#myemail").value;
+	// const reference = document.querySelector("#reference").value;
+	e.preventDefault();
+
 	if (text.validity.valueMissing && email.validity.valueMissing) {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
@@ -88,7 +94,36 @@ function showError() {
 		text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
 		email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
 	} else {
-		myForm.submit();
+		// const data = new FormData(myForm);
+		const URLSearchParamss = new URLSearchParams(myForm);
+		// eslint-disable-next-line no-console
+		// eslint-disable-next-line no-console
+		console.log(URLSearchParamss);
+
+		fetch("php/validation.php", {
+			method: "POST",
+			body: URLSearchParamss,
+		})
+			.then((response) => {
+				if (response.status !== 200) {
+					// eslint-disable-next-line no-alert
+					alert(
+						`Looks like there was a problem. Status Code: ${response.status}`
+					);
+				}
+
+				return response.json();
+
+				// Examine the text in the response
+			})
+			.then((response) => {
+				// eslint-disable-next-line no-console
+				console.log(response);
+			})
+			.catch((err) => {
+				// eslint-disable-next-line no-console
+				console.error("Fetch Error :-S", err);
+			});
 	}
 }
 mySubmit.addEventListener("click", showError);
