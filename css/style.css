@@ -208,8 +208,14 @@ hr {
   list-style: none;
   width: 100%;
   display: block;
-  margin-bottom: 0;
   font-size: 1em;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin: 0;
+  transition: all, 0.5s;
 }
 .site_header .site_navigation ul .tablink a {
   line-height: 60px;
@@ -220,6 +226,19 @@ hr {
   display: block;
   color: #ffffff;
   background-color: #000000;
+  /* visited link */
+  /* selected link */
+}
+.site_header .site_navigation ul .tablink a:visited {
+  border: #000000 dotted 1px;
+}
+.site_header .site_navigation ul .tablink a:active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.site_header .site_navigation ul .tablink a:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 .site_header .site_navigation ul .tablink:hover {
   font-weight: bold;
@@ -360,7 +379,7 @@ main.site_content div#banner figure > picture {
   vertical-align: bottom;
 }
 main.site_content div#banner article#bannertext {
-  width: calc(80% - 10px);
+  width: calc(70% - 10px);
   position: relative;
   background-color: #fff;
   padding: 1%;
@@ -413,12 +432,8 @@ main.site_content section#project_page h2 {
 }
 main.site_content section#project_page ul#project_tabs {
   display: flex;
-  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-justify-content: start;
-  justify-content: start;
-  -webkit-align-items: space-between;
-  align-items: space-between;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0 0 0.5em 0;
@@ -1057,6 +1072,922 @@ main.site_content section#contact div#contact_container form#myform button#submi
   cursor: pointer;
 }
 
+/* 1440px */
+@media only screen and (min-width: 90em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #site_wrapper {
+    width: 96%;
+  }
+
+  .site_header span.site-title {
+    width: 20%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.7rem;
+    line-height: 40px;
+  }
+  .site_header span.site-title p {
+    font-size: 1rem;
+  }
+  .site_header .site_navigation {
+    display: block;
+    width: 45%;
+    flex: 1 0 auto;
+    height: auto;
+    margin-bottom: 0.5em;
+    top: 0;
+    position: unset;
+  }
+  .site_header .site_navigation ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .site_header .site_navigation ul .tablink {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+    line-height: 50px;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 1em;
+  }
+  .site_header ul#social {
+    height: 45px;
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+    display: flex;
+    list-style: none;
+    font-family: "FontAwesome";
+    position: unset;
+    top: 0;
+    left: 0;
+  }
+  .site_header ul#social li.social-item a {
+    line-height: 45px;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter,
+.site_header ul#social li.social-item a i.fa-facebook,
+.site_header ul#social li.social-item a i.fa-linkedin {
+    font-size: 1.3em;
+    line-height: 45px;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter:hover,
+.site_header ul#social li.social-item a i.fa-facebook:hover,
+.site_header ul#social li.social-item a i.fa-linkedin:hover {
+    transform: scale(1.2);
+  }
+
+  main.site_content div#banner {
+    flex: 0 0 auto;
+  }
+  main.site_content div#banner article#bannertext {
+    width: 45%;
+  }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 70px;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 1em;
+    line-height: 2.1em;
+  }
+  main.site_content div#banner figure {
+    margin: 1em auto;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    display: block;
+  }
+  main.site_content section#project_page h2 {
+    font-size: 1.3rem;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: start;
+    justify-content: start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 15%;
+    flex: 0 0 auto;
+    margin-right: 0.2em;
+    font-family: "Lato", serif;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    display: block;
+    background-color: #f5f2e4;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
+    background-color: #262425;
+    color: #f5f2e4;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  main.site_content section#project_page .parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  main.site_content section#project_page figure.box {
+    width: 24%;
+  }
+  main.site_content section#about_content {
+    width: 100%;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#about_content div#abouttext {
+    width: 100%;
+    margin-bottom: 1em;
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext p {
+    line-height: 2.5em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin-left: 0.5em;
+    float: right;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#contact div#contact_container p {
+    line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 40%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    font-size: 1.15rem;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    width: 9%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
+  }
+
+  .site_footer {
+    height: 50px;
+  }
+  .site_footer ul {
+    width: 90%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.85em;
+  }
+}
+/* 1280px */
+@media only screen and (min-width: 80em) and (max-width: 1439px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #site_wrapper {
+    width: 96%;
+  }
+
+  .site_header span.site-title {
+    width: 20%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+  .site_header span.site-title p {
+    font-size: 1rem;
+  }
+  .site_header .site_navigation {
+    display: block;
+    width: 45%;
+    flex: 1 0 auto;
+    height: auto;
+    margin-bottom: 0.5em;
+    top: 0;
+    position: unset;
+  }
+  .site_header .site_navigation ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .site_header .site_navigation ul .tablink {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    font-size: 1em;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+    line-height: 50px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .site_header ul#social {
+    height: 40px;
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+    display: flex;
+    list-style: none;
+    font-family: "FontAwesome";
+    position: unset;
+    top: 0;
+    left: 0;
+  }
+  .site_header ul#social li.social-item a {
+    line-height: 40px;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter,
+.site_header ul#social li.social-item a i.fa-facebook,
+.site_header ul#social li.social-item a i.fa-linkedin {
+    font-size: 1.15em;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter:hover,
+.site_header ul#social li.social-item a i.fa-facebook:hover,
+.site_header ul#social li.social-item a i.fa-linkedin:hover {
+    transform: scale(1.2);
+  }
+
+  main.site_content div#banner {
+    flex: 0 0 auto;
+  }
+  main.site_content div#banner article#bannertext {
+    width: 45%;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 1em;
+    line-height: 2.1em;
+  }
+  main.site_content div#banner figure {
+    margin: 1em auto;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    display: block;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: start;
+    justify-content: start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 15%;
+    flex: 0 0 auto;
+    margin-right: 0.2em;
+    font-family: "Lato", serif;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    display: block;
+    background-color: #f5f2e4;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
+    background-color: #262425;
+    color: #f5f2e4;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  main.site_content section#project_page .parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  main.site_content section#project_page figure.box {
+    width: 24%;
+  }
+  main.site_content section#about_content {
+    width: 100%;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#about_content div#abouttext {
+    width: 100%;
+    margin-bottom: 1em;
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext p {
+    line-height: 2.5em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin-left: 0.5em;
+    float: right;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.35em;
+  }
+  main.site_content section#contact div#contact_container p {
+    line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 40%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    font-size: 1.15rem;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    width: 9%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
+  }
+
+  .site_footer {
+    height: 50px;
+  }
+  .site_footer ul {
+    width: 90%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.85em;
+  }
+}
+/* 1024px */
+@media only screen and (min-width: 64em) and (max-width: 1279px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #site_wrapper {
+    width: 96%;
+  }
+
+  .site_header span.site-title {
+    width: 20%;
+  }
+  .site_header span.site-title p.logo {
+    font-size: 1.4rem;
+  }
+  .site_header span.site-title p {
+    font-size: 0.9rem;
+  }
+  .site_header .site_navigation {
+    display: block;
+    width: 45%;
+    flex: 1 0 auto;
+    height: auto;
+    margin-bottom: 0.5em;
+    top: 0;
+    position: unset;
+  }
+  .site_header .site_navigation ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .site_header .site_navigation ul .tablink {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    font-size: 1em;
+  }
+  .site_header .site_navigation ul .tablink a {
+    display: block;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .site_header ul#social {
+    height: 40px;
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+    display: flex;
+    list-style: none;
+    font-family: "FontAwesome";
+    position: unset;
+    top: 0;
+    left: 0;
+  }
+  .site_header ul#social li.social-item a {
+    line-height: 40px;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter,
+.site_header ul#social li.social-item a i.fa-facebook,
+.site_header ul#social li.social-item a i.fa-linkedin {
+    font-size: 1.15em;
+    line-height: 40px;
+  }
+  .site_header ul#social li.social-item a i.fa-twitter:hover,
+.site_header ul#social li.social-item a i.fa-facebook:hover,
+.site_header ul#social li.social-item a i.fa-linkedin:hover {
+    transform: scale(1.2);
+  }
+
+  main.site_content div#banner {
+    flex: 0 0 auto;
+  }
+  main.site_content div#banner article#bannertext {
+    width: 55%;
+  }
+  main.site_content div#banner article#bannertext p {
+    font-size: 1em;
+    line-height: 2.1em;
+  }
+  main.site_content div#banner figure {
+    margin: 1em auto;
+  }
+  main.site_content div#banner figure > img,
+main.site_content div#banner figure > picture {
+    display: block;
+  }
+  main.site_content section#project_page ul#project_tabs {
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: start;
+    justify-content: start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  main.site_content section#project_page ul#project_tabs li {
+    width: 15%;
+    flex: 0 0 auto;
+    margin-right: 0.2em;
+    font-family: "Lato", serif;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab {
+    display: block;
+    background-color: #f5f2e4;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    font-size: 0.9em;
+  }
+  main.site_content section#project_page ul#project_tabs li button.project_tab:hover {
+    background-color: #262425;
+    color: #f5f2e4;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  main.site_content section#project_page .parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  main.site_content section#project_page figure.box {
+    width: 24%;
+  }
+  main.site_content section#about_content {
+    width: 100%;
+  }
+  main.site_content section#about_content h2 {
+    font-size: 1.3em;
+  }
+  main.site_content section#about_content div#abouttext {
+    width: 100%;
+    margin-bottom: 1em;
+    /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext p {
+    line-height: 2.5em;
+  }
+  main.site_content section#about_content div#abouttext section#slider {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin-left: 0.5em;
+    float: right;
+    /* Hero Slider */
+  }
+  main.site_content section#about_content div#abouttext section#slider h1 {
+    font-size: 1.1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
+    height: 335px;
+    /*position relative for scrolling*/
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
+    height: 375px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
+    display: block;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 150px;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    clear: both;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    width: 100%;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 0.9em;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
+    cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
+    width: 50%;
+  }
+  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
+    cursor: pointer;
+  }
+  main.site_content section#contact {
+    width: 100%;
+  }
+  main.site_content section#contact h2 {
+    font-size: 1.35em;
+  }
+  main.site_content section#contact div#contact_container p {
+    line-height: 1.8em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details {
+    width: 40%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details h3 {
+    font-size: 1.15rem;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address {
+    width: 90%;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol {
+    margin: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li {
+    height: auto;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label,
+main.site_content section#contact div#contact_container form#myform ol li #comment-header {
+    display: block;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
+    width: 80%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl {
+    line-height: 35px;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
+    width: 33%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
+    width: 50%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
+    width: 9%;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select {
+    line-height: 40px;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit {
+    font-size: 1em;
+  }
+
+  .site_footer {
+    height: 50px;
+  }
+  .site_footer ul {
+    width: 90%;
+  }
+  .site_footer ul li {
+    margin: 0;
+  }
+  .site_footer ul li a {
+    font-size: 0.85em;
+  }
+}
+/* 736px */
 @media only screen and (min-width: 46em) and (max-width: 1023px) {
   .menu-toggle {
     display: none;
@@ -1105,41 +2036,16 @@ main.site_content section#contact div#contact_container form#myform button#submi
     width: 80%;
   }
   .site_header .site_navigation ul .tablink {
-    color: #000000;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    flex: 0 0 auto;
-    width: 24%;
+    height: 50px;
     line-height: 50px;
-    margin: 0;
-    -webkit-transition: all, 0.5s;
-    -moz-transition: all, 0.5s;
-    -o-transition: all, 0.5s;
-    transition: all, 0.5s;
+    width: 24%;
+    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
-    text-align: center;
-    /* visited link */
-    /* selected link */
-  }
-  .site_header .site_navigation ul .tablink a:visited {
-    border: #000000 dotted 1px;
-  }
-  .site_header .site_navigation ul .tablink a:active {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .site_header .site_navigation ul .tablink a:hover {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .site_header .site_navigation .tablink:hover {
-    font-weight: bold;
+    line-height: 50px;
     color: #000000;
-    cursor: pointer;
+    background-color: #ffffff;
   }
   .site_header ul#social {
     height: 40px;
@@ -1177,8 +2083,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
   }
   .site_header ul#social li.social-item a i.fa-twitter,
 .site_header ul#social li.social-item a i.fa-facebook,
-.site_header ul#social li.social-item a i.fa-linkedin,
-.site_header ul#social li.social-item a i.far.fa-discord {
+.site_header ul#social li.social-item a i.fa-linkedin {
     display: block;
     width: 100%;
     height: 100%;
@@ -1192,8 +2097,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
   }
   .site_header ul#social li.social-item a i.fa-twitter:hover,
 .site_header ul#social li.social-item a i.fa-facebook:hover,
-.site_header ul#social li.social-item a i.fa-linkedin:hover,
-.site_header ul#social li.social-item a i.far.fa-discord:hover {
+.site_header ul#social li.social-item a i.fa-linkedin:hover {
     transform: scale(1.2);
     font-weight: bold;
     cursor: pointer;
@@ -1231,10 +2135,10 @@ main.site_content section#contact {
     width: 55%;
   }
   main.site_content div#banner article#bannertext h1 {
-    line-height: 70px;
+    line-height: 50px;
   }
   main.site_content div#banner article#bannertext p {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   main.site_content div#banner figure {
     position: relative;
@@ -1298,22 +2202,16 @@ main.site_content div#banner figure > picture {
     font-weight: bold;
   }
   main.site_content section#project_page .parent {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    -webkit-align-items: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 0;
     width: 100%;
     margin: auto;
   }
   main.site_content section#project_page figure.box {
-    width: 47.75%;
+    width: 32%;
   }
   main.site_content section#project_page figcaption.cover {
     position: absolute;
@@ -1621,6 +2519,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     font-size: 1em;
   }
 }
+/* 600px - MOBILE */
 @media only screen and (min-width: 37.5em) and (max-width: 735px) {
   .menu-toggle {
     left: calc(78vw - 20px);
@@ -1674,15 +2573,25 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#project_page .parent {
     width: 96%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: auto;
   }
   main.site_content section#project_page ul#project_tabs {
     width: 100%;
   }
   main.site_content section#project_page ul#project_tabs li {
-    width: 49%;
+    width: 24%;
   }
   main.site_content section#project_page ul#project_tabs li button.project_tab {
     font-size: 0.85em;
+  }
+  main.site_content section#project_page figure.box {
+    width: 48.75%;
   }
   main.site_content section#project_page figcaption.cover a.cert_link {
     font-size: 0.9em;
@@ -1701,7 +2610,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.85em;
-    line-height: 2.3em;
+    line-height: 2.1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 100%;
@@ -1886,9 +2795,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   .site_header .site_navigation ul .tablink a {
     font-size: 1em;
-  }
-  .site_header .site_navigation ul .tablink:hover {
-    cursor: pointer;
   }
   .site_header .site_navigation .nav-menu {
     margin-bottom: 3em;
@@ -2108,11 +3014,6 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   .site_header .site_navigation ul .tablink a {
     font-size: 0.9em;
-  }
-  .site_header .site_navigation ul .tablink:hover {
-    font-weight: bold;
-    color: #000000;
-    cursor: pointer;
   }
   .site_header .site_navigation .nav-menu {
     padding: 1em;
