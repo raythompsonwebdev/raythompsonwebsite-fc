@@ -88,7 +88,10 @@ url.addEventListener("blur", function (e) {
   }
 });
 
-function showError() {
+function showError(e) {
+  // const myname = document.querySelector("#myname").value;
+  // const myemail = document.querySelector("#myemail").value;
+  // const reference = document.querySelector("#reference").value;
   if (text.validity.valueMissing && email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
@@ -102,7 +105,28 @@ function showError() {
     text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
     email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
   } else {
-    myForm.submit();
+    e.preventDefault(); // const data = new FormData(myForm);
+
+    var URLSearchParamss = new URLSearchParams(myForm); // eslint-disable-next-line no-console
+
+    console.log(URLSearchParamss);
+    fetch("php/validation.php", {
+      method: "POST",
+      body: URLSearchParamss
+    }).then(function (response) {
+      if (response.status !== 200) {
+        // eslint-disable-next-line no-alert
+        alert("Looks like there was a problem. Status Code: ".concat(response.status));
+      }
+
+      return response.json(); // Examine the text in the response
+    }).then(function (response) {
+      // eslint-disable-next-line no-console
+      console.log(response);
+    })["catch"](function (err) {
+      // eslint-disable-next-line no-console
+      console.error("Fetch Error :-S", err);
+    });
   }
 }
 
