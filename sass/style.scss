@@ -36,7 +36,7 @@
 	width: 25%;
 	text-align: center;
 	padding: 0;
-	left: calc(75vw - 20px);
+	left: calc(79vw - 20px);
 }
 .menu-toggle.hide {
 	left: 110vw;
@@ -52,6 +52,8 @@
 
 #site_wrapper {
 	width: 98%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .fixed-header {
@@ -142,8 +144,7 @@
 				a {
 					line-height: 60px;
 					margin: 0;
-					letter-spacing: 0.1em;
-					font-size: 0.85em;
+					font-size: 1em;
 					text-align: center;
 					display: block;
 					color: $textcolor2;
@@ -178,10 +179,10 @@
 
 	ul#social {
 		position: fixed;
-		top: 60px;
 		z-index: 98;
-		left: 1vw;
-		width: 180px;
+		top: 60px;
+		left: 75vw;
+		width: 25%;
 		list-style: none;
 		flex: 1 0 auto;
 		display: flex;
@@ -352,7 +353,7 @@ main.site_content {
 
 		h2 {
 			align-self: flex-start;
-			font-size: 1.1rem;
+			font-size: 1.5rem;
 			display: block;
 			width: 100%;
 			line-height: 50px;
@@ -556,10 +557,9 @@ main.site_content {
 			}
 
 			p {
-				font-size: 0.8em;
-
+				font-size: 0.85em;
+				line-height: 2.3em;
 				width: auto;
-				line-height: 1.8em;
 				display: block;
 			}
 
@@ -980,7 +980,7 @@ main.site_content {
 					height: 35px;
 					margin: auto;
 					font-size: 1.1em;
-					border: none;
+					border: 1px solid #ccc;
 					background-color: $colorwhite;
 					&:hover {
 						background-color: $colorblack;
@@ -1149,7 +1149,7 @@ main.site_content {
 		}
 		section#project_page {
 			h2 {
-				font-size: 1.3rem;
+				font-size: 1.4rem;
 			}
 			ul#project_tabs {
 				display: flex;
@@ -1211,7 +1211,8 @@ main.site_content {
 				margin-bottom: 1em;
 
 				p {
-					line-height: 2.5em;
+					line-height: 2.2em;
+					font-size: 1em;
 				}
 				/* Hero-Slider */
 				section#slider {
@@ -1257,7 +1258,7 @@ main.site_content {
 											clear: both;
 
 											h3 {
-												font-size: 0.95em;
+												font-size: 1.1em;
 											}
 
 											h4 {
@@ -1268,10 +1269,10 @@ main.site_content {
 												width: 100%;
 
 												li {
-													font-size: 0.75em;
+													font-size: 0.9em;
 
 													&::before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 												}
 											}
@@ -1283,18 +1284,10 @@ main.site_content {
 					}
 					div#slids {
 						a#next {
-							width: 50%;
-
-							&:hover {
-								cursor: pointer;
-							}
+							font-size: 1.1em;
 						}
 						a#prev {
-							width: 50%;
-
-							&:hover {
-								cursor: pointer;
-							}
+							font-size: 1.1em;
 						}
 					}
 				}
@@ -1303,69 +1296,175 @@ main.site_content {
 
 		section#contact {
 			width: 100%;
+			padding: 0.5em;
+			background-color: $bgcolor;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 4em;
 			h2 {
-				font-size: 1.3em;
+				font-size: 1.3rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
 			}
 			div#contact_container {
-				p {
-					line-height: 1.8em;
-				}
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				width: 98%;
 				section#contact-details {
 					width: 40%;
+					flex: 1 0 auto;
 					h3 {
-						font-size: 1.15rem;
+						text-indent: 1em;
+						font-size: 1.25rem;
+						background-color: $colorwhite;
 					}
 					address {
+						height: auto;
 						width: 90%;
+						margin: auto;
 						ul {
+							display: block;
+							list-style: none;
 							padding: 0;
 							li {
 								height: auto;
+								font-family: "FontAwesome";
+
 								a {
+									width: auto;
+									display: inline-block;
+									font-size: 1em;
+									line-height: 40px;
+									margin-left: 1em;
+								}
+
+								a[href~="mailto"]::before {
+									content: "\f466";
+									font-size: 1em;
+								}
+
+								a[title~="follow me on github"]::before {
+									content: "\f301";
+									font-size: 1em;
+								}
+
+								a[href~="www.linkedin.com"]::before {
+									content: "\f18d";
+									font-size: 1em;
+								}
+
+								a[href~="github.com"]::before {
+									content: "\f237";
 									font-size: 1em;
 								}
 							}
 						}
 					}
-				}
 
+					#map_image {
+						width: 90%;
+						margin: 1em auto;
+						padding: 0;
+						img {
+							width: 100%;
+						}
+					}
+				}
+				.hide-error {
+					display: none;
+				}
+				.show-error {
+					line-height: 35px;
+				}
 				form#myform {
 					width: 50%;
+
 					ol {
-						margin: 0;
+						list-style: none;
+
 						li {
 							height: auto;
+							margin-bottom: 0.5em;
 							label,
 							#comment-header {
 								display: block;
+								font-size: 1em;
 							}
+
 							label[for="questionitem"] {
-								width: 80%;
+								float: left;
 							}
+
+							input#myname:hover,
+							input#myemail:hover,
+							input#myurl:hover,
+							input[type="radio"]:hover,
+							input[type="radio"]:focus,
+							input#myname:focus,
+							input#myemail:focus,
+							input#myurl:focus,
+							select {
+								border-color: $pageTwobgcolor;
+							}
+
+							input#myname:valid,
+							input#myemail:valid {
+								border: solid 3px rgb(176, 241, 176);
+							}
+
 							input#myname,
 							input#myemail,
 							input#myurl {
-								line-height: 35px;
+								display: block;
 							}
+
 							ol#comment-box {
 								padding: 0;
+								display: flex;
+								flex-flow: row;
+								align-items: flex-start;
+								justify-content: flex-start;
 								li {
 									width: 33%;
+									flex: 1 0 auto;
+									height: 30px;
+									margin: 0;
 									label {
 										width: 50%;
+										height: 100%;
 									}
+
 									input[type="radio"] {
-										width: 9%;
+										display: inline-block;
+										height: 30px;
+										flex: 1 0 auto;
+										width: 8%;
+										margin: 0 1.5em;
+										padding: 0;
 									}
 								}
 							}
+
 							select {
 								line-height: 40px;
+							}
+
+							textarea#mycomments {
+								width: 100%;
 							}
 						}
 					}
 					button#submit {
-						font-size: 1em;
+						font-size: 1.1em;
+
+						&:hover {
+							background-color: $colorblack;
+						}
 					}
 				}
 			}
@@ -1415,9 +1514,9 @@ main.site_content {
 			margin-bottom: 0.5em;
 			top: 0;
 			position: unset;
+			z-index: 0;
 			ul {
 				margin: 0 auto;
-				padding: 0;
 				list-style: none;
 				display: flex;
 				flex-flow: row wrap;
@@ -1427,11 +1526,10 @@ main.site_content {
 					height: 50px;
 					line-height: 50px;
 					width: 24%;
-					font-size: 1em;
 					a {
-						display: block;
 						line-height: 50px;
 						color: $textcolor1;
+						font-size: 0.9em;
 						background-color: $textcolor2;
 					}
 				}
@@ -1441,22 +1539,17 @@ main.site_content {
 		ul#social {
 			height: 40px;
 			width: 12%;
-			margin: 0;
-			padding: 0;
-			flex: 1 0 auto;
-			display: flex;
-			list-style: none;
-			font-family: "FontAwesome";
 			position: unset;
 			top: 0;
 			left: 0;
 			li.social-item {
 				a {
-					line-height: 40px;
+					line-height: 45px;
 					i.fa-twitter,
 					i.fa-facebook,
 					i.fa-linkedin {
 						font-size: 1.15em;
+						line-height: 45px;
 						&:hover {
 							transform: scale(1.2);
 						}
@@ -1472,6 +1565,9 @@ main.site_content {
 
 			article#bannertext {
 				width: calc(50% - 5%);
+				h1 {
+					line-height: 70px;
+				}
 				p {
 					font-size: 1em;
 					line-height: 2.1em;
@@ -1487,6 +1583,10 @@ main.site_content {
 			}
 		}
 		section#project_page {
+			h2 {
+				font-size: 1.4rem;
+			}
+
 			ul#project_tabs {
 				display: flex;
 				-webkit-flex-flow: row;
@@ -1548,6 +1648,7 @@ main.site_content {
 
 				p {
 					line-height: 2.5em;
+					font-size: 1em;
 				}
 				/* Hero-Slider */
 				section#slider {
@@ -1639,69 +1740,175 @@ main.site_content {
 
 		section#contact {
 			width: 100%;
+			padding: 0.5em;
+			background-color: $bgcolor;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 4em;
 			h2 {
-				font-size: 1.35em;
+				font-size: 1.3rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
 			}
 			div#contact_container {
-				p {
-					line-height: 1.8em;
-				}
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				width: 98%;
 				section#contact-details {
 					width: 40%;
+					flex: 1 0 auto;
 					h3 {
-						font-size: 1.15rem;
+						text-indent: 1em;
+						font-size: 1.25rem;
+						background-color: $colorwhite;
 					}
 					address {
+						height: auto;
 						width: 90%;
+						margin: auto;
 						ul {
+							display: block;
+							list-style: none;
 							padding: 0;
 							li {
 								height: auto;
+								font-family: "FontAwesome";
+
 								a {
+									width: auto;
+									display: inline-block;
+									font-size: 1em;
+									line-height: 40px;
+									margin-left: 1em;
+								}
+
+								a[href~="mailto"]::before {
+									content: "\f466";
+									font-size: 1em;
+								}
+
+								a[title~="follow me on github"]::before {
+									content: "\f301";
+									font-size: 1em;
+								}
+
+								a[href~="www.linkedin.com"]::before {
+									content: "\f18d";
+									font-size: 1em;
+								}
+
+								a[href~="github.com"]::before {
+									content: "\f237";
 									font-size: 1em;
 								}
 							}
 						}
 					}
-				}
 
+					#map_image {
+						width: 90%;
+						margin: 1em auto;
+						padding: 0;
+						img {
+							width: 100%;
+						}
+					}
+				}
+				.hide-error {
+					display: none;
+				}
+				.show-error {
+					line-height: 35px;
+				}
 				form#myform {
 					width: 50%;
+
 					ol {
-						margin: 0;
+						list-style: none;
+
 						li {
 							height: auto;
+							margin-bottom: 0.5em;
 							label,
 							#comment-header {
 								display: block;
+								font-size: 1em;
 							}
+
 							label[for="questionitem"] {
-								width: 80%;
+								float: left;
 							}
+
+							input#myname:hover,
+							input#myemail:hover,
+							input#myurl:hover,
+							input[type="radio"]:hover,
+							input[type="radio"]:focus,
+							input#myname:focus,
+							input#myemail:focus,
+							input#myurl:focus,
+							select {
+								border-color: $pageTwobgcolor;
+							}
+
+							input#myname:valid,
+							input#myemail:valid {
+								border: solid 3px rgb(176, 241, 176);
+							}
+
 							input#myname,
 							input#myemail,
 							input#myurl {
-								line-height: 35px;
+								display: block;
 							}
+
 							ol#comment-box {
 								padding: 0;
+								display: flex;
+								flex-flow: row;
+								align-items: flex-start;
+								justify-content: flex-start;
 								li {
 									width: 33%;
+									flex: 1 0 auto;
+									height: 30px;
+									margin: 0;
 									label {
 										width: 50%;
+										height: 100%;
 									}
+
 									input[type="radio"] {
-										width: 9%;
+										display: inline-block;
+										height: 30px;
+										flex: 1 0 auto;
+										width: 8%;
+										margin: 0 1.5em;
+										padding: 0;
 									}
 								}
 							}
+
 							select {
 								line-height: 40px;
+							}
+
+							textarea#mycomments {
+								width: 100%;
 							}
 						}
 					}
 					button#submit {
-						font-size: 1em;
+						font-size: 1.1em;
+
+						&:hover {
+							background-color: $colorblack;
+						}
 					}
 				}
 			}
@@ -1762,11 +1969,12 @@ main.site_content {
 					height: 50px;
 					line-height: 50px;
 					width: 24%;
-					font-size: 1em;
+
 					a {
 						display: block;
 						color: $textcolor1;
 						background-color: $textcolor2;
+						font-size: 0.9em;
 					}
 				}
 			}
@@ -1775,12 +1983,6 @@ main.site_content {
 		ul#social {
 			height: 40px;
 			width: 12%;
-			margin: 0;
-			padding: 0;
-			flex: 1 0 auto;
-			display: flex;
-			list-style: none;
-			font-family: "FontAwesome";
 			position: unset;
 			top: 0;
 			left: 0;
@@ -1807,6 +2009,9 @@ main.site_content {
 
 			article#bannertext {
 				width: calc(60% - 5%);
+				h1 {
+					line-height: 70px;
+				}
 				p {
 					font-size: 1em;
 					line-height: 2.1em;
@@ -1971,72 +2176,177 @@ main.site_content {
 				}
 			}
 		}
-
 		section#contact {
 			width: 100%;
+			padding: 0.5em;
+			background-color: $bgcolor;
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 4em;
 			h2 {
-				font-size: 1.35em;
+				font-size: 1.3rem;
+				text-align: left;
+				align-self: flex-start;
+				width: 100%;
+				line-height: 50px;
 			}
 			div#contact_container {
-				p {
-					line-height: 1.8em;
-				}
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				width: 98%;
 				section#contact-details {
 					width: 40%;
+					flex: 1 0 auto;
 					h3 {
-						font-size: 1.15rem;
+						text-indent: 1em;
+						font-size: 1.25rem;
+						background-color: $colorwhite;
 					}
 					address {
+						height: auto;
 						width: 90%;
+						margin: auto;
 						ul {
+							display: block;
+							list-style: none;
 							padding: 0;
 							li {
 								height: auto;
+								font-family: "FontAwesome";
+
 								a {
+									width: auto;
+									display: inline-block;
+									font-size: 1em;
+									line-height: 40px;
+									margin-left: 1em;
+								}
+
+								a[href~="mailto"]::before {
+									content: "\f466";
+									font-size: 1em;
+								}
+
+								a[title~="follow me on github"]::before {
+									content: "\f301";
+									font-size: 1em;
+								}
+
+								a[href~="www.linkedin.com"]::before {
+									content: "\f18d";
+									font-size: 1em;
+								}
+
+								a[href~="github.com"]::before {
+									content: "\f237";
 									font-size: 1em;
 								}
 							}
 						}
 					}
-				}
 
+					#map_image {
+						width: 90%;
+						margin: 1em auto;
+						padding: 0;
+						img {
+							width: 100%;
+						}
+					}
+				}
+				.hide-error {
+					display: none;
+				}
+				.show-error {
+					line-height: 35px;
+				}
 				form#myform {
 					width: 50%;
+
 					ol {
-						margin: 0;
+						list-style: none;
+
 						li {
 							height: auto;
+							margin-bottom: 0.5em;
 							label,
 							#comment-header {
 								display: block;
+								font-size: 1em;
 							}
+
 							label[for="questionitem"] {
-								width: 80%;
+								float: left;
 							}
+
+							input#myname:hover,
+							input#myemail:hover,
+							input#myurl:hover,
+							input[type="radio"]:hover,
+							input[type="radio"]:focus,
+							input#myname:focus,
+							input#myemail:focus,
+							input#myurl:focus,
+							select {
+								border-color: $pageTwobgcolor;
+							}
+
+							input#myname:valid,
+							input#myemail:valid {
+								border: solid 3px rgb(176, 241, 176);
+							}
+
 							input#myname,
 							input#myemail,
 							input#myurl {
-								line-height: 35px;
+								display: block;
 							}
+
 							ol#comment-box {
 								padding: 0;
+								display: flex;
+								flex-flow: row;
+								align-items: flex-start;
+								justify-content: flex-start;
 								li {
 									width: 33%;
+									flex: 1 0 auto;
+									height: 30px;
+									margin: 0;
 									label {
 										width: 50%;
+										height: 100%;
 									}
+
 									input[type="radio"] {
-										width: 9%;
+										display: inline-block;
+										height: 30px;
+										flex: 1 0 auto;
+										width: 8%;
+										margin: 0 1.5em;
+										padding: 0;
 									}
 								}
 							}
+
 							select {
 								line-height: 40px;
+							}
+
+							textarea#mycomments {
+								width: 100%;
 							}
 						}
 					}
 					button#submit {
-						font-size: 1em;
+						font-size: 1.1em;
+
+						&:hover {
+							background-color: $colorblack;
+						}
 					}
 				}
 			}
@@ -2082,17 +2392,17 @@ main.site_content {
 			width: 20%;
 
 			p.logo {
-				font-size: 1.3rem;
+				font-size: 1.35rem;
 				line-height: 35px;
 			}
 			p {
-				font-size: 0.8rem;
+				font-size: 0.85rem;
 			}
 		}
 
 		.site_navigation {
 			display: block;
-			width: 45%;
+			width: 40%;
 			flex: 1 0 auto;
 			height: auto;
 			margin-bottom: 0.5em;
@@ -2105,15 +2415,15 @@ main.site_content {
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: space-between;
-				width: 80%;
+				width: 90%;
 				.tablink {
 					height: 50px;
 					line-height: 50px;
 					width: 24%;
-					font-size: 1em;
 					a {
 						display: block;
 						line-height: 50px;
+						font-size: 0.85em;
 						color: $textcolor1;
 						background-color: $textcolor2;
 					}
@@ -2131,8 +2441,9 @@ main.site_content {
 			list-style: none;
 			font-family: "FontAwesome";
 			position: unset;
-			top: 0;
-			left: 0;
+			top: 60px;
+			left: 75vw;
+			width: 25%;
 			li.social-item {
 				width: 32%;
 				height: auto;
@@ -2208,10 +2519,10 @@ main.site_content {
 				width: calc(60% - 5%);
 
 				h1 {
-					line-height: 50px;
+					line-height: 70px;
 				}
 				p {
-					font-size: 1em;
+					font-size: 0.9em;
 				}
 			}
 
@@ -2551,6 +2862,7 @@ main.site_content {
 							label,
 							#comment-header {
 								display: block;
+								font-size: 0.9em;
 							}
 
 							label[for="questionitem"] {
@@ -2661,30 +2973,28 @@ main.site_content {
 		span.site-title {
 			width: 3%;
 			p.logo {
-				font-size: 1.2rem;
+				font-size: 1.3rem;
 				line-height: 35px;
 			}
 			p {
-				font-size: 0.8rem;
+				font-size: 0.85rem;
 			}
 		}
 		.site_navigation {
 			width: 100%;
 			ul {
 				.tablink {
-					font-size: 0.9em;
-
 					a {
 						display: block;
-						font-size: 0.9em;
+						font-size: 1em;
 					}
 				}
 			}
 		}
 
 		ul#social {
-			left: 79vw;
-			width: 20%;
+			left: 75vw;
+			width: 25%;
 		}
 	}
 
@@ -2882,6 +3192,7 @@ main.site_content {
 							label,
 							#comment-header {
 								display: block;
+								font-size: 0.9em;
 							}
 
 							label[for="questionitem"] {
@@ -2961,7 +3272,7 @@ main.site_content {
 				font-size: 1.3rem;
 			}
 			p {
-				font-size: 0.9rem;
+				font-size: 0.85rem;
 			}
 		}
 
@@ -2972,8 +3283,6 @@ main.site_content {
 				height: 100%;
 
 				.tablink {
-					font-size: 1em;
-
 					a {
 						font-size: 1em;
 					}
@@ -3043,6 +3352,7 @@ main.site_content {
 			div#abouttext {
 				p {
 					font-size: 0.9em;
+					line-height: 2.2em;
 				}
 				/* Hero-Slider */
 				section#slider {
@@ -3161,6 +3471,7 @@ main.site_content {
 							label,
 							#comment-header {
 								display: block;
+								font-size: 0.85em;
 							}
 
 							label[for="questionitem"] {
@@ -3232,7 +3543,7 @@ main.site_content {
 				font-size: 1.2rem;
 			}
 			p {
-				font-size: 0.75rem;
+				font-size: 0.8rem;
 			}
 		}
 		.site_navigation {
@@ -3241,7 +3552,7 @@ main.site_content {
 				height: 100%;
 				.tablink {
 					a {
-						font-size: 0.9em;
+						font-size: 1em;
 					}
 				}
 			}
@@ -3308,6 +3619,7 @@ main.site_content {
 			div#abouttext {
 				p {
 					font-size: 0.85em;
+					line-height: 2.3em;
 				}
 				/* Hero-Slider */
 				section#slider {
@@ -3429,6 +3741,7 @@ main.site_content {
 							label,
 							#comment-header {
 								display: block;
+								font-size: 0.85em;
 							}
 
 							label[for="questionitem"] {

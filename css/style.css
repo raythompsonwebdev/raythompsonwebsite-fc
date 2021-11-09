@@ -108,7 +108,7 @@ hr {
   width: 25%;
   text-align: center;
   padding: 0;
-  left: calc(75vw - 20px);
+  left: calc(79vw - 20px);
 }
 
 .menu-toggle.hide {
@@ -125,6 +125,8 @@ hr {
 
 #site_wrapper {
   width: 98%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fixed-header {
@@ -220,8 +222,7 @@ hr {
 .site_header .site_navigation ul .tablink a {
   line-height: 60px;
   margin: 0;
-  letter-spacing: 0.1em;
-  font-size: 0.85em;
+  font-size: 1em;
   text-align: center;
   display: block;
   color: #ffffff;
@@ -251,10 +252,10 @@ hr {
 }
 .site_header ul#social {
   position: fixed;
-  top: 60px;
   z-index: 98;
-  left: 1vw;
-  width: 180px;
+  top: 60px;
+  left: 75vw;
+  width: 25%;
   list-style: none;
   flex: 1 0 auto;
   display: flex;
@@ -425,7 +426,7 @@ main.site_content section#project_page {
 }
 main.site_content section#project_page h2 {
   align-self: flex-start;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   display: block;
   width: 100%;
   line-height: 50px;
@@ -626,9 +627,9 @@ main.site_content section#about_content div#abouttext a:hover {
   text-decoration: underline;
 }
 main.site_content section#about_content div#abouttext p {
-  font-size: 0.8em;
+  font-size: 0.85em;
+  line-height: 2.3em;
   width: auto;
-  line-height: 1.8em;
   display: block;
 }
 main.site_content section#about_content div#abouttext section#slider {
@@ -1014,7 +1015,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
   height: 35px;
   margin: auto;
   font-size: 1.1em;
-  border: none;
+  border: 1px solid #ccc;
   background-color: #f5f2e4;
 }
 main.site_content section#contact div#contact_container form#myform button#submit:hover {
@@ -1171,7 +1172,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#project_page h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   main.site_content section#project_page ul#project_tabs {
     display: flex;
@@ -1234,7 +1235,8 @@ main.site_content div#banner figure > picture {
     /* Hero-Slider */
   }
   main.site_content section#about_content div#abouttext p {
-    line-height: 2.5em;
+    line-height: 2.2em;
+    font-size: 1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 50%;
@@ -1276,7 +1278,7 @@ main.site_content div#banner figure > picture {
     clear: both;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-    font-size: 0.95em;
+    font-size: 1.1em;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
     font-size: 0.9em;
@@ -1285,88 +1287,174 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-    font-size: 0.75em;
-  }
-  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
     font-size: 0.9em;
   }
-  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
-    width: 50%;
+  main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
+    font-size: 1em;
   }
-  main.site_content section#about_content div#abouttext section#slider div#slids a#next:hover {
-    cursor: pointer;
+  main.site_content section#about_content div#abouttext section#slider div#slids a#next {
+    font-size: 1.1em;
   }
   main.site_content section#about_content div#abouttext section#slider div#slids a#prev {
-    width: 50%;
-  }
-  main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
-    cursor: pointer;
+    font-size: 1.1em;
   }
   main.site_content section#contact {
     width: 100%;
+    padding: 0.5em;
+    background-color: #efefef;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
   }
   main.site_content section#contact h2 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 50px;
   }
-  main.site_content section#contact div#contact_container p {
-    line-height: 1.8em;
+  main.site_content section#contact div#contact_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 98%;
   }
   main.site_content section#contact div#contact_container section#contact-details {
     width: 40%;
+    flex: 1 0 auto;
   }
   main.site_content section#contact div#contact_container section#contact-details h3 {
-    font-size: 1.15rem;
+    text-indent: 1em;
+    font-size: 1.25rem;
+    background-color: #f5f2e4;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
+    height: auto;
     width: 90%;
+    margin: auto;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul {
+    display: block;
+    list-style: none;
     padding: 0;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
+    font-family: "FontAwesome";
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    width: auto;
+    display: inline-block;
     font-size: 1em;
+    line-height: 40px;
+    margin-left: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
+    content: "\f466";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
+    content: "\f301";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+    content: "\f18d";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
+    content: "\f237";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image {
+    width: 90%;
+    margin: 1em auto;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image img {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container .hide-error {
+    display: none;
+  }
+  main.site_content section#contact div#contact_container .show-error {
+    line-height: 35px;
   }
   main.site_content section#contact div#contact_container form#myform {
     width: 50%;
   }
   main.site_content section#contact div#contact_container form#myform ol {
-    margin: 0;
+    list-style: none;
   }
   main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
+    margin-bottom: 0.5em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 1em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
-    width: 80%;
+    float: left;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
+main.site_content section#contact div#contact_container form#myform ol li select {
+    border-color: #dee2f7;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
+    border: solid 3px #b0f1b0;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail,
 main.site_content section#contact div#contact_container form#myform ol li input#myurl {
-    line-height: 35px;
+    display: block;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
+    flex: 1 0 auto;
+    height: 30px;
+    margin: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
+    height: 100%;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
-    width: 9%;
+    display: inline-block;
+    height: 30px;
+    flex: 1 0 auto;
+    width: 8%;
+    margin: 0 1.5em;
+    padding: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
+  main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
+    width: 100%;
+  }
   main.site_content section#contact div#contact_container form#myform button#submit {
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    background-color: #262425;
   }
 
   .site_footer {
@@ -1410,10 +1498,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     margin-bottom: 0.5em;
     top: 0;
     position: unset;
+    z-index: 0;
   }
   .site_header .site_navigation ul {
     margin: 0 auto;
-    padding: 0;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
@@ -1424,34 +1512,28 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 50px;
     line-height: 50px;
     width: 24%;
-    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
-    display: block;
     line-height: 50px;
     color: #000000;
+    font-size: 0.9em;
     background-color: #ffffff;
   }
   .site_header ul#social {
     height: 40px;
     width: 12%;
-    margin: 0;
-    padding: 0;
-    flex: 1 0 auto;
-    display: flex;
-    list-style: none;
-    font-family: "FontAwesome";
     position: unset;
     top: 0;
     left: 0;
   }
   .site_header ul#social li.social-item a {
-    line-height: 40px;
+    line-height: 45px;
   }
   .site_header ul#social li.social-item a i.fa-twitter,
 .site_header ul#social li.social-item a i.fa-facebook,
 .site_header ul#social li.social-item a i.fa-linkedin {
     font-size: 1.15em;
+    line-height: 45px;
   }
   .site_header ul#social li.social-item a i.fa-twitter:hover,
 .site_header ul#social li.social-item a i.fa-facebook:hover,
@@ -1465,6 +1547,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner article#bannertext {
     width: 45%;
   }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 70px;
+  }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
     line-height: 2.1em;
@@ -1475,6 +1560,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content div#banner figure > img,
 main.site_content div#banner figure > picture {
     display: block;
+  }
+  main.site_content section#project_page h2 {
+    font-size: 1.4rem;
   }
   main.site_content section#project_page ul#project_tabs {
     display: flex;
@@ -1538,6 +1626,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     line-height: 2.5em;
+    font-size: 1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 50%;
@@ -1607,69 +1696,161 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#contact {
     width: 100%;
+    padding: 0.5em;
+    background-color: #efefef;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
   }
   main.site_content section#contact h2 {
-    font-size: 1.35em;
+    font-size: 1.3rem;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 50px;
   }
-  main.site_content section#contact div#contact_container p {
-    line-height: 1.8em;
+  main.site_content section#contact div#contact_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 98%;
   }
   main.site_content section#contact div#contact_container section#contact-details {
     width: 40%;
+    flex: 1 0 auto;
   }
   main.site_content section#contact div#contact_container section#contact-details h3 {
-    font-size: 1.15rem;
+    text-indent: 1em;
+    font-size: 1.25rem;
+    background-color: #f5f2e4;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
+    height: auto;
     width: 90%;
+    margin: auto;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul {
+    display: block;
+    list-style: none;
     padding: 0;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
+    font-family: "FontAwesome";
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    width: auto;
+    display: inline-block;
     font-size: 1em;
+    line-height: 40px;
+    margin-left: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
+    content: "\f466";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
+    content: "\f301";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+    content: "\f18d";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
+    content: "\f237";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image {
+    width: 90%;
+    margin: 1em auto;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image img {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container .hide-error {
+    display: none;
+  }
+  main.site_content section#contact div#contact_container .show-error {
+    line-height: 35px;
   }
   main.site_content section#contact div#contact_container form#myform {
     width: 50%;
   }
   main.site_content section#contact div#contact_container form#myform ol {
-    margin: 0;
+    list-style: none;
   }
   main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
+    margin-bottom: 0.5em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 1em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
-    width: 80%;
+    float: left;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
+main.site_content section#contact div#contact_container form#myform ol li select {
+    border-color: #dee2f7;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
+    border: solid 3px #b0f1b0;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail,
 main.site_content section#contact div#contact_container form#myform ol li input#myurl {
-    line-height: 35px;
+    display: block;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
+    flex: 1 0 auto;
+    height: 30px;
+    margin: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
+    height: 100%;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
-    width: 9%;
+    display: inline-block;
+    height: 30px;
+    flex: 1 0 auto;
+    width: 8%;
+    margin: 0 1.5em;
+    padding: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
+  main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
+    width: 100%;
+  }
   main.site_content section#contact div#contact_container form#myform button#submit {
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    background-color: #262425;
   }
 
   .site_footer {
@@ -1726,22 +1907,16 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 50px;
     line-height: 50px;
     width: 24%;
-    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
     color: #000000;
     background-color: #ffffff;
+    font-size: 0.9em;
   }
   .site_header ul#social {
     height: 40px;
     width: 12%;
-    margin: 0;
-    padding: 0;
-    flex: 1 0 auto;
-    display: flex;
-    list-style: none;
-    font-family: "FontAwesome";
     position: unset;
     top: 0;
     left: 0;
@@ -1766,6 +1941,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content div#banner article#bannertext {
     width: 55%;
+  }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 70px;
   }
   main.site_content div#banner article#bannertext p {
     font-size: 1em;
@@ -1909,69 +2087,161 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#contact {
     width: 100%;
+    padding: 0.5em;
+    background-color: #efefef;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
   }
   main.site_content section#contact h2 {
-    font-size: 1.35em;
+    font-size: 1.3rem;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 50px;
   }
-  main.site_content section#contact div#contact_container p {
-    line-height: 1.8em;
+  main.site_content section#contact div#contact_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 98%;
   }
   main.site_content section#contact div#contact_container section#contact-details {
     width: 40%;
+    flex: 1 0 auto;
   }
   main.site_content section#contact div#contact_container section#contact-details h3 {
-    font-size: 1.15rem;
+    text-indent: 1em;
+    font-size: 1.25rem;
+    background-color: #f5f2e4;
   }
   main.site_content section#contact div#contact_container section#contact-details address {
+    height: auto;
     width: 90%;
+    margin: auto;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul {
+    display: block;
+    list-style: none;
     padding: 0;
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li {
     height: auto;
+    font-family: "FontAwesome";
   }
   main.site_content section#contact div#contact_container section#contact-details address ul li a {
+    width: auto;
+    display: inline-block;
     font-size: 1em;
+    line-height: 40px;
+    margin-left: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~=mailto]::before {
+    content: "\f466";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[title~="follow me on github"]::before {
+    content: "\f301";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="www.linkedin.com"]::before {
+    content: "\f18d";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details address ul li a[href~="github.com"]::before {
+    content: "\f237";
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image {
+    width: 90%;
+    margin: 1em auto;
+    padding: 0;
+  }
+  main.site_content section#contact div#contact_container section#contact-details #map_image img {
+    width: 100%;
+  }
+  main.site_content section#contact div#contact_container .hide-error {
+    display: none;
+  }
+  main.site_content section#contact div#contact_container .show-error {
+    line-height: 35px;
   }
   main.site_content section#contact div#contact_container form#myform {
     width: 50%;
   }
   main.site_content section#contact div#contact_container form#myform ol {
-    margin: 0;
+    list-style: none;
   }
   main.site_content section#contact div#contact_container form#myform ol li {
     height: auto;
+    margin-bottom: 0.5em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 1em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
-    width: 80%;
+    float: left;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:hover,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:hover,
+main.site_content section#contact div#contact_container form#myform ol li input[type=radio]:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
+main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
+main.site_content section#contact div#contact_container form#myform ol li select {
+    border-color: #dee2f7;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
+main.site_content section#contact div#contact_container form#myform ol li input#myemail:valid {
+    border: solid 3px #b0f1b0;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail,
 main.site_content section#contact div#contact_container form#myform ol li input#myurl {
-    line-height: 35px;
+    display: block;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box {
     padding: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li {
     width: 33%;
+    flex: 1 0 auto;
+    height: 30px;
+    margin: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li label {
     width: 50%;
+    height: 100%;
   }
   main.site_content section#contact div#contact_container form#myform ol li ol#comment-box li input[type=radio] {
-    width: 9%;
+    display: inline-block;
+    height: 30px;
+    flex: 1 0 auto;
+    width: 8%;
+    margin: 0 1.5em;
+    padding: 0;
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
+  main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
+    width: 100%;
+  }
   main.site_content section#contact div#contact_container form#myform button#submit {
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+    background-color: #262425;
   }
 
   .site_footer {
@@ -2011,15 +2281,15 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 20%;
   }
   .site_header span.site-title p.logo {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     line-height: 35px;
   }
   .site_header span.site-title p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   .site_header .site_navigation {
     display: block;
-    width: 45%;
+    width: 40%;
     flex: 1 0 auto;
     height: auto;
     margin-bottom: 0.5em;
@@ -2033,17 +2303,17 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
   }
   .site_header .site_navigation ul .tablink {
     height: 50px;
     line-height: 50px;
     width: 24%;
-    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
     display: block;
     line-height: 50px;
+    font-size: 0.85em;
     color: #000000;
     background-color: #ffffff;
   }
@@ -2057,8 +2327,9 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     list-style: none;
     font-family: "FontAwesome";
     position: unset;
-    top: 0;
-    left: 0;
+    top: 60px;
+    left: 75vw;
+    width: 25%;
   }
   .site_header ul#social li.social-item {
     width: 32%;
@@ -2135,10 +2406,10 @@ main.site_content section#contact {
     width: 55%;
   }
   main.site_content div#banner article#bannertext h1 {
-    line-height: 50px;
+    line-height: 70px;
   }
   main.site_content div#banner article#bannertext p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   main.site_content div#banner figure {
     position: relative;
@@ -2438,6 +2709,7 @@ main.site_content section#project_page figure > picture {
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 0.9em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     float: left;
@@ -2533,25 +2805,22 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 3%;
   }
   .site_header span.site-title p.logo {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 35px;
   }
   .site_header span.site-title p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   .site_header .site_navigation {
     width: 100%;
   }
-  .site_header .site_navigation ul .tablink {
-    font-size: 0.9em;
-  }
   .site_header .site_navigation ul .tablink a {
     display: block;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .site_header ul#social {
-    left: 79vw;
-    width: 20%;
+    left: 75vw;
+    width: 25%;
   }
 
   main.site_content div#banner {
@@ -2715,6 +2984,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 0.9em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
@@ -2782,16 +3052,13 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     font-size: 1.3rem;
   }
   .site_header span.site-title p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .site_header .site_navigation {
     left: 0;
   }
   .site_header .site_navigation ul {
     height: 100%;
-  }
-  .site_header .site_navigation ul .tablink {
-    font-size: 1em;
   }
   .site_header .site_navigation ul .tablink a {
     font-size: 1em;
@@ -2852,6 +3119,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.9em;
+    line-height: 2.2em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 100%;
@@ -2946,6 +3214,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 0.85em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
@@ -3004,7 +3273,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     font-size: 1.2rem;
   }
   .site_header span.site-title p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .site_header .site_navigation {
     height: 240px;
@@ -3013,7 +3282,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 100%;
   }
   .site_header .site_navigation ul .tablink a {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .site_header .site_navigation .nav-menu {
     padding: 1em;
@@ -3065,6 +3334,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     font-size: 0.85em;
+    line-height: 2.3em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 100%;
@@ -3165,6 +3435,7 @@ main.site_content div#banner figure > picture {
   main.site_content section#contact div#contact_container form#myform ol li label,
 main.site_content section#contact div#contact_container form#myform ol li #comment-header {
     display: block;
+    font-size: 0.85em;
   }
   main.site_content section#contact div#contact_container form#myform ol li label[for=questionitem] {
     width: 80%;
