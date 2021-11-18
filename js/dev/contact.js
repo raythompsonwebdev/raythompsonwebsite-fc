@@ -94,22 +94,18 @@ function showError(e) {
 		email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
 	} else {
 		e.preventDefault();
-		// const data = new FormData(myForm);
-		const URLSearchParamss = new URLSearchParams(myForm);
-
-		// eslint-disable-next-line no-console
-		console.log(URLSearchParamss);
+		const formData = new FormData(myForm);
+		const data = Object.fromEntries(formData);
 
 		fetch("php/validation.php", {
 			method: "POST",
-			body: URLSearchParamss,
+			body: JSON.stringify(data),
+			headers: { "content-type": "application/json" },
 		})
 			.then((response) => {
 				if (response.status !== 200) {
 					// eslint-disable-next-line no-alert
-					alert(
-						`Looks like there was a problem. Status Code: ${response.status}`
-					);
+					throw new Error(response.status);
 				}
 
 				return response.json();
