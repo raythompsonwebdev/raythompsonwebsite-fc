@@ -1,39 +1,51 @@
 <?php
 
-include __DIR__ . '/php/db_credentials.php';
-// Create connection
-$conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+try {
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
+	include __DIR__ . '/php/db_credentials.php';
+	// Create connection
+	$conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
 
-if( !isset($_POST['submit']) ){
+	//echo "Connected successfully";
 
-  //var_dump($_POST);
+	if( !isset($_POST['submit']) ){
 
-    if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
+		//var_dump($_POST);
 
-        $name =  mysqli_real_escape_string($conn,$_POST['myname']);
-        $email = $_POST['myemail'];
-        $reference = $_POST['reference'];
-        $requesttype = $_POST['requesttype'];
-        $comments = mysqli_real_escape_string($conn, $_POST['mycomments']);
+			if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
 
-        $sql = "INSERT INTO contact( myname, email, reference, requesttype, comment) VALUES ('$name', '$email', '$reference', '$requesttype', '$comment')";
+					$name =  mysqli_real_escape_string($conn,$_POST['myname']);
+					$email = $_POST['myemail'];
+					$reference = $_POST['reference'];
+					$requesttype = $_POST['requesttype'];
+					$comments = mysqli_real_escape_string($conn, $_POST['mycomments']);
 
-        if($conn->query($sql)) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+					$sql = "INSERT INTO contact( myname, email, reference, requesttype, comment) VALUES ('$name', '$email', '$reference', '$requesttype', '$comment')";
 
-        $conn->close();
+					if($conn->query($sql)) {
 
-    }
+							echo "<h1>Thank's for the Feedback</h1>";
+              //header('Location: thank-you.html');
+              exit();
 
 
+					} else {
+							echo "Error: " . $sql . "<br>" . $conn->error;
+					}
+
+
+					$conn->close();
+
+			}
+
+
+	}
+
+} catch (Exception $e) {
+	$error = $e->getMessage();
 }

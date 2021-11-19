@@ -119,7 +119,8 @@ function showError(e) {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var pair = _step.value;
         searchParams.append(pair[0], pair[1]);
-      }
+      } // eslint-disable-next-line no-console
+
     } catch (err) {
       _iterator.e(err);
     } finally {
@@ -138,6 +139,9 @@ function showError(e) {
     }).then(function (response) {
       // eslint-disable-next-line no-console
       console.log(response);
+      error.innerHTML = "".concat(response);
+      error.classList.remove("hide-error");
+      error.classList.add("show-error");
     })["catch"](function (err) {
       // eslint-disable-next-line no-console
       console.error("Fetch Error :-S", err);
