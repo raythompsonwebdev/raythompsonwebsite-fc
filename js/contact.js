@@ -1,5 +1,7 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -15,8 +17,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /**
  * Contact Form
  */
-var myForm = document.forms[0];
-var mySubmit = document.getElementById("submit");
+var myForm = document.getElementById("myform"); // const mySubmit = document.getElementById("submit");
+
 var error = document.getElementById("form-error"); // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 // eslint-disable-next-line no-console
@@ -89,9 +91,6 @@ url.addEventListener("blur", function (e) {
 });
 
 function showError(e) {
-  // const myname = document.querySelector("#myname").value;
-  // const myemail = document.querySelector("#myemail").value;
-  // const reference = document.querySelector("#reference").value;
   if (text.validity.valueMissing && email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
@@ -105,21 +104,37 @@ function showError(e) {
     text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
     email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
   } else {
-    e.preventDefault(); // const data = new FormData(myForm);
+    e.preventDefault(); // get user input
 
-    var URLSearchParamss = new URLSearchParams(myForm); // eslint-disable-next-line no-console
+    var formData = new FormData(this);
+    var searchParams = new URLSearchParams();
+    var data = Object.fromEntries(formData); // eslint-disable-next-line no-console
 
-    console.log(URLSearchParamss);
-    fetch("php/validation.php", {
-      method: "POST",
-      body: URLSearchParamss
-    }).then(function (response) {
-      if (response.status !== 200) {
-        // eslint-disable-next-line no-alert
-        alert("Looks like there was a problem. Status Code: ".concat(response.status));
+    console.log(data); // eslint-disable-next-line no-restricted-syntax
+
+    var _iterator = _createForOfIteratorHelper(formData),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var pair = _step.value;
+        searchParams.append(pair[0], pair[1]);
       }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
 
-      return response.json(); // Examine the text in the response
+    console.log(searchParams); // ray@gmail.com
+    // ray
+
+    var urlPhp = "validation.php";
+    fetch(urlPhp, {
+      method: "POST",
+      body: formData
+    }).then(function (response) {
+      return response.text();
     }).then(function (response) {
       // eslint-disable-next-line no-console
       console.log(response);
@@ -130,5 +145,5 @@ function showError(e) {
   }
 }
 
-mySubmit.addEventListener("click", showError);
+myForm.addEventListener("submit", showError);
 //# sourceMappingURL=contact.js.map
