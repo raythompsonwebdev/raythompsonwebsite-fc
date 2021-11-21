@@ -7,8 +7,7 @@ on:
 jobs:
   deploy-now:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+    steps:      
       - name: Fetch project data
         uses: ionos-deploy-now/retrieve-project-info-action@v1
         id: project
