@@ -118,9 +118,9 @@ function showError(e) {
 			.then((response) => {
 				// eslint-disable-next-line no-console
 				console.log(response);
-				error.innerHTML = `${response}`;
 				error.classList.remove("hide-error");
 				error.classList.add("show-error");
+				error.innerHTML = `${response}`;
 			})
 			.catch((err) => {
 				// eslint-disable-next-line no-console

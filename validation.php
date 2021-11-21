@@ -10,42 +10,44 @@ try {
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-} catch (Exception $e) {
-	$error = $e->getMessage();
 
-}
-
-	//echo "Connected successfully";
-
+	// check if form has been sumitted.
+	// NOTE : $_POST['submit] value equals NULL which is falsy.
 	if( !isset($_POST['submit']) ){
-
-		//var_dump($_POST);
 
 			if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
 
-					$name =  mysqli_real_escape_string($conn,$_POST['myname']);
+					// assign form values to variables passing text input in to htmlentites
+					$name =  htmlentities($_POST['myname']));
 					$email = $_POST['myemail'];
 					$reference = $_POST['reference'];
 					$requesttype = $_POST['requesttype'];
-					$comments = mysqli_real_escape_string($conn, $_POST['mycomments']);
+					$comments = htmlentities($_POST['mycomments']);
 
-					$sql = "INSERT INTO contact( myname, email, reference, requesttype, comment) VALUES ('$name', '$email', '$reference', '$requesttype', '$comment')";
+					//assign mysql insert statement to variable using questrion marks as placeholders.
+					$sql = "INSERT INTO contact( myname, email, reference, requesttype, comment) VALUES (?,?,?,?,?)";
 
-					if($conn->query($sql)) {
+					// initialize statement to be prepared
+					$stmt = mysqli_stmt_init($conn);
 
-							echo "<h1>Thank's for the Feedback</h1>";
-              //header('Location: thank-you.html');
-              exit();
+					// prepare statements
+					mysqli_stmt_prepare($stmt , $sql);
 
+					// bind form value variables to statements using interpolation
+					mysqli_stmt_bind_param($stmt,"sssss",$name, $email, $reference, $requesttype, $comment );
 
-					} else {
-							echo "Error: " . $sql . "<br>" . $conn->error;
-					}
+					//execute statment
+					mysqli_stmt_execute($stmt);
 
-
+					// close connection
 					$conn->close();
-
 			}
-
-
+			//echo thank you message
+			echo "<h1>Thank's for the Feedback</h1>";
 	}
+
+} catch (Exception $e) {
+	//show error if connection
+	$error = $e->getMessage();
+
+}

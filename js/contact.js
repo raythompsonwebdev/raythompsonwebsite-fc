@@ -139,9 +139,9 @@ function showError(e) {
     }).then(function (response) {
       // eslint-disable-next-line no-console
       console.log(response);
-      error.innerHTML = "".concat(response);
       error.classList.remove("hide-error");
       error.classList.add("show-error");
+      error.innerHTML = "".concat(response);
     })["catch"](function (err) {
       // eslint-disable-next-line no-console
       console.error("Fetch Error :-S", err);
