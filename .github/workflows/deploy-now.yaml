@@ -1,8 +1,7 @@
 name: Deploy Now
 
 on:
-  - push:
-			branches: [main]
+  - push
   - workflow_dispatch
 
 jobs:
@@ -20,7 +19,7 @@ jobs:
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/checkout@v2
         with:
-          submodules: 'recursive'
+          submodules: "recursive"
       - name: Custom
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
       - name: Deploy build
