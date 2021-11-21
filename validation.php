@@ -10,6 +10,10 @@ try {
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
+} catch (Exception $e) {
+	$error = $e->getMessage();
+
+}
 
 	//echo "Connected successfully";
 
@@ -45,7 +49,3 @@ try {
 
 
 	}
-
-} catch (Exception $e) {
-	$error = $e->getMessage();
-}
