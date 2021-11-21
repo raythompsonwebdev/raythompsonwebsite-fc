@@ -1,9 +1,7 @@
 name: Deploy Now
-
 on:
   - push
   - workflow_dispatch
-
 jobs:
   deploy-now:
     runs-on: ubuntu-latest
