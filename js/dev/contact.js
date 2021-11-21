@@ -1,8 +1,8 @@
 /**
  * Contact Form
  */
-const myForm = document.forms[0];
-const mySubmit = document.getElementById("submit");
+const myForm = document.getElementById("myform");
+// const mySubmit = document.getElementById("submit");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
@@ -75,10 +75,6 @@ url.addEventListener("blur", (e) => {
 });
 
 function showError(e) {
-	// const myname = document.querySelector("#myname").value;
-	// const myemail = document.querySelector("#myemail").value;
-	// const reference = document.querySelector("#reference").value;
-
 	if (text.validity.valueMissing && email.validity.valueMissing) {
 		error.classList.add("show-error");
 		error.classList.remove("hide-error");
@@ -94,27 +90,37 @@ function showError(e) {
 		email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
 	} else {
 		e.preventDefault();
-		const formData = new FormData(myForm);
+		// get user input
+		const formData = new FormData(this);
+		const searchParams = new URLSearchParams();
 		const data = Object.fromEntries(formData);
 
-		fetch("php/validation.php", {
+		// eslint-disable-next-line no-console
+		console.log(data);
+
+		// eslint-disable-next-line no-restricted-syntax
+		for (const pair of formData) {
+			searchParams.append(pair[0], pair[1]);
+		}
+
+		// eslint-disable-next-line no-console
+		console.log(searchParams);
+
+		// ray@gmail.com
+		// ray
+		const urlPhp = "validation.php";
+
+		fetch(urlPhp, {
 			method: "POST",
-			body: JSON.stringify(data),
-			headers: { "content-type": "application/json" },
+			body: formData,
 		})
-			.then((response) => {
-				if (response.status !== 200) {
-					// eslint-disable-next-line no-alert
-					throw new Error(response.status);
-				}
-
-				return response.json();
-
-				// Examine the text in the response
-			})
+			.then((response) => response.text())
 			.then((response) => {
 				// eslint-disable-next-line no-console
 				console.log(response);
+				error.classList.remove("hide-error");
+				error.classList.add("show-error");
+				error.innerHTML = `${response}`;
 			})
 			.catch((err) => {
 				// eslint-disable-next-line no-console
@@ -122,4 +128,4 @@ function showError(e) {
 			});
 	}
 }
-mySubmit.addEventListener("click", showError);
+myForm.addEventListener("submit", showError);

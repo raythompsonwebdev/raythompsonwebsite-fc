@@ -122,21 +122,6 @@
 					"images/certificates/codecademy-js-large.png"
 			},
 			{
-				"id": "7",
-				"hash": "panel-7",
-				"title": "Codewars",
-				"header": "Codewars",
-				"subheader": "Topics",
-				"task1": "5th Kyu Katas",
-				"task2": "6th Kyu Katas",
-				"task3": "7th Kyu Katas",
-				"task4": "8th Kyu Katas",
-				"task5": "random Katas",
-				"buttonname": "Codewars",
-				"bgimage":
-					"images/certificates/codewars-large.png"
-			},
-			{
 				"id": "8",
 				"hash": "panel-8",
 				"title": "Code Academy",

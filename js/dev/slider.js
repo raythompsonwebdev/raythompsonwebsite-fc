@@ -4,86 +4,81 @@ const mask = window.document.querySelector(".hero-slider > .mask");
 const panelContainer = document.querySelector(".slider-body");
 let currentIndex = 0;
 
-// // ASYNC-AWAIT fetch GET
-// const getData = async () => {
-// 	try {
-// 		const response = await fetch("./js/dev/data/slider-data.json");
-// 		if (response.ok) {
-// 			const jsonResponse = await response.json();
-// 			return jsonResponse;
-// 		}
-// 		throw new Error("Request failed!");
-// 	} catch (error) {
-// 		console.log(error);
-// 	}
-// };
+try {
+	fetch("./js/dev/data/slider-data.json")
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error("JSON data not received");
+			}
+			return response.json();
+		})
+		.then((data) => {
+			const slider = data.sliderdata;
+			slider.forEach((slide) => {
+				// panel
+				const panel = document.createElement("ARTICLE");
+				panel.setAttribute("class", "panel");
+				panel.setAttribute("id", `#${slide.hash}`);
+				// slider panel image
+				const slidepanel = document.createElement("FIGURE");
+				slidepanel.setAttribute("class", "slider-panel");
 
-fetch("./js/dev/data/slider-data.json")
-	.then((response) => {
-		if (!response.ok) {
-			throw new Error("JSON data not received");
-		}
-		return response.json();
-	})
-	.then((data) => {
-		const slider = data.sliderdata;
-		slider.forEach((slide) => {
-			const panel = document.createElement("ARTICLE");
-			panel.setAttribute("class", "panel");
-			panel.setAttribute("id", `#${slide.hash}`);
-			const slidepanel = document.createElement("FIGURE");
-			slidepanel.setAttribute("class", "slider-panel");
-			const slidepanelImgLink = document.createElement("A");
-			slidepanelImgLink.setAttribute("href", "");
-			slidepanelImgLink.setAttribute("class", "fancybox");
+				// Slider Header
+				const slideHeader = document.createElement("H2");
+				slideHeader.textContent = `${slide.title}`;
 
-			const slidepanelImg = document.createElement("SPAN");
-			slidepanelImg.setAttribute(
-				"style",
-				`background-image: url(${slide.bgimage})`
-			);
+				// image link
+				const slidepanelImgLink = document.createElement("A");
+				slidepanelImgLink.setAttribute("href", "");
+				slidepanelImgLink.setAttribute("class", "fancybox");
 
-			const slidepanelCaption = document.createElement("FIGCAPTION");
+				const slidepanelImg = document.createElement("SPAN");
+				slidepanelImg.setAttribute(
+					"style",
+					`background-image: url(${slide.bgimage})`
+				);
 
-			const slidepanelHeadingThree = document.createElement("H3");
-			slidepanelHeadingThree.textContent = `${slide.header}`;
+				const slidepanelCaption = document.createElement("FIGCAPTION");
 
-			// const slidepanelHeadingFour = document.createElement("H4");
-			// slidepanelHeadingFour.innerHTML = `${slide.subheader}`;
+				const slidepanelHeadingThree = document.createElement("H3");
+				slidepanelHeadingThree.textContent = `${slide.header}`;
 
-			const slidepanelList = document.createElement("UL");
-			const slidepanelListItem = document.createElement("lI");
-			slidepanelListItem.textContent = `${slide.task1}`;
+				const slidepanelList = document.createElement("UL");
+				const slidepanelListItem = document.createElement("lI");
+				slidepanelListItem.textContent = `${slide.task1}`;
 
-			const slidepanelListItem2 = document.createElement("lI");
-			slidepanelListItem2.textContent = `${slide.task2}`;
+				const slidepanelListItem2 = document.createElement("lI");
+				slidepanelListItem2.textContent = `${slide.task2}`;
 
-			const slidepanelListItem3 = document.createElement("lI");
-			slidepanelListItem3.textContent = `${slide.task3}`;
+				const slidepanelListItem3 = document.createElement("lI");
+				slidepanelListItem3.textContent = `${slide.task3}`;
 
-			const slidepanelListItem4 = document.createElement("lI");
-			slidepanelListItem4.textContent = `${slide.task4}`;
+				const slidepanelListItem4 = document.createElement("lI");
+				slidepanelListItem4.textContent = `${slide.task4}`;
 
-			const slidepanelListItem5 = document.createElement("lI");
-			slidepanelListItem5.textContent = `${slide.task5}`;
+				const slidepanelListItem5 = document.createElement("lI");
+				slidepanelListItem5.textContent = `${slide.task5}`;
 
-			panel.append(slidepanel);
-			panelContainer.append(panel);
-
-			slidepanel.append(slidepanelImgLink);
-			slidepanelImgLink.append(slidepanelImg);
-			slidepanel.append(slidepanelCaption);
-			slidepanelCaption.append(slidepanelHeadingThree);
-			// slidepanelCaption.append(slidepanelHeadingFour);
-			slidepanelCaption.append(slidepanelList);
-			slidepanelList.append(slidepanelListItem);
-			slidepanelList.append(slidepanelListItem2);
-			slidepanelList.append(slidepanelListItem3);
-			slidepanelList.append(slidepanelListItem4);
-			slidepanelList.append(slidepanelListItem5);
+				panel.append(slidepanel);
+				panelContainer.append(panel);
+				slidepanel.append(slideHeader);
+				slidepanel.append(slidepanelImgLink);
+				slidepanelImgLink.append(slidepanelImg);
+				slidepanel.append(slidepanelCaption);
+				slidepanelCaption.append(slidepanelHeadingThree);
+				// slidepanelCaption.append(slidepanelHeadingFour);
+				slidepanelCaption.append(slidepanelList);
+				slidepanelList.append(slidepanelListItem);
+				slidepanelList.append(slidepanelListItem2);
+				slidepanelList.append(slidepanelListItem3);
+				slidepanelList.append(slidepanelListItem4);
+				slidepanelList.append(slidepanelListItem5);
+			});
 		});
-	});
-
+} catch (error) {
+	// eslint-disable-next-line no-console
+	console.log(error);
+}
 const panels = document.getElementsByClassName("panel");
 
 const scrollTo = (element) => {

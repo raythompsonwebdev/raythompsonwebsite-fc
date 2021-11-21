@@ -610,6 +610,20 @@ main.site_content section#about_content div#abouttext figure#page-image {
   float: left;
   margin: 0 0.5em 0 0;
 }
+main.site_content section#about_content div#abouttext ul#webactivitieslist {
+  display: block;
+  float: left;
+  width: auto;
+}
+main.site_content section#about_content div#abouttext ul#webactivitieslist li {
+  line-height: 45px;
+}
+main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
+  display: block;
+}
+main.site_content section#about_content div#abouttext ul#webactivitieslist li a:hover {
+  cursor: pointer;
+}
 main.site_content section#about_content div#abouttext a {
   font-weight: bold;
   /* selected link */
@@ -1009,7 +1023,7 @@ main.site_content section#contact div#contact_container form#myform ol li textar
   border: var(--comment-error);
   padding: 0;
 }
-main.site_content section#contact div#contact_container form#myform button#submit {
+main.site_content section#contact div#contact_container form#myform input#submit {
   display: block;
   width: 100%;
   height: 35px;
@@ -1018,7 +1032,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
   border: 1px solid #ccc;
   background-color: #f5f2e4;
 }
-main.site_content section#contact div#contact_container form#myform button#submit:hover {
+main.site_content section#contact div#contact_container form#myform input#submit:hover {
   background-color: #262425;
   color: #f5f2e4;
   cursor: pointer;
@@ -1080,7 +1094,7 @@ main.site_content section#contact div#contact_container form#myform button#submi
   }
 
   #site_wrapper {
-    width: 96%;
+    width: 94%;
   }
 
   .site_header span.site-title {
@@ -1236,7 +1250,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     line-height: 2.2em;
-    font-size: 1em;
+    font-size: 1.1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 50%;
@@ -1407,7 +1421,7 @@ main.site_content section#contact div#contact_container form#myform ol li input[
 main.site_content section#contact div#contact_container form#myform ol li input#myname:focus,
 main.site_content section#contact div#contact_container form#myform ol li input#myemail:focus,
 main.site_content section#contact div#contact_container form#myform ol li input#myurl:focus,
-main.site_content section#contact div#contact_container form#myform ol li select {
+main.site_content section#contact div#contact_container form#myform ol li select:focus {
     border-color: #dee2f7;
   }
   main.site_content section#contact div#contact_container form#myform ol li input#myname:valid,
@@ -1446,14 +1460,19 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
+    font-size: 1em;
+  }
+  main.site_content section#contact div#contact_container form#myform ol li select option {
+    line-height: 30px;
   }
   main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
-    font-size: 1.1em;
+  main.site_content section#contact div#contact_container form#myform input#submit {
+    font-size: 1.2em;
+    width: 75%;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     background-color: #262425;
   }
 
@@ -1626,7 +1645,7 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext p {
     line-height: 2.5em;
-    font-size: 1em;
+    font-size: 1.1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 50%;
@@ -1846,10 +1865,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1.1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     background-color: #262425;
   }
 
@@ -2237,10 +2256,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1.1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     background-color: #262425;
   }
 
@@ -2520,7 +2539,7 @@ main.site_content section#project_page figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 2em;
   }
   main.site_content section#about_content div#abouttext section#slider {
@@ -2765,10 +2784,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li textarea#mycomments {
     width: 100%;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1.1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     background-color: #262425;
   }
 
@@ -3010,10 +3029,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     cursor: pointer;
   }
 
@@ -3240,10 +3259,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     cursor: pointer;
   }
 
@@ -3461,10 +3480,10 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   main.site_content section#contact div#contact_container form#myform ol li select {
     line-height: 40px;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit {
+  main.site_content section#contact div#contact_container form#myform input#submit {
     font-size: 1em;
   }
-  main.site_content section#contact div#contact_container form#myform button#submit:hover {
+  main.site_content section#contact div#contact_container form#myform input#submit:hover {
     cursor: pointer;
   }
 
