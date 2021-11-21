@@ -47,8 +47,8 @@ try {
       var slidepanelListItem5 = document.createElement("lI");
       slidepanelListItem5.textContent = "".concat(slide.task5);
       panel.append(slidepanel);
-      panelContainer.append(panel);
       slidepanel.append(slideHeader);
+      panelContainer.append(panel);
       slidepanel.append(slidepanelImgLink);
       slidepanelImgLink.append(slidepanelImg);
       slidepanel.append(slidepanelCaption);

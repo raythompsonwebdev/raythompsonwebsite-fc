@@ -156,7 +156,7 @@ hr {
   font-family: "Arvo", Helvetica, Arial, sans-serif;
 }
 .site_header span.site-title p.logo {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-align: left;
   line-height: 30px;
   margin: 0;
@@ -254,8 +254,8 @@ hr {
   position: fixed;
   z-index: 98;
   top: 60px;
-  left: 75vw;
-  width: 25%;
+  left: 69vw;
+  width: 30%;
   list-style: none;
   flex: 1 0 auto;
   display: flex;
@@ -275,7 +275,7 @@ hr {
 }
 .site_header ul#social li.social-item a {
   margin: 0;
-  font-size: 0.85em;
+  font-size: 0.9em;
   text-decoration: none;
   color: #000000;
   display: block;
@@ -380,7 +380,7 @@ main.site_content div#banner figure > picture {
   vertical-align: bottom;
 }
 main.site_content div#banner article#bannertext {
-  width: calc(70% - 10px);
+  width: calc(90% - 10px);
   position: relative;
   background-color: #fff;
   padding: 1%;
@@ -393,7 +393,7 @@ main.site_content div#banner article#bannertext h1 {
   line-height: 45px;
 }
 main.site_content div#banner article#bannertext p {
-  font-size: 0.75em;
+  font-size: 0.85em;
   width: 100%;
   color: #000000;
   text-shadow: 1px 1px #ffffff;
@@ -593,7 +593,7 @@ main.site_content section#about_content {
   gap: 1em;
 }
 main.site_content section#about_content h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   align-self: flex-start;
   width: 100%;
@@ -612,17 +612,28 @@ main.site_content section#about_content div#abouttext figure#page-image {
 }
 main.site_content section#about_content div#abouttext ul#webactivitieslist {
   display: block;
-  float: left;
-  width: auto;
+  float: none;
+  width: 70%;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 2em auto;
 }
 main.site_content section#about_content div#abouttext ul#webactivitieslist li {
   line-height: 45px;
+  margin-bottom: 0.2em;
 }
 main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
   display: block;
+  font-size: 0.9em;
+  color: #ffffff;
+  background-color: #000000;
+  text-indent: none;
 }
 main.site_content section#about_content div#abouttext ul#webactivitieslist li a:hover {
   cursor: pointer;
+  color: #000000;
+  background-color: #efefef;
 }
 main.site_content section#about_content div#abouttext a {
   font-weight: bold;
@@ -641,14 +652,14 @@ main.site_content section#about_content div#abouttext a:hover {
   text-decoration: underline;
 }
 main.site_content section#about_content div#abouttext p {
-  font-size: 0.85em;
-  line-height: 2.3em;
+  font-size: 0.9em;
+  line-height: 2.2em;
   width: auto;
   display: block;
 }
 main.site_content section#about_content div#abouttext section#slider {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  margin: 1em auto;
   padding: 0;
   /* Hero Slider */
 }
@@ -670,7 +681,7 @@ main.site_content section#about_content div#abouttext section#slider .hero-slide
 main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
   display: block;
   width: 100%;
-  height: 335px;
+  height: 345px;
   overflow: hidden;
   scroll-behavior: smooth;
   /*position relative for scrolling*/
@@ -692,7 +703,7 @@ main.site_content section#about_content div#abouttext section#slider .hero-slide
   background-color: #88a61c;
   color: #262425;
   letter-spacing: 0.1em;
-  font-size: 1em;
+  font-size: 0.9em;
   width: 100%;
   margin: 0;
   text-align: center;
@@ -717,7 +728,7 @@ main.site_content section#about_content div#abouttext section#slider .hero-slide
 main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 14vh;
   margin: 0;
   outline: 0;
   padding: 0;
@@ -760,7 +771,7 @@ main.site_content section#about_content div#abouttext section#slider .hero-slide
   padding: 0;
 }
 main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-  width: 99%;
+  width: 99.5%;
   background-color: #f5f2e4;
   font-weight: normal;
   font-size: 0.7em;
@@ -1242,11 +1253,23 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content h2 {
     font-size: 1.3em;
+    text-align: left;
   }
   main.site_content section#about_content div#abouttext {
     width: 100%;
     margin-bottom: 1em;
     /* Hero-Slider */
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist {
+    display: block;
+    float: left;
+    width: 40%;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li {
+    line-height: 45px;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
+    font-size: 1.05em;
   }
   main.site_content section#about_content div#abouttext p {
     line-height: 2.2em;
@@ -1267,14 +1290,14 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 360px;
     /*position relative for scrolling*/
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
-    height: 375px;
+    height: 360px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
     font-size: 1em;
@@ -1286,7 +1309,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
@@ -1643,6 +1666,17 @@ main.site_content div#banner figure > picture {
     margin-bottom: 1em;
     /* Hero-Slider */
   }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist {
+    display: block;
+    float: left;
+    width: 40%;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li {
+    line-height: 45px;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
+    font-size: 1em;
+  }
   main.site_content section#about_content div#abouttext p {
     line-height: 2.5em;
     font-size: 1.1em;
@@ -1681,7 +1715,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
@@ -1899,7 +1933,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     width: 20%;
   }
   .site_header span.site-title p.logo {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
   .site_header span.site-title p {
     font-size: 0.9rem;
@@ -2028,15 +2062,27 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content h2 {
-    font-size: 1.3em;
+    font-size: 1.25em;
   }
   main.site_content section#about_content div#abouttext {
     width: 100%;
     margin-bottom: 1em;
     /* Hero-Slider */
   }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist {
+    display: block;
+    float: left;
+    width: 40%;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li {
+    line-height: 45px;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
+    font-size: 1em;
+  }
   main.site_content section#about_content div#abouttext p {
-    line-height: 2.5em;
+    line-height: 2.3em;
+    font-size: 1.1em;
   }
   main.site_content section#about_content div#abouttext section#slider {
     width: 50%;
@@ -2053,14 +2099,14 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 345px;
     /*position relative for scrolling*/
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
-    height: 375px;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
     font-size: 1em;
@@ -2072,7 +2118,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
@@ -2297,14 +2343,14 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 100px;
   }
   .site_header span.site-title {
-    width: 20%;
+    width: 22%;
   }
   .site_header span.site-title p.logo {
     font-size: 1.35rem;
     line-height: 35px;
   }
   .site_header span.site-title p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   .site_header .site_navigation {
     display: block;
@@ -2338,7 +2384,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
   .site_header ul#social {
     height: 40px;
-    width: 12%;
+    width: 10%;
     margin: 0;
     padding: 0;
     flex: 1 0 auto;
@@ -2529,7 +2575,7 @@ main.site_content section#project_page figure > picture {
     gap: 1em;
   }
   main.site_content section#about_content h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   main.site_content section#about_content div#abouttext {
     padding: 0.25em;
@@ -2543,7 +2589,7 @@ main.site_content section#project_page figure > picture {
     line-height: 2em;
   }
   main.site_content section#about_content div#abouttext section#slider {
-    width: 50%;
+    width: 55%;
     height: auto;
     padding: 0;
     margin-left: 0.5em;
@@ -2560,7 +2606,7 @@ main.site_content section#project_page figure > picture {
     margin: 0;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 345px;
     /*position relative for scrolling*/
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
@@ -2568,11 +2614,11 @@ main.site_content section#project_page figure > picture {
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
     width: 100%;
-    height: 375px;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.9em;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
     margin: 0;
@@ -2821,7 +2867,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
   }
 
   .site_header span.site-title {
-    width: 3%;
+    width: 23%;
   }
   .site_header span.site-title p.logo {
     font-size: 1.3rem;
@@ -2852,12 +2898,19 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
+  main.site_content div#banner article#bannertext {
+    width: calc(90% - 10px);
+  }
+  main.site_content div#banner article#bannertext h1 {
+    font-size: calc(1.2rem + 2vw);
+    line-height: 75px;
+  }
   main.site_content div#banner article#bannertext p {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 2.2em;
   }
   main.site_content section#project_page h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   main.site_content section#project_page .parent {
     width: 96%;
@@ -2891,17 +2944,18 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   main.site_content section#about_content div#abouttext {
     /* Hero-Slider */
   }
   main.site_content section#about_content div#abouttext p {
-    font-size: 0.85em;
-    line-height: 2.1em;
+    font-size: 1em;
+    line-height: 2.2em;
   }
   main.site_content section#about_content div#abouttext section#slider {
-    width: 100%;
+    width: 90%;
+    margin: 1em auto;
     /* Hero Slider */
   }
   main.site_content section#about_content div#abouttext section#slider h1 {
@@ -2911,7 +2965,7 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 345px;
     /*position relative for scrolling*/
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
@@ -2930,7 +2984,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
@@ -2961,6 +3015,20 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext section#slider div#slids a#prev:hover {
     cursor: pointer;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist {
+    display: block;
+    float: none;
+    width: 60%;
+    margin: 2em auto;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li {
+    line-height: 40px;
+  }
+  main.site_content section#about_content div#abouttext ul#webactivitieslist li a {
+    font-size: 1em;
+    text-align: center;
+    text-indent: none;
   }
   main.site_content section#contact {
     width: 100%;
@@ -3099,8 +3167,14 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
+  main.site_content div#banner article#bannertext {
+    width: calc(90% - 10px);
+  }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 80px;
+  }
   main.site_content div#banner article#bannertext p {
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
   main.site_content section#project_page h2 {
     font-size: 1.2rem;
@@ -3141,7 +3215,8 @@ main.site_content div#banner figure > picture {
     line-height: 2.2em;
   }
   main.site_content section#about_content div#abouttext section#slider {
-    width: 100%;
+    width: 90%;
+    margin: 1em auto;
   }
   main.site_content section#about_content div#abouttext section#slider h1 {
     font-size: 1.05em;
@@ -3150,13 +3225,13 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
-    height: 375px;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.9em;
@@ -3168,7 +3243,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
@@ -3289,7 +3364,7 @@ main.site_content section#contact div#contact_container form#myform ol li input#
     height: 100px;
   }
   .site_header span.site-title p.logo {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .site_header span.site-title p {
     font-size: 0.8rem;
@@ -3318,8 +3393,17 @@ main.site_content section#contact div#contact_container form#myform ol li input#
 main.site_content div#banner figure > picture {
     display: block;
   }
+  main.site_content div#banner article#bannertext {
+    width: calc(90% - 10px);
+  }
+  main.site_content div#banner article#bannertext h1 {
+    line-height: 85px;
+  }
   main.site_content div#banner article#bannertext p {
-    font-size: 0.8em;
+    font-size: 1em;
+  }
+  main.site_content section#project_page h2 {
+    font-size: 1.1rem;
   }
   main.site_content section#project_page .parent {
     width: 100%;
@@ -3346,17 +3430,18 @@ main.site_content div#banner figure > picture {
     width: 100%;
   }
   main.site_content section#about_content h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   main.site_content section#about_content div#abouttext {
     /* Hero-Slider */
   }
   main.site_content section#about_content div#abouttext p {
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 2.3em;
   }
   main.site_content section#about_content div#abouttext section#slider {
-    width: 100%;
+    width: 90%;
+    margin: 1em auto;
     /* Hero Slider */
   }
   main.site_content section#about_content div#abouttext section#slider h1 {
@@ -3364,19 +3449,20 @@ main.site_content div#banner figure > picture {
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider {
     width: 100%;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask {
-    height: 335px;
+    height: 345px;
     /*position relative for scrolling*/
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body {
     width: 100%;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel {
-    height: 375px;
+    height: 345px;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel {
     margin: 0;
@@ -3385,7 +3471,7 @@ main.site_content div#banner figure > picture {
     display: block;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-    height: 150px;
+    height: 14vh;
   }
   main.site_content section#about_content div#abouttext section#slider .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
     clear: both;
