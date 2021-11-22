@@ -64,7 +64,7 @@ try {
   });
 } catch (error) {
   // eslint-disable-next-line no-console
-  console.log(error);
+  console.error(error);
 }
 
 var panels = document.getElementsByClassName("panel");

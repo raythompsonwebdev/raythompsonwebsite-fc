@@ -17,11 +17,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /**
  * Contact Form
  */
-var myForm = document.getElementById("myform"); // const mySubmit = document.getElementById("submit");
-
+var myForm = document.getElementById("myform");
 var error = document.getElementById("form-error"); // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
-// eslint-disable-next-line no-console
 
 var _myForm = _slicedToArray(myForm, 8),
     text = _myForm[0],
@@ -107,10 +105,7 @@ function showError(e) {
     e.preventDefault(); // get user input
 
     var formData = new FormData(this);
-    var searchParams = new URLSearchParams();
-    var data = Object.fromEntries(formData); // eslint-disable-next-line no-console
-
-    console.log(data); // eslint-disable-next-line no-restricted-syntax
+    var searchParams = new URLSearchParams(); // eslint-disable-next-line no-restricted-syntax
 
     var _iterator = _createForOfIteratorHelper(formData),
         _step;
@@ -119,16 +114,12 @@ function showError(e) {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var pair = _step.value;
         searchParams.append(pair[0], pair[1]);
-      } // eslint-disable-next-line no-console
-
+      }
     } catch (err) {
       _iterator.e(err);
     } finally {
       _iterator.f();
     }
-
-    console.log(searchParams); // ray@gmail.com
-    // ray
 
     var urlPhp = "validation.php";
     fetch(urlPhp, {
@@ -137,11 +128,10 @@ function showError(e) {
     }).then(function (response) {
       return response.text();
     }).then(function (response) {
-      // eslint-disable-next-line no-console
-      console.log(response);
       error.classList.remove("hide-error");
-      error.classList.add("show-error");
-      error.innerHTML = "".concat(response);
+      error.classList.add("show-error"); // error.innerHTML = `${response}`;
+
+      error.innerHTML = " form under maintenance: ".concat(response);
     })["catch"](function (err) {
       // eslint-disable-next-line no-console
       console.error("Fetch Error :-S", err);
