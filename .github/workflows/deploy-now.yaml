@@ -22,6 +22,7 @@ jobs:
           submodules: 'recursive'
       - name: Custom
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
+        run: npm run build
       - name: Deploy build
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: ionos-deploy-now/deploy-to-ionos-action@v1
