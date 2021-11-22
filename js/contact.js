@@ -131,7 +131,9 @@ function showError(e) {
       error.classList.remove("hide-error");
       error.classList.add("show-error"); // error.innerHTML = `${response}`;
 
-      error.innerHTML = " form under maintenance: ".concat(response);
+      error.innerHTML = " form currently under maintenance and will be operational very soon!"; // eslint-disable-next-line no-console
+
+      console.error(response);
     })["catch"](function (err) {
       // eslint-disable-next-line no-console
       console.error("Fetch Error :-S", err);

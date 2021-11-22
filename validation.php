@@ -18,7 +18,7 @@ try {
 			if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
 
 					// assign form values to variables passing text input in to htmlentites
-					$name =  htmlentities($_POST['myname']));
+					$name =  htmlentities($_POST['myname']);
 					$email = $_POST['myemail'];
 					$reference = $_POST['reference'];
 					$requesttype = $_POST['requesttype'];
