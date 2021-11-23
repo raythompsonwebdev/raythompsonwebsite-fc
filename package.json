@@ -61,7 +61,8 @@
     "lint-js": "grunt eslint",
     "lint-sass": "grunt stylelint",
     "watch": "grunt watch",
-    "test": "mocha 'test/**/*.js' --recursive --require @babel/register"
+    "test": "mocha 'test/**/*.js' --recursive --require @babel/register",
+    "build": ""
   },
   "keywords": [
     "portfolio"
