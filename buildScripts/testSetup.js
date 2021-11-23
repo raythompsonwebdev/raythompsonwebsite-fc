@@ -4,4 +4,5 @@
 require("@babel/register")();
 
 // Disable webpack features that Mocha doesn't understand.
+// eslint-disable-next-line func-names
 require.extensions[".scss"] = function () {};

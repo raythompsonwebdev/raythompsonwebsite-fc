@@ -1,24 +1,20 @@
 const path = require("path");
-
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-// const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
 export default {
   mode: "production",
   devtool: "source-map",
   entry: {
-    main: path.resolve(__dirname, "./src/index"),
-    vendor: path.resolve(__dirname, "./src/vendor"),
+    main: path.join(__dirname, "src/index"),
+    vendor: path.join(__dirname, "src/vendor"),
   },
   target: "web",
   output: {
     filename: "bundle.[chunkhash].js",
     chunkFilename: "bundle.[chunkhash].[id].js",
-    path: path.resolve(__dirname, "dist/"),
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
   optimization: {
@@ -30,7 +26,6 @@ export default {
     minimizer: [
       // Minify JS
       new TerserPlugin(),
-      new CssMinimizerPlugin(),
     ],
   },
   module: {
@@ -121,19 +116,14 @@ export default {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["**/*"],
-    }),
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css",
       chunkFilename: "style.[id].css",
     }),
     new HtmlWebpackPlugin({
-      // Also generate a test.html
       hash: true,
       filename: "index.html",
-      template: "./src/index.hbs",
-      inject: true,
+      template: path.join(__dirname, "src/index.html"),
     }),
   ],
 };
