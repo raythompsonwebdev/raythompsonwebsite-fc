@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+
 
 # Gatsby files
 .cache/
@@ -106,17 +106,18 @@ dist
 
 textfiles/
 node_modules/
-img/
+src/edited-images/
 icons/
 .sass-cache/
-images/unused-images/
+src/images/unused-images/
+src/js/main.js.map
+src/js/contact.js.map
+src/js/projects.js.map
+src/js/slider.js.map
+src/css/style.min.css.map
 
-js/main.js.map
-js/contact.js.map
-js/projects.js.map
-js/slider.js.map
+src/php/DatabaseConnection.php
+src/php/db_credentials.php
 
-css/style.min.css.map
-fontawesome/
-php/
+
 
