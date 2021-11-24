@@ -1,7 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
-// import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export default {
   mode: "development",

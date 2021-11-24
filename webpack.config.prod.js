@@ -90,6 +90,8 @@ export default {
           {
             loader: "image-webpack-loader",
             options: {
+              name: "[name].[ext]",
+              outputPath: "/",
               mozjpeg: {
                 progressive: true,
                 quality: 65,

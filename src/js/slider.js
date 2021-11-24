@@ -5,7 +5,7 @@ const panelContainer = document.querySelector(".slider-body");
 let currentIndex = 0;
 
 try {
-  fetch("./js/dev/data/slider-data.json")
+  fetch("./data/slider-data.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("JSON data not received");
