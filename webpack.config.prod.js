@@ -32,7 +32,7 @@ export default {
   },
   module: {
     rules: [
-      // file loader for javascript
+      // frules for javascript
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -43,7 +43,7 @@ export default {
           },
         },
       },
-      // file loader for html
+      // rules for html
       {
         test: /\.html$/,
         loader: "html-loader",
@@ -52,6 +52,7 @@ export default {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      // rules for sass
       {
         test: /\.(scss|sass)$/,
         use: [
@@ -79,11 +80,12 @@ export default {
           },
         ],
       },
-      // file loader for fonts
+      // rules for fonts
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: ["file-loader"],
       },
+      // rules for images
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset",

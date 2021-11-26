@@ -32,14 +32,15 @@ export default {
           },
         },
       },
+      // rules for css
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
+      // rules for sass
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // MiniCssExtractPlugin.loader,
           // Creates `style` nodes from JS strings
           "style-loader",
           // Translates CSS into CommonJS
@@ -49,11 +50,12 @@ export default {
           "postcss-loader",
         ],
       },
-      // file loader for fonts
+      // rules for fonts
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: ["file-loader"],
       },
+      // rules for images
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset",
