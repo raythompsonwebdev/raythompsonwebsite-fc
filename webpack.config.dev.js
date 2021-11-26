@@ -2,6 +2,9 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
 
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// const { extendDefaultPlugins } = require("svgo");
+
 export default {
   mode: "development",
   entry: {
@@ -17,21 +20,6 @@ export default {
     filename: "bundle.js",
     chunkFilename: "[name].js",
   },
-
-  plugins: [
-    // Create HTML file that includes reference to bundled JS.
-    new HtmlWebpackPlugin({
-      inject: true,
-      hash: true,
-      template: "./src/index.html",
-      filename: "index.html",
-    }),
-    new StyleLintPlugin({
-      configFile: "./.stylelintrc.json",
-      files: "./src/sass/*.scss",
-      syntax: "scss",
-    }),
-  ],
   module: {
     rules: [
       {
@@ -66,39 +54,55 @@ export default {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: ["file-loader"],
       },
-      // file loader for images
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          "file-loader",
-          {
-            loader: "image-webpack-loader",
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65,
-              },
-              // optipng.enabled: false will disable optipng
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              // the webp option will enable WEBP
-              webp: {
-                quality: 75,
-              },
-            },
-          },
-        ],
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset",
       },
     ],
   },
+  plugins: [
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      inject: true,
+      hash: true,
+      template: "./src/index.html",
+      filename: "index.html",
+    }),
+    new StyleLintPlugin({
+      configFile: "./.stylelintrc.json",
+      files: "./src/sass/*.scss",
+      syntax: "scss",
+    }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ["gifsicle", { interlaced: true }],
+          ["jpegtran", { progressive: true }],
+          ["optipng", { optimizationLevel: 5 }],
+          // Svgo configuration here https://github.com/svg/svgo#configuration
+          /*   [
+            "svgo",
+            {
+              plugins: extendDefaultPlugins([
+                {
+                  name: "removeViewBox",
+                  active: false,
+                },
+                {
+                  name: "addAttributesToSVGElement",
+                  params: {
+                    attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
+                  },
+                },
+              ]),
+            },
+          ], */
+        ],
+      },
+    }),
+  ],
 
   resolve: {
     alias: {

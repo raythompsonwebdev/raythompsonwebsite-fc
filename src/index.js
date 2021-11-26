@@ -1,3 +1,6 @@
+import "./fonts/cabin-2--webfont/style.css";
+import "./fonts/amaranth-webfont/style.css";
+import "./fonts/font-awesome-4.7.0/scss/font-awesome.scss";
 import "./sass/style.scss";
 import "./js/main";
 import "./js/projects";
@@ -16,6 +19,18 @@ import clashvibesPic from "./images/Projects/www-clashvibes-website-home-page.pn
 import drumMachinePic from "./images/Projects/codepen-drum-machine-2021.10.26.png";
 import reactDrumMachinePic from "./images/Projects/codepen-react-weather-app-2021.10.26.png";
 import reactWeatherAppPic from "./images/Projects/codepen-react-random-quote-generator-2021.10.26.png";
+
+const bgImage = document.querySelector("#banner");
+
+bgImage.style.setProperty(
+  "--bg-image",
+  "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg)"
+);
+
+// const profileImage = document.querySelector("#pageImage").srcset;
+
+// eslint-disable-next-line no-console
+// console.log(profileImage);
 
 const shoeStore = document.getElementById("shoestoreImg");
 shoeStore.src = shoestorePic;

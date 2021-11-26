@@ -1,4 +1,3 @@
-@import "partials/variables";
 @import "partials/mixins";
 @import "partials/base";
 
@@ -79,13 +78,13 @@
   span.site-title {
     width: 65%;
     flex: 1 0 auto;
-    font-family: $fontHeader;
     p.logo {
       font-size: 1.25rem;
       text-align: left;
       line-height: 30px;
       margin: 0;
       font-weight: bold;
+      font-family: $fontHeader;
     }
     p {
       font-size: 0.7rem;
@@ -288,6 +287,7 @@ main.site_content {
     align-items: center;
     width: 100%;
     flex: 0 0 auto;
+    --bg-image: "";
 
     figure {
       position: relative;
@@ -337,7 +337,7 @@ main.site_content {
     height: 100%;
     opacity: 0.9;
     filter: grayscale(75%);
-    background-image: url("../images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg");
+    background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -372,8 +372,8 @@ main.site_content {
         width: 48%;
         flex: 0 0 auto;
         margin-right: 0.2em;
-        font-family: $fontText;
         button.project_tab {
+          font-family: $fontHeader;
           display: block;
           background-color: $colorwhite;
           line-height: 35px;
@@ -387,18 +387,6 @@ main.site_content {
             font-weight: bold;
           }
         }
-      }
-    }
-
-    figcaption.cover {
-      position: absolute;
-
-      a.cert_link {
-        font-size: 0.9em;
-      }
-
-      h3.cert_title {
-        font-size: 0.9em;
       }
     }
 
@@ -475,13 +463,14 @@ main.site_content {
         background-color: $textcolor1;
         color: $textcolor2;
         text-align: center;
-        font-family: $fontHeader;
+        font-family: $fontText;
         &:hover {
           font-weight: bold;
         }
       }
 
       h3.cert_title {
+        font-family: $fontHeader;
         width: 100%;
         font-size: 1em;
         margin: 0.5em 0;
@@ -1202,7 +1191,7 @@ main.site_content {
             line-height: 35px;
             width: 100%;
             border: none;
-            font-size: 0.9em;
+            font-size: 1.15em;
             &:hover {
               background-color: $colorblack;
               color: $colorwhite;
@@ -1225,6 +1214,22 @@ main.site_content {
 
       figure.box {
         width: 24%;
+      }
+
+      figcaption.cover {
+        opacity: 0;
+
+        a.cert_link {
+          width: 85%;
+          font-size: 1em;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        h3.cert_title {
+          font-size: 1.2em;
+        }
       }
     }
     section#about_content {
@@ -1655,7 +1660,7 @@ main.site_content {
             line-height: 35px;
             width: 100%;
             border: none;
-            font-size: 0.9em;
+            font-size: 1.15em;
             &:hover {
               background-color: $colorblack;
               color: $colorwhite;
@@ -1678,6 +1683,23 @@ main.site_content {
 
       figure.box {
         width: 24%;
+      }
+      figcaption.cover {
+        opacity: 0;
+
+        a.cert_link {
+          width: 85%;
+
+          font-size: 1.1em;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        h3.cert_title {
+          font-size: 1.2em;
+        }
       }
     }
     section#about_content {
@@ -2108,7 +2130,7 @@ main.site_content {
             line-height: 35px;
             width: 100%;
             border: none;
-            font-size: 0.9em;
+            font-size: 1.15em;
             &:hover {
               background-color: $colorblack;
               color: $colorwhite;
@@ -2131,6 +2153,23 @@ main.site_content {
 
       figure.box {
         width: 24%;
+      }
+      figcaption.cover {
+        opacity: 0;
+
+        a.cert_link {
+          width: 85%;
+
+          font-size: 1.1em;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        h3.cert_title {
+          font-size: 1.2em;
+        }
       }
     }
     section#about_content {

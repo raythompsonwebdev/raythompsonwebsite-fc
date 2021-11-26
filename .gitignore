@@ -115,6 +115,10 @@ src/js/contact.js.map
 src/js/projects.js.map
 src/js/slider.js.map
 src/css/style.min.css.map
+src/fonts/pt-sans-2-cufonfonts-webfont/
+src/fonts/titillium-web/
+src/fonts/Webfonts-Kelsons/
+
 
 src/php/DatabaseConnection.php
 src/php/db_credentials.php
