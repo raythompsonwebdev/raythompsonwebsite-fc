@@ -5,7 +5,7 @@
         "es2021": true,
 				"node":true
     },
-    "extends": ["airbnb", "prettier", "eslint:recommended", "plugin:import/recommended"],
+    "extends": ["airbnb", "eslint:recommended", "plugin:import/recommended", "plugin:prettier/recommended"],
   	"plugins": ["prettier" , "import"],
     "parserOptions": {
         "ecmaVersion": 12,
