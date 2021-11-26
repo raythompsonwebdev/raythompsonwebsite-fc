@@ -7,13 +7,15 @@ Web Developer portfolio. Single page scrolling website with portfolio gallery, c
 ## Technologies
 
 - HTML - semantic html
-- CSS -  css transitions, custom properties , css keyframes
+- CSS - css transitions, custom properties , css keyframes
 - SASS - nesting , mixins, variable, partials
 - JavaScript - ES6
+- PHP
+- MYSQL
 
 ## Tools
 
-- [Grunt](https://gruntjs.com/) 
+- [Grunt](https://gruntjs.com/)
 - [Babel](https://babeljs.io/)
 - [Prettier](https://prettier.io/)
 - [ESLInt](https://eslint.org/)
@@ -23,7 +25,3 @@ Web Developer portfolio. Single page scrolling website with portfolio gallery, c
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
 - [Node Sass](https://www.npmjs.com/package/node-sass)
-
-
-
-
