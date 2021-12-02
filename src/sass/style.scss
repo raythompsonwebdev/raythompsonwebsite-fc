@@ -62,7 +62,7 @@
   width: 100%;
   text-align: left;
   text-indent: 0.5em;
-  font-size: 90%;
+  font-size: 99%;
   z-index: 10;
   background-color: $bgcolor;
   height: 100px;
@@ -75,6 +75,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   left: 0;
+  @include raytransition(all 1s ease);
   span.site-title {
     width: 65%;
     flex: 1 0 auto;
@@ -379,7 +380,7 @@ main.site_content {
           line-height: 35px;
           width: 100%;
           border: none;
-          font-size: 0.8em;
+          font-size: 1em;
           &:hover {
             background-color: $colorblack;
             color: $colorwhite;
@@ -452,7 +453,7 @@ main.site_content {
       a.cert_link {
         width: 85%;
         border: none;
-        font-size: 1em;
+        font-size: 1.05em;
         cursor: pointer;
         float: none;
         margin: 0 auto;
@@ -471,9 +472,9 @@ main.site_content {
 
       h3.cert_title {
         font-family: $fontHeader;
-        width: 100%;
-        font-size: 1em;
-        margin: 0.5em 0;
+        width: 80%;
+        font-size: 1.1em;
+        margin: 0.5em auto;
         line-height: 40px;
         background-color: $textcolor2;
         color: $textcolor1;
@@ -673,7 +674,7 @@ main.site_content {
                       color: $colorwhite;
                       text-indent: 0;
                       margin: 0;
-
+                      font-family:$fontHeader;
                       text-align: center;
                       line-height: 40px;
                     }
@@ -1209,7 +1210,7 @@ main.site_content {
         justify-content: space-between;
         align-items: flex-start;
         padding: 0;
-        width: 100%;
+        width: 90%;
         margin: auto;
       }
 
@@ -1678,7 +1679,7 @@ main.site_content {
         justify-content: space-between;
         align-items: flex-start;
         padding: 0;
-        width: 100%;
+        width: 95%;
         margin: auto;
       }
 
@@ -2131,7 +2132,7 @@ main.site_content {
             line-height: 35px;
             width: 100%;
             border: none;
-            font-size: 1.15em;
+            font-size: 1.1em;
             &:hover {
               background-color: $colorblack;
               color: $colorwhite;
@@ -2161,7 +2162,7 @@ main.site_content {
         a.cert_link {
           width: 85%;
 
-          font-size: 1.1em;
+          font-size: 0.9em;
 
           &:hover {
             font-weight: bold;
@@ -2169,7 +2170,7 @@ main.site_content {
         }
 
         h3.cert_title {
-          font-size: 1.2em;
+          font-size: 1em;
         }
       }
     }
@@ -2707,7 +2708,7 @@ main.site_content {
         justify-content: space-between;
         align-items: flex-start;
         padding: 0;
-        width: 100%;
+        width: 90%;
         margin: auto;
       }
 
@@ -2719,7 +2720,7 @@ main.site_content {
         position: absolute;
 
         a.cert_link {
-          font-size: 1em;
+          font-size: 0.9em;
 
           &:hover {
             font-weight: bold;
@@ -2727,7 +2728,7 @@ main.site_content {
         }
 
         h3.cert_title {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
 
@@ -3149,13 +3150,12 @@ main.site_content {
         font-size: 1.3rem;
       }
       .parent {
-        width: 96%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-start;
         padding: 0;
-        width: 100%;
+        width: 80%;
         margin: auto;
       }
       ul#project_tabs {
@@ -3164,7 +3164,7 @@ main.site_content {
         li {
           width: 24%;
           button.project_tab {
-            font-size: 0.85em;
+            font-size: 0.9em;
           }
         }
       }
@@ -3466,7 +3466,7 @@ main.site_content {
         font-size: 1.2rem;
       }
       .parent {
-        width: 98%;
+        width: 75%;
         margin: auto;
       }
       ul#project_tabs {
@@ -3475,7 +3475,7 @@ main.site_content {
         li {
           width: 48%;
           button.project_tab {
-            font-size: 0.9em;
+            font-size: 1em;
           }
         }
       }
@@ -3483,11 +3483,11 @@ main.site_content {
         position: absolute;
 
         a.cert_link {
-          font-size: 0.9em;
+          font-size: 1.2em;
         }
 
         h3.cert_title {
-          font-size: 0.9em;
+          font-size: 1.2em;
         }
       }
     }
@@ -3739,14 +3739,15 @@ main.site_content {
         font-size: 1.1rem;
       }
       .parent {
-        width: 100%;
+        width: 85%;
+        margin: auto;
       }
       ul#project_tabs {
         width: 100%;
 
         li {
           button.project_tab {
-            font-size: 0.8em;
+            font-size: 1em;
           }
         }
       }
@@ -3758,11 +3759,14 @@ main.site_content {
         position: absolute;
 
         a.cert_link {
-          font-size: 0.8em;
+          font-size: 1.15em;
         }
 
         h3.cert_title {
-          font-size: 0.8em;
+          font-size: 1.1em;
+          width:80%;
+
+          
         }
       }
     }
