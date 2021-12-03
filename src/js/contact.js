@@ -96,9 +96,9 @@ function showError(e) {
       searchParams.append(pair[0], pair[1]);
     }
 
-    const urlPhp = "validation.php";
+    const urlToVal = "php/validation.php";
 
-    fetch(urlPhp, {
+    fetch(urlToVal, {
       method: "POST",
       body: formData,
     })
