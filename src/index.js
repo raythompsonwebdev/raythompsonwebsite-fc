@@ -1,5 +1,6 @@
 import "./fonts/cabin-2--webfont/style.css";
 import "./fonts/amaranth-webfont/style.css";
+// import "./fonts/font-awesome-4.7.0/css/font-awesome.min.css";
 import "./sass/style.scss";
 import "./js/main";
 import "./js/projects";

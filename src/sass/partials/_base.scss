@@ -29,7 +29,7 @@ h2 {
   font-family: $fontHeader;
   padding: 0;
   margin: 0;
-  color: $textcolor1;
+  color: $color-black;
 }
 
 p {
@@ -37,24 +37,24 @@ p {
   line-height: 1.7em;
   margin: 0;
   margin-bottom: 0.5em;
-  color: $textcolor1;
+  color: $color-black;
 }
 
 a {
   text-decoration: none;
   font-family: $fontText;
-  color: $textcolor1;
+  color: $color-black;
 }
 
 /* unvisited link */
 a:link {
-  color: $textcolor1;
+  color: $color-black;
 }
 
 /* visited link */
 a:visited {
-  color: $textcolor1;
-  border: $textcolor1 dotted 1px;
+  color: $color-black;
+  border: $color-black dotted 1px;
 }
 
 a:hover {
@@ -63,15 +63,15 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: $textcolor1;
-  border: $textcolor1 dotted 1px;
+  color: $color-black;
+  border: $color-black dotted 1px;
 }
 
 hr {
   margin: 1em auto;
   width: 70%;
   display: block;
-  color: $textcolor1;
+  color: $color-black;
 }
 
 // .screenreader-visible {

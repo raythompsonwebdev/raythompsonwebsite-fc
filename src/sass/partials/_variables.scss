@@ -1,12 +1,20 @@
-$textcolor1: #000000;
-$textcolor2: #ffffff;
-$textcolor3: #464866;
-$textcolor4: #aaabb8;
+// #ebebec - white*
+// #adadaf - light grey*
+// #000000 - black*
+// #7e7e80 - dark grey*
+// #bdbdc0 - lighter grey*
+// #353536 - darker grey*
+$color-black: #000000;
+$color-white-1: #ffffff;
+$color-white-2: #ebebec;
+$color-darkgrey-1: #353536;
+$color-darkgrey-2: #7e7e80;
+$color-lightgrey-1: #adadaf;
+$color-lightgrey-2: #bdbdc0;
 $bgcolor: #efefef;
-$maincontentcolor: #25274d;
-$pageTwobgcolor: #dee2f7;
-$colorblack: #262425;
-$colorwhite: #f5f2e4;
+$bgcolor2: #dee2f7;
+$color-black2: #262425;
+$color-white2: #f5f2e4;
 $greencolor: #88a61c; //bob poster
 
 $fontHeader: "Cabin Regular", Arial, sans-serif;
