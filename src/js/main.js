@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
 
+  // eslint-disable-next-line no-console
+  console.log(scrollElements);
+
   // detect page scroll function
   const elementInView = (el, scrollOffset = 100) => {
     const elementTop = el.getBoundingClientRect().top;
@@ -23,12 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // display element on page scroll
   const displayScrollElement = (element) => {
+    element.classList.remove("scrolled-no-animation");
     element.classList.add("scrolled");
+  };
+
+  // display element on page scroll
+  const displayScrollElementNoAnimation = (element) => {
+    element.classList.remove("scrolled");
+    element.classList.add("scrolled-no-animation");
   };
 
   // hide element on page scroll
   const hideScrollElement = (element) => {
     element.classList.remove("scrolled");
+    element.classList.remove("scrolled-no-animation");
   };
 
   // add animation to element on page scroll
@@ -42,7 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  handleScrollAnimation();
+  // remove animation on element on page scroll on mobile screens
+  const handleScrollNoAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 100)) {
+        displayScrollElementNoAnimation(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
 
   /**
    * Page Scroll Function
@@ -51,13 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
   window.onscroll = () => {
+    // return value either true or false when browser window width hits between 479px and 599px;
+    const mqList = window.matchMedia(
+      "(min-width: 30em) and (max-width: 599px)"
+    );
+
     // fixes header to top of page on page scroll.
     if (scrollScreen.scrollTop >= 100) {
       siteHeader.classList.add("fixed-header");
     } else {
       siteHeader.classList.remove("fixed-header");
     }
-    handleScrollAnimation();
+
+    // check if width of browser window above 600px
+    // if so apply no animation function to tab content. Else apply animation function.
+    if (mqList.matches === false) {
+      handleScrollAnimation();
+    } else {
+      handleScrollNoAnimation();
+    }
   };
 
   const scrollTo = (element) => {

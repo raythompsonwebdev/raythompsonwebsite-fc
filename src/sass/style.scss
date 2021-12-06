@@ -266,6 +266,10 @@ main.site_content {
     transition: opacity 500ms;
   }
 
+  .tabcontent.scrolled-no-animation{
+    opacity: 1;
+  }
+
   .tabcontent.scrolled {
     opacity: 1;
     animation-name: example;
@@ -1515,7 +1519,7 @@ main.site_content {
           }
           input#submit {
             font-size: 1.2em;
-            width: 75%;
+            width: 100%;
             
           }
         }
