@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollElements = document.querySelectorAll(".tabcontent");
 
   // eslint-disable-next-line no-console
-  console.log(scrollElements);
+  // console.log(scrollElements);
 
   // detect page scroll function
   const elementInView = (el, scrollOffset = 100) => {

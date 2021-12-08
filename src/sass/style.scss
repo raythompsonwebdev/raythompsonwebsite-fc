@@ -61,12 +61,14 @@
   left: 0;
   width: 100%;
   text-align: left;
-  text-indent: 0.5em;
+  //text-indent: 0.5em;
   font-size: 99%;
   z-index: 10;
   background-color: $bgcolor;
   height: 100px;
 }
+
+ 
 
 .site_header {
   height: 100px;
@@ -80,7 +82,7 @@
     width: 65%;
     flex: 1 0 auto;
     p.logo {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       text-align: left;
       line-height: 30px;
       margin: 0;
@@ -146,8 +148,7 @@
           text-align: center;
           display: block;
           color: $color-white-1;
-          background-color: $bgcolor;
-          color: $color-black;
+          background-color: $color-black2;
           font-family: $fontHeader;
           /* visited link */
           &:visited {
@@ -157,10 +158,12 @@
           &:active {
             background-color: $color-black;
             color: $color-white-1;
+            text-shadow:1px 1px 1px $color-black;
           }
           &:hover {
             background-color: $color-black;
             color: $color-white-1;
+            text-shadow:1px 1px 1px $color-black;
           }
         }
       }
@@ -317,11 +320,11 @@ main.site_content {
       background-color: #fff;
       padding: 1%;
       h1 {
-        font-size: calc(1.1rem + 2vw);
+        font-size: calc(1.4rem + 2vw);
         width: auto;
         text-align: center;
         color: $color-black;
-        line-height: 85px;
+        line-height: 65px;
       }
       p {
         font-size: 0.85em;
@@ -359,7 +362,7 @@ main.site_content {
 
     h2 {
       align-self: flex-start;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       display: block;
       width: 100%;
       line-height: 50px;
@@ -386,12 +389,11 @@ main.site_content {
           line-height: 35px;
           width: 100%;
           border: none;
-          font-size: 1em;
-          &:hover {
-            background-color: $color-black2;
-            color: $color-white-1;
+          font-size: 0.9em;
+          
+          &:hover {            
             cursor: pointer;
-            font-weight: bold;
+            font-weight: bold;            
           }
         }
       }
@@ -467,12 +469,13 @@ main.site_content {
         display: block;
         line-height: 40px;
         font-weight: normal;
-        background-color: $color-black;
+        background-color: $color-black2;
         color: $color-white-1;
         text-align: center;
         font-family: $fontText;
         &:hover {
           font-weight: bold;
+          background-color: $color-black;
         }
       }
 
@@ -482,8 +485,8 @@ main.site_content {
         font-size: 1.1em;
         margin: 0.5em auto;
         line-height: 40px;
-        background-color: $color-white-1;
-        color: $color-black;
+        background-color: $color-black;
+        color: $color-white-1;
         text-align: center;
       }
     }
@@ -517,7 +520,7 @@ main.site_content {
     align-items: flex-start;
     gap: 1em;
     h2 {
-      font-size: 1rem;
+      font-size: 1.3rem;
       text-align: left;
       align-self: flex-start;
       width: 100%;
@@ -539,10 +542,15 @@ main.site_content {
         display: block;
         float: none;
         width: 70%;
-        list-style: none;
-        padding: 0;
+        list-style: none;        
         text-align: center;
         margin: 2em auto;
+        font-family:$fontHeader;
+
+        li::marker{
+          content: "🧡 ";
+          font-size: 1.3em;
+        }
 
         li {
           line-height: 45px;
@@ -550,18 +558,17 @@ main.site_content {
           a {
             display: block;
             font-size: 0.9em;
-            color: $color-white-1;
-            background-color: $color-black;
-            text-indent: none;
+            color: $color-black2;
+            text-indent: none;  
+            text-align:left;          
             &:hover {
-              cursor: pointer;
+              cursor: pointer;              
               color: $color-black;
-              background-color: $color-white-1;
+              font-weight:bold;
             }
           }
         }
       }
-
 
       a {
         font-weight: bold;
@@ -590,8 +597,9 @@ main.site_content {
       /* Hero-Slider */
       section#slider {
         width: 90%;
-        margin: 1em auto;
-        padding: 0;
+        margin: 0 auto;
+        padding: 0.5em;
+        background-color: $color-black;
 
         h1 {
           height: 50px;
@@ -604,14 +612,12 @@ main.site_content {
         }
         /* Hero Slider */
         .hero-slider {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          background-color: $color-black2;
+          margin: 0;          
+          width: 100%;          
           .mask {
             display: block;
             width: 100%;
-            height: 345px;
+            height: 310px;
             overflow: hidden;
             scroll-behavior: smooth;
 
@@ -622,7 +628,7 @@ main.site_content {
 
               .panel {
                 width: 100%;
-                height: 375px;
+                height: 350px;
                 background-color: $bgcolor;
 
                 h2 {
@@ -677,7 +683,7 @@ main.site_content {
                     h3 {
                       font-weight: normal;
                       font-size: 0.85em;
-                      background-color: $color-black2;
+                      background-color: $color-black;
                       color: $color-white-1;
                       text-indent: 0;
                       margin: 0;
@@ -705,8 +711,7 @@ main.site_content {
                       margin: 0;
                       padding: 0;
 
-                      li {
-                        width: 99.5%;
+                      li {                        
                         background-color: $bgcolor;
                         font-weight: normal;
                         font-size: 0.7em;
@@ -743,6 +748,7 @@ main.site_content {
           flex: row;
           text-align: center;
           font-size: 0.9em;
+          font-family:$fontHeader;
 
           a#next {
             width: 50%;
@@ -754,10 +760,11 @@ main.site_content {
             border: none;
             padding: 0;
             margin: 0;
+            text-shadow:1px 1px 1px $color-black;
 
             &:hover {
-              background-color: $color-white-1;
-              color: $color-black2;
+              background-color: $color-black;
+              color: $color-white-1;
               font-weight: bold;
               cursor: pointer;
             }
@@ -772,10 +779,11 @@ main.site_content {
             border: none;
             padding: 0;
             margin: 0;
+            text-shadow:1px 1px 1px $color-black;
 
             &:hover {
-              color: $color-black2;
-              background-color: $color-white-1;
+              background-color: $color-black;
+              color: $color-white-1;
               font-weight: bold;
               cursor: pointer;
             }
@@ -793,7 +801,7 @@ main.site_content {
     align-items: center;
     gap: 1em;
     h2 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       text-align: left;
       align-self: flex-start;
       width: 100%;
@@ -808,7 +816,9 @@ main.site_content {
         flex-flow: row wrap;
         justify-content: center;
         width: 98%;
+        margin: 1em auto;
         h3 {
+          font-family:$fontHeader;
           text-indent: 0.5em;
           font-size: 1.05rem;
           width: 100%;
@@ -826,7 +836,7 @@ main.site_content {
             padding: 0;
             li {
               height: auto;
-              font-family: "FontAwesome";
+              font-family: "FontAwesome";              
 
               a {
                 width: auto;
@@ -834,6 +844,7 @@ main.site_content {
                 font-size: 0.75em;
                 line-height: 40px;
                 margin-left: 1em;
+                font-family:$fontHeader;
                 &:hover {
                   cursor: pointer;
                 }
@@ -883,9 +894,11 @@ main.site_content {
         animation-duration: 0.2s;
       }
       form#myform {
-        width: 95%;
+        width: 94%;
         flex: 1 0 auto;
         padding: 0.5em;
+        background-color:$color-black;
+        margin: 0 auto;
         ol {
           list-style: none;
           margin: 0;
@@ -896,20 +909,22 @@ main.site_content {
             margin-bottom: 0.5em;
             label,
             #comment-header {
+              font-family:$fontHeader;
               display: block;
               width: 100%;
               line-height: 40px;
-              color: $color-black2;
-              background-color: $color-white-1;
+              color: $color-white-1;
+              background-color: $color-black2;
               margin-bottom: 0.5em;
               text-indent: 0.5em;
-              font-size: 0.85em;
+              font-size: 1em;
             }
 
             label[for="questionitem"] {
               float: left;
               width: 80%;
               line-height: 30px;
+              font-size:80%;
             }
 
             input#myname:hover,
@@ -943,6 +958,7 @@ main.site_content {
               width: 100%;
               padding: 0;
               margin: 0;
+              font-size:0.9em;
             }
 
             input#myname {
@@ -988,12 +1004,15 @@ main.site_content {
               line-height: 40px;
               height: 40px;
               width: 100%;
+              font-size:1em;
             }
 
             textarea#mycomments {
               width: 100%;
               border: var(--comment-error);
               padding: 0;
+              line-height:20px;
+              font-size:0.9em;
             }
           }
         }
@@ -1048,7 +1067,7 @@ main.site_content {
         background-color: $color-white-1;
         display: block;
         font-size: 0.7em;
-
+        font-family:$fontHeader;
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
@@ -1112,7 +1131,7 @@ main.site_content {
             display: block;
             line-height: 50px;
             color: $color-white-1;
-            background-color: $color-black;
+            background-color: $color-black2;
             font-size: 1.1em;
             font-family: $fontHeader;
           }
@@ -1196,15 +1215,13 @@ main.site_content {
           font-family: $fontText;
           button.project_tab {
             display: block;
-            background-color: $color-white-1;
             color: $color-black2;
             line-height: 35px;
             width: 100%;
             border: none;
             font-size: 1.15em;
             &:hover {
-              background-color: $color-black2;
-              color: $color-white-1;
+              color: $color-black;
               cursor: pointer;
               font-weight: bold;
             }
@@ -1255,11 +1272,13 @@ main.site_content {
         ul#webactivitieslist {
           display: block;
           float: left;
-          width: 40%;
+          width: 30%;
+          margin:0;
           li {
             line-height: 45px;
             a {
               font-size: 1.05em;
+              text-align:left;
             }
           }
         }
@@ -1270,7 +1289,7 @@ main.site_content {
         }
         /* Hero-Slider */
         section#slider {
-          width: 50%;
+          width: 60%;
           height: auto;
           padding: 0;
           margin-left: 0.5em;
@@ -1304,7 +1323,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 19vh;
                       }
                     }
 
@@ -1718,11 +1737,13 @@ main.site_content {
         ul#webactivitieslist {
           display: block;
           float: left;
-          width: 40%;
+          width: 30%;
+          margin:0;
           li {
             line-height: 45px;
             a {
               font-size: 1em;
+              text-align:left;
             }
           }
         }
@@ -1733,7 +1754,7 @@ main.site_content {
         }
         /* Hero-Slider */
         section#slider {
-          width: 50%;
+          width: 60%;
           height: auto;
           padding: 0;
           margin-left: 0.5em;
@@ -1768,7 +1789,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 19vh;
                       }
                     }
 
@@ -2170,7 +2191,7 @@ main.site_content {
     section#about_content {
       width: 100%;
       h2 {
-        font-size: 1.25em;
+        font-size: 1.3em;
       }
 
       div#abouttext {
@@ -2181,25 +2202,28 @@ main.site_content {
           display: block;
           float: left;
           width: 40%;
+          margin: 0;
           li {
             line-height: 45px;
             a {
               font-size: 1em;
+              text-align:left;
             }
           }
         }
 
         p {
           line-height: 2.3em;
-          font-size: 1.1em;
+          font-size: 0.9em;
         }
         /* Hero-Slider */
         section#slider {
           width: 50%;
           height: auto;
-          padding: 0;
-          margin-left: 0.5em;
+          padding: 0.5em;
+          margin-left: 0;
           float: right;
+          
 
           h1 {
             font-size: 1.1em;
@@ -2209,14 +2233,14 @@ main.site_content {
             width: 100%;
 
             .mask {
-              height: 345px;
+              height: 310px;
 
               /*position relative for scrolling*/
               div.slider-body {
                 width: 100%;
 
                 .panel {
-                  height: 345px;
+                  height: 350px;
 
                   h2 {
                     font-size: 1em;
@@ -2492,7 +2516,7 @@ main.site_content {
       width: 22%;
 
       p.logo {
-        font-size: 1.35rem;
+        font-size: 1.45rem;
         line-height: 35px;
       }
       p {
@@ -2679,8 +2703,6 @@ main.site_content {
             border: none;
             font-size: 0.9em;
             &:hover {
-              background-color: $color-black2;
-              color: $color-white-1;
               cursor: pointer;
               font-weight: bold;
             }
@@ -2735,7 +2757,7 @@ main.site_content {
     section#about_content {
       gap: 1em;
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       div#abouttext {
@@ -2746,7 +2768,7 @@ main.site_content {
         }
 
         p {
-          font-size: 1.1em;
+          font-size: 0.9em;
           line-height: 2em;
         }
 
@@ -2758,6 +2780,7 @@ main.site_content {
             line-height: 45px;
             a {
               font-size: 1em;
+              text-align:left;
             }
           }
         }
@@ -2781,7 +2804,7 @@ main.site_content {
             margin: 0;
 
             .mask {
-              height: 345px;
+              height: 310px;
 
               /*position relative for scrolling*/
               div.slider-body {
@@ -2789,7 +2812,7 @@ main.site_content {
 
                 .panel {
                   width: 100%;
-                  height: 345px;
+                  height: 350px;
 
                   h2 {
                     text-transform: uppercase;
@@ -2896,10 +2919,12 @@ main.site_content {
         section#contact-details {
           width: 40%;
           flex: 1 0 auto;
+          margin:0;
           h3 {
             text-indent: 1em;
             font-size: 1.25rem;
             background-color: $color-white-1;
+            text-align: left;
           }
           address {
             height: auto;
@@ -2916,7 +2941,7 @@ main.site_content {
                 a {
                   width: auto;
                   display: inline-block;
-                  font-size: 0.9em;
+                  font-size: 0.8em;
                   line-height: 40px;
                   margin-left: 1em;
                 }
@@ -3079,7 +3104,7 @@ main.site_content {
     div.site-title {
       width: 23%;
       p.logo {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         line-height: 35px;
       }
       p {
@@ -3118,7 +3143,7 @@ main.site_content {
       article#bannertext {
         width: calc(90% - 10px);
         h1 {
-          font-size: calc(1.2rem + 2vw);
+          font-size: calc(1.5rem + 2vw);
           line-height: 75px;
         }
         p {
@@ -3169,7 +3194,7 @@ main.site_content {
     section#about_content {
       width: 100%;
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
 
       div#abouttext {
@@ -3190,14 +3215,14 @@ main.site_content {
             width: 100%;
 
             .mask {
-              height: 345px;
+              height: 310px;
 
               /*position relative for scrolling*/
               div.slider-body {
                 width: 100%;
 
                 .panel {
-                  height: 375px;
+                  height: 350px;
 
                   h2 {
                     font-size: 1em;
@@ -3281,7 +3306,7 @@ main.site_content {
     section#contact {
       width: 100%;
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       div#contact_container {
         p {
@@ -3292,7 +3317,7 @@ main.site_content {
           width: 94%;
           h3 {
             text-indent: 0;
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
 
           address {
@@ -3303,7 +3328,7 @@ main.site_content {
                 height: auto;
 
                 a {
-                  font-size: 0.85em;
+                  font-size: 0.9em;
                 }
               }
             }
@@ -3393,7 +3418,7 @@ main.site_content {
     div.site-title {
       width: 65%;
       p.logo {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       p {
         font-size: 0.85rem;
@@ -3495,13 +3520,13 @@ main.site_content {
             width: 100%;
 
             .mask {
-              height: 345px;
+              height: 310px;
 
               div.slider-body {
                 width: 100%;
 
                 .panel {
-                  height: 345px;
+                  height: 350px;
 
                   h2 {
                     font-size: 0.9em;
@@ -3572,6 +3597,7 @@ main.site_content {
         font-size: 1.2rem;
       }
       div#contact_container {
+        
         p {
           line-height: 1.8em;
         }
@@ -3667,7 +3693,7 @@ main.site_content {
     height: 100px;
     div.site-title {
       p.logo {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       p {
         font-size: 0.8rem;
@@ -3704,17 +3730,18 @@ main.site_content {
       article#bannertext {
         width: calc(90% - 10px);
         h1 {
-          line-height: 85px;
+          line-height: 65px;
+          font-size: calc(1.45em + 2vw);
         }
         p {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
     }
 
     section#project_page {
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
       .parent {
         width: 85%;
@@ -3725,7 +3752,7 @@ main.site_content {
 
         li {
           button.project_tab {
-            font-size: 1em;
+            font-size: 0.9em;
           }
         }
       }
@@ -3770,17 +3797,16 @@ main.site_content {
           /* Hero Slider */
           .hero-slider {
             width: 100%;
-            height: 345px;
-
+      
             .mask {
-              height: 345px;
+              height: 310px;
 
               /*position relative for scrolling*/
               div.slider-body {
                 width: 100%;
 
                 .panel {
-                  height: 345px;
+                  height: 350px;
 
                   h2 {
                     font-size: 0.9em;
@@ -3872,7 +3898,8 @@ main.site_content {
           }
         }
         form#myform {
-          width: 98%;
+          width: 96%;
+          background-color:$color-black;
 
           ol {
             margin: 0;

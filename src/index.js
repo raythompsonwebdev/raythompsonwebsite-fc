@@ -14,43 +14,6 @@ bgImage.style.setProperty(
   "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg)"
 );
 
-// set alt attributes for portfolio grid images
-const shoeStore = document.getElementById("shoestoreImg");
-shoeStore.setAttribute("alt", "shoestore-home-page");
-
-const travelagency = document.getElementById("travelAgencyImg");
-travelagency.setAttribute("alt", "travel-agency-home-page");
-
-const mannering = document.getElementById("manneringImg");
-mannering.setAttribute("alt", "mannering-musicmvc-home-page");
-
-const quoteGenerator = document.getElementById("quoteGeneratorImg");
-quoteGenerator.setAttribute("alt", "random-quote-generator");
-
-const productPage = document.getElementById("scrollingPageImg");
-productPage.setAttribute("alt", "scrolling-product-page");
-
-const cssDoc = document.getElementById("cssDocImg");
-cssDoc.setAttribute("alt", "css-documentation-page");
-
-const weatherApp = document.getElementById("weatherAppImg");
-weatherApp.setAttribute("alt", "code-pen-weather-app");
-
-const tributePage = document.getElementById("tributePageImg");
-tributePage.setAttribute("alt", "obama-tribute-page");
-
-const clashvibes = document.getElementById("clashvibesImg");
-clashvibes.setAttribute("alt", "clashvibes-home-page");
-
-const drumMachine = document.getElementById("drumMachineImg");
-drumMachine.setAttribute("alt", "drum-machine");
-
-const reactDrumMachine = document.getElementById("reactWeatherAppImg");
-reactDrumMachine.setAttribute("alt", "react-weather-app");
-
-const reactWeatherApp = document.getElementById("reactQuoteGeneratorImg");
-reactWeatherApp.setAttribute("alt", "react-random-quote-generator");
-
 // get portfolio grid images
 const portImages = document.querySelectorAll("img.projectImg");
 
@@ -74,8 +37,9 @@ for (let i = 0; i < portImages.length; i++) {
   let imgLink = portImages[i].getAttribute("src");
   imgLink = imgLink.slice(0, -4);
   const srcset = makeSrcset(imgLink);
+
   // eslint-disable-next-line no-console
-  // console.log(srcset);
+  console.log(portImages[i].naturalWidth);
 
   portImages[i].srcset = srcset;
   portImages[i].sizes =
