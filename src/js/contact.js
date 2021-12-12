@@ -75,10 +75,6 @@ url.addEventListener("blur", (e) => {
 });
 
 const submitForm = () => {
-  // eslint-disable-next-line no-console
-
-  // get user input
-
   // const searchParams = new URLSearchParams();
   // // eslint-disable-next-line no-restricted-syntax
   // for (const pair of formData) {
@@ -103,7 +99,6 @@ const submitForm = () => {
       error.classList.remove("hide-error");
       error.classList.add("show-error");
       error.innerHTML = `${response}`;
-      // error.innerHTML = ` form currently under maintenance and will be operational very soon!`;
       // eslint-disable-next-line no-console
       console.log(response);
     })

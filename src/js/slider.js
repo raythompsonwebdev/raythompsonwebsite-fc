@@ -24,7 +24,7 @@ try {
         slidepanel.setAttribute("class", "slider-panel");
 
         // Slider Header
-        const slideHeader = document.createElement("H2");
+        const slideHeader = document.createElement("H4");
         slideHeader.textContent = `${slide.title}`;
 
         // image link
@@ -40,7 +40,7 @@ try {
 
         const slidepanelCaption = document.createElement("FIGCAPTION");
 
-        const slidepanelHeadingThree = document.createElement("H3");
+        const slidepanelHeadingThree = document.createElement("H5");
         slidepanelHeadingThree.textContent = `${slide.header}`;
 
         const slidepanelList = document.createElement("UL");

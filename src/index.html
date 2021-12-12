@@ -383,7 +383,6 @@
         <section id="about_content" class="tabcontent">
           <h2>About Page</h2>
           <div id="abouttext">
-            <h3>Tuitle</h3>
             <figure id="page-image">
               <img 
                   id="pageImage" 
@@ -436,7 +435,8 @@
                 </div>
               </div>
               <div id="slids">
-                <a href="#" id="next">Next</a><a href="#" id="prev">Prev</a>
+                <button href="#" id="next" aria-label="Next Slide">Next</button>
+                <button href="#" id="prev" aria-label="Previous Slide">Prev</button>
               </div>
             </section>
 
@@ -507,7 +507,7 @@
         <section id="contact" class="tabcontent">
           <h2>Contact</h2>
           <div id="contact_container">
-            <form id="myform" name="theform" class="group">
+            <form id="myform" name="theform" class="group" auto-complete="off">
               <span id="form-error" class="hide-error"></span>
               <ol>
                 <li>

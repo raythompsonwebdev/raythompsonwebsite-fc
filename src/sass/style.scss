@@ -541,12 +541,10 @@ main.site_content {
       ul#webactivitieslist {
         display: block;
         float: none;
-        width: 70%;
-        list-style: none;        
-        text-align: center;
+        width: 50%;    
+        text-align: left;
         margin: 2em auto;
         font-family:$fontHeader;
-
         li::marker{
           content: "🧡 ";
           font-size: 1.3em;
@@ -557,9 +555,8 @@ main.site_content {
           margin-bottom: 0.2em;
           a {
             display: block;
-            font-size: 0.9em;
+            font-size: 1em;
             color: $color-black2;
-            text-indent: none;  
             text-align:left;          
             &:hover {
               cursor: pointer;              
@@ -597,18 +594,19 @@ main.site_content {
       /* Hero-Slider */
       section#slider {
         width: 90%;
-        margin: 0 auto;
-        padding: 0.5em;
+        margin: 0.5em auto;
+        padding: 0.25em;
         background-color: $color-black;
 
-        h1 {
-          height: 50px;
-          font-size: 1.2rem;
-          line-height: 50px;
-          text-indent: 1.05%;
-          letter-spacing: 0.05em;
+        h3 {
+          font-family:$fontHeader;
+          height: 40px;
+          font-size: 1rem;
+          line-height: 40px;
           background-color: $color-black2;
           color: $color-white-1;
+          margin:0;
+          text-align:center;
         }
         /* Hero Slider */
         .hero-slider {
@@ -631,7 +629,8 @@ main.site_content {
                 height: 350px;
                 background-color: $bgcolor;
 
-                h2 {
+                h4 {
+                  font-family:$fontHeader;
                   text-transform: uppercase;
                   padding: 0;
                   line-height: 40px;
@@ -664,7 +663,7 @@ main.site_content {
                     span {
                       display: block;
                       width: 100%;
-                      height: 14vh;
+                      height: 16vh;
                       margin: 0;
                       outline: 0;
                       padding: 0;
@@ -680,7 +679,7 @@ main.site_content {
                     width: 100%;
                     margin: 0;
 
-                    h3 {
+                    h5 {
                       font-weight: normal;
                       font-size: 0.85em;
                       background-color: $color-black;
@@ -690,20 +689,7 @@ main.site_content {
                       font-family:$fontHeader;
                       text-align: center;
                       line-height: 40px;
-                    }
-
-                    h4 {
-                      font-weight: normal;
-                      margin: 0 0 0.5em 0;
-                      background-color: $greencolor;
-                      color: $color-black2;
-                      letter-spacing: 0.01em;
-                      padding: 0;
-                      line-height: 30px;
-                      font-size: 0.95em;
-                      display: block;
-                      text-indent: 2%;
-                    }
+                    }                   
 
                     ul {
                       width: 100%;
@@ -750,7 +736,7 @@ main.site_content {
           font-size: 0.9em;
           font-family:$fontHeader;
 
-          a#next {
+          button#next {
             width: 50%;
             line-height: 40px;
             height: 40px;
@@ -769,7 +755,7 @@ main.site_content {
               cursor: pointer;
             }
           }
-          a#prev {
+          button#prev {
             width: 50%;
             line-height: 40px;
             height: 40px;
@@ -808,18 +794,20 @@ main.site_content {
       line-height: 50px;
     }
     div#contact_container {
+      width: 90%;
+      margin: 1em auto;
       p {
         line-height: 1.8em;
       }
       section#contact-details {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        flex-flow: column;
+        align-items: flex-start;
         width: 98%;
         margin: 1em auto;
+        padding:0;
         h3 {
           font-family:$fontHeader;
-          text-indent: 0.5em;
           font-size: 1.05rem;
           width: 100%;
           line-height: 40px;
@@ -828,11 +816,13 @@ main.site_content {
         }
         address {
           width: 90%;
-          flex: 1 0 auto;
+          flex: 0 0 auto;
           padding: 0.5em;
+          margin: auto;
           ul {
             display: block;
             list-style: none;
+            
             padding: 0;
             li {
               height: auto;
@@ -918,6 +908,7 @@ main.site_content {
               margin-bottom: 0.5em;
               text-indent: 0.5em;
               font-size: 1em;
+              cursor:pointer;
             }
 
             label[for="questionitem"] {
@@ -925,6 +916,10 @@ main.site_content {
               width: 80%;
               line-height: 30px;
               font-size:80%;
+            }
+
+            label:focus-within{
+              color:red;
             }
 
             input#myname:hover,
@@ -1295,7 +1290,7 @@ main.site_content {
           margin-left: 0.5em;
           float: right;
 
-          h1 {
+          h3 {
             font-size: 1.1em;
           }
           /* Hero Slider */
@@ -1312,7 +1307,7 @@ main.site_content {
                 .panel {
                   height: 360px;
 
-                  h2 {
+                  h4 {
                     font-size: 1em;
                   }
 
@@ -1323,20 +1318,18 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 19vh;
+                        height: 15vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 1.1em;
                       }
 
-                      h4 {
-                        font-size: 0.9em;
-                      }
+                      
 
                       ul {
                         width: 100%;
@@ -1356,10 +1349,10 @@ main.site_content {
             }
           }
           div#slids {
-            a#next {
+            button#next {
               font-size: 1.1em;
             }
-            a#prev {
+            button#prev {
               font-size: 1.1em;
             }
           }
@@ -1389,17 +1382,18 @@ main.site_content {
         justify-content: center;
         width: 98%;
         section#contact-details {
-          width: 40%;
-          flex: 1 0 auto;
+          width: 45%;
+          flex: 0 0 auto;
+          margin:0;
+          padding:0 1em; 
           h3 {
-            text-indent: 1em;
             font-size: 1.25rem;
             background-color: $color-white-1;
           }
           address {
             height: auto;
             width: 90%;
-            margin: auto;
+            margin: 0;
             ul {
               display: block;
               list-style: none;
@@ -1760,7 +1754,7 @@ main.site_content {
           margin-left: 0.5em;
           float: right;
 
-          h1 {
+          h3 {
             font-size: 1.1em;
           }
           /* Hero Slider */
@@ -1778,7 +1772,7 @@ main.site_content {
                 .panel {
                   height: 375px;
 
-                  h2 {
+                  h4 {
                     font-size: 1em;
                   }
 
@@ -1789,26 +1783,24 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 19vh;
+                        height: 14vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 0.95em;
                       }
 
-                      h4 {
-                        font-size: 0.9em;
-                      }
+                      
 
                       ul {
                         width: 100%;
 
                         li {
-                          font-size: 0.75em;
+                          font-size: 0.85em;
 
                           &::before {
                             font-size: 0.9em;
@@ -1822,14 +1814,14 @@ main.site_content {
             }
           }
           div#slids {
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 cursor: pointer;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -1863,17 +1855,18 @@ main.site_content {
         justify-content: center;
         width: 98%;
         section#contact-details {
-          width: 40%;
-          flex: 1 0 auto;
+          width: 45%;
+          flex: 0 0 auto;
+          margin:0;
+          padding: 0 1em;
           h3 {
-            text-indent: 1em;
             font-size: 1.25rem;
             background-color: $color-white-1;
           }
           address {
             height: auto;
             width: 90%;
-            margin: auto;
+            margin: 0;
             ul {
               display: block;
               list-style: none;
@@ -2201,7 +2194,7 @@ main.site_content {
         ul#webactivitieslist {
           display: block;
           float: left;
-          width: 40%;
+          width: 35%;
           margin: 0;
           li {
             line-height: 45px;
@@ -2225,8 +2218,11 @@ main.site_content {
           float: right;
           
 
-          h1 {
-            font-size: 1.1em;
+          h3 {            
+            height: 50px;
+            font-size: 1.2em;
+            line-height: 50px;
+            
           }
           /* Hero Slider */
           .hero-slider {
@@ -2242,7 +2238,7 @@ main.site_content {
                 .panel {
                   height: 350px;
 
-                  h2 {
+                  h4 {
                     font-size: 1em;
                   }
 
@@ -2253,26 +2249,24 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 10vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 0.95em;
                       }
 
-                      h4 {
-                        font-size: 0.9em;
-                      }
+                      
 
                       ul {
                         width: 100%;
 
                         li {
-                          font-size: 0.75em;
+                          font-size: 0.8em;
 
                           &::before {
                             font-size: 0.9em;
@@ -2286,14 +2280,14 @@ main.site_content {
             }
           }
           div#slids {
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 cursor: pointer;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -2326,16 +2320,18 @@ main.site_content {
         justify-content: center;
         width: 98%;
         section#contact-details {
-          width: 40%;
-          flex: 1 0 auto;
+          width: 45%;
+          flex: 0 0 auto;
+          margin:0;
+          padding: 0 1em;
           h3 {
-            text-indent: 1em;
+
             font-size: 1.25rem;
           }
           address {
             height: auto;
             width: 90%;
-            margin: auto;
+            margin: 0;
             ul {
               display: block;
               list-style: none;
@@ -2775,11 +2771,12 @@ main.site_content {
         ul#webactivitieslist {
           display: block;
           float: left;
-          width: 40%;
+          width: 35%;
+          margin:0;
           li {
             line-height: 45px;
             a {
-              font-size: 1em;
+              font-size: 0.9em;
               text-align:left;
             }
           }
@@ -2789,15 +2786,15 @@ main.site_content {
         section#slider {
           width: 55%;
           height: auto;
-          padding: 0;
+          padding: 0.5em;
           margin-left: 0.5em;
           float: right;
 
           h1 {
             height: 50px;
-            font-size: 1.2em;
+            font-size: 1.15em;
             line-height: 50px;
-            text-indent: 0.5em;
+            
           }
           /* Hero Slider */
           .hero-slider {
@@ -2814,7 +2811,7 @@ main.site_content {
                   width: 100%;
                   height: 350px;
 
-                  h2 {
+                  h4 {
                     text-transform: uppercase;
                     font-size: 0.9em;
                   }
@@ -2841,26 +2838,25 @@ main.site_content {
                         background-repeat: no-repeat;
                         background-position: center 15%;
                         background-size: cover;
+                        height: 10vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 0.9em;
                       }
 
-                      h4 {
-                        font-size: 0.85em;
-                      }
+                     
 
                       ul {
                         width: 100%;
 
                         li {
                           width: 99%;
-                          font-size: 0.75em;
+                          font-size: 0.85em;
 
                           &::before {
                             font-size: 1em;
@@ -2876,14 +2872,14 @@ main.site_content {
           div#slids {
             height: 40px;
 
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 background-color: $color-white-1;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -2914,22 +2910,24 @@ main.site_content {
       div#contact_container {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        width: 98%;
+        width: 90%;
+        margin: 1em auto;
         section#contact-details {
-          width: 40%;
-          flex: 1 0 auto;
-          margin:0;
+          width: 98%;
+          flex: 0 0 auto;
+          flex-flow: column;
+          justify-content: flex-start;
+          margin:1em  auto;
+          padding: 0 1em;
           h3 {
-            text-indent: 1em;
             font-size: 1.25rem;
             background-color: $color-white-1;
-            text-align: left;
+            
           }
           address {
             height: auto;
             width: 90%;
-            margin: auto;
+            margin: 0;
             ul {
               display: block;
               list-style: none;
@@ -2941,7 +2939,7 @@ main.site_content {
                 a {
                   width: auto;
                   display: inline-block;
-                  font-size: 0.8em;
+                  font-size: 1em;
                   line-height: 40px;
                   margin-left: 1em;
                 }
@@ -2996,7 +2994,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 0.9em;
+                font-size: 1em;
               }
 
               label[for="questionitem"] {
@@ -3206,9 +3204,13 @@ main.site_content {
         section#slider {
           width: 90%;
           margin: 1em auto;
+          padding: 0.25em;
+          
 
-          h1 {
-            font-size: 1.15em;
+          h3 {
+            height: 40px;
+            font-size: 1.05rem;
+            line-height: 40px;
           }
           /* Hero Slider */
           .hero-slider {
@@ -3224,7 +3226,7 @@ main.site_content {
                 .panel {
                   height: 350px;
 
-                  h2 {
+                  h4 {
                     font-size: 1em;
                   }
 
@@ -3235,26 +3237,23 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 10vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 1em;
                       }
-
-                      h4 {
-                        font-size: 0.95em;
-                      }
+                     
 
                       ul {
                         width: 100%;
 
                         li {
-                          font-size: 0.8em;
+                          font-size: 0.85em;
 
                           &::before {
                             font-size: 1em;
@@ -3269,14 +3268,14 @@ main.site_content {
           }
 
           div#slids {
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 cursor: pointer;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -3289,14 +3288,14 @@ main.site_content {
         ul#webactivitieslist {
           display: block;
           float: none;
-          width: 60%;
+          width: 45%;
           margin: 2em auto;
           li {
             line-height: 40px;
             a {
               font-size: 1em;
-              text-align: center;
-              text-indent: none;
+              text-align: left;
+              text-indent: 1em;
             }
           }
         }
@@ -3309,14 +3308,19 @@ main.site_content {
         font-size: 1.3rem;
       }
       div#contact_container {
+        width: 90%;
+        margin: 1em auto;
         p {
           font-size: 0.85em;
           line-height: 1.8em;
         }
         section#contact-details {
           width: 94%;
+          margin: 1em auto;
+          padding: 0;
+          
           h3 {
-            text-indent: 0;
+           
             font-size: 1.2rem;
           }
 
@@ -3328,7 +3332,7 @@ main.site_content {
                 height: auto;
 
                 a {
-                  font-size: 0.9em;
+                  font-size: 1em;
                 }
               }
             }
@@ -3344,7 +3348,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 0.9em;
+                font-size: 1em;
               }
 
               label[for="questionitem"] {
@@ -3511,9 +3515,12 @@ main.site_content {
         section#slider {
           width: 90%;
           margin: 1em auto;
+          padding: 0.25em;
 
-          h1 {
-            font-size: 1.05em;
+          h3 {
+            height: 40px;
+          font-size: 1.05rem;
+          line-height: 40px;
           }
 
           .hero-slider {
@@ -3528,7 +3535,7 @@ main.site_content {
                 .panel {
                   height: 350px;
 
-                  h2 {
+                  h4 {
                     font-size: 0.9em;
                   }
 
@@ -3539,20 +3546,17 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 10vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 0.95em;
                       }
-
-                      h4 {
-                        font-size: 0.9em;
-                      }
+                      
 
                       ul {
                         width: 100%;
@@ -3572,14 +3576,14 @@ main.site_content {
             }
           }
           div#slids {
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 cursor: pointer;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -3597,11 +3601,14 @@ main.site_content {
         font-size: 1.2rem;
       }
       div#contact_container {
-        
+        width: 90%;
+        margin: 1em auto;
         p {
           line-height: 1.8em;
         }
         section#contact-details {
+          margin: 1em auto;
+          padding: 0;
           address {
             width: 90%;
             ul {
@@ -3610,7 +3617,7 @@ main.site_content {
                 height: auto;
 
                 a {
-                  font-size: 0.8em;
+                  font-size: 1em;
                 }
               }
             }
@@ -3626,7 +3633,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 0.85em;
+                font-size: 0.95em;
               }
 
               label[for="questionitem"] {
@@ -3790,9 +3797,12 @@ main.site_content {
         section#slider {
           width: 90%;
           margin: 1em auto;
+          padding: 0.25em;
 
-          h1 {
-            font-size: 1.1em;
+          h3 {
+            height: 40px;
+          font-size: 1rem;
+          line-height: 40px;
           }
           /* Hero Slider */
           .hero-slider {
@@ -3808,7 +3818,7 @@ main.site_content {
                 .panel {
                   height: 350px;
 
-                  h2 {
+                  h4 {
                     font-size: 0.9em;
                   }
 
@@ -3819,20 +3829,18 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height: 16vh;
                       }
                     }
 
                     figcaption {
                       clear: both;
 
-                      h3 {
+                      h5 {
                         font-size: 0.95em;
                       }
 
-                      h4 {
-                        font-size: 0.9em;
-                      }
+                      
 
                       ul {
                         width: 100%;
@@ -3852,14 +3860,14 @@ main.site_content {
             }
           }
           div#slids {
-            a#next {
+            button#next {
               width: 50%;
 
               &:hover {
                 cursor: pointer;
               }
             }
-            a#prev {
+            button#prev {
               width: 50%;
 
               &:hover {
@@ -3874,6 +3882,8 @@ main.site_content {
     section#contact {
       width: 100%;
       div#contact_container {
+        width: 90%;
+        margin: 1em auto;
         h2 {
           font-size: 1.1em;
         }
@@ -3883,7 +3893,8 @@ main.site_content {
         }
         section#contact-details {
           width: 98%;
-
+          margin: 1em auto;
+          padding: 0;
           address {
             width: 90%;
             ul {
@@ -3908,7 +3919,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 0.85em;
+                font-size: 0.9em;
               }
 
               label[for="questionitem"] {
