@@ -1,0 +1,18 @@
+{
+    "name": "raythomp/raythompsonwebdev-fc",
+    "description": "portfolio website",
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raythomp\\RaythompsonwebdevFc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "raythompsonwebdev",
+            "email": "ray_thomp@hushmail.com"
+        }
+    ]
+}

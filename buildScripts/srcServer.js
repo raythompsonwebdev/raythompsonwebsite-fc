@@ -4,8 +4,6 @@ import open from "open";
 import webpack from "webpack";
 import config from "../webpack.config.dev";
 
-// const routes = require("../routes/main");
-
 /* eslint-disable no-console */
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -21,8 +19,6 @@ app.use(
 );
 
 app.use(express.static(path.join(__dirname, "../src/")));
-
-// app.use("/", routes);
 
 // routing to root index file
 app.get("/", (req, res) => {

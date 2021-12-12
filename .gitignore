@@ -122,11 +122,12 @@ src/fonts/Webfonts-Kelsons/
 
 src/php/DatabaseConnection.php
 src/php/db_credentials.php
-src/php/_private/
-
+src/php/private/
 src/php/_secure/
 src/images/OG-images/
 src/images/Projects/
 
 
 
+
+/vendor/
