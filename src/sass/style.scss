@@ -58,8 +58,8 @@
 .fixed-header {
   position: fixed;
   top: 0;
-  left: 80px;
-  max-width: 89%;
+  left: 0;
+  max-width: 100%;
   text-align: left;  
   font-size: 99%;
   z-index: 10;
@@ -640,8 +640,8 @@ main.site_content {
                   height: 40px;
                   background-color: $greencolor;
                   color: $color-black2;
-                  letter-spacing: 0.1em;
-                  font-size: 0.9em;
+                  
+                  font-size: 0.75em;
                   width: 100%;
                   margin: 0;
                   text-align: center;
@@ -650,38 +650,47 @@ main.site_content {
                 figure.slider-panel {
                   margin: 0;
                   padding: 0;                                   
-                  position: relative;
+                  position: relative;  
+                  height:100%;                
 
-                  a.fancybox {
-                    @include raytransition(
-                      all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
-                    );
+                  a.fancybox {                    
                     align-self: flex-start;
                     width: 100%;
                     display: block;
-                    height: auto;
+                    height:100%;
 
                     span {
                       display: block;
                       width: 100%;
-                      height: 34vh;
+                      height:100%;
                       margin: 0;
                       outline: 0;
                       padding: 0;
                       background-color: rgb(224, 224, 224);
                       background-repeat: no-repeat;
-                      background-position: center 15%;
+                      background-position: center;
                       background-size: cover;
                     }
                   }
 
+                  .captionshow {
+                    opacity: 1;
+                    display:block;
+                    animation-name: example;
+                    animation-duration: 0.5s;
+                  }
+
                   figcaption {
-                    clear: both;
-                    width: 50%;
+                    @include raytransition(
+                      all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
+                    );
+                    opacity: 0;
+                    display:none;
+                    width: 95%;
                     margin: 0;
                     position: absolute;
-                    top: 100px;
-                    left: 14vw;
+                    bottom: 60px;
+                    left: 2vw;
                     h5 {
                       font-weight: normal;
                       font-size: 0.85em;
@@ -1338,12 +1347,13 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 15vh;
+                        height:100%;
                       }
                     }
 
                     figcaption {
-                      clear: both;
+                      left:1vw;
+                      width: 96%;
 
                       h5 {
                         font-size: 1.1em;
@@ -1593,15 +1603,15 @@ main.site_content {
   .fixed-header {
     position: fixed;
     top: 0;
-    left: 80px;
-    max-width: 89%;
+    left: 70px;
+    max-width: 91%;
     text-align: left;  
     font-size: 99%;
     z-index: 10;
     background-color: $bgcolor;
     height: 100px; 
   }
-  
+
   .site_header {
     div.site-title {
       width: 20%;
@@ -1829,12 +1839,13 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 37vh;
+                        height:100%;
                       }
                     }
 
                     figcaption {
-                      clear: both;
+                      left:1vw;
+                      width: 96%;
 
                       h5 {
                         font-size: 1.1em;
@@ -2299,12 +2310,13 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 14vh;
+                        height:100%;
                       }
                     }
 
                     figcaption {
-                      clear: both;
+                      left:1vw;
+                      width: 96%;
 
                       h5 {
                         font-size: 1.1em;
@@ -2762,12 +2774,13 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 34vh;
+                        height:100%;
                       }
                     }
 
                     figcaption {
-                      clear: both;
+                      left:1vw;
+                      width: 96%;
 
                       h5 {
                         font-size: 1em;
@@ -3347,12 +3360,14 @@ main.site_content {
                         background-repeat: no-repeat;
                         background-position: center 15%;
                         background-size: cover;
-                        height: 34vh;
+                        height:100%;
                       }
                     }
 
                     figcaption {
                       clear: both;
+                      left:1vw;
+                      width: 97%;
 
                       h5 {
                         font-size: 0.95em;
@@ -3667,7 +3682,7 @@ main.site_content {
         justify-content: space-between;
         align-items: flex-start;
         padding: 0;
-        width: 80%;
+        width: 90%;
         margin: auto;
       }
       ul#project_tabs {
@@ -3743,7 +3758,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 34vh;
+                        height:100%;
                       }
                     }
 
@@ -4054,7 +4069,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 34vh;
+                        height:100%;
                       }
                     }
 
@@ -4338,7 +4353,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 34vh;
+                        height:100%;
                       }
                     }
 
