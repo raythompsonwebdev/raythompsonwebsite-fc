@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // detect page scroll function
   const elementInView = (el, scrollOffset = 100) => {
+    // eslint-disable-next-line prefer-destructuring
     const elementTop = el.getBoundingClientRect().top;
     return (
       elementTop <=
@@ -79,11 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const mqList = window.matchMedia("(max-width: 599px)");
 
     // check if width of browser window above 600px
-    // if so apply no animation function to tab content. Else apply animation function.
+    // if so apply animation function to tab content. .
     if (mqList.matches === false) {
       handleScrollAnimation();
     }
 
+    // Else apply animation function
     if (mqList.matches === true) {
       handleScrollNoAnimation();
     }
@@ -103,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   // create menu variables
   const slideoutMenu = document.querySelector(".site_navigation");
+
   const slideoutMenuHeight = slideoutMenu.offsetHeight;
   // mobile menu toggle button
   menuToggle.addEventListener("click", (event) => {

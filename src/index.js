@@ -18,7 +18,7 @@ bgImage.style.setProperty(
 const portImages = document.querySelectorAll("img.projectImg");
 
 // function to create srcset markup string to add to images
-function makeSrcset(imgSrc) {
+const makeSrcset = (imgSrc) => {
   const markup = [];
   let width = 240;
 
@@ -29,7 +29,7 @@ function makeSrcset(imgSrc) {
   }
 
   return markup.join();
-}
+};
 // loop over inages
 // eslint-disable-next-line no-plusplus
 for (let i = 0; i < portImages.length; i++) {

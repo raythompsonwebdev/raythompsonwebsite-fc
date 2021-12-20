@@ -1,78 +1,83 @@
+/* eslint-disable func-style */
 /**
  * Contact Form
  */
 const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
+// eslint-disable-next-line no-console
+// console.log(myForm);
+
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 
-const [text, email, url, , , , , ,] = myForm;
+const [text, email, , , , , comments, submit] = myForm;
 
-error.classList.add("hide-error");
-error.textContent = "";
+// eslint-disable-next-line no-console
+// console.log(comments);
 
-text.addEventListener("blur", (e) => {
-  e.preventDefault();
-  text.style.setProperty("--text-error", "none");
+// eslint-disable-next-line func-style
+const dirtyInputName = (evt) => {
+  evt.preventDefault();
+  const elem = evt.srcElement;
+  // elem.style.setProperty("--text-error", "none");
   // check if input matches pattern
-  if (text.validity.patternMismatch) {
+  if (elem.validity.patternMismatch) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "name too short or more than 40 characters. ";
-    text.style.setProperty("--text-error", "solid 2px #f38383cb");
+    error.textContent =
+      "name must contain letters. no numbers or special characters.";
+    // elem.style.setProperty("--text-error", "solid 2px #f38383cb");
+    elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    text.style.setProperty("--text-error", "none");
+    elem.style.setProperty("--text-error", "none");
+    elem.classList.add("dirty");
   }
-});
+};
 
-email.addEventListener("blur", (e) => {
-  e.preventDefault();
-  error.textContent = "";
-  email.style.setProperty("--email-error", "none");
+// eslint-disable-next-line func-style
+const dirtyInputEmail = (evt) => {
+  evt.preventDefault();
+  const elem = evt.srcElement;
+  elem.style.setProperty("--text-error", "none");
   // check if input matches pattern
-  if (email.validity.patternMismatch) {
+  if (elem.validity.typeMismatch) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
-    error.textContent = "I am expecting an e-mail address!";
-    email.style.setProperty("--email-error", "solid 2px #f38383cb");
-  } else if (email.validity.typeMismatch) {
-    //
-    error.classList.add("show-error");
-    error.classList.remove("hide-error");
-    error.textContent = "I am expecting a valid e-mail address!";
-    email.style.setProperty("--email-error", "solid 2px rgb(250, 250, 135)");
+    error.textContent = "Please provide a valid e-mail address!";
+    elem.style.setProperty("--email-error", "solid 2px rgb(250, 250, 135)");
   } else {
-    error.classList.remove("show-error");
     error.classList.add("hide-error");
+    error.classList.remove("show-error");
     error.textContent = "";
-    email.style.setProperty("--email-error", "none");
+    elem.style.setProperty("--text-error", "none");
+    elem.classList.add("dirty");
   }
-});
+};
 
-url.addEventListener("blur", (e) => {
-  e.preventDefault();
-  url.style.setProperty("--url-error", "none");
-  if (url.validity.patternMismatch) {
+// eslint-disable-next-line func-style
+const dirtyInputComments = (evt) => {
+  evt.preventDefault();
+  const elem = evt.srcElement;
+  // elem.style.setProperty("--comment-error", "none");
+  // check if input matches pattern
+  if (elem.validity.patternMismatch) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "I am expecting a web address!";
-    url.style.setProperty("--url-error", "solid 2px #f38383cb");
-  } else if (url.validity.typeMismatch) {
-    error.classList.remove("hide-error");
-    error.classList.add("show-error");
-    error.textContent = "I am expecting an valid web pattern!";
-    url.style.setProperty("--url-error", "solid 2px rgb(250, 250, 135)");
+    error.textContent = "name must contain letters. no numbers.";
+    elem.style.setProperty("--text-error", "solid 2px #f38383cb");
+    elem.classList.add("dirty");
   } else {
-    error.classList.remove("show-error");
     error.classList.add("hide-error");
+    error.classList.remove("show-error");
     error.textContent = "";
-    url.style.setProperty("--url-error", "none");
+    elem.style.setProperty("--text-error", "none");
+    elem.classList.remove("dirty");
   }
-});
+};
 
 const submitForm = () => {
   // const searchParams = new URLSearchParams();
@@ -108,21 +113,37 @@ const submitForm = () => {
     });
 };
 
-function showError(e) {
+const showError = (e) => {
   e.preventDefault();
+  // eslint-disable-next-line no-console
+  console.log(text.validity.valueMissing);
 
-  if (
-    (text.validity.valueMissing && email.validity.valueMissing) ||
-    (!text.validity.valid && !email.validity.valid)
-  ) {
-    text.setCustomValidity("Both the email addresses must match.");
+  if (text.validity.valueMissing || email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "name and email address are required!";
-    text.style.setProperty("--text-error", "solid 2px rgb(136, 136, 241)");
-    email.style.setProperty("--email-error", "solid 2px rgb(136, 136, 241)");
+    // text.setCustomValidity("Name and email are required.");
+    // email.setCustomValidity("Name and email are required.");
+    text.classList.add("dirty");
+    email.classList.add("dirty");
   } else {
+    error.classList.add("hide-error");
+    error.classList.remove("show-error");
+    error.textContent = "";
     submitForm(e);
   }
-}
-myForm.addEventListener("submit", showError);
+};
+
+error.classList.add("hide-error");
+error.textContent = "";
+
+submit.addEventListener("click", showError);
+
+// text.addEventListener("input", dirtyInputName);
+text.addEventListener("blur", dirtyInputName);
+
+// email.addEventListener("input", dirtyInputEmail);
+email.addEventListener("blur", dirtyInputEmail);
+
+// comments.addEventListener("input", dirtyInputComments);
+comments.addEventListener("blur", dirtyInputComments);
