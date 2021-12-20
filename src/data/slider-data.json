@@ -4,9 +4,8 @@
 			{
 				"id": "0",
 				"hash": "panel-0",
-				"title": "Adobe Certified Associates",
-				"header": "Visual Communication: Photoshop CS4",
-				"subheader": "Topics",
+				"title": "Adobe Certified Associates - Photoshop",
+				"header": "Visual Communication: Photoshop CS4",				
 				"task1": "Setting project requirements",
 				"task2": "Identifying Design Elements",
 				"task3": "Understanding Photoshop Interface",
@@ -20,8 +19,7 @@
 				"id": "1",
 				"hash": "panel-1",
 				"title": "ELATT",
-				"header": "City & Guilds ITQ Level 1 IT User",
-				"subheader": "Topics",
+				"header": "City & Guilds ITQ Level 1 IT User",				
 				"task1": "Improving productivity using IT",
 				"task2": "IT Communication Fundementals",
 				"task3": "Adding Content",
@@ -35,8 +33,7 @@
 				"id": "2",
 				"hash": "panel-2",
 				"title": "ELATT",
-				"header": "City & Guilds ITQ Level 2 IT User",
-				"subheader": "Topics",
+				"header": "City & Guilds ITQ Level 2 IT User",				
 				"task1": "Website Software",
 				"task2": "Database Software",
 				"task3": "Improving Productivity using IT",
@@ -50,8 +47,7 @@
 				"id": "3",
 				"hash": "panel-3",
 				"title": "ELATT",
-				"header": "City & Guilds ITQ Level 3 IT User",
-				"subheader": "Topics",
+				"header": "City & Guilds ITQ Level 3 IT User",				
 				"task1": "Website Software",
 				"task2": "Imaging Software (Flash)",
 				"task3": "Improving Productivity using IT",
@@ -65,8 +61,7 @@
 				"id": "4",
 				"hash": "panel-4",
 				"title": "FreeCodeCamp",
-				"header": "Responsive Web Design Certificate",
-				"subheader": "Topics",
+				"header": "Responsive Web Design Certificate",				
 				"task1": "Basic HTML and HTML 5",
 				"task2": "Basic CSS",
 				"task3": "CSS Flexbox",
@@ -80,8 +75,7 @@
 				"id": "5",
 				"hash": "panel-5",
 				"title": "FreeCode Camp",
-				"header": "JavaScript Algorithms and Data Structures",
-				"subheader": "Topics",
+				"header": "JavaScript Algorithms and Data Structures",				
 				"task1": "Basic Javascript",
 				"task2": "ES6",
 				"task3": "Regular Expressions",
@@ -94,9 +88,8 @@
 			{
 				"id": "6",
 				"hash": "panel-6",
-				"title": "Lynda.com",
-				"header": "Lynda.com",
-				"subheader": "Topics",
+				"title": "Linkedin Learning",
+				"header": "Lynda.com",				
 				"task1": "Become a Front-End Web Developer",
 				"task2": "Become a Junior Developer",
 				"task3": "Programming Fundementals",
@@ -109,9 +102,8 @@
 			{
 				"id": "7",
 				"hash": "panel-7",
-				"title": "Code Academy",
-				"header": "Javascript",
-				"subheader": "Topics",
+				"title": "Code Academy - Learn Javascript",
+				"header": "Javascript",				
 				"task1": "Data Types",
 				"task2": "Loops",
 				"task3": "Array Methods",
@@ -124,9 +116,8 @@
 			{
 				"id": "8",
 				"hash": "panel-8",
-				"title": "Code Academy",
-				"header": "Ruby",
-				"subheader": "Topics",
+				"title": "Code Academy - Learn Ruby",
+				"header": "Ruby",				
 				"task1": "Arrays",
 				"task2": "Data Types",
 				"task3": "Classes",
@@ -140,8 +131,7 @@
 				"id": "9",
 				"hash": "panel-9",
 				"title": "Digital Futures 2017",
-				"header": "Interactive Programming",
-				"subheader": "Topics",
+				"header": "Interactive Programming",				
 				"task1": "Debate Skills with DebateMate.",
 				"task2": "Musical Composition.",
 				"task3": "Block programming using Crumble.",
@@ -150,46 +140,22 @@
 				"buttonname": "Digital Futures",
 				"bgimage":
 					"images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.png"
+			},
+      {
+				"id": "10",
+				"hash": "panel-10",
+				"title": "Codewars",
+				"header": "Codewars",				
+				"task1": "",
+				"task2": "",
+				"task3": "",
+				"task4": "",
+				"task5": "",
+				"buttonname": "Codewars",
+				"bgimage":
+					"images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.png"
 			}
-	],
-	"sliderbuttons" :[
-		{
-			"id": "1",
-			"buttonname": "Adobe"
-		},
-		{
-			"id": "2",
-			"buttonname": "ELATT"
-		},
-		{
-			"id": "3",
-			"buttonname": "Codepen"
-		},
-		{
-			"id": "4",
-			"buttonname": "FreeCodeCamp"
-		},
-		{
-			"id": "5",
-			"buttonname": "Lynda.com"
-		},
-		{
-			"id": "6",
-			"buttonname": "Codewars"
-		},
-		{
-			"id": "7",
-			"buttonname": "Code Academy"
-		},
-		{
-			"id": "8",
-			"buttonname": "Udacity"
-		},
-		{
-			"id": "9",
-			"buttonname": "Digital Futures"
-		}
-	]
+	]	
 }
 
 

@@ -5,9 +5,6 @@
 const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
-// eslint-disable-next-line no-console
-// console.log(myForm);
-
 // deconstruct array of form elements
 // subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
 
@@ -20,14 +17,12 @@ const [text, email, , , , , comments, submit] = myForm;
 const dirtyInputName = (evt) => {
   evt.preventDefault();
   const elem = evt.srcElement;
-  // elem.style.setProperty("--text-error", "none");
   // check if input matches pattern
   if (elem.validity.patternMismatch) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
       "name must contain letters. no numbers or special characters.";
-    // elem.style.setProperty("--text-error", "solid 2px #f38383cb");
     elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -42,18 +37,21 @@ const dirtyInputName = (evt) => {
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
   const elem = evt.srcElement;
-  elem.style.setProperty("--text-error", "none");
+  // regex to detect valid email
+  const emailRegExp =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   // check if input matches pattern
-  if (elem.validity.typeMismatch) {
+  if (!emailRegExp.test(elem.value)) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address!";
-    elem.style.setProperty("--email-error", "solid 2px rgb(250, 250, 135)");
+    // elem.style.setProperty("--comment-error", "solid 2px #f38383cb");
+    elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.style.setProperty("--text-error", "none");
+    // elem.style.setProperty("--text-error", "none");
     elem.classList.add("dirty");
   }
 };
@@ -61,20 +59,23 @@ const dirtyInputEmail = (evt) => {
 // eslint-disable-next-line func-style
 const dirtyInputComments = (evt) => {
   evt.preventDefault();
+
+  // element
   const elem = evt.srcElement;
-  // elem.style.setProperty("--comment-error", "none");
+  // regex to detect html tags
+  const commentsRegExp = /<\/?[^>]+(>|$)/g;
   // check if input matches pattern
-  if (elem.validity.patternMismatch) {
+  if (commentsRegExp.test(elem.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "name must contain letters. no numbers.";
-    elem.style.setProperty("--text-error", "solid 2px #f38383cb");
+    error.textContent = "No HTML Tags or Javascript Allowed.";
+    // elem.style.setProperty("--comment-error", "solid 2px #f38383cb");
     elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.style.setProperty("--text-error", "none");
+    // elem.style.setProperty("--comment-error", "none");
     elem.classList.remove("dirty");
   }
 };
@@ -134,6 +135,13 @@ const showError = (e) => {
   }
 };
 
+// prevent spaces from being typed in the email field
+// function blockspace(evt) {
+//   if (evt.key == " ") {
+//       evt.preventDefault();
+//   }
+// }
+
 error.classList.add("hide-error");
 error.textContent = "";
 
@@ -145,5 +153,5 @@ text.addEventListener("blur", dirtyInputName);
 // email.addEventListener("input", dirtyInputEmail);
 email.addEventListener("blur", dirtyInputEmail);
 
-// comments.addEventListener("input", dirtyInputComments);
+comments.addEventListener("input", dirtyInputComments);
 comments.addEventListener("blur", dirtyInputComments);

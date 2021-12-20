@@ -75,73 +75,85 @@ try {
         slidepanelList.append(slidepanelListItem4);
         slidepanelList.append(slidepanelListItem5);
       });
+
+      const panels = document.getElementsByTagName("FIGCAPTION");
+      // display element on page scroll
+      // const displayCaption = (element) => {
+      //   element.classList.remove("scrolled-no-animation");
+      //   element.classList.add("scrolled");
+      // };
+
+      // eslint-disable-next-line no-restricted-syntax
+      // eslint-disable-next-line no-plusplus
+      // eslint-disable-next-line no-restricted-syntax
+      for (const panel of panels) {
+        // eslint-disable-next-line no-console
+        console.log(panel);
+      }
+
+      const scrollTo = (element) => {
+        mask.scrollTo({
+          behavior: "smooth",
+          left: 0,
+          top: element.offsetTop,
+        });
+      };
+
+      const updateIndex = () => {
+        const upperlimit = panels.length - 1;
+
+        if (currentIndex === upperlimit) {
+          currentIndex = 0;
+        } else {
+          // eslint-disable-next-line no-plusplus
+          currentIndex++;
+        }
+      };
+
+      const undateIndex = () => {
+        const lowerlimit = 0;
+
+        if (currentIndex === lowerlimit) {
+          currentIndex = 0;
+        } else {
+          // eslint-disable-next-line no-plusplus
+          currentIndex--;
+        }
+      };
+
+      // Hero Slider
+      next.addEventListener("click", (e) => {
+        // prev.classList.remove("active");
+        // e.target.classList.add("active");
+        e.preventDefault();
+        updateIndex();
+
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < panels.length; i++) {
+          if (i === currentIndex) {
+            scrollTo(document.getElementById(`${panels[i].id}`));
+          }
+        }
+
+        // disable click event
+        return false;
+      });
+
+      prev.addEventListener("click", (e) => {
+        e.preventDefault();
+        undateIndex();
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < panels.length; i++) {
+          if (i === currentIndex) {
+            scrollTo(document.getElementById(`${panels[i].id}`));
+          }
+        }
+
+        // disable click event
+        return false;
+      });
     });
 } catch (error) {
   // eslint-disable-next-line no-console
   console.error(error);
 }
-const panels = document.getElementsByClassName("panel");
-
-const scrollTo = (element) => {
-  mask.scrollTo({
-    behavior: "smooth",
-    left: 0,
-    top: element.offsetTop,
-  });
-};
-
-const updateIndex = () => {
-  const upperlimit = panels.length - 1;
-
-  if (currentIndex === upperlimit) {
-    currentIndex = 0;
-  } else {
-    // eslint-disable-next-line no-plusplus
-    currentIndex++;
-  }
-};
-
-const undateIndex = () => {
-  const lowerlimit = 0;
-
-  if (currentIndex === lowerlimit) {
-    currentIndex = 0;
-  } else {
-    // eslint-disable-next-line no-plusplus
-    currentIndex--;
-  }
-};
-
-// Hero Slider
-
-next.addEventListener("click", (e) => {
-  // prev.classList.remove("active");
-  // e.target.classList.add("active");
-  e.preventDefault();
-
-  updateIndex();
-
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < panels.length; i++) {
-    if (i === currentIndex) {
-      scrollTo(document.getElementById(`${panels[i].id}`));
-    }
-  }
-
-  // disable click event
-  return false;
-});
-
-prev.addEventListener("click", (e) => {
-  e.preventDefault();
-  undateIndex();
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < panels.length; i++) {
-    if (i === currentIndex) {
-      scrollTo(document.getElementById(`${panels[i].id}`));
-    }
-  }
-
-  // disable click event
-  return false;
-});

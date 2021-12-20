@@ -382,6 +382,7 @@
         <!--About-->
         <section id="about_content" class="tabcontent">
           <h2>About Page</h2>
+          
           <div id="abouttext">
             <figure id="page-image">
               <img 
@@ -518,8 +519,7 @@
                     id="myname" 
                     title="enter your first name here" 
                     required
-                    pattern="^[A-Za-z ]+$"                      
-                    placeholder="Please enter your first name"
+                    pattern="^[A-Za-z ]+$" 
                     aria-describedby="form-error" 
                   />
                 </li>
@@ -529,10 +529,10 @@
                     type="email" 
                     name="myemail" 
                     id="myemail" 
-                    title="enter your email address here" 
-                    required 
-                    pattern="^(\w\.?)+@[\w\.-]+\.\w{2,4}" 
-                    placeholder="Please enter a valid email address" 
+                    title="enter your email address here"                     
+                    required                      
+                    min="6"
+                    max="32"
                     aria-describedby="form-error" 
                   />
                 </li>

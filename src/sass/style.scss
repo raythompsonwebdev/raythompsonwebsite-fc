@@ -58,20 +58,15 @@
 .fixed-header {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 80px;
+  max-width: 89%;
   text-align: left;  
   font-size: 99%;
   z-index: 10;
   background-color: $bgcolor;
   height: 100px;
  
-  p.logo {    
-    text-indent: 0.1em;
-  }
-  p {    
-    text-indent: 0.1em;
-  }
+  
 }
 
  
@@ -82,7 +77,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  left: 0;  
+
   div.site-title {
     width: 65%;
     flex: 1 0 auto;
@@ -654,11 +649,8 @@ main.site_content {
 
                 figure.slider-panel {
                   margin: 0;
-                  padding: 0;
-                  float: none;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: flex-end;
+                  padding: 0;                                   
+                  position: relative;
 
                   a.fancybox {
                     @include raytransition(
@@ -667,11 +659,12 @@ main.site_content {
                     align-self: flex-start;
                     width: 100%;
                     display: block;
+                    height: auto;
 
                     span {
                       display: block;
                       width: 100%;
-                      height: 16vh;
+                      height: 34vh;
                       margin: 0;
                       outline: 0;
                       padding: 0;
@@ -684,9 +677,11 @@ main.site_content {
 
                   figcaption {
                     clear: both;
-                    width: 100%;
+                    width: 50%;
                     margin: 0;
-
+                    position: absolute;
+                    top: 100px;
+                    left: 14vw;
                     h5 {
                       font-weight: normal;
                       font-size: 0.85em;
@@ -740,10 +735,8 @@ main.site_content {
           padding: 0;
           display: flex;
           flex: row;
-          text-align: center;
-          font-size: 0.9em;
+          text-align: center;          
           font-family:$fontHeader;
-
           button#next {
             width: 50%;
             line-height: 40px;
@@ -755,6 +748,7 @@ main.site_content {
             padding: 0;
             margin: 0;
             text-shadow:1px 1px 1px $color-black;
+            font-size:0.9em;
 
             &:hover {
               background-color: $color-black;
@@ -774,6 +768,7 @@ main.site_content {
             padding: 0;
             margin: 0;
             text-shadow:1px 1px 1px $color-black;
+            font-size:0.9em;
 
             &:hover {
               background-color: $color-black;
@@ -956,22 +951,15 @@ main.site_content {
             // }
 
             input.dirty:not(:focus):valid {
-              background-color: #cfc;
+              background-color: rgb(176, 241, 176);
+              border: solid 3px rgb(78, 243, 78);
             }
 
             input.dirty:not(:focus):invalid {
-                background-color: #fcc;
+                background-color: rgb(255, 204, 204);
+                border: solid 3px rgb(252, 136, 136);
             }
-
-            input#myname:valid,
-            input#myemail:valid {
-              border: solid 3px rgb(176, 241, 176);
-            }  
-
-            input#myname:invalid,
-            input#myemail:invalid {
-              border: var(--text-error);
-            }          
+                   
 
             input#myname,
             input#myemail{
@@ -981,16 +969,10 @@ main.site_content {
               padding: 0;
               margin: 0;
               font-size:0.9em;
+              outline:none;
             }
 
-            input#myname {
-              border: var(--text-error);
-            }
-
-            input#myemail {
-              border: var(--email-error);
-            }
-            
+                       
 
             ol#comment-box {
               padding: 0;
@@ -1115,6 +1097,19 @@ main.site_content {
   }
   #site_wrapper {
     width: 85%;
+  }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    max-width: 89%;
+    text-align: left;  
+    font-size: 99%;
+    z-index: 10;
+    background-color: $bgcolor;
+    height: 100px; 
+    
   }
   .site_header {
     div.site-title {
@@ -1295,7 +1290,7 @@ main.site_content {
           width: 30%;
           margin:0;
           li {
-            line-height: 45px;
+            line-height: 50px;
             a {
               font-size: 1.05em;
               text-align:left;
@@ -1311,12 +1306,12 @@ main.site_content {
         section#slider {
           width: 60%;
           height: auto;
-          padding: 0;
+          padding: 0.25em;
           margin-left: 0.5em;
           float: right;
 
           h3 {
-            font-size: 1.1em;
+            font-size: 1.2em;
           }
           /* Hero Slider */
           .hero-slider {
@@ -1374,11 +1369,20 @@ main.site_content {
             }
           }
           div#slids {
+            font-size:1.2em;
             button#next {
-              font-size: 1.1em;
+              width: 50%;
+              font-size:1.1em;
+              &:hover {
+                cursor: pointer;
+              }
             }
             button#prev {
-              font-size: 1.1em;
+              width: 50%;
+              font-size:1.1em;
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }
@@ -1585,6 +1589,19 @@ main.site_content {
   #site_wrapper {
     width: 90%;
   }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    max-width: 89%;
+    text-align: left;  
+    font-size: 99%;
+    z-index: 10;
+    background-color: $bgcolor;
+    height: 100px; 
+  }
+  
   .site_header {
     div.site-title {
       width: 20%;
@@ -1764,7 +1781,7 @@ main.site_content {
           width: 30%;
           margin:0;
           li {
-            line-height: 45px;
+            line-height: 50px;
             a {
               font-size: 1.05em;
               text-align:left;
@@ -1780,12 +1797,12 @@ main.site_content {
         section#slider {
           width: 60%;
           height: auto;
-          padding: 0;
+          padding: 0.25em;
           margin-left: 0.5em;
           float: right;
 
           h3 {
-            font-size: 1.1em;
+            font-size: 1.2em;
           }
           /* Hero Slider */
           .hero-slider {
@@ -1812,7 +1829,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 15vh;
+                        height: 37vh;
                       }
                     }
 
@@ -1844,10 +1861,18 @@ main.site_content {
           }
           div#slids {
             button#next {
-              font-size: 1.1em;
+              width: 50%;
+              font-size:1.1em;
+              &:hover {
+                cursor: pointer;
+              }
             }
             button#prev {
-              font-size: 1.1em;
+              width: 50%;
+              font-size:1.1em;
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
         }
@@ -2225,7 +2250,7 @@ main.site_content {
           width: 30%;
           margin:0;
           li {
-            line-height: 45px;
+            line-height: 50px;
             a {
               font-size: 1em;
               text-align:left;
@@ -2241,19 +2266,19 @@ main.site_content {
         section#slider {
           width: 60%;
           height: auto;
-          padding: 0;
+          padding: 0.25em;
           margin-left: 0.5em;
           float: right;
 
           h3 {
-            font-size: 1.1em;
+            font-size: 1.2em;
           }
           /* Hero Slider */
           .hero-slider {
             width: 100%;
 
             .mask {
-              height: 350px;
+              height: 365px;
 
               /*position relative for scrolling*/
 
@@ -2282,7 +2307,7 @@ main.site_content {
                       clear: both;
 
                       h5 {
-                        font-size: 0.95em;
+                        font-size: 1.1em;
                       }
 
                       
@@ -2305,16 +2330,17 @@ main.site_content {
             }
           }
           div#slids {
+            
             button#next {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
                 cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
                 cursor: pointer;
               }
@@ -2685,7 +2711,7 @@ main.site_content {
           width: 35%;
           margin: 0;
           li {
-            line-height: 45px;
+            line-height: 50px;
             a {
               font-size: 1em;
               text-align:left;
@@ -2699,12 +2725,11 @@ main.site_content {
         }
         /* Hero-Slider */
         section#slider {
-          width: 50%;
+          width: 55%;
           height: auto;
-          padding: 0.5em;
+          padding: 0.25em;
           margin-left: 0;
-          float: right;
-          
+          float: right;          
 
           h3 {            
             height: 50px;
@@ -2717,7 +2742,7 @@ main.site_content {
             width: 100%;
 
             .mask {
-              height: 310px;
+              height: 330px;
 
               /*position relative for scrolling*/
               div.slider-body {
@@ -2737,7 +2762,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 10vh;
+                        height: 34vh;
                       }
                     }
 
@@ -2745,7 +2770,7 @@ main.site_content {
                       clear: both;
 
                       h5 {
-                        font-size: 0.95em;
+                        font-size: 1em;
                       }
 
                       
@@ -2768,16 +2793,17 @@ main.site_content {
             }
           }
           div#slids {
+            
             button#next {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
                 cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
                 cursor: pointer;
               }
@@ -3276,7 +3302,7 @@ main.site_content {
           margin-left: 0.5em;
           float: right;
 
-          h1 {
+          h3 {
             height: 50px;
             font-size: 1.15em;
             line-height: 50px;
@@ -3287,7 +3313,7 @@ main.site_content {
             margin: 0;
 
             .mask {
-              height: 310px;
+              height: 330px;
 
               /*position relative for scrolling*/
               div.slider-body {
@@ -3305,10 +3331,7 @@ main.site_content {
                   figure.slider-panel {
                     margin: 0;
                     padding: 0;
-                    float: none;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
+             
 
                     a.fancybox {
                       @include raytransition(
@@ -3324,7 +3347,7 @@ main.site_content {
                         background-repeat: no-repeat;
                         background-position: center 15%;
                         background-size: cover;
-                        height: 10vh;
+                        height: 34vh;
                       }
                     }
 
@@ -3332,7 +3355,7 @@ main.site_content {
                       clear: both;
 
                       h5 {
-                        font-size: 0.9em;
+                        font-size: 0.95em;
                       }
 
                      
@@ -3357,19 +3380,18 @@ main.site_content {
           }
           div#slids {
             height: 40px;
-
             button#next {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
-                background-color: $color-white-1;
+                cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:1.1em;
               &:hover {
-                color: $color-black2;
+                cursor: pointer;
               }
             }
           }
@@ -3721,7 +3743,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 10vh;
+                        height: 34vh;
                       }
                     }
 
@@ -3754,14 +3776,14 @@ main.site_content {
           div#slids {
             button#next {
               width: 50%;
-
+              font-size:1em;
               &:hover {
                 cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:1em;
               &:hover {
                 cursor: pointer;
               }
@@ -4005,8 +4027,8 @@ main.site_content {
 
           h3 {
             height: 40px;
-          font-size: 1.05rem;
-          line-height: 40px;
+            font-size: 1.05rem;
+            line-height: 40px;
           }
 
           .hero-slider {
@@ -4032,7 +4054,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 10vh;
+                        height: 34vh;
                       }
                     }
 
@@ -4062,16 +4084,17 @@ main.site_content {
             }
           }
           div#slids {
+            font-size: 1em;
             button#next {
               width: 50%;
-
+              font-size:1em;
               &:hover {
                 cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:1em;
               &:hover {
                 cursor: pointer;
               }
@@ -4315,7 +4338,7 @@ main.site_content {
                       display: block;
 
                       span {
-                        height: 16vh;
+                        height: 34vh;
                       }
                     }
 
@@ -4348,14 +4371,14 @@ main.site_content {
           div#slids {
             button#next {
               width: 50%;
-
+              font-size:0.9em;
               &:hover {
                 cursor: pointer;
               }
             }
             button#prev {
               width: 50%;
-
+              font-size:0.9em;
               &:hover {
                 cursor: pointer;
               }
