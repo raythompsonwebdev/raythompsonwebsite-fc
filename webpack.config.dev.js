@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-// const { extendDefaultPlugins } = require("svgo");
 
 export default {
   mode: "development",
