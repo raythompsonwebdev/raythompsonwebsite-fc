@@ -77,14 +77,6 @@ try {
       });
 
       const fancyBoxLinks = document.getElementsByClassName("fancybox");
-      // display element on page scroll
-      // const displayCaption = (element) => {
-      //   element.classList.remove("scrolled-no-animation");
-      //   element.classList.add("scrolled");
-      // };
-
-      // eslint-disable-next-line no-console
-      console.log(fancyBoxLinks);
 
       // eslint-disable-next-line no-restricted-syntax
       for (const fancyLink of fancyBoxLinks) {

@@ -2091,6 +2091,19 @@ main.site_content {
   #site_wrapper {
     width: 96%;
   }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 70px;
+    max-width: 91%;
+    text-align: left;  
+    font-size: 99%;
+    z-index: 10;
+    background-color: $bgcolor;
+    height: 100px; 
+  }
+  
   .site_header {
     div.site-title {
       width: 20%;

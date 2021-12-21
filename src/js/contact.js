@@ -10,9 +10,6 @@ const error = document.getElementById("form-error");
 
 const [text, email, , , , , comments, submit] = myForm;
 
-// eslint-disable-next-line no-console
-// console.log(comments);
-
 // eslint-disable-next-line func-style
 const dirtyInputName = (evt) => {
   evt.preventDefault();
@@ -28,7 +25,6 @@ const dirtyInputName = (evt) => {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.style.setProperty("--text-error", "none");
     elem.classList.add("dirty");
   }
 };
@@ -45,13 +41,11 @@ const dirtyInputEmail = (evt) => {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address!";
-    // elem.style.setProperty("--comment-error", "solid 2px #f38383cb");
     elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    // elem.style.setProperty("--text-error", "none");
     elem.classList.add("dirty");
   }
 };
@@ -69,24 +63,16 @@ const dirtyInputComments = (evt) => {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent = "No HTML Tags or Javascript Allowed.";
-    // elem.style.setProperty("--comment-error", "solid 2px #f38383cb");
     elem.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    // elem.style.setProperty("--comment-error", "none");
     elem.classList.remove("dirty");
   }
 };
 
 const submitForm = () => {
-  // const searchParams = new URLSearchParams();
-  // // eslint-disable-next-line no-restricted-syntax
-  // for (const pair of formData) {
-  //   searchParams.append(pair[0], pair[1]);
-  // }
-
   const formData = new FormData(myForm);
   // const urlToVal = "./php/validation.php";
 
@@ -146,6 +132,8 @@ error.classList.add("hide-error");
 error.textContent = "";
 
 submit.addEventListener("click", showError);
+
+// myForm.addEventListener("submit", showError);
 
 // text.addEventListener("input", dirtyInputName);
 text.addEventListener("blur", dirtyInputName);

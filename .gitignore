@@ -117,7 +117,7 @@ src/js/slider.js.map
 src/css/style.min.css.map
 src/fonts/pt-sans-2-cufonfonts-webfont/
 src/fonts/titillium-web/
-src/fonts/Webfonts-Kelsons/
+src/fonts/font-awesome-4.7.0/
 
 
 src/php/DatabaseConnection.php
@@ -126,6 +126,9 @@ src/php/private/
 src/php/_secure/
 src/images/OG-images/
 src/images/Projects/
+src/images/map-of-hackney/
+src/images/profile/
+src/images/certificates/
 
 
 
