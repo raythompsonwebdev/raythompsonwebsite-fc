@@ -67,7 +67,7 @@ try {
         slidepanelImgLink.append(slidepanelImg);
         slidepanel.append(slidepanelCaption);
         slidepanelCaption.append(slidepanelHeadingThree);
-        // slidepanelCaption.append(slidepanelHeadingFour);
+
         slidepanelCaption.append(slidepanelList);
         slidepanelList.append(slidepanelListItem);
         slidepanelList.append(slidepanelListItem2);

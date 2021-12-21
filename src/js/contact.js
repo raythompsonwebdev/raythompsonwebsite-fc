@@ -1,4 +1,3 @@
-/* eslint-disable func-style */
 /**
  * Contact Form
  */
@@ -6,9 +5,7 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-// subscribed, select, comtype1, comtype2, comtype3 variable replaced with space g
-
-const [text, email, , , , , comments, submit] = myForm;
+const [text, email, , , , , comments, ,] = myForm;
 
 // eslint-disable-next-line func-style
 const dirtyInputName = (evt) => {
@@ -29,7 +26,6 @@ const dirtyInputName = (evt) => {
   }
 };
 
-// eslint-disable-next-line func-style
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
   const elem = evt.srcElement;
@@ -50,7 +46,6 @@ const dirtyInputEmail = (evt) => {
   }
 };
 
-// eslint-disable-next-line func-style
 const dirtyInputComments = (evt) => {
   evt.preventDefault();
 
@@ -109,8 +104,6 @@ const showError = (e) => {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "name and email address are required!";
-    // text.setCustomValidity("Name and email are required.");
-    // email.setCustomValidity("Name and email are required.");
     text.classList.add("dirty");
     email.classList.add("dirty");
   } else {
@@ -131,9 +124,9 @@ const showError = (e) => {
 error.classList.add("hide-error");
 error.textContent = "";
 
-submit.addEventListener("click", showError);
+// submit.addEventListener("click", showError);
 
-// myForm.addEventListener("submit", showError);
+myForm.addEventListener("submit", showError);
 
 // text.addEventListener("input", dirtyInputName);
 text.addEventListener("blur", dirtyInputName);
