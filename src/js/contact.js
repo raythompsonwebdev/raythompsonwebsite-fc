@@ -5,7 +5,7 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, , , , , comments, ,] = myForm;
+const [text, email, , , , , comments, submit] = myForm;
 
 // eslint-disable-next-line func-style
 const dirtyInputName = (evt) => {
@@ -126,7 +126,7 @@ error.textContent = "";
 
 // submit.addEventListener("click", showError);
 
-myForm.addEventListener("submit", showError);
+submit.addEventListener("click", showError);
 
 // text.addEventListener("input", dirtyInputName);
 text.addEventListener("blur", dirtyInputName);

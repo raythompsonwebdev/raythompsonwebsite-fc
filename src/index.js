@@ -24,7 +24,7 @@ const makeSrcset = (imgSrc) => {
 
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < 10; i++) {
-    markup[i] = `${imgSrc}.png ${width}w`;
+    markup[i] = `${imgSrc}.webp ${width}w`;
     width += 20;
   }
 
