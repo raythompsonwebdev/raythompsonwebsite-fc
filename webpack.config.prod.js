@@ -3,7 +3,6 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-// const { extendDefaultPlugins } = require("svgo");
 
 export default {
   mode: "production",
@@ -35,8 +34,8 @@ export default {
             // Lossless optimization with custom option
             // Feel free to experiment with options for better result for you
             plugins: [
-              ["gifsicle", { interlaced: true }],
-              ["jpegtran", { progressive: true }],
+              // ["gifsicle", { interlaced: true }],
+              // ["mozjpeg", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
               // Svgo configuration here https://github.com/svg/svgo#configuration
             ],
@@ -78,15 +77,6 @@ export default {
               sourceMap: true,
             },
           },
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     autoprefixer: {
-          //       browsers: ["last 2 versions"],
-          //     },
-          //     plugins: () => [autoprefixer],
-          //   },
-          // },
           {
             loader: "sass-loader",
             options: {
@@ -102,7 +92,12 @@ export default {
       },
       // rules for images
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        use: [
+          {
+            loader: "img-optimize-loader",
+          },
+        ],
         type: "asset",
       },
     ],
@@ -117,34 +112,5 @@ export default {
       filename: "index.html",
       template: path.join(__dirname, "src/index.html"),
     }),
-    // new ImageMinimizerPlugin({
-    //   minimizerOptions: {
-    //     // Lossless optimization with custom option
-    //     // Feel free to experiment with options for better result for you
-    //     plugins: [
-    //       ["gifsicle", { interlaced: true }],
-    //       ["jpegtran", { progressive: true }],
-    //       ["optipng", { optimizationLevel: 5 }],
-    //       // Svgo configuration here https://github.com/svg/svgo#configuration
-    //       /*  [
-    //         "svgo",
-    //         {
-    //           plugins: extendDefaultPlugins([
-    //             {
-    //               name: "removeViewBox",
-    //               active: false,
-    //             },
-    //             {
-    //               name: "addAttributesToSVGElement",
-    //               params: {
-    //                 attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
-    //               },
-    //             },
-    //           ]),
-    //         },
-    //       ], */
-    //     ],
-    //   },
-    // }),
   ],
 };

@@ -56,7 +56,12 @@ export default {
       },
       // rules for images
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        use: [
+          {
+            loader: "img-optimize-loader",
+          },
+        ],
         type: "asset",
       },
     ],
@@ -71,8 +76,8 @@ export default {
             // Lossless optimization with custom option
             // Feel free to experiment with options for better result for you
             plugins: [
-              ["gifsicle", { interlaced: true }],
-              ["jpegtran", { progressive: true }],
+              // ["gifsicle", { interlaced: true }],
+              // ["mozjpeg", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
               // Svgo configuration here https://github.com/svg/svgo#configuration
             ],
