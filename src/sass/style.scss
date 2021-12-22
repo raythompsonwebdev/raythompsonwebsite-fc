@@ -379,12 +379,13 @@ main.site_content {
       margin: 0 0 0.5em 0;
       width: 96%;
       @include raytransition(all 0.2s ease-in 0s);
-      border: 1px solid #000;
+      
       li {
         width: 50%;
         flex: 0 1 auto;
         margin-right: 0;
         margin-bottom: 0;
+        border: 1px solid #000;
         button.project_tab {
           font-family: $fontHeader;
           display: block;
@@ -474,40 +475,48 @@ main.site_content {
         padding:0;
         margin:0 auto;
         display:block; 
-        font-size:0.85em;
+        font-size:0.8em;
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
         text-align:center;
+        border-bottom:5px solid $color-black;
       }
 
-      a.cert_link {
-        width: 70%;
-        border: none;
-        font-size: 0.85em;
-        cursor: pointer;
-        margin: 0.1em auto;
-        text-decoration: none;
-        display: block;
-        line-height: 35px;
-        font-weight: normal;
-        color: $color-black2;
-        background-color: $greencolor;
-        text-align: center;
-        font-family: $fontText;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        &:hover {
+      span#cover-links{
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: space-between;
+        margin: 0 auto;
+        width: 100%;     
+
+        a.cover_link {
+          width: 50%;
+          border: none;
+          font-size: 0.85em;
+          cursor: pointer;
+          margin: 0 auto;
+          text-decoration: none;
+          display: block;
+          line-height: 35px;
+          font-weight: normal;
           color: $color-black2;
-          background-color: $color-white-1;
-          text-decoration: underline;
-        }        
-      }
+          background-color: $greencolor;
+          text-align: center;
+          font-family: $fontText;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          &:hover {
+            color: $color-black2;
+            background-color: $color-white-1;
+            text-decoration: underline;
+          }        
+        }
 
-      a.cert_link:first-of-type{
-        margin-top: 0.25em;
       }
+     
 
       h3.cert_title {
         font-family: $fontHeader;
@@ -1302,11 +1311,17 @@ main.site_content {
       figcaption.cover {
         opacity: 0;
 
-        a.cert_link {
-          width: 85%;
-          font-size: 1em;
-          &:hover {
-            font-weight: bold;
+        span#cover-links{
+          display: flex;
+          margin: 0 auto;
+          width: 100%;   
+
+          a.cover_link {
+            width: 45%;
+            font-size: 0.9em;
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
 
@@ -1754,10 +1769,10 @@ main.site_content {
         list-style: none;
         padding: 0;
         margin: 0 0 0.5em 0;
-        width: 90%;
+        width: 100%;
         @include raytransition(all 0.2s ease-in 0s);
         li {
-          width: 15%;
+          width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
           font-family: $fontText;
@@ -1788,19 +1803,24 @@ main.site_content {
       }
 
       figure.box {
-        width: 24%;
+        width: 23%;
       }
 
       figcaption.cover {
         opacity: 0;
+        span#cover-links{
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
 
-        a.cert_link {
-          width: 85%;
-          font-size: 1em;
+        a.cover_link {
+          width: 45%;
+          font-size: 0.85em;
           &:hover {
             font-weight: bold;
           }
         }
+      }
 
         h3.cert_title {
           font-size: 1.2em;
@@ -2238,10 +2258,10 @@ main.site_content {
         list-style: none;
         padding: 0;
         margin: 0 0 0.5em 0;
-        width: 90%;
+        width: 100%;
         @include raytransition(all 0.2s ease-in 0s);
         li {
-          width: 15%;
+          width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
           font-family: $fontText;
@@ -2265,25 +2285,29 @@ main.site_content {
         justify-content: flex-start;
         align-items: flex-start;
         padding: 0;
-        width: 95%;
+        width: 98%;
         margin: auto;
       }
 
       figure.box {
-        width: 24%;
+        width: 23%;
       }
       figcaption.cover {
         opacity: 0;
+        span#cover-links{
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
 
-        a.cert_link {
-          width: 85%;
-
-          font-size: 1.1em;
+        a.cover_link {
+          width: 45%;
+          font-size: 0.85em;
 
           &:hover {
             font-weight: bold;
           }
         }
+      }
 
         h3.cert_title {
           font-size: 1.2em;
@@ -2700,10 +2724,10 @@ main.site_content {
         list-style: none;
         padding: 0;
         margin: 0 0 0.5em 0;
-        width: 90%;
+        width: 100%;
         @include raytransition(all 0.2s ease-in 0s);
         li {
-          width: 15%;
+          width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
           font-family: $fontText;
@@ -2732,19 +2756,24 @@ main.site_content {
       }
 
       figure.box {
-        width: 24%;
+        width: 22.5%;
       }
       figcaption.cover {
         opacity: 0;
 
-        a.cert_link {
-          width: 85%;
+        span#cover-links{
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
 
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
+          a.cover_link {
+            width: 48%;
+            font-size: 0.9em;
+            &:hover {
+              font-weight: bold;
+            }
           }
+
         }
 
         h3.cert_title {
@@ -3293,7 +3322,7 @@ main.site_content {
       figcaption.cover {
         position: absolute;
 
-        a.cert_link {
+        a.cover_link {
           font-size: 0.9em;
 
           &:hover {
@@ -3745,7 +3774,7 @@ main.site_content {
       }
 
       figcaption.cover {
-        a.cert_link {
+        a.cover_link {
           font-size: 0.9em;
         }
 
@@ -4060,7 +4089,7 @@ main.site_content {
       figcaption.cover {
         position: absolute;
 
-        a.cert_link {
+        a.cover_link {
           font-size: 1.2em;
         }
 
@@ -4340,7 +4369,7 @@ main.site_content {
       figcaption.cover {
         position: absolute;
 
-        a.cert_link {
+        a.cover_link {
           font-size: 0.85em;
         }
 
