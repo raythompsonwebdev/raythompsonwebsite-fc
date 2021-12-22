@@ -23,7 +23,7 @@ const makeSrcset = (imgSrc) => {
   let width = 300;
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < 10; i++) {
-    markup[i] = `${imgSrc}-${width}.webp `;
+    markup[i] = `${imgSrc}-${width}.png `;
     width += 20;
   }
 
@@ -35,7 +35,7 @@ for (let i = 0; i < portImages.length; i++) {
   // get relative path of image.
   let imgLink = portImages[i].getAttribute("src");
 
-  imgLink = imgLink.slice(0, -5);
+  imgLink = imgLink.slice(0, -4);
   const srcset = makeSrcset(imgLink);
 
   // eslint-disable-next-line no-console

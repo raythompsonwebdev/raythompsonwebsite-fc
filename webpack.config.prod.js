@@ -2,7 +2,7 @@ const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 export default {
   mode: "production",
@@ -27,21 +27,21 @@ export default {
     minimizer: [
       // Minify JS
       new TerserPlugin(),
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            // Lossless optimization with custom option
-            // Feel free to experiment with options for better result for you
-            plugins: [
-              // ["gifsicle", { interlaced: true }],
-              // ["mozjpeg", { progressive: true }],
-              ["optipng", { optimizationLevel: 5 }],
-              // Svgo configuration here https://github.com/svg/svgo#configuration
-            ],
-          },
-        },
-      }),
+      // new ImageMinimizerPlugin({
+      //   minimizer: {
+      //     implementation: ImageMinimizerPlugin.imageminMinify,
+      //     options: {
+      //       // Lossless optimization with custom option
+      //       // Feel free to experiment with options for better result for you
+      //       plugins: [
+      //         // ["gifsicle", { interlaced: true }],
+      //         // ["mozjpeg", { progressive: true }],
+      //         ["optipng", { optimizationLevel: 5 }],
+      //         // Svgo configuration here https://github.com/svg/svgo#configuration
+      //       ],
+      //     },
+      //   },
+      // }),
     ],
   },
   module: {
@@ -96,6 +96,34 @@ export default {
         use: [
           {
             loader: "img-optimize-loader",
+            options: {
+              compress: {
+                // loseless compression for png
+                optipng: {
+                  optimizationLevel: 4,
+                },
+                // lossy compression for png. This will generate smaller file than optipng.
+                pngquant: {
+                  quality: [0.2, 0.8],
+                },
+                // Compression for webp.
+                // You can also tranform jpg/png into webp.
+                webp: {
+                  quality: 100,
+                },
+                // Compression for svg.
+                svgo: true,
+                // Compression for gif.
+                gifsicle: {
+                  optimizationLevel: 3,
+                },
+                // Compression for jpg.
+                mozjpeg: {
+                  progressive: true,
+                  quality: 60,
+                },
+              },
+            },
           },
         ],
         type: "asset",

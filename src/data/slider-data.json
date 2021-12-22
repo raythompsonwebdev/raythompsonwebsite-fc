@@ -13,7 +13,7 @@
 				"task5": "Evaluating Digital Images",
 				"buttonname": "Adobe",
 				"bgimage":
-					"images/certificates/converted-Adobe-photoshop-large.webp"
+					"images/certificates/png/Adobe-photoshop-large.png"
 			},
 			{
 				"id": "1",
@@ -27,7 +27,7 @@
 				"task5": "Organizing Content",
 				"buttonname": "ELATT 1",
 				"bgimage":
-					"images/certificates/converted-CityandGuildsLevelOne-large.webp"
+					"images/certificates/png/CityandGuildsLevelOne-large.png"
 			},
 			{
 				"id": "2",
@@ -41,7 +41,7 @@
 				"task5": "Organizing Content",
 				"buttonname": "ELATT 2",
 				"bgimage":
-					"images/certificates/converted-CityandGuildsLevelTwo-large.webp"
+					"images/certificates/png/CityandGuildsLevelTwo-large.png"
 			},
 			{
 				"id": "3",
@@ -55,7 +55,7 @@
 				"task5": "Organizing Content",
 				"buttonname": "ELATT 3",
 				"bgimage":
-					"images/certificates/converted-CityandGuildsLevelThree-large.webp"
+					"images/certificates/png/CityandGuildsLevelThree-large.png"
 			},
 			{
 				"id": "4",
@@ -69,7 +69,7 @@
 				"task5": "Responsive Web Design Principles",
 				"buttonname": "FreeCodeCamp",
 				"bgimage":
-					"images/certificates/converted-freecodecamp-org-certification-responsive-web-design-large.webp"
+					"images/certificates/png/freecodecamp-org-certification-responsive-web-design-large.png"
 			},
 			{
 				"id": "5",
@@ -83,7 +83,7 @@
 				"task5": "Basic Algorithim Scripting",
 				"buttonname": "Udacity",
 				"bgimage":
-					"images/certificates/converted-freecodecamp-org-certification-javascript-large.webp"
+					"images/certificates/png/freecodecamp-org-certification-javascript-large.png"
 			},
 			{
 				"id": "6",
@@ -97,7 +97,7 @@
 				"task5": "Javascript Essentials",
 				"buttonname": "Lynda.com",
 				"bgimage":
-					"images/certificates/converted-lynda-com-vanilla-javascript-large.webp"
+					"images/certificates/png/lynda-com-vanilla-javascript-large.png"
 			},
 			{
 				"id": "7",
@@ -111,7 +111,7 @@
 				"task5": "Conditionals",
 				"buttonname": "Code Academy",
 				"bgimage":
-					"images/certificates/converted-codecademy-js-large.webp"
+					"images/certificates/png/codecademy-js-large.png"
 			},
 			{
 				"id": "8",
@@ -125,7 +125,7 @@
 				"task5": "Conditionals",
 				"buttonname": "Code Academy",
 				"bgimage":
-					"images/certificates/converted-codecademy-ruby-large.webp"
+					"images/certificates/png/codecademy-ruby-large.png"
 			},
 			{
 				"id": "9",
@@ -139,7 +139,7 @@
 				"task5": "Music creation using Sonic Pi",
 				"buttonname": "Digital Futures",
 				"bgimage":
-					"images/certificates/converted-Digital-Futures-2017-Certificate-of-Participation-large.webp"
+					"images/certificates/png/Digital-Futures-2017-Certificate-of-Participation-large.png"
 			},
       {
 				"id": "10",
@@ -153,7 +153,7 @@
 				"task5": "",
 				"buttonname": "Codewars",
 				"bgimage":
-					"images/certificates/converted-codewars-large.webp"
+					"images/certificates/png/codewars-large.png"
 			}
 	]	
 }
