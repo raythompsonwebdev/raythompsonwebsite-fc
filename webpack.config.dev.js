@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-// const { extendDefaultPlugins } = require("svgo");
 
 export default {
   mode: "development",
@@ -57,7 +56,7 @@ export default {
       },
       // rules for images
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
         type: "asset",
       },
     ],
@@ -69,13 +68,10 @@ export default {
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
-            // Lossless optimization with custom option
-            // Feel free to experiment with options for better result for you
             plugins: [
               ["gifsicle", { interlaced: true }],
               ["jpegtran", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
-              // Svgo configuration here https://github.com/svg/svgo#configuration
             ],
           },
         },

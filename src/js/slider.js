@@ -67,7 +67,7 @@ try {
         slidepanelImgLink.append(slidepanelImg);
         slidepanel.append(slidepanelCaption);
         slidepanelCaption.append(slidepanelHeadingThree);
-        // slidepanelCaption.append(slidepanelHeadingFour);
+
         slidepanelCaption.append(slidepanelList);
         slidepanelList.append(slidepanelListItem);
         slidepanelList.append(slidepanelListItem2);
@@ -75,11 +75,26 @@ try {
         slidepanelList.append(slidepanelListItem4);
         slidepanelList.append(slidepanelListItem5);
       });
+
+      const fancyBoxLinks = document.getElementsByClassName("fancybox");
+
+      // eslint-disable-next-line no-restricted-syntax
+      for (const fancyLink of fancyBoxLinks) {
+        if (!fancyLink.classList.contains("cover")) {
+          fancyLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            // eslint-disable-next-line no-console
+            console.log(fancyLink.nextSibling);
+            fancyLink.nextSibling.classList.toggle("captionshow");
+          });
+        }
+      }
     });
 } catch (error) {
   // eslint-disable-next-line no-console
   console.error(error);
 }
+
 const panels = document.getElementsByClassName("panel");
 
 const scrollTo = (element) => {
@@ -113,12 +128,10 @@ const undateIndex = () => {
 };
 
 // Hero Slider
-
 next.addEventListener("click", (e) => {
   // prev.classList.remove("active");
   // e.target.classList.add("active");
   e.preventDefault();
-
   updateIndex();
 
   // eslint-disable-next-line no-plusplus
