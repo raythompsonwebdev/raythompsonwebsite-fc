@@ -1,5 +1,5 @@
 // eslint-disable-next-line func-style
-function responsiveChart() {
+const responsiveChart = () => {
   // document.addEventListener("DOMContentLoaded", () => {
   const chartbars = [
     {
@@ -101,7 +101,7 @@ function responsiveChart() {
 
     const id = setInterval(frame, 2500);
   });
-}
+};
 // });
 
-export default { responsiveChart };
+export default responsiveChart;
