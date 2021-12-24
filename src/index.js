@@ -6,7 +6,7 @@ import "./js/contact";
 import "./js/main";
 import "./js/projects";
 import "./js/slider";
-import "./js/responsive-chart";
+// import "./js/responsive-chart";
 
 // set backround image for home page
 const bgImage = document.querySelector("#banner");

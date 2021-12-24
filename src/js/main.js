@@ -1,4 +1,5 @@
-// Your code to run since DOM is loaded and ready
+import responsiveChart from "./responsive-chart";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Add smooth scrolling to all links
   const navLinks = document.getElementsByClassName("tablink");
@@ -62,6 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   };
+
+  const aboutPage = scrollElements[2];
+
+  if (elementInView(aboutPage)) {
+    // eslint-disable-next-line no-console
+    console.log("true");
+    // responsiveChart();
+  }
 
   /**
    * Page Scroll Function

@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+// eslint-disable-next-line func-style
+function responsiveChart() {
+  // document.addEventListener("DOMContentLoaded", () => {
   const chartbars = [
     {
       id: "1",
@@ -97,6 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    const id = setInterval(frame, 1500);
+    const id = setInterval(frame, 2500);
   });
-});
+}
+// });
+
+export default { responsiveChart };
