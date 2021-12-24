@@ -65,8 +65,6 @@ try {
         if (!fancyLink.classList.contains("cover")) {
           fancyLink.addEventListener("click", (e) => {
             e.preventDefault();
-            // eslint-disable-next-line no-console
-            console.log(fancyLink.nextSibling);
             fancyLink.nextSibling.classList.toggle("captionshow");
           });
         }

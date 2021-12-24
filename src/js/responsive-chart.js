@@ -33,49 +33,48 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // eslint-disable-next-line no-console
-  console.log(chartbars);
+  // console.log(chartbars);
 
-  const graphBarContainer = document.getElementById("bars");
+  const chartBarContainer = document.getElementById("bars");
 
   // eslint-disable-next-line no-restricted-syntax
-
   chartbars.forEach((element) => {
     // eslint-disable-next-line no-console
     // console.log(element);
 
     // create bar chart bar using div
-    const graphBar = document.createElement("DIV");
+    const chartBar = document.createElement("DIV");
 
     // set bar attributes
-    graphBar.setAttribute("data-percentage", `${element.datapercentage}`);
-    graphBar.setAttribute("data-skill", `${element.dataskill}`);
-    graphBar.setAttribute("class", "bar");
+    chartBar.setAttribute("data-percentage", `${element.datapercentage}`);
+    chartBar.setAttribute("data-skill", `${element.dataskill}`);
+    chartBar.setAttribute("class", "bar");
 
     // create span
-    const graphBarHeader = document.createElement("SPAN");
+    const chartBarHeader = document.createElement("SPAN");
 
     // add text
-    graphBarHeader.textContent = `${element.language}`;
+    chartBarHeader.textContent = `${element.language}`;
 
     // create list element to contain span and div
-    const graphbarList = document.createElement("LI");
+    const chartBarList = document.createElement("LI");
 
     // append div and span as children
-    graphbarList.appendChild(graphBar);
-    graphbarList.appendChild(graphBarHeader);
+    chartBarList.appendChild(chartBar);
+    chartBarList.appendChild(chartBarHeader);
 
-    graphBarContainer.appendChild(graphbarList);
+    chartBarContainer.appendChild(chartBarList);
 
     // eslint-disable-next-line no-console
-    // console.log(graphBarContainer);
+    // console.log(chartBarContainer);
 
-    return graphBarContainer;
+    return chartBarContainer;
   });
 
   // eslint-disable-next-line no-console
-  //  console.log(graphBarContainer.children);
+  //  console.log(chartBarContainer.children);
 
-  const chartBar = graphBarContainer.children;
+  const chartBar = chartBarContainer.children;
 
   Array.from(chartBar).forEach((key) => {
     let percentage = 0;
