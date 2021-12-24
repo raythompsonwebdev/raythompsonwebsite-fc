@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let percentage = 0;
 
       // eslint-disable-next-line no-console
-      console.log(key.children[0].dataset.percentage);
+      // console.log(key.children[0].dataset.percentage);
 
       const percentageMaxWidth = key.children[0].dataset.percentage;
 
@@ -127,7 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = setInterval(frame, 2500);
     });
   };
-  // const aboutPage = scrollElements[2];
+
+  const chartheader = document.getElementById("barchart").firstElementChild;
+
+  // eslint-disable-next-line no-console
+  console.log(chartheader);
 
   responsiveChart();
 
@@ -152,6 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // add animation to element on page scroll
   const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
+      // eslint-disable-next-line no-console
+      // console.log(el.id);
       if (elementInView(el, 100)) {
         displayScrollElement(el);
       } else {
