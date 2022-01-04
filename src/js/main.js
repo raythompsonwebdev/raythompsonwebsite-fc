@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // eslint-disable-next-line no-console
     //  console.log(chartBarContainer.children);
 
+    // eslint-disable-next-line prefer-destructuring
     const chartBar = chartBarContainer.children;
 
     Array.from(chartBar).forEach((key) => {
@@ -109,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // eslint-disable-next-line no-console
       // console.log(key.children[0].dataset.percentage);
 
+      // eslint-disable-next-line prefer-destructuring
       const percentageMaxWidth = key.children[0].dataset.percentage;
 
       const frame = () => {
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // eslint-disable-next-line prefer-destructuring
   const chartheader = document.getElementById("barchart").firstElementChild;
 
   // eslint-disable-next-line no-console
@@ -218,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // create menu variables
   const slideoutMenu = document.querySelector(".site_navigation");
 
+  // eslint-disable-next-line prefer-destructuring
   const slideoutMenuHeight = slideoutMenu.offsetHeight;
   // mobile menu toggle button
   menuToggle.addEventListener("click", (event) => {
@@ -244,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // add event listener to each link
     link.addEventListener("click", (event) => {
       // Store hash
+      // eslint-disable-next-line prefer-destructuring
       const { hash } = event.target;
       // check if has empty
       if (hash !== "") {

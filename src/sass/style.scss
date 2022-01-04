@@ -59,16 +59,12 @@
   top: 0;
   left: 0;
   max-width: 100%;
-  text-align: left;  
+  text-align: left;
   font-size: 99%;
   z-index: 10;
   background-color: $bgcolor;
   height: 100px;
- 
-  
 }
-
- 
 
 .site_header {
   height: 100px;
@@ -87,14 +83,12 @@
       margin: 0;
       font-weight: bold;
       font-family: $fontHeader;
-      
     }
     p {
       font-size: 0.7rem;
       text-align: left;
       line-height: 1.5em;
       margin: 0;
-      
     }
   }
 
@@ -147,38 +141,32 @@
           margin: 0;
           font-size: 1.1em;
           text-align: center;
+          text-decoration: none;
           display: block;
           color: $color-white-1;
           background-color: $color-black;
           font-family: $fontHeader;
-          &:link {
-            background-color: $color-black;
-            color: $color-white-1;
-          }
           /* visited link */
           &:visited {
             background-color: $greencolor;
+            color: $color-black;
+          }
+          &:focus {
+            background-color: $greencolor;
             color: $color-white-1;
-            text-shadow:1px 1px 1px $color-black;
-            border: $color-black dotted 1px;
-          }          
+            text-shadow: 1px 1px 1px $color-black;
+          }
           &:hover {
             background-color: $greencolor;
             color: $color-white-1;
-            text-shadow:1px 1px 1px $color-black;
+            text-shadow: 1px 1px 1px $color-black;
           }
           /* selected link */
           &:active {
             background-color: $greencolor;
-            color: $color-white-1;
-            text-shadow:1px 1px 1px $color-black;
+            color: $color-black;
           }
         }
-      }
-      .tablink:hover {
-        font-weight: bold;
-        color: $color-black;
-        cursor: pointer;
       }
     }
 
@@ -219,9 +207,7 @@
         line-height: 30px;
         background-color: $color-white-1;
         text-align: center;
-        &:hover{
-          color: $color-white-1
-        }
+
         i.fa-twitter,
         i.fa-facebook,
         i.fa-linkedin {
@@ -238,9 +224,14 @@
             transform: scale(1.1);
             font-weight: bold;
             cursor: pointer;
-            background-color: $greencolor;
-            color:$color-black;
+            background-color: $color-black;
+            color: $color-white-1;
           }
+        }
+
+        &:focus {
+          background-color: $greencolor;
+          color: $color-black;
         }
       }
     }
@@ -278,7 +269,7 @@ main.site_content {
     transition: opacity 500ms;
   }
 
-  .tabcontent.scrolled-no-animation{
+  .tabcontent.scrolled-no-animation {
     opacity: 1;
   }
 
@@ -380,13 +371,13 @@ main.site_content {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      align-items:flex-start;
+      align-items: flex-start;
       list-style: none;
       padding: 0;
       margin: 1em 0;
       width: 100%;
       @include raytransition(all 0.2s ease-in 0s);
-      
+
       li {
         width: 48%;
         flex: 1 0 auto;
@@ -397,17 +388,23 @@ main.site_content {
           font-family: $fontHeader;
           display: block;
           color: $color-black;
-          background-color: $color-white-1; 
+          background-color: $color-white-1;
           line-height: 35px;
           width: 100%;
           border: none;
           font-size: 0.9em;
-          
-          &:hover {            
-            cursor: pointer;
-            font-weight: bold;   
+
+          &:focus {
             background-color: $color-black2;
-            color: $color-white-1;         
+            color: $color-white-1;
+            font-weight: bold;
+          }
+
+          &:hover {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: $color-black2;
+            color: $color-white-1;
           }
         }
       }
@@ -457,7 +454,7 @@ main.site_content {
       -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      border: 1px solid $border-color
+      border: 1px solid $border-color;
     }
 
     figcaption.cover {
@@ -475,29 +472,28 @@ main.site_content {
       opacity: 0;
       @include raytransition(all 200ms ease-in-out);
       @include raytransform(scale(0));
-      
 
-      p{
+      p {
         width: 96%;
-        background-color:$color-white-1;
-        padding:0;
-        margin:0 auto;
-        display:block; 
-        font-size:0.8em;
+        background-color: $color-white-1;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        font-size: 0.8em;
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        text-align:center;        
+        text-align: center;
       }
 
-      span#cover-links{
+      span#cover-links {
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
         align-items: space-between;
         margin: 0 auto;
-        width: 100%;  
-        padding-top:0.25em;   
+        width: 100%;
+        padding-top: 0.25em;
         font-family: $fontHeader;
 
         a.cover_link {
@@ -511,7 +507,7 @@ main.site_content {
           line-height: 35px;
           font-weight: normal;
           color: $color-white-1;
-          text-shadow :1px 1px 1px $color-black;
+          text-shadow: 1px 1px 1px $color-black;
           background-color: $color-black;
           text-align: center;
           font-family: $fontText;
@@ -520,11 +516,9 @@ main.site_content {
           &:hover {
             color: $color-white-1;
             background-color: $color-black2;
-          }        
+          }
         }
-
       }
-     
 
       h3.cert_title {
         font-family: $fontHeader;
@@ -538,9 +532,7 @@ main.site_content {
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        border-bottom:1px solid #ccc;
-        
-        
+        border-bottom: 1px solid #ccc;
       }
     }
 
@@ -570,9 +562,8 @@ main.site_content {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     gap: 1em;
-    
 
     h2 {
       font-size: 1.3rem;
@@ -602,11 +593,11 @@ main.site_content {
       ul#webactivitieslist {
         display: block;
         float: none;
-        width: 70%;    
+        width: 70%;
         text-align: left;
         margin: 2em auto;
-        font-family:$fontHeader, "FontAwesome";        
-        li::marker{
+        font-family: $fontHeader, "FontAwesome";
+        li::marker {
           content: "\f0a4";
           font-size: 1.3em;
         }
@@ -618,12 +609,12 @@ main.site_content {
             display: block;
             font-size: 1em;
             color: $color-black2;
-            text-align:left;   
-            text-indent: 1em;       
+            text-align: left;
+            text-indent: 1em;
             &:hover {
-              cursor: pointer;              
+              cursor: pointer;
               color: $color-black;
-              font-weight:bold;
+              font-weight: bold;
             }
           }
         }
@@ -651,7 +642,7 @@ main.site_content {
         line-height: 2.2em;
         width: auto;
         display: block;
-      }     
+      }
     }
 
     /* Hero-Slider */
@@ -666,22 +657,21 @@ main.site_content {
       margin: 0.5em auto;
       padding: 0.25em;
       background-color: $color-black;
-      
 
       h3 {
-        font-family:$fontHeader;
+        font-family: $fontHeader;
         height: 40px;
         font-size: 1rem;
         line-height: 40px;
         background-color: $color-black2;
         color: $color-white-1;
-        margin:0;
-        text-align:center;
+        margin: 0;
+        text-align: center;
       }
       /* Hero Slider */
       .hero-slider {
-        margin: 0;          
-        width: 100%;          
+        margin: 0;
+        width: 100%;
         .mask {
           display: block;
           width: 100%;
@@ -700,13 +690,13 @@ main.site_content {
               background-color: $bgcolor;
 
               h4 {
-                font-family:$fontHeader;
+                font-family: $fontHeader;
                 text-transform: uppercase;
                 padding: 0;
                 line-height: 40px;
                 height: 40px;
                 background-color: $color-black;
-                color: $color-white-1;                  
+                color: $color-white-1;
                 font-size: 0.75em;
                 width: 100%;
                 margin: 0;
@@ -715,20 +705,20 @@ main.site_content {
 
               figure.slider-panel {
                 margin: 0;
-                padding: 0;                                   
-                position: relative;  
-                height:100%;                
+                padding: 0;
+                position: relative;
+                height: 100%;
 
-                a.fancybox {                    
+                a.fancybox {
                   align-self: flex-start;
                   width: 100%;
                   display: block;
-                  height:100%;
+                  height: 100%;
 
                   span {
                     display: block;
                     width: 100%;
-                    height:100%;
+                    height: 100%;
                     margin: 0;
                     outline: 0;
                     padding: 0;
@@ -741,7 +731,7 @@ main.site_content {
 
                 .captionshow {
                   opacity: 1;
-                  display:block;
+                  display: block;
                   animation-name: example;
                   animation-duration: 0.5s;
                 }
@@ -751,32 +741,31 @@ main.site_content {
                     all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
                   );
                   opacity: 0;
-                  display:none;
+                  display: none;
                   width: 100%;
                   margin: 0;
                   position: absolute;
-                  bottom: 100px;                  
-                  padding:0;
+                  bottom: 100px;
+                  padding: 0;
 
                   h5 {
-                    width:100%;
+                    width: 100%;
                     font-weight: normal;
                     font-size: 0.85em;
                     background-color: $color-black;
                     color: $color-white-1;
                     text-indent: 0;
                     margin: 0;
-                    font-family:$fontHeader;
+                    font-family: $fontHeader;
                     text-align: center;
                     line-height: 40px;
-                    &:hover{
-                      cursor:pointer;
-                      font-weight:bold;
+                    &:hover {
+                      cursor: pointer;
+                      font-weight: bold;
                     }
-                    
-                  }    
-                  
-                  p{
+                  }
+
+                  p {
                     width: 100%;
                     display: block;
                     margin: 0;
@@ -784,15 +773,13 @@ main.site_content {
                     font-weight: normal;
                     font-size: 0.75em;
                     color: $color-black2;
-                    padding:0.5em;
+                    padding: 0.5em;
                     height: auto;
                     line-height: 25px;
                     border: 1px solid rgba(0, 0, 0, 0.4);
                     margin-bottom: 0.1em;
                     font-family: "FontAwesome", $fontText;
-
                   }
-                  
                 }
               }
             }
@@ -807,8 +794,8 @@ main.site_content {
         padding: 0;
         display: flex;
         flex: row;
-        text-align: center;          
-        font-family:$fontHeader;
+        text-align: center;
+        font-family: $fontHeader;
         button#next {
           width: 50%;
           line-height: 40px;
@@ -819,8 +806,8 @@ main.site_content {
           border: none;
           padding: 0;
           margin: 0;
-          text-shadow:1px 1px 1px $color-black;
-          font-size:0.9em;
+          text-shadow: 1px 1px 1px $color-black;
+          font-size: 0.9em;
 
           &:hover {
             background-color: $color-black2;
@@ -839,8 +826,8 @@ main.site_content {
           border: none;
           padding: 0;
           margin: 0;
-          text-shadow:1px 1px 1px $color-black;
-          font-size:0.9em;
+          text-shadow: 1px 1px 1px $color-black;
+          font-size: 0.9em;
 
           &:hover {
             background-color: $color-black2;
@@ -851,7 +838,7 @@ main.site_content {
         }
       }
     }
-    
+
     section#barchart {
       -webkit-order: 1;
       -ms-flex-order: 1;
@@ -864,7 +851,7 @@ main.site_content {
       display: inline-block;
       //box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
       margin-bottom: 1em;
-      padding: 0.25em;     
+      padding: 0.25em;
       font-family: $fontHeader;
 
       h1 {
@@ -890,7 +877,7 @@ main.site_content {
         height: 100%;
         list-style: none;
         margin: 0;
-        padding:0;
+        padding: 0;
 
         li {
           width: 100%;
@@ -937,14 +924,13 @@ main.site_content {
           height: 100%;
           text-align: left;
           line-height: 62px;
-          height:60px;
+          height: 60px;
           font-size: 0.75em;
           text-indent: 0.25em;
           color: $color-black;
           z-index: 3;
         }
       }
-      
     }
   }
 
@@ -974,9 +960,9 @@ main.site_content {
         align-items: flex-start;
         width: 98%;
         margin: 1em auto;
-        padding:0;
+        padding: 0;
         h3 {
-          font-family:$fontHeader;
+          font-family: $fontHeader;
           font-size: 1.05rem;
           width: 100%;
           line-height: 40px;
@@ -991,11 +977,11 @@ main.site_content {
           ul {
             display: block;
             list-style: none;
-            
+
             padding: 0;
             li {
               height: auto;
-              font-family: "FontAwesome";              
+              font-family: "FontAwesome";
 
               a {
                 width: auto;
@@ -1003,7 +989,7 @@ main.site_content {
                 font-size: 0.75em;
                 line-height: 40px;
                 margin-left: 1em;
-                font-family:$fontHeader;
+                font-family: $fontHeader;
                 &:hover {
                   cursor: pointer;
                 }
@@ -1052,16 +1038,16 @@ main.site_content {
         text-align: center;
         animation-name: example;
         animation-duration: 0.2s;
-        font-family:$fontHeader;
-        font-size:1.1;
-        text-shadow:1px 1px 1px $color-black;
+        font-family: $fontHeader;
+        font-size: 1.1;
+        text-shadow: 1px 1px 1px $color-black;
         text-transform: uppercase;
       }
       form#myform {
         width: 94%;
         flex: 1 0 auto;
         padding: 0.5em;
-        background-color:$color-black;
+        background-color: $color-black;
         margin: 0 auto;
         ol {
           list-style: none;
@@ -1074,7 +1060,7 @@ main.site_content {
             margin-bottom: 0.5em;
             label,
             #comment-header {
-              font-family:$fontHeader;
+              font-family: $fontHeader;
               display: block;
               width: 100%;
               line-height: 40px;
@@ -1083,14 +1069,14 @@ main.site_content {
               margin-bottom: 0.5em;
               text-indent: 0.5em;
               font-size: 1em;
-              cursor:pointer;
+              cursor: pointer;
             }
 
             label[for="questionitem"] {
               float: left;
               width: 80%;
               line-height: 30px;
-              font-size:80%;
+              font-size: 80%;
             }
 
             // label:focus-within{
@@ -1098,11 +1084,11 @@ main.site_content {
             // }
 
             input#myname:hover,
-            input#myemail:hover,           
+            input#myemail:hover,
             input[type="radio"]:hover,
             input[type="radio"]:focus,
             input#myname:focus,
-            input#myemail:focus,            
+            input#myemail:focus,
             select {
               outline: none;
               display: block;
@@ -1119,23 +1105,20 @@ main.site_content {
             }
 
             input.dirty:not(:focus):invalid {
-                background-color: rgb(255, 204, 204);
-                border: solid 3px rgb(252, 136, 136);
+              background-color: rgb(255, 204, 204);
+              border: solid 3px rgb(252, 136, 136);
             }
-                   
 
             input#myname,
-            input#myemail{
+            input#myemail {
               display: block;
               line-height: 35px;
               width: 98%;
               padding: 0;
               margin: 0;
-              font-size:0.9em;
-              outline:none;
+              font-size: 0.9em;
+              outline: none;
             }
-
-                       
 
             ol#comment-box {
               padding: 0;
@@ -1168,14 +1151,14 @@ main.site_content {
               line-height: 40px;
               height: 40px;
               width: 100%;
-              font-size:1em;
+              font-size: 1em;
             }
 
             textarea#mycomments {
               width: 100%;
               border: var(--comment-error);
               padding: 0;
-              line-height:20px;
+              line-height: 20px;
               font-size: 1.1em;
             }
           }
@@ -1188,7 +1171,7 @@ main.site_content {
           font-size: 1.1em;
           border: 1px solid #ccc;
           background-color: $color-black;
-          color: $color-white-1;          
+          color: $color-white-1;
           &:hover {
             background-color: $color-black2;
             color: $color-white-1;
@@ -1231,7 +1214,7 @@ main.site_content {
         background-color: $color-white-1;
         display: block;
         font-size: 0.7em;
-        font-family:$fontHeader;
+        font-family: $fontHeader;
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
@@ -1252,7 +1235,6 @@ main.site_content {
   }
 }
 
-
 /* 1920px */
 @media only screen and (min-width: 120em) {
   .menu-toggle {
@@ -1260,20 +1242,19 @@ main.site_content {
   }
   #site_wrapper {
     width: 85%;
-    margin:auto;
-    display:block;
+    margin: auto;
+    display: block;
   }
   .fixed-header {
     position: fixed;
     top: 0;
     left: 80px;
     max-width: 89%;
-    text-align: left;  
+    text-align: left;
     font-size: 99%;
     z-index: 10;
     background-color: $bgcolor;
-    height: 100px; 
-    
+    height: 100px;
   }
   .site_header {
     div.site-title {
@@ -1313,6 +1294,27 @@ main.site_content {
             background-color: $color-black2;
             font-size: 1.1em;
             font-family: $fontHeader;
+            text-decoration: none;
+            /* visited link */
+            &:visited {
+              background-color: $greencolor;
+              color: $color-black;
+            }
+            &:focus {
+              background-color: $greencolor;
+              color: $color-white-1;
+              text-shadow: 1px 1px 1px $color-black;
+            }
+            &:hover {
+              background-color: $greencolor;
+              color: $color-white-1;
+              text-shadow: 1px 1px 1px $color-black;
+            }
+            /* selected link */
+            &:active {
+              background-color: $greencolor;
+              color: $color-black;
+            }
           }
         }
       }
@@ -1339,8 +1341,12 @@ main.site_content {
             font-size: 1.3em;
             line-height: 45px;
             &:hover {
-              transform: scale(1.2);
+              transform: scale(1.1);
             }
+          }
+          &:focus {
+            background-color: $greencolor;
+            color: $color-black;
           }
         }
       }
@@ -1395,9 +1401,15 @@ main.site_content {
           button.project_tab {
             display: block;
             line-height: 35px;
+            background-color: $color-white-1;
             width: 100%;
             border: none;
             font-size: 1em;
+            &:focus {
+              background-color: $color-black2;
+              color: $color-white-1;
+              font-weight: bold;
+            }
             &:hover {
               cursor: pointer;
               font-weight: bold;
@@ -1414,7 +1426,7 @@ main.site_content {
         padding: 0;
         width: 98%;
         margin: auto;
-        gap:1em;
+        gap: 1em;
       }
 
       figure.box {
@@ -1424,10 +1436,10 @@ main.site_content {
       figcaption.cover {
         opacity: 0;
 
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
-          width: 100%;   
+          width: 100%;
 
           a.cover_link {
             width: 45%;
@@ -1464,15 +1476,14 @@ main.site_content {
         width: 35%;
         margin-bottom: 1em;
         padding: 0.25em;
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
           letter-spacing: 0.05em;
-          
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
@@ -1480,7 +1491,7 @@ main.site_content {
           -ms-flex-flow: column;
           flex-flow: column;
           list-style: none;
-  
+
           li {
             width: 100%;
             height: 62px;
@@ -1492,13 +1503,13 @@ main.site_content {
               position: absolute;
               left: 16.5%;
               @include raytransition(all 0.2s ease-in 0s);
-  
+
               &:hover {
                 background: $color-black;
                 cursor: pointer;
               }
-  
-              &:hover::after {               
+
+              &:hover::after {
                 //content: attr(data-skill);
                 left: calc(80% - 7%);
                 display: block;
@@ -1509,7 +1520,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -1524,9 +1535,7 @@ main.site_content {
             text-indent: 0.25em;
           }
         }
-        
       }
-
 
       div#abouttext {
         width: 100%;
@@ -1535,12 +1544,12 @@ main.site_content {
           display: block;
           float: left;
           width: 30%;
-          margin:0;
+          margin: 0;
           li {
             line-height: 50px;
             a {
               font-size: 1.05em;
-              text-align:left;
+              text-align: left;
             }
           }
         }
@@ -1549,7 +1558,6 @@ main.site_content {
           line-height: 2em;
           font-size: 1.1em;
         }
-        
       }
       /* Hero-Slider */
       section#slider {
@@ -1587,23 +1595,20 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
                   figcaption {
-                    
                     width: 100%;
 
                     h5 {
                       font-size: 1.1em;
                     }
 
-                    
-
-                    p{
+                    p {
                       width: 100%;
-                      padding:0.5em;
+                      padding: 0.5em;
                       display: block;
                       margin: 0;
                       background-color: $bgcolor;
@@ -1614,7 +1619,6 @@ main.site_content {
                       line-height: 25px;
                       border: 1px solid rgba(0, 0, 0, 0.4);
                       font-family: "FontAwesome", $fontText;
-
                     }
                   }
                 }
@@ -1623,17 +1627,17 @@ main.site_content {
           }
         }
         div#slids {
-          font-size:1.2em;
+          font-size: 1.2em;
           button#next {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
@@ -1666,8 +1670,8 @@ main.site_content {
         section#contact-details {
           width: 45%;
           flex: 0 0 auto;
-          margin:0;
-          padding:0 1em; 
+          margin: 0;
+          padding: 0 1em;
           h3 {
             font-size: 1.25rem;
             background-color: $color-white-1;
@@ -1761,7 +1765,6 @@ main.site_content {
                 border-color: $bgcolor2;
               }
 
-              
               input#myname,
               input#myemail,
               input#myurl {
@@ -1811,7 +1814,6 @@ main.site_content {
           input#submit {
             font-size: 1.2em;
             width: 100%;
-            
           }
         }
       }
@@ -1848,11 +1850,11 @@ main.site_content {
     top: 0;
     left: 70px;
     max-width: 91%;
-    text-align: left;  
+    text-align: left;
     font-size: 99%;
     z-index: 10;
     background-color: $bgcolor;
-    height: 100px; 
+    height: 100px;
   }
 
   .site_header {
@@ -1888,11 +1890,7 @@ main.site_content {
           width: 24%;
           a {
             display: block;
-            line-height: 50px;
-            color: $color-white-1;
-            background-color: $color-black2;
             font-size: 1.1em;
-            font-family: $fontHeader;
           }
         }
       }
@@ -1919,7 +1917,7 @@ main.site_content {
             font-size: 1.3em;
             line-height: 45px;
             &:hover {
-              transform: scale(1.2);
+              transform: scale(1.1);
             }
           }
         }
@@ -2002,19 +2000,19 @@ main.site_content {
 
       figcaption.cover {
         opacity: 0;
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
 
-        a.cover_link {
-          width: 45%;
-          font-size: 0.85em;
-          &:hover {
-            font-weight: bold;
+          a.cover_link {
+            width: 45%;
+            font-size: 0.85em;
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
-      }
 
         h3.cert_title {
           font-size: 1.2em;
@@ -2034,24 +2032,22 @@ main.site_content {
       section#barchart {
         -webkit-order: 1;
         -ms-flex-order: 1;
-        order: 1;        
+        order: 1;
         width: 35%;
-        
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
-          
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
           -webkit-flex-flow: column;
           -ms-flex-flow: column;
           flex-flow: column;
-  
+
           li {
             height: 62px;
             position: relative;
@@ -2059,14 +2055,13 @@ main.site_content {
               display: block;
               position: absolute;
               left: 16.5%;
-  
+
               &:hover {
                 background: $color-black;
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
@@ -2074,7 +2069,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -2082,10 +2077,8 @@ main.site_content {
             width: 16.5%;
             position: absolute;
             font-size: 0.9em;
-
           }
         }
-        
       }
       /* Hero-Slider */
       section#slider {
@@ -2123,27 +2116,23 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
                   figcaption {
-                    
                     width: 100%;
 
                     h5 {
                       font-size: 1.1em;
                     }
 
-                    
-
-                    p{
+                    p {
                       width: 100%;
                       background-color: $bgcolor;
                       font-size: 0.9em;
                       line-height: 30px;
                       font-family: "FontAwesome", $fontText;
-
                     }
                   }
                 }
@@ -2154,14 +2143,14 @@ main.site_content {
         div#slids {
           button#next {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
@@ -2176,12 +2165,12 @@ main.site_content {
           display: block;
           float: left;
           width: 30%;
-          margin:0;
+          margin: 0;
           li {
             line-height: 50px;
             a {
               font-size: 1.05em;
-              text-align:left;
+              text-align: left;
             }
           }
         }
@@ -2190,7 +2179,6 @@ main.site_content {
           line-height: 2em;
           font-size: 1.1em;
         }
-        
       }
     }
 
@@ -2218,8 +2206,8 @@ main.site_content {
         section#contact-details {
           width: 45%;
           flex: 0 0 auto;
-          margin:0;
-          padding:0 1em; 
+          margin: 0;
+          padding: 0 1em;
           h3 {
             font-size: 1.25rem;
             background-color: $color-white-1;
@@ -2313,8 +2301,6 @@ main.site_content {
                 border-color: $bgcolor2;
               }
 
-              
-
               input#myname,
               input#myemail,
               input#myurl {
@@ -2364,7 +2350,6 @@ main.site_content {
           input#submit {
             font-size: 1.2em;
             width: 100%;
-            
           }
         }
       }
@@ -2401,13 +2386,13 @@ main.site_content {
     top: 0;
     left: 70px;
     max-width: 91%;
-    text-align: left;  
+    text-align: left;
     font-size: 99%;
     z-index: 10;
     background-color: $bgcolor;
-    height: 100px; 
+    height: 100px;
   }
-  
+
   .site_header {
     div.site-title {
       width: 20%;
@@ -2440,9 +2425,7 @@ main.site_content {
           line-height: 50px;
           width: 24%;
           a {
-            line-height: 50px;
-             font-size: 1.05em;
-
+            font-size: 1.05em;
           }
         }
       }
@@ -2463,7 +2446,7 @@ main.site_content {
             font-size: 1.15em;
             line-height: 45px;
             &:hover {
-              transform: scale(1.2);
+              transform: scale(1.1);
             }
           }
         }
@@ -2546,24 +2529,24 @@ main.site_content {
       }
       figcaption.cover {
         opacity: 0;
-        p{
-          border:none;
+        p {
+          border: none;
           font-size: 0.85em;
         }
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
 
-        a.cover_link {
-          width: 45%;
-          font-size: 0.85em;
+          a.cover_link {
+            width: 45%;
+            font-size: 0.85em;
 
-          &:hover {
-            font-weight: bold;
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
-      }
 
         h3.cert_title {
           font-size: 1.2em;
@@ -2582,38 +2565,34 @@ main.site_content {
       section#barchart {
         -webkit-order: 1;
         -ms-flex-order: 1;
-        order: 1;        
+        order: 1;
         width: 35%;
-        
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
-          
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
           -webkit-flex-flow: column;
           -ms-flex-flow: column;
           flex-flow: column;
-  
+
           li {
             width: 100%;
             height: 62px;
             position: relative;
             div.bar {
               position: absolute;
-              left: 16.5%;  
+              left: 16.5%;
               &:hover {
-                
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
@@ -2621,7 +2600,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -2630,18 +2609,17 @@ main.site_content {
             position: absolute;
             font-size: 0.9em;
           }
-        }        
+        }
       }
 
       div#abouttext {
         width: 100%;
-        margin-bottom: 1em;        
+        margin-bottom: 1em;
 
         p {
           line-height: 2.3em;
           font-size: 1.1em;
         }
-        
       }
 
       /* Hero-Slider */
@@ -2681,28 +2659,24 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
                   figcaption {
-                    
                     width: 100%;
 
                     h5 {
                       font-size: 1.1em;
                     }
 
-                    
-
-                    p{
+                    p {
                       width: 98%;
-                      padding:0.5em;
+                      padding: 0.5em;
                       font-size: 0.9em;
                       height: auto;
                       margin-bottom: 0.1em;
                       font-family: "FontAwesome", $fontText;
-
                     }
                   }
                 }
@@ -2711,17 +2685,16 @@ main.site_content {
           }
         }
         div#slids {
-          
           button#next {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
@@ -2754,7 +2727,7 @@ main.site_content {
         section#contact-details {
           width: 45%;
           flex: 0 0 auto;
-          margin:0;
+          margin: 0;
           padding: 0 1em;
           h3 {
             font-size: 1.25rem;
@@ -2849,8 +2822,6 @@ main.site_content {
                 border-color: $bgcolor2;
               }
 
-              
-
               input#myname,
               input#myemail,
               input#myurl {
@@ -2895,7 +2866,6 @@ main.site_content {
           }
           input#submit {
             font-size: 1.1em;
-            
           }
         }
       }
@@ -2980,7 +2950,7 @@ main.site_content {
             font-size: 1.15em;
             line-height: 40px;
             &:hover {
-              transform: scale(1.2);
+              transform: scale(1.1);
             }
           }
         }
@@ -3059,12 +3029,12 @@ main.site_content {
       }
       figcaption.cover {
         opacity: 0;
-        p{
-          border:none;
+        p {
+          border: none;
           font-size: 0.85em;
         }
 
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
@@ -3076,7 +3046,6 @@ main.site_content {
               font-weight: bold;
             }
           }
-
         }
 
         h3.cert_title {
@@ -3096,17 +3065,15 @@ main.site_content {
       section#barchart {
         -webkit-order: 1;
         -ms-flex-order: 1;
-        order: 1;        
+        order: 1;
         width: 40%;
-        
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
-          
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
@@ -3114,7 +3081,6 @@ main.site_content {
           -ms-flex-flow: column;
           flex-flow: column;
 
-  
           li {
             height: 62px;
             text-align: center;
@@ -3124,14 +3090,11 @@ main.site_content {
               position: absolute;
               left: 16.5%;
 
-  
               &:hover {
-                
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
@@ -3140,18 +3103,16 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
             align-self: flex-end;
             width: 16.5%;
-            position: absolute;  
-            font-size: 0.8em;        
-            
+            position: absolute;
+            font-size: 0.8em;
           }
         }
-        
       }
       /* Hero-Slider */
       section#slider {
@@ -3159,13 +3120,12 @@ main.site_content {
         height: auto;
         padding: 0.25em;
         margin-left: 0;
-        float: right;          
+        float: right;
 
-        h3 {            
+        h3 {
           height: 50px;
           font-size: 1.2em;
           line-height: 50px;
-          
         }
         /* Hero Slider */
         .hero-slider {
@@ -3192,23 +3152,20 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
                   figcaption {
-                    
                     width: 100%;
 
                     h5 {
                       font-size: 1em;
                     }
 
-                    
-
-                    p{
+                    p {
                       width: 100%;
-                      padding:0.5em;
+                      padding: 0.5em;
                       font-weight: normal;
                       font-size: 0.9em;
                     }
@@ -3219,17 +3176,16 @@ main.site_content {
           }
         }
         div#slids {
-          
           button#next {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
@@ -3241,13 +3197,10 @@ main.site_content {
         width: 100%;
         margin-bottom: 1em;
 
-        
-
         p {
           line-height: 2.5em;
           font-size: 1em;
         }
-        
       }
     }
     section#contact {
@@ -3274,10 +3227,9 @@ main.site_content {
         section#contact-details {
           width: 45%;
           flex: 0 0 auto;
-          margin:0;
+          margin: 0;
           padding: 0 1em;
           h3 {
-
             font-size: 1.25rem;
           }
           address {
@@ -3369,8 +3321,6 @@ main.site_content {
                 border-color: $bgcolor2;
               }
 
-              
-
               input#myname,
               input#myemail,
               input#myurl {
@@ -3416,7 +3366,6 @@ main.site_content {
           }
           input#submit {
             font-size: 1.1em;
-            
           }
         }
       }
@@ -3492,9 +3441,7 @@ main.site_content {
           width: 24%;
           a {
             display: block;
-            line-height: 50px;
             font-size: 0.9em;
-
           }
         }
       }
@@ -3543,8 +3490,8 @@ main.site_content {
             font-size: 1.25em;
             @include raytransition(all 0.2s ease-in 0s);
             &:hover {
-              transform: scale(1.2);
-              font-weight: bold;              
+              transform: scale(1.1);
+              font-weight: bold;
               cursor: pointer;
             }
           }
@@ -3643,7 +3590,6 @@ main.site_content {
           font-family: $fontText;
           button.project_tab {
             display: block;
-            background-color: $color-white-1;
             line-height: 35px;
             width: 100%;
             border: none;
@@ -3673,11 +3619,11 @@ main.site_content {
       figcaption.cover {
         position: absolute;
 
-        p{
+        p {
           font-size: 0.7em;
-          line-height:1.5em;
+          line-height: 1.5em;
         }
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
@@ -3692,7 +3638,7 @@ main.site_content {
 
         h3.cert_title {
           font-size: 1em;
-          line-height:30px;
+          line-height: 30px;
         }
       }
 
@@ -3715,7 +3661,7 @@ main.site_content {
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: flex-start;
-      
+
       h2 {
         font-size: 1.3rem;
       }
@@ -3734,7 +3680,7 @@ main.site_content {
         padding: 0.25em;
         background: $color-black;
         font-family: $fontHeader;
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
@@ -3744,7 +3690,7 @@ main.site_content {
           color: $color-white-1;
           background: $color-black;
         }
-  
+
         /* chart */
         ul#bars {
           display: -webkit-flex;
@@ -3757,8 +3703,8 @@ main.site_content {
           height: 100%;
           list-style: none;
           margin: 0;
-          padding:0;
-  
+          padding: 0;
+
           li {
             width: 100%;
             height: 62px;
@@ -3770,14 +3716,12 @@ main.site_content {
               margin-left: 0;
               position: absolute;
               left: 18.5%;
- 
-              &:hover {
 
+              &:hover {
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 display: block;
@@ -3786,7 +3730,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -3795,11 +3739,9 @@ main.site_content {
             position: absolute;
             line-height: 62px;
             height: 60px;
-            font-size:0.85em; 
-
+            font-size: 0.85em;
           }
         }
-        
       }
 
       /* Hero-Slider */
@@ -3814,7 +3756,6 @@ main.site_content {
           height: 50px;
           font-size: 1.15em;
           line-height: 50px;
-          
         }
         /* Hero Slider */
         .hero-slider {
@@ -3839,7 +3780,6 @@ main.site_content {
                 figure.slider-panel {
                   margin: 0;
                   padding: 0;
-           
 
                   a.fancybox {
                     @include raytransition(
@@ -3855,24 +3795,20 @@ main.site_content {
                       background-repeat: no-repeat;
                       background-position: center 15%;
                       background-size: cover;
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
                   figcaption {
-             
                     width: 100%;
 
                     h5 {
                       font-size: 0.95em;
                     }
 
-                   
-
-                    p{
+                    p {
                       width: 100%;
                       font-size: 0.9em;
-
                     }
                   }
                 }
@@ -3884,14 +3820,14 @@ main.site_content {
           height: 40px;
           button#next {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1.1em;
+            font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
@@ -3910,7 +3846,6 @@ main.site_content {
           font-size: 0.9em;
           line-height: 2em;
         }
-        
       }
     }
 
@@ -3940,12 +3875,11 @@ main.site_content {
           flex: 0 0 auto;
           flex-flow: column;
           justify-content: flex-start;
-          margin:1em  auto;
+          margin: 1em auto;
           padding: 0 1em;
           h3 {
             font-size: 1.25rem;
             background-color: $color-white-1;
-            
           }
           address {
             height: auto;
@@ -4036,8 +3970,6 @@ main.site_content {
                 border-color: $bgcolor2;
               }
 
-              
-
               input#myname,
               input#myemail,
               input#myurl {
@@ -4083,7 +4015,6 @@ main.site_content {
           }
           input#submit {
             font-size: 1.1em;
-            
           }
         }
       }
@@ -4118,7 +4049,6 @@ main.site_content {
   }
   #site_wrapper {
     width: 98%;
-    
   }
   .site_header {
     div.site-title {
@@ -4184,11 +4114,9 @@ main.site_content {
         align-items: flex-start;
         padding: 0;
         width: 98%;
-        
       }
       ul#project_tabs {
         width: 97%;
-        
 
         li {
           width: 23%;
@@ -4202,13 +4130,13 @@ main.site_content {
       }
 
       figcaption.cover {
-        p{
+        p {
           font-size: 0.8em;
-          line-height:1.5em;
-          width: 96%; 
+          line-height: 1.5em;
+          width: 96%;
         }
 
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
@@ -4219,7 +4147,7 @@ main.site_content {
 
         h3.cert_title {
           font-size: 1em;
-          width: 96%;   
+          width: 96%;
           line-height: 30px;
         }
       }
@@ -4247,20 +4175,19 @@ main.site_content {
         padding: 0.25em;
         background: $color-black;
         font-family: $fontHeader;
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
           flex-flow: column;
           list-style: none;
 
-  
           li {
             width: 100%;
             height: 62px;
@@ -4270,14 +4197,12 @@ main.site_content {
               background: $color-white-1;
               position: absolute;
               left: 18.5%;
-  
-              &:hover {
 
+              &:hover {
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
@@ -4286,7 +4211,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -4297,15 +4222,13 @@ main.site_content {
             font-size: 0.9em;
           }
         }
-        
-      }      
+      }
 
       /* Hero-Slider */
       section#slider {
         width: 90%;
         margin: 1em auto;
         padding: 0.25em;
-        
 
         h3 {
           height: 40px;
@@ -4337,7 +4260,7 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
@@ -4347,13 +4270,10 @@ main.site_content {
                     h5 {
                       font-size: 1em;
                     }
-                   
 
-                    p{
+                    p {
                       width: 100%;
                       font-size: 0.9em;
-
-
                     }
                   }
                 }
@@ -4365,14 +4285,14 @@ main.site_content {
         div#slids {
           button#next {
             width: 50%;
-            font-size:1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
@@ -4404,9 +4324,8 @@ main.site_content {
           width: 94%;
           margin: 1em auto;
           padding: 0;
-          
+
           h3 {
-           
             font-size: 1.2rem;
           }
 
@@ -4470,7 +4389,7 @@ main.site_content {
             }
           }
           input#submit {
-            font-size: 1em;            
+            font-size: 1em;
           }
         }
       }
@@ -4580,26 +4499,22 @@ main.site_content {
       }
 
       figure.box {
-       
         width: 75%;
-        
       }
 
-    
       figcaption.cover {
         position: absolute;
-        p{
+        p {
           font-size: 0.8em;
-          line-height:1.5em;
-          width: 96%; 
+          line-height: 1.5em;
+          width: 96%;
         }
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
 
-
-        a.cover_link {
+          a.cover_link {
             font-size: 0.8em;
           }
         }
@@ -4633,19 +4548,19 @@ main.site_content {
         padding: 0.25em;
         background: $color-black;
         font-family: $fontHeader;
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
           flex-flow: column;
           list-style: none;
-  
+
           li {
             width: 100%;
             height: 62px;
@@ -4655,11 +4570,11 @@ main.site_content {
               background: $color-white-1;
               position: absolute;
               left: 18.5%;
-  
+
               &:hover {
                 cursor: pointer;
               }
-  
+
               &:hover::after {
                 position: relative;
                 left: calc(80% - 7%);
@@ -4669,7 +4584,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -4680,7 +4595,6 @@ main.site_content {
             font-size: 0.9em;
           }
         }
-        
       }
 
       /* Hero-Slider */
@@ -4718,7 +4632,7 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
@@ -4728,14 +4642,12 @@ main.site_content {
                     h5 {
                       font-size: 0.95em;
                     }
-                    
 
-                    p{
+                    p {
                       width: 100%;
-                      padding:0.25em;
-                      font-size: 0.8em; 
+                      padding: 0.25em;
+                      font-size: 0.8em;
                       font-family: "FontAwesome", $fontText;
-
                     }
                   }
                 }
@@ -4747,14 +4659,14 @@ main.site_content {
           font-size: 1em;
           button#next {
             width: 50%;
-            font-size:1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
@@ -4766,7 +4678,6 @@ main.site_content {
           font-size: 0.9em;
           line-height: 2.2em;
         }
-        
       }
     }
 
@@ -4844,7 +4755,6 @@ main.site_content {
           }
           input#submit {
             font-size: 1em;
-            
           }
         }
       }
@@ -4945,12 +4855,12 @@ main.site_content {
       }
       figcaption.cover {
         position: absolute;
-        p{
+        p {
           font-size: 0.7em;
-          line-height:1.5em;
-          width: 96%; 
+          line-height: 1.5em;
+          width: 96%;
         }
-        span#cover-links{
+        span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
@@ -4962,8 +4872,6 @@ main.site_content {
 
         h3.cert_title {
           font-size: 1em;
-
-          
         }
       }
     }
@@ -4988,19 +4896,19 @@ main.site_content {
         width: 95%;
         background: $color-black;
         font-family: $fontHeader;
-  
+
         h1 {
           height: 50px;
           font-size: 1em;
           line-height: 50px;
         }
-  
+
         /* chart */
         ul#bars {
           display: flex;
           flex-flow: column;
           list-style: none;
-  
+
           li {
             width: 100%;
             height: 62px;
@@ -5011,13 +4919,12 @@ main.site_content {
               position: absolute;
               left: 18.5%;
               @include raytransition(all 0.2s ease-in 0s);
-  
+
               &:hover {
                 cursor: pointer;
               }
-  
+
               &:hover::after {
-                
                 position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
@@ -5027,7 +4934,7 @@ main.site_content {
               }
             }
           }
-  
+
           span {
             -webkit-align-self: flex-end;
             -ms-flex-item-align: end;
@@ -5035,11 +4942,10 @@ main.site_content {
             width: 18.5%;
             position: absolute;
             line-height: 62px;
-            height:60px;
+            height: 60px;
             font-size: 0.9em;
           }
         }
-        
       }
       /* Hero-Slider */
       section#slider {
@@ -5049,13 +4955,13 @@ main.site_content {
 
         h3 {
           height: 40px;
-        font-size: 1rem;
-        line-height: 40px;
+          font-size: 1rem;
+          line-height: 40px;
         }
         /* Hero Slider */
         .hero-slider {
           width: 100%;
-    
+
           .mask {
             height: 310px;
 
@@ -5077,7 +4983,7 @@ main.site_content {
                     display: block;
 
                     span {
-                      height:100%;
+                      height: 100%;
                     }
                   }
 
@@ -5088,14 +4994,11 @@ main.site_content {
                       font-size: 0.95em;
                     }
 
-                    
-
-                    p{
-                      width: 100%;                                                
-                      padding:0.25em;                       
-                      font-size: 0.8em;                        
-                      line-height: 25px; 
-
+                    p {
+                      width: 100%;
+                      padding: 0.25em;
+                      font-size: 0.8em;
+                      line-height: 25px;
                     }
                   }
                 }
@@ -5106,14 +5009,14 @@ main.site_content {
         div#slids {
           button#next {
             width: 50%;
-            font-size:0.9em;
+            font-size: 0.9em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
             width: 50%;
-            font-size:0.9em;
+            font-size: 0.9em;
             &:hover {
               cursor: pointer;
             }
@@ -5121,12 +5024,11 @@ main.site_content {
         }
       }
     }
-      div#abouttext {
-        p {
-          font-size: 0.9em;
-          line-height: 2.3em;
-        }
-        
+    div#abouttext {
+      p {
+        font-size: 0.9em;
+        line-height: 2.3em;
+      }
     }
 
     section#contact {
@@ -5160,7 +5062,7 @@ main.site_content {
         }
         form#myform {
           width: 96%;
-          background-color:$color-black;
+          background-color: $color-black;
 
           ol {
             margin: 0;
@@ -5204,7 +5106,6 @@ main.site_content {
           }
           input#submit {
             font-size: 1em;
-            
           }
         }
       }

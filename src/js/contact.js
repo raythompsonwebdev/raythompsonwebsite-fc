@@ -10,39 +10,41 @@ const [text, email, , , , , comments, submit] = myForm;
 // eslint-disable-next-line func-style
 const dirtyInputName = (evt) => {
   evt.preventDefault();
-  const elem = evt.srcElement;
+  // eslint-disable-next-line prefer-destructuring
+  const { srcElement } = evt;
   // check if input matches pattern
-  if (elem.validity.patternMismatch) {
+  if (srcElement.validity.patternMismatch) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
       "name must contain letters. no numbers or special characters.";
-    elem.classList.add("dirty");
+    srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.classList.add("dirty");
+    srcElement.classList.add("dirty");
   }
 };
 
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
-  const elem = evt.srcElement;
+  // eslint-disable-next-line prefer-destructuring
+  const element = evt.srcElement;
   // regex to detect valid email
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   // check if input matches pattern
-  if (!emailRegExp.test(elem.value)) {
+  if (!emailRegExp.test(element.value)) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address!";
-    elem.classList.add("dirty");
+    element.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.classList.add("dirty");
+    element.classList.add("dirty");
   }
 };
 
@@ -50,20 +52,21 @@ const dirtyInputComments = (evt) => {
   evt.preventDefault();
 
   // element
-  const elem = evt.srcElement;
+  // eslint-disable-next-line prefer-destructuring
+  const element = evt.srcElement;
   // regex to detect html tags
   const commentsRegExp = /<\/?[^>]+(>|$)/g;
   // check if input matches pattern
-  if (commentsRegExp.test(elem.value)) {
+  if (commentsRegExp.test(element.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent = "No HTML Tags or Javascript Allowed.";
-    elem.classList.add("dirty");
+    element.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    elem.classList.remove("dirty");
+    element.classList.remove("dirty");
   }
 };
 

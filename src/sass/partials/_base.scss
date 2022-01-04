@@ -40,29 +40,7 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: $color-black;
-}
-
-/* unvisited link */
-a:link {
-  color: $color-black;
-}
-
-/* visited link */
-a:visited {
-  color: $color-black;
-  border: $color-black dotted 1px;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-/* selected link */
-a:active {
-  color: $color-black;
-  border: $color-black dotted 1px;
 }
 
 hr {

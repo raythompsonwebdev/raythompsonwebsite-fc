@@ -76,6 +76,7 @@ const responsiveChart = () => {
   // eslint-disable-next-line no-console
   //  console.log(chartBarContainer.children);
 
+  // eslint-disable-next-line prefer-destructuring
   const chartBar = chartBarContainer.children;
 
   Array.from(chartBar).forEach((key) => {
@@ -84,6 +85,7 @@ const responsiveChart = () => {
     // eslint-disable-next-line no-console
     console.log(key.children[0].dataset.percentage);
 
+    // eslint-disable-next-line prefer-destructuring
     const percentageMaxWidth = key.children[0].dataset.percentage;
 
     const frame = () => {

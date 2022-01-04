@@ -13,6 +13,7 @@ try {
       return response.json();
     })
     .then((data) => {
+      // eslint-disable-next-line prefer-destructuring
       const slider = data.sliderdata;
       slider.forEach((slide) => {
         // panel
