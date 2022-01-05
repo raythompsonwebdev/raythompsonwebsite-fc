@@ -13,6 +13,7 @@ try {
       return response.json();
     })
     .then((data) => {
+      // eslint-disable-next-line prefer-destructuring
       const slider = data.sliderdata;
       slider.forEach((slide) => {
         // panel
@@ -41,23 +42,11 @@ try {
         const slidepanelCaption = document.createElement("FIGCAPTION");
 
         const slidepanelHeadingThree = document.createElement("H5");
-        slidepanelHeadingThree.textContent = `${slide.header}`;
+        slidepanelHeadingThree.textContent = `${slide.title}`;
 
-        const slidepanelList = document.createElement("UL");
-        const slidepanelListItem = document.createElement("lI");
-        slidepanelListItem.textContent = `${slide.task1}`;
+        const slidepanelText = document.createElement("P");
 
-        const slidepanelListItem2 = document.createElement("lI");
-        slidepanelListItem2.textContent = `${slide.task2}`;
-
-        const slidepanelListItem3 = document.createElement("lI");
-        slidepanelListItem3.textContent = `${slide.task3}`;
-
-        const slidepanelListItem4 = document.createElement("lI");
-        slidepanelListItem4.textContent = `${slide.task4}`;
-
-        const slidepanelListItem5 = document.createElement("lI");
-        slidepanelListItem5.textContent = `${slide.task5}`;
+        slidepanelText.textContent = `${slide.text}`;
 
         panel.append(slidepanel);
         slidepanel.append(slideHeader);
@@ -67,13 +56,7 @@ try {
         slidepanelImgLink.append(slidepanelImg);
         slidepanel.append(slidepanelCaption);
         slidepanelCaption.append(slidepanelHeadingThree);
-
-        slidepanelCaption.append(slidepanelList);
-        slidepanelList.append(slidepanelListItem);
-        slidepanelList.append(slidepanelListItem2);
-        slidepanelList.append(slidepanelListItem3);
-        slidepanelList.append(slidepanelListItem4);
-        slidepanelList.append(slidepanelListItem5);
+        slidepanelCaption.append(slidepanelText);
       });
 
       const fancyBoxLinks = document.getElementsByClassName("fancybox");
@@ -83,8 +66,6 @@ try {
         if (!fancyLink.classList.contains("cover")) {
           fancyLink.addEventListener("click", (e) => {
             e.preventDefault();
-            // eslint-disable-next-line no-console
-            console.log(fancyLink.nextSibling);
             fancyLink.nextSibling.classList.toggle("captionshow");
           });
         }

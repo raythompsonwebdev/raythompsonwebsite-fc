@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { elementInView } from "./js/main";
+// import { elementInView } from "./js/main";
 
 // const assert = require("assert");
 

@@ -2,7 +2,7 @@
 
 # My portfolio
 
-Web Developer portfolio. Single page scrolling website with portfolio gallery, contact form and has a responsive design that enables website to be viewed on most devices ( except watches).
+Web Developer portfolio website. Single page scrolling website with portfolio gallery showcasing current and previous work. Also website has a contact form and an Image slider built using latest coding techniques and a mobile first responsive design that enables website to be viewed on most devices (except watches).
 
 ## Technologies
 
@@ -11,7 +11,8 @@ Web Developer portfolio. Single page scrolling website with portfolio gallery, c
 - SASS - nesting , mixins, variable, partials
 - JavaScript - ES6
 - PHP
-- MYSQL
+- MYSQLi
+- MySQL Database
 
 ## Tools
 

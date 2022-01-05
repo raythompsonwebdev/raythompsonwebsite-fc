@@ -1,6 +1,6 @@
 <?php
     
-  include 'private/db_connection.php';
+  include 'private/db_connection_local.php';
 
   // check if form has been sumitted.
   // NOTE : $_POST['submit] value equals NULL which is falsy.

@@ -4,13 +4,8 @@
 			{
 				"id": "0",
 				"hash": "panel-0",
-				"title": "Adobe Certified Associates - Photoshop",
-				"header": "Topics covered...",				
-				"task1": "Setting project requirements",
-				"task2": "Identifying Design Elements",
-				"task3": "Understanding Photoshop Interface",
-				"task4": "Manipulating Images",
-				"task5": "Evaluating Digital Images",
+				"title": "Adobe Certified Associates",
+				"text": "Online exam covering following topics: Setting project requirements, Identifying Design Elements, Understanding Photoshop Interface, Manipulating Images, Evaluating Digital Images.",
 				"buttonname": "Adobe",
 				"bgimage":
 					"images/certificates/png/Adobe-photoshop-large.png"
@@ -18,143 +13,67 @@
 			{
 				"id": "1",
 				"hash": "panel-1",
-				"title": "City & Guilds ITQ Level 1 IT User",
-				"header": "Topics covered...",				
-				"task1": "Improving productivity using IT",
-				"task2": "IT Communication Fundementals",
-				"task3": "Adding Content",
-				"task4": "IT User fundementals",
-				"task5": "Organizing Content",
-				"buttonname": "ELATT 1",
+				"title": "City & Guilds ITQ Level 1, 2, 3 IT Users",
+				"text": "6 month part-time webdesign course at East London Technology Training Center that covered the following modules : Improving productivity using IT,IT Communication Fundementals,Adding Content, IT User fundementals,Organizing Content,Website Software (Dreamweaver),Database Software,Database Management,Design Software (Photoshop)",
+				"buttonname": "ELATT",
 				"bgimage":
 					"images/certificates/png/CityandGuildsLevelOne-large.png"
-			},
+			},		
 			{
 				"id": "2",
 				"hash": "panel-2",
-				"title": "City & Guilds ITQ Level 2 IT User",
-				"header": "Topics covered...",				
-				"task1": "Website Software",
-				"task2": "Database Software",
-				"task3": "Improving Productivity using IT",
-				"task4": "Database Management",
-				"task5": "Organizing Content",
-				"buttonname": "ELATT 2",
-				"bgimage":
-					"images/certificates/png/CityandGuildsLevelTwo-large.png"
-			},
-			{
-				"id": "3",
-				"hash": "panel-3",
-				"title": "City & Guilds ITQ Level 3 IT User",
-				"header": "Topics covered...r",				
-				"task1": "Website Software",
-				"task2": "Imaging Software (Flash)",
-				"task3": "Improving Productivity using IT",
-				"task4": "Design Software (Photoshop)",
-				"task5": "Organizing Content",
-				"buttonname": "ELATT 3",
-				"bgimage":
-					"images/certificates/png/CityandGuildsLevelThree-large.png"
-			},
-			{
-				"id": "4",
-				"hash": "panel-4",
-				"title": "FreeCodeCamp",
-				"header": "Responsive Web Design Certificate",				
-				"task1": "Basic HTML",
-				"task2": "Basic CSS",
-				"task3": "CSS Flexbox",
-				"task4": "CSS Grids",
-				"task5": "Responsive Web Design Principles",
+				"title": "Responsive Web Design",
+				"text": "online interacative curriculum course at freecodecamp.com covering following topics : HTML, CSS, Flexbox, CSS Grids, Responsive Web Design Principles",
 				"buttonname": "FreeCodeCamp",
 				"bgimage":
 					"images/certificates/png/freecodecamp-org-certification-responsive-web-design-large.png"
 			},
 			{
-				"id": "5",
-				"hash": "panel-5",
-				"title": "FreeCode Camp",
-				"header": "JavaScript Algorithms and Data Structures",				
-				"task1": "Basic Javascript",
-				"task2": "ES6",
-				"task3": "Regular Expressions",
-				"task4": "Basic Data Structures",
-				"task5": "Basic Algorithim Scripting",
-				"buttonname": "Udacity",
+				"id": "3",
+				"hash": "panel-3",
+				"title": "JavaScript Algorithms and Data Structures",
+				"text": "online interacative curriculum course at freecodecamp.com covering following topics :  Classes, Promises, Regular Expressions, Data Structures, Algorithim Scripting.",
+				"buttonname": "FreeCodeCamp",
 				"bgimage":
 					"images/certificates/png/freecodecamp-org-certification-javascript-large.png"
 			},
 			{
-				"id": "6",
-				"hash": "panel-6",
+				"id": "4",
+				"hash": "panel-4",
 				"title": "Linkedin Learning",
-				"header": "Topics covered...",				
-				"task1": "Become a Front-End Web Developer",
-				"task2": "Become a Junior Developer",
-				"task3": "Become a Vanilla Javascript Developer",
-				"task4": "CSS Fundementals",
-				"task5": "Javascript Essentials",
-				"buttonname": "Lynda.com",
+				"text": "online video courses at linkedin learning covering following topics: Become a Front-End Web Developer, Become a Junior Developer, Become a Vanilla Javascript Developer, Become a WordPress Developer, and many other..",
+        "buttonname": "Lynda.com",
 				"bgimage":
 					"images/certificates/png/lynda-com-vanilla-javascript-large.png"
 			},
 			{
-				"id": "7",
-				"hash": "panel-7",
+				"id": "5",
+				"hash": "panel-5",
 				"title": "Code Academy - Learn Javascript",
-				"header": "Javascript",				
-				"task1": "Data Types",
-				"task2": "Loops",
-				"task3": "Array Methods",
-				"task4": "Objects",
-				"task5": "Conditionals",
-				"buttonname": "Code Academy",
+				"text": "online interacative curriculum course at codeacademy.com covering following : Data Types, Loops, Array Methods, Objects, Conditionals.",	
+				"buttonname": "CodeAcademy",
 				"bgimage":
 					"images/certificates/png/codecademy-js-large.png"
 			},
 			{
-				"id": "8",
-				"hash": "panel-8",
+				"id": "6",
+				"hash": "panel-6",
 				"title": "Code Academy - Learn Ruby",
-				"header": "Ruby",				
-				"task1": "Arrays",
-				"task2": "Data Types",
-				"task3": "Classes",
-				"task4": "Methods",
-				"task5": "Conditionals",
-				"buttonname": "Code Academy",
+				"text": "online interacative curriculum course at freecodeamp.com covering following: Arrays, Data Types, Classes, Methods, Conditionals.",					
+				"buttonname": "CodeAcademy",
 				"bgimage":
 					"images/certificates/png/codecademy-ruby-large.png"
 			},
 			{
-				"id": "9",
-				"hash": "panel-9",
+				"id": "7",
+				"hash": "panel-7",
 				"title": "Digital Futures 2017",
-				"header": "Interactive Programming",				
-				"task1": "Debate Skills with DebateMate.",
-				"task2": "Musical Composition.",
-				"task3": "Block programming using Crumble.",
-				"task4": "Negotiation skills with CitizenUK.",
-				"task5": "Music creation using Sonic Pi",
-				"buttonname": "Digital Futures",
+				"text": "4 week full-time IT employability course at Digital Futures 2017, Interactive Programming, Debate Skills with DebateMate , Musical Composition , Negotiation skills with CitizenUK , Music creation using Sonic Pi.",
+				"buttonname": "DigitalFutures",
 				"bgimage":
 					"images/certificates/png/Digital-Futures-2017-Certificate-of-Participation-large.png"
-			},
-      {
-				"id": "10",
-				"hash": "panel-10",
-				"title": "Codewars",
-				"header": "Codewars",				
-				"task1": "",
-				"task2": "",
-				"task3": "",
-				"task4": "",
-				"task5": "",
-				"buttonname": "Codewars",
-				"bgimage":
-					"images/certificates/png/codewars-large.png"
 			}
+      
 	]	
 }
 
