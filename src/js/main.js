@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const responsiveChart = () => {
-    // document.addEventListener("DOMContentLoaded", () => {
     const chartbars = [
       {
         id: "1",
@@ -58,9 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         dataskill: "INTERMEDIATE",
       },
     ];
-
-    // eslint-disable-next-line no-console
-    // console.log(chartbars);
 
     const chartBarContainer = document.getElementById("bars");
 
@@ -98,9 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return chartBarContainer;
     });
 
-    // eslint-disable-next-line no-console
-    //  console.log(chartBarContainer.children);
-
     // eslint-disable-next-line prefer-destructuring
     const chartBar = chartBarContainer.children;
 
@@ -130,12 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // eslint-disable-next-line prefer-destructuring
-  const chartheader = document.getElementById("barchart").firstElementChild;
-
-  // eslint-disable-next-line no-console
-  console.log(chartheader);
-
   responsiveChart();
 
   // display element on page scroll
@@ -159,8 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // add animation to element on page scroll
   const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
-      // eslint-disable-next-line no-console
-      // console.log(el.id);
       if (elementInView(el, 100)) {
         displayScrollElement(el);
       } else {

@@ -233,6 +233,10 @@
           background-color: $greencolor;
           color: $color-black;
         }
+        &:active {
+          background-color: $greencolor;
+          color: $color-black;
+        }
       }
     }
   }
@@ -513,9 +517,13 @@ main.site_content {
           font-family: $fontText;
           -webkit-flex: 0 1 auto;
           flex: 0 1 auto;
+          &:focus {
+            color: $color-black;
+            background-color: $greencolor;
+          }
           &:hover {
             color: $color-white-1;
-            background-color: $color-black2;
+            background-color: $greencolor;
           }
         }
       }
@@ -742,11 +750,12 @@ main.site_content {
                   );
                   opacity: 0;
                   display: none;
-                  width: 100%;
+                  width: 80%;
                   margin: 0;
                   position: absolute;
                   bottom: 100px;
                   padding: 0;
+                  left: 10%;
 
                   h5 {
                     width: 100%;
@@ -776,8 +785,6 @@ main.site_content {
                     padding: 0.5em;
                     height: auto;
                     line-height: 25px;
-                    border: 1px solid rgba(0, 0, 0, 0.4);
-                    margin-bottom: 0.1em;
                     font-family: "FontAwesome", $fontText;
                   }
                 }
@@ -808,7 +815,11 @@ main.site_content {
           margin: 0;
           text-shadow: 1px 1px 1px $color-black;
           font-size: 0.9em;
-
+          &:focus {
+            color: $color-black;
+            background-color: $greencolor;
+            text-shadow: none;
+          }
           &:hover {
             background-color: $color-black2;
             color: $color-white-1;
@@ -828,7 +839,11 @@ main.site_content {
           margin: 0;
           text-shadow: 1px 1px 1px $color-black;
           font-size: 0.9em;
-
+          &:focus {
+            color: $color-black;
+            background-color: $greencolor;
+            text-shadow: none;
+          }
           &:hover {
             background-color: $color-black2;
             color: $color-white-1;
@@ -849,7 +864,7 @@ main.site_content {
       width: 90%;
       height: auto;
       display: inline-block;
-      //box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
       margin-bottom: 1em;
       padding: 0.25em;
       font-family: $fontHeader;
@@ -867,8 +882,6 @@ main.site_content {
 
       /* chart */
       ul#bars {
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
@@ -1094,11 +1107,6 @@ main.site_content {
               display: block;
             }
 
-            // input#myname:required,
-            // input#myemail:required {
-            //   border: solid 3px blue;
-            // }
-
             input.dirty:not(:focus):valid {
               background-color: rgb(176, 241, 176);
               border: solid 3px rgb(78, 243, 78);
@@ -1221,14 +1229,14 @@ main.site_content {
         &:visited {
           border: $color-black dotted 1px;
         }
+        &:hover {
+          font-weight: bold;
+          cursor: pointer;
+        }
         /* selected link */
         &:active {
           background-color: $color-black;
           color: $color-white-1;
-        }
-        &:hover {
-          font-weight: bold;
-          cursor: pointer;
         }
       }
     }
@@ -1344,7 +1352,16 @@ main.site_content {
               transform: scale(1.1);
             }
           }
+          /* visited link */
+          &:visited {
+            background-color: $greencolor;
+            color: $color-black;
+          }
           &:focus {
+            background-color: $greencolor;
+            color: $color-black;
+          }
+          &:active {
             background-color: $greencolor;
             color: $color-black;
           }
@@ -1616,8 +1633,7 @@ main.site_content {
                       font-size: 0.9em;
                       color: $color-black2;
                       height: auto;
-                      line-height: 25px;
-                      border: 1px solid rgba(0, 0, 0, 0.4);
+                      line-height: 30px;
                       font-family: "FontAwesome", $fontText;
                     }
                   }
@@ -2121,7 +2137,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    width: 100%;
+                    width: 80%;
 
                     h5 {
                       font-size: 1.1em;
@@ -2664,7 +2680,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    width: 100%;
+                    width: 80%;
 
                     h5 {
                       font-size: 1.1em;
@@ -2674,8 +2690,6 @@ main.site_content {
                       width: 98%;
                       padding: 0.5em;
                       font-size: 0.9em;
-                      height: auto;
-                      margin-bottom: 0.1em;
                       font-family: "FontAwesome", $fontText;
                     }
                   }
@@ -3157,7 +3171,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    width: 100%;
+                    width: 80%;
 
                     h5 {
                       font-size: 1em;
@@ -3165,8 +3179,6 @@ main.site_content {
 
                     p {
                       width: 100%;
-                      padding: 0.5em;
-                      font-weight: normal;
                       font-size: 0.9em;
                     }
                   }
@@ -3800,7 +3812,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    width: 100%;
+                    width: 80%;
 
                     h5 {
                       font-size: 0.95em;
@@ -4265,7 +4277,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    clear: both;
+                    width: 80%;
 
                     h5 {
                       font-size: 1em;
@@ -4637,7 +4649,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    clear: both;
+                    width: 80%;
 
                     h5 {
                       font-size: 0.95em;
@@ -4645,7 +4657,6 @@ main.site_content {
 
                     p {
                       width: 100%;
-                      padding: 0.25em;
                       font-size: 0.8em;
                       font-family: "FontAwesome", $fontText;
                     }
@@ -4988,7 +4999,7 @@ main.site_content {
                   }
 
                   figcaption {
-                    clear: both;
+                    width: 80%;
 
                     h5 {
                       font-size: 0.95em;
@@ -4996,7 +5007,6 @@ main.site_content {
 
                     p {
                       width: 100%;
-                      padding: 0.25em;
                       font-size: 0.8em;
                       line-height: 25px;
                     }

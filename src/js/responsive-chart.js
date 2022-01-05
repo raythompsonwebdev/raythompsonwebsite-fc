@@ -1,4 +1,16 @@
 // eslint-disable-next-line func-style
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// eslint-disable-next-line func-style
 const responsiveChart = () => {
   // document.addEventListener("DOMContentLoaded", () => {
   const chartbars = [
@@ -73,37 +85,38 @@ const responsiveChart = () => {
     return chartBarContainer;
   });
 
-  // eslint-disable-next-line no-console
-  //  console.log(chartBarContainer.children);
+  // export default responsiveChart;
 
-  // eslint-disable-next-line prefer-destructuring
-  const chartBar = chartBarContainer.children;
-
-  Array.from(chartBar).forEach((key) => {
-    let percentage = 0;
-
-    // eslint-disable-next-line no-console
-    console.log(key.children[0].dataset.percentage);
-
+  if (isInViewport(chartBarContainer)) {
     // eslint-disable-next-line prefer-destructuring
-    const percentageMaxWidth = key.children[0].dataset.percentage;
+    const chartBar = chartBarContainer.children;
 
-    const frame = () => {
-      if (percentage === percentageMaxWidth) {
-        // eslint-disable-next-line no-use-before-define
-        clearInterval(id);
-      } else {
-        // eslint-disable-next-line no-plusplus
-        percentage++;
+    Array.from(chartBar).forEach((key) => {
+      let percentage = 0;
 
-        // eslint-disable-next-line no-param-reassign
-        key.children[0].style.width = `${percentageMaxWidth}%`;
-      }
-    };
+      // eslint-disable-next-line no-console
+      console.log(key.children[0].dataset.percentage);
 
-    const id = setInterval(frame, 2500);
-  });
+      // eslint-disable-next-line prefer-destructuring
+      const percentageMaxWidth = key.children[0].dataset.percentage;
+
+      const frame = () => {
+        if (percentage === percentageMaxWidth) {
+          // eslint-disable-next-line no-use-before-define
+          clearInterval(id);
+        } else {
+          // eslint-disable-next-line no-plusplus
+          percentage++;
+
+          // eslint-disable-next-line no-param-reassign
+          key.children[0].style.width = `${percentageMaxWidth}%`;
+        }
+      };
+
+      const id = setInterval(frame, 2500);
+    });
+  }
 };
 // });
 
-export default responsiveChart;
+responsiveChart();
