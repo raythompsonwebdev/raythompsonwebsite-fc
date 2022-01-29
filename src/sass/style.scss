@@ -662,7 +662,7 @@ main.site_content {
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: 90%;
-      margin: 0.5em auto;
+      margin: 1em auto;
       padding: 0.25em;
       background-color: $color-black;
 
@@ -866,7 +866,7 @@ main.site_content {
       display: inline-block;
       box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
       margin-bottom: 1em;
-      padding: 0.25em;
+      padding: 0.2em;
       font-family: $fontHeader;
 
       h1 {
@@ -894,7 +894,7 @@ main.site_content {
 
         li {
           width: 100%;
-          height: 62px;
+          height: 50px;
           margin: 0 0 0.5em 0;
           text-align: center;
           position: relative;
@@ -936,8 +936,7 @@ main.site_content {
           left: 0;
           height: 100%;
           text-align: left;
-          line-height: 62px;
-          height: 60px;
+          height: 50px;
           font-size: 0.75em;
           text-indent: 0.25em;
           color: $color-black;
@@ -985,6 +984,7 @@ main.site_content {
         address {
           width: 90%;
           flex: 0 0 auto;
+          background-color: $color-white-1;
           padding: 0.25em;
           margin: auto;
           ul {
@@ -1511,16 +1511,9 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
-            margin: 0 0 0.5em 0;
-            text-align: center;
-            position: relative;
+            height: 50px;
             div.bar {
-              display: block;
-              position: absolute;
               left: 16.5%;
-              @include raytransition(all 0.2s ease-in 0s);
-
               &:hover {
                 background: $color-black;
                 cursor: pointer;
@@ -1539,17 +1532,9 @@ main.site_content {
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 16.5%;
-            position: absolute;
-            left: 0;
-            height: 100%;
-            text-align: left;
-            line-height: 62px;
+            line-height: 50px;
             font-size: 0.9em;
-            text-indent: 0.25em;
           }
         }
       }
@@ -1581,7 +1566,7 @@ main.site_content {
         width: 60%;
         height: auto;
         padding: 0.25em;
-        margin-left: 0.5em;
+        margin: 0 auto;
         float: right;
 
         h3 {
@@ -1695,7 +1680,7 @@ main.site_content {
           address {
             height: auto;
             width: 90%;
-            margin: 0;
+            margin: 0 auto;
             ul {
               display: block;
               list-style: none;
@@ -1767,6 +1752,7 @@ main.site_content {
 
               label[for="questionitem"] {
                 float: left;
+                font-size: 90%;
               }
 
               input#myname:hover,
@@ -2065,11 +2051,9 @@ main.site_content {
           flex-flow: column;
 
           li {
-            height: 62px;
+            height: 50px;
             position: relative;
             div.bar {
-              display: block;
-              position: absolute;
               left: 16.5%;
 
               &:hover {
@@ -2078,7 +2062,6 @@ main.site_content {
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
                 width: 24%;
@@ -2087,11 +2070,8 @@ main.site_content {
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 16.5%;
-            position: absolute;
+            line-height: 50px;
             font-size: 0.9em;
           }
         }
@@ -2101,7 +2081,6 @@ main.site_content {
         width: 60%;
         height: auto;
         padding: 0.25em;
-        margin-left: 0.5em;
         float: right;
 
         h3 {
@@ -2226,12 +2205,12 @@ main.site_content {
           padding: 0 1em;
           h3 {
             font-size: 1.25rem;
-            background-color: $color-white-1;
+            line-height: 50px;
           }
           address {
             height: auto;
             width: 90%;
-            margin: 0;
+            margin: 0 auto;
             ul {
               display: block;
               list-style: none;
@@ -2303,6 +2282,7 @@ main.site_content {
 
               label[for="questionitem"] {
                 float: left;
+                font-size: 90%;
               }
 
               input#myname:hover,
@@ -2599,17 +2579,15 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
+            height: 50px;
             position: relative;
             div.bar {
-              position: absolute;
               left: 16.5%;
               &:hover {
                 cursor: pointer;
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
                 width: 24%;
@@ -2618,11 +2596,8 @@ main.site_content {
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
+            line-height: 50px;
             width: 16.5%;
-            position: absolute;
             font-size: 0.9em;
           }
         }
@@ -2643,7 +2618,7 @@ main.site_content {
         width: 60%;
         height: auto;
         padding: 0.25em;
-        margin-left: 0.5em;
+        margin: 0 auto;
         float: right;
 
         h3 {
@@ -2750,7 +2725,7 @@ main.site_content {
           address {
             height: auto;
             width: 90%;
-            margin: 0;
+            margin: 0 auto;
             ul {
               display: block;
               list-style: none;
@@ -2822,6 +2797,7 @@ main.site_content {
 
               label[for="questionitem"] {
                 float: left;
+                font-size: 90%;
               }
 
               input#myname:hover,
@@ -3096,12 +3072,10 @@ main.site_content {
           flex-flow: column;
 
           li {
-            height: 62px;
+            height: 50px;
             text-align: center;
-            position: relative;
             div.bar {
               display: block;
-              position: absolute;
               left: 16.5%;
 
               &:hover {
@@ -3109,21 +3083,15 @@ main.site_content {
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
                 width: 24%;
-                text-align: center;
               }
             }
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 16.5%;
-            position: absolute;
             font-size: 0.8em;
           }
         }
@@ -3133,7 +3101,7 @@ main.site_content {
         width: 55%;
         height: auto;
         padding: 0.25em;
-        margin-left: 0;
+        margin: 0 auto;
         float: right;
 
         h3 {
@@ -3247,7 +3215,7 @@ main.site_content {
           address {
             height: auto;
             width: 90%;
-            margin: 0;
+            margin: 0 auto;
             ul {
               display: block;
               list-style: none;
@@ -3319,6 +3287,7 @@ main.site_content {
 
               label[for="questionitem"] {
                 float: left;
+                font-size: 90%;
               }
 
               input#myname:hover,
@@ -3687,10 +3656,8 @@ main.site_content {
         width: 45%;
         height: auto;
         display: inline-block;
-        //box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
         margin-bottom: 1em;
         padding: 0.25em;
-        background: $color-black;
         font-family: $fontHeader;
 
         h1 {
@@ -3719,14 +3686,10 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
+            height: 50px;
             margin: 0 0 0.5em 0;
-            text-align: center;
-            position: relative;
             div.bar {
-              display: block;
               margin-left: 0;
-              position: absolute;
               left: 18.5%;
 
               &:hover {
@@ -3734,9 +3697,7 @@ main.site_content {
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
-                display: block;
                 font-size: 1em;
                 width: 24%;
               }
@@ -3744,14 +3705,9 @@ main.site_content {
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 18.5%;
-            position: absolute;
-            line-height: 62px;
-            height: 60px;
-            font-size: 0.85em;
+            line-height: 50px;
+            font-size: 0.8em;
           }
         }
       }
@@ -3761,7 +3717,7 @@ main.site_content {
         width: 48%;
         height: auto;
         padding: 0.5em;
-        margin-left: 0.5em;
+        margin: 0 auto;
         float: right;
 
         h3 {
@@ -3896,7 +3852,7 @@ main.site_content {
           address {
             height: auto;
             width: 90%;
-            margin: 0;
+            margin: 0 auto;
             ul {
               display: block;
               list-style: none;
@@ -4182,10 +4138,9 @@ main.site_content {
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        width: 95%;
+        width: 85%;
         height: auto;
         padding: 0.25em;
-        background: $color-black;
         font-family: $fontHeader;
 
         h1 {
@@ -4202,12 +4157,9 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
+            height: 50px;
             position: relative;
             div.bar {
-              display: block;
-              background: $color-white-1;
-              position: absolute;
               left: 18.5%;
 
               &:hover {
@@ -4215,22 +4167,16 @@ main.site_content {
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
                 width: 24%;
-                text-align: center;
               }
             }
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 18.5%;
-            position: absolute;
-            line-height: 62px;
+            line-height: 50px;
             font-size: 0.9em;
           }
         }
@@ -4555,10 +4501,9 @@ main.site_content {
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        width: 95%;
+        width: 90%;
         height: auto;
-        padding: 0.25em;
-        background: $color-black;
+        padding: 0.2em;
         font-family: $fontHeader;
 
         h1 {
@@ -4575,12 +4520,10 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
+            height: 50px;
             position: relative;
             div.bar {
               display: block;
-              background: $color-white-1;
-              position: absolute;
               left: 18.5%;
 
               &:hover {
@@ -4588,9 +4531,7 @@ main.site_content {
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
-                display: block;
                 line-height: 50px;
                 font-size: 0.9em;
               }
@@ -4598,13 +4539,9 @@ main.site_content {
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 18.5%;
-            position: absolute;
-            line-height: 62px;
-            font-size: 0.9em;
+            line-height: 50px;
+            font-size: 0.85em;
           }
         }
       }
@@ -4905,7 +4842,6 @@ main.site_content {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 95%;
-        background: $color-black;
         font-family: $fontHeader;
 
         h1 {
@@ -4922,38 +4858,28 @@ main.site_content {
 
           li {
             width: 100%;
-            height: 62px;
+            height: 50px;
             text-align: center;
             position: relative;
             div.bar {
               display: block;
-              position: absolute;
               left: 18.5%;
-              @include raytransition(all 0.2s ease-in 0s);
 
               &:hover {
                 cursor: pointer;
               }
 
               &:hover::after {
-                position: relative;
                 left: calc(80% - 7%);
                 font-size: 1em;
-                color: $color-black;
                 width: 24%;
-                text-align: center;
               }
             }
           }
 
           span {
-            -webkit-align-self: flex-end;
-            -ms-flex-item-align: end;
-            align-self: flex-end;
             width: 18.5%;
-            position: absolute;
-            line-height: 62px;
-            height: 60px;
+            height: 50px;
             font-size: 0.9em;
           }
         }
