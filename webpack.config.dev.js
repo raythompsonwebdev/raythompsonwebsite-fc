@@ -4,7 +4,7 @@ import StyleLintPlugin from "stylelint-webpack-plugin";
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-export default {
+module.exports = {
   mode: "development",
   entry: {
     main: "./src/index",
@@ -94,6 +94,8 @@ export default {
   ],
 
   resolve: {
+    // directories where to look for modules (in order)
+    extensions: [".js", ".json", ".jsx", ".css"],
     alias: {
       Images: path.resolve(__dirname, "./src/images/"),
       Fonts: path.resolve(__dirname, "./src/fonts/"),
