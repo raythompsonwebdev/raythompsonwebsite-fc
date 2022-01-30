@@ -914,15 +914,17 @@ main.site_content {
             }
 
             &:hover::after {
-              //content: attr(data-skill);
+              content: "Link";
               position: relative;
               left: calc(80% - 7%);
               display: block;
               line-height: 50px;
               font-size: 1em;
               color: $color-white-1;
-              width: 24%;
+              background-color: $greencolor;
+              width: 80px;
               text-align: center;
+              top: -20px;
             }
           }
         }
@@ -1524,8 +1526,8 @@ main.site_content {
                 left: calc(80% - 7%);
                 display: block;
                 line-height: 50px;
-                font-size: 1em;
-                width: 24%;
+                font-size: 0.9em;
+                width: 80px;
                 text-align: center;
               }
             }
@@ -2063,8 +2065,8 @@ main.site_content {
 
               &:hover::after {
                 left: calc(80% - 7%);
-                font-size: 1em;
-                width: 24%;
+                font-size: 0.9em;
+                width: 80px;
               }
             }
           }
@@ -2589,8 +2591,8 @@ main.site_content {
 
               &:hover::after {
                 left: calc(80% - 7%);
-                font-size: 1em;
-                width: 24%;
+                font-size: 0.9em;
+                width: 80px;
               }
             }
           }
@@ -3085,7 +3087,7 @@ main.site_content {
               &:hover::after {
                 left: calc(80% - 7%);
                 font-size: 1em;
-                width: 24%;
+                width: 60px;
               }
             }
           }
@@ -3699,7 +3701,7 @@ main.site_content {
               &:hover::after {
                 left: calc(80% - 7%);
                 font-size: 1em;
-                width: 24%;
+                width: 60px;
               }
             }
           }
@@ -4169,7 +4171,7 @@ main.site_content {
               &:hover::after {
                 left: calc(80% - 7%);
                 font-size: 1em;
-                width: 24%;
+                width: 60px;
               }
             }
           }
@@ -4872,7 +4874,7 @@ main.site_content {
               &:hover::after {
                 left: calc(80% - 7%);
                 font-size: 1em;
-                width: 24%;
+                width: 80px;
               }
             }
           }

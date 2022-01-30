@@ -28,33 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const chartbars = [
       {
         id: "1",
-        language: "Replt",
         datapercentage: 60,
-        dataskill: "INTERMEDIATE",
+        codeplatform: "Replt",
       },
       {
         id: "2",
-        language: "CodeWars",
         datapercentage: 50,
-        dataskill: "INTERMEDIATE",
+        codeplatform: "Codewars",
       },
       {
         id: 3,
-        language: "LeetCode",
         datapercentage: 70,
-        dataskill: "INTERMEDIATE",
+        codeplatform: "LeetCode",
       },
       {
         id: 4,
-        language: "Codepen",
         datapercentage: 65,
-        dataskill: "INTERMEDIATE",
+        codeplatform: "Codepen",
       },
       {
         id: "5",
-        language: "Execute",
-        datapercentage: 80,
-        dataskill: "INTERMEDIATE",
+        datapercentage: 70,
+        codeplatform: "Execute",
       },
     ];
 
@@ -70,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // set bar attributes
       chartBar.setAttribute("data-percentage", `${element.datapercentage}`);
-      chartBar.setAttribute("data-skill", `${element.dataskill}`);
+      chartBar.setAttribute("data-codeplatform", `${element.codeplatform}`);
       chartBar.setAttribute("class", "bar");
 
       // create span
       const chartBarHeader = document.createElement("SPAN");
 
       // add text
-      chartBarHeader.textContent = `${element.language}`;
+      chartBarHeader.textContent = `${element.codeplatform}`;
 
       // create list element to contain span and div
       const chartBarList = document.createElement("LI");
