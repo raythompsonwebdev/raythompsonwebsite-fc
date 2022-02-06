@@ -6,7 +6,6 @@ import "./js/contact";
 import "./js/main";
 import "./js/projects";
 import "./js/slider";
-// import "./js/responsive-chart";
 
 // set backround image for home page
 const bgImage = document.querySelector("#banner");
@@ -15,36 +14,118 @@ bgImage.style.setProperty(
   "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg)"
 );
 
-// Responsive chart
-// get portfolio grid images
-const portImages = window.document.querySelectorAll(".projectImg");
-
-// function to create srcset markup string to add to images
-const makeSrcset = (imgSrc) => {
-  const markup = [];
-  let width = 300;
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < 10; i++) {
-    markup[i] = `${imgSrc}-${width}.png `;
-    width += 20;
-  }
-
-  return markup.join();
+// eslint-disable-next-line func-style
+const isInViewport = (element) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 };
-// loop over inages
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < portImages.length; i++) {
-  // get relative path of image.
-  let imgLink = portImages[i].getAttribute("src");
 
-  // remove file ext
-  imgLink = imgLink.slice(0, -4);
-  const srcset = makeSrcset(imgLink);
+const chartbars = [
+  {
+    id: "1",
+    datapercentage: 60,
+    codeplatform: "Replt",
+    link: "https://replit.com/@raythompsonweb",
+  },
+  {
+    id: "2",
+    datapercentage: 50,
+    codeplatform: "Codewars",
+    link: "https://www.codewars.com/users/raythompsonwebdev/",
+  },
+  {
+    id: 3,
+    datapercentage: 70,
+    codeplatform: "LeetCode",
+    link: "https://leetcode.com/raythompsonwebdev/",
+  },
+  {
+    id: 4,
+    datapercentage: 65,
+    codeplatform: "Codepen",
+    link: "https://codepen.io/raythompweb",
+  },
+  {
+    id: "5",
+    datapercentage: 70,
+    codeplatform: "Execute",
+    link: "https://codepen.io/raythompweb",
+  },
+];
 
-  // eslint-disable-next-line no-console
-  // console.log(portImages[i].naturalWidth);
+const chartBarContainer = document.getElementById("bars");
 
-  portImages[i].srcset = srcset;
-  portImages[i].sizes =
-    "(min-width: 90em) 360px, (min-width: 80em) and (max-width: 1439px) 340px, (min-width: 64em) and (max-width: 1279px) 340px, (min-width: 46em) and (max-width: 1023px) 300px, (min-width: 37.5em) and (max-width: 735px) 300px,(min-width: 30em) and (max-width: 599px) 340px, (min-width: 22.5em) and (max-width: 479px) 320px, 85vw";
-}
+const responsiveChart = () => {
+  // eslint-disable-next-line no-restricted-syntax
+  chartbars.forEach((element) => {
+    // create bar chart bar using div
+    const chartBar = document.createElement("DIV");
+
+    // set bar attributes
+    chartBar.setAttribute("data-percentage", `${element.datapercentage}`);
+    chartBar.setAttribute("data-codeplatform", `${element.codeplatform}`);
+    chartBar.setAttribute("class", "bar");
+
+    // create span
+    const chartBarHeader = document.createElement("SPAN");
+
+    // add text
+    chartBarHeader.textContent = `${element.codeplatform}`;
+
+    // create list element to contain span and div
+    const chartBarList = document.createElement("LI");
+
+    const chartLink = document.createElement("A");
+    chartLink.setAttribute("href", `${element.link}`);
+
+    chartBar.append(chartLink);
+
+    // append div and span as children
+    chartBarList.appendChild(chartBar);
+    chartBarList.appendChild(chartBarHeader);
+    chartBarContainer.appendChild(chartBarList);
+
+    return chartBarContainer;
+  });
+
+  // get node list
+  const { children } = chartBarContainer;
+
+  // loop over array
+  Array.from(children).forEach((key) => {
+    let percentage = 0;
+
+    const [bar] = Array.from(key.childNodes);
+
+    // // eslint-disable-next-line prefer-destructuring
+    const { dataset } = bar;
+
+    const frame = () => {
+      if (percentage === dataset.percentage) {
+        // eslint-disable-next-line no-use-before-define
+        clearInterval(id);
+      } else {
+        percentage += 1;
+
+        bar.style.width = `${dataset.percentage}%`;
+        // add styles to a tag
+        bar.firstChild.style.width = "100%";
+        bar.firstChild.style.display = "block";
+        bar.firstChild.style.height = "100%";
+      }
+    };
+
+    const id = setInterval(frame, 2500);
+  });
+};
+
+// eslint-disable-next-line no-console
+console.log(isInViewport(chartBarContainer));
+
+responsiveChart();

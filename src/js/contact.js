@@ -80,7 +80,7 @@ const submitForm = () => {
     .then((response) => {
       if (!response.ok) {
         // error processing
-        throw response.status;
+        throw new Error(`${response.status}: ${response.statusText}`);
       }
       return response.text();
     })
@@ -88,12 +88,15 @@ const submitForm = () => {
       error.classList.remove("hide-error");
       error.classList.add("show-error");
       error.innerHTML = `${response}`;
-      // eslint-disable-next-line no-console
-      console.log(response);
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
-      console.error("Fetch Error : ", err);
+      console.error("Fetch Error : ", err.message);
+      // throw new Error(err.message);
+    })
+    .finally((result) => {
+      // eslint-disable-next-line no-console
+      console.log(`finished  -${result}`);
     });
 };
 
