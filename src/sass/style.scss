@@ -908,21 +908,27 @@ main.site_content {
             width: 0%;
             @include raytransition(all 0.2s ease-in 0s);
 
+            a {
+              position: absolute;
+            }
+
             &:hover {
               background: $color-black;
               cursor: pointer;
             }
 
             &:hover::after {
-              content: "Link";
+              content: "Click bar to visit profile";
               position: relative;
-              left: calc(80% - 7%);
+              left: calc(100% + -10px);
               display: block;
               line-height: 50px;
+              z-index: 150;
               font-size: 1em;
+              text-shadow: 1px 1px 1px $color-black2;
               color: $color-white-1;
               background-color: $greencolor;
-              width: 80px;
+              width: 150px;
               text-align: center;
               top: -20px;
             }
@@ -939,7 +945,7 @@ main.site_content {
           height: 100%;
           text-align: left;
           height: 50px;
-          font-size: 0.75em;
+          font-size: 0.7em;
           text-indent: 0.25em;
           color: $color-black;
           z-index: 3;
@@ -1522,13 +1528,11 @@ main.site_content {
               }
 
               &:hover::after {
-                //content: attr(data-skill);
-                left: calc(80% - 7%);
+                left: calc(100% + -10px);
                 display: block;
                 line-height: 50px;
                 font-size: 0.9em;
-                width: 80px;
-                text-align: center;
+                width: 150px;
               }
             }
           }
@@ -2064,9 +2068,9 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
+                left: calc(100% + -10px);
                 font-size: 0.9em;
-                width: 80px;
+                width: 150px;
               }
             }
           }
@@ -2590,9 +2594,9 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
+                left: calc(100% + -10px);
                 font-size: 0.9em;
-                width: 80px;
+                width: 150px;
               }
             }
           }
@@ -3085,9 +3089,9 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
+                left: calc(100% + -10px);
                 font-size: 1em;
-                width: 60px;
+                width: 150px;
               }
             }
           }
@@ -3699,9 +3703,9 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
-                font-size: 1em;
-                width: 60px;
+                left: calc(100% + -10px);
+                font-size: 0.85em;
+                width: 150px;
               }
             }
           }
@@ -4170,8 +4174,8 @@ main.site_content {
 
               &:hover::after {
                 left: calc(80% - 7%);
-                font-size: 1em;
-                width: 60px;
+                font-size: 0.85em;
+                width: 150px;
               }
             }
           }
@@ -4179,7 +4183,7 @@ main.site_content {
           span {
             width: 18.5%;
             line-height: 50px;
-            font-size: 0.9em;
+            font-size: 0.8em;
           }
         }
       }
@@ -4533,17 +4537,17 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
+                left: calc(100% + -10px);
                 line-height: 50px;
-                font-size: 0.9em;
+                font-size: 0.85em;
               }
             }
           }
 
           span {
             width: 18.5%;
-            line-height: 50px;
-            font-size: 0.85em;
+            width: 150px;
+            font-size: 0.75em;
           }
         }
       }
@@ -4872,17 +4876,17 @@ main.site_content {
               }
 
               &:hover::after {
-                left: calc(80% - 7%);
-                font-size: 1em;
-                width: 80px;
+                left: calc(100% + -10px);
+                font-size: 0.8em;
+                width: 150px;
               }
             }
           }
 
           span {
             width: 18.5%;
-            height: 50px;
-            font-size: 0.9em;
+            line-height: 50px;
+            font-size: 0.75em;
           }
         }
       }

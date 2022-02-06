@@ -7,7 +7,6 @@ const error = document.getElementById("form-error");
 // deconstruct array of form elements
 const [text, email, , , , , comments, submit] = myForm;
 
-// eslint-disable-next-line func-style
 const dirtyInputName = (evt) => {
   evt.preventDefault();
   // eslint-disable-next-line prefer-destructuring
