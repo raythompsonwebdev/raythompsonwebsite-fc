@@ -1,8 +1,8 @@
-import express from "express";
-import path from "path";
-import open from "open";
-import webpack from "webpack";
-import config from "../webpack.config.dev";
+const express = require("express");
+const path = require("path");
+const open = require("open");
+const webpack = require("webpack");
+const config = require("../webpack.config.dev");
 
 /* eslint-disable no-console */
 const PORT = process.env.PORT || 3000;

@@ -1,6 +1,6 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import StyleLintPlugin from "stylelint-webpack-plugin";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const StyleLintPlugin = require("stylelint-webpack-plugin");
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
