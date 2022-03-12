@@ -1,7 +1,6 @@
 {
   "env": {
-      "browser": true,
-      "commonjs":true,
+      "browser": true,      
       "es2020": true,
       "node":true,
       "es6":true
@@ -12,14 +11,20 @@
       "ecmaVersion": "latest",
       "sourceType": "module",
       "ecmaFeatures": {
-        "jsx": false
-    }
+        "globalReturn": false
+      },
+      "babelOptions": {
+        "configFile": "./babel.config.json"
+      },
+      "requireConfigFile": false
+      
   },
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
 	},
   "parser": "@babel/eslint-parser",
+  
   "rules": {
     "semi": "error",
     "strict" : ["error","global"],

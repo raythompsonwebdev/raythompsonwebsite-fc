@@ -924,7 +924,7 @@ main.site_content {
               display: block;
               line-height: 50px;
               z-index: 150;
-              font-size: 1em;
+              font-size: 0.75em;
               text-shadow: 1px 1px 1px $color-black2;
               color: $color-white-1;
               background-color: $greencolor;
@@ -992,7 +992,7 @@ main.site_content {
         address {
           width: 90%;
           flex: 0 0 auto;
-          background-color: $color-white-1;
+
           padding: 0.25em;
           margin: auto;
           ul {
@@ -1041,6 +1041,7 @@ main.site_content {
           width: 90%;
           margin: 1em auto;
           padding: 0;
+          border: solid 2px #000;
           img {
             width: 100%;
             filter: grayscale(100%);
@@ -1099,10 +1100,6 @@ main.site_content {
               line-height: 30px;
               font-size: 80%;
             }
-
-            // label:focus-within{
-            //   color:red;
-            // }
 
             input#myname:hover,
             input#myemail:hover,
@@ -2069,7 +2066,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 0.9em;
+                font-size: 0.8em;
                 width: 150px;
               }
             }
@@ -2177,7 +2174,7 @@ main.site_content {
         }
 
         p {
-          line-height: 2em;
+          line-height: 2.5em;
           font-size: 1.1em;
         }
       }
@@ -2595,7 +2592,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 0.9em;
+                font-size: 0.8em;
                 width: 150px;
               }
             }
@@ -3090,7 +3087,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 1em;
+                font-size: 0.9em;
                 width: 150px;
               }
             }
@@ -3704,7 +3701,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 0.85em;
+                font-size: 0.8em;
                 width: 150px;
               }
             }
@@ -4174,7 +4171,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(80% - 7%);
-                font-size: 0.85em;
+                font-size: 0.8em;
                 width: 150px;
               }
             }
@@ -4539,7 +4536,7 @@ main.site_content {
               &:hover::after {
                 left: calc(100% + -10px);
                 line-height: 50px;
-                font-size: 0.85em;
+                font-size: 0.8em;
               }
             }
           }
@@ -4877,7 +4874,7 @@ main.site_content {
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 0.8em;
+                font-size: 0.75em;
                 width: 150px;
               }
             }

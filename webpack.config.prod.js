@@ -1,10 +1,14 @@
-const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// import { fileURLToPath } from "url";
+import TerserPlugin from "terser-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 
-module.exports = {
+import path from "path";
+
+// const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
   mode: "production",
   devtool: "source-map",
   entry: {
@@ -51,7 +55,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
@@ -62,7 +66,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       // rules for sass
       {
@@ -78,10 +82,11 @@ module.exports = {
           // {
           //   loader: "postcss-loader",
           //   options: {
-          //     autoprefixer: {
-          //       browsers: ["last 2 versions"],
+          //     sourceMap: true,
+          //     postcssOptions: {
+          //       parser: "sugarss",
           //     },
-          //     plugins: () => [autoprefixer],
+          //     execute: true,
           //   },
           // },
           {

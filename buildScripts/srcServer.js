@@ -1,20 +1,27 @@
-const express = require("express");
-const path = require("path");
-const open = require("open");
-const webpack = require("webpack");
-const config = require("../webpack.config.dev");
+import express from "express";
+import path from "path";
+import open from "open";
+import webpack from "webpack";
+import middleware from "webpack-dev-middleware";
+// import { fileURLToPath } from "url";
+import config from "../webpack.config.dev";
 
-/* eslint-disable no-console */
+// eslint-disable-next-line no-underscore-dangle
+// const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+process.env.NODE_ENV = "development";
+
 const PORT = process.env.PORT || 3000;
 const app = express();
+
 // webpack compiler
 const compiler = webpack(config);
 
 // integrate webpack with express using middleware
 app.use(
-  require("webpack-dev-middleware")(compiler, {
+  middleware(compiler, {
     // noInfo: true,
-    publicPath: config.output.publicPath,
+    publicPath: config.publicPath,
   })
 );
 
@@ -33,6 +40,7 @@ app.use((req, res) => {
 // opens browser
 app.listen(PORT, (err) => {
   if (err) {
+    // eslint-disable-next-line no-console
     console.log(err);
   } else {
     open(`http://localhost:${PORT}`);

@@ -7,6 +7,7 @@ const error = document.getElementById("form-error");
 // deconstruct array of form elements
 const [text, email, , , , , comments, submit] = myForm;
 
+// name field
 const dirtyInputName = (evt) => {
   evt.preventDefault();
   // eslint-disable-next-line prefer-destructuring
@@ -26,6 +27,7 @@ const dirtyInputName = (evt) => {
   }
 };
 
+// email field
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
   // eslint-disable-next-line prefer-destructuring
@@ -47,6 +49,7 @@ const dirtyInputEmail = (evt) => {
   }
 };
 
+// comments field
 const dirtyInputComments = (evt) => {
   evt.preventDefault();
 
@@ -69,6 +72,7 @@ const dirtyInputComments = (evt) => {
   }
 };
 
+// submit form
 const submitForm = () => {
   const formData = new FormData(myForm);
   // const urlToVal = "./php/validation.php";
@@ -102,9 +106,8 @@ const submitForm = () => {
 
 const showError = (e) => {
   e.preventDefault();
-  // eslint-disable-next-line no-console
-  console.log(text.validity.valueMissing);
 
+  // check if required name and required email address have been entered. If not show error
   if (text.validity.valueMissing || email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
@@ -119,25 +122,29 @@ const showError = (e) => {
   }
 };
 
-// prevent spaces from being typed in the email field
-// function blockspace(evt) {
-//   if (evt.key == " ") {
-//       evt.preventDefault();
-//   }
-// }
-
 error.classList.add("hide-error");
 error.textContent = "";
 
-// submit.addEventListener("click", showError);
-
+// submit button
 submit.addEventListener("click", showError);
 
+// name field
 // text.addEventListener("input", dirtyInputName);
 text.addEventListener("blur", dirtyInputName);
 
+// email field
 // email.addEventListener("input", dirtyInputEmail);
 email.addEventListener("blur", dirtyInputEmail);
 
+// prevent spaces from being typed in the email field
+const blockspace = (evt) => {
+  if (evt.key === " ") {
+    evt.preventDefault();
+  }
+};
+
+email.addEventListener("keydown", blockspace);
+
+// comments field
 comments.addEventListener("input", dirtyInputComments);
 comments.addEventListener("blur", dirtyInputComments);

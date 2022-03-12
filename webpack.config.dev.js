@@ -1,17 +1,21 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const StyleLintPlugin = require("stylelint-webpack-plugin");
-
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import StyleLintPlugin from "stylelint-webpack-plugin";
+// import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// import { fileURLToPath } from "url";
 
-module.exports = {
+// eslint-disable-next-line no-underscore-dangle
+// const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
   mode: "development",
   entry: {
     main: "./src/index",
   },
   watch: true,
   target: "web",
-  devtool: "inline-source-map",
+  devtool: "source-map",
   output: {
     // serves build from memory
     path: path.resolve(__dirname, "./src"),
@@ -22,12 +26,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /.m?js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
@@ -78,6 +82,9 @@ module.exports = {
       }),
     ],
   },
+  experiments: {
+    outputModule: true,
+  },
   plugins: [
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
@@ -94,8 +101,7 @@ module.exports = {
   ],
 
   resolve: {
-    // directories where to look for modules (in order)
-    extensions: [".js", ".json", ".jsx", ".css"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
       Images: path.resolve(__dirname, "./src/images/"),
       Fonts: path.resolve(__dirname, "./src/fonts/"),
