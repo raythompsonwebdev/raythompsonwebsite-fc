@@ -4,7 +4,6 @@ import StyleLintPlugin from "stylelint-webpack-plugin";
 // import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 // import { fileURLToPath } from "url";
-
 // eslint-disable-next-line no-underscore-dangle
 // const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -74,7 +73,7 @@ export default {
           options: {
             plugins: [
               ["gifsicle", { interlaced: true }],
-              ["jpegtran", { progressive: true }],
+              ["mozjpeg", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
             ],
           },

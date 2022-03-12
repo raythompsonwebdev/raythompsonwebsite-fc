@@ -38,8 +38,7 @@ export default {
             plugins: [
               "imagemin-gifsicle",
               "imagemin-mozjpeg",
-              "imagemin-pngquant",
-              "imagemin-svgo",
+              "imagemin-optipng",
             ],
           },
         },
