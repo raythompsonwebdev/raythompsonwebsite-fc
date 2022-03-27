@@ -2,6 +2,7 @@
 import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ImageminWebpWebpackPlugin from "imagemin-webp-webpack-plugin";
 import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 
 import path from "path";
@@ -109,6 +110,7 @@ export default {
     ],
   },
   plugins: [
+    new ImageminWebpWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css",
       chunkFilename: "style.[id].css",

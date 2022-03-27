@@ -1,3 +1,5 @@
+// const { forEach } = require("lodash");
+
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const mask = window.document.querySelector(".hero-slider > .mask");
@@ -13,40 +15,39 @@ try {
       return response.json();
     })
     .then((data) => {
-      // eslint-disable-next-line prefer-destructuring
-      const slider = data.sliderdata;
-      slider.forEach((slide) => {
+      const { sliderdata } = data;
+      sliderdata.forEach((slide) => {
+        const { hash, title, text, buttonname, bgimage } = slide;
         // panel
         const panel = document.createElement("ARTICLE");
         panel.setAttribute("class", "panel");
-        panel.setAttribute("id", `#${slide.hash}`);
+        panel.setAttribute("id", `#${hash}`);
         // slider panel image
         const slidepanel = document.createElement("FIGURE");
         slidepanel.setAttribute("class", "slider-panel");
 
         // Slider Header
         const slideHeader = document.createElement("H4");
-        slideHeader.textContent = `${slide.title}`;
+        slideHeader.textContent = title;
 
         // image link
         const slidepanelImgLink = document.createElement("A");
         slidepanelImgLink.setAttribute("href", "");
         slidepanelImgLink.setAttribute("class", "fancybox");
 
-        const slidepanelImg = document.createElement("SPAN");
-        slidepanelImg.setAttribute(
-          "style",
-          `background-image: url(${slide.bgimage})`
-        );
+        const slidepanelImg = document.createElement("IMG");
+        slidepanelImg.setAttribute("src", bgimage);
+        slidepanelImg.setAttribute("class", "panel-image");
+        slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
 
         const slidepanelCaption = document.createElement("FIGCAPTION");
+        // slidepanelCaption.setAttribute("class", "panel-cap");
 
         const slidepanelHeadingThree = document.createElement("H5");
-        slidepanelHeadingThree.textContent = `${slide.title}`;
+        slidepanelHeadingThree.textContent = title;
 
         const slidepanelText = document.createElement("P");
-
-        slidepanelText.textContent = `${slide.text}`;
+        slidepanelText.textContent = `${text}`;
 
         panel.append(slidepanel);
         slidepanel.append(slideHeader);
@@ -57,23 +58,28 @@ try {
         slidepanel.append(slidepanelCaption);
         slidepanelCaption.append(slidepanelHeadingThree);
         slidepanelCaption.append(slidepanelText);
-      });
 
-      const fancyBoxLinks = document.getElementsByClassName("fancybox");
+        const fancyBoxLinks = document.getElementsByClassName("fancybox");
 
-      // eslint-disable-next-line no-restricted-syntax
-      for (const fancyLink of fancyBoxLinks) {
-        if (!fancyLink.classList.contains("cover")) {
+        Array.from(fancyBoxLinks).forEach((fancyLink) => {
           fancyLink.addEventListener("click", (e) => {
             e.preventDefault();
-            fancyLink.nextSibling.classList.toggle("captionshow");
+            if (fancyLink.classList.contains("fancybox")) {
+              fancyLink.nextSibling.classList.add("captionshow");
+            }
           });
-        }
-      }
+
+          fancyLink.nextSibling.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (fancyLink.nextSibling.classList.contains("captionshow")) {
+              fancyLink.nextSibling.classList.remove("captionshow");
+            }
+          });
+        });
+      });
     });
 } catch (error) {
-  // eslint-disable-next-line no-console
-  console.error(error);
+  throw new Error(error);
 }
 
 const panels = document.getElementsByClassName("panel");
@@ -92,8 +98,7 @@ const updateIndex = () => {
   if (currentIndex === upperlimit) {
     currentIndex = 0;
   } else {
-    // eslint-disable-next-line no-plusplus
-    currentIndex++;
+    currentIndex += 1;
   }
 };
 
@@ -103,8 +108,7 @@ const undateIndex = () => {
   if (currentIndex === lowerlimit) {
     currentIndex = 0;
   } else {
-    // eslint-disable-next-line no-plusplus
-    currentIndex--;
+    currentIndex -= 1;
   }
 };
 
@@ -115,8 +119,7 @@ next.addEventListener("click", (e) => {
   e.preventDefault();
   updateIndex();
 
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < panels.length; i++) {
+  for (let i = 0; i < panels.length; i += 1) {
     if (i === currentIndex) {
       scrollTo(document.getElementById(`${panels[i].id}`));
     }
@@ -129,8 +132,8 @@ next.addEventListener("click", (e) => {
 prev.addEventListener("click", (e) => {
   e.preventDefault();
   undateIndex();
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < panels.length; i++) {
+
+  for (let i = 0; i < panels.length; i += 1) {
     if (i === currentIndex) {
       scrollTo(document.getElementById(`${panels[i].id}`));
     }

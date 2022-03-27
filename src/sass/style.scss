@@ -723,17 +723,13 @@ main.site_content {
                   display: block;
                   height: 100%;
 
-                  span {
+                  img.panel-image {
                     display: block;
                     width: 100%;
                     height: 100%;
                     margin: 0;
                     outline: 0;
                     padding: 0;
-                    background-color: rgb(224, 224, 224);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
                   }
                 }
 
@@ -786,6 +782,10 @@ main.site_content {
                     height: auto;
                     line-height: 25px;
                     font-family: "FontAwesome", $fontText;
+                  }
+
+                  &:hover {
+                    cursor: pointer;
                   }
                 }
               }
@@ -1599,8 +1599,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -2113,8 +2113,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -2652,8 +2652,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -3136,8 +3136,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -3751,22 +3751,16 @@ main.site_content {
                 figure.slider-panel {
                   margin: 0;
                   padding: 0;
-
+                  @include raytransition(
+                    all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
+                  );
                   a.fancybox {
-                    @include raytransition(
-                      all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
-                    );
-                    align-self: flex-start;
-                    width: 100%;
                     display: block;
 
-                    span {
+                    img.panel-image {
+                      align-self: flex-start;
+                      width: 100%;
                       display: block;
-                      background-color: rgb(224, 224, 224);
-                      background-repeat: no-repeat;
-                      background-position: center 15%;
-                      background-size: cover;
-                      height: 100%;
                     }
                   }
 
@@ -4220,8 +4214,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -4583,8 +4577,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 
@@ -4922,8 +4916,8 @@ main.site_content {
                   a.fancybox {
                     display: block;
 
-                    span {
-                      height: 100%;
+                    img.panel-image {
+                      display: block;
                     }
                   }
 

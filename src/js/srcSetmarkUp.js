@@ -5,9 +5,9 @@ const portImages = document.querySelectorAll("img.projectImg");
 const makeSrcset = (imgSrc) => {
   const markup = [];
   let width = 300;
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < 10; i++) {
-    markup[i] = `${imgSrc}-${width}.png `;
+
+  for (let i = 0; i < 10; i += 1) {
+    markup[i] = `${imgSrc}-${width}.webp `;
     width += 20;
   }
 
@@ -15,16 +15,16 @@ const makeSrcset = (imgSrc) => {
 };
 // loop over inages
 // eslint-disable-next-line no-plusplus
-for (let i = 0; i < portImages.length; i++) {
+for (let i = 0; i < portImages.length; i += 1) {
   // get relative path of image.
   let imgLink = portImages[i].getAttribute("src");
 
   // remove file ext
-  imgLink = imgLink.slice(0, -4);
+  imgLink = imgLink.slice(0, -5);
   const srcset = makeSrcset(imgLink);
 
   // eslint-disable-next-line no-console
-  // console.log(portImages[i].naturalWidth);
+  // console.log(imgLink);
 
   portImages[i].srcset = srcset;
   portImages[i].sizes =
