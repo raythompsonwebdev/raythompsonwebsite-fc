@@ -62,7 +62,7 @@ export default {
       },
       // rules for images
       {
-        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        test: /\.(png|jpe?g|webp|gif|svg|)$/i,
         type: "asset",
       },
     ],

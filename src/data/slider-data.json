@@ -7,8 +7,7 @@
 				"title": "Adobe Certified Associates",
 				"text": "Online exam covering following topics: Setting project requirements, Identifying Design Elements, Understanding Photoshop Interface, Manipulating Images, Evaluating Digital Images.",
 				"buttonname": "Adobe",
-				"bgimage":
-					"images/certificates/webp/Adobe-photoshop-large.webp"
+				"bgimage": "./images/certificates/webp/Adobe-photoshop-large.webp"
 			},
 			{
 				"id": "1",
@@ -16,8 +15,7 @@
 				"title": "City & Guilds ITQ Level 1, 2, 3 IT Users",
 				"text": "6 month part-time webdesign course at East London Technology Training Center that covered the following modules : Improving productivity using IT,IT Communication Fundementals,Adding Content, IT User fundementals,Organizing Content,Website Software (Dreamweaver),Database Software,Database Management,Design Software (Photoshop)",
 				"buttonname": "ELATT",
-				"bgimage":
-					"images/certificates/webp/CityandGuildsLevelOne-large.webp"
+				"bgimage": "./images/certificates/webp/CityandGuildsLevelOne-large.webp"
 			},		
 			{
 				"id": "2",
@@ -25,8 +23,7 @@
 				"title": "Responsive Web Design",
 				"text": "online interacative curriculum course at freecodecamp.com covering following topics : HTML, CSS, Flexbox, CSS Grids, Responsive Web Design Principles",
 				"buttonname": "FreeCodeCamp",
-				"bgimage":
-					"images/certificates/webp/freecodecamp-org-certification-responsive-web-design-large.webp"
+				"bgimage": "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design-large.webp"
 			},
 			{
 				"id": "3",
@@ -34,8 +31,7 @@
 				"title": "JavaScript Algorithms and Data Structures",
 				"text": "online interacative curriculum course at freecodecamp.com covering following topics :  Classes, Promises, Regular Expressions, Data Structures, Algorithim Scripting.",
 				"buttonname": "FreeCodeCamp",
-				"bgimage":
-					"images/certificates/webp/freecodecamp-org-certification-javascript-large.webp"
+				"bgimage": "./images/certificates/webp/freecodecamp-org-certification-javascript-large.webp"
 			},
 			{
 				"id": "4",
@@ -43,8 +39,7 @@
 				"title": "Linkedin Learning",
 				"text": "online video courses at linkedin learning covering following topics: Become a Front-End Web Developer, Become a Junior Developer, Become a Vanilla Javascript Developer, Become a WordPress Developer, and many other..",
         "buttonname": "Lynda.com",
-				"bgimage":
-					"images/certificates/webp/lynda-com-vanilla-javascript-large.webp"
+				"bgimage": "./images/certificates/webp/lynda-com-vanilla-javascript-large.webp"
 			},
 			{
 				"id": "5",
@@ -52,8 +47,7 @@
 				"title": "Code Academy - Learn Javascript",
 				"text": "online interacative curriculum course at codeacademy.com covering following : Data Types, Loops, Array Methods, Objects, Conditionals.",	
 				"buttonname": "CodeAcademy",
-				"bgimage":
-					"images/certificates/webp/codecademy-js-large.webp"
+				"bgimage": "./images/certificates/webp/codecademy-js-large.webp"
 			},
 			{
 				"id": "6",
@@ -61,8 +55,7 @@
 				"title": "Code Academy - Learn Ruby",
 				"text": "online interacative curriculum course at freecodeamp.com covering following: Arrays, Data Types, Classes, Methods, Conditionals.",					
 				"buttonname": "CodeAcademy",
-				"bgimage":
-					"images/certificates/webp/codecademy-ruby-large.webp"
+				"bgimage": "./images/certificates/webp/codecademy-ruby-large.webp"
 			},
 			{
 				"id": "7",
@@ -70,8 +63,7 @@
 				"title": "Digital Futures 2017",
 				"text": "4 week full-time IT employability course at Digital Futures 2017, Interactive Programming, Debate Skills with DebateMate , Musical Composition , Negotiation skills with CitizenUK , Music creation using Sonic Pi.",
 				"buttonname": "DigitalFutures",
-				"bgimage":
-					"images/certificates/webp/Digital-Futures-2017-Certificate-of-Participation-large.webp"
+				"bgimage": "./images/certificates/webp/Digital-Futures-2017-Certificate-of-Participation-large.webp"
 			}
       
 	]	

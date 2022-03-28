@@ -27,7 +27,7 @@ try {
         slidepanel.setAttribute("class", "slider-panel");
 
         // Slider Header
-        const slideHeader = document.createElement("H4");
+        const slideHeader = document.createElement("H3");
         slideHeader.textContent = title;
 
         // image link
@@ -39,11 +39,13 @@ try {
         slidepanelImg.setAttribute("src", bgimage);
         slidepanelImg.setAttribute("class", "panel-image");
         slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
+        slidepanelImg.setAttribute("width", "780");
+        slidepanelImg.setAttribute("height", "300");
 
         const slidepanelCaption = document.createElement("FIGCAPTION");
         // slidepanelCaption.setAttribute("class", "panel-cap");
 
-        const slidepanelHeadingThree = document.createElement("H5");
+        const slidepanelHeadingThree = document.createElement("H4");
         slidepanelHeadingThree.textContent = title;
 
         const slidepanelText = document.createElement("P");
