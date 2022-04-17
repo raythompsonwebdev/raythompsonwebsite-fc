@@ -104,7 +104,7 @@ export default {
   ],
 
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ["*", ".js", ".jsx"],
     alias: {
       Images: path.resolve(__dirname, "./src/images/"),
       Fonts: path.resolve(__dirname, "./src/fonts/"),
