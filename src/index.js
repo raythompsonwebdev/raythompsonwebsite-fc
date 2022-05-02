@@ -48,9 +48,9 @@ window.addEventListener("load", () => {
     {
       id: "5",
       datapercentage: 70,
-      codeplatform: "Execute",
-      link: "https://codepen.io/raythompweb",
-      title: "Link to execute",
+      codeplatform: "Stackblitz",
+      link: "https://stackblitz.com/@raythompsonwebdev",
+      title: "Link to stackblitz",
     },
   ];
 
@@ -93,8 +93,7 @@ window.addEventListener("load", () => {
   const observer = new IntersectionObserver(
     (entries) => {
       // log the callback data to the console output
-      // eslint-disable-next-line no-console
-      console.log(entries[0]);
+
       if (entries[0].intersectionRatio >= 1) {
         // get node list
         const { children } = chartBarContainer;

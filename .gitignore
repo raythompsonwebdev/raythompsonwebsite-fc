@@ -133,4 +133,4 @@ src/images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp
 src/images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg
 src/images/sergi-kabrera-2xU7rYxsTiM-unsplash.webp
 assets/
-vendor/
+buildScripts/testSetup.js
