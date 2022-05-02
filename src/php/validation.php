@@ -1,11 +1,18 @@
 <?php
     
-  include 'private/db_connection_local.php';
+  include 'private/db_connection.php';
 
   // check if form has been sumitted.
   // NOTE : $_POST['submit] value equals NULL which is falsy.
   if( !isset($_POST['submit']) ){
 
+    // $name = !empty($_POST['myname']) ? htmlentities($_POST['myname']) : false ;
+    // $email = !empty($_POST['myemail']) ? $_POST['myemail'] : false ;
+    // $reference = !empty($_POST['reference']) ? $_POST['reference'] : false ;
+    // $requesttype = !empty($_POST['requesttype']) ? $_POST['requesttype'] : false ;
+    // $comments = !empty($_POST['mycomments']) ? htmlentities($_POST['mycomments']) : false ;
+        
+   
     if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
 
         // assign form values to variables passing text input in to htmlentites
@@ -35,11 +42,11 @@
         $conn->close();
 
         //echo thank you message
-        echo "<h1>Thank's for the Feedback</h1>";
+        echo "<h1>Your message has been received</h1>";
 
       }else{
 
-        echo "<h1>message not added</h1>";
+        echo "<h1>All fields need to be filled. Fields cannot left empty.</h1>";
 
       }
 

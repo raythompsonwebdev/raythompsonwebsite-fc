@@ -555,7 +555,8 @@
                 <textarea name="mycomments" id="mycomments" placeholder="Enter your comment here" rows="5"></textarea>
               </li>
               <li>
-                <input type="submit" value="Submit" id="submit" />
+                <input type="submit" value="Submit" id="submit" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key"
+                  data-callback='onSubmit' data-action='submit' />
               </li>
             </ol>
           </form>
@@ -618,6 +619,11 @@
     </footer>
   </div>
 </body>
-<!-- <script async src="https://www.google.com/recaptcha/api.js"></script> -->
+<script async src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("myform").submit();
+  }
+</script>
 
 </html>
