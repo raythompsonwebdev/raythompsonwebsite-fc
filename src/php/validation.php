@@ -42,7 +42,7 @@
         $conn->close();
 
         //echo thank you message
-        echo "<h1>Your message has been received</h1>";
+        echo "true";
 
       }else{
 

@@ -662,9 +662,9 @@ main.site_content {
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: 90%;
-      margin: 1em auto;
+      margin: 0 auto;
       padding: 0.25em;
-      background-color: $color-black;
+      background-color: $color-white-2;
 
       h3 {
         font-family: $fontHeader;
@@ -2377,7 +2377,7 @@ main.site_content {
   }
 }
 
-/*1280 - 1439*/
+/* 1280 - 1439*/
 @media screen and (min-width: 80em) and (max-width: 89.9375em) {
   .menu-toggle {
     display: none;
@@ -4380,7 +4380,7 @@ main.site_content {
 }
 
 /* 480px */
-@media screen and (min-width: 30em) and (max-width: 37.4375empx) {
+@media screen and (min-width: 30em) and (max-width: 37.4375em) {
   .menu-toggle {
     font-size: 1em;
     left: calc(75% - 2%);

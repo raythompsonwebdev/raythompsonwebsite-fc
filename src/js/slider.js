@@ -1,88 +1,90 @@
-// const { forEach } = require("lodash");
-
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const mask = window.document.querySelector(".hero-slider > .mask");
 const panelContainer = document.querySelector(".slider-body");
 let currentIndex = 0;
 
-try {
-  fetch("./data/slider-data.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("JSON data not received");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      const { sliderdata } = data;
-      sliderdata.forEach((slide) => {
-        const { hash, title, text, buttonname, bgimage } = slide;
-        // panel
-        const panel = document.createElement("ARTICLE");
-        panel.setAttribute("class", "panel");
-        panel.setAttribute("id", `#${hash}`);
-        // slider panel image
-        const slidepanel = document.createElement("FIGURE");
-        slidepanel.setAttribute("class", "slider-panel");
+fetch("./data/slider-data.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(response.status, response.statusText);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const { sliderdata } = data;
+    sliderdata.forEach((slide) => {
+      const { hash, title, text, buttonname, bgimage } = slide;
+      // panel
+      const panel = document.createElement("ARTICLE");
+      panel.setAttribute("class", "panel");
+      panel.setAttribute("id", `#${hash}`);
+      // slider panel image
+      const slidepanel = document.createElement("FIGURE");
+      slidepanel.setAttribute("class", "slider-panel");
 
-        // Slider Header
-        const slideHeader = document.createElement("H3");
-        slideHeader.textContent = title;
+      // Slider Header
+      const slideHeader = document.createElement("H3");
+      slideHeader.textContent = title;
 
-        // image link
-        const slidepanelImgLink = document.createElement("A");
-        slidepanelImgLink.setAttribute("href", "");
-        slidepanelImgLink.setAttribute("class", "fancybox");
+      // image link
+      const slidepanelImgLink = document.createElement("A");
+      slidepanelImgLink.setAttribute("href", "");
+      slidepanelImgLink.setAttribute("class", "fancybox");
 
-        const slidepanelImg = document.createElement("IMG");
-        slidepanelImg.setAttribute("src", bgimage);
-        slidepanelImg.setAttribute("class", "panel-image");
-        slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
-        slidepanelImg.setAttribute("width", "780");
-        slidepanelImg.setAttribute("height", "300");
+      const slidepanelImg = document.createElement("IMG");
+      slidepanelImg.setAttribute("src", bgimage);
+      slidepanelImg.setAttribute("class", "panel-image");
+      slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
+      slidepanelImg.setAttribute("width", "780");
+      slidepanelImg.setAttribute("height", "300");
 
-        const slidepanelCaption = document.createElement("FIGCAPTION");
-        // slidepanelCaption.setAttribute("class", "panel-cap");
+      const slidepanelCaption = document.createElement("FIGCAPTION");
+      // slidepanelCaption.setAttribute("class", "panel-cap");
 
-        const slidepanelHeadingThree = document.createElement("H4");
-        slidepanelHeadingThree.textContent = title;
+      const slidepanelHeadingThree = document.createElement("H4");
+      slidepanelHeadingThree.textContent = title;
 
-        const slidepanelText = document.createElement("P");
-        slidepanelText.textContent = `${text}`;
+      const slidepanelText = document.createElement("P");
+      slidepanelText.textContent = `${text}`;
 
-        panel.append(slidepanel);
-        slidepanel.append(slideHeader);
-        panelContainer.append(panel);
+      panel.append(slidepanel);
+      slidepanel.append(slideHeader);
+      panelContainer.append(panel);
 
-        slidepanel.append(slidepanelImgLink);
-        slidepanelImgLink.append(slidepanelImg);
-        slidepanel.append(slidepanelCaption);
-        slidepanelCaption.append(slidepanelHeadingThree);
-        slidepanelCaption.append(slidepanelText);
+      slidepanel.append(slidepanelImgLink);
+      slidepanelImgLink.append(slidepanelImg);
+      slidepanel.append(slidepanelCaption);
+      slidepanelCaption.append(slidepanelHeadingThree);
+      slidepanelCaption.append(slidepanelText);
 
-        const fancyBoxLinks = document.getElementsByClassName("fancybox");
+      const fancyBoxLinks = document.getElementsByClassName("fancybox");
 
-        Array.from(fancyBoxLinks).forEach((fancyLink) => {
-          fancyLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            if (fancyLink.classList.contains("fancybox")) {
-              fancyLink.nextSibling.classList.add("captionshow");
-            }
-          });
+      Array.from(fancyBoxLinks).forEach((fancyLink) => {
+        fancyLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (fancyLink.classList.contains("fancybox")) {
+            fancyLink.nextSibling.classList.add("captionshow");
+          }
+        });
 
-          fancyLink.nextSibling.addEventListener("click", (e) => {
-            e.preventDefault();
-            if (fancyLink.nextSibling.classList.contains("captionshow")) {
-              fancyLink.nextSibling.classList.remove("captionshow");
-            }
-          });
+        fancyLink.nextSibling.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (fancyLink.nextSibling.classList.contains("captionshow")) {
+            fancyLink.nextSibling.classList.remove("captionshow");
+          }
         });
       });
     });
-} catch (error) {
-  throw new Error(error);
-}
+  })
+  .catch((error) => {
+    mask.style.fontFamily = "sans-serif";
+    mask.style.textAlign = "center";
+    mask.style.fontSize = "2em";
+    mask.innerHTML = "Something went wrong - No Data Found";
+    // eslint-disable-next-line no-console
+    console.log(error);
+  });
 
 const panels = document.getElementsByClassName("panel");
 

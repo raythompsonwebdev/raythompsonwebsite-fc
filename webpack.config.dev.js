@@ -1,12 +1,10 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
-// import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ImageminWebpWebpackPlugin from "imagemin-webp-webpack-plugin";
+// import { fileURLToPath } from "url";
 
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-// import { fileURLToPath } from "url";
 // eslint-disable-next-line no-underscore-dangle
 // const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -76,7 +74,7 @@ export default {
           options: {
             plugins: [
               ["gifsicle", { interlaced: true }],
-              ["mozjpeg", { progressive: true }],
+              ["jpegtran", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
             ],
           },
@@ -88,7 +86,6 @@ export default {
     outputModule: true,
   },
   plugins: [
-    new ImageminWebpWebpackPlugin(),
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       inject: true,
