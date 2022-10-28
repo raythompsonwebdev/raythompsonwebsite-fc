@@ -10,13 +10,13 @@
   <meta name="description"
     content="Web developer from London who loves creating great looking effectual websites and web applications. Javascript|PHP|WordPress|React" />
   <!--
-  <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">-->
+  <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.webp">-->
   <meta property="og:description" content="Ray Thompson Web Developer portfolio website.">
   <meta property="og:title" content="raythompsonwebdev.co.uk - web development">
   <meta name="twitter:title" content="raythompsonwebdev.co.uk - web development">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <script src="https://use.fontawesome.com/e987635b7e.js" defer></script>
+  <script src="https://use.fontawesome.com/e987635b7e.js" async></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1"></script>
   <script>
@@ -32,31 +32,32 @@
 
 <body>
   <!--Wrapper-->
-  <div id="site_wrapper">
+  <div id="site-wrapper">
     <!--Header-->
-    <header class="site_header">
-      <!--Site Title-->
-      <div class="site-title">
-        <p class="logo">Ray Thompson</p>
-        <p>Web Developer</p>
-      </div>
+    <header class="site-header">
       <!--Navigation-->
-      <nav id="site_navigation" class="site_navigation hide">
+      <nav id="site-navigation" class="site-navigation hide">
         <ul>
           <li class="tablink">
             <a href="#banner" title="home page">Home</a>
           </li>
           <li class="tablink">
-            <a href="#project_page" title="projects page">Projects</a>
+            <a href="#project-page" title="projects page">Projects</a>
           </li>
           <li class="tablink">
-            <a href="#about_content" title="about page">About</a>
+            <a href="#about-content" title="about page">About</a>
           </li>
           <li class="tablink">
             <a href="#contact" title="contact page">Contact</a>
           </li>
         </ul>
       </nav>
+
+      <!--Site Title-->
+      <div class="site-title">
+        <p class="logo">Ray Thompson</p>
+        <p>Web Developer</p>
+      </div>
       <!--Social Icons-->
       <ul id="social">
         <li class="social-item">
@@ -79,69 +80,65 @@
         </li>
       </ul>
       <!--mobile  menu-->
-      <button class="menu-toggle" aria-label="menu" aria-controls="site_navigation" aria-expanded="false">
+      <button class="menu-toggle" aria-label="menu" aria-controls="site-navigation" aria-expanded="false">
         Menu
       </button>
     </header>
 
-    <main class="site_content">
+    <main class="site-content">
       <!--Banner-->
       <div id="banner" class="tabcontent scrolled">
         <article id="bannertext">
-          <h1>Hello, I'm Ray</h1>
+          <h1>Hello, welcome to my portfolio.</h1>
           <p>
-            I am a web developer based in East London and I love create great
-            looking web applications and websites that provide effective
-            solutions to your online needs.
-          </p>
-
-          <p>
-            I design, construct and deploy websites and web applications that
-            follow the latest web standards and best practices, are
+            I am a web developer based in East London and I love to create great
+            looking web applications and websites that follow the latest web standards and best practices, are
             performant, secure and can be viewed on most browsers and mobile
             devices.
           </p>
-          <p>I also create other cool stuff for the web.</p>
+
+
+
         </article>
       </div>
 
       <!--Projects-->
-      <section id="project_page" class="tabcontent">
+      <section id="project-page" class="tabcontent">
         <h2>Projects</h2>
 
-        <div id="project_page_container">
-          <ul id="project_tabs">
+        <div id="project-page-container">
+          <ul id="project-tabs">
             <li>
-              <button type="button" id="all" class="project_tab" aria-expanded="false" aria-label="all projects button">
+              <button type="button" id="all" class="project-tab" aria-expanded="false" aria-label="all projects button">
                 All
               </button>
             </li>
             <li>
-              <button type="button" id="javascript" class="project_tab" aria-expanded="false"
+              <button type="button" id="javascript" class="project-tab" aria-expanded="false"
                 aria-label="all javascript projects button">
                 Javascript
               </button>
             </li>
             <li>
-              <button type="button" id="php" class="project_tab" aria-expanded="false"
+              <button type="button" id="php" class="project-tab" aria-expanded="false"
                 aria-label="all php projects button">
                 PHP
               </button>
             </li>
             <li>
-              <button type="button" id="react" class="project_tab" aria-expanded="false"
+              <button type="button" id="react" class="project-tab" aria-expanded="false"
                 aria-label="all react projects button">
                 React
               </button>
             </li>
             <li>
-              <button type="button" id="vuejs" class="project_tab" aria-expanded="false"
+              <button type="button" id="vuejs" class="project-tab" aria-expanded="false"
                 aria-label="all vue projects button">
                 VueJS
               </button>
             </li>
             <li>
-              <button type="button" id="htmlcss" class="project_tab" aria-expanded="false"
+              <button type="button" id="htmlcss" class="project-tab" aria-expanded="false"
                 aria-label="all html css projects button">
                 HTML/CSS
               </button>
@@ -150,284 +147,252 @@
 
           <div class="parent">
             <figure class="div1 box" data-id="react" data-all="all">
-              <img src="images/Projects/webp/shoestore-home-page.webp" height="200" width="360" srcset="./images/Projects/webp/shoestore-home-page.webp 360w,
-                  ./images/Projects/webp/shoestore-home-page-340.webp 340w,
-                  ./images/Projects/webp/shoestore-home-page-320.webp 320w,
-                  ./images/Projects/webp/shoestore-home-page-300.webp 300w,
-                  ./images/Projects/webp/shoestore-home-page-280.webp 280w,
-                  ./images/Projects/webp/shoestore-home-page-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/shoestore-webapp-380.webp" srcset="./images/Projects/webp/shoestore-webapp-380.webp 380w, 
+                  ./images/Projects/webp/shoestore-webapp-360.webp 360w,
+                  ./images/Projects/webp/shoestore-webapp-340.webp 340w,
+                  ./images/Projects/webp/shoestore-webapp-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy"
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="Shoestore Website Home Page" class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Shoestore</h3>
+                <h3 class="cert-title">Shoestore</h3>
                 <p>shoes and accessories store web app. </p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://shoestorewebapp.herokuapp.com/" target="_blank"
+                  <a class="cover-link" href="https://shoestorewebapp.herokuapp.com/" target="_blank"
                     title="Link to shoestore" rel="noopener">Shoestore</a>
-                  <a class="cover_link" href="https://github.com/raythompsonwebdev/shoestore" target="_blank"
+                  <a class="cover-link" href="https://github.com/raythompsonwebdev/shoestore" target="_blank"
                     title="Link to shoestore github repo" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div2 box" data-id="vuejs" data-all="all">
-              <img src="./images/Projects/webp/travel-agency-home-page.webp" height="200" width="360" srcset="./images/Projects/webp/travel-agency-home-page-360.webp 360w,
-                  ./images/Projects/webp/travel-agency-home-page-340.webp 340w,
-                  ./images/Projects/webp/travel-agency-home-page-320.webp 320w,
-                  ./images/Projects/webp/travel-agency-home-page-300.webp 300w,
-                  ./images/Projects/webp/travel-agency-home-page-280.webp 280w,
-                  ./images/Projects/webp/travel-agency-home-page-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/travel-agency-webapp-380.webp" srcset="./images/Projects/webp/travel-agency-webapp-380.webp 380w,
+                  ./images/Projects/webp/travel-agency-webapp-360.webp 360w,
+                  ./images/Projects/webp/travel-agency-webapp-340.webp 340w,
+                  ./images/Projects/webp/travel-agency-webapp-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy" alt="Travel Agency Home Page"
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Travel Agency Home Page"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Travel Agency</h3>
+                <h3 class="cert-title">Travel Agency</h3>
                 <p>Worldwide Holiday package reservation booking app.</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://travelagencywebapp.herokuapp.com/" target="_blank"
+                  <a class="cover-link" href="https://travelagencywebapp.herokuapp.com/" target="_blank"
                     title="Link to travel agency" rel="noopener">Travel Agency</a>
-                  <a class="cover_link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
+                  <a class="cover-link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
                     title="Link to travel agency github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div3 box" data-id="php" data-all="all">
-              <img src="./images/Projects/webp/mannering-musicmvc-home-page.webp" height="200" width="360" srcset="./images/Projects/webp/mannering-musicmvc-home-page-360.webp 360w,
-                  ./images/Projects/webp/mannering-musicmvc-home-page-340.webp 340w,
-                  ./images/Projects/webp/mannering-musicmvc-home-page-320.webp 320w,
-                  ./images/Projects/webp/mannering-musicmvc-home-page-300.webp 300w,
-                  ./images/Projects/webp/mannering-musicmvc-home-page-280.webp 280w,
-                  ./images/Projects/webp/mannering-musicmvc-home-page-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/mannering-music-380.webp" srcset="./images/Projects/webp/mannering-music-380.webp 380w,
+                  ./images/Projects/webp/mannering-music-360.webp 360w,
+                  ./images/Projects/webp/mannering-music-340.webp 340w,
+                  ./images/Projects/webp/mannering-music-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy"
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="mannering-musicmvc-home-page" class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Mannering Music</h3>
+                <h3 class="cert-title">Mannering Music</h3>
                 <p>Music Album review website. Login, register, listen to and review music album.</p>
                 <span id="cover-links">
-                  <a class="cover_link" rel="noopener" href="https://mannering.raythompsonwebdev.co.uk/"
+                  <a class="cover-link" rel="noopener" href="https://mannering.raythompsonwebdev.co.uk/"
                     title="Link to mannering music web app" target="_blank">Mannering Music</a>
-                  <a class="cover_link" rel="noopener" href="https://github.com/raythompsonwebdev/manneringmusicmvc.com"
+                  <a class="cover-link" rel="noopener" href="https://github.com/raythompsonwebdev/manneringmusicmvc.com"
                     title="Link to mannering music github repo" target="_blank">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div4 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/random-quote-generator.webp" height="200" width="360" srcset="./images/Projects/webp/random-quote-generator-360.webp 360w,
+              <img src="./images/Projects/webp/random-quote-generator-380.webp" srcset="./images/Projects/webp/random-quote-generator-380.webp 380w,
+                  ./images/Projects/webp/random-quote-generator-360.webp 360w,
                   ./images/Projects/webp/random-quote-generator-340.webp 340w,
-                  ./images/Projects/webp/random-quote-generator-320.webp 320w,
-                  ./images/Projects/webp/random-quote-generator-300.webp 300w,
-                  ./images/Projects/webp/random-quote-generator-280.webp 280w,
-                  ./images/Projects/webp/random-quote-generator-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+                  ./images/Projects/webp/random-quote-generator-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy"
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="Javascript Random Quote Generator" class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Random Quote Generator</h3>
+                <h3 class="cert-title">Random Quote Generator</h3>
                 <p>Display random quotes from famous people and tweet quote!</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://codepen.io/raythompweb/full/QryrEv" target="_blank"
+                  <a class="cover-link" href="https://codepen.io/raythompweb/full/QryrEv" target="_blank"
                     title="Link to random quote generator on code pen" rel="noopener">Quote Generator</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div5 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/weather-app.webp" height="200" width="360" srcset="./images/Projects/webp/weather-app-360.webp 360w,
-                  ./images/Projects/webp/weather-app-340.webp 340w,
-                  ./images/Projects/webp/weather-app-320.webp 320w,
-                  ./images/Projects/webp/weather-app-300.webp 300w,
-                  ./images/Projects/webp/weather-app-280.webp 280w,
-                  ./images/Projects/webp/weather-app-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/javascript-weather-app-380.webp" srcset="./images/Projects/webp/javascript-weather-app-380.webp 380w,
+                  ./images/Projects/webp/javascript-weather-app-360.webp 360w,
+                  ./images/Projects/webp/javascript-weather-app-340.webp 340w,
+                  ./images/Projects/webp/javascript-weather-app-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy" alt="Javascript Weather App"
+                  (min-width: 37.5em) and (max-width: 735px) 340px,
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Weather App"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Weather App</h3>
+                <h3 class="cert-title">Weather App</h3>
                 <p>Latest weather information for your current location using open weather api.</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://codepen.io/raythompweb/full/BxKxVL" target="_blank"
+                  <a class="cover-link" href="https://codepen.io/raythompweb/full/BxKxVL" target="_blank"
                     title="Link to weather app on codepen" rel="noopener">Weather App</a>
-                  <a class="cover_link" href="https://github.com/raythompsonwebdev/FCC-Weather-App" target="_blank"
+                  <a class="cover-link" href="https://github.com/raythompsonwebdev/FCC-Weather-App" target="_blank"
                     title="Link to weather app github repo" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div6 box" data-id="htmlcss" data-all="all">
-              <img src="./images/Projects/webp/obama-tribute-page.webp" height="200" width="360" srcset="./images/Projects/webp/obama-tribute-page-360.webp 360w,
+              <img src="./images/Projects/webp/obama-tribute-page-380.webp" srcset="./images/Projects/webp/obama-tribute-page-380.webp 380w,
+                  ./images/Projects/webp/obama-tribute-page-360.webp 360w,
                   ./images/Projects/webp/obama-tribute-page-340.webp 340w,
-                  ./images/Projects/webp/obama-tribute-page-320.webp 320w,
-                  ./images/Projects/webp/obama-tribute-page-300.webp 300w,
-                  ./images/Projects/webp/obama-tribute-page-280.webp 280w,
-                  ./images/Projects/webp/obama-tribute-page-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+                  ./images/Projects/webp/obama-tribute-page-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy" alt="Responsive Tribute Page"
+                  (min-width: 37.5em) and (max-width: 735px) 340px,
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Responsive Tribute Page"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Tribute Page</h3>
+                <h3 class="cert-title">Tribute Page</h3>
                 <p>Responsive tribute page to Ex-president Barack Obama. </p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://raythompsonwebdev.github.io/fc-tribute-page"
+                  <a class="cover-link" href="https://raythompsonwebdev.github.io/fc-tribute-page"
                     title="Link to Obama tribute page  on codepen" target="_blank" rel="noopener">Obama Tribute</a>
 
                 </span>
               </figcaption>
             </figure>
             <figure class="div7 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/drum-machine.webp" height="200" width="360" srcset="./images/Projects/webp/drum-machine-360.webp 360w,
+              <img src="./images/Projects/webp/drum-machine-380.webp" srcset="./images/Projects/webp/drum-machine-380.webp 380w,
+                  ./images/Projects/webp/drum-machine-360.webp 360w,
                   ./images/Projects/webp/drum-machine-340.webp 340w,
-                  ./images/Projects/webp/drum-machine-320.webp 320w,
-                  ./images/Projects/webp/drum-machine-300.webp 300w,
-                  ./images/Projects/webp/drum-machine-280.webp 280w,
-                  ./images/Projects/webp/drum-machine-260.webp 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+                  ./images/Projects/webp/drum-machine-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px, 
-                  (min-width: 22.5em) and (max-width: 479px) 260px, 100vw" loading="lazy" alt="Javascript Drum Machine"
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Drum Machine"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Javascript Drum Machine</h3>
+                <h3 class="cert-title">Javascript Drum Machine</h3>
                 <p>Drum sounds activated using either keyboard or mouse clicks.</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://codepen.io/raythompweb/pen/GREEoYR"
+                  <a class="cover-link" href="https://codepen.io/raythompweb/pen/GREEoYR"
                     title="Link to drum machine on codepen" target="_blank" rel="noopener">Drum Machine</a>
-                  <a class="cover_link" href="https://github.com/raythompsonwebdev/fcc-react-drum-machine"
+                  <a class="cover-link" href="https://github.com/raythompsonwebdev/fcc-react-drum-machine"
                     title="Link to javascript drum machine github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div8 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/png/crimechecker-ray-orian.png" height="200" width="360" srcset="./images/Projects/png/crimechecker-ray-orian-360.png 360w,
-                  ./images/Projects/png/crimechecker-ray-orian-340.png 340w,
-                  ./images/Projects/png/crimechecker-ray-orian-320.png 320w,
-                  ./images/Projects/png/crimechecker-ray-orian-300.png 300w,
-                  ./images/Projects/png/crimechecker-ray-orian-280.png 280w,
-                  ./images/Projects/png/crimechecker-ray-orian-260.png 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/crimechecker-380.webp" srcset="./images/Projects/webp/crimechecker-380.webp 380w,
+                  ./images/Projects/webp/crimechecker-360.webp 360w,
+                  ./images/Projects/webp/crimechecker-340.webp 340w,
+                  ./images/Projects/webp/crimechecker-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px 100vw" loading="lazy" alt="Crime Checker app"
+                  (min-width: 37.5em) and (max-width: 735px) 340px,
+                  (min-width: 30em) and (max-width: 599px) 320px, 
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Crime Checker app"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Crime Checker</h3>
+                <h3 class="cert-title">Crime Checker</h3>
                 <p> Check crime in your area - app created with Founders & Coders cohort software
                   developer Orian Paled</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://fac-23.github.io/preA-week2-http-rayorian/"
+                  <a class="cover-link" href="https://fac-23.github.io/preA-week2-http-rayorian/"
                     title="Link to Crime Checker App" target="_blank" rel="noopener">Crime Checker</a>
-                  <a class="cover_link" href="https://github.com/fac-23/preA-week2-http-rayorian"
+                  <a class="cover-link" href="https://github.com/fac-23/preA-week2-http-rayorian"
                     title="Link to Crime Checker github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div9 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/png/todo-list-miah-ray.png" height="200" width="360" srcset="./images/Projects/png/todo-list-miah-ray-360.png 360w,
-                  ./images/Projects/png/todo-list-miah-ray-340.png 340w,
-                  ./images/Projects/png/todo-list-miah-ray-320.png 320w,
-                  ./images/Projects/png/todo-list-miah-ray-300.png 300w,
-                  ./images/Projects/png/todo-list-miah-ray-280.png 280w,
-                  ./images/Projects/png/todo-list-miah-ray-260.png 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/local-storage-todo-app-380.webp" srcset="./images/Projects/webp/local-storage-todo-app-380.webp 380w,
+                  ./images/Projects/webp/local-storage-todo-app-360.webp 360w,
+                  ./images/Projects/webp/local-storage-todo-app-340.webp 340w,
+                  ./images/Projects/webp/local-storage-todo-app-320.webp 320w" sizes="(min-width: 120em) 380px, 
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px 100vw" loading="lazy" alt="Todo app"
+                  (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy" alt="Todo app"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Todo App</h3>
+                <h3 class="cert-title">Todo App</h3>
                 <p>Todo app created with fellow Founders & Coders cohort software developer Miah Bates</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://fac-23.github.io/preA-testing-raymiah/"
+                  <a class="cover-link" href="https://fac-23.github.io/preA-testing-raymiah/"
                     title="Link to Todo web application" target="_blank" rel="noopener">To Do App</a>
-                  <a class="cover_link" href="https://github.com/fac-23/preA-testing-raymiah"
+                  <a class="cover-link" href="https://github.com/fac-23/preA-testing-raymiah"
                     title="Link to Todo web application github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div10 box" data-id="react" data-all="all">
-              <img src="./images/Projects/png/greenfootprints-home-page.png" height="200" width="360" srcset="./images/Projects/png/greenfootprints-home-page-360.png 360w,
-                  ./images/Projects/png/greenfootprints-home-page-340.png 340w,
-                  ./images/Projects/png/greenfootprints-home-page-320.png 320w,
-                  ./images/Projects/png/greenfootprints-home-page-300.png 300w,
-                  ./images/Projects/png/greenfootprints-home-page-280.png 280w,
-                  ./images/Projects/png/greenfootprints-home-page-260.png 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/greenfootprints-380.webp" srcset="./images/Projects/webp/greenfootprints-380.webp 380w,
+                  ./images/Projects/webp/greenfootprints-360.webp 360w,
+                  ./images/Projects/webp/greenfootprints-340.webp 340w,
+                  ./images/Projects/webp/greenfootprints-320.webp 320w" sizes="(min-width: 120em) 360px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px 100vw" loading="lazy"
+                  (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy"
                 alt="Image of react random quote generator" class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">Greenfootprints</h3>
+                <h3 class="cert-title">Greenfootprints</h3>
                 <p>Recycling Website</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://greenfootprints.raythompsonwebdev.co.uk/"
+                  <a class="cover-link" href="https://greenfootprints.raythompsonwebdev.co.uk/"
                     title="Link to Greenfootprints website" target="_blank" rel="noopener">Recycling Website</a>
-                  <a class="cover_link" href="https://github.com/raythompsonwebdev/greenfootprints"
+                  <a class="cover-link" href="https://github.com/raythompsonwebdev/greenfootprints"
                     title="Link to Greenfootprints website github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div11 box" data-id="javascript" data-all="all">
-              <img src="./images/Projects/png/oli-ray-web-agency.png" height="200" width="360" srcset="./images/Projects/png/oli-ray-web-agency-360.png 360w,
-                  ./images/Projects/png/oli-ray-web-agency-340.png 340w,
-                  ./images/Projects/png/oli-ray-web-agency-320.png 320w,
-                  ./images/Projects/png/oli-ray-web-agency-300.png 300w,
-                  ./images/Projects/png/oli-ray-web-agency-280.png 280w,
-                  ./images/Projects/png/oli-ray-web-agency-260.png 260w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1439px) 360px,  
-                  (min-width: 80em) and (max-width: 1439px) 360px,
+              <img src="./images/Projects/webp/oli-ray-agency-380.webp" srcset="./images/Projects/webp/oli-ray-agency-380.webp 380w,
+                  ./images/Projects/webp/oli-ray-agency-360.webp 360w,
+                  ./images/Projects/webp/oli-ray-agency-340.webp 340w,
+                  ./images/Projects/webp/oli-ray-agency-320.webp 320w" sizes="(min-width: 120em) 380px,
+                  (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 280px 100vw" loading="lazy" alt="OliRay web agency"
+                  (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy" alt="OliRay web agency"
                 class="projectImg" />
               <figcaption class="cover">
-                <h3 class="cert_title">OliRay Agency</h3>
+                <h3 class="cert-title">OliRay Agency</h3>
                 <p>Web Agency website created with Founders & Coders cohort software developer Oli Jones</p>
                 <span id="cover-links">
-                  <a class="cover_link" href="https://fac-23.github.io/preA-week2-rayOli/"
+                  <a class="cover-link" href="https://fac-23.github.io/preA-week2-rayOli/"
                     title="Link to react random quote generator on codepen" target="_blank" rel="noopener">OliRay Web
                     Agency</a>
-                  <a class="cover_link" href="https://github.com/fac-23/preA-week2-rayOli"
+                  <a class="cover-link" href="https://github.com/fac-23/preA-week2-rayOli"
                     title="Link to OliRay website github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
@@ -438,46 +403,41 @@
       </section>
 
       <!--About-->
-      <section id="about_content" class="tabcontent">
+      <section id="about-content" class="tabcontent">
         <h2>About Page</h2>
 
         <div id="abouttext">
           <figure id="page-image">
-            <img id="pageImage" src="./images/profile/webp/github-image-small.webp" height="125" width="130"
-              loading="lazy" srcset="./images/profile/webp/github-image-large.webp 130w,
-                  ./images/profile/webp/github-image-medium.webp 120w,
-                  ./images/profile/webp/github-image-medium-small.webp 105w,
-                  ./images/profile/webp/github-image-small.webp 90w,
-                  ./images/profile/webp/github-image-x-small.webp 80w,
-                  ./images/profile/webp/github-image-micro-small.webp 65w" sizes="(min-width:  90em) 130px, 
+            <img id="pageImage" src="./images/profile/webp/github-image-200.webp" loading="lazy" srcset="./images/profile/webp/github-image-200.webp 200w,
+                  ./images/profile/webp/github-image-130.webp 130w,
+                  ./images/profile/webp/github-image-120.webp 120w,
+                  ./images/profile/webp/github-image-105.webp 105w" sizes="(min-width:  90em) 130px, 
                   (min-width: 80em) and (max-width: 1439px) 120px,
                   (min-width: 64em) and (max-width: 1279px) 120px, 
                   (min-width: 46em) and (max-width: 1023px) 105px, 
                   (min-width: 37.5em) and (max-width: 735px) 105px,
-                  (min-width: 30em) and (max-width: 599px) 90px, 
-                  (min-width: 22.5em) and (max-width: 479px) 90px, 25vw" alt="Image of raythompsonwebdev" />
+                  (min-width: 30em) and (max-width: 599px) 105px, 
+                  (min-width: 22.5em) and (max-width: 479px) 105px, 25vw" alt="Image of raythompsonwebdev" />
           </figure>
           <p>
             I was inspired to start coding and dabbling in web development
             after attending a part-time web design course in my local area,
-            where I learned basic HTML, CSS, building websites with
-            Dreamweaver, Graphic design with Photoshop and animation with
-            Flash. I have spent much time since then learning as much as I can about web development and
-            programming. I create websites and web applications and other cool web stuff ,share what I
-            have learnt with others and also learn from others in the web development community at events, meetups and
-            webinars.
+            where I learned basic Javascript, HTML, CSS, building websites.
+
+            When I am not at my day job as a revenues officer I have spent much of my free time getting into learning
+            web development and programming. I create websites and web applications solve coding challenges , attending
+            meet ups, courses and events, participating as much as I can in the web development community.
           </p>
 
           <p>
-            My current languages of choice are HTML, CSS, Javascript, PHP and
-            MySQL. I am also interested in learning Python and Ruby. I have
-            created websites and web applications with tools like WordPress, React,
-            VueJS, Gatsby and Foundation Sites. I enjoy the challenges
-            creating a website or web application bring. Keeping up with
-            rapid changes in web development and finding solutions to problems, I am Enthusiastic
-            about programming and web development and am aspiring to combine
-            acquired skills and knowledge with any future learning to become a
-            proficient software developer.
+            My current languages of choice are Javascript and PHP. I have created websites and web applications from
+            scratch and using tools like WordPress, React, VueJS, Gatsby, build tools like Webpack, databases like MySQL
+            and MungoDB, design tools and much more.
+
+            I enjoy the challenge of creating website or web applications, keeping up with changes in web development
+            and finding solutions to coding problems. I am enthusiastic about programming and web development and aspire
+            to combine acquired skills and knowledge with any future learning towards becoming a full-time software
+            developer.
           </p>
 
         </div>
@@ -508,7 +468,7 @@
       <!--Outro-->
       <section id="contact" class="tabcontent">
         <h2>Contact</h2>
-        <div id="contact_container">
+        <div id="contact-container">
           <form id="myform" name="theform" class="group" auto-complete="off">
             <span id="form-error" class="hide-error"></span>
             <ol>
@@ -537,15 +497,15 @@
                 <div id="comment-header">Comment Type</div>
                 <ol id="comment-box">
                   <li>
-                    <label for="questionitem">Website</label>
+                    <label for="questionitem">Website :</label>
                     <input type="radio" name="requesttype" value="question" id="questionitem" />
                   </li>
                   <li>
-                    <label for="blogitem">Blog</label>
+                    <label for="blogitem">Blog :</label>
                     <input type="radio" name="requesttype" value="blog" id="blogitem" />
                   </li>
                   <li>
-                    <label for="generalitem">General</label>
+                    <label for="generalitem">General :</label>
                     <input type="radio" name="requesttype" value="general" id="generalitem" />
                   </li>
                 </ol>
@@ -581,7 +541,7 @@
                 </li>
               </ul>
             </address>
-            <figure id="map_image">
+            <figure id="map-image">
               <img src="./images/map-of-hackney/webp/map-of-hackney-large.webp" height="300" width="300"
                 alt="Image of Hackney, East London" loading="lazy" srcset="./images/map-of-hackney/webp/map-of-hackney-large.webp 300w,
                   ./images/map-of-hackney/webp/map-of-hackney-medium.webp 300w,
@@ -602,7 +562,7 @@
     </main>
     <br />
     <!--Footer-->
-    <footer class="site_footer">
+    <footer class="site-footer">
       <ul>
         <li class="tablink">
           <a href="#banner" title="Home page">Home</a>

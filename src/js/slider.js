@@ -23,10 +23,6 @@ fetch("./data/slider-data.json")
       const slidepanel = document.createElement("FIGURE");
       slidepanel.setAttribute("class", "slider-panel");
 
-      // Slider Header
-      const slideHeader = document.createElement("H3");
-      slideHeader.textContent = title;
-
       // image link
       const slidepanelImgLink = document.createElement("A");
       slidepanelImgLink.setAttribute("href", "");
@@ -38,9 +34,9 @@ fetch("./data/slider-data.json")
       slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
       slidepanelImg.setAttribute("width", "780");
       slidepanelImg.setAttribute("height", "300");
+      slidepanelImg.setAttribute("loading", "lazy");
 
       const slidepanelCaption = document.createElement("FIGCAPTION");
-      // slidepanelCaption.setAttribute("class", "panel-cap");
 
       const slidepanelHeadingThree = document.createElement("H4");
       slidepanelHeadingThree.textContent = title;
@@ -49,7 +45,6 @@ fetch("./data/slider-data.json")
       slidepanelText.textContent = `${text}`;
 
       panel.append(slidepanel);
-      slidepanel.append(slideHeader);
       panelContainer.append(panel);
 
       slidepanel.append(slidepanelImgLink);
@@ -61,14 +56,14 @@ fetch("./data/slider-data.json")
       const fancyBoxLinks = document.getElementsByClassName("fancybox");
 
       Array.from(fancyBoxLinks).forEach((fancyLink) => {
-        fancyLink.addEventListener("click", (e) => {
+        fancyLink.addEventListener("onmouseenter", (e) => {
           e.preventDefault();
           if (fancyLink.classList.contains("fancybox")) {
             fancyLink.nextSibling.classList.add("captionshow");
           }
         });
 
-        fancyLink.nextSibling.addEventListener("click", (e) => {
+        fancyLink.nextSibling.addEventListener("onmouseleave", (e) => {
           e.preventDefault();
           if (fancyLink.nextSibling.classList.contains("captionshow")) {
             fancyLink.nextSibling.classList.remove("captionshow");

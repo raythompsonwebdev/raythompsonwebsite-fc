@@ -1,4 +1,3 @@
-@import "partials/mixins";
 @import "partials/base";
 
 :root {
@@ -8,15 +7,15 @@
   --comment-error: none;
 }
 
-//hide text for screen readers
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+i.fa-envelope,
+i.fa-github,
+i.fa-linkedin {
+  font-size: 1.3em;
+  font-style: normal;
+  line-height: 40px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
 }
 
 .menu-toggle {
@@ -29,7 +28,8 @@
   background-color: $color-black;
   color: $color-white-1;
   border: none;
-  transition: all ease-out 0.4s;
+  transition: all ease-out 0s;
+
   line-height: 45px;
   height: 45px;
   width: 25%;
@@ -37,19 +37,15 @@
   padding: 0;
   left: calc(79vw - 20px);
 }
-.menu-toggle.hide {
-  left: 110vw;
-}
-
 /* Make sure the button doesn't hide when menu is open. */
 .menu-toggle:hover,
 .menu-toggle:focus {
   text-decoration: underline;
-  border: solid 2px $color-black;
+  border: solid 2px $color-white-1;
   cursor: pointer;
 }
 
-#site_wrapper {
+#site-wrapper {
   width: 100%;
   margin: auto;
 }
@@ -60,34 +56,34 @@
   left: 0;
   max-width: 100%;
   text-align: left;
-  font-size: 99%;
+  font-size: 100%;
   z-index: 10;
   background-color: $bgcolor;
   height: 100px;
 }
 
-.site_header {
+.site-header {
   height: 100px;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   div.site-title {
     width: 65%;
-    flex: 1 0 auto;
+    flex: 0 1 auto;
     p.logo {
       font-size: 1.35rem;
       text-align: left;
-      line-height: 30px;
+      line-height: 50px;
       margin: 0;
       font-weight: bold;
-      font-family: $fontHeader;
+      font-family: $font-header;
     }
     p {
       font-size: 0.7rem;
       text-align: left;
-      line-height: 1.5em;
+      line-height: 50px;
       margin: 0;
     }
   }
@@ -95,14 +91,14 @@
   .show {
     top: 0;
     opacity: 1;
-    @include raytransition(all 1s ease);
+    transition: all 1s ease-out 0s;
   }
   .hide {
     top: -405px;
-    @include raytransition(all 1s ease);
+    transition: all 1s ease-out 0s;
   }
 
-  .site_navigation {
+  .site-navigation {
     position: fixed;
     z-index: 100;
     top: -240px;
@@ -113,18 +109,13 @@
     left: 0;
 
     ul {
-      height: 100%;
       width: 100%;
-      -webkit-flex-flow: column;
-      -ms-flex-flow: column;
       flex-flow: column;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
       justify-content: flex-start;
       padding: 0;
       margin: 0;
 
-      .tablink {
+      li.tablink {
         height: 60px;
         list-style: none;
         width: 100%;
@@ -135,7 +126,7 @@
         cursor: pointer;
         flex: 0 0 auto;
         margin: 0;
-        transition: all, 0.5s;
+        transition: all 1s ease-out 0s;
         a {
           line-height: 60px;
           margin: 0;
@@ -145,34 +136,31 @@
           display: block;
           color: $color-white-1;
           background-color: $color-black;
-          font-family: $fontHeader;
+          font-family: $font-header;
+
           /* visited link */
           &:visited {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-black;
           }
           &:focus {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-white-1;
             text-shadow: 1px 1px 1px $color-black;
           }
           &:hover {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-white-1;
             text-shadow: 1px 1px 1px $color-black;
           }
+
           /* selected link */
           &:active {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-black;
           }
         }
       }
-    }
-
-    .nav-menu {
-      padding: 1em;
-      margin-bottom: 3em;
     }
   }
 
@@ -189,14 +177,12 @@
     height: 30px;
     margin: 0;
     padding: 0;
-    font-family: "FontAwesome";
+    font-family: FontAwesome;
     li.social-item {
-      width: 33%;
+      width: 20%;
       margin-right: 0.2em;
       text-align: center;
-      -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
+      flex: 0 0 auto;
       a {
         margin: 0;
         font-size: 0.9em;
@@ -216,25 +202,25 @@
           text-align: center;
           line-height: 30px;
           font-size: 1em;
-          @include raytransition(all 0.2s ease-in 0s);
-          &:before {
+          transition: all 0.2s ease-in 0s;
+          &::before {
             display: block;
           }
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             font-weight: bold;
             cursor: pointer;
-            background-color: $color-black;
+            background-color: $green-color;
             color: $color-white-1;
           }
         }
 
         &:focus {
-          background-color: $greencolor;
+          background-color: $green-color;
           color: $color-black;
         }
         &:active {
-          background-color: $greencolor;
+          background-color: $green-color;
           color: $color-black;
         }
       }
@@ -242,7 +228,7 @@
   }
 }
 
-main.site_content {
+main.site-content {
   position: relative;
   display: flex;
   flex-flow: column;
@@ -284,8 +270,8 @@ main.site_content {
   }
 
   div#banner,
-  section#project_page,
-  section#about_content,
+  section#project-page,
+  section#about-content,
   section#contact {
     min-height: 90vh;
     margin-bottom: 100px;
@@ -299,7 +285,7 @@ main.site_content {
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex: 0 0 auto;
+
     --bg-image: "";
 
     figure {
@@ -309,7 +295,7 @@ main.site_content {
       padding: 0;
       margin: 0 auto;
       width: 340px;
-      border: 10px solid #fff;
+      border: 10px solid $color-black;
     }
 
     figure > img,
@@ -321,10 +307,9 @@ main.site_content {
     article#bannertext {
       width: calc(90% - 10px);
       position: relative;
-      background-color: #fff;
+      background-color: $color-white-1;
       padding: 1%;
       h1 {
-        font-size: calc(1.5rem + 2vw);
         width: auto;
         text-align: center;
         color: $color-black;
@@ -355,7 +340,7 @@ main.site_content {
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
-  section#project_page {
+  section#project-page {
     display: flex;
     flex: 0 0 auto;
     flex-flow: column;
@@ -371,7 +356,7 @@ main.site_content {
       line-height: 50px;
     }
 
-    ul#project_tabs {
+    ul#project-tabs {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
@@ -380,26 +365,25 @@ main.site_content {
       padding: 0;
       margin: 1em 0;
       width: 100%;
-      @include raytransition(all 0.2s ease-in 0s);
+      transition: all 0.2s ease-in 0s;
 
       li {
         width: 48%;
         flex: 1 0 auto;
         margin-right: 0;
         margin-bottom: 0;
-        border: 1px solid rgb(190, 189, 189);
-        button.project_tab {
-          font-family: $fontHeader;
+        button.project-tab {
+          font-family: $font-header;
           display: block;
-          color: $color-black;
-          background-color: $color-white-1;
+          color: $color-white-1;
+          background-color: $color-black;
           line-height: 35px;
           width: 100%;
           border: none;
           font-size: 0.9em;
 
           &:focus {
-            background-color: $color-black2;
+            background-color: $color-black;
             color: $color-white-1;
             font-weight: bold;
           }
@@ -407,25 +391,22 @@ main.site_content {
           &:hover {
             cursor: pointer;
             font-weight: bold;
-            background-color: $color-black2;
+            background-color: $color-black;
             color: $color-white-1;
           }
         }
       }
     }
 
-    div#project_page_container {
+    div#project-page-container {
       width: 100%;
       display: block;
     }
 
     .parent {
       display: flex;
-      -webkit-flex-flow: column;
       flex-flow: column;
-      -webkit-justify-content: flex-start;
       justify-content: flex-start;
-      -webkit-align-items: center;
       align-items: center;
       padding: 0;
       width: 99%;
@@ -450,44 +431,39 @@ main.site_content {
       overflow: hidden;
       padding: 0.5em;
       margin: 0;
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       background-color: $color-white-1;
       width: 85%;
-      -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      border: 1px solid $border-color;
+      border: 1px solid $color-white-2;
     }
 
     figcaption.cover {
       position: absolute;
       z-index: 9;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgb(231, 232, 227 / 80%);
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       display: flex;
       flex-flow: column wrap;
-      justify-content: center;
+      justify-content: space-between;
       align-items: flex-start;
       opacity: 0;
-      @include raytransition(all 200ms ease-in-out);
-      @include raytransform(scale(0));
+
+      transition: all 200ms ease-in-out;
+      transform: scale(0);
 
       p {
-        width: 96%;
-        background-color: $color-white-1;
+        width: 100%;
         padding: 0;
         margin: 0 auto;
         display: block;
         font-size: 0.8em;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
         flex: 0 1 auto;
         text-align: center;
+        color: $color-black;
       }
 
       span#cover-links {
@@ -498,9 +474,9 @@ main.site_content {
         margin: 0 auto;
         width: 100%;
         padding-top: 0.25em;
-        font-family: $fontHeader;
+        font-family: $font-header;
 
-        a.cover_link {
+        a.cover-link {
           width: 46%;
           border: none;
           font-size: 0.85em;
@@ -514,39 +490,37 @@ main.site_content {
           text-shadow: 1px 1px 1px $color-black;
           background-color: $color-black;
           text-align: center;
-          font-family: $fontText;
-          -webkit-flex: 0 1 auto;
+          font-family: $font-text;
           flex: 0 1 auto;
           &:focus {
             color: $color-black;
-            background-color: $greencolor;
+            background-color: $green-color;
           }
           &:hover {
             color: $color-white-1;
-            background-color: $greencolor;
+            background-color: $green-color;
           }
         }
       }
 
-      h3.cert_title {
-        font-family: $fontHeader;
-        width: 96%;
+      h3.cert-title {
+        font-family: $font-header;
+        width: 100%;
         font-size: 1em;
         margin: 0 auto;
         line-height: 35px;
         color: $color-black;
-        background-color: $color-white-1;
+        text-shadow: 1px 1px 1px $color-white-1;
         text-align: center;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        border-bottom: 1px solid #ccc;
       }
     }
 
     figure.box:hover figcaption.cover {
       opacity: 1;
-      @include raytransform(scale(1));
+
+      transform: scale(1);
+
       cursor: pointer;
     }
 
@@ -560,11 +534,11 @@ main.site_content {
       margin: 0 auto;
       display: block;
       opacity: 1;
-      @include raytransform(scale(1.1));
+      transform: scale(1.1);
     }
   }
 
-  section#about_content {
+  section#about-content {
     width: 100%;
     flex: 0 0 auto;
     display: flex;
@@ -585,11 +559,7 @@ main.site_content {
       width: 98%;
       background-color: $bgcolor;
       padding: 0 0.25em;
-      -webkit-order: 0;
-      -ms-flex-order: 0;
       order: 0;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
 
       figure#page-image {
@@ -604,7 +574,7 @@ main.site_content {
         width: 70%;
         text-align: left;
         margin: 2em auto;
-        font-family: $fontHeader, "FontAwesome";
+        font-family: $font-header, "" FontAwesome "";
         li::marker {
           content: "\f0a4";
           font-size: 1.3em;
@@ -616,7 +586,7 @@ main.site_content {
           a {
             display: block;
             font-size: 1em;
-            color: $color-black2;
+            color: $color-black;
             text-align: left;
             text-indent: 1em;
             &:hover {
@@ -634,6 +604,7 @@ main.site_content {
           color: $color-black;
           text-decoration: underline;
         }
+
         /* selected link */
         &:active {
           color: $color-black;
@@ -650,33 +621,32 @@ main.site_content {
         line-height: 2.2em;
         width: auto;
         display: block;
+        text-shadow: 1px 1px 1px $color-black;
       }
     }
 
     /* Hero-Slider */
     section#slider {
-      -webkit-order: 2;
-      -ms-flex-order: 21;
       order: 2;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: 90%;
       margin: 0 auto;
       padding: 0.25em;
       background-color: $color-white-2;
+      position: relative;
 
       h3 {
-        font-family: $fontHeader;
+        font-family: $font-header;
         height: 40px;
         font-size: 1rem;
         line-height: 40px;
-        background-color: $color-black2;
+        background-color: $color-black;
         color: $color-white-1;
         margin: 0;
         text-align: center;
+        text-shadow: 1px 1px 1px $color-black;
       }
-      /* Hero Slider */
+
       .hero-slider {
         margin: 0;
         width: 100%;
@@ -687,7 +657,7 @@ main.site_content {
           overflow: hidden;
           scroll-behavior: smooth;
 
-          /*position relative for scrolling*/
+          /* Position relative for scrolling */
           div.slider-body {
             width: 100%;
             position: relative;
@@ -698,7 +668,7 @@ main.site_content {
               background-color: $bgcolor;
 
               h3 {
-                font-family: $fontHeader;
+                font-family: $font-header;
                 text-transform: uppercase;
                 padding: 0;
                 line-height: 40px;
@@ -741,9 +711,8 @@ main.site_content {
                 }
 
                 figcaption {
-                  @include raytransition(
-                    all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
-                  );
+                  transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+
                   opacity: 0;
                   display: none;
                   width: 80%;
@@ -761,7 +730,7 @@ main.site_content {
                     color: $color-white-1;
                     text-indent: 0;
                     margin: 0;
-                    font-family: $fontHeader;
+                    font-family: $font-header;
                     text-align: center;
                     line-height: 40px;
                     &:hover {
@@ -777,11 +746,11 @@ main.site_content {
                     background-color: $bgcolor;
                     font-weight: normal;
                     font-size: 0.75em;
-                    color: $color-black2;
+                    color: $color-black;
                     padding: 0.5em;
                     height: auto;
                     line-height: 25px;
-                    font-family: "FontAwesome", $fontText;
+                    font-family: FontAwesome, $font-text;
                   }
 
                   &:hover {
@@ -797,14 +766,17 @@ main.site_content {
         margin: 0;
         list-style: outside none none;
         height: 40px;
-        width: 100%;
+        width: 99%;
         padding: 0;
         display: flex;
         flex: row;
         text-align: center;
-        font-family: $fontHeader;
+        font-family: $font-header;
+        position: absolute;
+        bottom: 4px;
+        justify-content: space-between;
         button#next {
-          width: 50%;
+          width: 15%;
           line-height: 40px;
           height: 40px;
           background-color: $color-black;
@@ -817,18 +789,18 @@ main.site_content {
           font-size: 0.9em;
           &:focus {
             color: $color-black;
-            background-color: $greencolor;
+            background-color: $green-color;
             text-shadow: none;
           }
           &:hover {
-            background-color: $color-black2;
+            background-color: $color-black;
             color: $color-white-1;
             font-weight: bold;
             cursor: pointer;
           }
         }
         button#prev {
-          width: 50%;
+          width: 15%;
           line-height: 40px;
           height: 40px;
           background-color: $color-black;
@@ -841,11 +813,11 @@ main.site_content {
           font-size: 0.9em;
           &:focus {
             color: $color-black;
-            background-color: $greencolor;
+            background-color: $green-color;
             text-shadow: none;
           }
           &:hover {
-            background-color: $color-black2;
+            background-color: $color-black;
             color: $color-white-1;
             font-weight: bold;
             cursor: pointer;
@@ -855,19 +827,14 @@ main.site_content {
     }
 
     section#barchart {
-      -webkit-order: 1;
-      -ms-flex-order: 1;
       order: 1;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: 90%;
       height: auto;
       display: inline-block;
-      box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
       margin-bottom: 1em;
       padding: 0.2em;
-      font-family: $fontHeader;
+      font-family: $font-header;
 
       h1 {
         height: 50px;
@@ -878,13 +845,12 @@ main.site_content {
         color: $color-white-1;
         background: $color-black;
         margin-bottom: 0.5em;
+        text-shadow: 1px 1px 1px $color-black;
       }
 
       /* chart */
       ul#bars {
         display: flex;
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
         flex-flow: column;
         width: 100%;
         height: 100%;
@@ -895,25 +861,25 @@ main.site_content {
         li {
           width: 100%;
           height: 50px;
-          margin: 0 0 0.5em 0;
+          margin: 0 0 0.5em;
           text-align: center;
           position: relative;
           div.bar {
             display: block;
             margin-left: 0;
-            border: 1px solid $border-color;
+            border: 1px solid $color-white-2;
             position: absolute;
             left: 18.5%;
             height: 100%;
             width: 0%;
-            @include raytransition(all 0.2s ease-in 0s);
+            transition: all 0.2s ease-in 0s;
 
             a {
               position: absolute;
             }
 
             &:hover {
-              background: $color-black;
+              background: $yellow-color;
               cursor: pointer;
             }
 
@@ -925,9 +891,9 @@ main.site_content {
               line-height: 50px;
               z-index: 150;
               font-size: 0.75em;
-              text-shadow: 1px 1px 1px $color-black2;
+              text-shadow: 1px 1px 1px $color-black;
               color: $color-white-1;
-              background-color: $greencolor;
+              background-color: $green-color;
               width: 150px;
               text-align: center;
               top: -20px;
@@ -936,19 +902,17 @@ main.site_content {
         }
 
         span {
-          -webkit-align-self: flex-end;
-          -ms-flex-item-align: end;
           align-self: flex-end;
           width: 18.5%;
           position: absolute;
           left: 0;
-          height: 100%;
           text-align: left;
           height: 50px;
           font-size: 0.7em;
           text-indent: 0.25em;
-          color: $color-black;
+          color: $color-white-1;
           z-index: 3;
+          text-shadow: 1px 1px 1px $color-black;
         }
       }
     }
@@ -968,7 +932,7 @@ main.site_content {
       width: 100%;
       line-height: 50px;
     }
-    div#contact_container {
+    div#contact-container {
       width: 96%;
       margin: 1em auto;
       p {
@@ -982,68 +946,51 @@ main.site_content {
         margin: 1em auto;
         padding: 0;
         h3 {
-          font-family: $fontHeader;
-          font-size: 1.05rem;
+          font-family: $font-header;
+          font-size: 1.15rem;
           width: 100%;
           line-height: 40px;
           margin: 0;
           text-align: center;
+          color: $color-white-1;
+          background-color: $color-black;
         }
+
         address {
           width: 90%;
           flex: 0 0 auto;
-
           padding: 0.25em;
           margin: auto;
           ul {
             display: block;
             list-style: none;
-
             padding: 0;
             li {
               height: auto;
-              font-family: "FontAwesome";
+              font-family: FontAwesome, $font-text;
+              color: $color-white-1;
 
               a {
                 width: auto;
                 display: inline-block;
                 font-size: 0.75em;
                 line-height: 40px;
-                margin-left: 1em;
-                font-family: $fontHeader;
+                margin: 0;
+                font-family: $font-header;
                 &:hover {
                   cursor: pointer;
                 }
               }
-              a[href~="mailto"]::before {
-                content: "\f466";
-                font-size: 1em;
-              }
-
-              a[title~="follow me on github"]::before {
-                content: "\f301";
-                font-size: 1em;
-              }
-
-              a[href~="www.linkedin.com"]::before {
-                content: "\f18d";
-                font-size: 1em;
-              }
-
-              a[href~="github.com"]::before {
-                content: "\f237";
-                font-size: 1em;
-              }
             }
           }
         }
-        #map_image {
-          width: 90%;
-          margin: 1em auto;
+        #map-image {
+          width: 100%;
+          margin: 0;
           padding: 0;
-          border: solid 2px #000;
           img {
-            width: 100%;
+            max-width: 100%;
+            height: auto;
             filter: grayscale(100%);
           }
         }
@@ -1055,12 +1002,12 @@ main.site_content {
         line-height: 35px;
         margin-bottom: 0.2em;
         display: block;
-        color: rgba(204, 39, 39, 0.89);
-        background-color: #fcc;
+        color: #cc2727e3;
+        background-color: #ffcccc;
         text-align: center;
         animation-name: example;
         animation-duration: 0.2s;
-        font-family: $fontHeader;
+        font-family: $font-header;
         font-size: 1.1;
         text-shadow: 1px 1px 1px $color-black;
         text-transform: uppercase;
@@ -1069,27 +1016,28 @@ main.site_content {
         width: 94%;
         flex: 1 0 auto;
         padding: 0.5em;
-        background-color: $color-black;
+        background-color: $color-white-1;
         margin: 0 auto;
         ol {
           list-style: none;
           margin: 0;
           padding: 1%;
           width: 98%;
-          background: #fff;
+          background: $color-black;
           li {
             height: auto;
             margin-bottom: 0.5em;
             label,
             #comment-header {
-              font-family: $fontHeader;
+              font-family: $font-header;
               display: block;
               width: 100%;
               line-height: 40px;
               color: $color-white-1;
-              background-color: $color-black2;
+              background-color: $color-black;
+              border-bottom: 1px solid $color-white-1;
               margin-bottom: 0.5em;
-              text-indent: 0.5em;
+              text-indent: 0;
               font-size: 1em;
               cursor: pointer;
             }
@@ -1100,7 +1048,7 @@ main.site_content {
               float: left;
               width: 80%;
               line-height: 30px;
-              font-size: 80%;
+              border-bottom: none;
             }
 
             input#myname:hover,
@@ -1115,24 +1063,25 @@ main.site_content {
             }
 
             input.dirty:not(:focus):valid {
-              background-color: rgb(176, 241, 176);
-              border: solid 3px rgb(78, 243, 78);
+              background-color: $ok-color-bg;
+              border: $ok-color-border;
             }
 
             input.dirty:not(:focus):invalid {
-              background-color: rgb(255, 204, 204);
-              border: solid 3px rgb(252, 136, 136);
+              background-color: $error-color-bg;
+              border: $error-color-border;
             }
 
             input#myname,
             input#myemail {
               display: block;
               line-height: 35px;
-              width: 98%;
+              width: 100%;
               padding: 0;
               margin: 0;
               font-size: 0.9em;
               outline: none;
+              border: none;
             }
 
             ol#comment-box {
@@ -1167,6 +1116,8 @@ main.site_content {
               height: 40px;
               width: 100%;
               font-size: 1em;
+              outline: none;
+              border: none;
             }
 
             textarea#mycomments {
@@ -1180,16 +1131,15 @@ main.site_content {
         }
         input#submit {
           display: block;
-          width: 100%;
+          width: 50%;
           height: 35px;
           margin: auto;
           font-size: 1.1em;
-          border: 1px solid #ccc;
-          background-color: $color-black;
+          background-color: $green-color;
           color: $color-white-1;
           &:hover {
-            background-color: $color-black2;
-            color: $color-white-1;
+            background-color: $red-color;
+            color: $color-black;
             cursor: pointer;
             font-weight: bold;
           }
@@ -1199,7 +1149,7 @@ main.site_content {
   }
 }
 
-.site_footer {
+.site-footer {
   background-color: $color-white-1;
   width: 100%;
   height: 50px;
@@ -1210,7 +1160,6 @@ main.site_content {
     padding: 0;
     height: 100%;
     width: 100%;
-    margin: auto;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -1229,7 +1178,7 @@ main.site_content {
         background-color: $color-white-1;
         display: block;
         font-size: 0.7em;
-        font-family: $fontHeader;
+        font-family: $font-header;
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
@@ -1240,6 +1189,7 @@ main.site_content {
           font-weight: bold;
           cursor: pointer;
         }
+
         /* selected link */
         &:active {
           background-color: $color-black;
@@ -1250,12 +1200,12 @@ main.site_content {
   }
 }
 
-/* 1920px */
 @media screen and (min-width: 120em) {
+  /* 1920px */
   .menu-toggle {
     display: none;
   }
-  #site_wrapper {
+  #site-wrapper {
     width: 85%;
     margin: auto;
     display: block;
@@ -1263,71 +1213,75 @@ main.site_content {
   .fixed-header {
     position: fixed;
     top: 0;
-    left: 80px;
-    max-width: 89%;
+    left: 4%;
+    max-width: 92%;
     text-align: left;
     font-size: 99%;
     z-index: 10;
     background-color: $bgcolor;
     height: 100px;
   }
-  .site_header {
+  .site-header {
     div.site-title {
       width: 20%;
       p.logo {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
         line-height: 40px;
+        text-align: center;
       }
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        line-height: 40px;
       }
     }
-    .site_navigation {
+    .site-navigation {
       display: block;
-      width: 45%;
-      flex: 1 0 auto;
+      width: 30%;
+      flex: 0 1 auto;
       height: auto;
       margin-bottom: 0.5em;
       top: 0;
       position: unset;
       ul {
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 80%;
-        .tablink {
+        li.tablink {
           height: 50px;
           line-height: 50px;
-          width: 24%;
+          width: 25%;
           a {
             display: block;
             line-height: 50px;
             color: $color-white-1;
-            background-color: $color-black2;
+            background-color: $color-black;
             font-size: 1.1em;
-            font-family: $fontHeader;
+            font-family: $font-header;
             text-decoration: none;
+
             /* visited link */
             &:visited {
-              background-color: $greencolor;
+              background-color: $green-color;
               color: $color-black;
             }
             &:focus {
-              background-color: $greencolor;
+              background-color: $green-color;
               color: $color-white-1;
               text-shadow: 1px 1px 1px $color-black;
             }
             &:hover {
-              background-color: $greencolor;
+              background-color: $green-color;
               color: $color-white-1;
               text-shadow: 1px 1px 1px $color-black;
             }
+
             /* selected link */
             &:active {
-              background-color: $greencolor;
+              background-color: $green-color;
               color: $color-black;
             }
           }
@@ -1337,13 +1291,15 @@ main.site_content {
 
     ul#social {
       height: 45px;
-      width: 12%;
+      width: 20%;
       margin: 0;
       padding: 0;
-      flex: 1 0 auto;
+      flex: 0 1 auto;
       display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
       list-style: none;
-      font-family: "FontAwesome";
+      font-family: FontAwesome $font-text;
       position: unset;
       top: 0;
       left: 0;
@@ -1353,23 +1309,24 @@ main.site_content {
           i.fa-twitter,
           i.fa-facebook,
           i.fa-linkedin {
-            font-size: 1.3em;
+            font-size: 1.5em;
             line-height: 45px;
             &:hover {
               transform: scale(1.1);
             }
           }
+
           /* visited link */
           &:visited {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-black;
           }
           &:focus {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-black;
           }
           &:active {
-            background-color: $greencolor;
+            background-color: $green-color;
             color: $color-black;
           }
         }
@@ -1377,18 +1334,19 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     div#banner {
       flex: 0 0 auto;
 
       article#bannertext {
         width: calc(50% - 5%);
         h1 {
+          font-size: 4em;
           line-height: 80px;
         }
         p {
-          font-size: 1em;
-          line-height: 2.1em;
+          font-size: 1.2em;
+          line-height: 1.8em;
         }
       }
 
@@ -1400,37 +1358,34 @@ main.site_content {
         display: block;
       }
     }
-    section#project_page {
+    section#project-page {
       h2 {
         font-size: 1.4rem;
       }
-      ul#project_tabs {
+      ul#project-tabs {
         display: flex;
-        -webkit-flex-flow: row;
         flex-flow: row;
-        -webkit-justify-content: start;
-        justify-content: start;
-        -webkit-align-items: stretch;
+        justify-content: flex-start;
         align-items: stretch;
         list-style: none;
         padding: 0;
-        margin: 0 0 0.5em 0;
+        margin: 0 0 0.5em;
         width: 90%;
-        @include raytransition(all 0.2s ease-in 0s);
+        transition: all 0.2s ease-in 0s;
         li {
           width: 15%;
           flex: 0 0 auto;
           margin-right: 0.2em;
-          font-family: $fontText;
-          button.project_tab {
+          font-family: $font-text;
+          button.project-tab {
             display: block;
             line-height: 35px;
-            background-color: $color-white-1;
+            background-color: $color-black;
             width: 100%;
             border: none;
-            font-size: 1em;
+            font-size: 1.2em;
             &:focus {
-              background-color: $color-black2;
+              background-color: $color-black;
               color: $color-white-1;
               font-weight: bold;
             }
@@ -1459,13 +1414,17 @@ main.site_content {
 
       figcaption.cover {
         opacity: 0;
+        p {
+          font-size: 1em;
+          color: $color-black;
+        }
 
         span#cover-links {
           display: flex;
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             width: 45%;
             font-size: 0.9em;
             &:hover {
@@ -1474,12 +1433,12 @@ main.site_content {
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1.2em;
         }
       }
     }
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
@@ -1491,11 +1450,7 @@ main.site_content {
       }
 
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 35%;
         margin-bottom: 1em;
@@ -1503,7 +1458,7 @@ main.site_content {
 
         h1 {
           height: 50px;
-          font-size: 1em;
+          font-size: 1.2em;
           line-height: 50px;
           letter-spacing: 0.05em;
         }
@@ -1511,8 +1466,6 @@ main.site_content {
         /* chart */
         ul#bars {
           display: flex;
-          -webkit-flex-flow: column;
-          -ms-flex-flow: column;
           flex-flow: column;
           list-style: none;
 
@@ -1522,7 +1475,7 @@ main.site_content {
             div.bar {
               left: 16.5%;
               &:hover {
-                background: $color-black;
+                background: $yellow-color;
                 cursor: pointer;
               }
 
@@ -1539,7 +1492,7 @@ main.site_content {
           span {
             width: 16.5%;
             line-height: 50px;
-            font-size: 0.9em;
+            font-size: 1em;
           }
         }
       }
@@ -1562,10 +1515,11 @@ main.site_content {
         }
 
         p {
-          line-height: 2em;
-          font-size: 1.1em;
+          line-height: 1.8em;
+          font-size: 1.2em;
         }
       }
+
       /* Hero-Slider */
       section#slider {
         width: 60%;
@@ -1577,14 +1531,14 @@ main.site_content {
         h3 {
           font-size: 1.2em;
         }
-        /* Hero Slider */
+
         .hero-slider {
           width: 100%;
 
           .mask {
             height: 360px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -1621,10 +1575,10 @@ main.site_content {
                       background-color: $bgcolor;
                       font-weight: normal;
                       font-size: 0.9em;
-                      color: $color-black2;
+                      color: $color-black;
                       height: auto;
                       line-height: 30px;
-                      font-family: "FontAwesome", $fontText;
+                      font-family: FontAwesome, $font-text;
                     }
                   }
                 }
@@ -1635,14 +1589,14 @@ main.site_content {
         div#slids {
           font-size: 1.2em;
           button#next {
-            width: 50%;
+            width: 15%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
+            width: 15%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
@@ -1668,7 +1622,7 @@ main.site_content {
         width: 100%;
         line-height: 50px;
       }
-      div#contact_container {
+      div#contact-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -1679,8 +1633,7 @@ main.site_content {
           margin: 0;
           padding: 0 1em;
           h3 {
-            font-size: 1.25rem;
-            background-color: $color-white-1;
+            font-size: 1.4rem;
           }
           address {
             height: auto;
@@ -1692,42 +1645,22 @@ main.site_content {
               padding: 0;
               li {
                 height: auto;
-                font-family: "FontAwesome";
+                font-family: "FontAwesome", $font-text;
 
                 a {
                   width: auto;
                   display: inline-block;
-                  font-size: 1em;
+                  font-size: 1.2em;
                   line-height: 40px;
-                  margin-left: 1em;
-                }
-
-                a[href~="mailto"]::before {
-                  content: "\f466";
-                  font-size: 1em;
-                }
-
-                a[title~="follow me on github"]::before {
-                  content: "\f301";
-                  font-size: 1em;
-                }
-
-                a[href~="www.linkedin.com"]::before {
-                  content: "\f18d";
-                  font-size: 1em;
-                }
-
-                a[href~="github.com"]::before {
-                  content: "\f237";
-                  font-size: 1em;
+                  color: $color-white-1;
                 }
               }
             }
           }
 
-          #map_image {
-            width: 90%;
-            margin: 1em auto;
+          #map-image {
+            width: 100%;
+            margin: 0;
             padding: 0;
             img {
               width: 100%;
@@ -1752,14 +1685,14 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.1em;
               }
 
               label[for="questionitem"],
               label[for="blogitem"],
               label[for="generalitem"] {
                 float: left;
-                font-size: 90%;
+                font-size: 100%;
               }
 
               input#myname:hover,
@@ -1778,6 +1711,7 @@ main.site_content {
               input#myemail,
               input#myurl {
                 display: block;
+                font-size: 1.1em;
               }
 
               ol#comment-box {
@@ -1792,7 +1726,7 @@ main.site_content {
                   height: 30px;
                   margin: 0;
                   label {
-                    width: 50%;
+                    width: 35%;
                     height: 100%;
                   }
 
@@ -1822,14 +1756,14 @@ main.site_content {
           }
           input#submit {
             font-size: 1.2em;
-            width: 100%;
+            width: 35%;
           }
         }
       }
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 90%;
@@ -1845,20 +1779,20 @@ main.site_content {
   }
 }
 
-/*1440 - 1919*/
-@media screen and (min-width: 90em) and (max-width: 119.9375em) {
+/* 1440px to 1919px */
+@media screen and (min-width: 90em) and (max-width: 1919px) {
   .menu-toggle {
     display: none;
   }
-  #site_wrapper {
-    width: 90%;
+  #site-wrapper {
+    width: 92%;
   }
 
   .fixed-header {
     position: fixed;
     top: 0;
-    left: 70px;
-    max-width: 91%;
+    left: 4%;
+    max-width: 92%;
     text-align: left;
     font-size: 99%;
     z-index: 10;
@@ -1866,37 +1800,38 @@ main.site_content {
     height: 100px;
   }
 
-  .site_header {
+  .site-header {
     div.site-title {
-      width: 20%;
+      width: 40%;
       p.logo {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
         line-height: 40px;
+        text-align: center;
       }
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
       }
     }
-    .site_navigation {
+    .site-navigation {
       display: block;
-      width: 45%;
-      flex: 1 0 auto;
+      width: 30%;
+      flex: 0 0 auto;
       height: auto;
       margin-bottom: 0.5em;
       top: 0;
       position: unset;
       ul {
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
-        width: 80%;
-        .tablink {
+        justify-content: flex-start;
+        li.tablink {
           height: 50px;
           line-height: 50px;
-          width: 24%;
+          width: 25%;
           a {
             display: block;
             font-size: 1.1em;
@@ -1907,13 +1842,15 @@ main.site_content {
 
     ul#social {
       height: 45px;
-      width: 12%;
+      width: 30%;
       margin: 0;
       padding: 0;
-      flex: 1 0 auto;
+      flex: 0 1 auto;
       display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
       list-style: none;
-      font-family: "FontAwesome";
+      font-family: FontAwesome, $font-text;
       position: unset;
       top: 0;
       left: 0;
@@ -1934,7 +1871,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     div#banner {
       flex: 0 0 auto;
 
@@ -1942,10 +1879,11 @@ main.site_content {
         width: calc(50% - 5%);
         h1 {
           line-height: 80px;
+          font-size: 3rem;
         }
         p {
-          font-size: 1em;
-          line-height: 2.1em;
+          font-size: 1.15em;
+          line-height: 1.8em;
         }
       }
 
@@ -1957,34 +1895,31 @@ main.site_content {
         display: block;
       }
     }
-    section#project_page {
+    section#project-page {
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
-      ul#project_tabs {
+      ul#project-tabs {
         display: flex;
-        -webkit-flex-flow: row;
         flex-flow: row;
-        -webkit-justify-content: start;
-        justify-content: start;
-        -webkit-align-items: stretch;
+        justify-content: flex-start;
         align-items: stretch;
         list-style: none;
-        padding: 0;
-        margin: 0 0 0.5em 0;
+        padding: 0.5em 0;
+        margin: 0 0 1em;
         width: 100%;
-        @include raytransition(all 0.2s ease-in 0s);
+        transition: all 0.2s ease-in 0s;
         li {
           width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
-          font-family: $fontText;
-          button.project_tab {
+          font-family: $font-text;
+          button.project-tab {
             display: block;
             line-height: 35px;
             width: 100%;
             border: none;
-            font-size: 1em;
+            font-size: 1.2em;
             &:hover {
               cursor: pointer;
               font-weight: bold;
@@ -2014,7 +1949,7 @@ main.site_content {
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             width: 45%;
             font-size: 0.85em;
             &:hover {
@@ -2023,38 +1958,39 @@ main.site_content {
           }
         }
 
-        h3.cert_title {
+        p {
+          font-size: 1em;
+          color: $color-black;
+        }
+
+        h3.cert-title {
           font-size: 1.2em;
         }
       }
     }
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: flex-start;
       h2 {
-        font-size: 1.3em;
+        font-size: 1.6em;
         text-align: left;
       }
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
         width: 35%;
 
         h1 {
           height: 50px;
-          font-size: 1em;
+          font-size: 1.2em;
           line-height: 50px;
         }
 
         /* chart */
         ul#bars {
           display: flex;
-          -webkit-flex-flow: column;
-          -ms-flex-flow: column;
           flex-flow: column;
 
           li {
@@ -2064,7 +2000,7 @@ main.site_content {
               left: 16.5%;
 
               &:hover {
-                background: $color-black;
+                background: $yellow-color;
                 cursor: pointer;
               }
 
@@ -2079,10 +2015,11 @@ main.site_content {
           span {
             width: 16.5%;
             line-height: 50px;
-            font-size: 0.9em;
+            font-size: 1em;
           }
         }
       }
+
       /* Hero-Slider */
       section#slider {
         width: 60%;
@@ -2093,14 +2030,14 @@ main.site_content {
         h3 {
           font-size: 1.2em;
         }
-        /* Hero Slider */
+
         .hero-slider {
           width: 100%;
 
           .mask {
             height: 360px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -2134,7 +2071,7 @@ main.site_content {
                       background-color: $bgcolor;
                       font-size: 0.9em;
                       line-height: 30px;
-                      font-family: "FontAwesome", $fontText;
+                      font-family: FontAwesome, $font-text;
                     }
                   }
                 }
@@ -2144,14 +2081,12 @@ main.site_content {
         }
         div#slids {
           button#next {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
@@ -2178,8 +2113,8 @@ main.site_content {
         }
 
         p {
-          line-height: 2.5em;
-          font-size: 1.1em;
+          line-height: 1.8em;
+          font-size: 1.2em;
         }
       }
     }
@@ -2194,13 +2129,13 @@ main.site_content {
       align-items: center;
       gap: 4em;
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         text-align: left;
         align-self: flex-start;
         width: 100%;
         line-height: 50px;
       }
-      div#contact_container {
+      div#contact-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -2211,7 +2146,7 @@ main.site_content {
           margin: 0;
           padding: 0 1em;
           h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             line-height: 50px;
           }
           address {
@@ -2224,43 +2159,17 @@ main.site_content {
               padding: 0;
               li {
                 height: auto;
-                font-family: "FontAwesome";
+                font-family: FontAwesome, $font-text;
 
                 a {
-                  width: auto;
-                  display: inline-block;
-                  font-size: 1em;
-                  line-height: 40px;
-                  margin-left: 1em;
-                }
-
-                a[href~="mailto"]::before {
-                  content: "\f466";
-                  font-size: 1em;
-                }
-
-                a[title~="follow me on github"]::before {
-                  content: "\f301";
-                  font-size: 1em;
-                }
-
-                a[href~="www.linkedin.com"]::before {
-                  content: "\f18d";
-                  font-size: 1em;
-                }
-
-                a[href~="github.com"]::before {
-                  content: "\f237";
-                  font-size: 1em;
+                  font-size: 1.2em;
                 }
               }
             }
           }
 
-          #map_image {
-            width: 90%;
-            margin: 1em auto;
-            padding: 0;
+          #map-image {
+            width: 100%;
             img {
               width: 100%;
             }
@@ -2284,14 +2193,13 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.1em;
               }
 
               label[for="questionitem"],
               label[for="blogitem"],
               label[for="generalitem"] {
                 float: left;
-                font-size: 90%;
               }
 
               input#myname:hover,
@@ -2310,6 +2218,7 @@ main.site_content {
               input#myemail,
               input#myurl {
                 display: block;
+                font-size: 1.1em;
               }
 
               ol#comment-box {
@@ -2324,7 +2233,7 @@ main.site_content {
                   height: 30px;
                   margin: 0;
                   label {
-                    width: 50%;
+                    width: 35%;
                     height: 100%;
                   }
 
@@ -2354,14 +2263,14 @@ main.site_content {
           }
           input#submit {
             font-size: 1.2em;
-            width: 100%;
+            width: 30%;
           }
         }
       }
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 90%;
@@ -2377,20 +2286,19 @@ main.site_content {
   }
 }
 
-/* 1280 - 1439*/
-@media screen and (min-width: 80em) and (max-width: 89.9375em) {
+/* 1280px to 1439px */
+@media screen and (min-width: 80em) and (max-width: 1439px) {
   .menu-toggle {
     display: none;
   }
-  #site_wrapper {
+  #site-wrapper {
     width: 96%;
   }
 
   .fixed-header {
     position: fixed;
     top: 0;
-    left: 70px;
-    max-width: 91%;
+    left: 4%;
     text-align: left;
     font-size: 99%;
     z-index: 10;
@@ -2398,20 +2306,20 @@ main.site_content {
     height: 100px;
   }
 
-  .site_header {
+  .site-header {
     div.site-title {
-      width: 20%;
+      width: 30%;
+      text-align: center;
       p.logo {
         font-size: 1.5rem;
-        line-height: 35px;
       }
       p {
         font-size: 1rem;
       }
     }
-    .site_navigation {
+    .site-navigation {
       display: block;
-      width: 45%;
+      width: 40%;
       flex: 1 0 auto;
       height: auto;
       margin-bottom: 0.5em;
@@ -2419,16 +2327,16 @@ main.site_content {
       position: unset;
       z-index: 0;
       ul {
-        margin: 0 auto;
+        margin: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 80%;
-        .tablink {
+        li.tablink {
           height: 50px;
           line-height: 50px;
-          width: 24%;
+          width: 25%;
           a {
             font-size: 1.05em;
           }
@@ -2438,7 +2346,7 @@ main.site_content {
 
     ul#social {
       height: 40px;
-      width: 12%;
+      width: 30%;
       position: unset;
       top: 0;
       left: 0;
@@ -2459,7 +2367,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     div#banner {
       flex: 0 0 auto;
 
@@ -2482,30 +2390,27 @@ main.site_content {
         display: block;
       }
     }
-    section#project_page {
+    section#project-page {
       h2 {
         font-size: 1.4rem;
       }
 
-      ul#project_tabs {
+      ul#project-tabs {
         display: flex;
-        -webkit-flex-flow: row;
         flex-flow: row;
-        -webkit-justify-content: start;
-        justify-content: start;
-        -webkit-align-items: stretch;
+        justify-content: flex-start;
         align-items: stretch;
         list-style: none;
         padding: 0;
-        margin: 0 0 0.5em 0;
+        margin: 0 0 0.5em;
         width: 100%;
-        @include raytransition(all 0.2s ease-in 0s);
+        transition: all 0.2s ease-in 0s;
         li {
           width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
-          font-family: $fontText;
-          button.project_tab {
+          font-family: $font-text;
+          button.project-tab {
             display: block;
             line-height: 35px;
             width: 100%;
@@ -2543,7 +2448,7 @@ main.site_content {
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             width: 45%;
             font-size: 0.85em;
 
@@ -2553,12 +2458,12 @@ main.site_content {
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1.2em;
         }
       }
     }
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
@@ -2568,8 +2473,6 @@ main.site_content {
         font-size: 1.3em;
       }
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
         width: 35%;
 
@@ -2582,8 +2485,6 @@ main.site_content {
         /* chart */
         ul#bars {
           display: flex;
-          -webkit-flex-flow: column;
-          -ms-flex-flow: column;
           flex-flow: column;
 
           li {
@@ -2632,6 +2533,7 @@ main.site_content {
         h3 {
           font-size: 1.2em;
         }
+
         /* Hero Slider */
         .hero-slider {
           width: 100%;
@@ -2639,7 +2541,7 @@ main.site_content {
           .mask {
             height: 365px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
 
             div.slider-body {
               width: 100%;
@@ -2673,7 +2575,7 @@ main.site_content {
                       width: 98%;
                       padding: 0.5em;
                       font-size: 0.9em;
-                      font-family: "FontAwesome", $fontText;
+                      font-family: FontAwesome, $font-text;
                     }
                   }
                 }
@@ -2683,14 +2585,12 @@ main.site_content {
         }
         div#slids {
           button#next {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
@@ -2716,7 +2616,7 @@ main.site_content {
         width: 100%;
         line-height: 50px;
       }
-      div#contact_container {
+      div#contact-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -2727,8 +2627,7 @@ main.site_content {
           margin: 0;
           padding: 0 1em;
           h3 {
-            font-size: 1.25rem;
-            background-color: $color-white-1;
+            font-size: 1.4rem;
           }
           address {
             height: auto;
@@ -2740,43 +2639,18 @@ main.site_content {
               padding: 0;
               li {
                 height: auto;
-                font-family: "FontAwesome";
+                font-family: FontAwesome;
 
                 a {
-                  width: auto;
-                  display: inline-block;
-                  font-size: 1em;
-                  line-height: 40px;
-                  margin-left: 1em;
-                }
-
-                a[href~="mailto"]::before {
-                  content: "\f466";
-                  font-size: 1em;
-                }
-
-                a[title~="follow me on github"]::before {
-                  content: "\f301";
-                  font-size: 1em;
-                }
-
-                a[href~="www.linkedin.com"]::before {
-                  content: "\f18d";
-                  font-size: 1em;
-                }
-
-                a[href~="github.com"]::before {
-                  content: "\f237";
-                  font-size: 1em;
+                  font-size: 1.2em;
                 }
               }
             }
           }
 
-          #map_image {
-            width: 90%;
-            margin: 1em auto;
-            padding: 0;
+          #map-image {
+            width: 100%;
+
             img {
               width: 100%;
             }
@@ -2800,14 +2674,13 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.1em;
               }
 
               label[for="questionitem"],
               label[for="blogitem"],
               label[for="generalitem"] {
                 float: left;
-                font-size: 90%;
               }
 
               input#myname:hover,
@@ -2840,7 +2713,7 @@ main.site_content {
                   height: 30px;
                   margin: 0;
                   label {
-                    width: 50%;
+                    width: 35%;
                     height: 100%;
                   }
 
@@ -2872,7 +2745,7 @@ main.site_content {
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 90%;
@@ -2888,17 +2761,17 @@ main.site_content {
   }
 }
 
-/*1024 - 1279*/
-@media screen and (min-width: 64em) and (max-width: 79.9375em) {
+/* 1024px to 1279px */
+@media screen and (min-width: 64em) and (max-width: 1279px) {
   .menu-toggle {
     display: none;
   }
-  #site_wrapper {
+  #site-wrapper {
     width: 96%;
   }
-  .site_header {
+  .site-header {
     div.site-title {
-      width: 20%;
+      width: 30%;
       p.logo {
         font-size: 1.45rem;
       }
@@ -2906,26 +2779,26 @@ main.site_content {
         font-size: 0.9rem;
       }
     }
-    .site_navigation {
+    .site-navigation {
       display: block;
-      width: 45%;
+      width: 40%;
       flex: 1 0 auto;
       height: auto;
       margin-bottom: 0.5em;
       top: 0;
       position: unset;
       ul {
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 80%;
-        .tablink {
+        li.tablink {
           height: 50px;
           line-height: 50px;
-          width: 24%;
+          width: 25%;
 
           a {
             display: block;
@@ -2937,7 +2810,7 @@ main.site_content {
 
     ul#social {
       height: 40px;
-      width: 12%;
+      width: 30%;
       position: unset;
       top: 0;
       left: 0;
@@ -2958,7 +2831,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     div#banner {
       flex: 0 0 auto;
 
@@ -2981,26 +2854,23 @@ main.site_content {
         display: block;
       }
     }
-    section#project_page {
-      ul#project_tabs {
+    section#project-page {
+      ul#project-tabs {
         display: flex;
-        -webkit-flex-flow: row;
         flex-flow: row;
-        -webkit-justify-content: start;
-        justify-content: start;
-        -webkit-align-items: stretch;
+        justify-content: flex-start;
         align-items: stretch;
         list-style: none;
         padding: 0;
-        margin: 0 0 0.5em 0;
+        margin: 0 0 0.5em;
         width: 100%;
-        @include raytransition(all 0.2s ease-in 0s);
+        transition: all 0.2s ease-in 0s;
         li {
           width: 14%;
           flex: 0 0 auto;
           margin-right: 0.2em;
-          font-family: $fontText;
-          button.project_tab {
+          font-family: $font-text;
+          button.project-tab {
             display: block;
             line-height: 35px;
             width: 100%;
@@ -3039,7 +2909,7 @@ main.site_content {
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             width: 48%;
             font-size: 0.75em;
             &:hover {
@@ -3048,12 +2918,12 @@ main.site_content {
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1em;
         }
       }
     }
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
@@ -3063,8 +2933,6 @@ main.site_content {
         font-size: 1.3em;
       }
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
         width: 40%;
 
@@ -3077,8 +2945,6 @@ main.site_content {
         /* chart */
         ul#bars {
           display: flex;
-          -webkit-flex-flow: column;
-          -ms-flex-flow: column;
           flex-flow: column;
 
           li {
@@ -3106,6 +2972,7 @@ main.site_content {
           }
         }
       }
+
       /* Hero-Slider */
       section#slider {
         width: 55%;
@@ -3119,14 +2986,14 @@ main.site_content {
           font-size: 1.2em;
           line-height: 50px;
         }
-        /* Hero Slider */
+
         .hero-slider {
           width: 100%;
 
           .mask {
             height: 330px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -3167,14 +3034,12 @@ main.site_content {
         }
         div#slids {
           button#next {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
@@ -3208,7 +3073,7 @@ main.site_content {
         width: 100%;
         line-height: 50px;
       }
-      div#contact_container {
+      div#contact-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -3219,7 +3084,7 @@ main.site_content {
           margin: 0;
           padding: 0 1em;
           h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
           }
           address {
             height: auto;
@@ -3231,42 +3096,17 @@ main.site_content {
               padding: 0;
               li {
                 height: auto;
-                font-family: "FontAwesome";
+                font-family: FontAwesome;
 
                 a {
-                  width: auto;
-                  display: inline-block;
-                  font-size: 1em;
-                  line-height: 40px;
-                  margin-left: 1em;
-                }
-
-                a[href~="mailto"]::before {
-                  content: "\f466";
-                  font-size: 1em;
-                }
-
-                a[title~="follow me on github"]::before {
-                  content: "\f301";
-                  font-size: 1em;
-                }
-
-                a[href~="www.linkedin.com"]::before {
-                  content: "\f18d";
-                  font-size: 1em;
-                }
-
-                a[href~="github.com"]::before {
-                  content: "\f237";
-                  font-size: 1em;
+                  font-size: 1.1em;
                 }
               }
             }
           }
 
-          #map_image {
-            width: 90%;
-            margin: 1em auto;
+          #map-image {
+            width: 100%;
             padding: 0;
             img {
               width: 100%;
@@ -3291,14 +3131,13 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.1em;
               }
 
               label[for="questionitem"],
               label[for="blogitem"],
               label[for="generalitem"] {
                 float: left;
-                font-size: 90%;
               }
 
               input#myname:hover,
@@ -3331,7 +3170,7 @@ main.site_content {
                   height: 30px;
                   margin: 0;
                   label {
-                    width: 50%;
+                    width: 40%;
                     height: 100%;
                   }
 
@@ -3358,13 +3197,14 @@ main.site_content {
           }
           input#submit {
             font-size: 1.1em;
+            width: 35%;
           }
         }
       }
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 90%;
@@ -3385,7 +3225,7 @@ main.site_content {
   .menu-toggle {
     display: none;
   }
-  #site_wrapper {
+  #site-wrapper {
     width: 98%;
     margin-left: auto;
     margin-right: auto;
@@ -3396,41 +3236,39 @@ main.site_content {
     font-size: 90%;
   }
 
-  .site_header {
+  .site-header {
     height: 100px;
 
     div.site-title {
-      width: 22%;
+      width: 30%;
 
       p.logo {
         font-size: 1.45rem;
-        line-height: 35px;
       }
       p {
         font-size: 0.8rem;
       }
     }
 
-    .site_navigation {
+    .site-navigation {
       display: block;
       width: 40%;
-      flex: 1 0 auto;
       height: auto;
       margin-bottom: 0.5em;
       top: 0;
       position: unset;
       ul {
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 90%;
-        .tablink {
+        li.tablink {
           height: 50px;
           line-height: 50px;
-          width: 24%;
+          width: 25%;
           a {
             display: block;
             font-size: 0.9em;
@@ -3441,25 +3279,22 @@ main.site_content {
 
     ul#social {
       height: 40px;
-      width: 10%;
+      width: 30%;
       margin: 0;
       padding: 0;
       flex: 1 0 auto;
       display: flex;
       list-style: none;
-      font-family: "FontAwesome";
+      font-family: FontAwesome;
       position: unset;
       top: 60px;
       left: 75vw;
-      width: 25%;
       li.social-item {
-        width: 32%;
+        width: 20%;
         height: auto;
         margin-right: 0.2em;
         text-align: center;
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
+        flex: 0 0 auto;
         a {
           margin: 0;
           font-size: 0.9em;
@@ -3480,7 +3315,7 @@ main.site_content {
             text-align: center;
             line-height: 40px;
             font-size: 1.25em;
-            @include raytransition(all 0.2s ease-in 0s);
+            transition: all 0.2s ease-in 0s;
             &:hover {
               transform: scale(1.1);
               font-weight: bold;
@@ -3492,7 +3327,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -3504,8 +3339,8 @@ main.site_content {
     margin-bottom: 0.5em;
 
     div#banner,
-    section#project_page,
-    section#about_content,
+    section#project-page,
+    section#about-content,
     section#contact {
       min-height: 90vh;
       margin-bottom: 100px;
@@ -3519,7 +3354,6 @@ main.site_content {
       justify-content: center;
       align-items: center;
       width: 100%;
-      flex: 0 0 auto;
 
       article#bannertext {
         width: calc(60% - 5%);
@@ -3546,7 +3380,7 @@ main.site_content {
       width: 100%;
     }
 
-    section#project_page {
+    section#project-page {
       display: flex;
       flex: 0 0 auto;
       flex-flow: column;
@@ -3558,29 +3392,26 @@ main.site_content {
         font-size: 1.3rem;
       }
 
-      div#project_page_container {
+      div#project-page-container {
         width: 100%;
       }
 
-      ul#project_tabs {
+      ul#project-tabs {
         display: flex;
-        -webkit-flex-flow: row;
         flex-flow: row;
-        -webkit-justify-content: start;
-        justify-content: start;
-        -webkit-align-items: stretch;
+        justify-content: flex-start;
         align-items: stretch;
         list-style: none;
         padding: 0;
         margin: 0 0.5em;
         width: 97%;
-        @include raytransition(all 0.2s ease-in 0s);
+        transition: all 0.2s ease-in 0s;
         li {
           width: 13%;
           flex: 0 0 auto;
           margin-right: 0.2em;
-          font-family: $fontText;
-          button.project_tab {
+          font-family: $font-text;
+          button.project-tab {
             display: block;
             line-height: 35px;
             width: 100%;
@@ -3619,7 +3450,7 @@ main.site_content {
           display: flex;
           margin: 0 auto;
           width: 100%;
-          a.cover_link {
+          a.cover-link {
             font-size: 0.7em;
 
             &:hover {
@@ -3628,7 +3459,7 @@ main.site_content {
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1em;
           line-height: 30px;
         }
@@ -3648,7 +3479,7 @@ main.site_content {
       }
     }
 
-    section#about_content {
+    section#about-content {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
@@ -3658,18 +3489,14 @@ main.site_content {
         font-size: 1.3rem;
       }
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 45%;
         height: auto;
         display: inline-block;
         margin-bottom: 1em;
         padding: 0.25em;
-        font-family: $fontHeader;
+        font-family: $font-header;
 
         h1 {
           height: 50px;
@@ -3683,11 +3510,7 @@ main.site_content {
 
         /* chart */
         ul#bars {
-          display: -webkit-flex;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-flex-flow: column;
-          -ms-flex-flow: column;
           flex-flow: column;
           width: 100%;
           height: 100%;
@@ -3698,7 +3521,7 @@ main.site_content {
           li {
             width: 100%;
             height: 50px;
-            margin: 0 0 0.5em 0;
+            margin: 0 0 0.5em;
             div.bar {
               margin-left: 0;
               left: 18.5%;
@@ -3736,14 +3559,14 @@ main.site_content {
           font-size: 1.15em;
           line-height: 50px;
         }
-        /* Hero Slider */
+
         .hero-slider {
           margin: 0;
 
           .mask {
             height: 330px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -3759,9 +3582,7 @@ main.site_content {
                 figure.slider-panel {
                   margin: 0;
                   padding: 0;
-                  @include raytransition(
-                    all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
-                  );
+                  transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
                   a.fancybox {
                     display: block;
 
@@ -3792,14 +3613,12 @@ main.site_content {
         div#slids {
           height: 40px;
           button#next {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1.1em;
             &:hover {
               cursor: pointer;
@@ -3838,7 +3657,7 @@ main.site_content {
         width: 100%;
         line-height: 50px;
       }
-      div#contact_container {
+      div#contact-container {
         display: flex;
         flex-flow: row wrap;
         width: 90%;
@@ -3851,8 +3670,7 @@ main.site_content {
           margin: 1em auto;
           padding: 0 1em;
           h3 {
-            font-size: 1.25rem;
-            background-color: $color-white-1;
+            font-size: 1.4rem;
           }
           address {
             height: auto;
@@ -3864,42 +3682,17 @@ main.site_content {
               padding: 0;
               li {
                 height: auto;
-                font-family: "FontAwesome";
+                font-family: FontAwesome;
 
                 a {
-                  width: auto;
-                  display: inline-block;
-                  font-size: 1em;
-                  line-height: 40px;
-                  margin-left: 1em;
-                }
-
-                a[href~="mailto"]::before {
-                  content: "\f466";
-                  font-size: 1em;
-                }
-
-                a[title~="follow me on github"]::before {
-                  content: "\f301";
-                  font-size: 1em;
-                }
-
-                a[href~="www.linkedin.com"]::before {
-                  content: "\f18d";
-                  font-size: 1em;
-                }
-
-                a[href~="github.com"]::before {
-                  content: "\f237";
-                  font-size: 1em;
+                  font-size: 1.1em;
                 }
               }
             }
           }
 
-          #map_image {
-            width: 90%;
-            margin: 1em auto;
+          #map-image {
+            width: 100%;
             padding: 0;
             img {
               width: 100%;
@@ -3924,7 +3717,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.1em;
               }
 
               label[for="questionitem"],
@@ -3963,7 +3756,7 @@ main.site_content {
                   height: 30px;
                   margin: 0;
                   label {
-                    width: 50%;
+                    width: 40%;
                     height: 100%;
                     font-size: 100%;
                   }
@@ -3996,7 +3789,7 @@ main.site_content {
     }
   }
 
-  .site_footer {
+  .site-footer {
     clear: both;
     ul {
       list-style: none;
@@ -4017,29 +3810,28 @@ main.site_content {
   }
 }
 
-/* 600px - MOBILE */
+/* 600px */
 @media screen and (min-width: 37.5em) and (max-width: 63.9375em) {
   .menu-toggle {
     left: calc(78vw - 20px);
   }
-  #site_wrapper {
+  #site-wrapper {
     width: 98%;
   }
-  .site_header {
+  .site-header {
     div.site-title {
       width: 23%;
       p.logo {
         font-size: 1.4rem;
-        line-height: 35px;
       }
       p {
         font-size: 0.85rem;
       }
     }
-    .site_navigation {
+    .site-navigation {
       width: 100%;
       ul {
-        .tablink {
+        li.tablink {
           a {
             display: block;
             font-size: 1.1em;
@@ -4054,7 +3846,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     div#banner {
       width: 100%;
       figure {
@@ -4078,7 +3870,7 @@ main.site_content {
       }
     }
 
-    section#project_page {
+    section#project-page {
       h2 {
         font-size: 1.3rem;
       }
@@ -4090,12 +3882,12 @@ main.site_content {
         padding: 0;
         width: 98%;
       }
-      ul#project_tabs {
+      ul#project-tabs {
         width: 97%;
 
         li {
           width: 23%;
-          button.project_tab {
+          button.project-tab {
             font-size: 0.9em;
           }
         }
@@ -4115,12 +3907,12 @@ main.site_content {
           display: flex;
           margin: 0 auto;
           width: 100%;
-          a.cover_link {
+          a.cover-link {
             font-size: 0.8em;
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1em;
           width: 96%;
           line-height: 30px;
@@ -4128,7 +3920,7 @@ main.site_content {
       }
     }
 
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: column;
@@ -4139,16 +3931,12 @@ main.site_content {
       }
 
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 85%;
         height: auto;
         padding: 0.25em;
-        font-family: $fontHeader;
+        font-family: $font-header;
 
         h1 {
           height: 50px;
@@ -4200,14 +3988,14 @@ main.site_content {
           font-size: 1.05rem;
           line-height: 40px;
         }
-        /* Hero Slider */
+
         .hero-slider {
           width: 100%;
 
           .mask {
             height: 310px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -4249,14 +4037,12 @@ main.site_content {
 
         div#slids {
           button#next {
-            width: 50%;
             font-size: 1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1em;
             &:hover {
               cursor: pointer;
@@ -4278,7 +4064,7 @@ main.site_content {
       h2 {
         font-size: 1.3rem;
       }
-      div#contact_container {
+      div#contact-container {
         width: 90%;
         margin: 1em auto;
         p {
@@ -4291,7 +4077,7 @@ main.site_content {
           padding: 0;
 
           h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
           }
 
           address {
@@ -4302,7 +4088,7 @@ main.site_content {
                 height: auto;
 
                 a {
-                  font-size: 1em;
+                  font-size: 1.1em;
                 }
               }
             }
@@ -4318,7 +4104,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 1.05em;
               }
 
               label[for="questionitem"],
@@ -4357,13 +4143,14 @@ main.site_content {
           }
           input#submit {
             font-size: 1em;
+            width: 40%;
           }
         }
       }
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 90%;
@@ -4389,11 +4176,11 @@ main.site_content {
     left: 110vw;
   }
 
-  #site_wrapper {
+  #site-wrapper {
     width: 98%;
     margin: 0;
   }
-  .site_header {
+  .site-header {
     div.site-title {
       width: 65%;
       p.logo {
@@ -4404,13 +4191,13 @@ main.site_content {
       }
     }
 
-    .site_navigation {
+    .site-navigation {
       left: 0;
 
       ul {
         height: 100%;
 
-        .tablink {
+        li.tablink {
           a {
             font-size: 1.1em;
           }
@@ -4423,7 +4210,7 @@ main.site_content {
     }
   }
 
-  main.site_content {
+  main.site-content {
     height: auto;
     div#banner {
       width: 100%;
@@ -4446,7 +4233,7 @@ main.site_content {
       }
     }
 
-    section#project_page {
+    section#project-page {
       h2 {
         font-size: 1.2rem;
       }
@@ -4454,12 +4241,12 @@ main.site_content {
         width: 98%;
         margin: auto;
       }
-      ul#project_tabs {
+      ul#project-tabs {
         width: 100%;
 
         li {
           width: 48%;
-          button.project_tab {
+          button.project-tab {
             font-size: 1em;
           }
         }
@@ -4481,19 +4268,19 @@ main.site_content {
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             font-size: 0.8em;
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1em;
           width: 96%;
         }
       }
     }
 
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: column;
@@ -4504,16 +4291,12 @@ main.site_content {
       }
 
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 90%;
         height: auto;
         padding: 0.2em;
-        font-family: $fontHeader;
+        font-family: $font-header;
 
         h1 {
           height: 50px;
@@ -4604,7 +4387,7 @@ main.site_content {
                     p {
                       width: 100%;
                       font-size: 0.8em;
-                      font-family: "FontAwesome", $fontText;
+                      font-family: FontAwesome, $font-text;
                     }
                   }
                 }
@@ -4615,14 +4398,12 @@ main.site_content {
         div#slids {
           font-size: 1em;
           button#next {
-            width: 50%;
             font-size: 1em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 1em;
             &:hover {
               cursor: pointer;
@@ -4643,7 +4424,7 @@ main.site_content {
       h2 {
         font-size: 1.2rem;
       }
-      div#contact_container {
+      div#contact-container {
         width: 90%;
         margin: 1em auto;
         p {
@@ -4652,6 +4433,11 @@ main.site_content {
         section#contact-details {
           margin: 1em auto;
           padding: 0;
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
           address {
             width: 90%;
             ul {
@@ -4676,7 +4462,7 @@ main.site_content {
               label,
               #comment-header {
                 display: block;
-                font-size: 0.95em;
+                font-size: 1em;
               }
 
               label[for="questionitem"],
@@ -4720,7 +4506,7 @@ main.site_content {
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 94%;
@@ -4738,11 +4524,11 @@ main.site_content {
 
 /* 360px */
 @media screen and (min-width: 22.5em) and (max-width: 29.9375em) {
-  #site_wrapper {
+  #site-wrapper {
     width: 98%;
     margin: 0;
   }
-  .site_header {
+  .site-header {
     height: 100px;
     div.site-title {
       p.logo {
@@ -4752,11 +4538,11 @@ main.site_content {
         font-size: 0.8rem;
       }
     }
-    .site_navigation {
+    .site-navigation {
       height: 240px;
       ul {
         height: 100%;
-        .tablink {
+        li.tablink {
           a {
             font-size: 1.1em;
           }
@@ -4769,7 +4555,7 @@ main.site_content {
       }
     }
   }
-  main.site_content {
+  main.site-content {
     div#banner {
       width: 100%;
       figure {
@@ -4791,7 +4577,7 @@ main.site_content {
       }
     }
 
-    section#project_page {
+    section#project-page {
       h2 {
         font-size: 1.2rem;
       }
@@ -4799,11 +4585,11 @@ main.site_content {
         width: 99%;
         margin: auto;
       }
-      ul#project_tabs {
+      ul#project-tabs {
         width: 100%;
 
         li {
-          button.project_tab {
+          button.project-tab {
             font-size: 1em;
           }
         }
@@ -4824,18 +4610,18 @@ main.site_content {
           margin: 0 auto;
           width: 100%;
 
-          a.cover_link {
+          a.cover-link {
             font-size: 0.8em;
           }
         }
 
-        h3.cert_title {
+        h3.cert-title {
           font-size: 1em;
         }
       }
     }
 
-    section#about_content {
+    section#about-content {
       width: 100%;
       display: flex;
       flex-flow: column;
@@ -4846,14 +4632,10 @@ main.site_content {
       }
 
       section#barchart {
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: 95%;
-        font-family: $fontHeader;
+        font-family: $font-header;
 
         h1 {
           height: 50px;
@@ -4895,6 +4677,7 @@ main.site_content {
           }
         }
       }
+
       /* Hero-Slider */
       section#slider {
         width: 90%;
@@ -4906,14 +4689,14 @@ main.site_content {
           font-size: 1rem;
           line-height: 40px;
         }
-        /* Hero Slider */
+
         .hero-slider {
           width: 100%;
 
           .mask {
             height: 310px;
 
-            /*position relative for scrolling*/
+            /* Position relative for scrolling */
             div.slider-body {
               width: 100%;
 
@@ -4955,14 +4738,12 @@ main.site_content {
         }
         div#slids {
           button#next {
-            width: 50%;
             font-size: 0.9em;
             &:hover {
               cursor: pointer;
             }
           }
           button#prev {
-            width: 50%;
             font-size: 0.9em;
             &:hover {
               cursor: pointer;
@@ -4980,7 +4761,7 @@ main.site_content {
 
     section#contact {
       width: 100%;
-      div#contact_container {
+      div#contact-container {
         width: 94%;
         margin: 1em auto;
         h2 {
@@ -4994,6 +4775,9 @@ main.site_content {
           width: 98%;
           margin: 1em auto;
           padding: 0;
+          h3 {
+            font-size: 1.2rem;
+          }
           address {
             width: 95%;
             ul {
@@ -5055,13 +4839,14 @@ main.site_content {
           }
           input#submit {
             font-size: 1em;
+            width: 45%;
           }
         }
       }
     }
   }
 
-  .site_footer {
+  .site-footer {
     height: 50px;
     ul {
       width: 98%;

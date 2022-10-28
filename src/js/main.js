@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollScreen = document.querySelector(["body", "html"]);
 
   // get header element
-  const siteHeader = document.querySelector(".site_header");
+  const siteHeader = document.querySelector(".site-header");
 
   // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   const menuToggle = document.querySelector(".menu-toggle");
   // create menu variables
-  const slideoutMenu = document.querySelector(".site_navigation");
+  const slideoutMenu = document.querySelector(".site-navigation");
 
   // eslint-disable-next-line prefer-destructuring
   const slideoutMenuHeight = slideoutMenu.offsetHeight;

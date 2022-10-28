@@ -2,11 +2,11 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
 // import { fileURLToPath } from "url";
-
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
 // eslint-disable-next-line no-underscore-dangle
 // const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const postcssPresetEnv = require("postcss-preset-env");
 
 export default {
   mode: "development",
@@ -46,11 +46,24 @@ export default {
         use: [
           // Creates `style` nodes from JS strings
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  postcssPresetEnv({
+                    /* use stage 3 features + css nesting rules */
+                    stage: 3,
+                    features: {
+                      "nesting-rules": true,
+                    },
+                  }),
+                ],
+              },
+            },
+          },
         ],
       },
       // rules for fonts
@@ -73,7 +86,6 @@ export default {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
             plugins: [
-              ["gifsicle", { interlaced: true }],
               ["jpegtran", { progressive: true }],
               ["optipng", { optimizationLevel: 5 }],
             ],

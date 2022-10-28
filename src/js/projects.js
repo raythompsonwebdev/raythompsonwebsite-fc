@@ -1,6 +1,6 @@
 export default function projectTabs() {
   const boxes = document.querySelectorAll(".box");
-  const tabs = document.querySelectorAll(".project_tab");
+  const tabs = document.querySelectorAll(".project-tab");
 
   const arrayTabs = Array.from(tabs);
   const arrayBoxes = Array.from(boxes);
