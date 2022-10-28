@@ -5,13 +5,7 @@
   // check if form has been sumitted.
   // NOTE : $_POST['submit] value equals NULL which is falsy.
   if( !isset($_POST['submit']) ){
-
-    // $name = !empty($_POST['myname']) ? htmlentities($_POST['myname']) : false ;
-    // $email = !empty($_POST['myemail']) ? $_POST['myemail'] : false ;
-    // $reference = !empty($_POST['reference']) ? $_POST['reference'] : false ;
-    // $requesttype = !empty($_POST['requesttype']) ? $_POST['requesttype'] : false ;
-    // $comments = !empty($_POST['mycomments']) ? htmlentities($_POST['mycomments']) : false ;
-        
+          
    
     if(!empty($_POST['myname']) && !empty($_POST['myemail']) && !empty($_POST['reference']) && !empty($_POST['requesttype']) && !empty($_POST['mycomments'])){
 

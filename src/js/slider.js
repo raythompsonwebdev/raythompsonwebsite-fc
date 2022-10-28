@@ -23,22 +23,17 @@ fetch("./data/slider-data.json")
       const slidepanel = document.createElement("FIGURE");
       slidepanel.setAttribute("class", "slider-panel");
 
-      // image link
-      const slidepanelImgLink = document.createElement("A");
-      slidepanelImgLink.setAttribute("href", "");
-      slidepanelImgLink.setAttribute("class", "fancybox");
-
       const slidepanelImg = document.createElement("IMG");
       slidepanelImg.setAttribute("src", bgimage);
       slidepanelImg.setAttribute("class", "panel-image");
       slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
-      slidepanelImg.setAttribute("width", "780");
-      slidepanelImg.setAttribute("height", "300");
+      slidepanelImg.setAttribute("width", "auto");
+      slidepanelImg.setAttribute("height", "360");
       slidepanelImg.setAttribute("loading", "lazy");
 
       const slidepanelCaption = document.createElement("FIGCAPTION");
 
-      const slidepanelHeadingThree = document.createElement("H4");
+      const slidepanelHeadingThree = document.createElement("H3");
       slidepanelHeadingThree.textContent = title;
 
       const slidepanelText = document.createElement("P");
@@ -47,29 +42,12 @@ fetch("./data/slider-data.json")
       panel.append(slidepanel);
       panelContainer.append(panel);
 
-      slidepanel.append(slidepanelImgLink);
-      slidepanelImgLink.append(slidepanelImg);
+      // slidepanel.append(slidepanelImgLink);
+      // slidepanelImgLink.append(slidepanelImg);
+      slidepanel.append(slidepanelImg);
       slidepanel.append(slidepanelCaption);
       slidepanelCaption.append(slidepanelHeadingThree);
       slidepanelCaption.append(slidepanelText);
-
-      const fancyBoxLinks = document.getElementsByClassName("fancybox");
-
-      Array.from(fancyBoxLinks).forEach((fancyLink) => {
-        fancyLink.addEventListener("onmouseenter", (e) => {
-          e.preventDefault();
-          if (fancyLink.classList.contains("fancybox")) {
-            fancyLink.nextSibling.classList.add("captionshow");
-          }
-        });
-
-        fancyLink.nextSibling.addEventListener("onmouseleave", (e) => {
-          e.preventDefault();
-          if (fancyLink.nextSibling.classList.contains("captionshow")) {
-            fancyLink.nextSibling.classList.remove("captionshow");
-          }
-        });
-      });
     });
   })
   .catch((error) => {
