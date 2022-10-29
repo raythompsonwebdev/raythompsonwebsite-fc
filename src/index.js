@@ -4,7 +4,7 @@ import "./sass/style.scss";
 import "./js/main";
 import "./js/contact";
 import projectTabs from "./js/projects";
-import "./js/slider";
+import slider from "./js/slider";
 
 window.addEventListener("load", () => {
   /**
@@ -21,6 +21,11 @@ window.addEventListener("load", () => {
    * Project Tabs
    *  */
   projectTabs();
+
+  /**
+   * Slider
+   *  */
+  slider();
 
   /**
    * Bar Chart

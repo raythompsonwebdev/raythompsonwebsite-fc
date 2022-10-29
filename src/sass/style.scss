@@ -1,3 +1,4 @@
+@import "partials/normalize";
 @import "partials/base";
 
 :root {
@@ -16,6 +17,7 @@ i.fa-linkedin {
   display: inline-block;
   width: 40px;
   text-align: center;
+  color: $color-black;
 }
 
 .menu-toggle {
@@ -153,7 +155,6 @@ i.fa-linkedin {
             color: $color-white-1;
             text-shadow: 1px 1px 1px $color-black;
           }
-
           /* selected link */
           &:active {
             background-color: $green-color;
@@ -521,9 +522,7 @@ main.site-content {
 
     figure.box:hover figcaption.cover {
       opacity: 1;
-
       transform: scale(1);
-
       cursor: pointer;
     }
 
@@ -564,41 +563,16 @@ main.site-content {
       padding: 0 0.25em;
       order: 0;
       flex: 0 0 auto;
+      display: grid;
+      grid-template-columns: 260px repeat(4, 1fr);
+      grid-template-rows: 260px 200px;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
 
       figure#page-image {
+        grid-area: 1 / 1 / 2 / 2;
         display: block;
-        float: left;
         margin: 0 0.5em 0 0;
-      }
-
-      ul#webactivitieslist {
-        display: block;
-        float: none;
-        width: 70%;
-        text-align: left;
-        margin: 2em auto;
-        font-family: $font-header, "" FontAwesome "";
-        li::marker {
-          content: "\f0a4";
-          font-size: 1.3em;
-        }
-
-        li {
-          line-height: 45px;
-          margin-bottom: 0.2em;
-          a {
-            display: block;
-            font-size: 1em;
-            color: $color-black;
-            text-align: left;
-            text-indent: 1em;
-            &:hover {
-              cursor: pointer;
-              color: $color-black;
-              font-weight: bold;
-            }
-          }
-        }
       }
 
       a {
@@ -620,17 +594,21 @@ main.site-content {
       }
 
       p {
+        grid-area: 1 / 2 / 2 / 6;
         font-size: 0.9em;
         line-height: 2.2em;
-        width: 89%;
         display: inline-block;
         background-color: $color-white-1;
         color: $color-black;
         margin-bottom: 0.25em;
         padding: 0.5em;
+        word-wrap: break-word;
+        white-space: normal;
       }
       p:last-of-type {
-        width: 100%;
+        grid-area: 2 / 1 / 3 / 6;
+        word-wrap: break-word;
+        white-space: normal;
       }
     }
 
@@ -674,7 +652,7 @@ main.site-content {
             .panel {
               width: 100%;
               height: 350px;
-              background-color: $bgcolor;
+              background-color: $color-white-1;
 
               h3 {
                 font-family: $font-header;
@@ -682,8 +660,8 @@ main.site-content {
                 padding: 0;
                 line-height: 40px;
                 height: 40px;
-                background-color: $green-color;
-                color: $color-black;
+                background-color: $color-black;
+                color: $color-white-1;
                 font-size: 0.75em;
                 width: 100%;
                 margin: 0;
@@ -703,7 +681,7 @@ main.site-content {
                   display: block;
                   width: auto;
                   height: auto;
-                  margin: 0 auto;
+                  margin: 0;
                   outline: 0;
                   padding: 0;
                   cursor: pointer;
@@ -723,14 +701,15 @@ main.site-content {
                   display: flex;
                   flex-direction: column;
                   justify-content: flex-start;
+                  width: 100%;
                   gap: 0.25em;
 
                   h3 {
                     width: 100%;
                     font-weight: normal;
                     font-size: 1em;
-                    background-color: $green-color;
-                    color: $color-black;
+                    background-color: $color-black;
+                    color: $color-white-1;
                     text-indent: 0;
                     margin: 0;
                     font-family: $font-header;
@@ -743,17 +722,21 @@ main.site-content {
                   }
 
                   p {
-                    width: 100%;
+                    width: 98%;
                     display: block;
                     margin: 0;
                     color: $bgcolor;
                     font-weight: normal;
                     font-size: 0.9em;
                     background-color: $color-white-1;
-                    padding: 0.5em;
-                    height: 100%;
+                    padding-left: 0.25em;
+                    padding-top: 0.25em;
+                    height: 99%;
                     line-height: 30px;
-                    font-family: "FontAwesome", $font-text;
+                    font-family: $font-text;
+                    word-wrap: break-word;
+                    white-space: pre-wrap;
+                    letter-spacing: 0.01em;
                   }
 
                   &:hover {
@@ -948,6 +931,7 @@ main.site-content {
         width: 98%;
         margin: 1em auto;
         padding: 0;
+        gap: 0.25em;
         h3 {
           font-family: $font-header;
           font-size: 1.15rem;
@@ -960,18 +944,18 @@ main.site-content {
         }
 
         address {
-          width: 90%;
+          width: 99%;
           flex: 0 0 auto;
           padding: 0.25em;
           margin: auto;
+          background-color: $color-white-1;
           ul {
             display: block;
             list-style: none;
             padding: 0;
             li {
               height: auto;
-              font-family: FontAwesome, $font-text;
-              color: $color-white-1;
+              font-family: "FontAwesome", $font-text;
 
               a {
                 width: auto;
@@ -980,6 +964,7 @@ main.site-content {
                 line-height: 40px;
                 margin: 0;
                 font-family: $font-header;
+                color: $color-black;
                 &:hover {
                   cursor: pointer;
                 }
@@ -1192,8 +1177,6 @@ main.site-content {
           font-weight: bold;
           cursor: pointer;
         }
-
-        /* selected link */
         &:active {
           background-color: $color-black;
           color: $color-white-1;
@@ -1563,12 +1546,12 @@ main.site-content {
 
                     p {
                       width: 100%;
-                      padding: 0.5em;
+
                       display: block;
                       margin: 0;
                       background-color: $bgcolor;
-                      font-weight: normal;
-                      font-size: 1.1em;
+                      font-weight: bold;
+                      font-size: 1em;
                       color: $color-black;
                       height: auto;
                       line-height: 35px;
@@ -1631,7 +1614,7 @@ main.site-content {
           }
           address {
             height: auto;
-            width: 90%;
+            width: 99%;
             margin: 0 auto;
             ul {
               display: block;
@@ -2053,7 +2036,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 1.1em;
                     }
                   }
@@ -2134,7 +2116,6 @@ main.site-content {
           }
           address {
             height: auto;
-            width: 90%;
             margin: 0 auto;
             ul {
               display: block;
@@ -2548,8 +2529,7 @@ main.site-content {
 
                     p {
                       width: 98%;
-                      padding: 0.5em;
-                      font-size: 1.1em;
+                      font-size: 1em;
                     }
                   }
                 }
@@ -2605,7 +2585,6 @@ main.site-content {
           }
           address {
             height: auto;
-            width: 90%;
             margin: 0 auto;
             ul {
               display: block;
@@ -2989,7 +2968,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 1em;
                     }
                   }
@@ -3054,7 +3032,7 @@ main.site-content {
           }
           address {
             height: auto;
-            width: 90%;
+
             margin: 0 auto;
             ul {
               display: block;
@@ -3557,7 +3535,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 1em;
                     }
                   }
@@ -3630,7 +3607,6 @@ main.site-content {
           }
           address {
             height: auto;
-            width: 90%;
             margin: 0 auto;
             ul {
               display: block;
@@ -3973,7 +3949,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 1em;
                     }
                   }
@@ -4029,7 +4004,7 @@ main.site-content {
           }
 
           address {
-            width: 90%;
+            height: auto;
             ul {
               padding: 0;
               li {
@@ -4325,7 +4300,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 0.9em;
                     }
                   }
@@ -4378,7 +4352,7 @@ main.site-content {
           }
 
           address {
-            width: 90%;
+            height: auto;
             ul {
               padding: 0;
               li {
@@ -4657,7 +4631,6 @@ main.site-content {
                     }
 
                     p {
-                      width: 100%;
                       font-size: 0.9em;
                       line-height: 25px;
                     }
@@ -4710,7 +4683,7 @@ main.site-content {
             font-size: 1.2rem;
           }
           address {
-            width: 95%;
+            height: auto;
             ul {
               padding: 0;
               li {
