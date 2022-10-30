@@ -73,21 +73,22 @@
   justify-content: flex-start;
 
   .site-title {
-    width: 65%;
+    width: 40%;
     flex: 0 1 auto;
     .logo {
-      font-size: 1.35rem;
-      text-align: center;
-      line-height: 50px;
+      font-size: 1.2rem;
+      text-align: left;
+      line-height: 40px;
       margin: 0;
-      font-weight: bold;
       font-family: $font-header;
+      text-indent: 0.25em;
     }
     p {
-      font-size: 0.7rem;
-      text-align: center;
-      line-height: 50px;
+      font-size: 0.9rem;
+      text-align: left;
+      line-height: 40px;
       margin: 0;
+      text-indent: 0.25em;
     }
   }
 
@@ -163,16 +164,16 @@
   }
 
   #social {
-    position: fixed;
-    z-index: 98;
-    top: 60px;
-    left: 69vw;
     width: 30%;
     list-style: none;
     flex: 1 0 auto;
+    width: 59%;
+    flex: 0 1 auto;
     display: flex;
-    flex-flow: row;
-    height: 30px;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: FontAwesome;
@@ -301,7 +302,7 @@
       vertical-align: bottom;
     }
     #banner-text {
-      width: calc(90% - 10px);
+      width: calc(100% - 10px);
       position: relative;
       background-color: $color-white-1;
       padding: 1%;
@@ -309,13 +310,15 @@
         width: auto;
         text-align: center;
         color: $color-black;
-        line-height: 65px;
+        line-height: 40px;
+        font-size: calc(1.4em + 2vw);
+        margin-bottom: 0.25em;
       }
       #banner-copy {
         font-size: 0.85em;
         width: 100%;
         color: $color-black;
-        line-height: 2em;
+        line-height: 1.8em;
       }
     }
   }
@@ -432,7 +435,7 @@
       backface-visibility: hidden;
       background-color: $color-white-1;
       width: 85%;
-      flex: 0 1 auto;
+      flex: 0 0 auto;
     }
 
     .project-caption {
@@ -555,7 +558,7 @@
       width: 98%;
       background-color: $bgcolor;
       padding: 0 0.25em;
-      height: 340px;
+      height: auto;
       order: 0;
       flex: 0 0 auto;
 
@@ -579,7 +582,7 @@
         padding: 0.5em;
         word-wrap: break-word;
         white-space: normal;
-        width: 98%;
+        width: 96%;
         text-align: justify;
       }
     }
@@ -651,7 +654,7 @@
 
                 .panel-image {
                   display: block;
-                  width: auto;
+                  width: 50%;
                   height: auto;
                   margin: 0;
                   outline: 0;
@@ -679,7 +682,7 @@
                   .slider-title {
                     width: 100%;
                     font-weight: normal;
-                    font-size: 1em;
+                    font-size: 0.7em;
                     background-color: $color-black;
                     color: $color-white-1;
                     text-indent: 0;
@@ -699,12 +702,10 @@
                     margin: 0;
                     color: $bgcolor;
                     font-weight: normal;
-                    font-size: 0.9em;
+                    font-size: 0.75em;
                     background-color: $color-white-1;
-                    padding-left: 0.25em;
-                    padding-top: 0.25em;
-                    height: 99%;
-                    line-height: 30px;
+                    height: 100%;
+                    line-height: 20px;
                     font-family: $font-text;
                     word-wrap: break-word;
                     white-space: pre-wrap;
@@ -949,7 +950,7 @@
           margin: 0;
           padding: 0;
           img {
-            max-width: 100%;
+            width: 100%;
             height: 100%;
             filter: grayscale(100%);
           }
@@ -999,7 +1000,7 @@
               border-bottom: 1px solid $color-white-1;
               margin-bottom: 0.5em;
               text-indent: 0;
-              font-size: 1em;
+              font-size: 0.8em;
               cursor: pointer;
             }
 
@@ -1019,7 +1020,7 @@
               width: 100%;
               padding: 0;
               margin: 0;
-              font-size: 0.9em;
+              font-size: 0.8em;
               outline: none;
               border: none;
             }
@@ -1028,7 +1029,7 @@
               line-height: 40px;
               height: 40px;
               width: 100%;
-              font-size: 1em;
+              font-size: 0.8em;
               outline: none;
               border: none;
             }
@@ -1060,6 +1061,7 @@
                 label {
                   width: 60%;
                   height: 100%;
+                  font-size: 0.85em;
                 }
 
                 input[type="radio"] {
@@ -1078,7 +1080,7 @@
               border: var(--comment-error);
               padding: 0;
               line-height: 20px;
-              font-size: 1.1em;
+              font-size: 0.9em;
             }
 
             .dirty:not(:focus):valid {
@@ -1097,7 +1099,7 @@
           width: 50%;
           height: 35px;
           margin: auto;
-          font-size: 1.1em;
+          font-size: 1em;
           background-color: $green-color;
           color: $color-white-1;
           outline: none;
@@ -1313,7 +1315,7 @@
       #banner-text {
         width: calc(50% - 5%);
         #banner-title {
-          font-size: 3em;
+          font-size: 2.3em;
           line-height: 80px;
         }
         #banner-copy {
@@ -1850,7 +1852,7 @@
         width: calc(50% - 5%);
         #banner-title {
           line-height: 80px;
-          font-size: 2.5rem;
+          font-size: 2.2rem;
         }
         #banner-copy {
           font-size: 1.15em;
@@ -2322,7 +2324,7 @@
         width: calc(50% - 5%);
         #banner-title {
           line-height: 80px;
-          font-size: 2.2rem;
+          font-size: 2.1rem;
         }
         #banner-copy {
           font-size: 1.1em;
@@ -2799,6 +2801,7 @@
         width: calc(60% - 5%);
         #banner-title {
           line-height: 80px;
+          font-size: 1.9em;
         }
         #banner-copy {
           font-size: 1em;
@@ -3269,82 +3272,39 @@
   }
 
   #site-content {
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-content: center;
-    gap: 1em 0;
-    min-height: 80vh;
-    width: 100%;
-    margin-bottom: 0.5em;
-
-    #banner,
-    #project-page,
-    #about-page,
-    #contact {
-      min-height: 90vh;
-      margin-bottom: 100px;
-    }
-
     #banner {
-      position: relative;
       flex: 0 0 auto;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
 
       #banner-text {
-        width: calc(70% - 5%);
-
+        width: calc(60% - 5%);
         #banner-title {
-          line-height: 60px;
+          line-height: 80px;
+          font-size: 1.8em;
         }
         #banner-copy {
-          font-size: 0.9em;
+          font-size: 1em;
+          line-height: 2.1em;
         }
       }
 
       figure {
-        position: relative;
+        margin: 1em auto;
       }
-
       figure > img {
-        width: auto;
+        display: block;
       }
     }
-
-    #banner::before {
-      width: 100%;
-    }
-
     #project-page {
-      display: flex;
-      flex: 0 0 auto;
-      flex-flow: column;
-      justify-content: flex-start;
-      align-items: center;
-
-      #project-page-title {
-        align-self: flex-start;
-        font-size: 1.3rem;
-      }
-
-      #project-page-container {
-        width: 100%;
-      }
-
       #project-tabs {
         margin: 0.5em 0;
         transition: all 0.2s ease-in 0s;
         li {
-          width: 13%;
+          width: 14%;
           font-family: $font-text;
           .project-tab {
             display: block;
-            font-size: 0.9em;
+            width: 100%;
+            font-size: 1em;
           }
         }
       }
@@ -3361,25 +3321,29 @@
       }
 
       .project {
-        width: 30.5%;
+        width: 31%;
       }
-
       .project-caption {
-        position: absolute;
-        gap: 0em;
-
+        opacity: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5em;
         p {
-          font-size: 0.85em;
-          line-height: 1.5em;
+          border: none;
+          font-size: 0.9em;
           width: 96%;
         }
+
         .caption-links {
           display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
           margin: 0 auto;
           width: 100%;
-          .caption-link {
-            font-size: 0.8em;
 
+          .caption-link {
+            width: 48%;
+            font-size: 0.9em;
             &:hover {
               font-weight: bold;
             }
@@ -3387,69 +3351,40 @@
         }
 
         .cover-title {
-          font-size: 1em;
-          line-height: 30px;
+          font-size: 1.3em;
         }
       }
-
-      .project:hover .project-caption {
-        opacity: 1;
-      }
-
-      .project > img {
-        margin: 0 auto;
-      }
-
-      .project:hover img {
-        margin: 0 auto;
-      }
     }
-
     #about-page {
+      width: 100%;
       display: flex;
-      flex-flow: column;
-      justify-content: flex-start;
-      align-items: center;
-
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-start;
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.3em;
       }
       #barchart {
         order: 1;
-        flex: 0 0 auto;
-        width: 80%;
-        height: auto;
-        display: inline-block;
-        margin-bottom: 1em;
-        padding: 0.25em;
-        font-family: $font-header;
+        width: 43%;
 
         h1 {
           height: 50px;
           font-size: 1.1em;
           line-height: 50px;
-          letter-spacing: 0.05em;
-          color: $color-white-1;
-          background: $color-black;
         }
 
         /* chart */
         #bars {
           display: flex;
           flex-flow: column;
-          width: 100%;
-          height: 100%;
-          list-style: none;
-          margin: 0;
-          padding: 0;
 
           li {
-            width: 100%;
             height: 50px;
-            margin: 0 0 0.5em;
+            text-align: center;
             .bar {
-              margin-left: 0;
-              left: 18.5%;
+              display: block;
+              left: 16.5%;
 
               &:hover {
                 cursor: pointer;
@@ -3457,14 +3392,13 @@
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 1.1em;
+                font-size: 0.9em;
                 width: 150px;
               }
             }
             span {
-              width: 18.5%;
-              line-height: 50px;
-              font-size: 1em;
+              width: 16.5%;
+              font-size: 0.8em;
             }
           }
         }
@@ -3472,20 +3406,20 @@
 
       /* Hero-Slider */
       #slider {
-        width: 90%;
+        width: 53%;
         height: auto;
-        padding: 0.5em;
+        padding: 0.25em;
         margin: 0 auto;
         float: right;
 
         h3 {
           height: 50px;
-          font-size: 1.15em;
+          font-size: 1.2em;
           line-height: 50px;
         }
 
         .hero-slider {
-          margin: 0;
+          width: 100%;
 
           .mask {
             height: 330px;
@@ -3495,15 +3429,12 @@
               width: 100%;
 
               .panel {
-                width: 100%;
                 height: 350px;
 
                 .slider-panel {
                   margin: 0;
-                  padding: 0;
 
                   .panel-image {
-                    width: auto;
                     display: block;
                     width: 50%;
                   }
@@ -3512,11 +3443,11 @@
                     margin: 0;
 
                     .slider-title {
-                      font-size: 1em;
+                      font-size: 0.9em;
                     }
 
                     .slider-text {
-                      font-size: 0.9em;
+                      font-size: 0.85em;
                     }
                   }
                 }
@@ -3525,15 +3456,14 @@
           }
         }
         #slids {
-          height: 40px;
           #next {
-            font-size: 1.1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
           }
           #prev {
-            font-size: 1.1em;
+            font-size: 1em;
             &:hover {
               cursor: pointer;
             }
@@ -3542,13 +3472,7 @@
       }
 
       #about-content {
-        width: 98%;
-        background-color: $bgcolor;
-        padding: 0 0.25em;
-        order: 0;
-        flex: 0 0 auto;
-        gap: 0.25em;
-        height: auto;
+        width: 100%;
 
         #about-page-image {
           width: auto;
@@ -3560,13 +3484,12 @@
         }
 
         p {
-          font-size: 1em;
+          font-size: 0.95em;
           padding: 0.5em;
-          line-height: 1.7em;
+          line-height: 1.9em;
         }
       }
     }
-
     #contact {
       width: 100%;
       padding: 0.5em;
@@ -3575,7 +3498,7 @@
       flex-flow: column;
       justify-content: flex-start;
       align-items: center;
-      gap: 2em;
+      gap: 4em;
       h2 {
         font-size: 1.3rem;
         text-align: left;
@@ -3585,16 +3508,13 @@
       }
       #contact-container {
         display: flex;
-        flex-flow: row wrap;
-        width: 80%;
-        margin: 1em auto;
+        flex-flow: row;
+        justify-content: flex-start;
+        width: 98%;
         #contact-details {
-          width: 98%;
+          width: 50%;
           flex: 0 0 auto;
-          flex-flow: column;
-          justify-content: flex-start;
-          margin: 1em auto;
-          padding: 0 1em;
+          margin: 0;
           h3 {
             font-size: 1.4rem;
           }
@@ -3610,7 +3530,7 @@
                 font-family: FontAwesome;
 
                 a {
-                  font-size: 1.1em;
+                  font-size: 1em;
                 }
               }
             }
@@ -3689,7 +3609,7 @@
                   label {
                     width: 45%;
                     height: 100%;
-                    font-size: 1.1em;
+                    font-size: 1em;
                   }
 
                   input[type="radio"] {
@@ -3705,11 +3625,13 @@
 
               #mycomments {
                 width: 100%;
+                font-size: 1em;
               }
             }
           }
           #submit {
             font-size: 1.1em;
+            width: 35%;
           }
         }
       }
@@ -3719,16 +3641,12 @@
   #site-footer {
     height: 50px;
     .footer-links {
-      list-style: none;
-      display: flex;
-      flex-flow: row;
-      justify-content: center;
+      width: 90%;
 
       .footer-link {
-        float: left;
-        width: 10%;
+        margin: 0;
+
         .footer-href {
-          line-height: 50px;
           font-size: 1em;
         }
       }
@@ -3743,13 +3661,14 @@
     font-size: 1.2em;
   }
   #site-wrapper {
-    width: 98%;
+    width: 100%;
   }
   .site-header {
     .site-title {
-      width: 33.3%;
+      width: 34%;
       .logo {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
+        line-height: 40px;
       }
       p {
         font-size: 1rem;
@@ -3810,8 +3729,9 @@
       #banner-text {
         width: calc(90% - 10px);
         #banner-title {
-          font-size: calc(1.5rem + 2vw);
-          line-height: 75px;
+          font-size: calc(1.7rem + 2vw);
+          line-height: 45px;
+          margin-bottom: 0.5em;
         }
         #banner-copy {
           font-size: 1em;
@@ -3830,7 +3750,8 @@
         justify-content: flex-start;
         align-items: stretch;
         padding: 0;
-        width: 98%;
+        width: 100%;
+        gap: 0.25em;
       }
       #project-tabs {
         margin: 0.5em 0;
@@ -3844,7 +3765,8 @@
         }
       }
       .project {
-        width: 47%;
+        width: 48%;
+        padding: 0.25em;
       }
 
       .project-caption {
@@ -3852,6 +3774,7 @@
           font-size: 0.9em;
           line-height: 1.5em;
           width: 98%;
+          line-height: 1.9em;
         }
 
         .caption-links {
@@ -4147,55 +4070,58 @@
   }
 }
 
-/* 480px */
+/* 30em - 599px -480px */
 @media screen and (min-width: 30em) and (max-width: 599px) {
   .menu-toggle {
     font-size: 1em;
-    left: calc(75% - 2%);
+    left: calc(77% - 2%);
   }
   .menu-toggle.hide {
     left: 110vw;
   }
 
   #site-wrapper {
-    width: 98%;
+    width: 100%;
     margin: 0;
   }
   .site-header {
     .site-title {
-      width: 65%;
+      width: 40%;
+
       .logo {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        line-height: 40px;
+        text-align: left;
+        text-indent: 0.25em;
       }
       p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        line-height: 40px;
+        text-align: left;
+        text-indent: 0.25em;
       }
     }
-
     .site-navigation {
-      left: 0;
       width: 100%;
-
       ul {
-        height: 100%;
-
         .tablink {
           a {
+            display: block;
             font-size: 1.1em;
           }
         }
       }
-
-      .nav-menu {
-        margin-bottom: 3em;
-      }
     }
+
     #social {
-      width: 33.3%;
+      height: 100%;
+      width: 66%;
       flex: 0 1 auto;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-end;
+      align-items: flex-end;
+
       position: unset;
       top: 0;
       left: 0;
@@ -4229,8 +4155,9 @@
       #banner-text {
         width: calc(90% - 10px);
         #banner-title {
-          line-height: 75px;
-          font-size: calc(1.4em + 2vw);
+          line-height: 50px;
+          font-size: calc(1.6em + 2vw);
+          margin-bottom: 0.5em;
         }
         #banner-copy {
           font-size: 0.95em;
@@ -4249,6 +4176,7 @@
         align-items: stretch;
         width: 100%;
         margin: auto;
+        gap: 0.2em;
       }
       #project-tabs {
         margin: 0.5em 0;
@@ -4263,11 +4191,12 @@
       }
 
       .project {
-        width: 75%;
+        width: 46%;
       }
 
       .project-caption {
         position: absolute;
+        gap: 0;
         p {
           font-size: 0.8em;
           line-height: 1.5em;
@@ -4286,6 +4215,7 @@
         .cover-title {
           font-size: 1em;
           width: 96%;
+          line-height: 35px;
         }
       }
     }
@@ -4340,7 +4270,7 @@
             }
             span {
               width: 18.5%;
-              font-size: 1em;
+              font-size: 0.9em;
             }
           }
         }
@@ -4348,7 +4278,7 @@
 
       /* Hero-Slider */
       #slider {
-        width: 90%;
+        width: 96%;
         margin: 1em auto;
         padding: 0.25em;
 
@@ -4375,17 +4305,19 @@
 
                   .panel-image {
                     display: block;
+                    width: 50%;
                   }
 
                   figcaption {
                     margin: 0;
 
                     .slider-title {
-                      font-size: 1.1em;
+                      font-size: 0.8em;
                     }
 
                     .slider-text {
                       font-size: 0.9em;
+                      line-height: 25px;
                     }
                   }
                 }
@@ -4396,13 +4328,13 @@
         #slids {
           font-size: 1em;
           #next {
-            font-size: 1em;
+            font-size: 0.9em;
             &:hover {
               cursor: pointer;
             }
           }
           #prev {
-            font-size: 1em;
+            font-size: 0.9em;
             &:hover {
               cursor: pointer;
             }
@@ -4410,6 +4342,7 @@
         }
       }
       #about-content {
+        height: auto;
         #about-page-image {
           width: auto;
 
@@ -4422,6 +4355,7 @@
         p {
           font-size: 1em;
           padding: 0.5em;
+          line-height: 1.6em;
         }
       }
     }
@@ -4432,7 +4366,7 @@
         font-size: 1.2rem;
       }
       #contact-container {
-        width: 90%;
+        width: 96%;
         margin: 1em auto;
         .hide-error {
           display: none;
@@ -4445,7 +4379,7 @@
           padding: 0;
 
           h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
 
           address {
@@ -4456,9 +4390,19 @@
                 height: auto;
 
                 a {
-                  font-size: 1em;
+                  font-size: 0.9em;
                 }
               }
+            }
+          }
+
+          #map-image {
+            width: 100%;
+            padding: 0;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
             }
           }
         }
@@ -4473,7 +4417,7 @@
               label,
               #comment-header {
                 display: block;
-                font-size: 1em;
+                font-size: 0.9em;
               }
 
               label[for="questionitem"],
@@ -4486,10 +4430,12 @@
               #myemail,
               #myurl {
                 line-height: 35px;
+                font-size: 0.9em;
               }
 
               select {
                 line-height: 40px;
+                font-size: 0.9em;
               }
 
               #myname:hover,
@@ -4547,47 +4493,56 @@
 
 /* 360px */
 @media screen and (min-width: 22.5em) and (max-width: 479px) {
+  .menu-toggle {
+    font-size: 1em;
+    left: calc(77% - 2%);
+  }
+  .menu-toggle.hide {
+    left: 110vw;
+  }
+
   #site-wrapper {
-    width: 98%;
+    width: 100%;
     margin: 0;
   }
   .site-header {
-    height: 100px;
     .site-title {
+      width: 40%;
+      text-align: left;
       .logo {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 40px;
+        text-align: left;
+        text-indent: 0.25em;
       }
       p {
         font-size: 0.8rem;
+        line-height: 40px;
+        text-align: left;
+        text-indent: 0.25em;
       }
     }
     .site-navigation {
-      height: 240px;
+      width: 100%;
       ul {
-        height: 100%;
         .tablink {
           a {
+            display: block;
             font-size: 1.1em;
           }
         }
       }
-
-      .nav-menu {
-        padding: 1em;
-        margin-bottom: 3em;
-      }
     }
 
     #social {
-      height: 45px;
-      width: 33.3%;
-      margin: 0;
-      padding: 0;
+      height: 100%;
+      width: 59%;
       flex: 0 1 auto;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-end;
-      list-style: none;
+      align-items: flex-end;
+
       position: unset;
       top: 0;
       left: 0;
@@ -4607,11 +4562,13 @@
       }
     }
   }
+
   #site-content {
+    height: auto;
     #banner {
       width: 100%;
       figure {
-        margin: 0 auto;
+        margin: 1em auto;
       }
       figure > img {
         display: block;
@@ -4619,8 +4576,9 @@
       #banner-text {
         width: calc(90% - 10px);
         #banner-title {
-          line-height: 65px;
-          font-size: calc(1.45em + 2vw);
+          line-height: 50px;
+          font-size: calc(1.5em + 2vw);
+          margin-bottom: 0.25em;
         }
         #banner-copy {
           font-size: 0.9em;
@@ -4634,17 +4592,19 @@
       }
       .projects {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: flex-start;
-        align-items: stretch;
+        align-items: center;
         width: 100%;
         margin: auto;
+        gap: 0.5em;
       }
       #project-tabs {
         margin: 0.5em 0;
         width: 100%;
 
         li {
+          width: 48%;
           .project-tab {
             font-size: 1em;
           }
@@ -4652,12 +4612,14 @@
       }
 
       .project {
-        width: 80%;
+        width: 70%;
       }
+
       .project-caption {
         position: absolute;
+        gap: 0;
         p {
-          font-size: 0.7em;
+          font-size: 0.8em;
           line-height: 1.5em;
           width: 96%;
         }
@@ -4667,12 +4629,14 @@
           width: 100%;
 
           .caption-link {
-            font-size: 0.8em;
+            font-size: 0.9em;
           }
         }
 
         .cover-title {
-          font-size: 1em;
+          font-size: 1.1em;
+          width: 96%;
+          line-height: 35px;
         }
       }
     }
@@ -4684,13 +4648,15 @@
       justify-content: space-between;
       align-items: center;
       h2 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
       }
 
       #barchart {
         order: 1;
         flex: 0 0 auto;
-        width: 95%;
+        width: 98%;
+        height: auto;
+        padding: 0.2em;
         font-family: $font-header;
 
         h1 {
@@ -4708,7 +4674,6 @@
           li {
             width: 100%;
             height: 50px;
-            text-align: center;
             position: relative;
             .bar {
               display: block;
@@ -4720,14 +4685,13 @@
 
               &:hover::after {
                 left: calc(100% + -10px);
-                font-size: 0.75em;
-                width: 150px;
+                line-height: 50px;
+                font-size: 1.1em;
               }
             }
             span {
               width: 18.5%;
-              line-height: 50px;
-              font-size: 1.1em;
+              font-size: 0.85em;
             }
           }
         }
@@ -4735,13 +4699,13 @@
 
       /* Hero-Slider */
       #slider {
-        width: 90%;
+        width: 96%;
         margin: 1em auto;
         padding: 0.25em;
 
         h3 {
           height: 40px;
-          font-size: 1rem;
+          font-size: 1.05rem;
           line-height: 40px;
         }
 
@@ -4751,7 +4715,6 @@
           .mask {
             height: 310px;
 
-            /* Position relative for scrolling */
             .slider-body {
               width: 100%;
 
@@ -4763,13 +4726,14 @@
 
                   .panel-image {
                     display: block;
+                    width: 50%;
                   }
 
                   figcaption {
                     margin: 0;
 
                     .slider-title {
-                      font-size: 1em;
+                      font-size: 0.8em;
                     }
 
                     .slider-text {
@@ -4783,6 +4747,7 @@
           }
         }
         #slids {
+          font-size: 1em;
           #next {
             font-size: 0.9em;
             &:hover {
@@ -4797,31 +4762,34 @@
           }
         }
       }
-    }
-    #about-content {
-      #about-page-image {
-        width: auto;
+      #about-content {
+        height: auto;
+        #about-page-image {
+          width: auto;
 
-        #page-image {
-          display: block;
-          margin: auto;
+          #page-image {
+            display: block;
+            margin: auto;
+          }
         }
-      }
 
-      p {
-        font-size: 1em;
-        padding: 0.5em;
+        p {
+          font-size: 1em;
+          padding: 0.5em;
+          line-height: 1.6em;
+          width: 95%;
+        }
       }
     }
 
     #contact {
       width: 100%;
+      h2 {
+        font-size: 1.2rem;
+      }
       #contact-container {
-        width: 94%;
+        width: 96%;
         margin: 1em auto;
-        h2 {
-          font-size: 1.1em;
-        }
         .hide-error {
           display: none;
         }
@@ -4829,28 +4797,39 @@
           line-height: 35px;
         }
         #contact-details {
-          width: 98%;
           margin: 1em auto;
           padding: 0;
+
           h3 {
             font-size: 1.2rem;
           }
+
           address {
             height: auto;
             ul {
               padding: 0;
               li {
                 height: auto;
+
                 a {
-                  font-size: 0.8em;
+                  font-size: 0.9em;
                 }
               }
             }
           }
+
+          #map-image {
+            width: 100%;
+            padding: 0;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
         #myform {
-          width: 96%;
-          background-color: $color-black;
+          width: 94%;
 
           #myform-fields {
             list-style: none;
@@ -4873,10 +4852,12 @@
               #myemail,
               #myurl {
                 line-height: 35px;
+                font-size: 0.9em;
               }
 
               select {
                 line-height: 40px;
+                font-size: 0.9em;
               }
 
               #myname:hover,
@@ -4898,6 +4879,7 @@
                   height: 30px;
                   label {
                     width: 60%;
+                    font-size: 90%;
                   }
 
                   input[type="radio"] {
@@ -4909,7 +4891,6 @@
           }
           #submit {
             font-size: 1em;
-            width: 45%;
           }
         }
       }
@@ -4919,13 +4900,13 @@
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 98%;
+      width: 94%;
 
       .footer-link {
         margin: 0;
 
         .footer-href {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
       }
     }
