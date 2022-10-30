@@ -92,6 +92,7 @@ window.addEventListener("load", () => {
     const chartLink = document.createElement("A");
     chartLink.setAttribute("href", `${element.link}`);
     chartLink.setAttribute("title", `${element.title}`);
+    chartLink.setAttribute("class", "bar-link");
 
     chartBar.append(chartLink);
 

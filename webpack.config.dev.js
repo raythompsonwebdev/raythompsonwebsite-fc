@@ -38,7 +38,26 @@ export default {
       // rules for css
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  postcssPresetEnv({
+                    /* use stage 3 features + css nesting rules */
+                    stage: 3,
+                    features: {
+                      "nesting-rules": true,
+                    },
+                  }),
+                ],
+              },
+            },
+          },
+        ],
       },
       // rules for sass
       {

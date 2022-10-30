@@ -1,5 +1,7 @@
 export default function projectTabs() {
-  const boxes = document.querySelectorAll(".box");
+  const boxes = document.querySelectorAll(".project");
+  // eslint-disable-next-line no-console
+  console.log(boxes);
   const tabs = document.querySelectorAll(".project-tab");
 
   const arrayTabs = Array.from(tabs);

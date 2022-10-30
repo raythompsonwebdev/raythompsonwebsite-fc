@@ -45,7 +45,7 @@
             <a href="#project-page" title="projects page">Projects</a>
           </li>
           <li class="tablink">
-            <a href="#about-content" title="about page">About</a>
+            <a href="#about-page" title="about page">About</a>
           </li>
           <li class="tablink">
             <a href="#contact" title="contact page">Contact</a>
@@ -85,16 +85,16 @@
       </button>
     </header>
 
-    <main class="site-content">
+    <main id="site-content">
       <!--Banner-->
       <div id="banner" class="tabcontent scrolled">
-        <article id="bannertext">
-          <h1>Hello, welcome to my portfolio.</h1>
-          <p>
+        <article id="banner-text">
+          <h1 id="banner-title">Hello, welcome to my portfolio.</h1>
+          <p id="banner-copy">
             I am a web developer based in East London and I love to create great
             looking web applications and websites that follow the latest web standards and best practices, are
             performant, secure and can be viewed on most browsers and mobile
-            devices.
+            devices. Click below to see some of my work.
           </p>
 
 
@@ -104,7 +104,7 @@
 
       <!--Projects-->
       <section id="project-page" class="tabcontent">
-        <h2>Projects</h2>
+        <h2 id="project-page-title">Projects</h2>
 
         <div id="project-page-container">
           <ul id="project-tabs">
@@ -145,8 +145,8 @@
             </li>
           </ul>
 
-          <div class="parent">
-            <figure class="div1 box" data-id="react" data-all="all">
+          <div class="projects">
+            <figure class="div1 project" data-id="react" data-all="all">
               <img src="./images/Projects/webp/shoestore-webapp-380.webp" srcset="./images/Projects/webp/shoestore-webapp-380.webp 380w, 
                   ./images/Projects/webp/shoestore-webapp-360.webp 360w,
                   ./images/Projects/webp/shoestore-webapp-340.webp 340w,
@@ -158,18 +158,18 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="Shoestore Website Home Page" class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Shoestore</h3>
-                <p>Online mens, womens and childrens shoes and accessories web app in progress. </p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://shoestorewebapp.herokuapp.com/" target="_blank"
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Shoestore</h3>
+                <p>Online shoes and accessories store web app in progress. </p>
+                <span class="caption-links">
+                  <a class="caption-link" href="https://shoestorewebapp.herokuapp.com/" target="_blank"
                     title="Link to shoestore" rel="noopener">Shoestore</a>
-                  <a class="cover-link" href="https://github.com/raythompsonwebdev/shoestore" target="_blank"
+                  <a class="caption-link" href="https://github.com/raythompsonwebdev/shoestore" target="_blank"
                     title="Link to shoestore github repo" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div2 box" data-id="vuejs" data-all="all">
+            <figure class="div2 project" data-id="vuejs" data-all="all">
               <img src="./images/Projects/webp/travel-agency-webapp-380.webp" srcset="./images/Projects/webp/travel-agency-webapp-380.webp 380w,
                   ./images/Projects/webp/travel-agency-webapp-360.webp 360w,
                   ./images/Projects/webp/travel-agency-webapp-340.webp 340w,
@@ -181,18 +181,18 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Travel Agency Home Page"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Travel Agency</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Travel Agency</h3>
                 <p>Worldwide Holiday package reservation booking app in progress.</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://travelagencywebapp.herokuapp.com/" target="_blank"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://travelagencywebapp.herokuapp.com/" target="_blank"
                     title="Link to travel agency" rel="noopener">Travel Agency</a>
-                  <a class="cover-link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
+                  <a class="caption-link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
                     title="Link to travel agency github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div3 box" data-id="php" data-all="all">
+            <figure class="div3 project" data-id="php" data-all="all">
               <img src="./images/Projects/webp/mannering-music-380.webp" srcset="./images/Projects/webp/mannering-music-380.webp 380w,
                   ./images/Projects/webp/mannering-music-360.webp 360w,
                   ./images/Projects/webp/mannering-music-340.webp 340w,
@@ -204,18 +204,19 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="mannering-musicmvc-home-page" class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Mannering Music</h3>
-                <p>Music album review website in progress. Login, register and listen to album audio tracks.</p>
-                <span id="cover-links">
-                  <a class="cover-link" rel="noopener" href="https://mannering.raythompsonwebdev.co.uk/"
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Mannering Music</h3>
+                <p>Music album review website in progress. Listen to album audio tracks.</p>
+                <span class="caption-links">
+                  <a class="caption-link" rel="noopener" href="https://mannering.raythompsonwebdev.co.uk/"
                     title="Link to mannering music web app" target="_blank">Mannering Music</a>
-                  <a class="cover-link" rel="noopener" href="https://github.com/raythompsonwebdev/manneringmusicmvc.com"
+                  <a class="caption-link" rel="noopener"
+                    href="https://github.com/raythompsonwebdev/manneringmusicmvc.com"
                     title="Link to mannering music github repo" target="_blank">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div4 box" data-id="javascript" data-all="all">
+            <figure class="div4 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/random-quote-generator-380.webp" srcset="./images/Projects/webp/random-quote-generator-380.webp 380w,
                   ./images/Projects/webp/random-quote-generator-360.webp 360w,
                   ./images/Projects/webp/random-quote-generator-340.webp 340w,
@@ -227,16 +228,16 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
                 alt="Javascript Random Quote Generator" class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Random Quote Generator</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Random Quote Generator</h3>
                 <p>Display random quotes from famous people and send quote in tweet!</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://codepen.io/raythompweb/full/QryrEv" target="_blank"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://codepen.io/raythompweb/full/QryrEv" target="_blank"
                     title="Link to random quote generator on code pen" rel="noopener">Quote Generator</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div5 box" data-id="javascript" data-all="all">
+            <figure class="div5 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/javascript-weather-app-380.webp" srcset="./images/Projects/webp/javascript-weather-app-380.webp 380w,
                   ./images/Projects/webp/javascript-weather-app-360.webp 360w,
                   ./images/Projects/webp/javascript-weather-app-340.webp 340w,
@@ -248,18 +249,18 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Weather App"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Weather App</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Weather App</h3>
                 <p>Latest weather information for your current location using open weather api.</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://codepen.io/raythompweb/full/BxKxVL" target="_blank"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://codepen.io/raythompweb/full/BxKxVL" target="_blank"
                     title="Link to weather app on codepen" rel="noopener">Weather App</a>
-                  <a class="cover-link" href="https://github.com/raythompsonwebdev/FCC-Weather-App" target="_blank"
+                  <a class="caption-link" href="https://github.com/raythompsonwebdev/FCC-Weather-App" target="_blank"
                     title="Link to weather app github repo" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div6 box" data-id="htmlcss" data-all="all">
+            <figure class="div6 project" data-id="htmlcss" data-all="all">
               <img src="./images/Projects/webp/obama-tribute-page-380.webp" srcset="./images/Projects/webp/obama-tribute-page-380.webp 380w,
                   ./images/Projects/webp/obama-tribute-page-360.webp 360w,
                   ./images/Projects/webp/obama-tribute-page-340.webp 340w,
@@ -271,17 +272,17 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Responsive Tribute Page"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Tribute Page</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Tribute Page</h3>
                 <p>Responsive design tribute page to Ex-president Barack Obama. </p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://raythompsonwebdev.github.io/fc-tribute-page"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://raythompsonwebdev.github.io/fc-tribute-page"
                     title="Link to Obama tribute page  on codepen" target="_blank" rel="noopener">Obama Tribute</a>
 
                 </span>
               </figcaption>
             </figure>
-            <figure class="div7 box" data-id="javascript" data-all="all">
+            <figure class="div7 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/drum-machine-380.webp" srcset="./images/Projects/webp/drum-machine-380.webp 380w,
                   ./images/Projects/webp/drum-machine-360.webp 360w,
                   ./images/Projects/webp/drum-machine-340.webp 340w,
@@ -293,18 +294,18 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Drum Machine"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Javascript Drum Machine</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Javascript Drum Machine</h3>
                 <p>Activated drum sounds using either keyboard keys or mouse pointer.</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://codepen.io/raythompweb/pen/GREEoYR"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://codepen.io/raythompweb/pen/GREEoYR"
                     title="Link to drum machine on codepen" target="_blank" rel="noopener">Drum Machine</a>
-                  <a class="cover-link" href="https://github.com/raythompsonwebdev/fcc-react-drum-machine"
+                  <a class="caption-link" href="https://github.com/raythompsonwebdev/fcc-react-drum-machine"
                     title="Link to javascript drum machine github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div8 box" data-id="javascript" data-all="all">
+            <figure class="div8 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/crimechecker-380.webp" srcset="./images/Projects/webp/crimechecker-380.webp 380w,
                   ./images/Projects/webp/crimechecker-360.webp 360w,
                   ./images/Projects/webp/crimechecker-340.webp 340w,
@@ -316,18 +317,18 @@
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Crime Checker app"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Crime Checker</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Crime Checker</h3>
                 <p>Check crime in your area app created with software developer Orian Paled</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://fac-23.github.io/preA-week2-http-rayorian/"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://fac-23.github.io/preA-week2-http-rayorian/"
                     title="Link to Crime Checker App" target="_blank" rel="noopener">Crime Checker</a>
-                  <a class="cover-link" href="https://github.com/fac-23/preA-week2-http-rayorian"
+                  <a class="caption-link" href="https://github.com/fac-23/preA-week2-http-rayorian"
                     title="Link to Crime Checker github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div9 box" data-id="javascript" data-all="all">
+            <figure class="div9 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/local-storage-todo-app-380.webp" srcset="./images/Projects/webp/local-storage-todo-app-380.webp 380w,
                   ./images/Projects/webp/local-storage-todo-app-360.webp 360w,
                   ./images/Projects/webp/local-storage-todo-app-340.webp 340w,
@@ -338,19 +339,19 @@
                   (min-width: 37.5em) and (max-width: 735px) 320px,
                   (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy" alt="Todo app"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Todo App</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Todo App</h3>
                 <p>Todo list app created with Founders & Coders software developer Miah Bates</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://fac-23.github.io/preA-testing-raymiah/"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://fac-23.github.io/preA-testing-raymiah/"
                     title="Link to Todo web application" target="_blank" rel="noopener">To Do App</a>
-                  <a class="cover-link" href="https://github.com/fac-23/preA-testing-raymiah"
+                  <a class="caption-link" href="https://github.com/fac-23/preA-testing-raymiah"
                     title="Link to Todo web application github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div10 box" data-id="react" data-all="all">
+            <figure class="div10 project" data-id="react" data-all="all">
               <img src="./images/Projects/webp/greenfootprints-380.webp" srcset="./images/Projects/webp/greenfootprints-380.webp 380w,
                   ./images/Projects/webp/greenfootprints-360.webp 360w,
                   ./images/Projects/webp/greenfootprints-340.webp 340w,
@@ -361,19 +362,19 @@
                   (min-width: 37.5em) and (max-width: 735px) 320px,
                   (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy"
                 alt="Image of react random quote generator" class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">Greenfootprints</h3>
+              <figcaption class="project-caption">
+                <h3 class="cover-title">Greenfootprints</h3>
                 <p>Recycling website displaying advice and information on recycling</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://greenfootprints.raythompsonwebdev.co.uk/"
+                <span class="caption-links">
+                  <a class="caption-link" href="https://greenfootprints.raythompsonwebdev.co.uk/"
                     title="Link to Greenfootprints website" target="_blank" rel="noopener">Recycling Website</a>
-                  <a class="cover-link" href="https://github.com/raythompsonwebdev/greenfootprints"
+                  <a class="caption-link" href="https://github.com/raythompsonwebdev/greenfootprints"
                     title="Link to Greenfootprints website github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div11 box" data-id="javascript" data-all="all">
+            <figure class="div11 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/oli-ray-agency-380.webp" srcset="./images/Projects/webp/oli-ray-agency-380.webp 380w,
                   ./images/Projects/webp/oli-ray-agency-360.webp 360w,
                   ./images/Projects/webp/oli-ray-agency-340.webp 340w,
@@ -384,14 +385,14 @@
                   (min-width: 37.5em) and (max-width: 735px) 320px,
                   (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy" alt="OliRay web agency"
                 class="projectImg" />
-              <figcaption class="cover">
-                <h3 class="cert-title">OliRay Agency</h3>
-                <p>Web Agency website created with fellow Founders & Coders software developer Oli Jones</p>
-                <span id="cover-links">
-                  <a class="cover-link" href="https://fac-23.github.io/preA-week2-rayOli/"
+              <figcaption class="project-caption">
+                <h3 class="cover-title">OliRay Agency</h3>
+                <p>Web Agency website created with software developer Oli Jones</p>
+                <span class="caption-links">
+                  <a class="caption-link" href="https://fac-23.github.io/preA-week2-rayOli/"
                     title="Link to react random quote generator on codepen" target="_blank" rel="noopener">OliRay Web
                     Agency</a>
-                  <a class="cover-link" href="https://github.com/fac-23/preA-week2-rayOli"
+                  <a class="caption-link" href="https://github.com/fac-23/preA-week2-rayOli"
                     title="Link to OliRay website github repo" target="_blank" rel="noopener">GitHub
                     repo</a>
                 </span>
@@ -402,13 +403,13 @@
       </section>
 
       <!--About-->
-      <section id="about-content" class="tabcontent">
-        <h2>About Page</h2>
+      <section id="about-page" class="tabcontent">
+        <h2 id="about-page-title">About Page</h2>
 
-        <div id="abouttext">
-          <figure id="page-image">
-            <img id="pageImage" src="./images/profile/webp/github-image-200.webp" loading="lazy" width="250"
-              height="250" srcset="./images/profile/webp/github-image-200.webp 200w,
+        <div id="about-content">
+
+          <figure id="about-page-image">
+            <img id="page-image" src="./images/profile/webp/github-image-200.webp" loading="lazy" srcset="./images/profile/webp/github-image-200.webp 200w,
                   ./images/profile/webp/github-image-130.webp 130w,
                   ./images/profile/webp/github-image-120.webp 120w,
                   ./images/profile/webp/github-image-105.webp 105w" sizes="(min-width:  90em) 130px, 
@@ -420,25 +421,21 @@
                   (min-width: 22.5em) and (max-width: 479px) 105px, 25vw" alt="Image of raythompsonwebdev" />
           </figure>
           <p>
-            I was inspired to start coding and dabbling in web development
-            after attending a part-time web design course in my local area,
-            where I learned basic Javascript, HTML, CSS, building websites.
-
+            I was inspired to start dabbling in web development after attending a part-time web design course
+            in my local area, where I learned basic Javascript, HTML, CSS, building websites.
             When I am not at my day job as a revenues officer I have spent much of my free time getting into learning
-            web development and programming. I create websites and web applications solve coding challenges , attending
-            meet ups, courses and events, participating as much as I can in the web development community.
-            <br />
-            My current languages of choice are Javascript and PHP. I have created websites and web applications from
-            scratch and using tools like WordPress, React, VueJS, Gatsby, build tools like Webpack, databases like MySQL
-            and MungoDB, design tools and much more.
+            web development and coding.<br />
+            I like using coding languages Javascript and PHP and have created websites and web applications
+            from scratch and using tools like WordPress, React, VueJS, Gatsby, build tools like Webpack, databases like
+            MySQL
+            and MungoDB, and much more.<br />
+            I also like solve coding challenges, attending meet ups, courses and events and try to participate as much
+            as I can in the web development community.
+            I enjoy the challenge of building ideas into applications and learning new ways of implementing ideas
+            and finding solutions to problems i come across whilst developing. I am enthusiastic about programming and
+            aspire to combine acquired skills and knowledge with any future learning towards becoming a full-time
+            software developer.
 
-          </p>
-          <p>
-
-            I enjoy the challenge of creating website or web applications, keeping up with changes in web development
-            and finding solutions to coding problems. I am enthusiastic about programming and web development and aspire
-            to combine acquired skills and knowledge with any future learning towards becoming a full-time software
-            developer.
           </p>
 
         </div>
@@ -468,22 +465,22 @@
 
       <!--Outro-->
       <section id="contact" class="tabcontent">
-        <h2>Contact</h2>
+        <h2 id="contact-title">Contact</h2>
         <div id="contact-container">
           <form id="myform" name="theform" class="group" auto-complete="off">
             <span id="form-error" class="hide-error"></span>
-            <ol>
-              <li>
+            <ol id="myform-fields">
+              <li class="myform-field">
                 <label for="myname">Name *</label>
                 <input type="text" name="myname" id="myname" title="enter your first name here" required
                   pattern="^[A-Za-z ]+$" aria-describedby="form-error" />
               </li>
-              <li>
+              <li class="myform-field">
                 <label for="myemail">Email *</label>
                 <input type="email" name="myemail" id="myemail" title="enter your email address here" required min="6"
                   max="32" aria-describedby="form-error" />
               </li>
-              <li>
+              <li class="myform-field">
                 <label for="reference">How did you hear about this site?</label>
                 <select name="reference" id="reference">
                   <option>Choose...</option>
@@ -494,28 +491,28 @@
                   <option value="discord">Discord</option>
                 </select>
               </li>
-              <li>
+              <li class="myform-field">
                 <div id="comment-header">Comment Type</div>
-                <ol id="comment-box">
-                  <li>
+                <ol id="comment-fields">
+                  <li class="comment-field">
                     <label for="questionitem">Website :</label>
                     <input type="radio" name="requesttype" value="question" id="questionitem" />
                   </li>
-                  <li>
+                  <li class="comment-field">
                     <label for="blogitem">Blog :</label>
                     <input type="radio" name="requesttype" value="blog" id="blogitem" />
                   </li>
-                  <li>
+                  <li class="comment-field">
                     <label for="generalitem">General :</label>
                     <input type="radio" name="requesttype" value="general" id="generalitem" />
                   </li>
                 </ol>
               </li>
-              <li>
+              <li class="myform-field">
                 <label for="mycomments">Comment</label>
                 <textarea name="mycomments" id="mycomments" placeholder="Enter your comment here" rows="5"></textarea>
               </li>
-              <li>
+              <li class="myform-field">
                 <input type="submit" value="Submit" id="submit" class="g-recaptcha"
                   data-sitekey="6LcCTKUUAAAAAHHFl62NWje1Fe2Wt_zD4xoIlRJv" data-callback='onSubmit'
                   data-action='submit' />
@@ -523,7 +520,7 @@
             </ol>
           </form>
           <section id="contact-details">
-            <h3>Contact Links</h3>
+            <h3>Contact Details</h3>
             <address>
               <ul>
                 <li>
@@ -563,19 +560,19 @@
     </main>
     <br />
     <!--Footer-->
-    <footer class="site-footer">
-      <ul>
-        <li class="tablink">
-          <a href="#banner" title="Home page">Home</a>
+    <footer id="site-footer">
+      <ul class="footer-links">
+        <li class="footer-link">
+          <a class="footer-href" href="#banner" title="Home page">Home</a>
         </li>
-        <li class="tablink">
-          <a href="#about_content" title="About page">About</a>
+        <li class="footer-link">
+          <a class="footer-href" href="#about_content" title="About page">About</a>
         </li>
-        <li class="tablink">
-          <a href="#projects" title="Projects page">Projects</a>
+        <li class="footer-link">
+          <a class="footer-href" href="#projects" title="Projects page">Projects</a>
         </li>
-        <li class="tablink">
-          <a href="#contact" title="Contact page">Contact</a>
+        <li class="footer-link">
+          <a class="footer-href" href="#contact" title="Contact page">Contact</a>
         </li>
       </ul>
     </footer>

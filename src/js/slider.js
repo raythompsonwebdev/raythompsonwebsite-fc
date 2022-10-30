@@ -99,16 +99,16 @@ export default function slider() {
     const slidepanelCaption = document.createElement("FIGCAPTION");
 
     const slidepanelHeadingThree = document.createElement("H3");
+    slidepanelHeadingThree.setAttribute("class", "slider-title");
     slidepanelHeadingThree.textContent = title;
 
     const slidepanelText = document.createElement("P");
+    slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = `${text}`;
 
     panel.append(slidepanel);
     panelContainer.append(panel);
 
-    // slidepanel.append(slidepanelImgLink);
-    // slidepanelImgLink.append(slidepanelImg);
     slidepanel.append(slidepanelImg);
     slidepanel.append(slidepanelCaption);
     slidepanelCaption.append(slidepanelHeadingThree);
