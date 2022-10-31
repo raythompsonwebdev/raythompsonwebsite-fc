@@ -555,12 +555,12 @@
     }
 
     #about-content {
-      width: 98%;
+      width: 100%;
       background-color: $bgcolor;
       padding: 0 0.25em;
       height: auto;
       order: 0;
-      flex: 0 0 auto;
+      flex: 0 1 auto;
 
       #about-page-image {
         float: left;
@@ -582,7 +582,7 @@
         padding: 0.5em;
         word-wrap: break-word;
         white-space: normal;
-        width: 96%;
+        width: 99%;
         text-align: justify;
       }
     }
@@ -648,18 +648,17 @@
                 padding: 0;
                 position: relative;
                 height: 100%;
-                display: flex;
-                flex-flow: row;
+                /* display: flex;
+                 flex-flow: row; */
                 gap: 0.25em;
 
                 .panel-image {
                   display: block;
-                  width: 50%;
-                  height: auto;
+                  width: 100%;
+                  height: 100%;
                   margin: 0;
                   outline: 0;
                   padding: 0;
-                  cursor: pointer;
                 }
 
                 .captionshow {
@@ -670,6 +669,9 @@
                 }
 
                 figcaption {
+                  display: none;
+                  position: absolute;
+                  bottom: 0;
                   transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
                   margin: 0;
                   padding: 0;
@@ -678,28 +680,33 @@
                   justify-content: flex-start;
                   width: 100%;
                   gap: 0.25em;
+                  left: 0;
+                  cursor: pointer;
 
                   .slider-title {
                     width: 100%;
                     font-weight: normal;
-                    font-size: 0.7em;
-                    background-color: $color-black;
-                    color: $color-white-1;
+                    font-size: 0.9em;
+                    color: $color-black;
+                    background-color: $color-white-1;
                     text-indent: 0;
-                    margin: 0;
+                    margin: 0 auto;
                     font-family: $font-header;
                     text-align: center;
                     line-height: 40px;
                     &:hover {
                       cursor: pointer;
                       font-weight: bold;
+                      text-shadow: 1px 1px 1px $color-black;
+                      color: $color-white-1;
                     }
                   }
 
                   .slider-text {
                     width: 98%;
+                    padding: 0.5em;
                     display: block;
-                    margin: 0;
+                    margin: 0 auto;
                     color: $bgcolor;
                     font-weight: normal;
                     font-size: 0.75em;
@@ -708,8 +715,9 @@
                     line-height: 20px;
                     font-family: $font-text;
                     word-wrap: break-word;
-                    white-space: pre-wrap;
+                    /*white-space: pre-wrap;*/
                     letter-spacing: 0.01em;
+                    text-align: center;
                   }
 
                   &:hover {
@@ -722,6 +730,7 @@
         }
       }
       #slids {
+        top: 150px;
         margin: 0;
         list-style: outside none none;
         height: 40px;
@@ -734,18 +743,18 @@
         position: absolute;
         bottom: 4px;
         justify-content: space-between;
+        font-size: 3em;
         #next {
-          width: 15%;
-          line-height: 40px;
-          height: 40px;
-          background-color: $color-black;
-          color: $color-white-1;
+          width: 60px;
+          line-height: 60px;
+          height: 60px;
+          color: $color-black;
+          font-weight: bolder;
           outline: none;
           border: none;
           padding: 0;
           margin: 0;
           text-shadow: 1px 1px 1px $color-black;
-          font-size: 0.9em;
           &:focus {
             color: $color-black;
             background-color: $green-color;
@@ -759,17 +768,16 @@
           }
         }
         #prev {
-          width: 15%;
-          line-height: 40px;
-          height: 40px;
-          background-color: $color-black;
-          color: $color-white-1;
+          width: 60px;
+          line-height: 60px;
+          height: 60px;
+          font-weight: bolder;
+          color: $color-black;
           outline: none;
           border: none;
           padding: 0;
           margin: 0;
           text-shadow: 1px 1px 1px $color-black;
-          font-size: 0.9em;
           &:focus {
             color: $color-black;
             background-color: $green-color;
@@ -866,7 +874,6 @@
             line-height: 50px;
             height: 50px;
             font-size: 0.7em;
-            text-indent: 0.25em;
             color: $color-white-1;
             z-index: 3;
             text-shadow: 1px 1px 1px $color-black;
@@ -1200,7 +1207,7 @@
     .site-title {
       width: 33.3%;
       .logo {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         line-height: 40px;
         text-align: center;
       }
@@ -1474,7 +1481,7 @@
       }
 
       #about-content {
-        width: 98%;
+        width: 100%;
         background-color: $bgcolor;
         padding: 0 0.25em;
         order: 0;
@@ -1498,6 +1505,7 @@
           padding: 0.5em;
           word-wrap: break-word;
           white-space: normal;
+          width: 99%;
         }
       }
 
@@ -1534,20 +1542,23 @@
                   }
 
                   figcaption {
-                    margin: 0;
+                    margin: 0 auto;
+                    display: none;
+
                     .slider-title {
-                      font-size: 1em;
+                      font-size: 1.2em;
                     }
 
                     .slider-text {
-                      width: 100%;
+                      width: 98%;
+                      padding: 0.5em;
                       display: block;
-                      margin: 0;
+                      margin: 0 auto;
                       font-weight: bold;
                       font-size: 0.9em;
                       color: $color-black;
                       height: auto;
-                      line-height: 35px;
+                      line-height: 30px;
                       font-family: FontAwesome, $font-text;
                     }
                   }
@@ -1558,6 +1569,7 @@
         }
         #slids {
           font-size: 1.2em;
+          top: 150px;
           #next {
             width: 15%;
             font-size: 1.1em;
@@ -1620,7 +1632,7 @@
                 a {
                   width: auto;
                   display: inline-block;
-                  font-size: 1.2em;
+                  font-size: 1.1em;
                   line-height: 40px;
                   color: $color-black;
                 }
@@ -1776,12 +1788,12 @@
     .site-title {
       width: 33.3%;
       .logo {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         line-height: 40px;
         text-align: center;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
         line-height: 40px;
       }
@@ -1851,11 +1863,11 @@
       #banner-text {
         width: calc(50% - 5%);
         #banner-title {
-          line-height: 80px;
+          line-height: 60px;
           font-size: 2.2rem;
         }
         #banner-copy {
-          font-size: 1.15em;
+          font-size: 1em;
           line-height: 1.8em;
         }
       }
@@ -1939,7 +1951,7 @@
       }
       #barchart {
         order: 1;
-        width: 35%;
+        width: 40%;
 
         h1 {
           height: 50px;
@@ -1980,7 +1992,7 @@
 
       /* Hero-Slider */
       #slider {
-        width: 60%;
+        width: 55%;
         height: auto;
         padding: 0.25em;
         float: right;
@@ -2010,14 +2022,17 @@
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 1.1em;
+                      font-size: 1.2em;
                     }
 
                     .slider-text {
-                      font-size: 1em;
+                      width: 98%;
+                      padding: 0.5em;
+                      font-size: 0.9em;
+                      line-height: 30px;
                     }
                   }
                 }
@@ -2026,6 +2041,7 @@
           }
         }
         #slids {
+          top: 150px;
           #next {
             font-size: 1.1em;
             &:hover {
@@ -2042,7 +2058,7 @@
       }
 
       #about-content {
-        width: 98%;
+        width: 100%;
 
         #about-page-image {
           width: auto;
@@ -2057,6 +2073,7 @@
           font-size: 1.05em;
           padding: 0.5em;
           line-height: 2.1em;
+          width: 99%;
         }
       }
     }
@@ -2103,7 +2120,7 @@
                 font-family: FontAwesome, $font-text;
 
                 a {
-                  font-size: 1.2em;
+                  font-size: 1.1em;
                 }
               }
             }
@@ -2251,14 +2268,16 @@
   .site-header {
     .site-title {
       width: 33%;
-      text-align: center;
+
       .logo {
-        font-size: 2rem;
+        font-size: 1.7rem;
         line-height: 40px;
+        text-align: center;
       }
       p {
         font-size: 1rem;
         line-height: 40px;
+        text-align: center;
       }
     }
     .site-navigation {
@@ -2323,11 +2342,11 @@
       #banner-text {
         width: calc(50% - 5%);
         #banner-title {
-          line-height: 80px;
+          line-height: 60px;
           font-size: 2.1rem;
         }
         #banner-copy {
-          font-size: 1.1em;
+          font-size: 1em;
           line-height: 2.1em;
         }
       }
@@ -2467,7 +2486,7 @@
           font-size: 1em;
           padding: 0.5em;
           line-height: 2em;
-          width: 97%;
+          width: 99%;
         }
       }
 
@@ -2503,18 +2522,18 @@
 
                   .panel-image {
                     display: block;
-                    width: 60%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 1em;
+                      font-size: 1.2em;
                     }
 
                     .slider-text {
                       width: 98%;
+                      padding: 0.5em;
                       font-size: 0.9em;
                       line-height: 25px;
                     }
@@ -2525,6 +2544,7 @@
           }
         }
         #slids {
+          top: 150px;
           #next {
             font-size: 1.1em;
             &:hover {
@@ -2582,7 +2602,7 @@
                 font-family: FontAwesome;
 
                 a {
-                  font-size: 1.2em;
+                  font-size: 1em;
                 }
               }
             }
@@ -2729,10 +2749,12 @@
       .logo {
         font-size: 1.45rem;
         line-height: 40px;
+        text-align: center;
       }
       p {
         font-size: 1rem;
         line-height: 40px;
+        text-align: center;
       }
     }
     .site-navigation {
@@ -2800,7 +2822,7 @@
       #banner-text {
         width: calc(60% - 5%);
         #banner-title {
-          line-height: 80px;
+          line-height: 60px;
           font-size: 1.9em;
         }
         #banner-copy {
@@ -2958,18 +2980,21 @@
 
                   .panel-image {
                     display: block;
-                    width: 50%;
+                    width: 100%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 0.9em;
+                      font-size: 1.1em;
                     }
 
                     .slider-text {
+                      width: 99%;
+                      padding: 0.25em;
                       font-size: 0.85em;
+                      line-height: 30px;
                     }
                   }
                 }
@@ -2978,6 +3003,7 @@
           }
         }
         #slids {
+          top: 150px;
           #next {
             font-size: 1em;
             &:hover {
@@ -3009,6 +3035,7 @@
           font-size: 0.95em;
           padding: 0.5em;
           line-height: 1.9em;
+          width: 99%;
         }
       }
     }
@@ -3205,12 +3232,14 @@
       width: 33.3%;
 
       .logo {
-        font-size: 1.35rem;
+        font-size: 1.4rem;
         line-height: 40px;
+        text-align: center;
       }
       p {
-        font-size: 1rem;
-        line-height: 40px;
+        font-size: 0.9rem;
+        line-height: 35px;
+        text-align: center;
       }
     }
 
@@ -3436,18 +3465,21 @@
 
                   .panel-image {
                     display: block;
-                    width: 50%;
+                    width: 100%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     .slider-text {
+                      width: 99%;
+                      padding: 0.25em;
                       font-size: 0.85em;
+                      line-height: 30px;
                     }
                   }
                 }
@@ -3456,6 +3488,7 @@
           }
         }
         #slids {
+          top: 150px;
           #next {
             font-size: 1em;
             &:hover {
@@ -3486,7 +3519,8 @@
         p {
           font-size: 0.95em;
           padding: 0.5em;
-          line-height: 1.9em;
+          line-height: 2em;
+          width: 99%;
         }
       }
     }
@@ -3880,19 +3914,21 @@
 
                   .panel-image {
                     display: block;
-                    width: 50%;
+                    width: 100%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     .slider-text {
+                      width: 99%;
+                      padding: 0.25em;
                       font-size: 0.9em;
-                      line-height: 25px;
+                      line-height: 30px;
                     }
                   }
                 }
@@ -3902,6 +3938,7 @@
         }
 
         #slids {
+          top: 150px;
           #next {
             font-size: 1em;
             &:hover {
@@ -3934,6 +3971,7 @@
         p {
           font-size: 1em;
           padding: 0.5em;
+          width: 99%;
         }
       }
     }
@@ -4305,17 +4343,19 @@
 
                   .panel-image {
                     display: block;
-                    width: 50%;
+                    width: 100%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 0.8em;
+                      font-size: 0.9em;
                     }
 
                     .slider-text {
+                      width: 99%;
+                      padding: 0.25em;
                       font-size: 0.9em;
                       line-height: 25px;
                     }
@@ -4327,6 +4367,7 @@
         }
         #slids {
           font-size: 1em;
+          top: 150px;
           #next {
             font-size: 0.9em;
             &:hover {
@@ -4356,6 +4397,7 @@
           font-size: 1em;
           padding: 0.5em;
           line-height: 1.6em;
+          width: 99%;
         }
       }
     }
@@ -4726,17 +4768,19 @@
 
                   .panel-image {
                     display: block;
-                    width: 50%;
+                    width: 100%;
                   }
 
                   figcaption {
-                    margin: 0;
-
+                    margin: 0 auto;
+                    display: none;
                     .slider-title {
-                      font-size: 0.8em;
+                      font-size: 0.9em;
                     }
 
                     .slider-text {
+                      width: 99%;
+                      padding: 0.25em;
                       font-size: 0.9em;
                       line-height: 25px;
                     }
@@ -4748,6 +4792,7 @@
         }
         #slids {
           font-size: 1em;
+          top: 150px;
           #next {
             font-size: 0.9em;
             &:hover {
@@ -4777,7 +4822,7 @@
           font-size: 1em;
           padding: 0.5em;
           line-height: 1.6em;
-          width: 95%;
+          width: 99%;
         }
       }
     }

@@ -10,7 +10,7 @@ export default function slider() {
       id: "0",
       hash: "panel-0",
       title: "Adobe Certified Associates",
-      text: "Online exam covering following topics: \nSetting project requirements,\nIdentifying Design Elements,\nUnderstanding Photoshop Interface, \nManipulating Images,\nEvaluating Digital Images.",
+      text: "Online exam : \nSetting project requirements,\nIdentifying Design Elements,\nUnderstanding Photoshop Interface, \nManipulating Images,\nEvaluating Digital Images.",
       buttonname: "Adobe",
       bgimage: "./images/certificates/webp/adobe-photoshop-certificate.webp",
     },
@@ -18,7 +18,7 @@ export default function slider() {
       id: "1",
       hash: "panel-1",
       title: "City & Guilds ITQ Level 1, 2, 3 IT Users",
-      text: "6 month part-time course at East London Technology Training Center covering:\nImproving productivity using IT,\nIT Communication Fundementals,Adding Content,\nIT User fundementals,\nOrganizing Content,Website Software(Dreamweaver),\nDatabase Software,Database Management,\nDesign Software(Photoshop).",
+      text: "6 month part-time course web design course at East London Technology Training Center :\nImproving productivity using IT,\nIT Communication Fundementals,\nWebsite Software(Dreamweaver),\nDatabase Software,Database Management,\nDesign Software(Photoshop).",
       buttonname: "East London Aadvanced Technolgy Training",
       bgimage:
         "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
@@ -27,7 +27,7 @@ export default function slider() {
       id: "2",
       hash: "panel-2",
       title: "Responsive Web Design",
-      text: "Online interacative curriculum course covering:\nHTML,\nCSS,\nFlexbox,\nCSS Grids, \nResponsive Web Design Principles.",
+      text: "Online interacative curriculum course :\nHTML,\nCSS,\nFlexbox,\nCSS Grids, \nResponsive Web Design Principles.",
       buttonname: "FreeCodeCamp",
       bgimage:
         "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
@@ -35,8 +35,8 @@ export default function slider() {
     {
       id: "3",
       hash: "panel-3",
-      title: "JavaScript Algorithms and Data Structures",
-      text: "Online interacative curriculum course covering:\nClasses,\nPromises,\nRegular Expressions, Data Structures,\nAlgorithim Scripting.",
+      title: "JavaScript",
+      text: "Online interacative curriculum course :\nClasses,\nPromises,\nRegular Expressions, Data Structures,\nAlgorithim Scripting.",
       buttonname: "FreeCodeCamp",
       bgimage:
         "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
@@ -45,7 +45,7 @@ export default function slider() {
       id: "4",
       hash: "panel-4",
       title: "Linkedin Learning",
-      text: "Online tutorial Become a Vanilla Javascript Web Developer covering:\nJavascript Essentials, \nClosures,\nWeb API,\nService Workers,\nPromises.",
+      text: "Online tutorial Become a Vanilla Javascript Web Developer : \nJavascript Essentials, \nClosures,\nWeb API,\nService Workers,\nPromises.",
       buttonname: "Lynda.com",
       bgimage:
         "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
@@ -53,8 +53,8 @@ export default function slider() {
     {
       id: "5",
       hash: "panel-5",
-      title: "Code Academy - Learn Javascript",
-      text: "Online interacative curriculum course covering:\nData Types,\nLoops,\nArray Methods, \nObjects,\nConditionals.\nFunctions.",
+      title: "Learn Javascript",
+      text: "Online interacative curriculum course :\nData Types,\nLoops,\nArray Methods, \nObjects,\nConditionals.\nFunctions.",
       buttonname: "CodeAcademy",
       bgimage:
         "./images/certificates/webp/codecademy-javascript-certificate.webp",
@@ -62,8 +62,8 @@ export default function slider() {
     {
       id: "6",
       hash: "panel-6",
-      title: "Code Academy - Learn Ruby",
-      text: "Online interacative curriculum course covering:\nArrays,\nData Types,\nClasses,\nMethods, \nConditionals.",
+      title: "Learn Ruby",
+      text: "Online interacative curriculum course :\nArrays,\nData Types,\nClasses,\nMethods, \nConditionals.",
       buttonname: "CodeAcademy",
       bgimage: "./images/certificates/webp/codecademy-ruby-certificate.webp",
     },
@@ -71,7 +71,7 @@ export default function slider() {
       id: "7",
       hash: "panel-7",
       title: "Digital Futures 2017",
-      text: "Four week full-time IT employability course covering:\nInteractive Programming,\nDebate Skills with DebateMate,\nMusical Composition,\nNegotiation skills with CitizenUK,\nMusic creation using Sonic Pi.",
+      text: "Four week full-time IT employability course :\nInteractive Programming,\nDebate Skills with DebateMate,\nMusical Composition,\nNegotiation skills with CitizenUK,\nMusic creation using Sonic Pi.",
       buttonname: "DigitalFutures",
       bgimage:
         "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
@@ -145,6 +145,21 @@ export default function slider() {
     }
   };
 
+  const addStyle = (bill) => {
+    if (!bill.classList.contains(".captionshow")) {
+      bill.classList.add("captionshow");
+    }
+  };
+
+  // const removeStyle = (bill) => {
+  //   if (bill.classList.contains(".captionshow")) {
+  //     bill.addEventListener("hover", (e) => {
+  //       e.preventDefault();
+  //       bill.classList.remove("captionshow");
+  //     });
+  //   }
+  // };
+
   // Hero Slider
   next.addEventListener("click", (e) => {
     // prev.classList.remove("active");
@@ -155,6 +170,9 @@ export default function slider() {
     for (let i = 0; i < panels.length; i += 1) {
       if (i === currentIndex) {
         scrollTo(document.getElementById(`${panels[i].id}`));
+        // eslint-disable-next-line no-console
+        // console.log(panels[i].firstElementChild.lastChild);
+        addStyle(panels[i].firstElementChild.lastChild);
       }
     }
 
