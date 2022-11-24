@@ -283,7 +283,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
     --bg-image: "";
 
     figure {
@@ -349,6 +348,7 @@
 
     #project-page-title {
       align-self: flex-start;
+      text-align: center;
       font-size: 1.3rem;
       display: block;
       width: 100%;
@@ -548,7 +548,7 @@
 
     h2 {
       font-size: 1.3rem;
-      text-align: left;
+      text-align: center;
       align-self: flex-start;
       width: 100%;
       line-height: 50px;
@@ -892,7 +892,7 @@
     gap: 1em;
     h2 {
       font-size: 1.3rem;
-      text-align: left;
+      text-align: center;
       align-self: flex-start;
       width: 100%;
       line-height: 50px;
@@ -1011,6 +1011,8 @@
               text-indent: 0;
               font-size: 0.8em;
               cursor: pointer;
+              font-weight: bold;
+              letter-spacing: 0.05em;
             }
 
             label[for="questionitem"],
@@ -1449,7 +1451,6 @@
           letter-spacing: 0.05em;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -1499,7 +1500,7 @@
         }
 
         p {
-          font-size: 1.05em;
+          font-size: 1.1em;
           line-height: 2.2em;
           background-color: $color-white-1;
           color: $color-black;
@@ -1510,7 +1511,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 60%;
         height: auto;
@@ -1721,6 +1721,7 @@
                   label {
                     width: 35%;
                     height: 100%;
+                    font-size: 1em;
                   }
 
                   input[type="radio"] {
@@ -1740,7 +1741,7 @@
             }
           }
           #submit {
-            font-size: 1.2em;
+            font-size: 1.3em;
             width: 35%;
           }
         }
@@ -1960,7 +1961,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -1991,7 +1991,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 55%;
         height: auto;
@@ -2073,7 +2072,7 @@
         p {
           font-size: 1.05em;
           padding: 0.5em;
-          line-height: 2.1em;
+          line-height: 2.2em;
           width: 99%;
         }
       }
@@ -2204,6 +2203,7 @@
                   label {
                     width: 35%;
                     height: 100%;
+                    font-size: 1em;
                   }
 
                   input[type="radio"] {
@@ -2223,7 +2223,7 @@
             }
           }
           #submit {
-            font-size: 1.2em;
+            font-size: 1.3em;
             width: 30%;
           }
         }
@@ -2441,7 +2441,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -2491,7 +2490,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 60%;
         height: auto;
@@ -2702,7 +2700,7 @@
             }
           }
           #submit {
-            font-size: 1.1em;
+            font-size: 1.2em;
           }
         }
       }
@@ -2919,7 +2917,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -2949,7 +2946,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 53%;
         height: auto;
@@ -3324,6 +3320,11 @@
       }
     }
     #project-page {
+      #project-page-title {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
       #project-tabs {
         margin: 0.5em 0;
         transition: all 0.2s ease-in 0s;
@@ -3393,6 +3394,7 @@
 
       h2 {
         font-size: 1.3em;
+        text-align: center;
       }
       #barchart {
         order: 1;
@@ -3404,7 +3406,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -3434,7 +3435,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 70%;
         height: auto;
@@ -3535,7 +3535,7 @@
       gap: 4em;
       h2 {
         font-size: 1.3rem;
-        text-align: left;
+        text-align: center;
         align-self: flex-start;
         width: 100%;
         line-height: 50px;
@@ -3785,6 +3785,7 @@
     #project-page {
       #project-page-title {
         font-size: 1.3rem;
+        text-align: center;
       }
       .projects {
         display: flex;
@@ -3844,6 +3845,7 @@
       align-items: center;
       h2 {
         font-size: 1.3rem;
+        text-align: center;
       }
 
       #barchart {
@@ -3860,7 +3862,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -3892,7 +3893,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 90%;
         margin: 1em auto;
@@ -3988,6 +3988,7 @@
       width: 100%;
       h2 {
         font-size: 1.3rem;
+        text-align: center;
       }
       #contact-container {
         width: 85%;
@@ -4082,7 +4083,7 @@
                   height: 30px;
                   label {
                     width: 60%;
-                    font-size: 100%;
+                    font-size: 0.9em;
                   }
 
                   input[type="radio"] {
@@ -4215,6 +4216,7 @@
     #project-page {
       #project-page-title {
         font-size: 1.2rem;
+        text-align: center;
       }
       .projects {
         display: flex;
@@ -4275,6 +4277,7 @@
       align-items: center;
       h2 {
         font-size: 1.2rem;
+        text-align: center;
       }
 
       #barchart {
@@ -4291,7 +4294,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -4323,7 +4325,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 96%;
         margin: 1em auto;
@@ -4358,7 +4359,7 @@
                     margin: 0 auto;
                     display: none;
                     .slider-title {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     .slider-text {
@@ -4415,6 +4416,7 @@
       width: 100%;
       h2 {
         font-size: 1.2rem;
+        text-align: center;
       }
       #contact-container {
         width: 90%;
@@ -4510,7 +4512,7 @@
                   height: 30px;
                   label {
                     width: 60%;
-                    font-size: 90%;
+                    font-size: 0.9em;
                   }
 
                   input[type="radio"] {
@@ -4642,6 +4644,7 @@
     #project-page {
       #project-page-title {
         font-size: 1.2rem;
+        text-align: center;
       }
       .projects {
         display: flex;
@@ -4702,6 +4705,7 @@
       align-items: center;
       h2 {
         font-size: 1.2rem;
+        text-align: center;
       }
 
       #barchart {
@@ -4718,7 +4722,6 @@
           line-height: 50px;
         }
 
-        /* chart */
         #bars {
           display: flex;
           flex-flow: column;
@@ -4750,7 +4753,6 @@
         }
       }
 
-      /* Hero-Slider */
       #slider {
         width: 94%;
         margin: 1em auto;
@@ -4785,7 +4787,7 @@
                     margin: 0 auto;
                     display: none;
                     .slider-title {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     .slider-text {
@@ -4842,6 +4844,7 @@
       width: 100%;
       h2 {
         font-size: 1.2rem;
+        text-align: center;
       }
       #contact-container {
         width: 96%;
@@ -4937,7 +4940,7 @@
                   height: 30px;
                   label {
                     width: 60%;
-                    font-size: 90%;
+                    font-size: 0.9em;
                   }
 
                   input[type="radio"] {
