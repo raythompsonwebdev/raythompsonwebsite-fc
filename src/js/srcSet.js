@@ -1,3 +1,6 @@
+/**
+ * srcset images
+ *  */
 // get portfolio grid images
 const portImages = document.querySelectorAll("img.projectImg");
 

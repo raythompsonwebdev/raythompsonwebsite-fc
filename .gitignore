@@ -115,9 +115,7 @@ src/js/contact.js.map
 src/js/projects.js.map
 src/js/slider.js.map
 src/css/style.min.css.map
-src/fonts/cabin-2--webfont/
-src/fonts/amaranth-webfont/
-src/fonts/font-awesome-4.7.0/
+src/fonts/*
 dist/
 
 src/php/DatabaseConnection.php

@@ -1,21 +1,35 @@
 import "./fonts/cabin-2--webfont/style.css";
 import "./fonts/amaranth-webfont/style.css";
-// import "./fonts/font-awesome-4.7.0/css/font-awesome.min.css";
 import "./sass/style.scss";
-import "./js/contact";
 import "./js/main";
-// import "./js/srcSetmarkUp";
-import "./js/projects";
-import "./js/slider";
+import "./js/contact";
+import projectTabs from "./js/projects";
+import slider from "./js/slider";
 
 window.addEventListener("load", () => {
-  // set backround image for home page
+  /**
+   * home page background image
+   *
+   *  */
   const bgImage = document.querySelector("#banner");
   bgImage.style.setProperty(
     "--bg-image",
     "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp)"
   );
 
+  /**
+   * Project Tabs
+   *  */
+  projectTabs();
+
+  /**
+   * Slider
+   *  */
+  slider();
+
+  /**
+   * Bar Chart
+   *  */
   const chartbars = [
     {
       id: "1",
@@ -78,6 +92,7 @@ window.addEventListener("load", () => {
     const chartLink = document.createElement("A");
     chartLink.setAttribute("href", `${element.link}`);
     chartLink.setAttribute("title", `${element.title}`);
+    chartLink.setAttribute("class", "bar-link");
 
     chartBar.append(chartLink);
 

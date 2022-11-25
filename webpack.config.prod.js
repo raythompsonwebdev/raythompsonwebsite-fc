@@ -2,12 +2,12 @@
 import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ImageminWebpWebpackPlugin from "imagemin-webp-webpack-plugin";
 import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 
 import path from "path";
 
 // const dirname = path.dirname(fileURLToPath(import.meta.url));
+const postcssPresetEnv = require("postcss-preset-env");
 
 export default {
   mode: "production",
@@ -37,9 +37,8 @@ export default {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
             plugins: [
-              "imagemin-gifsicle",
-              "imagemin-mozjpeg",
-              "imagemin-optipng",
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
             ],
           },
         },
@@ -79,20 +78,26 @@ export default {
               sourceMap: true,
             },
           },
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     sourceMap: true,
-          //     postcssOptions: {
-          //       parser: "sugarss",
-          //     },
-          //     execute: true,
-          //   },
-          // },
           {
             loader: "sass-loader",
             options: {
               sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  postcssPresetEnv({
+                    /* use stage 3 features + css nesting rules */
+                    stage: 3,
+                    features: {
+                      "nesting-rules": true,
+                    },
+                  }),
+                ],
+              },
             },
           },
         ],
@@ -110,7 +115,7 @@ export default {
     ],
   },
   plugins: [
-    new ImageminWebpWebpackPlugin(),
+    // new ImageminWebpWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css",
       chunkFilename: "style.[id].css",

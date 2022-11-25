@@ -1,13 +1,22 @@
 /**
  * Contact Form
+ * @type {Object}
  */
 const myForm = document.getElementById("myform");
+/**
+ * Error
+ * @type {Object}
+ */
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
 const [text, email, , , , , comments, submit] = myForm;
 
-// name field
+/**
+ * Input Name Validation
+ * @param {Object} evt
+ * @param {Object} srcElement
+ */
 const dirtyInputName = (evt) => {
   evt.preventDefault();
   // eslint-disable-next-line prefer-destructuring
@@ -17,7 +26,7 @@ const dirtyInputName = (evt) => {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
-      "name must contain letters. no numbers or special characters.";
+      "Name must contain letters! No numbers or special characters.";
     srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -62,7 +71,7 @@ const dirtyInputComments = (evt) => {
   if (commentsRegExp.test(element.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "No HTML Tags or Javascript Allowed.";
+    error.textContent = "Naughty! NO HTML or Javascript Allowed!";
     element.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -94,13 +103,12 @@ const submitForm = () => {
       error.innerHTML = `${response}`;
     })
     .catch((err) => {
+      error.classList.remove("hide-error");
+      error.classList.add("show-error");
+      error.innerHTML = `<h1>Message not sent - Network ${err}</h1>`;
+
       // eslint-disable-next-line no-console
       console.error("Fetch Error : ", err.message);
-      // throw new Error(err.message);
-    })
-    .finally((result) => {
-      // eslint-disable-next-line no-console
-      console.log(`finished  -${result}`);
     });
 };
 
