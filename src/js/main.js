@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Add smooth scrolling to all links
-  const navLinks = document.getElementsByClassName("tablink");
+  const navLinks = document.getElementsByClassName("site-nav-item");
   // get body and html elements
   const scrollScreen = document.querySelector(["body", "html"]);
 

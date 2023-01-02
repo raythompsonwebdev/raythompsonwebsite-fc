@@ -77,21 +77,22 @@
 .site-title {
   width: 39.3%;
   flex: 0 1 auto;
-  p.logo {
-    font-size: 1.1rem;
-    text-align: left;
-    line-height: 40px;
-    margin: 0;
-    font-family: $font-header;
-    text-indent: 0.25em;
-  }
-  p {
-    font-size: 0.8rem;
-    text-align: left;
-    line-height: 30px;
-    margin: 0;
-    text-indent: 0.5em;
-  }
+}
+.site-title-name {
+  font-size: 1.1rem;
+  line-height: 40px;
+  text-align: left;
+  margin: 0;
+  font-family: $font-header;
+  text-indent: 0.25em;
+}
+.site-title-text {
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 30px;
+  margin: 0;
+  width: 50%;
+  text-indent: 0.25em;
 }
 
 /* hide and show mobile menu */
@@ -108,61 +109,64 @@
 /* site main navigation */
 .site-navigation {
   position: fixed;
+  display: block;
   z-index: 100;
   top: -240px;
   width: 100%;
   height: 240px;
   overflow: hidden;
   margin: 0;
-  left: 0;
-
-  ul {
-    width: 100%;
-    flex-flow: column;
-    justify-content: flex-start;
-    padding: 0;
+}
+.site-inner-nav {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  gap: 0.2em;
+}
+.site-nav-item {
+  height: 60px;
+  list-style: none;
+  width: 100%;
+  display: block;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  flex: 0 0 auto;
+  margin: 0;
+  transition: all 1s ease-out 0s;
+  a[href*="#"] {
+    line-height: 60px;
     margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: $color-white-1;
+    background-color: $color-black;
+    font-family: $font-header;
 
-    .tablink {
-      height: 60px;
-      list-style: none;
-      width: 100%;
-      display: block;
-      font-size: 1em;
-      border: none;
-      outline: none;
-      flex: 0 0 auto;
-      margin: 0;
-      transition: all 1s ease-out 0s;
-      a {
-        line-height: 60px;
-        margin: 0;
-        font-size: 1.1em;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        color: $color-white-1;
-        background-color: $color-black;
-        font-family: $font-header;
-
-        &:focus {
-          background-color: $green-color;
-          color: $color-white-1;
-          text-shadow: 1px 1px 1px $color-black;
-        }
-        &:hover {
-          background-color: $green-color;
-          color: $color-white-1;
-          text-shadow: 1px 1px 1px $color-black;
-          cursor: pointer;
-          font-weight: bold;
-        }
-
-        &:active {
-          background-color: $green-color;
-          color: $color-black;
-        }
-      }
+    &:visited {
+      background-color: $green-color;
+      color: $color-black;
+    }
+    &:focus {
+      background-color: $green-color;
+      color: $color-white-1;
+      text-shadow: 1px 1px 1px $color-black;
+    }
+    &:hover {
+      background-color: $green-color;
+      color: $color-white-1;
+      text-shadow: 1px 1px 1px $color-black;
+    }
+    &:active {
+      background-color: $green-color;
+      color: $color-black;
     }
   }
 }
@@ -173,8 +177,6 @@
   width: 63.3%;
   list-style: none;
   flex: 1 0 auto;
-  width: 59%;
-  flex: 0 1 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -182,51 +184,68 @@
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
+  top: 0;
+  left: 0;
 }
 .social-item {
   width: 20%;
   margin-right: 0.2em;
   text-align: center;
   flex: 0 0 auto;
-  a {
-    margin: 0;
-    font-size: 0.9em;
-    text-decoration: none;
+}
+a[href*="twitter"],
+a[href*="facebook"],
+a[href*="linkedin"] {
+  margin: 0;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: $color-black;
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  background-color: $color-white-1;
+  text-align: center;
+  /* visited link */
+  &:visited {
+    background-color: $green-color;
     color: $color-black;
-    display: block;
-    width: 100%;
-    line-height: 30px;
-    background-color: $color-white-1;
-    text-align: center;
+  }
+  &:focus {
+    background-color: $green-color;
+    color: $color-black;
+  }
+  &:active {
+    background-color: $green-color;
+    color: $color-black;
+  }
+}
 
-    .fa-twitter,
-    .fa-facebook,
-    .fa-linkedin {
-      display: block;
-      width: 100%;
-      text-align: center;
-      line-height: 30px;
-      font-size: 1em;
-      transition: all 0.2s ease-in 0s;
-      &::before {
-        display: block;
-      }
-      &:hover {
-        transform: scale(1.05);
-        font-weight: bold;
-        cursor: pointer;
-        background-color: $green-color;
-        color: $color-white-1;
-      }
-      &:focus {
-        background-color: $green-color;
-        color: $color-black;
-      }
-      &:active {
-        background-color: $green-color;
-        color: $color-black;
-      }
-    }
+.fa-twitter,
+.fa-facebook,
+.fa-linkedin {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1em;
+  transition: all 0.2s ease-in 0s;
+  &::before {
+    display: block;
+  }
+  &:hover {
+    transform: scale(0.9);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $green-color;
+    color: $color-white-1;
+  }
+  &:focus {
+    background-color: $green-color;
+    color: $color-black;
+  }
+  &:active {
+    background-color: $green-color;
+    color: $color-black;
   }
 }
 
@@ -292,43 +311,28 @@
   align-items: center;
   width: 100%;
   --bg-image: "";
-
-  figure {
-    position: relative;
-    z-index: 9;
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    width: 340px;
-    border: 10px solid $color-black;
-  }
-
-  figure > img {
-    width: auto;
-    margin: 0 auto;
-    vertical-align: bottom;
-  }
 }
-#banner-text {
+.banner-text {
   width: calc(100% - 10px);
   position: relative;
   background-color: $color-white-1;
   padding: 1%;
-  #banner-title {
-    width: auto;
-    text-align: center;
-    color: $color-black;
-    line-height: 40px;
-    font-size: calc(1em + 2vw);
-    margin-bottom: 0.25em;
-  }
-  #banner-copy {
-    font-size: 0.85em;
-    width: 100%;
-    color: $color-black;
-    line-height: 1.8em;
-  }
 }
+.banner-title {
+  width: auto;
+  text-align: center;
+  color: $color-black;
+  line-height: 40px;
+  font-size: 1.3em;
+  margin: 0;
+}
+.banner-copy {
+  font-size: 0.85em;
+  width: 100%;
+  color: $color-black;
+  line-height: 1.8em;
+}
+
 #banner::before {
   content: " ";
   display: block;
@@ -1178,13 +1182,11 @@
   }
   .fixed-header {
     position: fixed;
-    top: 0;
     left: 11.5%;
     max-width: 77%;
     text-align: left;
     font-size: 100%;
     z-index: 10;
-    background-color: $bgcolor;
     height: 100px;
   }
   .site-header {
@@ -1192,119 +1194,68 @@
   }
   .site-title {
     width: 33.3%;
-    p.logo {
-      font-size: 1.9rem;
-      line-height: 40px;
-      text-align: center;
-      background-color: $color-black;
-      text-indent: 0;
-      width: 50%;
-      margin: auto;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 30px;
-      text-align: center;
-      background-color: $color-black;
-      text-indent: 0;
-      width: 50%;
-      margin: auto;
-    }
   }
+  .site-title-name {
+    font-size: 1.9rem;
+    line-height: 40px;
+    text-align: center;
+    text-indent: 0;
+    width: 50%;
+    margin: auto;
+  }
+  .site-title-text {
+    font-size: 1.2rem;
+    text-align: center;
+    text-indent: 0;
+    width: 50%;
+    margin: auto;
+  }
+
   .site-navigation {
-    display: block;
     width: 33.3%;
-    flex: 0 1 auto;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
     position: unset;
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: 0.2em;
-      width: 100%;
-      .tablink {
-        height: 50px;
-        line-height: 50px;
-        width: 24%;
-        a {
-          display: block;
-          line-height: 50px;
-          color: $color-white-1;
-          background-color: $color-black;
-          font-size: 1.1em;
-          font-family: $font-header;
-          text-decoration: none;
-
-          &:visited {
-            background-color: $green-color;
-            color: $color-black;
-          }
-          &:focus {
-            background-color: $green-color;
-            color: $color-white-1;
-            text-shadow: 1px 1px 1px $color-black;
-          }
-          &:hover {
-            background-color: $green-color;
-            color: $color-white-1;
-            text-shadow: 1px 1px 1px $color-black;
-          }
-          &:active {
-            background-color: $green-color;
-            color: $color-black;
-          }
-        }
-      }
+  }
+  .site-inner-nav {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .site-nav-item {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    a[href*="#"] {
+      line-height: 50px;
+      font-size: 1.1em;
     }
   }
 
   #social {
     height: 45px;
     width: 33.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
+    position: unset;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
-    font-family: FontAwesome $font-text;
-    position: unset;
-    top: 0;
-    left: 0;
+    align-items: flex-end;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.5em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      /* visited link */
-      &:visited {
-        background-color: $green-color;
-        color: $color-black;
-      }
-      &:focus {
-        background-color: $green-color;
-        color: $color-black;
-      }
-      &:active {
-        background-color: $green-color;
-        color: $color-black;
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.5em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -1313,25 +1264,18 @@
   }
 
   #banner {
-    flex: 0 0 auto;
-
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
+    width: 100%;
   }
-  #banner-text {
+  .banner-text {
     width: calc(50% - 5%);
-    #banner-title {
-      font-size: 2.3em;
-      line-height: 80px;
-    }
-    #banner-copy {
-      font-size: 1.2em;
-      line-height: 1.8em;
-    }
+  }
+  .banner-title {
+    font-size: 2.3em;
+    line-height: 80px;
+  }
+  .banner-copy {
+    font-size: 1.2em;
+    line-height: 1.8em;
   }
 
   #project-page {
@@ -1646,7 +1590,7 @@
     line-height: 35px;
   }
   #myform {
-    width: 50%;
+    width: 48%;
   }
   #myform-fields {
     list-style: none;
@@ -1765,7 +1709,6 @@
     text-align: left;
     font-size: 100%;
     z-index: 10;
-    background-color: $bgcolor;
     height: 100px;
   }
 
@@ -1774,78 +1717,68 @@
   }
   .site-title {
     width: 33.3%;
-    p.logo {
-      font-size: 1.8rem;
-      line-height: 40px;
-      text-align: center;
-      background-color: $color-black;
-      text-indent: 0;
-      width: 50%;
-      margin: auto;
-    }
-    p {
-      font-size: 1rem;
-      text-align: center;
-      line-height: 30px;
-      background-color: $color-black;
-      text-indent: 0;
-      width: 50%;
-      margin: auto;
-    }
   }
+  .site-title-name {
+    font-size: 1.8rem;
+    text-align: center;
+    text-indent: 0;
+    width: 50%;
+    margin: auto;
+  }
+  .site-title-text {
+    font-size: 1rem;
+    text-align: center;
+    text-indent: 0;
+    margin: auto;
+    width: 50%;
+  }
+
   .site-navigation {
-    display: block;
     width: 33.3%;
-    flex: 0 0 auto;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
     position: unset;
-    ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: 0.2em;
-      .tablink {
-        height: 50px;
-        line-height: 50px;
-        width: 24%;
-        a {
-          display: block;
-          font-size: 1em;
-          line-height: 50px;
-        }
-      }
+  }
+  .site-inner-nav {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .site-nav-item {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    a[href*="#"] {
+      display: block;
+      font-size: 1em;
+      line-height: 50px;
     }
   }
 
   #social {
     height: 45px;
     width: 33.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
-    font-family: FontAwesome, $font-text;
+    align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.3em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.3em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -1853,25 +1786,18 @@
     width: 100%;
   }
   #banner {
-    flex: 0 0 auto;
-
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
+    width: 100%;
   }
-  #banner-text {
+  .banner-text {
     width: calc(50% - 5%);
-    #banner-title {
-      line-height: 60px;
-      font-size: 2.2rem;
-    }
-    #banner-copy {
-      font-size: 1em;
-      line-height: 1.8em;
-    }
+  }
+  .banner-title {
+    line-height: 60px;
+    font-size: 2.2rem;
+  }
+  .banner-copy {
+    font-size: 1em;
+    line-height: 1.8em;
   }
 
   #project-page {
@@ -2131,7 +2057,7 @@
     line-height: 35px;
   }
   #myform {
-    width: 50%;
+    width: 48%;
   }
   #myform-fields {
     list-style: none;
@@ -2247,7 +2173,6 @@
     left: 6%;
     max-width: 88%;
     z-index: 10;
-    background-color: $bgcolor;
     height: 100px;
   }
 
@@ -2256,71 +2181,67 @@
   }
   .site-title {
     width: 33%;
-
-    p.logo {
-      font-size: 1.7rem;
-      line-height: 40px;
-      text-align: center;
-      text-indent: 0;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 30px;
-      text-align: center;
-      text-indent: 0;
-    }
   }
+  .site-title-name {
+    font-size: 1.7rem;
+    text-align: center;
+    text-indent: 0;
+    margin: auto;
+  }
+  .site-title-text {
+    font-size: 1rem;
+    text-align: center;
+    text-indent: 0;
+    width: 50%;
+    margin: auto;
+  }
+
   .site-navigation {
     width: 33%;
-    display: block;
-    flex: 1 0 auto;
     height: auto;
     top: 0;
     position: unset;
     z-index: 0;
-    ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: 0.2em;
-      .tablink {
-        height: 50px;
-        line-height: 50px;
-        width: 24%;
-        a {
-          font-size: 1em;
-          line-height: 50px;
-        }
-      }
+  }
+  .site-inner-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .site-nav-item {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    a[href*="#"] {
+      font-size: 1em;
+      line-height: 50px;
     }
   }
 
   #social {
     height: 45px;
     width: 33.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
+    align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -2328,25 +2249,18 @@
     width: 100%;
   }
   #banner {
-    flex: 0 0 auto;
-
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
+    width: 100%;
   }
-  #banner-text {
+  .banner-text {
     width: calc(50% - 5%);
-    #banner-title {
-      line-height: 60px;
-      font-size: 2.1rem;
-    }
-    #banner-copy {
-      font-size: 1em;
-      line-height: 2.1em;
-    }
+  }
+  .banner-title {
+    line-height: 60px;
+    font-size: 2.1rem;
+  }
+  .banner-copy {
+    font-size: 1em;
+    line-height: 2.1em;
   }
 
   #project-page {
@@ -2608,7 +2522,7 @@
     line-height: 35px;
   }
   #myform {
-    width: 50%;
+    width: 48%;
   }
   #myform-fields {
     list-style: none;
@@ -2718,7 +2632,6 @@
     left: 3.5%;
     max-width: 93.5%;
     z-index: 10;
-    background-color: $bgcolor;
     height: 100px;
   }
 
@@ -2727,72 +2640,68 @@
   }
   .site-title {
     width: 33.3%;
-    p.logo {
-      font-size: 1.6rem;
-      line-height: 40px;
-      text-align: center;
-      text-indent: 0;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 30px;
-      text-align: center;
-      text-indent: 0;
-    }
   }
+  .site-title-name {
+    font-size: 1.6rem;
+    text-align: center;
+    text-indent: 0;
+    margin: auto;
+  }
+  .site-title-text {
+    font-size: 1rem;
+    text-align: center;
+    text-indent: 0;
+    width: 50%;
+    margin: auto;
+  }
+
   .site-navigation {
-    display: block;
     width: 33.3%;
-    flex: 1 0 auto;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
     position: unset;
-    ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: 0.2em;
-      .tablink {
-        height: 50px;
-        line-height: 50px;
-        width: 24%;
+  }
+  .site-inner-nav {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .site-nav-item {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
 
-        a {
-          display: block;
-          font-size: 0.9em;
-          line-height: 50px;
-        }
-      }
+    a[href*="#"] {
+      display: block;
+      font-size: 0.9em;
+      line-height: 50px;
     }
   }
 
   #social {
     height: 45px;
     width: 33.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
+    align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -2800,25 +2709,18 @@
     width: 100%;
   }
   #banner {
-    flex: 0 0 auto;
-
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
+    width: 100%;
   }
-  #banner-text {
+  .banner-text {
     width: calc(60% - 5%);
-    #banner-title {
-      line-height: 60px;
-      font-size: 1.9em;
-    }
-    #banner-copy {
-      font-size: 1em;
-      line-height: 2.1em;
-    }
+  }
+  .banner-title {
+    line-height: 60px;
+    font-size: 1.9em;
+  }
+  .banner-copy {
+    font-size: 1em;
+    line-height: 2.1em;
   }
 
   #project-page {
@@ -3079,7 +2981,7 @@
     line-height: 35px;
   }
   #myform {
-    width: 50%;
+    width: 48%;
   }
   #myform-fields {
     list-style: none;
@@ -3194,7 +3096,6 @@
     left: 1%;
     max-width: 98%;
     z-index: 10;
-    background-color: $bgcolor;
     height: 100px;
   }
 
@@ -3204,72 +3105,66 @@
   }
   .site-title {
     width: 33.3%;
-
-    p.logo {
-      font-size: 1.5rem;
-      line-height: 40px;
-      text-align: center;
-      text-indent: 0;
-    }
-    p {
-      font-size: 0.9rem;
-      line-height: 30px;
-      text-align: center;
-      text-indent: 0;
-    }
+  }
+  .site-title-name {
+    font-size: 1.5rem;
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
+  }
+  .site-title-text {
+    font-size: 0.9rem;
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
   }
 
   .site-navigation {
-    display: block;
     width: 33.3%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
     position: unset;
-    ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: 0.2em;
-      .tablink {
-        height: 50px;
-        line-height: 50px;
-        width: 24%;
-        a {
-          display: block;
-          font-size: 0.85em;
-          line-height: 50px;
-        }
-      }
+  }
+  .site-inner-nav {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .site-nav-item {
+    height: 50px;
+    line-height: 50px;
+    width: 24%;
+    a[href*="#"] {
+      display: block;
+      font-size: 0.85em;
+      line-height: 50px;
     }
   }
 
   #social {
     height: 45px;
     width: 33.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
+    align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -3277,25 +3172,18 @@
     width: 100%;
   }
   #banner {
-    flex: 0 0 auto;
-
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
+    width: 100%;
   }
-  #banner-text {
+  .banner-text {
     width: calc(60% - 5%);
-    #banner-title {
-      line-height: 80px;
-      font-size: 1.8em;
-    }
-    #banner-copy {
-      font-size: 1em;
-      line-height: 2.1em;
-    }
+  }
+  .banner-title {
+    line-height: 80px;
+    font-size: 1.8em;
+  }
+  .banner-copy {
+    font-size: 1em;
+    line-height: 2.1em;
   }
 
   #project-page {
@@ -3677,63 +3565,66 @@
   }
   .site-title {
     width: 33.3%;
-    p.logo {
-      font-size: 1.5rem;
-      line-height: 40px;
-      text-align: left;
-      text-indent: 0.25em;
-    }
-    p {
-      font-size: 0.9rem;
-      line-height: 30px;
-      text-align: left;
-      text-indent: 0.5em;
-    }
   }
+  .site-title-name {
+    font-size: 1.5rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+  .site-title-text {
+    font-size: 0.9rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+
   .site-navigation {
+    position: fixed;
+    z-index: 100;
+    top: -240px;
     width: 100%;
-    ul {
-      flex-flow: column;
-      justify-content: flex-start;
-      padding: 0;
-      margin: 0;
-      .tablink {
-        height: 50px;
-        a {
-          display: block;
-          font-size: 1.1em;
-          line-height: 50px;
-        }
-      }
+    height: 240px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .site-inner-nav {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .site-nav-item {
+    height: 50px;
+    a[href*="#"] {
+      display: block;
+      font-size: 1.1em;
+      line-height: 50px;
     }
   }
 
   #social {
     height: 100%;
     width: 65.3%;
-    margin: 0;
-    padding: 0;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
+    align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -3743,24 +3634,18 @@
 
   #banner {
     width: 100%;
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
   }
-  #banner-text {
+  .banner-text {
     width: calc(90% - 10px);
-    #banner-title {
-      font-size: calc(1.3rem + 2vw);
-      line-height: 45px;
-      margin-bottom: 0.25em;
-    }
-    #banner-copy {
-      font-size: 1em;
-      line-height: 2.2em;
-    }
+  }
+  .banner-title {
+    font-size: 1.3em;
+    line-height: 45px;
+    margin-bottom: 0.25em;
+  }
+  .banner-copy {
+    font-size: 1em;
+    line-height: 2.2em;
   }
 
   #project-page {
@@ -4109,62 +3994,66 @@
   }
   .site-title {
     width: 33.3%;
-
-    p.logo {
-      font-size: 1.4rem;
-      line-height: 40px;
-      text-align: left;
-      text-indent: 0.25em;
-    }
-    p {
-      font-size: 0.9rem;
-      line-height: 30px;
-      text-align: left;
-      text-indent: 0.5em;
-    }
   }
+  .site-title-name {
+    font-size: 1.4rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+  .site-title-text {
+    font-size: 0.9rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+
   .site-navigation {
+    position: fixed;
+    z-index: 100;
+    top: -240px;
     width: 100%;
-    ul {
-      flex-flow: column;
-      justify-content: flex-start;
-      padding: 0;
-      margin: 0;
-      .tablink {
-        height: 60px;
-        a {
-          display: block;
-          font-size: 1.1em;
-          line-height: 60px;
-        }
-      }
+    height: 240px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .site-inner-nav {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .site-nav-item {
+    height: 60px;
+    a[href*="#"] {
+      display: block;
+      font-size: 1.1em;
+      line-height: 60px;
     }
   }
 
   #social {
     height: 100%;
     width: 65.3%;
-    flex: 0 1 auto;
-    display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -4175,23 +4064,17 @@
 
   #banner {
     width: 100%;
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
   }
-  #banner-text {
+  .banner-text {
     width: calc(90% - 10px);
-    #banner-title {
-      line-height: 45px;
-      font-size: calc(1.2em + 2vw);
-      margin-bottom: 0.25em;
-    }
-    #banner-copy {
-      font-size: 0.95em;
-    }
+  }
+  .banner-title {
+    line-height: 45px;
+    font-size: 1.3em;
+    margin-bottom: 0.25em;
+  }
+  .banner-copy {
+    font-size: 0.95em;
   }
 
   #project-page {
@@ -4541,61 +4424,66 @@
   .site-title {
     width: 40%;
     text-align: left;
-    p.logo {
-      font-size: 1.3rem;
-      line-height: 40px;
-      text-align: left;
-      text-indent: 0.25em;
-    }
-    p {
-      font-size: 0.9rem;
-      line-height: 30px;
-      text-align: left;
-      text-indent: 0.5em;
-    }
   }
+  .site-title-name {
+    font-size: 1.3rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+  .site-title-text {
+    font-size: 0.9rem;
+    text-align: left;
+    text-indent: 0.25em;
+    margin: 0;
+  }
+
   .site-navigation {
+    position: fixed;
+    z-index: 100;
+    top: -240px;
     width: 100%;
-    ul {
-      flex-flow: column;
-      justify-content: flex-start;
-      padding: 0;
-      margin: 0;
-      .tablink {
-        height: 60px;
-        a {
-          display: block;
-          font-size: 1.1em;
-          line-height: 60px;
-        }
-      }
+    height: 240px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .site-inner-nav {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .site-nav-item {
+    height: 60px;
+    a[href*="#"] {
+      display: block;
+      font-size: 1.1em;
+      line-height: 60px;
     }
   }
 
   #social {
     height: 100%;
-    width: 58%;
-    flex: 0 1 auto;
-    display: flex;
+    width: 65.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
     position: unset;
-    top: 0;
-    left: 0;
   }
   .social-item {
-    a {
-      line-height: 45px;
-      .fa-twitter,
-      .fa-facebook,
-      .fa-linkedin {
-        font-size: 1.4em;
-        line-height: 45px;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+    text-align: center;
+  }
+  a[href*="twitter"],
+  a[href*="facebook"],
+  a[href*="linkedin"] {
+    line-height: 45px;
+  }
+  .fa-twitter,
+  .fa-facebook,
+  .fa-linkedin {
+    font-size: 1.4em;
+    line-height: 45px;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -4606,23 +4494,17 @@
 
   #banner {
     width: 100%;
-    figure {
-      margin: 1em auto;
-    }
-    figure > img {
-      display: block;
-    }
   }
-  #banner-text {
+  .banner-text {
     width: calc(90% - 10px);
-    #banner-title {
-      line-height: 40px;
-      font-size: calc(1.1em + 2vw);
-      margin-bottom: 0.25em;
-    }
-    #banner-copy {
-      font-size: 0.9em;
-    }
+  }
+  .banner-title {
+    line-height: 40px;
+    font-size: 1.3em;
+    margin-bottom: 0.25em;
+  }
+  .banner-copy {
+    font-size: 0.9em;
   }
 
   #project-page {
