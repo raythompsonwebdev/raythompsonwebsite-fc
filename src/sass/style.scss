@@ -63,11 +63,12 @@
   justify-content: flex-start;
 }
 .site-title {
-  width: 39.3%;
+  width: 50%;
   flex: 0 1 auto;
 }
 .site-title-name {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
+  height: 35px;
   line-height: 35px;
   text-align: left;
   margin: 0;
@@ -76,7 +77,7 @@
   width: 100%;
 }
 .site-title-text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: left;
   line-height: 25px;
   margin: 0;
@@ -162,7 +163,7 @@
 
 /* social media buttons */
 #social {
-  height: 100%;
+  height: 30px;
   width: 63.3%;
   list-style: none;
   flex: 1 0 auto;
@@ -177,7 +178,7 @@
   left: 0;
 }
 .social-item {
-  width: 20%;
+  width: 16%;
   margin-right: 0.2em;
   text-align: center;
   flex: 0 0 auto;
@@ -302,7 +303,7 @@ a[href*="linkedin"] {
   --bg-image: "";
 }
 .banner-text {
-  width: calc(100% - 10px);
+  width: calc(100% - 10%);
   position: relative;
   background-color: $color-white-1;
   padding: 1%;
@@ -544,9 +545,8 @@ a[href*="linkedin"] {
   }
 }
 #about-content {
-  width: 100%;
+  width: 97%;
   background-color: $bgcolor;
-  padding: 0 0.25em;
   height: auto;
   order: 0;
   flex: 0 1 auto;
@@ -585,19 +585,6 @@ a[href*="linkedin"] {
   padding: 0.25em;
   background-color: $color-white-2;
   position: relative;
-
-  h3 {
-    font-family: $font-header;
-    height: 40px;
-    font-size: 1rem;
-    line-height: 40px;
-    display: block;
-    background-color: $color-black;
-    color: $color-white-1;
-    margin: 0;
-    text-align: center;
-    text-shadow: 1px 1px 1px $color-black;
-  }
 }
 .hero-slider {
   margin: 0;
@@ -619,20 +606,6 @@ a[href*="linkedin"] {
   width: 100%;
   height: 350px;
   background-color: $color-white-1;
-
-  h3 {
-    font-family: $font-header;
-    text-transform: uppercase;
-    padding: 0;
-    line-height: 40px;
-    height: 40px;
-    background-color: $color-black;
-    color: $color-white-1;
-    font-size: 0.75em;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-  }
 }
 .slider-panel {
   margin: 0;
@@ -657,7 +630,6 @@ a[href*="linkedin"] {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    gap: 0.2em;
     left: 0;
     &:hover {
       cursor: pointer;
@@ -667,7 +639,7 @@ a[href*="linkedin"] {
 .slider-title {
   width: 100%;
   font-weight: normal;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background-color: $color-black;
   color: $color-white-1;
   text-indent: 0;
@@ -689,7 +661,7 @@ a[href*="linkedin"] {
   margin: 0 auto;
   color: $bgcolor;
   font-weight: normal;
-  font-size: 0.85em;
+  font-size: 0.75em;
   background-color: $color-white-1;
   height: 100%;
   line-height: 20px;
@@ -713,7 +685,7 @@ a[href*="linkedin"] {
   margin: 0;
   list-style: outside none none;
   height: 40px;
-  width: 99%;
+  width: 98%;
   padding: 0;
   display: flex;
   flex: row;
@@ -722,7 +694,7 @@ a[href*="linkedin"] {
   position: absolute;
   bottom: 4px;
   justify-content: space-between;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 #next {
   width: 60px;
@@ -784,7 +756,7 @@ a[href*="linkedin"] {
 
   h1 {
     height: 50px;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 50px;
     letter-spacing: 0.05em;
     color: $color-white-1;
@@ -919,7 +891,7 @@ a[href*="linkedin"] {
         a {
           width: auto;
           display: inline-block;
-          font-size: 0.75em;
+          font-size: 0.8em;
           line-height: 40px;
           margin: 0;
           font-family: $font-header;
@@ -974,7 +946,7 @@ a[href*="linkedin"] {
   text-transform: uppercase;
 }
 #myform {
-  width: 96.25%;
+  width: 95.25%;
   flex: 1 0 auto;
   padding: 0.5em;
   background-color: $color-white-1;
@@ -1204,7 +1176,7 @@ a[href*="linkedin"] {
     margin: auto;
   }
   .site-title-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 30px;
     text-align: center;
     text-indent: 0;
@@ -1243,6 +1215,7 @@ a[href*="linkedin"] {
     align-items: flex-end;
   }
   .social-item {
+    width: 20%;
     text-align: center;
   }
   a[href*="twitter"],
@@ -1268,7 +1241,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(50% - 5%);
+    width: calc(100% - 25%);
   }
   .banner-title {
     font-size: 2.3em;
@@ -1449,13 +1422,6 @@ a[href*="linkedin"] {
     width: 60%;
     float: right;
     display: block;
-
-    h3 {
-      font-size: 1.2em;
-      height: 40px;
-
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -1468,9 +1434,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 360px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -1563,8 +1526,6 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-family: FontAwesome, $font-text;
-
           a {
             width: auto;
             display: inline-block;
@@ -1767,6 +1728,7 @@ a[href*="linkedin"] {
     position: unset;
   }
   .social-item {
+    width: 20%;
     text-align: center;
   }
   a[href*="twitter"],
@@ -1791,7 +1753,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(50% - 5%);
+    width: calc(100% - 25%);
   }
   .banner-title {
     line-height: 60px;
@@ -1915,13 +1877,6 @@ a[href*="linkedin"] {
     width: 55%;
     display: block;
     float: right;
-
-    h3 {
-      font-size: 1.2em;
-      height: 40px;
-
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -1934,9 +1889,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 360px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -2040,7 +1992,6 @@ a[href*="linkedin"] {
         li {
           height: auto;
           font-family: FontAwesome, $font-text;
-
           a {
             font-size: 1.1em;
           }
@@ -2191,11 +2142,11 @@ a[href*="linkedin"] {
     text-align: center;
     text-indent: 0;
     margin: auto;
-    width: 50%;
+    width: 55%;
     line-height: 40px;
   }
   .site-title-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
     text-indent: 0;
     line-height: 30px;
@@ -2235,6 +2186,7 @@ a[href*="linkedin"] {
     position: unset;
   }
   .social-item {
+    width: 20%;
     text-align: center;
   }
   a[href*="twitter"],
@@ -2259,7 +2211,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(50% - 5%);
+    width: calc(100% - 25%);
   }
   .banner-title {
     line-height: 60px;
@@ -2347,7 +2299,7 @@ a[href*="linkedin"] {
 
     h1 {
       height: 50px;
-      font-size: 1.1em;
+      font-size: 1.15em;
       line-height: 50px;
       text-indent: 0.5em;
     }
@@ -2402,13 +2354,6 @@ a[href*="linkedin"] {
     width: 60%;
     display: block;
     float: right;
-
-    h3 {
-      font-size: 1.2em;
-      height: 40px;
-
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -2421,9 +2366,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 375px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -2508,7 +2450,6 @@ a[href*="linkedin"] {
         li {
           height: auto;
           font-family: FontAwesome;
-
           a {
             font-size: 1em;
           }
@@ -2654,11 +2595,11 @@ a[href*="linkedin"] {
     text-align: center;
     text-indent: 0;
     margin: auto;
-    width: 50%;
+    width: 60%;
     line-height: 40px;
   }
   .site-title-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
     text-indent: 0;
     line-height: 30px;
@@ -2699,6 +2640,7 @@ a[href*="linkedin"] {
     position: unset;
   }
   .social-item {
+    width: 20%;
     text-align: center;
   }
   a[href*="twitter"],
@@ -2723,7 +2665,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(60% - 5%);
+    width: calc(100% - 20%);
   }
   .banner-title {
     line-height: 60px;
@@ -2810,7 +2752,7 @@ a[href*="linkedin"] {
 
     h1 {
       height: 50px;
-      font-size: 1.1em;
+      font-size: 1.15em;
       line-height: 50px;
       text-indent: 0.5em;
     }
@@ -2847,12 +2789,6 @@ a[href*="linkedin"] {
     width: 53%;
     display: block;
     float: right;
-
-    h3 {
-      height: 40px;
-      font-size: 1.2em;
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -2865,9 +2801,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 350px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -2968,7 +2901,6 @@ a[href*="linkedin"] {
         li {
           height: auto;
           font-family: FontAwesome;
-
           a {
             font-size: 1em;
           }
@@ -3120,7 +3052,7 @@ a[href*="linkedin"] {
     text-align: center;
     text-indent: 0;
     margin: auto;
-    width: 50%;
+    width: 70%;
     line-height: 40px;
   }
   .site-title-text {
@@ -3128,7 +3060,7 @@ a[href*="linkedin"] {
     text-align: center;
     text-indent: 0;
     margin: auto;
-    width: 50%;
+    width: 60%;
     line-height: 30px;
   }
 
@@ -3164,6 +3096,7 @@ a[href*="linkedin"] {
     position: unset;
   }
   .social-item {
+    width: 20%;
     text-align: center;
   }
   a[href*="twitter"],
@@ -3188,7 +3121,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(60% - 5%);
+    width: calc(100% - 20%);
   }
   .banner-title {
     line-height: 80px;
@@ -3317,12 +3250,6 @@ a[href*="linkedin"] {
     width: 80%;
     display: block;
     float: none;
-
-    h3 {
-      height: 40px;
-      font-size: 1.2em;
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -3335,9 +3262,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 350px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -3440,7 +3364,6 @@ a[href*="linkedin"] {
         li {
           height: auto;
           font-family: FontAwesome;
-
           a {
             font-size: 1em;
           }
@@ -3584,7 +3507,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .site-title {
-    width: 33.3%;
+    width: 50%;
   }
   .site-title-name {
     font-size: 1.5rem;
@@ -3592,10 +3515,11 @@ a[href*="linkedin"] {
     text-indent: 0.15em;
     margin: 0;
     width: 100%;
+    height: 35px;
     line-height: 35px;
   }
   .site-title-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: left;
     text-indent: 0.25em;
     margin: 0;
@@ -3627,7 +3551,7 @@ a[href*="linkedin"] {
   }
 
   #social {
-    height: 100%;
+    height: 40px;
     width: 65.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -3636,17 +3560,18 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
+    width: 13%;
   }
   a[href*="twitter"],
   a[href*="facebook"],
   a[href*="linkedin"] {
-    line-height: 45px;
+    line-height: 40px;
   }
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
     font-size: 1.4em;
-    line-height: 45px;
+    line-height: 40px;
     &:hover {
       cursor: pointer;
     }
@@ -3660,7 +3585,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(90% - 10px);
+    width: calc(100% - 15%);
   }
   .banner-title {
     font-size: 1.3em;
@@ -3782,15 +3707,9 @@ a[href*="linkedin"] {
   }
 
   #slider {
-    width: 90%;
+    width: 94%;
     display: block;
     margin: 1em auto;
-
-    h3 {
-      height: 40px;
-      font-size: 1.05em;
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -3803,9 +3722,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 350px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -3895,7 +3811,6 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
           a {
             font-size: 1.1em;
           }
@@ -4025,18 +3940,19 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .site-title {
-    width: 33.3%;
+    width: 50%;
   }
   .site-title-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: left;
     text-indent: 0.15em;
     margin: 0;
     width: 100%;
+    height: 35px;
     line-height: 35px;
   }
   .site-title-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: left;
     text-indent: 0.25em;
     margin: 0;
@@ -4068,7 +3984,7 @@ a[href*="linkedin"] {
   }
 
   #social {
-    height: 100%;
+    height: 40px;
     width: 65.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -4077,17 +3993,18 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
+    width: 13%;
   }
   a[href*="twitter"],
   a[href*="facebook"],
   a[href*="linkedin"] {
-    line-height: 45px;
+    line-height: 40px;
   }
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
     font-size: 1.4em;
-    line-height: 45px;
+    line-height: 40px;
     &:hover {
       cursor: pointer;
     }
@@ -4102,7 +4019,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(90% - 10px);
+    width: calc(100% - 15%);
   }
   .banner-title {
     line-height: 45px;
@@ -4227,12 +4144,6 @@ a[href*="linkedin"] {
     width: 96%;
     display: block;
     margin: 1em auto;
-
-    h3 {
-      height: 40px;
-      font-size: 1rem;
-      line-height: 40px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -4245,9 +4156,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 350px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -4341,7 +4249,6 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
           a {
             font-size: 0.9em;
           }
@@ -4465,19 +4372,20 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .site-title {
-    width: 40%;
+    width: 50%;
     text-align: left;
   }
   .site-title-name {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
     text-align: left;
     text-indent: 0.15em;
     margin: 0;
     width: 100%;
+    height: 35px;
     line-height: 35px;
   }
   .site-title-text {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-align: left;
     text-indent: 0.25em;
     line-height: 25px;
@@ -4509,8 +4417,8 @@ a[href*="linkedin"] {
   }
 
   #social {
-    height: 100%;
-    width: 59.3%;
+    height: 40px;
+    width: 68%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
@@ -4518,17 +4426,18 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
+    width: 16%;
   }
   a[href*="twitter"],
   a[href*="facebook"],
   a[href*="linkedin"] {
-    line-height: 45px;
+    line-height: 40px;
   }
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
     font-size: 1.4em;
-    line-height: 45px;
+    line-height: 40px;
     &:hover {
       cursor: pointer;
     }
@@ -4543,7 +4452,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(90% - 10px);
+    width: calc(100% - 15%);
   }
   .banner-title {
     line-height: 40px;
@@ -4630,7 +4539,7 @@ a[href*="linkedin"] {
 
     h1 {
       height: 50px;
-      font-size: 1.1em;
+      font-size: 1.05em;
       line-height: 50px;
       text-indent: 0.5em;
     }
@@ -4666,15 +4575,9 @@ a[href*="linkedin"] {
   }
 
   #slider {
-    width: 94%;
+    width: 95%;
     display: block;
     margin: 1em auto;
-
-    h3 {
-      height: 35px;
-      font-size: 0.9rem;
-      line-height: 35px;
-    }
   }
   .hero-slider {
     width: 100%;
@@ -4687,9 +4590,6 @@ a[href*="linkedin"] {
   }
   .panel {
     height: 350px;
-    h3 {
-      font-size: 1em;
-    }
   }
   .slider-panel {
     margin: 0;
@@ -4702,7 +4602,7 @@ a[href*="linkedin"] {
     }
   }
   .slider-title {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   .slider-text {
     width: 99%;
@@ -4783,9 +4683,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
           a {
-            font-size: 0.9em;
+            font-size: 0.85em;
           }
         }
       }

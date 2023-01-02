@@ -115,7 +115,7 @@ src/js/contact.js.map
 src/js/projects.js.map
 src/js/slider.js.map
 src/css/style.min.css.map
-src/fonts/*
+src/fonts/
 dist/
 
 src/php/DatabaseConnection.php
