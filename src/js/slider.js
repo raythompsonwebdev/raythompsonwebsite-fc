@@ -18,8 +18,8 @@ export default function slider() {
       id: "1",
       hash: "panel-1",
       title: "City & Guilds ITQ Level 1, 2, 3 IT Users",
-      text: "6 month part-time course web design course at East London Technology Training Center :\nImproving productivity using IT,\nIT Communication Fundementals,\nWebsite Software(Dreamweaver),\nDatabase Software,Database Management,\nDesign Software(Photoshop).",
-      buttonname: "East London Aadvanced Technolgy Training",
+      text: "6 month part-time course web design course at East London Technology Training Center :\nImproving productivity using IT,\nIT Communication Fundementals,\nWebsite Software(Dreamweaver),\nDatabase Software,\nDatabase Management,\nDesign Software(Photoshop).",
+      buttonname: "East London Advanced Technolgy Training",
       bgimage:
         "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
     },
@@ -170,8 +170,6 @@ export default function slider() {
     for (let i = 0; i < panels.length; i += 1) {
       if (i === currentIndex) {
         scrollTo(document.getElementById(`${panels[i].id}`));
-        // eslint-disable-next-line no-console
-        // console.log(panels[i].firstElementChild.lastChild);
         addStyle(panels[i].firstElementChild.lastChild);
       }
     }

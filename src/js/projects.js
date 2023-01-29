@@ -13,14 +13,14 @@ export default function projectTabs() {
       arrayBoxes.filter((element2) => {
         if (element2.dataset.all === element1.id) {
           // eslint  - "no-param-reassign": "off"
-          element2.classList.remove("box-hide");
-          element2.classList.add("box-show");
+          element2.classList.remove("project-hide");
+          element2.classList.add("project-show");
         } else if (element2.dataset.id === element1.id) {
-          element2.classList.remove("box-hide");
-          element2.classList.add("box-show");
+          element2.classList.remove("project-hide");
+          element2.classList.add("project-show");
         } else {
-          element2.classList.remove("box-show");
-          element2.classList.add("box-hide");
+          element2.classList.remove("project-show");
+          element2.classList.add("project-hide");
         }
         return element2;
       });

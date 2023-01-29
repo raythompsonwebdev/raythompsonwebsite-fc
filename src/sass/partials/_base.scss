@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-color: $bgcolor;
+  background-color: $color-white-1;
   margin: 0;
   padding: 0;
 }
@@ -42,24 +42,18 @@ h4 {
   font-family: $font-header;
   padding: 0;
   margin: 0;
-  color: $color-white-1;
+  color: $color-black;
 }
 
 p {
   font-family: $font-text;
   line-height: 1.7em;
   margin: 0;
-  color: $color-white-1;
   letter-spacing: 0.01em;
-}
-
-a {
-  color: $color-white-1;
 }
 
 hr {
   margin: 1em auto;
   width: 70%;
   display: block;
-  color: $color-black;
 }

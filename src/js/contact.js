@@ -10,7 +10,10 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, , , , , comments, submit] = myForm;
+const [text, email, , , , , comments, linker, privacy, submit] = myForm;
+
+// eslint-disable-next-line no-console
+console.log(privacy);
 
 /**
  * Input Name Validation
@@ -22,11 +25,15 @@ const dirtyInputName = (evt) => {
   // eslint-disable-next-line prefer-destructuring
   const { srcElement } = evt;
   // check if input matches pattern
-  if (srcElement.validity.patternMismatch) {
+  if (
+    srcElement.validity.patternMismatch ||
+    srcElement.validity.tooShort ||
+    srcElement.validity.tooLong
+  ) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
-      "Name must contain letters! No numbers or special characters.";
+      "Name must contain letters. No numbers or less than 3 characters.";
     srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -40,21 +47,21 @@ const dirtyInputName = (evt) => {
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
   // eslint-disable-next-line prefer-destructuring
-  const element = evt.srcElement;
+  const { srcElement } = evt;
   // regex to detect valid email
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   // check if input matches pattern
-  if (!emailRegExp.test(element.value)) {
+  if (!emailRegExp.test(srcElement.value)) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address!";
-    element.classList.add("dirty");
+    srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    element.classList.add("dirty");
+    srcElement.classList.add("dirty");
   }
 };
 
@@ -64,23 +71,57 @@ const dirtyInputComments = (evt) => {
 
   // element
   // eslint-disable-next-line prefer-destructuring
-  const element = evt.srcElement;
+  const { srcElement } = evt;
   // regex to detect html tags
   const commentsRegExp = /<\/?[^>]+(>|$)/g;
   // check if input matches pattern
-  if (commentsRegExp.test(element.value)) {
+  if (commentsRegExp.test(srcElement.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent = "Naughty! NO HTML or Javascript Allowed!";
-    element.classList.add("dirty");
+    srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    element.classList.remove("dirty");
+    srcElement.classList.remove("dirty");
   }
 };
 
+// comments field
+const privacyBtn = (evt) => {
+  evt.preventDefault();
+  // Get the modal
+  const modal = document.getElementById("myModal");
+
+  // eslint-disable-next-line no-console
+  console.log(evt.target);
+
+  // Get the <span> element that closes the modal
+  // eslint-disable-next-line prefer-destructuring
+  const span = document.getElementsByClassName("close")[0];
+
+  // If the checkbox is checked, display the output text
+  if (evt.target === linker) {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  // eslint-disable-next-line func-names
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  // eslint-disable-next-line func-names
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+};
 // submit form
 const submitForm = () => {
   const formData = new FormData(myForm);
@@ -122,6 +163,10 @@ const showError = (e) => {
     error.textContent = "name and email address are required!";
     text.classList.add("dirty");
     email.classList.add("dirty");
+  } else if (!privacy.checked) {
+    error.classList.add("show-error");
+    error.classList.remove("hide-error");
+    error.textContent = "GDPR required!";
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
@@ -156,3 +201,7 @@ email.addEventListener("keydown", blockspace);
 // comments field
 comments.addEventListener("input", dirtyInputComments);
 comments.addEventListener("blur", dirtyInputComments);
+
+// name field
+// text.addEventListener("input", dirtyInputName);
+linker.addEventListener("click", privacyBtn);

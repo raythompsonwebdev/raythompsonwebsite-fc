@@ -27,10 +27,80 @@
     gtag('config', 'UA-86655310-1');
   </script>
 
+  <style>
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
   <title>Ray Thompson - Web Developer</title>
 </head>
 
 <body>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+
+  </div>
   <!--Wrapper-->
   <div id="site-wrapper">
     <!--Header-->
@@ -91,10 +161,10 @@
         <article class="banner-text">
           <h2 class="banner-title">Hello, welcome to my portfolio.</h2>
           <p class="banner-copy">
-            I am a web developer based in East London and I love to create great
-            looking web applications and websites that follow the latest web standards and best practices, are
-            performant, secure and can be viewed on most browsers and mobile
-            devices. Click below to see some of my work.
+            I am a web developer based in London. Whether it's WordPress themes or Plugins, Single Page Applications,
+            Static websites, User Interfaces or widgets, I create applications that follow the latest web standards and
+            best practices and are performant, secure and can be viewed on most browsers and mobile devices.
+            Click below to see some examples.
           </p>
         </article>
       </div>
@@ -135,9 +205,9 @@
               </button>
             </li>
             <li>
-              <button type="button" id="htmlcss" class="project-tab" aria-expanded="false"
-                aria-label="all html css projects button">
-                HTML/CSS
+              <button type="button" id="wordpress" class="project-tab" aria-expanded="false"
+                aria-label="all wordpress projects button">
+                WordPress
               </button>
             </li>
           </ul>
@@ -158,19 +228,20 @@
               <figcaption class="project-caption">
                 <h3 class="cover-title">Shoestore</h3>
                 <p>Online shoes and accessories store web app in progress. </p>
+                <p>React, Express. Node, MongoDB. </p>
+                <p>Product search.</p>
                 <span class="caption-links">
-                  <a class="caption-link" href="https://shoestorewebapp.herokuapp.com/" target="_blank"
-                    title="Link to shoestore" rel="noopener">Shoestore</a>
+                  <a class="caption-link" href="" target="_blank" title="Link to shoestore" rel="noopener">Shoestore</a>
                   <a class="caption-link" href="https://github.com/raythompsonwebdev/shoestore" target="_blank"
-                    title="Link to shoestore github repo" rel="noopener">GitHub repo</a>
+                    title="Link to shoestore github repo" rel="noopener">GitHub</a>
                 </span>
               </figcaption>
             </figure>
             <figure class="div2 project" data-id="vuejs" data-all="all">
-              <img src="./images/Projects/webp/travel-agency-webapp-380.webp" srcset="./images/Projects/webp/travel-agency-webapp-380.webp 380w,
-                  ./images/Projects/webp/travel-agency-webapp-360.webp 360w,
-                  ./images/Projects/webp/travel-agency-webapp-340.webp 340w,
-                  ./images/Projects/webp/travel-agency-webapp-320.webp 320w" sizes="(min-width: 120em) 380px,
+              <img src="./images/Projects/webp/travelagencywebapp-380.webp" srcset="./images/Projects/webp/travelagencywebapp-380.webp 380w,
+                  ./images/Projects/webp/travelagencywebapp-360.webp 360w,
+                  ./images/Projects/webp/travelagencywebapp-340.webp 340w,
+                  ./images/Projects/webp/travelagencywebapp-320.webp 320w" sizes="(min-width: 120em) 380px,
                   (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
@@ -181,9 +252,11 @@
               <figcaption class="project-caption">
                 <h3 class="cover-title">Travel Agency</h3>
                 <p>Worldwide Holiday package reservation booking app in progress.</p>
+                <p>VueJs, Express. Node, MongoDB. </p>
+                <p>Product search.</p>
                 <span class="caption-links">
-                  <a class="caption-link" href="https://travelagencywebapp.herokuapp.com/" target="_blank"
-                    title="Link to travel agency" rel="noopener">Travel Agency</a>
+                  <a class="caption-link" href="" target="_blank" title="Link to travel agency" rel="noopener">Travel
+                    Agency</a>
                   <a class="caption-link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
                     title="Link to travel agency github repo" target="_blank" rel="noopener">GitHub repo</a>
                 </span>
@@ -204,105 +277,70 @@
               <figcaption class="project-caption">
                 <h3 class="cover-title">Mannering Music</h3>
                 <p>Music album audio review website in progress.</p>
+                <p>Play Audio, Add reviews, search albums.</p>
+                <p>Object Oriented PHP, MVC, MySQL, Javascript.</p>
                 <span class="caption-links">
                   <a class="caption-link" rel="noopener" href="https://mannering.raythompsonwebdev.co.uk/"
                     title="Link to mannering music web app" target="_blank">Mannering Music</a>
                   <a class="caption-link" rel="noopener"
                     href="https://github.com/raythompsonwebdev/manneringmusicmvc.com"
-                    title="Link to mannering music github repo" target="_blank">GitHub repo</a>
+                    title="Link to mannering music github repo" target="_blank">GitHub</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div4 project" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/random-quote-generator-380.webp" srcset="./images/Projects/webp/random-quote-generator-380.webp 380w,
-                  ./images/Projects/webp/random-quote-generator-360.webp 360w,
-                  ./images/Projects/webp/random-quote-generator-340.webp 340w,
-                  ./images/Projects/webp/random-quote-generator-320.webp 320w" sizes="(min-width: 120em) 380px,
+            <figure class="div4 project" data-id="wordpress" data-all="all">
+              <img src="./images/Projects/webp/clashvibes-380.webp" srcset="./images/Projects/webp/clashvibes-380.webp 380w,
+                  ./images/Projects/webp/clashvibes-360.webp 360w,
+                  ./images/Projects/webp/clashvibes-340.webp 340w,
+                  ./images/Projects/webp/clashvibes-320.webp 320w" sizes="(min-width: 120em) 380px,
                   (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 320px,
                   (min-width: 30em) and (max-width: 599px) 320px, 
                   (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
-                alt="Javascript Random Quote Generator" class="projectImg" />
+                alt="Clashvibes Wordpress Theme" class="projectImg" />
               <figcaption class="project-caption">
-                <h3 class="cover-title">Random Quote Generator</h3>
-                <p>Display random quotes from famous people and send quote in tweet!</p>
+                <h3 class="cover-title">Clashvibes</h3>
+                <p>Custom Directory Wordpress Theme in progress</p>
+                <p>Custom Block Patterns</p>
+                <p>Custom plugin for custom posts and taxonomies</p>
+                <p>Custom plugin for block audio & video players</p>
                 <span class="caption-links">
-                  <a class="caption-link" href="https://codepen.io/raythompweb/full/QryrEv" target="_blank"
-                    title="Link to random quote generator on code pen" rel="noopener">Quote Generator</a>
+                  <a class="caption-link" rel="noopener" href="" title="Link to clashvibes theme"
+                    target="_blank">Clashvibes</a>
+                  <a class="caption-link" rel="noopener" href="https://github.com/raythompsonwebdev/clashvibes"
+                    title="Link to clashvibes github repo" target="_blank">GitHub</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div5 project" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/javascript-weather-app-380.webp" srcset="./images/Projects/webp/javascript-weather-app-380.webp 380w,
-                  ./images/Projects/webp/javascript-weather-app-360.webp 360w,
-                  ./images/Projects/webp/javascript-weather-app-340.webp 340w,
-                  ./images/Projects/webp/javascript-weather-app-320.webp 320w" sizes="(min-width: 120em) 380px,
+            <figure class="div5 project" data-id="wordpress" data-all="all">
+              <img src="./images/Projects/webp/mannering-woocommerce-theme-380.webp" srcset="./images/Projects/webp/mannering-woocommerce-theme-380.webp 380w,
+                  ./images/Projects/webp/mannering-woocommerce-theme-360.webp 360w,
+                  ./images/Projects/webp/mannering-woocommerce-theme-340.webp 340w,
+                  ./images/Projects/webp/mannering-woocommerce-theme-320.webp 320w" sizes="(min-width: 120em) 380px,
                   (min-width: 80em) and (max-width: 1919px) 360px,
                   (min-width: 64em) and (max-width: 1279px) 340px, 
                   (min-width: 46em) and (max-width: 1023px) 340px, 
                   (min-width: 37.5em) and (max-width: 735px) 340px,
                   (min-width: 30em) and (max-width: 599px) 320px, 
-                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Weather App"
-                class="projectImg" />
+                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy"
+                alt="Mannering Woocommerce Theme" class="projectImg" />
               <figcaption class="project-caption">
-                <h3 class="cover-title">Weather App</h3>
-                <p>Latest weather information for your current location.</p>
+                <h3 class="cover-title">Mannering Woocommerce</h3>
+                <p>Custom Wordpress Woocommerce e-commerce Theme in progress.</p>
+                <p>Digital downloads</p>
+                <p>Accepts Paypal, Debit Cards, Credit Cards, Stripe</p>
                 <span class="caption-links">
-                  <a class="caption-link" href="https://codepen.io/raythompweb/full/BxKxVL" target="_blank"
-                    title="Link to weather app on codepen" rel="noopener">Weather App</a>
-                  <a class="caption-link" href="https://github.com/raythompsonwebdev/FCC-Weather-App" target="_blank"
-                    title="Link to weather app github repo" rel="noopener">GitHub repo</a>
-                </span>
-              </figcaption>
-            </figure>
-            <figure class="div6 project" data-id="htmlcss" data-all="all">
-              <img src="./images/Projects/webp/obama-tribute-page-380.webp" srcset="./images/Projects/webp/obama-tribute-page-380.webp 380w,
-                  ./images/Projects/webp/obama-tribute-page-360.webp 360w,
-                  ./images/Projects/webp/obama-tribute-page-340.webp 340w,
-                  ./images/Projects/webp/obama-tribute-page-320.webp 320w" sizes="(min-width: 120em) 380px,
-                  (min-width: 80em) and (max-width: 1919px) 360px,
-                  (min-width: 64em) and (max-width: 1279px) 340px, 
-                  (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 340px,
-                  (min-width: 30em) and (max-width: 599px) 320px, 
-                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Responsive Tribute Page"
-                class="projectImg" />
-              <figcaption class="project-caption">
-                <h3 class="cover-title">Tribute Page</h3>
-                <p>Responsive design tribute page to Ex-president Barack Obama. </p>
-                <span class="caption-links">
-                  <a class="caption-link" href="https://raythompsonwebdev.github.io/fc-tribute-page"
-                    title="Link to Obama tribute page  on codepen" target="_blank" rel="noopener">Obama Tribute</a>
+                  <a class="caption-link" rel="noopener" href="" title="Link to mannering woocommerce theme"
+                    target="_blank">Mannering Woocommerce</a>
+                  <a class="caption-link" rel="noopener" href="https://github.com/raythompsonwebdev/clashvibes/"
+                    title="Link to mannering music github repo" target="_blank">GitHub</a>
 
                 </span>
               </figcaption>
             </figure>
-            <figure class="div7 project" data-id="javascript" data-all="all">
-              <img src="./images/Projects/webp/drum-machine-380.webp" srcset="./images/Projects/webp/drum-machine-380.webp 380w,
-                  ./images/Projects/webp/drum-machine-360.webp 360w,
-                  ./images/Projects/webp/drum-machine-340.webp 340w,
-                  ./images/Projects/webp/drum-machine-320.webp 320w" sizes="(min-width: 120em) 380px,
-                  (min-width: 80em) and (max-width: 1919px) 360px,
-                  (min-width: 64em) and (max-width: 1279px) 340px, 
-                  (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 320px, 
-                  (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Javascript Drum Machine"
-                class="projectImg" />
-              <figcaption class="project-caption">
-                <h3 class="cover-title">Javascript Drum Machine</h3>
-                <p>Activated drum sounds using either keyboard keys or mouse pointer.</p>
-                <span class="caption-links">
-                  <a class="caption-link" href="https://codepen.io/raythompweb/pen/GREEoYR"
-                    title="Link to drum machine on codepen" target="_blank" rel="noopener">Drum Machine</a>
-                  <a class="caption-link" href="https://github.com/raythompsonwebdev/fcc-react-drum-machine"
-                    title="Link to javascript drum machine github repo" target="_blank" rel="noopener">GitHub repo</a>
-                </span>
-              </figcaption>
-            </figure>
-            <figure class="div8 project" data-id="javascript" data-all="all">
+            <figure class="div6 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/crimechecker-380.webp" srcset="./images/Projects/webp/crimechecker-380.webp 380w,
                   ./images/Projects/webp/crimechecker-360.webp 360w,
                   ./images/Projects/webp/crimechecker-340.webp 340w,
@@ -316,16 +354,19 @@
                 class="projectImg" />
               <figcaption class="project-caption">
                 <h3 class="cover-title">Crime Checker</h3>
-                <p>Check crime in your area app created with software developer Orian Paled</p>
+                <p>Crime Checker App</p>
+                <p>Project created in collaboration with software engineer Orion Paled for founders and coders.</p>
+                <p>Check crime in your local area </p>
+
                 <span class="caption-links">
                   <a class="caption-link" href="https://fac-23.github.io/preA-week2-http-rayorian/"
                     title="Link to Crime Checker App" target="_blank" rel="noopener">Crime Checker</a>
                   <a class="caption-link" href="https://github.com/fac-23/preA-week2-http-rayorian"
-                    title="Link to Crime Checker github repo" target="_blank" rel="noopener">GitHub repo</a>
+                    title="Link to Crime Checker github repo" target="_blank" rel="noopener">GitHub</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div9 project" data-id="javascript" data-all="all">
+            <figure class="div7 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/local-storage-todo-app-380.webp" srcset="./images/Projects/webp/local-storage-todo-app-380.webp 380w,
                   ./images/Projects/webp/local-storage-todo-app-360.webp 360w,
                   ./images/Projects/webp/local-storage-todo-app-340.webp 340w,
@@ -338,40 +379,18 @@
                 class="projectImg" />
               <figcaption class="project-caption">
                 <h3 class="cover-title">Todo App</h3>
-                <p>Todo list app created with software developer Miah Bates</p>
+                <p>Todo list app </p>
+                <p>Project created in collaboration with software engineer Miah Bates for founders and coders.</p>
+                <p>Todo task list saves your list in the browser for later review.</p>
                 <span class="caption-links">
                   <a class="caption-link" href="https://fac-23.github.io/preA-testing-raymiah/"
                     title="Link to Todo web application" target="_blank" rel="noopener">To Do App</a>
                   <a class="caption-link" href="https://github.com/fac-23/preA-testing-raymiah"
-                    title="Link to Todo web application github repo" target="_blank" rel="noopener">GitHub
-                    repo</a>
+                    title="Link to Todo web application github repo" target="_blank" rel="noopener">GitHub</a>
                 </span>
               </figcaption>
             </figure>
-            <figure class="div10 project" data-id="react" data-all="all">
-              <img src="./images/Projects/webp/greenfootprints-380.webp" srcset="./images/Projects/webp/greenfootprints-380.webp 380w,
-                  ./images/Projects/webp/greenfootprints-360.webp 360w,
-                  ./images/Projects/webp/greenfootprints-340.webp 340w,
-                  ./images/Projects/webp/greenfootprints-320.webp 320w" sizes="(min-width: 120em) 360px,
-                  (min-width: 80em) and (max-width: 1919px) 360px,
-                  (min-width: 64em) and (max-width: 1279px) 340px, 
-                  (min-width: 46em) and (max-width: 1023px) 340px, 
-                  (min-width: 37.5em) and (max-width: 735px) 320px,
-                  (min-width: 30em) and (max-width: 599px) 320px 100vw" loading="lazy"
-                alt="Image of react random quote generator" class="projectImg" />
-              <figcaption class="project-caption">
-                <h3 class="cover-title">Greenfootprints</h3>
-                <p>Recycling website displaying advice and information on recycling</p>
-                <span class="caption-links">
-                  <a class="caption-link" href="https://greenfootprints.raythompsonwebdev.co.uk/"
-                    title="Link to Greenfootprints website" target="_blank" rel="noopener">Greenfootprints</a>
-                  <a class="caption-link" href="https://github.com/raythompsonwebdev/greenfootprints"
-                    title="Link to Greenfootprints website github repo" target="_blank" rel="noopener">GitHub
-                    repo</a>
-                </span>
-              </figcaption>
-            </figure>
-            <figure class="div11 project" data-id="javascript" data-all="all">
+            <figure class="div8 project" data-id="javascript" data-all="all">
               <img src="./images/Projects/webp/oli-ray-agency-380.webp" srcset="./images/Projects/webp/oli-ray-agency-380.webp 380w,
                   ./images/Projects/webp/oli-ray-agency-360.webp 360w,
                   ./images/Projects/webp/oli-ray-agency-340.webp 340w,
@@ -384,14 +403,15 @@
                 class="projectImg" />
               <figcaption class="project-caption">
                 <h3 class="cover-title">OliRay Agency</h3>
-                <p>Web Agency website created with software developer Oli Jones</p>
+                <p>Web Agency website.</p>
+                <p>Project created in collaboration with software engineer Oli Jones for founders and coders.</p>
+                <p>OliRay web agency provide web services to small businesses all over the UK.</p>
                 <span class="caption-links">
                   <a class="caption-link" href="https://fac-23.github.io/preA-week2-rayOli/"
                     title="Link to react random quote generator on codepen" target="_blank" rel="noopener">OliRay
                     Agency</a>
                   <a class="caption-link" href="https://github.com/fac-23/preA-week2-rayOli"
-                    title="Link to OliRay website github repo" target="_blank" rel="noopener">GitHub
-                    repo</a>
+                    title="Link to OliRay website github repo" target="_blank" rel="noopener">GitHub</a>
                 </span>
               </figcaption>
             </figure>
@@ -401,7 +421,7 @@
 
       <!--About-->
       <section id="about-page" class="tabcontent">
-        <h2 id="about-page-title">About Page</h2>
+        <h2 id="about-page-title">About</h2>
 
         <div id="about-content">
 
@@ -418,20 +438,17 @@
                   (min-width: 22.5em) and (max-width: 479px) 105px, 25vw" alt="Image of raythompsonwebdev" />
           </figure>
           <p>
-            I was inspired to start dabbling in web development after attending a part-time web design course
+            I was inspired to start dabbling in web development in 2012 after attending a part-time web design course
             in my local area, where I learned basic Javascript, HTML, CSS, building websites.
-            When I am not at my day job as a revenues officer I have spent much of my free time getting into learning
-            web development and coding.<br />
-            I like using coding languages Javascript and PHP and have created websites and web applications
-            from scratch and using tools like WordPress, React, VueJS, Gatsby, build tools like Webpack, databases like
-            MySQL
-            and MungoDB, and much more.<br />
-            I also like solve coding challenges, attending meet ups, courses and events and try to participate as much
-            as I can in the web development community.
-            I enjoy the challenge of building ideas into applications and learning new ways of implementing ideas
-            and finding solutions to problems i come across whilst developing. I am enthusiastic about programming and
-            aspire to combine acquired skills and knowledge with any future learning towards becoming a full-time
-            software developer.
+            When I am not at my day job as a revenues officer, I have spent much of my free time coding, creating lots
+            of web applications and keeping up to date with constant changes in field of web development.<br />
+            My coding languages of choice are HTML, CSS, Javascript and PHP which I use along with development tools
+            like React, VueJS, Node, Sass, customer management system WordPress and databases like Postgress aand
+            MungoDB .<br />
+            I enjoy solving coding challenges participate as much as I can in the web development community.
+            I enjoy the challenge of implementing ideas from conception into fully working applications. I am
+            enthusiastic about coding and web development and aspire to combine acquired skills and knowledge to produce
+            great applications that provide all users with a great web experience.
 
           </p>
 
@@ -451,7 +468,7 @@
         </section>
 
         <section id="barchart">
-          <h1>Favourite coding platforms to use</h1>
+          <h3>Favourite coding platforms to use</h3>
           <ul id="bars">
 
           </ul>
@@ -470,7 +487,7 @@
               <li class="myform-field">
                 <label for="myname">Name *</label>
                 <input type="text" name="myname" id="myname" title="enter your first name here" required
-                  pattern="^[A-Za-z ]+$" aria-describedby="form-error" />
+                  pattern="^[A-Za-z]+" aria-describedby="form-error" minlength="3" maxlength="30" />
               </li>
               <li class="myform-field">
                 <label for="myemail">Email *</label>
@@ -507,7 +524,12 @@
               </li>
               <li class="myform-field">
                 <label for="mycomments">Comment</label>
-                <textarea name="mycomments" id="mycomments" placeholder="Enter your comment here" rows="5"></textarea>
+                <textarea name="mycomments" id="mycomments" placeholder="Enter your comment here" rows="5" min="5"
+                  max="250"></textarea>
+              </li>
+              <li class="myform-field">
+                <p>Please read <button id="linker" title="privacy-policy">Privacy Policy</button> before submitting</p>
+                <input type="checkbox" id="myprivacy" name="scales">
               </li>
               <li class="myform-field">
                 <input type="submit" value="Submit" id="submit" class="g-recaptcha"
@@ -581,5 +603,6 @@
     document.getElementById("myform").submit();
   }
 </script>
+
 
 </html>
