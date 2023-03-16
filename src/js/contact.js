@@ -10,10 +10,10 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, , , , , comments, linker, privacy, submit] = myForm;
+const [text, email, , , , , comments, openmodal, privacy, submit] = myForm;
 
 // eslint-disable-next-line no-console
-console.log(privacy);
+console.log(privacy, openmodal);
 
 /**
  * Input Name Validation
@@ -102,7 +102,7 @@ const privacyBtn = (evt) => {
   const span = document.getElementsByClassName("close")[0];
 
   // If the checkbox is checked, display the output text
-  if (evt.target === linker) {
+  if (evt.target === openmodal) {
     modal.style.display = "block";
   } else {
     modal.style.display = "none";
@@ -204,4 +204,4 @@ comments.addEventListener("blur", dirtyInputComments);
 
 // name field
 // text.addEventListener("input", dirtyInputName);
-linker.addEventListener("click", privacyBtn);
+openmodal.addEventListener("click", privacyBtn);

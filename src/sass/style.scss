@@ -8,6 +8,64 @@
   --comment-error: none;
 }
 
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+
+  h2 {
+    line-height: 50px;
+    color: $color-white-1;
+    background: $color-black;
+    text-indent: 0.25em;
+  }
+  p {
+    line-height: 1.7em;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* mobile menu toggle button. */
 .menu-toggle {
   position: absolute;
@@ -411,7 +469,8 @@ a[href*="linkedin"] {
   padding: 0;
   margin: 0;
   width: 100%;
-  gap: 0.5em;
+  column-gap: 0;
+  row-gap: 1em;
 }
 .project-show {
   display: block;
@@ -427,7 +486,7 @@ a[href*="linkedin"] {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  padding: 0.5em;
+  padding: 0;
   margin: 0;
   backface-visibility: hidden;
   background-color: $color-white-1;
@@ -456,7 +515,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     margin: 0 auto;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.7em;
     flex: 0 1 auto;
     text-align: center;
     color: $color-black;
@@ -537,13 +596,14 @@ a[href*="linkedin"] {
 
 /* about section */
 #about-page {
-  width: 100%;
+  width: 99%;
   flex: 0 0 auto;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
   gap: 1em;
+  padding: 0.5em;
 
   h2 {
     font-size: 1.3rem;
@@ -554,7 +614,7 @@ a[href*="linkedin"] {
   }
 }
 #about-content {
-  width: 97%;
+  width: 100%;
   background-color: $bgcolor;
   height: auto;
   order: 0;
@@ -564,10 +624,9 @@ a[href*="linkedin"] {
     line-height: 2em;
     background-color: $color-white-1;
     color: $color-black;
-    padding: 0.25em;
     word-wrap: break-word;
     white-space: normal;
-    width: 98%;
+    width: 100%;
     text-align: justify;
   }
 }
@@ -576,7 +635,7 @@ a[href*="linkedin"] {
   width: auto;
   height: auto;
   display: block;
-  margin: 0.5em;
+  margin: 0 0.5em 0 0;
   border: 5px solid $bgcolor;
 }
 #page-image {
@@ -859,7 +918,7 @@ a[href*="linkedin"] {
   }
 }
 #contact-container {
-  width: 98%;
+  width: 100%;
   flex-flow: column;
   justify-content: center;
   align-items: space-between;
@@ -958,7 +1017,7 @@ a[href*="linkedin"] {
 #myform {
   width: 95.25%;
   flex: 1 0 auto;
-  padding: 0.5em;
+  padding: 0 0.5em 0 0;
   background-color: $color-white-1;
   margin: 0;
   font-family: $font-header;
@@ -1086,6 +1145,17 @@ a[href*="linkedin"] {
   .dirty:not(:focus):invalid {
     background-color: $error-color-bg;
     border: $error-color-border;
+  }
+
+  #openmodal {
+    background: $color-black;
+    color: $color-white-1;
+    border: none;
+    &:hover {
+      color: $color-black;
+      background: $color-white-1;
+      cursor: pointer;
+    }
   }
 }
 #submit {
@@ -1306,12 +1376,12 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 100%;
-    margin: 0;
-    gap: 0.5em;
+    margin: auto;
+    column-gap: 4%;
+    row-gap: 1em;
   }
   .project {
-    width: 23.5%;
+    width: 21.8%;
   }
   .project-caption {
     position: absolute;
@@ -1355,7 +1425,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -1412,9 +1481,7 @@ a[href*="linkedin"] {
   }
 
   #about-content {
-    width: 100%;
     background-color: $bgcolor;
-    padding: 0 0.25em;
     order: 0;
     flex: 0 0 auto;
 
@@ -1423,15 +1490,12 @@ a[href*="linkedin"] {
       line-height: 2.2em;
       background-color: $color-white-1;
       color: $color-black;
-      padding: 0.5em;
       word-wrap: break-word;
       white-space: normal;
-      width: 99%;
     }
   }
   #about-page-image {
     width: auto;
-    margin: 0.5em;
   }
   #page-image {
     display: block;
@@ -1520,7 +1584,6 @@ a[href*="linkedin"] {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 98%;
   }
   #contact-details {
     width: 48%;
@@ -1803,12 +1866,12 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 100%;
     margin: auto;
-    gap: 0.25em;
+    column-gap: 4%;
+    row-gap: 1em;
   }
   .project {
-    width: 23.25%;
+    width: 21.8%;
   }
   .project-caption {
     opacity: 0;
@@ -1840,7 +1903,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -1954,9 +2016,7 @@ a[href*="linkedin"] {
 
     p {
       font-size: 1.05em;
-      padding: 0.5em;
       line-height: 2.2em;
-      width: 99%;
     }
   }
   #about-page-image {
@@ -1982,7 +2042,6 @@ a[href*="linkedin"] {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 98%;
   }
   #contact-details {
     width: 48%;
@@ -2260,11 +2319,12 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 98%;
     margin: auto;
+    column-gap: 4%;
+    row-gap: 1em;
   }
   .project {
-    width: 23%;
+    width: 21.8%;
   }
   .project-caption {
     gap: 0.25em;
@@ -2298,7 +2358,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -2351,9 +2410,7 @@ a[href*="linkedin"] {
 
     p {
       font-size: 1em;
-      padding: 0.5em;
       line-height: 2em;
-      width: 99%;
     }
   }
   #about-page-image {
@@ -2438,7 +2495,6 @@ a[href*="linkedin"] {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 98%;
   }
   #contact-details {
     width: 48%;
@@ -2707,9 +2763,9 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 100%;
     margin: auto;
-    gap: 0.25em;
+    column-gap: 3.5%;
+    row-gap: 1em;
   }
   .project {
     width: 31%;
@@ -2747,7 +2803,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -2859,9 +2914,7 @@ a[href*="linkedin"] {
 
     p {
       font-size: 0.95em;
-      padding: 0.5em;
       line-height: 1.9em;
-      width: 99%;
     }
   }
   #about-page-image {
@@ -2887,7 +2940,6 @@ a[href*="linkedin"] {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
-    width: 98%;
   }
   #contact-details {
     width: 48%;
@@ -3161,12 +3213,12 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 100%;
     margin: auto;
-    gap: 0.25em;
+    column-gap: 3.5%;
+    row-gap: 1em;
   }
   .project {
-    width: 30%;
+    width: 31%;
   }
   .project-caption {
     opacity: 0;
@@ -3175,7 +3227,7 @@ a[href*="linkedin"] {
     gap: 0.25em;
     p {
       border: none;
-      font-size: 0.9em;
+      font-size: 0.8em;
       width: 96%;
       text-align: left;
     }
@@ -3201,7 +3253,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -3314,9 +3365,7 @@ a[href*="linkedin"] {
 
     p {
       font-size: 0.95em;
-      padding: 0.5em;
       line-height: 2em;
-      width: 98%;
     }
   }
   #about-page-image {
@@ -3610,8 +3659,8 @@ a[href*="linkedin"] {
     justify-content: flex-start;
     align-items: stretch;
     padding: 0;
-    width: 100%;
-    gap: 0.25em;
+    column-gap: 7.5%;
+    row-gap: 1em;
   }
   #project-tabs {
     margin: 0.5em 0;
@@ -3625,12 +3674,12 @@ a[href*="linkedin"] {
     }
   }
   .project {
-    width: 48%;
+    width: 45%;
     padding: 0.25em;
   }
   .project-caption {
     p {
-      font-size: 0.9em;
+      font-size: 0.75em;
       width: 98%;
       line-height: 1.9em;
       text-align: center;
@@ -3651,7 +3700,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -3765,13 +3813,10 @@ a[href*="linkedin"] {
 
   #about-content {
     width: 96%;
-    padding: 0 0.25em;
     height: auto;
 
     p {
       font-size: 1em;
-      padding: 0.5em;
-      width: 98%;
       line-height: 1.9em;
     }
   }
@@ -4046,9 +4091,9 @@ a[href*="linkedin"] {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: stretch;
-    width: 100%;
     margin: auto;
-    gap: 0.2em;
+    column-gap: 7%;
+    row-gap: 1em;
   }
   #project-tabs {
     margin: 0.5em 0;
@@ -4068,7 +4113,7 @@ a[href*="linkedin"] {
     position: absolute;
     gap: 0;
     p {
-      font-size: 0.8em;
+      font-size: 0.75em;
       line-height: 1.5em;
       width: 96%;
       text-align: center;
@@ -4090,7 +4135,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -4204,13 +4248,10 @@ a[href*="linkedin"] {
 
   #about-content {
     height: auto;
-    width: 98%;
 
     p {
       font-size: 1em;
-      padding: 0.25em;
       line-height: 2em;
-      width: 98%;
     }
   }
   #about-page-image {
@@ -4484,9 +4525,9 @@ a[href*="linkedin"] {
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
     margin: auto;
-    gap: 0.5em;
+    column-gap: 0;
+    row-gap: 1em;
   }
   #project-tabs {
     margin: 0.5em 0;
@@ -4506,7 +4547,7 @@ a[href*="linkedin"] {
     position: absolute;
     gap: 0;
     p {
-      font-size: 0.8em;
+      font-size: 0.7em;
       line-height: 1.5em;
       width: 96%;
       text-align: center;
@@ -4528,7 +4569,6 @@ a[href*="linkedin"] {
   }
 
   #about-page {
-    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -4643,13 +4683,10 @@ a[href*="linkedin"] {
 
   #about-content {
     height: auto;
-    width: 98%;
 
     p {
       font-size: 0.9em;
-      padding: 0.25em;
       line-height: 1.8em;
-      width: 98%;
     }
   }
   #about-page-image {
