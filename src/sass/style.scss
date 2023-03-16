@@ -42,7 +42,7 @@
 
   h2 {
     line-height: 50px;
-    color: $color-white-1;
+    color: $color-white;
     background: $color-black;
     text-indent: 0.25em;
   }
@@ -76,7 +76,7 @@
   font-size: 1em;
   text-transform: uppercase;
   background-color: $green-color;
-  color: $color-white-1;
+  color: $color-white;
   border: none;
   transition: all ease-out 0s;
   line-height: 45px;
@@ -89,7 +89,7 @@
 .menu-toggle:hover,
 .menu-toggle:focus {
   text-decoration: underline;
-  border: solid 2px $color-white-1;
+  border: solid 2px $color-white;
   cursor: pointer;
 }
 
@@ -108,7 +108,7 @@
   text-align: left;
   font-size: 100%;
   z-index: 10;
-  background-color: $color-white-1;
+  background-color: $color-white;
   height: 100px;
 }
 
@@ -194,7 +194,7 @@
     text-align: center;
     text-decoration: none;
     display: block;
-    color: $color-white-1;
+    color: $color-white;
     background-color: $color-black;
     font-family: $font-header;
 
@@ -204,12 +204,12 @@
     }
     &:focus {
       background-color: $green-color;
-      color: $color-white-1;
+      color: $color-white;
       text-shadow: 1px 1px 1px $color-black;
     }
     &:hover {
       background-color: $green-color;
-      color: $color-white-1;
+      color: $color-white;
       text-shadow: 1px 1px 1px $color-black;
     }
     &:active {
@@ -247,24 +247,23 @@ a[href*="linkedin"] {
   margin: 0;
   font-size: 0.9em;
   text-decoration: none;
-  color: $color-black;
   display: block;
   width: 100%;
   line-height: 30px;
-  background-color: $color-white-1;
+  color: $color-white;
   text-align: center;
 
   /* visited link */
   &:visited {
-    background-color: $green-color;
+    font-weight: bold;
     color: $color-black;
   }
   &:focus {
-    background-color: $green-color;
+    font-weight: bold;
     color: $color-black;
   }
   &:active {
-    background-color: $green-color;
+    font-weight: bold;
     color: $color-black;
   }
 }
@@ -286,7 +285,7 @@ a[href*="linkedin"] {
     font-weight: bold;
     cursor: pointer;
     background-color: $green-color;
-    color: $color-white-1;
+    color: $color-white;
   }
   &:focus {
     background-color: $green-color;
@@ -364,7 +363,7 @@ a[href*="linkedin"] {
 .banner-text {
   width: calc(100% - 10%);
   position: relative;
-  background-color: $color-white-1;
+  background-color: $color-white;
   padding: 1%;
 }
 .banner-title {
@@ -435,7 +434,7 @@ a[href*="linkedin"] {
       font-family: $font-header;
       display: block;
       color: $color-black;
-      background-color: $color-white-1;
+      background-color: $color-white;
       line-height: 35px;
       width: 100%;
       border: none;
@@ -444,7 +443,7 @@ a[href*="linkedin"] {
 
       &:focus {
         background-color: $color-black;
-        color: $color-white-1;
+        color: $color-white;
         font-weight: bold;
       }
 
@@ -452,7 +451,7 @@ a[href*="linkedin"] {
         cursor: pointer;
         font-weight: bold;
         background-color: $color-black;
-        color: $color-white-1;
+        color: $color-white;
       }
     }
   }
@@ -489,7 +488,7 @@ a[href*="linkedin"] {
   padding: 0;
   margin: 0;
   backface-visibility: hidden;
-  background-color: $color-white-1;
+  background-color: $color-white;
   width: 85%;
   flex: 0 0 auto;
 }
@@ -519,7 +518,7 @@ a[href*="linkedin"] {
     flex: 0 1 auto;
     text-align: center;
     color: $color-black;
-    background: $color-white-1;
+    background: $color-white;
     line-height: 1.6em;
     font-family: "FontAwesome", $font-text;
     &:before {
@@ -550,7 +549,7 @@ a[href*="linkedin"] {
     display: block;
     line-height: 35px;
     font-weight: normal;
-    color: $color-white-1;
+    color: $color-white;
     text-shadow: 1px 1px 1px $color-black;
     background-color: $color-black;
     text-align: center;
@@ -561,7 +560,7 @@ a[href*="linkedin"] {
       background-color: $green-color;
     }
     &:hover {
-      color: $color-white-1;
+      color: $color-white;
       background-color: $green-color;
     }
   }
@@ -573,7 +572,7 @@ a[href*="linkedin"] {
   margin: 0 auto;
   line-height: 40px;
   background: $color-black;
-  color: $color-white-1;
+  color: $color-white;
   text-shadow: 1px 1px 1px $color-black;
   text-align: center;
   flex: 0 1 auto;
@@ -615,14 +614,14 @@ a[href*="linkedin"] {
 }
 #about-content {
   width: 100%;
-  background-color: $bgcolor;
+  background-color: $color-black;
   height: auto;
   order: 0;
   flex: 0 1 auto;
   p {
     font-size: 0.9em;
     line-height: 2em;
-    background-color: $color-white-1;
+    background-color: $color-white;
     color: $color-black;
     word-wrap: break-word;
     white-space: normal;
@@ -636,7 +635,7 @@ a[href*="linkedin"] {
   height: auto;
   display: block;
   margin: 0 0.5em 0 0;
-  border: 5px solid $bgcolor;
+  border: 5px solid $color-black;
 }
 #page-image {
   display: block;
@@ -651,7 +650,7 @@ a[href*="linkedin"] {
   margin: 0 auto;
   height: auto;
   padding: 0.25em;
-  background-color: $color-white-1;
+  background-color: $color-black;
   position: relative;
 }
 .hero-slider {
@@ -673,7 +672,7 @@ a[href*="linkedin"] {
 .panel {
   width: 100%;
   height: 350px;
-  background-color: $color-white-1;
+  background-color: $color-white;
 }
 .slider-panel {
   margin: 0;
@@ -709,7 +708,7 @@ a[href*="linkedin"] {
   font-weight: normal;
   font-size: 0.8em;
   background-color: $color-black;
-  color: $color-white-1;
+  color: $color-white;
   text-indent: 0;
   margin: 0 auto;
   font-family: $font-header;
@@ -719,7 +718,7 @@ a[href*="linkedin"] {
     cursor: pointer;
     font-weight: bold;
     text-shadow: 1px 1px 1px $color-black;
-    color: $color-white-1;
+    color: $color-white;
   }
 }
 .slider-text {
@@ -727,10 +726,10 @@ a[href*="linkedin"] {
   padding: 0.25em;
   display: block;
   margin: 0 auto;
-  color: $bgcolor;
+  color: $color-black;
   font-weight: normal;
   font-size: 0.75em;
-  background-color: $color-white-1;
+  background-color: $color-white;
   height: 100%;
   line-height: 20px;
   font-family: $font-text;
@@ -752,8 +751,8 @@ a[href*="linkedin"] {
   top: 150px;
   margin: 0;
   list-style: outside none none;
-  height: 40px;
-  width: 98%;
+  height: 60px;
+  width: 99%;
   padding: 0;
   display: flex;
   flex: row;
@@ -782,7 +781,7 @@ a[href*="linkedin"] {
   }
   &:hover {
     background-color: $color-black;
-    color: $color-white-1;
+    color: $color-white;
     font-weight: bold;
     cursor: pointer;
   }
@@ -805,7 +804,7 @@ a[href*="linkedin"] {
   }
   &:hover {
     background-color: $color-black;
-    color: $color-white-1;
+    color: $color-white;
     font-weight: bold;
     cursor: pointer;
   }
@@ -827,7 +826,7 @@ a[href*="linkedin"] {
     font-size: 1em;
     line-height: 50px;
     letter-spacing: 0.05em;
-    color: $color-white-1;
+    color: $color-white;
     background: $color-black;
     margin-bottom: 0.5em;
     text-shadow: 1px 1px 1px $color-black;
@@ -876,9 +875,9 @@ a[href*="linkedin"] {
         line-height: 50px;
         z-index: 150;
         font-size: 0.75em;
-        color: $color-white-1;
+        color: $color-white;
         background-color: $color-black;
-        border: 2px solid $color-white-1;
+        border: 2px solid $color-white;
         width: 150px;
         text-align: center;
         top: -20px;
@@ -903,7 +902,7 @@ a[href*="linkedin"] {
 #contact {
   width: 100%;
   padding: 0;
-  background-color: $color-white-1;
+  background-color: $color-white;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -939,8 +938,8 @@ a[href*="linkedin"] {
     line-height: 40px;
     margin: 0;
     text-align: center;
-    background-color: $color-white-1;
-    color: $color-black;
+    color: $color-white;
+    background-color: $color-black;
   }
 
   address {
@@ -948,7 +947,7 @@ a[href*="linkedin"] {
     flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    background-color: $color-white-1;
+    background-color: $color-black;
     ul {
       display: block;
       list-style: none;
@@ -958,13 +957,14 @@ a[href*="linkedin"] {
         font-family: FontAwesome, $font-text;
 
         a {
+          text-decoration: none;
           width: auto;
           display: inline-block;
           font-size: 0.8em;
           line-height: 40px;
           margin: 0;
           font-family: $font-header;
-          color: $color-black;
+          color: $color-white;
           &:hover {
             cursor: pointer;
             font-weight: bold;
@@ -982,7 +982,7 @@ a[href*="linkedin"] {
       display: inline-block;
       width: 40px;
       text-align: center;
-      color: $color-black;
+      color: $color-white;
     }
   }
 }
@@ -1018,7 +1018,7 @@ a[href*="linkedin"] {
   width: 95.25%;
   flex: 1 0 auto;
   padding: 0 0.5em 0 0;
-  background-color: $color-white-1;
+  background-color: $color-white;
   margin: 0;
   font-family: $font-header;
 }
@@ -1043,9 +1043,9 @@ a[href*="linkedin"] {
     display: block;
     width: 100%;
     line-height: 40px;
-    color: $color-white-1;
+    color: $color-white;
     background-color: $color-black;
-    border-bottom: 1px solid $color-white-1;
+    border-bottom: 1px solid $color-white;
     margin-bottom: 0.5em;
     text-indent: 0;
     font-size: 0.8em;
@@ -1097,7 +1097,7 @@ a[href*="linkedin"] {
   #myemail:focus,
   #myurl:focus,
   select:focus {
-    border-color: $bgcolor2;
+    border-color: $bgcolor-white;
   }
 
   #comment-fields {
@@ -1149,11 +1149,11 @@ a[href*="linkedin"] {
 
   #openmodal {
     background: $color-black;
-    color: $color-white-1;
+    color: $color-white;
     border: none;
     &:hover {
       color: $color-black;
-      background: $color-white-1;
+      background: $color-white;
       cursor: pointer;
     }
   }
@@ -1165,17 +1165,17 @@ a[href*="linkedin"] {
   margin: auto;
   font-size: 1em;
   background-color: $green-color;
-  color: $color-white-1;
+  color: $color-white;
   outline: none;
   border: none;
   &:active {
     background-color: $red-color;
-    color: $color-white-1;
+    color: $color-white;
     font-weight: bold;
   }
   &:hover {
     background-color: $red-color;
-    color: $color-white-1;
+    color: $color-white;
     cursor: pointer;
     font-weight: bold;
   }
@@ -1202,7 +1202,7 @@ a[href*="linkedin"] {
 
       .footer-href {
         line-height: 50px;
-        color: $color-white-1;
+        color: $color-white;
         display: block;
         font-size: 0.7em;
         font-family: $font-header;
@@ -1211,22 +1211,22 @@ a[href*="linkedin"] {
         text-decoration: none;
         &:visited {
           background-color: $green-color;
-          color: $color-white-1;
+          color: $color-white;
           font-weight: bold;
         }
         &:focus {
           background-color: $green-color;
-          color: $color-white-1;
+          color: $color-white;
         }
         &:hover {
           background-color: $green-color;
-          color: $color-white-1;
+          color: $color-white;
           cursor: pointer;
           font-weight: bold;
         }
         &:active {
           background-color: $green-color;
-          color: $color-white-1;
+          color: $color-white;
           font-weight: bold;
         }
       }
@@ -1481,14 +1481,14 @@ a[href*="linkedin"] {
   }
 
   #about-content {
-    background-color: $bgcolor;
+    background-color: $color-black;
     order: 0;
     flex: 0 0 auto;
 
     p {
       font-size: 1.1em;
       line-height: 2.2em;
-      background-color: $color-white-1;
+      background-color: $color-white;
       color: $color-black;
       word-wrap: break-word;
       white-space: normal;
@@ -1676,7 +1676,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -2128,7 +2128,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -2576,7 +2576,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -3020,7 +3020,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -3474,7 +3474,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -3921,7 +3921,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -4356,7 +4356,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
@@ -4791,7 +4791,7 @@ a[href*="linkedin"] {
     #myemail:focus,
     #myurl:focus,
     select:focus {
-      border-color: $bgcolor2;
+      border-color: $bgcolor-white;
     }
 
     #comment-fields {
