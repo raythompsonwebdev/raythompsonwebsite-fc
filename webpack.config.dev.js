@@ -76,7 +76,7 @@ export default {
                     /* use stage 3 features + css nesting rules */
                     stage: 3,
                     features: {
-                      "nesting-rules": true,
+                      "nesting-rules": false,
                     },
                   }),
                 ],
@@ -102,12 +102,29 @@ export default {
       "...",
       new ImageMinimizerPlugin({
         minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
+          // implementation: ImageMinimizerPlugin.imageminMinify,
+          // options: {
+          //   plugins: [
+          //     ["jpegtran", { progressive: true }],
+          //     ["optipng", { optimizationLevel: 5 }],
+          //   ],
+          // },
+          implementation: ImageMinimizerPlugin.squooshMinify,
           options: {
-            plugins: [
-              ["jpegtran", { progressive: true }],
-              ["optipng", { optimizationLevel: 5 }],
-            ],
+            encodeOptions: {
+              mozjpeg: {
+                // That setting might be close to lossless, but it’s not guaranteed
+                // https://github.com/GoogleChromeLabs/squoosh/issues/85
+                quality: 100,
+              },
+              webp: {
+                lossless: 1,
+              },
+              avif: {
+                // https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md
+                cqLevel: 0,
+              },
+            },
           },
         },
       }),
