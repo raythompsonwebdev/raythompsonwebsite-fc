@@ -14,6 +14,9 @@ export default {
     main: "./src/index",
   },
   watch: true,
+  watchOptions: {
+    ignored: ["node_modules/**"],
+  },
   target: "web",
   devtool: "source-map",
   output: {

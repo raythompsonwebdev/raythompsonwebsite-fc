@@ -202,11 +202,6 @@
       background-color: $green-color;
       color: $color-black;
     }
-    &:focus {
-      background-color: $green-color;
-      color: $color-white;
-      text-shadow: 1px 1px 1px $color-black;
-    }
     &:hover {
       background-color: $green-color;
       color: $color-white;
@@ -250,21 +245,15 @@ a[href*="linkedin"] {
   display: block;
   width: 100%;
   line-height: 30px;
-  color: $color-white;
+  color: $color-black;
   text-align: center;
 
   /* visited link */
   &:visited {
     font-weight: bold;
-    color: $color-black;
-  }
-  &:focus {
-    font-weight: bold;
-    color: $color-black;
   }
   &:active {
     font-weight: bold;
-    color: $color-black;
   }
 }
 
@@ -284,10 +273,6 @@ a[href*="linkedin"] {
     transform: scale(0.9);
     font-weight: bold;
     cursor: pointer;
-    background-color: $green-color;
-    color: $color-white;
-  }
-  &:focus {
     background-color: $green-color;
     color: $color-black;
   }
@@ -421,8 +406,10 @@ a[href*="linkedin"] {
   align-items: flex-start;
   list-style: none;
   padding: 0;
-  margin: 1em 0;
-  width: 100%;
+  margin: 0;
+  width: 99.5%;
+  border: 5px solid $color-black;
+  transition: all 0.2s ease-in 0s;
   gap: 0.25em;
 
   li {
@@ -433,25 +420,26 @@ a[href*="linkedin"] {
     .project-tab {
       font-family: $font-header;
       display: block;
-      color: $color-black;
-      background-color: $color-white;
-      line-height: 35px;
+      background-color: $color-black;
+      color: $color-white;
+      line-height: 30px;
       width: 100%;
+      padding: 0;
       border: none;
       font-size: 0.9em;
       transition: all 0.2s ease-in 0s;
 
       &:focus {
-        background-color: $color-black;
-        color: $color-white;
+        color: $color-black;
+        background-color: $color-white;
         font-weight: bold;
       }
 
       &:hover {
         cursor: pointer;
         font-weight: bold;
-        background-color: $color-black;
-        color: $color-white;
+        color: $color-black;
+        background-color: $color-white;
       }
     }
   }
@@ -466,7 +454,7 @@ a[href*="linkedin"] {
   justify-content: flex-start;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin: 1em auto;
   width: 100%;
   column-gap: 0;
   row-gap: 1em;
@@ -502,7 +490,7 @@ a[href*="linkedin"] {
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -510,8 +498,8 @@ a[href*="linkedin"] {
   gap: 0.2em;
 
   p {
-    width: 90%;
-    padding: 0.25em;
+    width: 70%;
+    padding: 0.5em;
     margin: 0 auto;
     display: block;
     font-size: 0.7em;
@@ -520,12 +508,14 @@ a[href*="linkedin"] {
     color: $color-black;
     background: $color-white;
     line-height: 1.6em;
-    font-family: "FontAwesome", $font-text;
+    font-family: FontAwesome, $font-text;
     &:before {
       content: "\f2bd";
-      font-size: 90%;
+      font-size: 100%;
       line-height: 1.6em;
       margin-right: 0.5em;
+      color: $color-black;
+      background: $color-white;
     }
   }
 }
@@ -602,7 +592,7 @@ a[href*="linkedin"] {
   justify-content: space-between;
   align-items: center;
   gap: 1em;
-  padding: 0.5em;
+  padding: 0;
 
   h2 {
     font-size: 1.3rem;
@@ -652,6 +642,14 @@ a[href*="linkedin"] {
   padding: 0.25em;
   background-color: $color-black;
   position: relative;
+  h3 {
+    font-size: 1em;
+    line-height: 40px;
+    background-color: $color-black;
+    color: $color-white;
+    text-shadow: 1px 1px 1px $color-black;
+    text-indent: 0.25em;
+  }
 }
 .hero-slider {
   margin: 0;
@@ -660,7 +658,7 @@ a[href*="linkedin"] {
 .mask {
   display: block;
   width: 100%;
-  height: 350px;
+  height: 390px;
   overflow: hidden;
   scroll-behavior: smooth;
 }
@@ -820,27 +818,28 @@ a[href*="linkedin"] {
   margin-bottom: 1em;
   padding: 0.2em;
   font-family: $font-header;
+  background: $color-black;
 
   h3 {
-    height: 50px;
+    height: 40px;
     font-size: 1em;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 0.05em;
     color: $color-white;
     background: $color-black;
-    margin-bottom: 0.5em;
     text-shadow: 1px 1px 1px $color-black;
-    text-indent: 0.5em;
+    text-indent: 0.25em;
   }
 }
 #bars {
   display: flex;
   flex-flow: column;
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: auto;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1%;
+  background: $color-white;
 
   li {
     width: 100%;
@@ -917,16 +916,18 @@ a[href*="linkedin"] {
   }
 }
 #contact-container {
+  display: flex;
   width: 100%;
   flex-flow: column;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 #contact-details {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   justify-content: stretch;
+  flex: 0 0 auto;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1029,6 +1030,11 @@ a[href*="linkedin"] {
   width: 98%;
   background: $color-black;
 }
+
+#myform-fields li:nth-of-type(6) {
+  height: 60px;
+}
+
 .myform-field {
   height: auto;
   margin-bottom: 0.5em;
@@ -1192,7 +1198,9 @@ a[href*="linkedin"] {
     width: 100%;
     display: flex;
     flex-flow: row;
+    align-items: flex-start;
     justify-content: center;
+    gap: 1em;
 
     .footer-link {
       width: 10%;
@@ -1202,6 +1210,7 @@ a[href*="linkedin"] {
 
       .footer-href {
         line-height: 50px;
+        background-color: $color-black;
         color: $color-white;
         display: block;
         font-size: 0.7em;
@@ -1214,19 +1223,15 @@ a[href*="linkedin"] {
           color: $color-white;
           font-weight: bold;
         }
-        &:focus {
-          background-color: $green-color;
-          color: $color-white;
-        }
         &:hover {
           background-color: $green-color;
-          color: $color-white;
+          color: $color-black;
           cursor: pointer;
           font-weight: bold;
         }
         &:active {
           background-color: $green-color;
-          color: $color-white;
+          color: $color-black;
           font-weight: bold;
         }
       }
@@ -1246,7 +1251,7 @@ a[href*="linkedin"] {
   .fixed-header {
     position: fixed;
     left: auto;
-    max-width: 90%;
+    max-width: 85%;
     height: 100px;
   }
   .site-header {
@@ -1352,56 +1357,36 @@ a[href*="linkedin"] {
     flex-flow: row;
     justify-content: flex-start;
     align-items: stretch;
-    list-style: none;
-    padding: 0;
-    margin: 1em 0;
-    width: 100%;
-    transition: all 0.2s ease-in 0s;
+
     li {
       width: 15%;
       flex: 1 0 auto;
       font-family: $font-text;
       .project-tab {
-        display: block;
-        line-height: 35px;
-        width: 100%;
-        border: none;
+        line-height: 60px;
         font-size: 1.2em;
       }
     }
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 0;
-    margin: auto;
-    column-gap: 4%;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 0.5%;
     row-gap: 1em;
   }
   .project {
-    width: 21.8%;
+    width: 24.5%;
   }
   .project-caption {
     position: absolute;
-    z-index: 9;
-    background: rgb(231 232 227 / 80%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    opacity: 0;
-    transition: all 200ms ease-in-out;
-    transform: scale(0);
     gap: 1em;
     p {
       font-size: 1em;
       text-align: left;
+      width: 85%;
     }
   }
   .caption-links {
@@ -1443,17 +1428,14 @@ a[href*="linkedin"] {
     padding: 0.25em;
 
     h3 {
-      height: 50px;
+      height: 40px;
       font-size: 1.3em;
-      line-height: 50px;
-      letter-spacing: 0.05em;
-      text-indent: 0.5em;
+      line-height: 40px;
     }
   }
   #bars {
     display: flex;
     flex-flow: column;
-    list-style: none;
 
     li {
       width: 100%;
@@ -1506,6 +1488,10 @@ a[href*="linkedin"] {
     width: 60%;
     float: right;
     display: block;
+    h3 {
+      font-size: 1.3em;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -1552,17 +1538,17 @@ a[href*="linkedin"] {
 
   #slids {
     font-size: 1.7em;
-    top: 145px;
+    top: 180px;
   }
   #next {
-    width: 15%;
+    width: 8%;
     font-size: 1.1em;
     &:hover {
       cursor: pointer;
     }
   }
   #prev {
-    width: 15%;
+    width: 8%;
     font-size: 1.1em;
     &:hover {
       cursor: pointer;
@@ -1581,25 +1567,19 @@ a[href*="linkedin"] {
     }
   }
   #contact-container {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
   #contact-details {
     width: 48%;
-    flex: 0 0 auto;
-    margin: 0;
     padding: 0 1em;
     h3 {
       font-size: 1.2rem;
     }
     address {
       height: auto;
-      width: 100%;
-      margin: 0;
+
       ul {
-        display: block;
-        list-style: none;
         padding: 0;
         li {
           height: auto;
@@ -1608,9 +1588,13 @@ a[href*="linkedin"] {
             display: inline-block;
             font-size: 1.1em;
             line-height: 40px;
-            color: $color-black;
           }
         }
+      }
+      .fa-envelope,
+      .fa-github,
+      .fa-linkedin {
+        font-size: 1.3em;
       }
     }
   }
@@ -1850,36 +1834,34 @@ a[href*="linkedin"] {
     text-align: left;
   }
   #project-tabs {
-    padding: 0.5em 0;
-    margin: 0.5em 0;
-    transition: all 0.2s ease-in 0s;
+    padding: 0;
+    margin: 0;
+
     li {
       width: 14%;
       .project-tab {
-        font-size: 1em;
+        font-size: 1.1em;
+        line-height: 60px;
       }
     }
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 0;
-    margin: auto;
-    column-gap: 4%;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 0.5%;
     row-gap: 1em;
   }
   .project {
-    width: 21.8%;
+    width: 24.5%;
   }
   .project-caption {
-    opacity: 0;
     gap: 0.5em;
 
     p {
       font-size: 0.9em;
       text-align: left;
+      width: 92%;
     }
   }
   .caption-links {
@@ -1917,10 +1899,9 @@ a[href*="linkedin"] {
     width: 40%;
 
     h3 {
-      height: 50px;
+      height: 40px;
       font-size: 1.2em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      line-height: 40px;
     }
   }
   #bars {
@@ -1956,6 +1937,10 @@ a[href*="linkedin"] {
     width: 55%;
     display: block;
     float: right;
+    h3 {
+      font-size: 1.2em;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -2039,15 +2024,12 @@ a[href*="linkedin"] {
     }
   }
   #contact-container {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
   #contact-details {
     width: 48%;
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0;
+    padding: 0 1em;
     h3 {
       font-size: 1.4rem;
       line-height: 50px;
@@ -2061,11 +2043,16 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-family: FontAwesome, $font-text;
+
           a {
             font-size: 1.1em;
           }
         }
+      }
+      .fa-envelope,
+      .fa-github,
+      .fa-linkedin {
+        font-size: 1.3em;
       }
     }
   }
@@ -2172,7 +2159,7 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 90%;
+      width: 100%;
 
       .footer-link {
         margin: 0;
@@ -2191,14 +2178,14 @@ a[href*="linkedin"] {
     display: none;
   }
   #site-wrapper {
-    width: calc(100% - 10%);
+    width: calc(100% - 6%);
     margin: auto;
   }
 
   .fixed-header {
     position: fixed;
     left: auto;
-    max-width: 90%;
+    max-width: 94%;
     height: 100px;
   }
 
@@ -2308,27 +2295,24 @@ a[href*="linkedin"] {
       width: 14%;
       font-family: $font-text;
       .project-tab {
-        display: block;
-        font-size: 1.15em;
+        font-size: 1.1em;
+        line-height: 60px;
       }
     }
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 0;
-    margin: auto;
-    column-gap: 4%;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 0.5%;
     row-gap: 1em;
   }
   .project {
-    width: 21.8%;
+    width: 24.5%;
   }
   .project-caption {
     gap: 0.25em;
-    opacity: 0;
+
     p {
       border: none;
       font-size: 0.9em;
@@ -2371,10 +2355,9 @@ a[href*="linkedin"] {
     width: 35%;
 
     h3 {
-      height: 50px;
-      font-size: 1.15em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      height: 40px;
+      font-size: 1.1em;
+      line-height: 40px;
     }
   }
   #bars {
@@ -2386,7 +2369,7 @@ a[href*="linkedin"] {
       height: 50px;
       position: relative;
       .bar {
-        left: 16.5%;
+        left: 17%;
         &:hover {
           cursor: pointer;
         }
@@ -2399,7 +2382,7 @@ a[href*="linkedin"] {
       }
       span {
         line-height: 50px;
-        width: 16.5%;
+        width: 17%;
         font-size: 0.9em;
       }
     }
@@ -2422,9 +2405,13 @@ a[href*="linkedin"] {
   }
 
   #slider {
-    width: 60%;
+    width: 62%;
     display: block;
     float: right;
+    h3 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -2492,15 +2479,13 @@ a[href*="linkedin"] {
     }
   }
   #contact-container {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
   #contact-details {
     width: 48%;
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0;
+    padding: 0 1em;
+
     h3 {
       font-size: 1.4rem;
     }
@@ -2513,7 +2498,7 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-family: FontAwesome;
+
           a {
             font-size: 1em;
           }
@@ -2619,7 +2604,7 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 90%;
+      width: 100%;
 
       .footer-link {
         margin: 0;
@@ -2638,14 +2623,14 @@ a[href*="linkedin"] {
     display: none;
   }
   #site-wrapper {
-    width: calc(100% - 5%);
+    width: calc(100% - 2%);
     margin: auto;
   }
 
   .fixed-header {
     position: fixed;
     left: auto;
-    max-width: 96%;
+    max-width: 98%;
     height: 100px;
   }
 
@@ -2751,30 +2736,23 @@ a[href*="linkedin"] {
       width: 14%;
       font-family: $font-text;
       .project-tab {
-        display: block;
-        width: 100%;
-        font-size: 1em;
+        line-height: 60px;
+        font-size: 1.1em;
       }
     }
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 0;
-    margin: auto;
-    column-gap: 3.5%;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 0.5%;
     row-gap: 1em;
   }
   .project {
     width: 31%;
   }
   .project-caption {
-    opacity: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.5em;
+    gap: 0.25em;
     p {
       border: none;
       font-size: 0.9em;
@@ -2807,6 +2785,7 @@ a[href*="linkedin"] {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
+
     h2 {
       font-size: 1.3em;
     }
@@ -2817,10 +2796,9 @@ a[href*="linkedin"] {
     width: 43%;
 
     h3 {
-      height: 50px;
-      font-size: 1.15em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      height: 40px;
+      font-size: 1.1em;
+      line-height: 40px;
     }
   }
   #bars {
@@ -2832,7 +2810,7 @@ a[href*="linkedin"] {
       text-align: center;
       .bar {
         display: block;
-        left: 16.5%;
+        left: 17%;
 
         &:hover {
           cursor: pointer;
@@ -2845,8 +2823,8 @@ a[href*="linkedin"] {
         }
       }
       span {
-        width: 16.5%;
-        font-size: 0.8em;
+        width: 17%;
+        font-size: 0.85em;
       }
     }
   }
@@ -2855,6 +2833,10 @@ a[href*="linkedin"] {
     width: 53%;
     display: block;
     float: right;
+    h3 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -2895,6 +2877,7 @@ a[href*="linkedin"] {
   #slids {
     font-size: 2em;
     top: 150px;
+    width: 98.5%;
   }
   #next {
     font-size: 1em;
@@ -2937,14 +2920,13 @@ a[href*="linkedin"] {
     }
   }
   #contact-container {
-    display: flex;
     flex-flow: row;
     justify-content: flex-start;
   }
   #contact-details {
     width: 48%;
-    flex: 0 0 auto;
-    margin: 0;
+    padding: 0 1em;
+
     h3 {
       font-size: 1.4rem;
     }
@@ -2957,7 +2939,7 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-family: FontAwesome;
+
           a {
             font-size: 1em;
           }
@@ -3065,7 +3047,7 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 90%;
+      width: 100%;
 
       .footer-link {
         margin: 0;
@@ -3084,7 +3066,7 @@ a[href*="linkedin"] {
     display: none;
   }
   #site-wrapper {
-    width: calc(100% - 5%);
+    width: calc(100% - 2%);
     margin: auto;
   }
 
@@ -3196,24 +3178,22 @@ a[href*="linkedin"] {
   }
   #project-tabs {
     margin: 0.5em 0;
+    width: 99%;
     transition: all 0.2s ease-in 0s;
     li {
       width: 14%;
       font-family: $font-text;
       .project-tab {
-        display: block;
-        width: 100%;
+        line-height: 50px;
         font-size: 1em;
       }
     }
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: flex-start;
     padding: 0;
-    margin: auto;
     column-gap: 3.5%;
     row-gap: 1em;
   }
@@ -3221,13 +3201,10 @@ a[href*="linkedin"] {
     width: 31%;
   }
   .project-caption {
-    opacity: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 0.25em;
     p {
       border: none;
-      font-size: 0.8em;
+      font-size: 0.85em;
       width: 96%;
       text-align: left;
     }
@@ -3248,7 +3225,7 @@ a[href*="linkedin"] {
     }
   }
   .cover-title {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 50px;
   }
 
@@ -3268,10 +3245,9 @@ a[href*="linkedin"] {
     width: 75%;
 
     h3 {
-      height: 50px;
+      height: 40px;
       font-size: 1.1em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      line-height: 40px;
     }
   }
   #bars {
@@ -3283,7 +3259,7 @@ a[href*="linkedin"] {
       text-align: center;
       .bar {
         display: block;
-        left: 16.5%;
+        left: 18%;
 
         &:hover {
           cursor: pointer;
@@ -3296,7 +3272,7 @@ a[href*="linkedin"] {
         }
       }
       span {
-        width: 16.5%;
+        width: 18%;
         font-size: 1em;
       }
     }
@@ -3346,6 +3322,7 @@ a[href*="linkedin"] {
   #slids {
     font-size: 2em;
     top: 150px;
+    width: 98%;
   }
   #next {
     font-size: 1em;
@@ -3388,17 +3365,17 @@ a[href*="linkedin"] {
     }
   }
   #contact-container {
-    display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: flex-start;
+    align-items: center;
     width: 85%;
     margin: 0;
+    gap: 2em;
   }
   #contact-details {
     width: 100%;
-    flex: 0 0 auto;
-    margin: 0;
+    padding: 0;
+
     h3 {
       font-size: 1.4rem;
     }
@@ -3411,7 +3388,7 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-family: FontAwesome;
+
           a {
             font-size: 1em;
           }
@@ -3435,7 +3412,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 98.25%;
+    width: 100%;
   }
   #myform-fields {
     list-style: none;
@@ -3519,7 +3496,7 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 90%;
+      width: 100%;
 
       .footer-link {
         margin: 0;
@@ -3654,10 +3631,9 @@ a[href*="linkedin"] {
     text-align: center;
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: flex-start;
     padding: 0;
     column-gap: 7.5%;
     row-gap: 1em;
@@ -3669,7 +3645,8 @@ a[href*="linkedin"] {
     li {
       width: 23%;
       .project-tab {
-        font-size: 1em;
+        line-height: 60px;
+        font-size: 1.1em;
       }
     }
   }
@@ -3678,6 +3655,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
   }
   .project-caption {
+    gap: 0.25em;
     p {
       font-size: 0.75em;
       width: 98%;
@@ -3718,16 +3696,14 @@ a[href*="linkedin"] {
     font-family: $font-header;
 
     h3 {
-      height: 50px;
+      height: 40px;
       font-size: 1.1em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      line-height: 40px;
     }
   }
   #bars {
     display: flex;
     flex-flow: column;
-    list-style: none;
 
     li {
       width: 100%;
@@ -3796,7 +3772,8 @@ a[href*="linkedin"] {
 
   #slids {
     font-size: 2em;
-    top: 145px;
+    top: 170px;
+    width: 98.5%;
   }
   #next {
     font-size: 1em;
@@ -3841,13 +3818,12 @@ a[href*="linkedin"] {
   #contact-container {
     width: 85%;
     flex-flow: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: flex-start;
+    align-items: center;
   }
   #contact-details {
     width: 100%;
     margin: 1em auto;
-    padding: 0;
 
     h3 {
       font-size: 1.3rem;
@@ -3887,6 +3863,7 @@ a[href*="linkedin"] {
   #myform-fields {
     list-style: none;
     margin: 0;
+    width: 100%;
   }
   .myform-field {
     height: auto;
@@ -3950,6 +3927,7 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
+      margin: auto;
       width: 90%;
 
       .footer-link {
@@ -4087,10 +4065,9 @@ a[href*="linkedin"] {
     text-align: center;
   }
   .projects {
-    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: flex-start;
     margin: auto;
     column-gap: 7%;
     row-gap: 1em;
@@ -4102,6 +4079,7 @@ a[href*="linkedin"] {
     li {
       width: 48%;
       .project-tab {
+        line-height: 60px;
         font-size: 1em;
       }
     }
@@ -4147,22 +4125,20 @@ a[href*="linkedin"] {
   #barchart {
     order: 1;
     flex: 0 0 auto;
-    width: 94%;
+    width: 96%;
     height: auto;
     padding: 0.2em;
     font-family: $font-header;
 
     h3 {
-      height: 50px;
-      font-size: 1.1em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      height: 40px;
+      font-size: 1em;
+      line-height: 40px;
     }
   }
   #bars {
     display: flex;
     flex-flow: column;
-    list-style: none;
 
     li {
       width: 100%;
@@ -4217,7 +4193,7 @@ a[href*="linkedin"] {
     }
   }
   .slider-title {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .slider-text {
     width: 99%;
@@ -4231,7 +4207,8 @@ a[href*="linkedin"] {
 
   #slids {
     font-size: 1.8em;
-    top: 145px;
+    top: 170px;
+    width: 98.5%;
   }
   #next {
     font-size: 0.9em;
@@ -4275,8 +4252,8 @@ a[href*="linkedin"] {
   #contact-container {
     width: 90%;
     flex-flow: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: flex-start;
+    align-items: center;
   }
   .hide-error {
     display: none;
@@ -4286,7 +4263,6 @@ a[href*="linkedin"] {
   }
   #contact-details {
     margin: 1em auto;
-    padding: 0;
     width: 100%;
     h3 {
       font-size: 1.2rem;
@@ -4320,6 +4296,7 @@ a[href*="linkedin"] {
   #myform-fields {
     list-style: none;
     margin: 0;
+    width: 99.5%;
   }
   .myform-field {
     height: auto;
@@ -4383,7 +4360,8 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 94%;
+      margin: auto;
+      width: 90%;
 
       .footer-link {
         margin: 0;
@@ -4521,7 +4499,6 @@ a[href*="linkedin"] {
     text-align: center;
   }
   .projects {
-    display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
@@ -4536,6 +4513,7 @@ a[href*="linkedin"] {
     li {
       width: 48%;
       .project-tab {
+        line-height: 30px;
         font-size: 1em;
       }
     }
@@ -4588,16 +4566,14 @@ a[href*="linkedin"] {
     font-family: $font-header;
 
     h3 {
-      height: 50px;
+      height: 40px;
       font-size: 1.05em;
-      line-height: 50px;
-      text-indent: 0.5em;
+      line-height: 40px;
     }
   }
   #bars {
     display: flex;
     flex-flow: column;
-    list-style: none;
 
     li {
       width: 100%;
@@ -4710,8 +4686,8 @@ a[href*="linkedin"] {
   #contact-container {
     width: 96%;
     flex-flow: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: flex-start;
+    align-items: center;
   }
   .hide-error {
     display: none;
@@ -4721,7 +4697,6 @@ a[href*="linkedin"] {
   }
   #contact-details {
     margin: 1em auto;
-    padding: 0;
     width: 100%;
     h3 {
       font-size: 1.2rem;
@@ -4818,7 +4793,8 @@ a[href*="linkedin"] {
   #site-footer {
     height: 50px;
     .footer-links {
-      width: 94%;
+      margin: auto;
+      width: 90%;
 
       .footer-link {
         margin: 0;

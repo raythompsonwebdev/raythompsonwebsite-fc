@@ -10,10 +10,14 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, , , , , comments, openmodal, privacy, submit] = myForm;
+const [text, email, reference, , , , comments, openmodal, privacy, submit] =
+  myForm;
 
 // eslint-disable-next-line no-console
-console.log(privacy, openmodal);
+console.log(myForm);
+
+// eslint-disable-next-line no-console
+console.log(reference, submit);
 
 /**
  * Input Name Validation
@@ -122,41 +126,9 @@ const privacyBtn = (evt) => {
     }
   };
 };
+
 // submit form
-const submitForm = () => {
-  const formData = new FormData(myForm);
-  // const urlToVal = "./php/validation.php";
-
-  fetch("/php/validation.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => {
-      if (!response.ok) {
-        // error processing
-        throw new Error(`${response.status}: ${response.statusText}`);
-      }
-      return response.text();
-    })
-    .then((response) => {
-      error.classList.remove("hide-error");
-      error.classList.add("show-error");
-      error.innerHTML = `${response}`;
-    })
-    .catch((err) => {
-      error.classList.remove("hide-error");
-      error.classList.add("show-error");
-      error.innerHTML = `<h1>Message not sent - Network ${err}</h1>`;
-
-      // eslint-disable-next-line no-console
-      console.error("Fetch Error : ", err.message);
-    });
-};
-
-const showError = (e) => {
-  e.preventDefault();
-
-  // check if required name and required email address have been entered. If not show error
+const submitForm = (e) => {
   if (text.validity.valueMissing || email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
@@ -171,7 +143,46 @@ const showError = (e) => {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    submitForm(e);
+
+    e.preventDefault();
+
+    const formData = new FormData(myForm);
+
+    // Display the key/value pairs
+    // eslint-disable-next-line no-restricted-syntax
+    for (const pair of formData.entries()) {
+      // eslint-disable-next-line no-console
+      console.log(`${pair[0]}, ${pair[1]}`);
+    }
+
+    fetch("php/validation.php", {
+      method: "POST",
+      headers: {
+        // "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
+      },
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // error processing
+          throw new Error(`${response.status}: ${response.statusText}`);
+        }
+        return response.text();
+      })
+      .then((response) => {
+        error.classList.remove("hide-error");
+        error.classList.add("show-error");
+        error.innerHTML = `${response}`;
+      })
+      .catch((err) => {
+        error.classList.remove("hide-error");
+        error.classList.add("show-error");
+        error.innerHTML = `<h1>Message not sent - Network ${err}</h1>`;
+
+        // eslint-disable-next-line no-console
+        console.error("Fetch Error : ", err.message);
+      });
   }
 };
 
@@ -179,7 +190,7 @@ error.classList.add("hide-error");
 error.textContent = "";
 
 // submit button
-submit.addEventListener("click", showError);
+submit.addEventListener("click", submitForm);
 
 // name field
 // text.addEventListener("input", dirtyInputName);

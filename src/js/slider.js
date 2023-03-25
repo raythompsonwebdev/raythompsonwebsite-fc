@@ -84,6 +84,7 @@ export default function slider() {
     const panel = document.createElement("ARTICLE");
     panel.setAttribute("class", "panel");
     panel.setAttribute("id", `#${hash}`);
+
     // slider panel image
     const slidepanel = document.createElement("FIGURE");
     slidepanel.setAttribute("class", "slider-panel");
@@ -106,8 +107,8 @@ export default function slider() {
     slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = `${text}`;
 
-    panel.append(slidepanel);
     panelContainer.append(panel);
+    panel.append(slidepanel);
 
     slidepanel.append(slidepanelImg);
     slidepanel.append(slidepanelCaption);
