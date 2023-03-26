@@ -1,18 +1,20 @@
 ![Ray Thompson Web Developer Website](/assets/raythompsonwebdev-home-page.png)
 
-# My Portfolio
+# Portfolio
 
-Web Developer portfolio website. Single page scrolling website with portfolio gallery showcasing current and previous work. Also website has a contact form and an Image slider built using latest coding techniques and a mobile first responsive design that enables website to be viewed on most devices (except watches).
+Portfolio website. Single page scrolling website with portfolio gallery , contact form with form validation, dynamic content driven Image silder, ineractive graph.
+
+Website built using current coding standards, mobile first responsive design that enables website to be viewed on most devices down to 360px width screens.
 
 ## Technologies
 
-- HTML - semantic html
+- HTML - semantic
 - CSS - css transitions, custom properties , css keyframes
 - SASS - nesting , mixins, variable, partials
 - JavaScript - ES6
-- PHP
-- MYSQLi
-- Relational Database
+- PHP - procedural
+- MYSQLi - PHP data objects
+- MYSQL Relation Database
 
 ## Tools
 
@@ -27,3 +29,4 @@ Web Developer portfolio website. Single page scrolling website with portfolio ga
 - [Composer](https://getcomposer.org/)
 - [MySQL](https://www.mysql.com/)
 - [MySQLi](https://www.php.net/manual/en/book.mysqli.php/)
+- [PostCSS](https://postcss.org//)
