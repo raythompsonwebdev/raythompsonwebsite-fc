@@ -10,14 +10,7 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, reference, , , , comments, openmodal, privacy, submit] =
-  myForm;
-
-// eslint-disable-next-line no-console
-console.log(myForm);
-
-// eslint-disable-next-line no-console
-console.log(reference, submit);
+const [text, email, , , , , comments, openmodal, privacy, submit] = myForm;
 
 /**
  * Input Name Validation
@@ -98,9 +91,6 @@ const privacyBtn = (evt) => {
   // Get the modal
   const modal = document.getElementById("myModal");
 
-  // eslint-disable-next-line no-console
-  console.log(evt.target);
-
   // Get the <span> element that closes the modal
   // eslint-disable-next-line prefer-destructuring
   const span = document.getElementsByClassName("close")[0];
@@ -150,16 +140,17 @@ const submitForm = (e) => {
 
     // Display the key/value pairs
     // eslint-disable-next-line no-restricted-syntax
-    for (const pair of formData.entries()) {
-      // eslint-disable-next-line no-console
-      console.log(`${pair[0]}, ${pair[1]}`);
-    }
+    // for (const pair of formData.entries()) {
+    //   // eslint-disable-next-line no-console
+    //   console.log(`${pair[0]}, ${pair[1]}`);
+    // }
 
     fetch("php/validation.php", {
       method: "POST",
+      mode: "no-cors", // no-cors, *cors, same-origin
       headers: {
-        // "Content-Type": "application/x-www-form-urlencoded",
         "Content-Type": "application/json",
+        // "Content-Type": "application/x-www-form-urlencoded",
       },
       body: formData,
     })
