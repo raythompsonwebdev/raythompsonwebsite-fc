@@ -197,15 +197,16 @@
     color: $color-white;
     background-color: $color-black;
     font-family: $font-header;
-
-    &:visited {
-      background-color: $green-color;
-      color: $color-black;
+    &:link {
+      color: $color-white;
+      background-color: $color-black;
     }
+
     &:hover {
       background-color: $green-color;
       color: $color-white;
       text-shadow: 1px 1px 1px $color-black;
+      cursor: pointer;
     }
     &:active {
       background-color: $green-color;
@@ -240,23 +241,12 @@ a[href*="twitter"],
 a[href*="facebook"],
 a[href*="linkedin"] {
   margin: 0;
-  font-size: 0.9em;
   text-decoration: none;
   display: block;
   width: 100%;
-  line-height: 30px;
+  line-height: 40px;
   color: $color-black;
   text-align: center;
-  &:hover {
-    cursor: pointer;
-  }
-  /* visited link */
-  &:visited {
-    font-weight: bold;
-  }
-  &:active {
-    font-weight: bold;
-  }
 }
 
 .fa-twitter,
@@ -265,11 +255,24 @@ a[href*="linkedin"] {
   display: block;
   width: 100%;
   text-align: center;
-  line-height: 30px;
-  font-size: 1em;
   transition: all 0.2s ease-in 0s;
+  color: $color-black;
+  background-color: $color-white;
   &::before {
+    font-size: 1em;
     display: block;
+    line-height: 40px;
+  }
+
+  &:link {
+    color: $color-black;
+    background-color: $color-white;
+  }
+
+  /* visited link */
+  &:visited {
+    font-weight: bold;
+    cursor: pointer;
   }
   &:hover {
     transform: scale(0.9);
@@ -280,6 +283,7 @@ a[href*="linkedin"] {
     text-shadow: 1px 1px 1px $color-black;
   }
   &:active {
+    font-weight: bold;
     background-color: $green-color;
     color: $color-white;
     text-shadow: 1px 1px 1px $color-black;
@@ -413,6 +417,7 @@ a[href*="linkedin"] {
   margin: 0;
   width: 99.5%;
   border: 5px solid $color-black;
+  background-color: $color-white;
   transition: all 0.2s ease-in 0s;
   gap: 0.25em;
 
@@ -433,17 +438,23 @@ a[href*="linkedin"] {
       font-size: 0.9em;
       transition: all 0.2s ease-in 0s;
 
-      &:focus {
-        color: $color-black;
-        background-color: $color-white;
-        font-weight: bold;
+      &:link {
+        cursor: pointer;
+        background-color: $color-black;
+        color: $color-white;
       }
 
       &:hover {
         cursor: pointer;
         font-weight: bold;
         color: $color-black;
-        background-color: $color-white;
+        background-color: $green-color;
+      }
+
+      &:active {
+        color: $color-black;
+        background-color: $green-color;
+        font-weight: bold;
       }
     }
   }
@@ -780,7 +791,12 @@ a[href*="linkedin"] {
   padding: 0;
   margin: 0;
   text-shadow: 1px 1px 1px $color-black;
-  &:focus {
+  &:link {
+    color: $color-black;
+    background-color: $color-black;
+    font-weight: bold;
+  }
+  &:visited {
     color: $color-black;
     background-color: $green-color;
     text-shadow: none;
@@ -790,6 +806,11 @@ a[href*="linkedin"] {
     color: $color-white;
     font-weight: bold;
     cursor: pointer;
+  }
+  &:active {
+    background-color: $color-black;
+    color: $color-white;
+    font-weight: bold;
   }
 }
 #prev {
@@ -803,7 +824,7 @@ a[href*="linkedin"] {
   padding: 0;
   margin: 0;
   text-shadow: 1px 1px 1px $color-black;
-  &:focus {
+  &:visited {
     color: $color-black;
     background-color: $green-color;
     text-shadow: none;
@@ -813,6 +834,11 @@ a[href*="linkedin"] {
     color: $color-white;
     font-weight: bold;
     cursor: pointer;
+  }
+  &:active {
+    background-color: $color-black;
+    color: $color-white;
+    font-weight: bold;
   }
 }
 
@@ -947,6 +973,17 @@ a[href*="linkedin"] {
       li {
         height: auto;
         font-family: FontAwesome, $font-text;
+        .fa-envelope,
+        .fa-github,
+        .fa-linkedin {
+          font-size: 1.3em;
+          font-style: normal;
+          line-height: 40px;
+          display: inline-block;
+          width: 40px;
+          text-align: center;
+          color: $color-white;
+        }
 
         a {
           text-decoration: none;
@@ -963,18 +1000,6 @@ a[href*="linkedin"] {
           }
         }
       }
-    }
-
-    .fa-envelope,
-    .fa-github,
-    .fa-linkedin {
-      font-size: 1.3em;
-      font-style: normal;
-      line-height: 40px;
-      display: inline-block;
-      width: 40px;
-      text-align: center;
-      color: $color-white;
     }
   }
 }
@@ -1312,8 +1337,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.5em;
-    line-height: 45px;
+    width: 100%;
+    &::before {
+      line-height: 45px;
+      font-size: 1.6em;
+    }
   }
 
   #site-content {
@@ -1387,7 +1415,7 @@ a[href*="linkedin"] {
 
     .caption-link {
       width: 45%;
-      font-size: 0.9em;
+      font-size: 1.1em;
       &:hover {
         font-weight: bold;
       }
@@ -1567,6 +1595,12 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
+
           a {
             width: auto;
             display: inline-block;
@@ -1574,11 +1608,6 @@ a[href*="linkedin"] {
             line-height: 40px;
           }
         }
-      }
-      .fa-envelope,
-      .fa-github,
-      .fa-linkedin {
-        font-size: 1.3em;
       }
     }
   }
@@ -1789,8 +1818,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.3em;
-    line-height: 45px;
+    width: 100%;
+    &::before {
+      line-height: 45px;
+      font-size: 1.6em;
+    }
   }
 
   #site-content {
@@ -1857,7 +1889,7 @@ a[href*="linkedin"] {
 
     .caption-link {
       width: 45%;
-      font-size: 0.9em;
+      font-size: 1.1em;
       &:hover {
         font-weight: bold;
       }
@@ -2024,16 +2056,15 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 1.1em;
           }
         }
-      }
-      .fa-envelope,
-      .fa-github,
-      .fa-linkedin {
-        font-size: 1.3em;
       }
     }
   }
@@ -2239,8 +2270,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 45px;
+    width: 100%;
+    &::before {
+      font-size: 1.5em;
+      line-height: 45px;
+    }
   }
 
   #site-content {
@@ -2308,7 +2342,7 @@ a[href*="linkedin"] {
 
     .caption-link {
       width: 45%;
-      font-size: 0.9em;
+      font-size: 1.1em;
 
       &:hover {
         font-weight: bold;
@@ -2473,7 +2507,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 1em;
           }
@@ -2678,8 +2716,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 45px;
+    width: 100%;
+    &::before {
+      font-size: 1.5em;
+      line-height: 45px;
+    }
   }
 
   #site-content {
@@ -2741,7 +2782,7 @@ a[href*="linkedin"] {
 
     .caption-link {
       width: 48%;
-      font-size: 0.9em;
+      font-size: 1em;
       &:hover {
         font-weight: bold;
       }
@@ -2906,7 +2947,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 1em;
           }
@@ -3113,8 +3158,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 45px;
+    width: 100%;
+    &::before {
+      line-height: 45px;
+      font-size: 1.4em;
+    }
   }
 
   #site-content {
@@ -3182,7 +3230,7 @@ a[href*="linkedin"] {
 
     .caption-link {
       width: 48%;
-      font-size: 0.9em;
+      font-size: 1em;
       &:hover {
         font-weight: bold;
       }
@@ -3346,7 +3394,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 1em;
           }
@@ -3556,8 +3608,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 40px;
+    width: 100%;
+    &::before {
+      line-height: 45px;
+      font-size: 1.4em;
+    }
   }
 
   #site-content {
@@ -3623,7 +3678,7 @@ a[href*="linkedin"] {
     margin: 0 auto;
     width: 100%;
     .caption-link {
-      font-size: 0.9em;
+      font-size: 1em;
     }
   }
   .cover-title {
@@ -3741,7 +3796,7 @@ a[href*="linkedin"] {
     height: auto;
 
     p {
-      font-size: 0.9m;
+      font-size: 0.9em;
       line-height: 2em;
     }
   }
@@ -3783,6 +3838,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 1.1em;
           }
@@ -3983,8 +4043,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 40px;
+    width: 100%;
+    &::before {
+      line-height: 45px;
+      font-size: 1.4em;
+    }
   }
 
   #site-content {
@@ -4052,7 +4115,7 @@ a[href*="linkedin"] {
     width: 100%;
 
     .caption-link {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
   }
   .cover-title {
@@ -4216,6 +4279,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 0.9em;
           }
@@ -4413,8 +4481,11 @@ a[href*="linkedin"] {
   .fa-twitter,
   .fa-facebook,
   .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 40px;
+    width: 100%;
+    &::before {
+      font-size: 1.4em;
+      line-height: 45px;
+    }
   }
 
   #site-content {
@@ -4647,6 +4718,11 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
+          .fa-envelope,
+          .fa-github,
+          .fa-linkedin {
+            font-size: 1.3em;
+          }
           a {
             font-size: 0.85em;
           }

@@ -169,10 +169,7 @@ const submitForm = (e) => {
       .catch((err) => {
         error.classList.remove("hide-error");
         error.classList.add("show-error");
-        error.innerHTML = `<h1>Message not sent - Network ${err}</h1>`;
-
-        // eslint-disable-next-line no-console
-        console.error("Fetch Error : ", err.message);
+        error.innerHTML = `<h1>Message not sent - Network ${err.message}</h1>`;
       });
   }
 };
@@ -184,11 +181,9 @@ error.textContent = "";
 submit.addEventListener("click", submitForm);
 
 // name field
-// text.addEventListener("input", dirtyInputName);
 text.addEventListener("blur", dirtyInputName);
 
 // email field
-// email.addEventListener("input", dirtyInputEmail);
 email.addEventListener("blur", dirtyInputEmail);
 
 // prevent spaces from being typed in the email field
@@ -205,5 +200,4 @@ comments.addEventListener("input", dirtyInputComments);
 comments.addEventListener("blur", dirtyInputComments);
 
 // name field
-// text.addEventListener("input", dirtyInputName);
 openmodal.addEventListener("click", privacyBtn);

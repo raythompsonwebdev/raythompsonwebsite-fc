@@ -148,4 +148,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const testLink = document.querySelector("#project-page-link");
+
+  testLink.addEventListener("click", (event) => {
+    // Store hash
+    // eslint-disable-next-line prefer-destructuring
+    const { hash } = event.target;
+    // check if has empty
+    if (hash !== "") {
+      // if not, Prevent default anchor click behavior
+      event.preventDefault();
+      // select element id converting hash to string using template literal and use as argument in scrolling function.
+      scrollTo(document.querySelector(`${hash}`));
+    } // End if
+  });
 });

@@ -34,13 +34,6 @@ export default {
       new TerserPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
-          // implementation: ImageMinimizerPlugin.imageminMinify,
-          // options: {
-          //   plugins: [
-          //     ["jpegtran", { progressive: true }],
-          //     ["optipng", { optimizationLevel: 5 }],
-          //   ],
-          // },
           implementation: ImageMinimizerPlugin.squooshMinify,
           options: {
             encodeOptions: {

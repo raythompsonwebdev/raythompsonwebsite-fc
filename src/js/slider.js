@@ -152,15 +152,6 @@ export default function slider() {
     }
   };
 
-  // const removeStyle = (bill) => {
-  //   if (bill.classList.contains(".captionshow")) {
-  //     bill.addEventListener("hover", (e) => {
-  //       e.preventDefault();
-  //       bill.classList.remove("captionshow");
-  //     });
-  //   }
-  // };
-
   // Hero Slider
   next.addEventListener("click", (e) => {
     // prev.classList.remove("active");
