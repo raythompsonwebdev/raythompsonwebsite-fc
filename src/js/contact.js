@@ -10,7 +10,7 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, , , , , comments, openmodal, privacy, submit] = myForm;
+const [text, email, comments, openmodal, privacy, submit] = myForm;
 
 /**
  * Input Name Validation

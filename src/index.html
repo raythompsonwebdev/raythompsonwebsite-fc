@@ -130,20 +130,20 @@
       <!--Social Icons-->
       <ul id="social">
         <li class="social-item">
-          <a href="https://twitter.com/RayThompWeb" title="Follow me on Twitter" target="blank">
-            <i class="fa fa-twitter"></i>
-            <span class="visually-hidden">Twitter Icon</span>
+          <a href="https://github.com/raythompsonwebdev/" title="Follow me on Github" target="blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span class="visually-hidden">Github Icon</span>
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.facebook.com/raythompsonwebdeveloper" title="Follow me on Facebook" target="blank">
-            <i class="fa fa-facebook"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
             <span class="visually-hidden">Facebook Icon</span>
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.linkedin.com/in/raymond-t-1b42b7b8" title="Follow me on LinkedIn" target="blank">
-            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
             <span class="visually-hidden">LinkedIn Icon</span>
           </a>
         </li>
@@ -464,10 +464,13 @@
         </div>
         <div id="about-widgets">
           <section id="barchart">
-            <h3>Favourite frameworks to use</h3>
+            <h3>Web Programming Skills</h3>
+
             <ul id="bars">
 
             </ul>
+            <span
+              id="ledger"><span></span><span>Newbie</span><span>Rookie</span><span>Intermediate</span><span>Expert</span></span>
 
           </section>
           <section id="slider">
@@ -490,6 +493,29 @@
       <section id="contact" class="tabcontent">
         <h2 id="contact-title">Contact</h2>
         <div id="contact-container">
+          <section id="contact-details">
+            <h3>Have any question ?</h3>
+            <p>Please use this form to contact me and I will get back to you as soon as possible! You can also
+              contact me using my contact details below :</p>
+            <address>
+              <ul>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <a href="mailto:ray_thomp@hushmail.com" title="call me">079080 620 147</a>
+                </li>
+                <li>
+                  <i class="far fa-envelope"></i>
+                  <a href="mailto:raymond.thompson@raythompsonwebdev.co.uk"
+                    title="send me an email">raymond.thompson@raythompsonwebdev.co.uk</a>
+                </li>
+                <li>
+                  <i class="far fa-envelope"></i>
+                  <a href="mailto:ray_thomp@hushmail.com" title="send me an email">ray_thomp@hushmail.com</a>
+                </li>
+
+              </ul>
+            </address>
+          </section>
           <form id="myform" name="theform" class="group" auto-complete="off">
             <span id="form-error" class="hide-error"></span>
             <ol id="myform-fields">
@@ -504,41 +530,13 @@
                   max="32" aria-describedby="form-error" />
               </li>
               <li class="myform-field">
-                <label for="reference">How did you hear about this site?</label>
-                <select name="reference" id="reference">
-                  <option>Choose...</option>
-                  <option value="friend">A friend</option>
-                  <option value="google">Google</option>
-                  <option value="facebook">Facebook</option>
-                  <option value="twitter">Twitter</option>
-                  <option value="discord">Discord</option>
-                </select>
-              </li>
-              <li class="myform-field">
-                <div id="comment-header">Comment Type</div>
-                <ol id="comment-fields">
-                  <li class="comment-field">
-                    <label for="questionitem">Website :</label>
-                    <input type="radio" name="requesttype" value="question" id="questionitem" />
-                  </li>
-                  <li class="comment-field">
-                    <label for="blogitem">Blog :</label>
-                    <input type="radio" name="requesttype" value="blog" id="blogitem" />
-                  </li>
-                  <li class="comment-field">
-                    <label for="generalitem">General :</label>
-                    <input type="radio" name="requesttype" value="general" id="generalitem" />
-                  </li>
-                </ol>
-              </li>
-              <li class="myform-field">
-                <label for="mycomments">Comment</label>
+                <label for="mycomments">Message</label>
                 <textarea name="mycomments" id="mycomments" placeholder="Enter your comment here" rows="5" min="5"
                   max="250"></textarea>
               </li>
               <li class="myform-field">
-                <button id="openmodal">Read our Terms and Conditions</button>
-                <label for="myprivacy">I agree to the Terms and Conditions
+                <button id="openmodal">Read our Privacy Policy</button>
+                <label for="myprivacy">I agree to the Privacy Policy
                   <input type="checkbox" id="myprivacy" name="myprivacy">
                 </label>
 
@@ -550,42 +548,7 @@
               </li>
             </ol>
           </form>
-          <section id="contact-details">
-            <h3>Contact Details</h3>
-            <address>
-              <ul>
-                <li>
-                  <i class="far fa-envelope"></i>
-                  <a href="mailto:ray_thomp@hushmail.com"
-                    title="send me an email">raymond.thompson@raythompsonwebdev.co.uk</a>
-                </li>
-                <li>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/raythompsonwebdev/" title="follow me on github">raythompsonwebdev</a>
-                </li>
-                <!-- <li>
-                  <i class="fa fa-linkedin"></i>
-                  <a href="https://www.linkedin.com/in/raymond-t-1b42b7b8"
-                    title="follow me on linkedin">raymond-t-1b42b7b8</a>
-                </li> -->
-              </ul>
-            </address>
-            <figure id="map-image">
-              <img src="./images/map-of-hackney/webp/map-of-hackney-large.webp" height="300" width="300"
-                alt="Image of Hackney, East London" loading="lazy" srcset="./images/map-of-hackney/webp/map-of-hackney-large.webp 300w,
-                  ./images/map-of-hackney/webp/map-of-hackney-medium.webp 300w,
-                  ./images/map-of-hackney/webp/map-of-hackney-medium-small.webp 300w,
-                  ./images/map-of-hackney/webp/map-of-hackney-small.webp 300w,
-                  ./images/map-of-hackney/webp/map-of-hackney-x-small.webp 285w,
-                  ./images/map-of-hackney/webp/map-of-hackney-micro-small.webp 265w" sizes="(min-width:  90em) 300px, 
-                  (min-width: 80em) and (max-width: 1439px) 300px,
-                  (min-width: 64em) and (max-width: 1279px) 300px, 
-                  (min-width: 46em) and (max-width: 1023px) 285px, 
-                  (min-width: 37.5em) and (max-width: 735px) 285px,
-                  (min-width: 30em) and (max-width: 599px) 265px, 
-                  (min-width: 22.5em) and (max-width: 479px) 265px, 100vw" alt="map of hackney" />
-            </figure>
-          </section>
+
         </div>
       </section>
     </main>

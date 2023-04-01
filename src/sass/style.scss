@@ -11,32 +11,40 @@
 /* The Modal (background) */
 .modal {
   display: none;
+
   /* Hidden by default */
   position: fixed;
+
   /* Stay in place */
   z-index: 1;
+
   /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
+
   /* Full width */
   height: 100%;
+
   /* Full height */
   overflow: auto;
+
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
+
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 40%);
+
   /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #888888;
   width: 80%;
   /* Could be more or less, depending on screen size */
 
@@ -53,7 +61,7 @@
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -237,7 +245,7 @@
   text-align: center;
   flex: 0 0 auto;
 }
-a[href*="twitter"],
+a[href*="github"],
 a[href*="facebook"],
 a[href*="linkedin"] {
   margin: 0;
@@ -249,7 +257,7 @@ a[href*="linkedin"] {
   text-align: center;
 }
 
-.fa-twitter,
+.fa-github,
 .fa-facebook,
 .fa-linkedin {
   display: block;
@@ -351,6 +359,7 @@ a[href*="linkedin"] {
   justify-content: center;
   align-items: center;
   width: 100%;
+
   --bg-image: "";
 }
 .banner-text {
@@ -524,7 +533,7 @@ a[href*="linkedin"] {
     background: $color-white;
     line-height: 1.6em;
     font-family: FontAwesome, $font-text;
-    &:before {
+    &::before {
       content: "\f2bd";
       font-size: 100%;
       line-height: 1.6em;
@@ -681,6 +690,7 @@ a[href*="linkedin"] {
   overflow: hidden;
   scroll-behavior: smooth;
 }
+
 /* Position relative for scrolling */
 .slider-body {
   width: 100%;
@@ -751,6 +761,7 @@ a[href*="linkedin"] {
   line-height: 20px;
   font-family: $font-text;
   word-wrap: break-word;
+
   /* white-space: pre-wrap; */
   letter-spacing: 0.01em;
   text-align: center;
@@ -847,9 +858,10 @@ a[href*="linkedin"] {
   width: 96%;
   display: block;
   margin: 1em auto;
-  padding: 0.2em;
+  padding: 0.25em;
   font-family: $font-header;
   background: $color-black;
+  height: auto;
 
   h3 {
     height: 40px;
@@ -865,11 +877,11 @@ a[href*="linkedin"] {
 #bars {
   display: flex;
   flex-flow: column;
-  width: 98%;
+  width: 100%;
   height: auto;
   list-style: none;
   margin: 0;
-  padding: 1%;
+  padding: 0.5em 0;
   background: $color-white;
 
   li {
@@ -908,7 +920,34 @@ a[href*="linkedin"] {
       font-size: 0.8em;
       color: $color-black;
       z-index: 3;
+      text-indent: 0.5em;
     }
+  }
+}
+
+#ledger {
+  display: flex;
+  flex-flow: row;
+  height: 40px;
+  line-height: 40px;
+
+  span {
+    width: 20%;
+    display: block;
+    background-color: $color-white;
+    border-right: #000 solid 1px;
+    text-indent: 0.5em;
+    flex: 1 0 auto;
+  }
+
+  span:first-of-type {
+    width: 15.2%;
+    display: block;
+    background-color: $color-white;
+  }
+
+  span:last-of-type {
+    border-right: none;
   }
 }
 
@@ -960,6 +999,13 @@ a[href*="linkedin"] {
     background-color: $color-black;
   }
 
+  p {
+    background-color: $color-white;
+    color: $color-black;
+    width: 92%;
+    padding: 4%;
+  }
+
   address {
     width: 100%;
     flex: 0 0 auto;
@@ -973,9 +1019,8 @@ a[href*="linkedin"] {
       li {
         height: auto;
         font-family: FontAwesome, $font-text;
-        .fa-envelope,
-        .fa-github,
-        .fa-linkedin {
+        .fa-phone,
+        .fa-envelope {
           font-size: 1.3em;
           font-style: normal;
           line-height: 40px;
@@ -1157,7 +1202,6 @@ a[href*="linkedin"] {
     width: 100%;
     border: var(--comment-error);
     padding: 0;
-    line-height: 20px;
     font-size: 0.9em;
   }
 
@@ -1334,7 +1378,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 45px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -1438,9 +1482,7 @@ a[href*="linkedin"] {
 
   #barchart {
     width: 37%;
-    margin-bottom: 1em;
-    padding: 0.25em;
-    height: auto;
+    margin: 0;
     display: inline-block;
 
     h3 {
@@ -1457,7 +1499,7 @@ a[href*="linkedin"] {
       width: 100%;
       height: 50px;
       .bar {
-        left: 16.5%;
+        left: 16%;
         &:hover {
           background: $yellow-color;
           cursor: pointer;
@@ -1465,10 +1507,27 @@ a[href*="linkedin"] {
       }
 
       span {
-        width: 16.5%;
+        width: 16%;
         line-height: 50px;
         font-size: 1em;
       }
+    }
+  }
+
+  #ledger {
+    height: 40px;
+    line-height: 40px;
+
+    span {
+      width: 20%;
+    }
+
+    span:first-of-type {
+      width: 15.2%;
+    }
+
+    span:last-of-type {
+      border-right: none;
     }
   }
 
@@ -1579,11 +1638,11 @@ a[href*="linkedin"] {
   }
   #contact-container {
     flex-flow: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   #contact-details {
-    width: 48%;
+    width: 32%;
     margin: 0;
     h3 {
       font-size: 1.2rem;
@@ -1595,9 +1654,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
 
@@ -1627,7 +1685,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 48%;
+    width: 67%;
   }
   #myform-fields {
     list-style: none;
@@ -1708,7 +1766,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 1em;
     }
   }
@@ -1815,7 +1872,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 45px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -1911,10 +1968,8 @@ a[href*="linkedin"] {
   }
   #barchart {
     width: 42%;
-    height: auto;
     display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.25em;
+    margin: 0;
     h3 {
       height: 40px;
       font-size: 1.2em;
@@ -1929,7 +1984,7 @@ a[href*="linkedin"] {
       height: 50px;
       position: relative;
       .bar {
-        left: 16.5%;
+        left: 16%;
 
         &:hover {
           background: $yellow-color;
@@ -1937,10 +1992,27 @@ a[href*="linkedin"] {
         }
       }
       span {
-        width: 16.5%;
+        width: 16%;
         line-height: 50px;
         font-size: 1em;
       }
+    }
+  }
+
+  #ledger {
+    height: 40px;
+    line-height: 40px;
+
+    span {
+      width: 20%;
+    }
+
+    span:first-of-type {
+      width: 15%;
+    }
+
+    span:last-of-type {
+      border-right: none;
     }
   }
 
@@ -2037,11 +2109,11 @@ a[href*="linkedin"] {
   }
   #contact-container {
     flex-flow: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   #contact-details {
-    width: 48%;
+    width: 34%;
     margin: 0;
     h3 {
       font-size: 1.4rem;
@@ -2056,9 +2128,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -2082,7 +2153,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 48%;
+    width: 65%;
   }
   #myform-fields {
     list-style: none;
@@ -2161,7 +2232,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 1em;
     }
   }
@@ -2267,7 +2337,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 45px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -2364,10 +2434,8 @@ a[href*="linkedin"] {
   }
   #barchart {
     width: 35%;
-    height: auto;
     display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.25em;
+    margin: 0;
     h3 {
       height: 40px;
       font-size: 1.1em;
@@ -2393,6 +2461,25 @@ a[href*="linkedin"] {
         width: 17%;
         font-size: 0.9em;
       }
+    }
+  }
+
+  #ledger {
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9em;
+    text-indent: 0.25em;
+
+    span {
+      width: 20%;
+    }
+
+    span:first-of-type {
+      width: 16.2%;
+    }
+
+    span:last-of-type {
+      border-right: none;
     }
   }
 
@@ -2489,11 +2576,11 @@ a[href*="linkedin"] {
   }
   #contact-container {
     flex-flow: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   #contact-details {
-    width: 48%;
+    width: 34%;
     margin: 0;
     h3 {
       font-size: 1.4rem;
@@ -2507,9 +2594,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -2533,7 +2619,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 48%;
+    width: 64%;
   }
   #myform-fields {
     list-style: none;
@@ -2607,7 +2693,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 1em;
     }
   }
@@ -2713,7 +2798,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 45px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -2805,10 +2890,8 @@ a[href*="linkedin"] {
 
   #barchart {
     width: 43%;
-    height: auto;
     display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.25em;
+    margin: 0;
     h3 {
       height: 40px;
       font-size: 1.1em;
@@ -2834,6 +2917,25 @@ a[href*="linkedin"] {
         width: 17%;
         font-size: 0.85em;
       }
+    }
+  }
+
+  #ledger {
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.85em;
+    text-indent: 0.25em;
+
+    span {
+      width: 20%;
+    }
+
+    span:first-of-type {
+      width: 16.2%;
+    }
+
+    span:last-of-type {
+      border-right: none;
     }
   }
 
@@ -2929,11 +3031,11 @@ a[href*="linkedin"] {
   }
   #contact-container {
     flex-flow: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
   }
   #contact-details {
-    width: 48%;
+    width: 35%;
     margin: 0;
     h3 {
       font-size: 1.4rem;
@@ -2947,9 +3049,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -2974,7 +3075,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 48%;
+    width: 63%;
   }
   #myform-fields {
     list-style: none;
@@ -3048,7 +3149,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 1em;
     }
   }
@@ -3155,7 +3255,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 45px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -3380,7 +3480,7 @@ a[href*="linkedin"] {
     gap: 2em;
   }
   #contact-details {
-    width: 100%;
+    width: 77%;
     margin: 0;
     h3 {
       font-size: 1.4rem;
@@ -3394,9 +3494,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -3495,7 +3594,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 1em;
     }
   }
@@ -3605,7 +3703,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 40px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -3698,8 +3796,6 @@ a[href*="linkedin"] {
   }
   #barchart {
     width: 85%;
-    height: auto;
-    padding: 0.25em;
     display: block;
     margin: 1em auto;
 
@@ -3718,14 +3814,14 @@ a[href*="linkedin"] {
       height: 50px;
       position: relative;
       .bar {
-        left: 18.5%;
+        left: 18%;
 
         &:hover {
           cursor: pointer;
         }
       }
       span {
-        width: 18.5%;
+        width: 18%;
         line-height: 50px;
         font-size: 1em;
       }
@@ -3825,7 +3921,7 @@ a[href*="linkedin"] {
     align-items: center;
   }
   #contact-details {
-    width: 100%;
+    width: 77%;
     margin: 1em auto;
 
     h3 {
@@ -3838,9 +3934,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -3928,7 +4023,6 @@ a[href*="linkedin"] {
       }
     }
     #mycomments {
-      width: 100%;
       font-size: 0.9em;
     }
   }
@@ -4040,7 +4134,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 40px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -4135,8 +4229,6 @@ a[href*="linkedin"] {
   }
   #barchart {
     width: 96%;
-    height: auto;
-    padding: 0.2em;
     display: block;
     margin: 1em auto;
 
@@ -4156,14 +4248,14 @@ a[href*="linkedin"] {
       position: relative;
       .bar {
         display: block;
-        left: 18.5%;
+        left: 18%;
 
         &:hover {
           cursor: pointer;
         }
       }
       span {
-        width: 18.5%;
+        width: 18%;
         font-size: 0.95em;
       }
     }
@@ -4268,7 +4360,7 @@ a[href*="linkedin"] {
   }
   #contact-details {
     margin: 1em auto;
-    width: 100%;
+    width: 87%;
     h3 {
       font-size: 1.2rem;
     }
@@ -4279,9 +4371,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -4366,7 +4457,6 @@ a[href*="linkedin"] {
       }
     }
     #mycomments {
-      width: 100%;
       font-size: 0.9em;
     }
   }
@@ -4478,7 +4568,7 @@ a[href*="linkedin"] {
   a[href*="linkedin"] {
     line-height: 40px;
   }
-  .fa-twitter,
+  .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
@@ -4574,8 +4664,6 @@ a[href*="linkedin"] {
 
   #barchart {
     width: 94%;
-    height: auto;
-    padding: 0.2em;
     display: block;
     margin: 1em auto;
 
@@ -4585,6 +4673,7 @@ a[href*="linkedin"] {
       line-height: 40px;
     }
   }
+
   #bars {
     display: flex;
     flex-flow: column;
@@ -4707,7 +4796,7 @@ a[href*="linkedin"] {
   }
   #contact-details {
     margin: 1em auto;
-    width: 100%;
+    width: 95%;
     h3 {
       font-size: 1.2rem;
     }
@@ -4718,9 +4807,8 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          .fa-envelope,
-          .fa-github,
-          .fa-linkedin {
+          .fa-phone,
+          .fa-envelope {
             font-size: 1.3em;
           }
           a {
@@ -4805,7 +4893,6 @@ a[href*="linkedin"] {
     }
 
     #mycomments {
-      width: 100%;
       font-size: 0.9em;
     }
   }
