@@ -12,6 +12,9 @@ const error = document.getElementById("form-error");
 // deconstruct array of form elements
 const [text, email, comments, openmodal, privacy, submit] = myForm;
 
+// eslint-disable-next-line no-console
+console.log(text, email, comments, openmodal, privacy, submit);
+
 /**
  * Input Name Validation
  * @param {Object} evt
@@ -19,8 +22,9 @@ const [text, email, comments, openmodal, privacy, submit] = myForm;
  */
 const dirtyInputName = (evt) => {
   evt.preventDefault();
-  // eslint-disable-next-line prefer-destructuring
+
   const { srcElement } = evt;
+
   // check if input matches pattern
   if (
     srcElement.validity.patternMismatch ||
@@ -30,7 +34,7 @@ const dirtyInputName = (evt) => {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
-      "Name must contain letters. No numbers or less than 3 characters.";
+      "Name must not contain numbers or be less than 3 characters.";
     srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -43,11 +47,13 @@ const dirtyInputName = (evt) => {
 // email field
 const dirtyInputEmail = (evt) => {
   evt.preventDefault();
-  // eslint-disable-next-line prefer-destructuring
+
   const { srcElement } = evt;
+
   // regex to detect valid email
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   // check if input matches pattern
   if (!emailRegExp.test(srcElement.value)) {
     error.classList.add("show-error");
@@ -66,16 +72,16 @@ const dirtyInputEmail = (evt) => {
 const dirtyInputComments = (evt) => {
   evt.preventDefault();
 
-  // element
-  // eslint-disable-next-line prefer-destructuring
   const { srcElement } = evt;
+
   // regex to detect html tags
   const commentsRegExp = /<\/?[^>]+(>|$)/g;
+
   // check if input matches pattern
   if (commentsRegExp.test(srcElement.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "Naughty! NO HTML or Javascript Allowed!";
+    error.textContent = "Naughty! No HTML Tags allowed.";
     srcElement.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -122,13 +128,9 @@ const submitForm = (e) => {
   if (text.validity.valueMissing || email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
-    error.textContent = "name and email address are required!";
+    error.textContent = "Name and email address are required!";
     text.classList.add("dirty");
     email.classList.add("dirty");
-  } else if (!privacy.checked) {
-    error.classList.add("show-error");
-    error.classList.remove("hide-error");
-    error.textContent = "GDPR required!";
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
@@ -138,19 +140,11 @@ const submitForm = (e) => {
 
     const formData = new FormData(myForm);
 
-    // Display the key/value pairs
-    // eslint-disable-next-line no-restricted-syntax
-    // for (const pair of formData.entries()) {
-    //   // eslint-disable-next-line no-console
-    //   console.log(`${pair[0]}, ${pair[1]}`);
-    // }
-
     fetch("php/validation.php", {
       method: "POST",
       mode: "no-cors", // no-cors, *cors, same-origin
       headers: {
         "Content-Type": "application/json",
-        // "Content-Type": "application/x-www-form-urlencoded",
       },
       body: formData,
     })

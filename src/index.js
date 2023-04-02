@@ -33,14 +33,14 @@ window.addEventListener("load", () => {
   const chartbars = [
     {
       id: "1",
-      datapercentage: 65,
+      datapercentage: 60,
       codeplatform: "HTML",
       link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       title: "Link to HTML docs",
     },
     {
       id: "2",
-      datapercentage: 65,
+      datapercentage: 60,
       codeplatform: "CSS",
       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       title: "Link to CSS",
