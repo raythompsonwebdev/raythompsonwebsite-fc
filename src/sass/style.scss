@@ -16,7 +16,7 @@
   position: fixed;
 
   /* Stay in place */
-  z-index: 1;
+  z-index: 10;
 
   /* Sit on top */
   left: 0;
@@ -40,22 +40,34 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: $color-white;
   margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+  font-family: $font-text;
 
   h2 {
-    line-height: 50px;
     color: $color-white;
     background: $color-black;
     text-indent: 0.25em;
+    font-size: 1em;
+    line-height: 40px;
   }
   p {
-    line-height: 1.7em;
+    line-height: 1.9em;
+    font-size: 0.75em;
+  }
+
+  ul {
+    margin: 0;
+    li {
+      color: $color-black;
+      line-height: 30px;
+      font-size: 0.75em;
+    }
   }
 }
 
@@ -63,8 +75,9 @@
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
+  position: relative;
 }
 
 .close:hover,
@@ -1309,6 +1322,31 @@ a[href*="linkedin"] {
   .menu-toggle {
     display: none;
   }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.4em;
+      line-height: 50px;
+    }
+    p {
+      font-size: 1em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 1em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
+  }
+
   #site-wrapper {
     width: calc(100% - 15%);
     margin: auto;
@@ -1787,6 +1825,30 @@ a[href*="linkedin"] {
   .menu-toggle {
     display: none;
   }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.35em;
+      line-height: 50px;
+    }
+    p {
+      font-size: 0.9em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
+  }
   #site-wrapper {
     width: calc(100% - 10%);
     margin: auto;
@@ -2138,7 +2200,7 @@ a[href*="linkedin"] {
     line-height: 35px;
   }
   #myform {
-    width: 65%;
+    width: 66%;
   }
   #myform-fields {
     list-style: none;
@@ -2246,6 +2308,31 @@ a[href*="linkedin"] {
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .menu-toggle {
     display: none;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.3em;
+      line-height: 45px;
+    }
+    p {
+      font-size: 0.85em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.85em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
   }
   #site-wrapper {
     width: calc(100% - 6%);
@@ -2699,6 +2786,30 @@ a[href*="linkedin"] {
   .menu-toggle {
     display: none;
   }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.2em;
+      line-height: 45px;
+    }
+    p {
+      font-size: 0.85em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.85em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
+  }
   #site-wrapper {
     width: calc(100% - 2%);
     margin: auto;
@@ -3149,6 +3260,30 @@ a[href*="linkedin"] {
 @media screen and (min-width: 736px) and (max-width: 1023px) {
   .menu-toggle {
     display: none;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.2em;
+      line-height: 45px;
+    }
+    p {
+      font-size: 0.85em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.85em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
   }
   #site-wrapper {
     width: calc(100% - 2%);
@@ -3604,12 +3739,33 @@ a[href*="linkedin"] {
 
 /* 37.5em - 600px */
 @media screen and (min-width: 601px) and (max-width: 735px) {
-  h2 {
-    text-align: center;
-  }
   .menu-toggle {
     left: calc(78vw - 20px);
     font-size: 1.2em;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+    p {
+      font-size: 0.8em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
   }
   #site-wrapper {
     width: 100%;
@@ -3935,7 +4091,7 @@ a[href*="linkedin"] {
             font-size: 1.3em;
           }
           a {
-            font-size: 1.1em;
+            font-size: 1em;
           }
         }
       }
@@ -4053,6 +4209,30 @@ a[href*="linkedin"] {
   }
   .menu-toggle.hide {
     left: 110vw;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1.1em;
+      line-height: 40px;
+    }
+    p {
+      font-size: 0.8em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
   }
 
   #site-wrapper {
@@ -4500,6 +4680,31 @@ a[href*="linkedin"] {
   }
   .menu-toggle.hide {
     left: 110vw;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    width: 80%;
+
+    h2 {
+      font-size: 1em;
+      line-height: 40px;
+    }
+    p {
+      font-size: 0.8em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    font-size: 40px;
   }
 
   #site-wrapper {
