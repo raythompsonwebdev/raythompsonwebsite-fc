@@ -50,8 +50,7 @@
   font-family: $font-text;
 
   h2 {
-    color: $color-white;
-    background: $color-black;
+    color: $color-black;
     text-indent: 0.25em;
     font-size: 1em;
     line-height: 40px;
@@ -95,18 +94,18 @@
   display: block;
   top: 0;
   font-family: $font-header;
-  font-size: 1em;
+  font-size: 3em;
   text-transform: uppercase;
   background-color: $green-color;
   color: $color-white;
   border: none;
   transition: all ease-out 0s;
-  line-height: 45px;
-  height: 45px;
-  width: 25%;
+  line-height: 50px;
+  height: auto;
+  width: 20%;
   text-align: center;
   padding: 0;
-  left: calc(79vw - 20px);
+  left: calc(86vw - 20px);
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
@@ -147,22 +146,23 @@
   flex: 0 1 auto;
 }
 .site-title-name {
-  font-size: 1.45rem;
-  height: 35px;
+  height: auto;
   line-height: 35px;
   text-align: left;
   margin: 0;
   font-family: $font-header;
-  text-indent: 0.15em;
   width: 100%;
+  font-size: 1.353rem;
+  text-indent: 0.1em;
 }
 .site-title-text {
+  height: auto;
   font-size: 0.7rem;
   text-align: left;
-  line-height: 25px;
+  line-height: 15px;
   margin: 0;
   width: 100%;
-  text-indent: 0.25em;
+  text-indent: 0.2em;
 }
 
 /* hide and show mobile menu */
@@ -186,6 +186,7 @@
   height: 240px;
   overflow: hidden;
   margin: 0;
+  flex: 0 1 auto;
 }
 .site-inner-nav {
   display: flex;
@@ -239,14 +240,15 @@
 
 /* social media buttons */
 #social {
-  height: 30px;
-  width: 63.3%;
+  height: 35px;
+  width: 100%;
   list-style: none;
   flex: 1 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 1 auto;
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
@@ -254,10 +256,11 @@
   left: 0;
 }
 .social-item {
-  width: 16%;
-  margin-right: 0.2em;
+  width: 33%;
+  margin-right: 0;
+
   text-align: center;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
 }
 a[href*="github"],
 a[href*="facebook"],
@@ -267,7 +270,7 @@ a[href*="linkedin"] {
   display: block;
   width: 100%;
   line-height: 40px;
-  color: $color-black;
+  color: $color-white;
   text-align: center;
 }
 
@@ -278,8 +281,8 @@ a[href*="linkedin"] {
   width: 100%;
   text-align: center;
   transition: all 0.2s ease-in 0s;
-  color: $color-black;
-  background-color: $color-white;
+  background-color: $color-black;
+  color: $color-white;
   &::before {
     font-size: 1em;
     display: block;
@@ -387,29 +390,28 @@ a[href*="linkedin"] {
   text-align: center;
   color: $color-black;
   line-height: 40px;
-  font-size: 1.4em;
+  font-size: 1.263rem;
   margin: 0;
 }
 .banner-copy {
   font-size: 0.85em;
-  width: 100%;
+  width: 98%;
   color: $color-black;
   line-height: 1.8em;
-}
-h3 {
-  text-align: center;
-  line-height: 50px;
+  margin-bottom: 0.5em;
+  padding: 0 0.25em;
 }
 
 #project-page-link {
   display: block;
-  width: 20%;
-  font-size: 4em;
+  width: 65%;
+  font-size: 1rem;
   text-align: center;
   font-weight: bolder;
   text-decoration: none;
   margin: auto;
   color: $color-black;
+  text-transform: uppercase;
 
   &:hover {
     color: $green-color;
@@ -445,7 +447,7 @@ h3 {
 #project-page-title {
   align-self: flex-start;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.163rem;
   display: block;
   width: 100%;
   line-height: 50px;
@@ -459,7 +461,7 @@ h3 {
   padding: 0;
   margin: 0.5em 0;
   width: 98%;
-  border: 5px solid $color-black;
+  border: 5px solid $color-white;
   background-color: $color-white;
   transition: all 0.2s ease-in 0s;
   gap: 0.25em;
@@ -541,7 +543,7 @@ h3 {
 .project-caption {
   position: absolute;
   z-index: 9;
-  background: rgb(231 232 227 / 80%);
+  background: rgb(231 232 227 / 60%);
   top: 0;
   left: 0;
   width: 100%;
@@ -556,7 +558,7 @@ h3 {
   gap: 0.2em;
 
   p {
-    width: 70%;
+    width: 96%;
     padding: 0.5em;
     margin: 0 auto;
     display: block;
@@ -615,7 +617,7 @@ h3 {
 .cover-title {
   font-family: $font-header;
   width: 100%;
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0 auto;
   line-height: 40px;
   background: $color-black;
@@ -667,13 +669,13 @@ h3 {
   flex: 0 1 auto;
   p {
     font-size: 0.9em;
-    line-height: 2em;
+    line-height: 2.2em;
     background-color: $color-white;
     color: $color-black;
     word-wrap: break-word;
     white-space: normal;
-    width: 98%;
-    text-align: justify;
+    width: 97%;
+    text-align: left;
     padding: 0 0.5em;
   }
 }
@@ -706,7 +708,7 @@ h3 {
   background-color: $color-black;
   position: relative;
   h3 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 40px;
     background-color: $color-black;
     color: $color-white;
@@ -767,8 +769,8 @@ h3 {
 }
 .slider-title {
   width: 100%;
-  font-weight: normal;
-  font-size: 0.8em;
+  font-weight: bold;
+  font-size: 0.9rem;
   background-color: $color-black;
   color: $color-white;
   text-indent: 0;
@@ -776,12 +778,6 @@ h3 {
   font-family: $font-header;
   text-align: center;
   line-height: 40px;
-  &:hover {
-    cursor: pointer;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px $color-black;
-    color: $color-white;
-  }
 }
 .slider-text {
   width: 98%;
@@ -811,7 +807,7 @@ h3 {
 }
 
 #slids {
-  top: 150px;
+  top: 185px;
   margin: 0;
   list-style: outside none none;
   height: 60px;
@@ -824,7 +820,7 @@ h3 {
   position: absolute;
   bottom: 4px;
   justify-content: space-between;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 #next {
   width: 60px;
@@ -900,7 +896,7 @@ h3 {
 
   h3 {
     height: 40px;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 40px;
     letter-spacing: 0.05em;
     color: $color-white;
@@ -952,10 +948,10 @@ h3 {
       text-align: left;
       line-height: 51px;
       height: 51px;
-      font-size: 0.8em;
+      font-size: 0.75em;
       color: $color-black;
       z-index: 3;
-      text-indent: 0.5em;
+      text-indent: 0.25em;
       border-bottom: #000 solid 1px;
     }
   }
@@ -966,7 +962,7 @@ h3 {
   flex-flow: row;
   height: 35px;
   line-height: 35px;
-  font-size: 0.65em;
+  font-size: 0.6em;
 
   span {
     width: 19%;
@@ -1021,7 +1017,7 @@ h3 {
   align-items: flex-start;
   justify-content: stretch;
   flex: 0 0 auto;
-  width: 100%;
+  width: 96%;
   margin: 1em auto;
   padding: 0;
   gap: 0.25em;
@@ -1041,6 +1037,7 @@ h3 {
     color: $color-black;
     width: 92%;
     padding: 4%;
+    font-size: 0.8em;
   }
 
   address {
@@ -1055,7 +1052,13 @@ h3 {
       padding: 0;
       li {
         height: auto;
-        font-family: FontAwesome, $font-text;
+        font-family: FontAwesome, $font-header;
+        color: $color-white;
+        font-size: 0.75em;
+        &:hover {
+          cursor: pointer;
+          font-weight: bold;
+        }
         .fa-phone,
         .fa-envelope {
           font-size: 1.3em;
@@ -1065,21 +1068,6 @@ h3 {
           width: 40px;
           text-align: center;
           color: $color-white;
-        }
-
-        a {
-          text-decoration: none;
-          width: auto;
-          display: inline-block;
-          font-size: 0.8em;
-          line-height: 40px;
-          margin: 0;
-          font-family: $font-header;
-          color: $color-white;
-          &:hover {
-            cursor: pointer;
-            font-weight: bold;
-          }
         }
       }
     }
@@ -1109,12 +1097,12 @@ h3 {
   animation-name: example;
   animation-duration: 0.2s;
   font-family: $font-header;
-  font-size: 1.1;
+  font-size: 0.75em;
   text-shadow: 1px 1px 1px $color-black;
   text-transform: uppercase;
 }
 #myform {
-  width: 100%;
+  width: 96%;
   flex: 1 0 auto;
   padding: 0;
   background-color: $color-white;
@@ -1255,6 +1243,7 @@ h3 {
   #openmodal {
     background: $color-black;
     color: $color-white;
+    font-size: 0.8em;
     border: none;
     &:hover {
       color: $color-black;
@@ -1385,12 +1374,12 @@ h3 {
     width: 33.3%;
   }
   .site-title-name {
-    font-size: 1.9rem;
     line-height: 40px;
+    font-size: 1.953rem;
   }
   .site-title-text {
-    font-size: 1rem;
-    line-height: 30px;
+    font-size: 0.9rem;
+    line-height: 20px;
   }
 
   .site-navigation {
@@ -1426,6 +1415,7 @@ h3 {
   .social-item {
     width: 20%;
     text-align: center;
+    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -1453,19 +1443,25 @@ h3 {
     width: calc(100% - 42%);
   }
   .banner-title {
-    font-size: 2.3em;
+    font-size: 1.563rem;
     line-height: 80px;
   }
   .banner-copy {
     font-size: 1.2em;
     line-height: 1.8em;
+    margin-bottom: 1em;
+  }
+
+  #project-page-link {
+    width: 35%;
+    font-size: 1.5rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.4rem;
+    font-size: 1.563rem;
     text-align: left;
   }
   #project-tabs {
@@ -1518,7 +1514,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.4em;
+    font-size: 1.25rem;
     line-height: 50px;
   }
 
@@ -1539,7 +1535,7 @@ h3 {
 
     h3 {
       height: 40px;
-      font-size: 1.3em;
+      font-size: 1.25rem;
       line-height: 40px;
     }
   }
@@ -1608,7 +1604,7 @@ h3 {
     float: right;
     display: block;
     h3 {
-      font-size: 1.3em;
+      font-size: 1.25rem;
       line-height: 40px;
     }
   }
@@ -1637,7 +1633,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1.2em;
+    font-size: 1.1rem;
   }
   .slider-text {
     width: 98%;
@@ -1695,7 +1691,10 @@ h3 {
     width: 32%;
     margin: 0;
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.9em;
     }
     address {
       height: auto;
@@ -1704,16 +1703,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 1.1em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-
-          a {
-            width: auto;
-            display: inline-block;
-            font-size: 1.1em;
-            line-height: 40px;
           }
         }
       }
@@ -1733,9 +1726,10 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 1.1rem;
   }
   #myform {
-    width: 67%;
+    width: 66%;
   }
   #myform-fields {
     list-style: none;
@@ -1818,6 +1812,10 @@ h3 {
     #mycomments {
       font-size: 1em;
     }
+
+    #openmodal {
+      font-size: 0.9em;
+    }
   }
 
   #submit {
@@ -1871,14 +1869,14 @@ h3 {
     font-size: 40px;
   }
   #site-wrapper {
-    width: calc(100% - 10%);
+    width: calc(100% - 6%);
     margin: auto;
   }
 
   .fixed-header {
     position: fixed;
     left: auto;
-    max-width: 90%;
+    max-width: 94%;
     text-align: left;
     height: 100px;
   }
@@ -1890,12 +1888,12 @@ h3 {
     width: 33.3%;
   }
   .site-title-name {
-    font-size: 1.8rem;
     line-height: 40px;
+    font-size: 1.953rem;
   }
   .site-title-text {
-    font-size: 1rem;
-    line-height: 30px;
+    font-size: 0.9rem;
+    line-height: 20px;
   }
 
   .site-navigation {
@@ -1932,6 +1930,7 @@ h3 {
   .social-item {
     width: 20%;
     text-align: center;
+    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -1955,22 +1954,28 @@ h3 {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 42%);
+    width: calc(100% - 52%);
   }
   .banner-title {
     line-height: 60px;
-    font-size: 2.2rem;
+    font-size: 1.563rem;
   }
   .banner-copy {
     font-size: 1em;
     line-height: 1.8em;
+    margin-bottom: 1em;
+  }
+
+  #project-page-link {
+    width: 26%;
+    font-size: 1.25rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.6rem;
+    font-size: 1.563rem;
     text-align: left;
   }
   #project-tabs {
@@ -2019,7 +2024,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.3em;
+    font-size: 1.25rem;
     line-height: 50px;
   }
 
@@ -2038,7 +2043,7 @@ h3 {
     margin: 0;
     h3 {
       height: 40px;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       line-height: 40px;
     }
   }
@@ -2088,7 +2093,7 @@ h3 {
     display: block;
     float: right;
     h3 {
-      font-size: 1.2em;
+      font-size: 1.25rem;
       line-height: 40px;
     }
   }
@@ -2117,7 +2122,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1.2em;
+    font-size: 1.1rem;
   }
   .slider-text {
     width: 98%;
@@ -2184,8 +2189,11 @@ h3 {
     width: 34%;
     margin: 0;
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       line-height: 50px;
+    }
+    p {
+      font-size: 0.9em;
     }
     address {
       height: auto;
@@ -2196,12 +2204,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 1.1em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 1.1em;
           }
         }
       }
@@ -2219,9 +2225,10 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 1rem;
   }
   #myform {
-    width: 66%;
+    width: 65%;
   }
   #myform-fields {
     list-style: none;
@@ -2302,6 +2309,10 @@ h3 {
     #mycomments {
       font-size: 1em;
     }
+
+    #openmodal {
+      font-size: 0.9em;
+    }
   }
 
   #submit {
@@ -2371,19 +2382,19 @@ h3 {
     width: 100%;
   }
   .site-title {
-    width: 33%;
+    width: 33.3%;
   }
   .site-title-name {
-    font-size: 1.7rem;
     line-height: 40px;
+    font-size: 1.853rem;
   }
   .site-title-text {
-    font-size: 0.9rem;
-    line-height: 30px;
+    font-size: 0.85rem;
+    line-height: 20px;
   }
 
   .site-navigation {
-    width: 33%;
+    width: 33.3%;
     height: auto;
     top: 0;
     position: unset;
@@ -2416,6 +2427,7 @@ h3 {
   .social-item {
     width: 20%;
     text-align: center;
+    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -2439,22 +2451,28 @@ h3 {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 25%);
+    width: calc(100% - 52%);
   }
   .banner-title {
     line-height: 60px;
-    font-size: 2.1rem;
+    font-size: 1.463rem;
   }
   .banner-copy {
     font-size: 1em;
     line-height: 2.1em;
+    margin-bottom: 1em;
+  }
+
+  #project-page-link {
+    width: 30%;
+    font-size: 1.25rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.4rem;
+    font-size: 1.463rem;
     text-align: left;
   }
   #project-tabs {
@@ -2505,7 +2523,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.2em;
+    font-size: 1.25rem;
     line-height: 50px;
   }
 
@@ -2523,7 +2541,7 @@ h3 {
     margin: 0;
     h3 {
       height: 40px;
-      font-size: 1.1em;
+      font-size: 1.2rem;
       line-height: 40px;
     }
   }
@@ -2589,7 +2607,7 @@ h3 {
     display: block;
     float: right;
     h3 {
-      font-size: 1.1em;
+      font-size: 1.2rem;
       line-height: 40px;
     }
   }
@@ -2618,7 +2636,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1.15em;
+    font-size: 1.1rem;
   }
   .slider-text {
     width: 98%;
@@ -2668,7 +2686,10 @@ h3 {
     width: 34%;
     margin: 0;
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.9em;
     }
     address {
       height: auto;
@@ -2679,12 +2700,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 1em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 1em;
           }
         }
       }
@@ -2702,6 +2721,7 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.9rem;
   }
   #myform {
     width: 64%;
@@ -2780,6 +2800,10 @@ h3 {
     #mycomments {
       font-size: 1em;
     }
+
+    #openmodal {
+      font-size: 0.9em;
+    }
   }
 
   #submit {
@@ -2850,12 +2874,12 @@ h3 {
     width: 33.3%;
   }
   .site-title-name {
-    font-size: 1.6rem;
     line-height: 40px;
+    font-size: 1.753rem;
   }
   .site-title-text {
-    font-size: 0.9rem;
-    line-height: 30px;
+    font-size: 0.85rem;
+    line-height: 20px;
   }
 
   .site-navigation {
@@ -2893,6 +2917,7 @@ h3 {
   .social-item {
     width: 20%;
     text-align: center;
+    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -2920,11 +2945,17 @@ h3 {
   }
   .banner-title {
     line-height: 60px;
-    font-size: 1.9em;
+    font-size: 1.463rem;
   }
   .banner-copy {
     font-size: 1em;
     line-height: 2.1em;
+    margin-bottom: 1em;
+  }
+
+  #project-page-link {
+    width: 55%;
+    font-size: 1.15rem;
   }
 
   #project-page {
@@ -2976,7 +3007,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.3em;
+    font-size: 1.25rem;
     line-height: 50px;
   }
 
@@ -2996,7 +3027,7 @@ h3 {
     margin: 0;
     h3 {
       height: 40px;
-      font-size: 1.1em;
+      font-size: 1.2rem;
       line-height: 40px;
     }
   }
@@ -3046,7 +3077,7 @@ h3 {
     display: block;
     float: right;
     h3 {
-      font-size: 1.1em;
+      font-size: 1.2rem;
       line-height: 40px;
     }
   }
@@ -3074,7 +3105,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1.1em;
+    font-size: 1.05rem;
   }
   .slider-text {
     width: 99%;
@@ -3141,7 +3172,10 @@ h3 {
     width: 35%;
     margin: 0;
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.9em;
     }
     address {
       height: auto;
@@ -3152,12 +3186,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 1em;
           }
         }
       }
@@ -3176,6 +3208,7 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.9rem;
   }
   #myform {
     width: 63%;
@@ -3254,6 +3287,10 @@ h3 {
     #mycomments {
       font-size: 1em;
     }
+
+    #openmodal {
+      font-size: 0.85em;
+    }
   }
 
   #submit {
@@ -3326,12 +3363,12 @@ h3 {
     width: 33.3%;
   }
   .site-title-name {
-    font-size: 1.5rem;
     line-height: 40px;
+    font-size: 1.653rem;
   }
   .site-title-text {
-    font-size: 0.9rem;
-    line-height: 30px;
+    font-size: 0.85rem;
+    line-height: 20px;
   }
 
   .site-navigation {
@@ -3366,8 +3403,9 @@ h3 {
     position: unset;
   }
   .social-item {
-    width: 20%;
+    width: 25%;
     text-align: center;
+    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -3395,18 +3433,24 @@ h3 {
   }
   .banner-title {
     line-height: 60px;
-    font-size: 1.8em;
+    font-size: 1.363rem;
   }
   .banner-copy {
     font-size: 1em;
     line-height: 2.1em;
+    margin-bottom: 1em;
+  }
+
+  #project-page-link {
+    width: 45%;
+    font-size: 1rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.3rem;
+    font-size: 1.463rem;
     text-align: center;
   }
   #project-tabs {
@@ -3456,7 +3500,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 50px;
   }
 
@@ -3477,7 +3521,7 @@ h3 {
 
     h3 {
       height: 40px;
-      font-size: 1.1em;
+      font-size: 1.15rem;
       line-height: 40px;
     }
   }
@@ -3498,7 +3542,7 @@ h3 {
       }
       span {
         width: 15%;
-        font-size: 1em;
+        font-size: 0.9em;
       }
     }
   }
@@ -3506,7 +3550,7 @@ h3 {
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 0.85em;
+    font-size: 0.8em;
 
     span {
       width: 20%;
@@ -3527,6 +3571,10 @@ h3 {
     display: block;
     float: none;
     margin: 1em auto;
+    h3 {
+      font-size: 1.2rem;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -3552,7 +3600,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1em;
+    font-size: 1.05rem;
   }
   .slider-text {
     width: 99%;
@@ -3622,7 +3670,10 @@ h3 {
     width: 77%;
     margin: 0;
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9em;
     }
     address {
       height: auto;
@@ -3633,12 +3684,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 1em;
           }
         }
       }
@@ -3657,6 +3706,7 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.85rem;
   }
   #myform {
     width: 100%;
@@ -3735,6 +3785,10 @@ h3 {
     #mycomments {
       font-size: 1em;
     }
+
+    #openmodal {
+      font-size: 0.85em;
+    }
   }
 
   #submit {
@@ -3761,8 +3815,9 @@ h3 {
 /* 37.5em - 600px */
 @media screen and (min-width: 601px) and (max-width: 735px) {
   .menu-toggle {
-    left: calc(78vw - 20px);
-    font-size: 1.2em;
+    left: calc(87vw - 20px);
+    font-size: 3em;
+    width: 15%;
   }
   /* Modal Content/Box */
   .modal-content {
@@ -3803,18 +3858,15 @@ h3 {
     width: 100%;
   }
   .site-title {
-    width: 50%;
+    width: 35%;
   }
   .site-title-name {
-    font-size: 1.6rem;
-    text-indent: 0.15em;
-    height: 35px;
     line-height: 35px;
+    font-size: 1.553rem;
   }
   .site-title-text {
-    font-size: 0.85rem;
-    text-indent: 0.25em;
-    line-height: 25px;
+    font-size: 0.8rem;
+    line-height: 15px;
   }
 
   .site-navigation {
@@ -3841,16 +3893,17 @@ h3 {
   }
 
   #social {
-    height: 40px;
-    width: 65.3%;
+    height: 45px;
+    width: 38%;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 13%;
+    width: 33%;
+    margin-right: 0;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -3863,7 +3916,7 @@ h3 {
     width: 100%;
     &::before {
       line-height: 35px;
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
   }
 
@@ -3878,20 +3931,25 @@ h3 {
     width: calc(100% - 15%);
   }
   .banner-title {
-    font-size: 1.6em;
+    font-size: 1.363rem;
     line-height: 45px;
-    margin-bottom: 0.25em;
   }
   .banner-copy {
-    font-size: 0.9em;
+    font-size: 0.95em;
     line-height: 2.1em;
+    margin-bottom: 0.5em;
+  }
+
+  #project-page-link {
+    width: 70%;
+    font-size: 1.15rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.3rem;
+    font-size: 1.363rem;
     text-align: center;
   }
   .projects {
@@ -3934,7 +3992,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.1em;
+    font-size: 1.2rem;
     width: 96%;
     line-height: 40px;
   }
@@ -3955,7 +4013,7 @@ h3 {
 
     h3 {
       height: 40px;
-      font-size: 1.1em;
+      font-size: 1.1rem;
       line-height: 40px;
     }
   }
@@ -3976,7 +4034,7 @@ h3 {
       }
       span {
         width: 17%;
-        font-size: 0.95em;
+        font-size: 0.85em;
       }
     }
   }
@@ -3984,7 +4042,7 @@ h3 {
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 0.8em;
+    font-size: 0.75em;
 
     span {
       width: 20%;
@@ -4005,6 +4063,10 @@ h3 {
     display: block;
     float: none;
     margin: 1em auto;
+    h3 {
+      font-size: 1.2rem;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -4029,7 +4091,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .slider-text {
     width: 99%;
@@ -4098,7 +4160,11 @@ h3 {
     margin: 1em auto;
 
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.85em;
     }
 
     address {
@@ -4107,12 +4173,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 1em;
           }
         }
       }
@@ -4131,6 +4195,7 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.85rem;
   }
   #myform {
     width: 98.25%;
@@ -4198,6 +4263,10 @@ h3 {
     #mycomments {
       font-size: 0.9em;
     }
+
+    #openmodal {
+      font-size: 0.85em;
+    }
   }
 
   #submit {
@@ -4225,8 +4294,9 @@ h3 {
 /* 30em - 599px -480px */
 @media screen and (min-width: 481px) and (max-width: 600px) {
   .menu-toggle {
-    font-size: 1em;
-    left: calc(77% - 2%);
+    left: calc(86vw - 20px);
+    font-size: 3em;
+    width: 16%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4271,18 +4341,15 @@ h3 {
     width: 100%;
   }
   .site-title {
-    width: 50%;
+    width: 35%;
   }
   .site-title-name {
-    font-size: 1.6rem;
-    text-indent: 0.15em;
-    height: 35px;
     line-height: 35px;
+    font-size: 1.453rem;
   }
   .site-title-text {
-    font-size: 0.8rem;
-    text-indent: 0.25em;
-    line-height: 25px;
+    font-size: 0.7rem;
+    line-height: 15px;
   }
 
   .site-navigation {
@@ -4309,16 +4376,17 @@ h3 {
   }
 
   #social {
-    height: 40px;
-    width: 65.3%;
+    height: 45px;
+    width: 38%;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 13%;
+    width: 33%;
+    margin-right: 0;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -4331,7 +4399,7 @@ h3 {
     width: 100%;
     &::before {
       line-height: 35px;
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
   }
 
@@ -4348,19 +4416,24 @@ h3 {
   }
   .banner-title {
     line-height: 45px;
-    font-size: 1.6em;
-    margin-bottom: 0.25em;
+    font-size: 1.363rem;
   }
   .banner-copy {
     font-size: 0.95em;
     line-height: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  #project-page-link {
+    width: 70%;
+    font-size: 1.1rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.2rem;
+    font-size: 1.363rem;
     text-align: center;
   }
   .projects {
@@ -4404,7 +4477,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1em;
+    font-size: 1.2rem;
     width: 96%;
     line-height: 40px;
   }
@@ -4425,7 +4498,7 @@ h3 {
 
     h3 {
       height: 40px;
-      font-size: 1em;
+      font-size: 1.1rem;
       line-height: 40px;
     }
   }
@@ -4447,7 +4520,7 @@ h3 {
       }
       span {
         width: 17%;
-        font-size: 0.95em;
+        font-size: 0.85em;
       }
     }
   }
@@ -4455,7 +4528,7 @@ h3 {
   #ledger {
     height: 35px;
     line-height: 35px;
-    font-size: 0.75em;
+    font-size: 0.7em;
 
     span {
       width: 20%;
@@ -4476,6 +4549,10 @@ h3 {
     display: block;
     float: none;
     margin: 1em auto;
+    h3 {
+      font-size: 1.15rem;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -4500,7 +4577,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 1em;
+    font-size: 0.9rem;
   }
   .slider-text {
     width: 99%;
@@ -4568,12 +4645,16 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.8rem;
   }
   #contact-details {
     margin: 1em auto;
     width: 87%;
     h3 {
       font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.85em;
     }
 
     address {
@@ -4582,12 +4663,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 0.85em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 0.9em;
           }
         }
       }
@@ -4670,6 +4749,10 @@ h3 {
     #mycomments {
       font-size: 0.9em;
     }
+
+    #openmodal {
+      font-size: 0.8em;
+    }
   }
 
   #submit {
@@ -4696,8 +4779,9 @@ h3 {
 /* 360px */
 @media screen and (min-width: 361px) and (max-width: 480px) {
   .menu-toggle {
-    font-size: 1em;
-    left: calc(77% - 2%);
+    left: calc(86% - 20px);
+    font-size: 3em;
+    width: 18%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4743,19 +4827,16 @@ h3 {
     width: 100%;
   }
   .site-title {
-    width: 50%;
+    width: 40%;
     text-align: left;
   }
   .site-title-name {
-    font-size: 1.5rem;
-    text-indent: 0.15em;
-    height: 35px;
     line-height: 35px;
+    font-size: 1.353rem;
   }
   .site-title-text {
-    font-size: 0.75rem;
-    text-indent: 0.25em;
-    line-height: 25px;
+    font-size: 0.65rem;
+    line-height: 15px;
   }
 
   .site-navigation {
@@ -4782,16 +4863,17 @@ h3 {
   }
 
   #social {
-    height: 40px;
-    width: 68%;
+    height: 45px;
+    width: 35%;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 16%;
+    width: 33%;
+    margin-right: 0;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -4803,7 +4885,7 @@ h3 {
   .fa-linkedin {
     width: 100%;
     &::before {
-      font-size: 1.4em;
+      font-size: 1.1em;
       line-height: 35px;
     }
   }
@@ -4821,19 +4903,24 @@ h3 {
   }
   .banner-title {
     line-height: 40px;
-    font-size: 1.5em;
-    margin-bottom: 0.25em;
+    font-size: 1.363rem;
   }
   .banner-copy {
     font-size: 0.9em;
     line-height: 1.9em;
+    margin-bottom: 0.5em;
+  }
+
+  #project-page-link {
+    width: 70%;
+    font-size: 1.1rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.2rem;
+    font-size: 1.263rem;
     text-align: center;
   }
   .projects {
@@ -4877,7 +4964,7 @@ h3 {
     }
   }
   .cover-title {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     width: 96%;
     line-height: 40px;
   }
@@ -4899,7 +4986,7 @@ h3 {
 
     h3 {
       height: 40px;
-      font-size: 1.05em;
+      font-size: 1.1rem;
       line-height: 40px;
     }
   }
@@ -4922,7 +5009,7 @@ h3 {
       }
       span {
         width: 19%;
-        font-size: 0.85em;
+        font-size: 0.8em;
       }
     }
   }
@@ -4930,10 +5017,10 @@ h3 {
   #ledger {
     height: 35px;
     line-height: 35px;
-    font-size: 0.7em;
+    font-size: 0.65em;
 
     span {
-      width: 20%;
+      width: 19.5%;
       text-indent: 0.15em;
     }
 
@@ -4951,6 +5038,10 @@ h3 {
     display: block;
     float: none;
     margin: 1em auto;
+    h3 {
+      font-size: 1.15rem;
+      line-height: 40px;
+    }
   }
   .hero-slider {
     width: 100%;
@@ -4975,7 +5066,7 @@ h3 {
     }
   }
   .slider-title {
-    font-size: 0.85em;
+    font-size: 0.9rem;
   }
   .slider-text {
     width: 99%;
@@ -5043,12 +5134,16 @@ h3 {
   }
   .show-error {
     line-height: 35px;
+    font-size: 0.8rem;
   }
   #contact-details {
     margin: 1em auto;
-    width: 95%;
+    width: 96%;
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+    }
+    p {
+      font-size: 0.85em;
     }
 
     address {
@@ -5057,12 +5152,10 @@ h3 {
         padding: 0;
         li {
           height: auto;
+          font-size: 0.8em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
-          }
-          a {
-            font-size: 0.85em;
           }
         }
       }
@@ -5077,7 +5170,7 @@ h3 {
     }
   }
   #myform {
-    width: 100%;
+    width: 96%;
     padding: 0;
   }
   #myform-fields {
@@ -5144,6 +5237,10 @@ h3 {
 
     #mycomments {
       font-size: 0.9em;
+    }
+
+    #openmodal {
+      font-size: 0.8em;
     }
   }
 

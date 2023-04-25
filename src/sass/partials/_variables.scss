@@ -10,8 +10,5 @@ $error-color-border: rgb(252 136 136);
 $ok-color-bg: rgb(176 241 176);
 $ok-color-border: rgb(78 243 78);
 
-$font-header: "Cabin Regular", "Helvetica", "Arial", "Verdana", "Tahoma",
-  "sans-serif";
-$font-text: "Amaranth Regular", "Helvetica", "Arial", "Verdana", "Tahoma",
-  "sans-serif";
-$fallback: "Helvetica", "Arial", "Verdana", "Tahoma", "sans-serif";
+$font-header: "Cabin Regular", "Trebuchet MS", Helvetica, sans-serif;
+$font-text: "Open Sans Regular", Arial, Helvetica, sans-serif;

@@ -10,10 +10,7 @@ const myForm = document.getElementById("myform");
 const error = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, comments, openmodal, privacy, submit] = myForm;
-
-// eslint-disable-next-line no-console
-console.log(text, email, comments, openmodal, privacy, submit);
+const [text, email, comments, openmodal, , submit] = myForm;
 
 /**
  * Input Name Validation

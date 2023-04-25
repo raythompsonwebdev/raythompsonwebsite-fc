@@ -1,13 +1,32 @@
 <?php
     
-  include 'private/db_connection.php';  
 
 
-   // validate text function - https://www.w3schools.com/php/php_form_validation.asp
+  try {
+
+        
+    // Create connection
+    $conn = new mysqli($host_name, $user_name, $password, $database);
+    
+    // Check connection
+    if ($conn->connect_error) {
+    
+      die('<p>Failed to connect to MySQL: '. $conn->connect_error .'</p>');
+    } 
+    
+  } catch (Exception $e) {
+    //show error if connection
+    $error = $e->getMessage();
+  
+  }
+
+
+   // validate text function - 
    function test_input($data) {
     $data = trim($data);
     $data = json_encode($data);
-    $data = htmlspecialchars($data, ENT_QUOTES);    
+    //$data = filter_var($data, FILTER_SANITIZE_STRING);
+    $data = htmlentities($data, ENT_QUOTES, 'UTF-8');    
     return $data;
   }
  
@@ -15,7 +34,7 @@
   // NOTE : $_POST['submit] value equals NULL which is falsy.
   if( !isset($_POST['submit']) ){
     
-    $myname = !empty($_POST['myname']) ? htmlspecialchars($_POST['myname'], ENT_QUOTES) : "" ;
+    $myname = !empty($_POST['myname']) ? test_input($_POST['myname']) : "" ;
     $myemail = !empty($_POST['myemail']) ? filter_var($_POST['myemail'], FILTER_SANITIZE_EMAIL) : "" ;
     $comment = !empty($_POST['mycomments']) ? test_input($_POST['mycomments']) : "" ; 
     if(isset($_POST['myprivacy'])) {
@@ -24,7 +43,15 @@
       $privacy = "off";
     }
 
+    function validateDate($date, $format = 'Y-m-d H:i:s')
+    {
+      $d = DateTime::createFromFormat($format, $date);
+      return $d && $d->format($format) == $date;
+    }
+
     $today = date("Y-m-d H:i:s");
+
+     
     
     //php check if email address exists in database
     $sql="SELECT * from contact where (myname='$myname' or myemail='$myemail');";

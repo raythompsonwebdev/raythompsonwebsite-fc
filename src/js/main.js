@@ -3,10 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementsByClassName("site-nav-item");
   // get body and html elements
   const scrollScreen = document.querySelector(["body", "html"]);
-
   // get header element
   const siteHeader = document.querySelector(".site-header");
-
   // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
 

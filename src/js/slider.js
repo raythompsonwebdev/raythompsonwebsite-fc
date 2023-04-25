@@ -99,7 +99,7 @@ export default function slider() {
 
     const slidepanelCaption = document.createElement("FIGCAPTION");
 
-    const slidepanelHeadingThree = document.createElement("H3");
+    const slidepanelHeadingThree = document.createElement("H4");
     slidepanelHeadingThree.setAttribute("class", "slider-title");
     slidepanelHeadingThree.textContent = title;
 
@@ -154,8 +154,6 @@ export default function slider() {
 
   // Hero Slider
   next.addEventListener("click", (e) => {
-    // prev.classList.remove("active");
-    // e.target.classList.add("active");
     e.preventDefault();
     updateIndex();
 
