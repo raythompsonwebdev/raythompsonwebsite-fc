@@ -41,24 +41,26 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: $color-white;
-  margin: 5% auto;
+  margin: 0 auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
   /* Could be more or less, depending on screen size */
   font-family: $font-text;
+  position: relative;
+  top: 130px;
 
   h2 {
     color: $color-black;
-    text-indent: 0.25em;
+    text-indent: 0em;
     font-size: 1em;
     line-height: 40px;
   }
 
   p {
     line-height: 1.9em;
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
 
   ul {
@@ -66,7 +68,7 @@
     li {
       color: $color-black;
       line-height: 30px;
-      font-size: 0.75em;
+      font-size: 0.8em;
     }
   }
 }
@@ -152,7 +154,7 @@
   margin: 0;
   font-family: $font-header;
   width: 100%;
-  font-size: 1.353rem;
+  font-size: 1.453rem;
   text-indent: 0.1em;
 }
 .site-title-text {
@@ -243,7 +245,6 @@
   height: 35px;
   width: 100%;
   list-style: none;
-  flex: 1 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -252,13 +253,11 @@
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
-  top: 0;
-  left: 0;
+  gap: 0.1em;
 }
 .social-item {
-  width: 33%;
+  width: 32%;
   margin-right: 0;
-
   text-align: center;
   flex: 0 1 auto;
 }
@@ -284,7 +283,7 @@ a[href*="linkedin"] {
   background-color: $color-black;
   color: $color-white;
   &::before {
-    font-size: 1em;
+    font-size: 1.3em;
     display: block;
     line-height: 35px;
   }
@@ -406,15 +405,18 @@ a[href*="linkedin"] {
   display: block;
   width: 65%;
   font-size: 1rem;
+  line-height: 40px;
   text-align: center;
   font-weight: bolder;
   text-decoration: none;
   margin: auto;
-  color: $color-black;
+  color: $color-white;
+  background-color: $color-black;
   text-transform: uppercase;
 
   &:hover {
-    color: $green-color;
+    background-color: $green-color;
+    color: $color-black;
     cursor: pointer;
   }
 }
@@ -1054,7 +1056,7 @@ a[href*="linkedin"] {
         height: auto;
         font-family: FontAwesome, $font-header;
         color: $color-white;
-        font-size: 0.75em;
+        font-size: 0.8em;
         &:hover {
           cursor: pointer;
           font-weight: bold;
@@ -1329,27 +1331,29 @@ a[href*="linkedin"] {
 
 /* 1920px + */
 @media screen and (min-width: 1920px) {
-  .menu-toggle {
-    display: none;
-  }
   /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
-      font-size: 1.4em;
-      line-height: 50px;
-    }
-    p {
       font-size: 1em;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 0.9em;
     }
 
     ul {
       margin: 0;
       li {
-        font-size: 1em;
+        line-height: 40px;
+        font-size: 0.9em;
       }
     }
+  }
+  .menu-toggle {
+    display: none;
   }
 
   /* The Close Button */
@@ -1415,7 +1419,6 @@ a[href*="linkedin"] {
   .social-item {
     width: 20%;
     text-align: center;
-    margin-right: 0.2em;
   }
   a[href*="twitter"],
   a[href*="facebook"],
@@ -1703,7 +1706,7 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-size: 1.1em;
+          font-size: 1em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
@@ -1841,17 +1844,14 @@ a[href*="linkedin"] {
 
 /* 1440px to 1919px */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .menu-toggle {
-    display: none;
-  }
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
-      font-size: 1.35em;
-      line-height: 50px;
+      font-size: 1em;
+      line-height: 40px;
     }
+
     p {
       font-size: 0.9em;
     }
@@ -1859,9 +1859,13 @@ a[href*="linkedin"] {
     ul {
       margin: 0;
       li {
+        line-height: 40px;
         font-size: 0.9em;
       }
     }
+  }
+  .menu-toggle {
+    display: none;
   }
 
   /* The Close Button */
@@ -2204,10 +2208,10 @@ a[href*="linkedin"] {
         padding: 0;
         li {
           height: auto;
-          font-size: 1.1em;
+          font-size: 1em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.4em;
           }
         }
       }
@@ -2338,28 +2342,28 @@ a[href*="linkedin"] {
 
 /* 1280px to 1439px */
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
-      font-size: 1.3em;
-      line-height: 45px;
+      font-size: 1em;
+      line-height: 40px;
     }
+
     p {
-      font-size: 0.85em;
+      font-size: 0.9em;
     }
 
     ul {
       margin: 0;
       li {
-        font-size: 0.85em;
+        line-height: 40px;
+        font-size: 0.9em;
       }
     }
+  }
+  .menu-toggle {
+    display: none;
   }
 
   /* The Close Button */
@@ -2703,7 +2707,7 @@ a[href*="linkedin"] {
           font-size: 1em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.4em;
           }
         }
       }
@@ -2828,27 +2832,28 @@ a[href*="linkedin"] {
 
 /* 1024px to 1279px */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .menu-toggle {
-    display: none;
-  }
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 70%;
 
     h2 {
-      font-size: 1.2em;
-      line-height: 45px;
+      font-size: 1em;
+      line-height: 40px;
     }
+
     p {
-      font-size: 0.85em;
+      font-size: 0.9em;
     }
 
     ul {
       margin: 0;
       li {
-        font-size: 0.85em;
+        line-height: 40px;
+        font-size: 0.9em;
       }
     }
+  }
+  .menu-toggle {
+    display: none;
   }
 
   /* The Close Button */
@@ -3189,7 +3194,7 @@ a[href*="linkedin"] {
           font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.5em;
           }
         }
       }
@@ -3316,17 +3321,14 @@ a[href*="linkedin"] {
 
 /* 1023px to 736px -46em */
 @media screen and (min-width: 736px) and (max-width: 1023px) {
-  .menu-toggle {
-    display: none;
-  }
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
-      font-size: 1.2em;
-      line-height: 45px;
+      font-size: 1em;
+      line-height: 40px;
     }
+
     p {
       font-size: 0.85em;
     }
@@ -3334,9 +3336,13 @@ a[href*="linkedin"] {
     ul {
       margin: 0;
       li {
+        line-height: 40px;
         font-size: 0.85em;
       }
     }
+  }
+  .menu-toggle {
+    display: none;
   }
 
   /* The Close Button */
@@ -3687,7 +3693,7 @@ a[href*="linkedin"] {
           font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.5em;
           }
         }
       }
@@ -3814,29 +3820,30 @@ a[href*="linkedin"] {
 
 /* 37.5em - 600px */
 @media screen and (min-width: 601px) and (max-width: 735px) {
-  .menu-toggle {
-    left: calc(87vw - 20px);
-    font-size: 3em;
-    width: 15%;
-  }
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 40px;
     }
+
     p {
-      font-size: 0.8em;
+      font-size: 0.85em;
     }
 
     ul {
       margin: 0;
       li {
-        font-size: 0.8em;
+        line-height: 40px;
+        font-size: 0.85em;
       }
     }
+  }
+  .menu-toggle {
+    left: calc(87vw - 20px);
+    font-size: 3em;
+    width: 15%;
   }
 
   /* The Close Button */
@@ -3902,7 +3909,7 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
-    width: 33%;
+    width: 32%;
     margin-right: 0;
   }
   a[href*="twitter"],
@@ -4176,7 +4183,7 @@ a[href*="linkedin"] {
           font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.5em;
           }
         }
       }
@@ -4293,6 +4300,26 @@ a[href*="linkedin"] {
 
 /* 30em - 599px -480px */
 @media screen and (min-width: 481px) and (max-width: 600px) {
+  .modal-content {
+    width: 60%;
+
+    h2 {
+      font-size: 1em;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 0.85em;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        line-height: 35px;
+        font-size: 0.85em;
+      }
+    }
+  }
   .menu-toggle {
     left: calc(86vw - 20px);
     font-size: 3em;
@@ -4300,25 +4327,6 @@ a[href*="linkedin"] {
   }
   .menu-toggle.hide {
     left: 110vw;
-  }
-  /* Modal Content/Box */
-  .modal-content {
-    width: 80%;
-
-    h2 {
-      font-size: 1.1em;
-      line-height: 40px;
-    }
-    p {
-      font-size: 0.8em;
-    }
-
-    ul {
-      margin: 0;
-      li {
-        font-size: 0.8em;
-      }
-    }
   }
 
   /* The Close Button */
@@ -4385,7 +4393,7 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
-    width: 33%;
+    width: 32%;
     margin-right: 0;
   }
   a[href*="twitter"],
@@ -4666,7 +4674,7 @@ a[href*="linkedin"] {
           font-size: 0.85em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.5em;
           }
         }
       }
@@ -4778,23 +4786,14 @@ a[href*="linkedin"] {
 
 /* 360px */
 @media screen and (min-width: 361px) and (max-width: 480px) {
-  .menu-toggle {
-    left: calc(86% - 20px);
-    font-size: 3em;
-    width: 18%;
-  }
-  .menu-toggle.hide {
-    left: 110vw;
-  }
-
-  /* Modal Content/Box */
   .modal-content {
-    width: 80%;
+    width: 60%;
 
     h2 {
       font-size: 1em;
       line-height: 40px;
     }
+
     p {
       font-size: 0.8em;
     }
@@ -4802,9 +4801,18 @@ a[href*="linkedin"] {
     ul {
       margin: 0;
       li {
+        line-height: 35px;
         font-size: 0.8em;
       }
     }
+  }
+  .menu-toggle {
+    left: calc(86% - 20px);
+    font-size: 3em;
+    width: 18%;
+  }
+  .menu-toggle.hide {
+    left: 110vw;
   }
 
   /* The Close Button */
@@ -4832,7 +4840,7 @@ a[href*="linkedin"] {
   }
   .site-title-name {
     line-height: 35px;
-    font-size: 1.353rem;
+    font-size: 1.453rem;
   }
   .site-title-text {
     font-size: 0.65rem;
@@ -4872,7 +4880,7 @@ a[href*="linkedin"] {
   }
   .social-item {
     text-align: center;
-    width: 33%;
+    width: 32%;
     margin-right: 0;
   }
   a[href*="twitter"],
@@ -5155,7 +5163,7 @@ a[href*="linkedin"] {
           font-size: 0.8em;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.3em;
+            font-size: 1.5em;
           }
         }
       }
