@@ -2,17 +2,17 @@ import "./fonts/cabin-2--webfont/style.css";
 import "./fonts/amaranth-webfont/style.css";
 import "./fonts/open-sans-cufonfonts-webfont/style.css";
 import "./sass/style.scss";
-import "./js/main";
-import "./js/contact";
-import projectTabs from "./js/projects";
-import slider from "./js/slider";
+import "./js/main.ts";
+import "./js/contact.ts";
+import "./js/projects.ts";
+import "./js/slider.ts";
 
 window.addEventListener("load", () => {
   /**
    * home page background image
    *
    *  */
-  const bgImage = document.querySelector("#banner");
+  const bgImage = document.querySelector("#banner") as HTMLDivElement | null;
   bgImage.style.setProperty(
     "--bg-image",
     "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp)"
@@ -21,12 +21,12 @@ window.addEventListener("load", () => {
   /**
    * Project Tabs
    *  */
-  projectTabs();
+  // projectTabs();
 
   /**
    * Slider
    *  */
-  slider();
+  // slider();
 
   /**
    * Bar Chart
@@ -116,15 +116,20 @@ window.addEventListener("load", () => {
 
         // loop over array
         Array.from(children).forEach((key) => {
+          // using string
           let percentage = 0;
 
-          const [bar] = Array.from(key.childNodes);
+          const [bar] = Array.from(key.childNodes) as HTMLDivElement[] | null;
 
           // // eslint-disable-next-line prefer-destructuring
-          const { dataset } = bar;
+          const { dataset } = bar as HTMLElement;
+
+          // convert data.percentage type to number to match let percentage variable.
+          const result = Number(dataset);
 
           const frame = () => {
-            if (percentage === dataset.percentage) {
+            // comparing strings
+            if (percentage === result) {
               // eslint-disable-next-line no-use-before-define
               clearInterval(id);
             } else {
@@ -132,9 +137,12 @@ window.addEventListener("load", () => {
 
               bar.style.width = `${dataset.percentage}%`;
               // add styles to a tag
-              bar.firstChild.style.width = "100%";
-              bar.firstChild.style.display = "block";
-              bar.firstChild.style.height = "100%";
+              // bar.firstChild.style.width = "100%";
+              // bar.firstChild.style.display = "block";
+              // bar.firstChild.style.height = "100%";
+              bar.style.width = "100%";
+              bar.style.display = "block";
+              bar.style.height = "100%";
             }
           };
 

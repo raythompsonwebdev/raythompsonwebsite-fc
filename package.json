@@ -31,6 +31,7 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
     "sass": "^1.59.3",
+    "ts-loader": "^9.4.3",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-middleware": "^6.0.1",
@@ -48,6 +49,8 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/runtime": "^7.21.0",
     "@squoosh/lib": "^0.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
     "babel-loader": "^9.1.2",
     "chai": "^4.3.7",
     "cheerio": "^1.0.0-rc.12",
@@ -82,6 +85,7 @@
     "stylelint-scss": "^4.5.0",
     "stylelint-webpack-plugin": "^4.1.0",
     "terser-webpack-plugin": "^5.3.7",
+    "ts-node": "^10.9.1",
     "url-loader": "^4.1.1"
   },
   "directories": {
@@ -95,11 +99,12 @@
   "description": "portfolio website",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": " npm-run-all --parallel open:src lint:watch",
+    "start": " npm-run-all --parallel open:src tsc --watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color --fix",
     "lint:watch": "npm run lint --watch",
     "lint:scss": "npx stylelint './src/sass/*.scss'",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData",

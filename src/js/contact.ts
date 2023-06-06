@@ -1,23 +1,24 @@
-/**
- * Contact Form
- * @type {Object}
- */
-const myForm = document.getElementById("myform");
-/**
- * Error
- * @type {Object}
- */
-const error = document.getElementById("form-error");
+type Form = {
+  text: HTMLInputElement | null;
+  email: HTMLInputElement | null;
+  comments: HTMLInputElement | null;
+  openmodal: HTMLInputElement | null;
+  myprivacy: HTMLInputElement | null;
+  submit: HTMLInputElement | null;
+};
+
+const myForm: any = document.getElementById("myform");
+
+const error: any = document.getElementById("form-error");
 
 // deconstruct array of form elements
-const [text, email, comments, openmodal, , submit] = myForm;
+const [text, email, comments, openmodal, myprivacy, submit]: any[] = myForm;
 
 /**
  * Input Name Validation
  * @param {Object} evt
- * @param {Object} srcElement
  */
-const dirtyInputName = (evt) => {
+const dirtyInputName = (evt: any) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -42,7 +43,7 @@ const dirtyInputName = (evt) => {
 };
 
 // email field
-const dirtyInputEmail = (evt) => {
+const dirtyInputEmail = (evt: any) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -66,7 +67,7 @@ const dirtyInputEmail = (evt) => {
 };
 
 // comments field
-const dirtyInputComments = (evt) => {
+const dirtyInputComments = (evt: any) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -89,14 +90,14 @@ const dirtyInputComments = (evt) => {
 };
 
 // comments field
-const privacyBtn = (evt) => {
+const privacyBtn = (evt: any) => {
   evt.preventDefault();
   // Get the modal
-  const modal = document.getElementById("myModal");
+  const modal: any = document.getElementById("myModal");
 
   // Get the <span> element that closes the modal
   // eslint-disable-next-line prefer-destructuring
-  const span = document.getElementsByClassName("close")[0];
+  const span: any = document.getElementsByClassName("close")[0];
 
   // If the checkbox is checked, display the output text
   if (evt.target === openmodal) {
@@ -121,7 +122,7 @@ const privacyBtn = (evt) => {
 };
 
 // submit form
-const submitForm = (e) => {
+const submitForm = (e: any) => {
   if (text.validity.valueMissing || email.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
@@ -178,7 +179,7 @@ text.addEventListener("blur", dirtyInputName);
 email.addEventListener("blur", dirtyInputEmail);
 
 // prevent spaces from being typed in the email field
-const blockspace = (evt) => {
+const blockspace = (evt: any) => {
   if (evt.key === " ") {
     evt.preventDefault();
   }

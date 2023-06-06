@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add smooth scrolling to all links
   const navLinks = document.getElementsByClassName("site-nav-item");
   // get body and html elements
-  const scrollScreen = document.querySelector(["body", "html"]);
+  // const scrollScreen = document.querySelector(["body", "html"]);
+  const scrollScreen = document.querySelector("body");
   // get header element
   const siteHeader = document.querySelector(".site-header");
   // get all divs with class tab content.
   const scrollElements = document.querySelectorAll(".tabcontent");
 
   // detect page scroll function
-  const elementInView = (el, scrollOffset = 100) => {
+  const elementInView = (el: Element, scrollOffset = 100) => {
     // eslint-disable-next-line prefer-destructuring
     const elementTop = el.getBoundingClientRect().top;
     return (
@@ -20,19 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // display element on page scroll with animation
-  const displayScrollElement = (element) => {
+  const displayScrollElement = (element: Element) => {
     element.classList.remove("scrolled-no-animation");
     element.classList.add("scrolled");
   };
 
   // display element on page scroll with no animation
-  const displayScrollElementNoAnimation = (element) => {
+  const displayScrollElementNoAnimation = (element: Element) => {
     element.classList.add("scrolled-no-animation");
     element.classList.remove("scrolled");
   };
 
   // hide element on page scroll animation or not
-  const hideScrollElement = (element) => {
+  const hideScrollElement = (element: Element) => {
     element.classList.remove("scrolled");
     element.classList.remove("scrolled-no-animation");
   };
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const scrollTo = (element) => {
+  const scrollTo = (element: { offsetTop: number }) => {
     scrollScreen.scrollTo({
       behavior: "smooth",
       left: 0,
@@ -98,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   const menuToggle = document.querySelector(".menu-toggle");
   // create menu variables
-  const slideoutMenu = document.querySelector(".site-navigation");
+  const slideoutMenu = document.querySelector<HTMLElement>(".site-navigation");
 
   // eslint-disable-next-line prefer-destructuring
   const slideoutMenuHeight = slideoutMenu.offsetHeight;
@@ -152,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
   testLink.addEventListener("click", (event) => {
     // Store hash
     // eslint-disable-next-line prefer-destructuring
-    const { hash } = event.target;
+    const { hash }: any = event.target;
     // check if has empty
     if (hash !== "") {
       // if not, Prevent default anchor click behavior

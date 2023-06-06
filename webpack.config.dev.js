@@ -1,12 +1,11 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
-// import { fileURLToPath } from "url";
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 // eslint-disable-next-line no-underscore-dangle
 // const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const postcssPresetEnv = require("postcss-preset-env");
+import postcssPresetEnv from "postcss-preset-env";
+// import { fileURLToPath } from "url";
+import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 
 export default {
   mode: "development",
@@ -18,7 +17,7 @@ export default {
     ignored: ["node_modules/**"],
   },
   target: "web",
-  devtool: "source-map",
+  devtool: "inline-source-map",
   output: {
     // serves build from memory
     path: path.resolve(__dirname, "./src"),
@@ -37,6 +36,11 @@ export default {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
+      },
+      {
+        test: /\.ts?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       // rules for css
       {
@@ -145,7 +149,7 @@ export default {
   ],
 
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx", "ts", "tsx"],
     alias: {
       Images: path.resolve(__dirname, "./src/images/"),
       Fonts: path.resolve(__dirname, "./src/fonts/"),
