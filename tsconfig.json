@@ -9,5 +9,5 @@
     "moduleResolution": "node"
   },
   "include": ["src"], // which files to compile
-  "exclude": ["node_modules"], // which files to skip
+  "exclude": ["node_modules"] // which files to skip
 }
