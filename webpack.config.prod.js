@@ -7,14 +7,14 @@ import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 import path from "path";
 
 // const dirname = path.dirname(fileURLToPath(import.meta.url));
-const postcssPresetEnv = require("postcss-preset-env");
+import postcssPresetEnv from "postcss-preset-env";
 
 export default {
   mode: "production",
   devtool: "source-map",
   entry: {
-    main: path.join(__dirname, "src/index"),
-    vendor: path.join(__dirname, "src/vendor"),
+    main: path.join(__dirname, "src/index.ts"),
+    vendor: path.join(__dirname, "src/vendor.ts"),
   },
   target: "web",
   output: {
@@ -67,6 +67,11 @@ export default {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
+      },
+      {
+        test: /\.ts?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       // rules for html
       {

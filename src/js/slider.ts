@@ -78,43 +78,51 @@ const sliderdata = [
   },
 ];
 
-sliderdata.forEach((slide) => {
-  const { hash, title, text, buttonname, bgimage } = slide;
-  // panel
-  const panel = document.createElement("ARTICLE");
-  panel.setAttribute("class", "panel");
-  panel.setAttribute("id", `#${hash}`);
+sliderdata.forEach(
+  (slide: {
+    hash: string;
+    title: string;
+    text: string;
+    buttonname: string;
+    bgimage: string;
+  }) => {
+    const { hash, title, text, buttonname, bgimage } = slide;
+    // panel
+    const panel = document.createElement("ARTICLE");
+    panel.setAttribute("class", "panel");
+    panel.setAttribute("id", `#${hash}`);
 
-  // slider panel image
-  const slidepanel = document.createElement("FIGURE");
-  slidepanel.setAttribute("class", "slider-panel");
+    // slider panel image
+    const slidepanel = document.createElement("FIGURE");
+    slidepanel.setAttribute("class", "slider-panel");
 
-  const slidepanelImg = document.createElement("IMG");
-  slidepanelImg.setAttribute("src", bgimage);
-  slidepanelImg.setAttribute("class", "panel-image");
-  slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
-  slidepanelImg.setAttribute("width", "auto");
-  slidepanelImg.setAttribute("height", "360");
-  slidepanelImg.setAttribute("loading", "lazy");
+    const slidepanelImg = document.createElement("IMG");
+    slidepanelImg.setAttribute("src", bgimage);
+    slidepanelImg.setAttribute("class", "panel-image");
+    slidepanelImg.setAttribute("alt", `image of ${buttonname} certificate`);
+    slidepanelImg.setAttribute("width", "auto");
+    slidepanelImg.setAttribute("height", "360");
+    slidepanelImg.setAttribute("loading", "lazy");
 
-  const slidepanelCaption = document.createElement("FIGCAPTION");
+    const slidepanelCaption = document.createElement("FIGCAPTION");
 
-  const slidepanelHeadingThree = document.createElement("H4");
-  slidepanelHeadingThree.setAttribute("class", "slider-title");
-  slidepanelHeadingThree.textContent = title;
+    const slidepanelHeadingThree = document.createElement("H4");
+    slidepanelHeadingThree.setAttribute("class", "slider-title");
+    slidepanelHeadingThree.textContent = title;
 
-  const slidepanelText = document.createElement("P");
-  slidepanelText.setAttribute("class", "slider-text");
-  slidepanelText.textContent = `${text}`;
+    const slidepanelText = document.createElement("P");
+    slidepanelText.setAttribute("class", "slider-text");
+    slidepanelText.textContent = `${text}`;
 
-  panelContainer.append(panel);
-  panel.append(slidepanel);
+    panelContainer.append(panel);
+    panel.append(slidepanel);
 
-  slidepanel.append(slidepanelImg);
-  slidepanel.append(slidepanelCaption);
-  slidepanelCaption.append(slidepanelHeadingThree);
-  slidepanelCaption.append(slidepanelText);
-});
+    slidepanel.append(slidepanelImg);
+    slidepanel.append(slidepanelCaption);
+    slidepanelCaption.append(slidepanelHeadingThree);
+    slidepanelCaption.append(slidepanelText);
+  }
+);
 
 const panels = document.getElementsByClassName("panel");
 
@@ -153,7 +161,7 @@ const addStyle = (element: HTMLElement) => {
 };
 
 // Hero Slider
-next.addEventListener("click", (e) => {
+next.addEventListener("click", (e: MouseEvent) => {
   e.preventDefault();
   updateIndex();
 
@@ -168,7 +176,7 @@ next.addEventListener("click", (e) => {
   return false;
 });
 
-prev.addEventListener("click", (e) => {
+prev.addEventListener("click", (e: MouseEvent) => {
   e.preventDefault();
   undateIndex();
 

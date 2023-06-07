@@ -99,7 +99,7 @@
   "description": "portfolio website",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": " npm-run-all --parallel open:src tsc --watch",
+    "start": " npm-run-all --parallel open:src lint",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color --fix",
     "lint:watch": "npm run lint --watch",

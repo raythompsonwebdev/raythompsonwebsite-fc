@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementsByClassName("site-nav-item");
   // get body and html elements
   // const scrollScreen = document.querySelector(["body", "html"]);
-  const scrollScreen = document.querySelector("body");
+  const scrollScreen = document.querySelector("html");
   // get header element
   const siteHeader = document.querySelector(".site-header");
   // get all divs with class tab content.
@@ -86,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const scrollTo = (element: { offsetTop: number }) => {
+  const scrollTo = (element: { offsetTop: number | null }) => {
+    // eslint-disable-next-line no-console
+    console.log(element.offsetTop);
     scrollScreen.scrollTo({
       behavior: "smooth",
       left: 0,
@@ -97,9 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Mobile menu
    */
-  const menuToggle = document.querySelector(".menu-toggle");
+  const menuToggle = document.querySelector<HTMLElement>(".menu-toggle");
   // create menu variables
-  const slideoutMenu = document.querySelector<HTMLElement>(".site-navigation");
+  const slideoutMenu =
+    document.querySelector<HTMLDivElement>(".site-navigation");
 
   // eslint-disable-next-line prefer-destructuring
   const slideoutMenuHeight = slideoutMenu.offsetHeight;
@@ -126,16 +129,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Iterated over array with forEach.
   Array.from(navLinks).forEach((link) => {
     // add event listener to each link
-    link.addEventListener("click", (event) => {
+    link.addEventListener("click", (event: Event) => {
       // Store hash
       // eslint-disable-next-line prefer-destructuring
-      const { hash } = event.target;
+      const { hash } = event.target as HTMLAnchorElement;
+
       // check if has empty
       if (hash !== "") {
         // if not, Prevent default anchor click behavior
         event.preventDefault();
         // select element id converting hash to string using template literal and use as argument in scrolling function.
-        scrollTo(document.querySelector(`${hash}`));
+        scrollTo(document.querySelector<HTMLObjectElement>(`${hash}`));
       } // End if
 
       // hide menu when link is clicked
@@ -153,13 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
   testLink.addEventListener("click", (event) => {
     // Store hash
     // eslint-disable-next-line prefer-destructuring
-    const { hash }: any = event.target;
+    const { hash } = event.target as HTMLAnchorElement;
+
     // check if has empty
     if (hash !== "") {
       // if not, Prevent default anchor click behavior
       event.preventDefault();
       // select element id converting hash to string using template literal and use as argument in scrolling function.
-      scrollTo(document.querySelector(`${hash}`));
+      scrollTo(document.querySelector<HTMLElement | null>(`${hash}`));
     } // End if
   });
 });

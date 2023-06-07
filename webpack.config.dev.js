@@ -10,7 +10,7 @@ import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 export default {
   mode: "development",
   entry: {
-    main: "./src/index",
+    main: "./src/index.ts",
   },
   watch: true,
   watchOptions: {

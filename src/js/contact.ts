@@ -1,24 +1,24 @@
-type Form = {
-  text: HTMLInputElement | null;
-  email: HTMLInputElement | null;
-  comments: HTMLInputElement | null;
-  openmodal: HTMLInputElement | null;
-  myprivacy: HTMLInputElement | null;
-  submit: HTMLInputElement | null;
+type DataInput = {
+  preventDefault?: () => void;
+  srcElement?: HTMLInputElement | null;
 };
 
-const myForm: any = document.getElementById("myform");
+const myForm = document.getElementById("myform") as HTMLFormElement | null;
 
-const error: any = document.getElementById("form-error");
+const error = document.getElementById("form-error") as HTMLDivElement | null;
 
 // deconstruct array of form elements
-const [text, email, comments, openmodal, myprivacy, submit]: any[] = myForm;
+const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
+
+// eslint-disable-next-line no-console
+console.log(myprivacy);
 
 /**
  * Input Name Validation
  * @param {Object} evt
  */
-const dirtyInputName = (evt: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const dirtyInputName = (evt: DataInput) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -43,7 +43,8 @@ const dirtyInputName = (evt: any) => {
 };
 
 // email field
-const dirtyInputEmail = (evt: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const dirtyInputEmail = (evt: DataInput) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -67,7 +68,8 @@ const dirtyInputEmail = (evt: any) => {
 };
 
 // comments field
-const dirtyInputComments = (evt: any) => {
+
+const dirtyInputComments = (evt: DataInput) => {
   evt.preventDefault();
 
   const { srcElement } = evt;
@@ -90,14 +92,18 @@ const dirtyInputComments = (evt: any) => {
 };
 
 // comments field
-const privacyBtn = (evt: any) => {
+const privacyBtn = (evt: {
+  target: HTMLElement;
+  preventDefault?: () => void;
+  srcElement?: HTMLElement;
+}) => {
   evt.preventDefault();
   // Get the modal
-  const modal: any = document.getElementById("myModal");
+  const modal = document.getElementById("myModal");
 
   // Get the <span> element that closes the modal
   // eslint-disable-next-line prefer-destructuring
-  const span: any = document.getElementsByClassName("close")[0];
+  const span = document.getElementsByClassName("close")[0] as HTMLElement;
 
   // If the checkbox is checked, display the output text
   if (evt.target === openmodal) {
@@ -122,19 +128,20 @@ const privacyBtn = (evt: any) => {
 };
 
 // submit form
-const submitForm = (e: any) => {
-  if (text.validity.valueMissing || email.validity.valueMissing) {
+const submitForm = (e: { preventDefault: () => void }): void => {
+  // eslint-disable-next-line no-console
+  console.log(e);
+  e.preventDefault();
+  if (myname.validity.valueMissing || myemail.validity.valueMissing) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Name and email address are required!";
-    text.classList.add("dirty");
-    email.classList.add("dirty");
+    myname.classList.add("dirty");
+    myemail.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-
-    e.preventDefault();
 
     const formData = new FormData(myForm);
 
@@ -170,26 +177,26 @@ error.classList.add("hide-error");
 error.textContent = "";
 
 // submit button
-submit.addEventListener("click", submitForm);
+submitter.addEventListener("click", submitForm);
 
 // name field
-text.addEventListener("blur", dirtyInputName);
+myname.addEventListener("blur", dirtyInputName);
 
 // email field
-email.addEventListener("blur", dirtyInputEmail);
+myemail.addEventListener("blur", dirtyInputEmail);
 
 // prevent spaces from being typed in the email field
-const blockspace = (evt: any) => {
+const blockspace = (evt: { key: string; preventDefault: () => void }) => {
   if (evt.key === " ") {
     evt.preventDefault();
   }
 };
 
-email.addEventListener("keydown", blockspace);
+myemail.addEventListener("keydown", blockspace);
 
 // comments field
-comments.addEventListener("input", dirtyInputComments);
-comments.addEventListener("blur", dirtyInputComments);
+mycomments.addEventListener("input", dirtyInputComments);
+mycomments.addEventListener("blur", dirtyInputComments);
 
 // name field
 openmodal.addEventListener("click", privacyBtn);
