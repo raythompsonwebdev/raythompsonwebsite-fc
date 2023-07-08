@@ -70,7 +70,9 @@ window.addEventListener("load", () => {
     },
   ];
 
-  const chartBarContainer = document.getElementById("bars");
+  const chartBarContainer = document.getElementById(
+    "bars"
+  ) as HTMLUListElement | null;
 
   // eslint-disable-next-line no-restricted-syntax
   chartbars.forEach((element) => {
@@ -106,6 +108,8 @@ window.addEventListener("load", () => {
     return chartBarContainer;
   });
 
+  const barChartDiv = document.getElementById("barchart") as HTMLDivElement;
+
   // Create a new Observer
   const observer = new IntersectionObserver(
     (entries) => {
@@ -113,48 +117,51 @@ window.addEventListener("load", () => {
 
       if (entries[0].intersectionRatio >= 1) {
         // get node list
-        const { children } = chartBarContainer;
+        // const { children }: HTMLElement[] = chartBarContainer;
 
-        // loop over array
-        Array.from(children).forEach((key) => {
-          // using string
-          let percentage = 0;
+        if (chartBarContainer !== null) {
+          // loop over array
+          Array.from(chartBarContainer.children).forEach((child) => {
+            // using string
+            let percentage = 0;
 
-          const [bar] = Array.from(key.childNodes) as HTMLDivElement[] | null;
+            // convert data.percentage type to number to match let percentage variable.
+            // eslint-disable-next-line prefer-destructuring
+            const bar = child.firstElementChild as HTMLElement | null;
 
-          // // eslint-disable-next-line prefer-destructuring
-          const { dataset } = bar as HTMLElement;
+            // eslint-disable-next-line no-console
+            console.log(bar?.dataset.percentage);
 
-          // convert data.percentage type to number to match let percentage variable.
-          const result = Number(dataset);
+            const result = Number(bar?.dataset.percentage);
 
-          const frame = () => {
-            // comparing strings
-            if (percentage === result) {
-              // eslint-disable-next-line no-use-before-define
-              clearInterval(id);
-            } else {
-              percentage += 1;
+            const frame = () => {
+              if (bar !== null) {
+                // comparing strings
+                if (percentage === result) {
+                  // eslint-disable-next-line no-use-before-define
+                  clearInterval(id);
+                } else {
+                  percentage += 1;
 
-              bar.style.width = `${dataset.percentage}%`;
-              // add styles to a tag
-              // bar.firstChild.style.width = "100%";
-              // bar.firstChild.style.display = "block";
-              // bar.firstChild.style.height = "100%";
-              bar.style.width = "100%";
-              bar.style.display = "block";
-              bar.style.height = "100%";
-            }
-          };
+                  bar.style.width = `${result}%`;
+                  // add styles to a tag
+                  // bar.style.width = "100%";
+                  bar.style.display = "block";
+                  bar.style.height = "100%";
+                }
+              }
+            };
 
-          const id = setInterval(frame, 2500);
-        });
+            const id = setInterval(frame, 2500);
+          });
+        }
       }
     },
     {
       threshold: [1],
     }
   );
+
   // Start observing the target element
-  observer.observe(document.getElementById("barchart"));
+  observer.observe(barChartDiv);
 });

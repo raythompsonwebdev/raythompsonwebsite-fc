@@ -80,12 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const scrollTo = (element: { offsetTop: number }) => {
-    scrollScreen?.scrollTo({
-      behavior: "smooth",
-      left: 0,
-      top: element.offsetTop - 100, // deduct height of header.
-    });
+  const scrollTo = (element: { offsetTop: number | undefined }) => {
+    if (element.offsetTop !== undefined) {
+      scrollScreen?.scrollTo({
+        behavior: "smooth",
+        left: 0,
+        top: element.offsetTop - 100, // deduct height of header.
+      });
+    }
   };
 
   /**
@@ -131,16 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // eslint-disable-next-line prefer-destructuring
         const { hash } = e.target;
 
-        // eslint-disable-next-line no-console
-        console.log(e);
-
         // check if has empty
         if (hash !== "") {
           // if not, Prevent default anchor click behavior
           e.preventDefault();
 
           // select element id converting hash to string using template literal and use as argument in scrolling function.
-          scrollTo(document.querySelector(`${hash}`));
+          scrollTo(<HTMLElement>document.querySelector(`${hash}`));
         } // End if
 
         // hide menu when link is clicked
@@ -159,17 +158,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const testLink = document.querySelector("#project-page-link");
 
-  testLink?.addEventListener("click", (event) => {
-    // Store hash
-    // eslint-disable-next-line prefer-destructuring
-    const { hash } = event.target as HTMLAnchorElement;
+  testLink?.addEventListener(
+    "click",
+    (e: { preventDefault: () => void; target: any }) => {
+      // Store hash
+      // eslint-disable-next-line prefer-destructuring
+      const { hash } = e.target;
 
-    // check if has empty
-    if (hash !== "") {
-      // if not, Prevent default anchor click behavior
-      event.preventDefault();
-      // select element id converting hash to string using template literal and use as argument in scrolling function.
-      scrollTo(document.querySelector(`${hash}`));
-    } // End if
-  });
+      // check if has empty
+      if (hash !== "") {
+        // if not, Prevent default anchor click behavior
+        e.preventDefault();
+        // select element id converting hash to string using template literal and use as argument in scrolling function.
+        scrollTo(<HTMLElement>document.querySelector(`${hash}`));
+      } // End if
+    }
+  );
 });
