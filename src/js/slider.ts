@@ -1,8 +1,12 @@
 // export default function slider() {
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-const mask = window.document.querySelector(".hero-slider > .mask");
-const panelContainer = document.querySelector(".slider-body");
+const next: HTMLElement | null = document.getElementById("next");
+const prev: HTMLElement | null = document.getElementById("prev");
+const mask: HTMLDivElement | null = window.document.querySelector(
+  ".hero-slider > .mask"
+);
+const panelContainer: HTMLDivElement | null =
+  document.querySelector(".slider-body");
+
 let currentIndex = 0;
 
 const sliderdata = [
@@ -80,6 +84,7 @@ const sliderdata = [
 
 sliderdata.forEach(
   (slide: {
+    id?: string;
     hash: string;
     title: string;
     text: string;
@@ -114,7 +119,7 @@ sliderdata.forEach(
     slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = `${text}`;
 
-    panelContainer.append(panel);
+    panelContainer?.append(panel);
     panel.append(slidepanel);
 
     slidepanel.append(slidepanelImg);
@@ -126,11 +131,11 @@ sliderdata.forEach(
 
 const panels = document.getElementsByClassName("panel");
 
-const scrollerTo = (element: HTMLElement) => {
-  mask.scrollTo({
+const scrollerTo = (element: HTMLElement | null) => {
+  mask?.scrollTo({
     behavior: "smooth",
     left: 0,
-    top: element.offsetTop,
+    top: element?.offsetTop,
   });
 };
 
@@ -154,21 +159,22 @@ const undateIndex = () => {
   }
 };
 
-const addStyle = (element: HTMLElement) => {
-  if (!element.classList.contains(".captionshow")) {
-    element.classList.add("captionshow");
+const addStyle = (element: Element | null) => {
+  if (!element?.lastElementChild?.classList.contains(".captionshow")) {
+    element?.lastElementChild?.classList.add("captionshow");
   }
 };
 
 // Hero Slider
-next.addEventListener("click", (e: MouseEvent) => {
+next?.addEventListener("click", (e: { preventDefault: () => void }) => {
   e.preventDefault();
   updateIndex();
 
   for (let i = 0; i < panels.length; i += 1) {
+    // eslint-disable-next-line no-console
     if (i === currentIndex) {
       scrollerTo(document.getElementById(`${panels[i].id}`));
-      addStyle(panels[i].firstElementChild.lastChild as HTMLElement);
+      addStyle(panels[i].firstElementChild);
     }
   }
 
@@ -176,10 +182,9 @@ next.addEventListener("click", (e: MouseEvent) => {
   return false;
 });
 
-prev.addEventListener("click", (e: MouseEvent) => {
+prev?.addEventListener("click", (e: { preventDefault: () => void }) => {
   e.preventDefault();
   undateIndex();
-
   for (let i = 0; i < panels.length; i += 1) {
     if (i === currentIndex) {
       scrollerTo(document.getElementById(`${panels[i].id}`));

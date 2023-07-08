@@ -13,7 +13,8 @@ window.addEventListener("load", () => {
    *
    *  */
   const bgImage = document.querySelector("#banner") as HTMLDivElement | null;
-  bgImage.style.setProperty(
+
+  bgImage?.style.setProperty(
     "--bg-image",
     "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp)"
   );
@@ -100,7 +101,7 @@ window.addEventListener("load", () => {
     // append div and span as children
     chartBarList.appendChild(chartBar);
     chartBarList.appendChild(chartBarHeader);
-    chartBarContainer.appendChild(chartBarList);
+    chartBarContainer?.appendChild(chartBarList);
 
     return chartBarContainer;
   });
