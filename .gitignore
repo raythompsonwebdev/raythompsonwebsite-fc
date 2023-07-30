@@ -1,10 +1,14 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -103,36 +107,25 @@ typings/
 # TernJS port file
 .tern-port
 
-
-textfiles/
 node_modules/
-src/edited-images/
-icons/
 .sass-cache/
-src/images/unused-images/
-src/js/main.js.map
-src/js/contact.js.map
-src/js/projects.js.map
-src/js/slider.js.map
-src/css/style.min.css.map
 src/fonts/
 dist/
+.env
+
 
 src/php/DatabaseConnection.php
 src/php/db_credentials.php
 src/php/private/
 src/php/_secure/
-src/images/OG-images/
 src/images/Projects/
 src/images/map-of-hackney/
 src/images/profile/
 src/images/certificates/
 src/images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp
-src/images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg
-src/images/sergi-kabrera-2xU7rYxsTiM-unsplash.webp
-assets/
-buildScripts/testSetup.js
 
-assets/main.js
-assets/style.scss
+public/
+public/images/
+public/fonts/
+
 

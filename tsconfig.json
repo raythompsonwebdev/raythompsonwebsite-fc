@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "rootDir": "./src",
-    "strict": true,
-    "target": "es6",
-    "allowJs": true,
-    "moduleResolution": "node",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    "allowImportingTsExtensions": false,
-    "lib": ["es5", "es6", "dom", "dom.iterable"]
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"], // which files to compile
-  "exclude": ["node_modules"] // which files to skip
+  "include": ["src"]
 }

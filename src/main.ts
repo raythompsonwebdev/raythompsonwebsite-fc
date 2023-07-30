@@ -1,11 +1,10 @@
-import "./fonts/cabin-2--webfont/style.css";
-import "./fonts/amaranth-webfont/style.css";
-import "./fonts/open-sans-cufonfonts-webfont/style.css";
-import "./sass/style.scss";
+
+import "./styles/style.scss";
 import "./js/main.ts";
 import "./js/contact.ts";
 import "./js/projects.ts";
 import "./js/slider.ts";
+import Img from  "./images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp"
 
 window.addEventListener("load", () => {
   /**
@@ -16,7 +15,7 @@ window.addEventListener("load", () => {
 
   bgImage?.style.setProperty(
     "--bg-image",
-    "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp)"
+    Img
   );
 
   /**
@@ -165,3 +164,12 @@ window.addEventListener("load", () => {
   // Start observing the target element
   observer.observe(barChartDiv);
 });
+
+// get enviroment variables
+console.log(import.meta.env)
+// mode
+console.log(import.meta.env.MODE)
+
+console.log(import.meta.env.DEV)
+
+
