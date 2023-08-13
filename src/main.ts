@@ -1,32 +1,28 @@
-import "./fonts/cabin-2--webfont/style.css";
-import "./fonts/amaranth-webfont/style.css";
-import "./fonts/open-sans-cufonfonts-webfont/style.css";
-import "./sass/style.scss";
-import "./js/main";
-import "./js/contact";
-import projectTabs from "./js/projects";
-import slider from "./js/slider";
+import "./styles/style.scss";
+import "./js/main.ts";
+import "./js/contact.ts";
+import "./js/projects.ts";
+import "./js/slider.ts";
+import Img from "./images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp";
 
 window.addEventListener("load", () => {
   /**
    * home page background image
    *
    *  */
-  const bgImage = document.querySelector("#banner");
-  bgImage.style.setProperty(
-    "--bg-image",
-    "url(images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp)"
-  );
+  const bgImage = document.querySelector("#banner") as HTMLDivElement;
+
+  bgImage.style.setProperty("--bg-image", Img);
 
   /**
    * Project Tabs
    *  */
-  projectTabs();
+  // projectTabs();
 
   /**
    * Slider
    *  */
-  slider();
+  // slider();
 
   /**
    * Bar Chart
@@ -69,7 +65,9 @@ window.addEventListener("load", () => {
     },
   ];
 
-  const chartBarContainer = document.getElementById("bars");
+  const chartBarContainer = document.getElementById(
+    "bars"
+  ) as HTMLUListElement | null;
 
   // eslint-disable-next-line no-restricted-syntax
   chartbars.forEach((element) => {
@@ -100,10 +98,12 @@ window.addEventListener("load", () => {
     // append div and span as children
     chartBarList.appendChild(chartBar);
     chartBarList.appendChild(chartBarHeader);
-    chartBarContainer.appendChild(chartBarList);
+    chartBarContainer?.appendChild(chartBarList);
 
     return chartBarContainer;
   });
+
+  const barChartDiv = document.getElementById("barchart") as HTMLDivElement;
 
   // Create a new Observer
   const observer = new IntersectionObserver(
@@ -112,40 +112,55 @@ window.addEventListener("load", () => {
 
       if (entries[0].intersectionRatio >= 1) {
         // get node list
-        const { children } = chartBarContainer;
+        // const { children }: HTMLElement[] = chartBarContainer;
 
-        // loop over array
-        Array.from(children).forEach((key) => {
-          let percentage = 0;
+        if (chartBarContainer !== null) {
+          // loop over array
+          Array.from(chartBarContainer.children).forEach((child) => {
+            // using string
+            let percentage = 0;
 
-          const [bar] = Array.from(key.childNodes);
+            // convert data.percentage type to number to match let percentage variable.
+            // eslint-disable-next-line prefer-destructuring
+            const bar = child.firstElementChild as HTMLElement | null;
 
-          // // eslint-disable-next-line prefer-destructuring
-          const { dataset } = bar;
+            const result = Number(bar?.dataset.percentage);
 
-          const frame = () => {
-            if (percentage === dataset.percentage) {
-              // eslint-disable-next-line no-use-before-define
-              clearInterval(id);
-            } else {
-              percentage += 1;
+            const frame = () => {
+              if (bar !== null) {
+                // comparing strings
+                if (percentage === result) {
+                  // eslint-disable-next-line no-use-before-define
+                  clearInterval(id);
+                } else {
+                  percentage += 1;
 
-              bar.style.width = `${dataset.percentage}%`;
-              // add styles to a tag
-              bar.firstChild.style.width = "100%";
-              bar.firstChild.style.display = "block";
-              bar.firstChild.style.height = "100%";
-            }
-          };
+                  bar.style.width = `${result}%`;
+                  // add styles to a tag
+                  // bar.style.width = "100%";
+                  bar.style.display = "block";
+                  bar.style.height = "100%";
+                }
+              }
+            };
 
-          const id = setInterval(frame, 2500);
-        });
+            const id = setInterval(frame, 2500);
+          });
+        }
       }
     },
     {
       threshold: [1],
     }
   );
+
   // Start observing the target element
-  observer.observe(document.getElementById("barchart"));
+  observer.observe(barChartDiv);
 });
+
+// get enviroment variables
+// console.log(import.meta.env)
+// // mode
+// console.log(import.meta.env.MODE)
+
+// console.log(import.meta.env.DEV)

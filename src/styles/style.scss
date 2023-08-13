@@ -30,10 +30,10 @@
   overflow: auto;
 
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0 0 0);
 
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 40%);
+  background-color: rgb(0 0 0 / 40%);
 
   /* Black w/ opacity */
 }
@@ -42,10 +42,12 @@
 .modal-content {
   background-color: $color-white;
   margin: 0 auto;
+
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
+
   /* Could be more or less, depending on screen size */
   font-family: $font-text;
   position: relative;
@@ -53,7 +55,7 @@
 
   h2 {
     color: $color-black;
-    text-indent: 0em;
+    text-indent: 0;
     font-size: 1em;
     line-height: 40px;
   }
@@ -117,7 +119,7 @@
 }
 
 /* site wrapper */
-#site-wrapper {
+#app {
   width: 100%;
   margin: 0;
 }
@@ -669,17 +671,17 @@ a[href*="linkedin"] {
   height: auto;
   order: 0;
   flex: 0 1 auto;
-  p {
-    font-size: 0.9em;
-    line-height: 2.2em;
-    background-color: $color-white;
-    color: $color-black;
-    word-wrap: break-word;
-    white-space: normal;
-    width: 97%;
-    text-align: left;
-    padding: 0 0.5em;
-  }
+}
+.about-content-text {
+  font-size: 0.9em;
+  line-height: 2.2em;
+  background-color: $color-white;
+  color: $color-black;
+  word-wrap: break-word;
+  white-space: normal;
+  width: 97%;
+  text-align: left;
+  padding: 0 0.5em;
 }
 
 #about-widgets {
@@ -954,7 +956,7 @@ a[href*="linkedin"] {
       color: $color-black;
       z-index: 3;
       text-indent: 0.25em;
-      border-bottom: #000 solid 1px;
+      border-bottom: #000000 solid 1px;
     }
   }
 }
@@ -965,25 +967,24 @@ a[href*="linkedin"] {
   height: 35px;
   line-height: 35px;
   font-size: 0.6em;
+}
+.ledger-spans {
+  width: 19%;
+  display: block;
+  background-color: $color-white;
+  border-right: #000000 solid 1px;
+  text-indent: 0.15em;
+  flex: 1 0 auto;
+}
 
-  span {
-    width: 19%;
-    display: block;
-    background-color: $color-white;
-    border-right: #000 solid 1px;
-    text-indent: 0.15em;
-    flex: 1 0 auto;
-  }
+.ledger-spans:first-of-type {
+  width: 21.7%;
+  display: block;
+  background-color: $color-white;
+}
 
-  span:first-of-type {
-    width: 21.7%;
-    display: block;
-    background-color: $color-white;
-  }
-
-  span:last-of-type {
-    border-right: none;
-  }
+.ledger-spans:last-of-type {
+  border-right: none;
 }
 
 /* contact section */
@@ -1034,7 +1035,7 @@ a[href*="linkedin"] {
     background-color: $color-black;
   }
 
-  p {
+  .contact-details-text {
     background-color: $color-white;
     color: $color-black;
     width: 92%;
@@ -1119,7 +1120,7 @@ a[href*="linkedin"] {
   background: $color-black;
 }
 
-#myform-fields li:nth-of-type(6) {
+#myform-fields myform-field:nth-of-type(6) {
   height: 60px;
 }
 
@@ -1330,7 +1331,8 @@ a[href*="linkedin"] {
 }
 
 /* 1920px + */
-@media screen and (min-width: 1920px) {
+@media screen and (width >= 1920px) {
+
   /* Modal Content/Box */
   .modal-content {
     width: 60%;
@@ -1361,7 +1363,7 @@ a[href*="linkedin"] {
     font-size: 40px;
   }
 
-  #site-wrapper {
+  #app {
     width: calc(100% - 15%);
     margin: auto;
   }
@@ -1568,32 +1570,31 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 1em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.25em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.25em;
-    }
+  .ledger-spans:first-of-type {
+    width: 15.2%;
+  }
 
-    span:first-of-type {
-      width: 15.2%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #about-content {
     background-color: $color-black;
     order: 0;
     flex: 0 0 auto;
-
-    p {
-      font-size: 1.1em;
-      line-height: 2.2em;
-      width: 99%;
-    }
   }
+  .about-content-text {
+    font-size: 1.1em;
+    line-height: 2.2em;
+    width: 99%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -1696,7 +1697,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.25rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.9em;
     }
     address {
@@ -1843,7 +1844,7 @@ a[href*="linkedin"] {
 }
 
 /* 1440px to 1919px */
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
+@media screen and (width >= 1440px) and (width <= 1919px) {
   .modal-content {
     width: 60%;
 
@@ -1872,7 +1873,7 @@ a[href*="linkedin"] {
   .close {
     font-size: 40px;
   }
-  #site-wrapper {
+  #app {
     width: calc(100% - 6%);
     margin: auto;
   }
@@ -2077,19 +2078,18 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 1em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.25em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.25em;
-    }
+  .ledger-spans:first-of-type {
+    width: 15%;
+  }
 
-    span:first-of-type {
-      width: 15%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -2158,13 +2158,13 @@ a[href*="linkedin"] {
 
   #about-content {
     width: 100%;
-
-    p {
-      font-size: 1.05em;
-      line-height: 2.2em;
-      width: 99%;
-    }
   }
+  .about-content-text {
+    font-size: 1.05em;
+    line-height: 2.2em;
+    width: 99%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -2196,7 +2196,7 @@ a[href*="linkedin"] {
       font-size: 1.25rem;
       line-height: 50px;
     }
-    p {
+    .contact-details-text {
       font-size: 0.9em;
     }
     address {
@@ -2341,7 +2341,7 @@ a[href*="linkedin"] {
 }
 
 /* 1280px to 1439px */
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
+@media screen and (width >= 1280px) and (width <= 1439px) {
   .modal-content {
     width: 60%;
 
@@ -2370,7 +2370,7 @@ a[href*="linkedin"] {
   .close {
     font-size: 40px;
   }
-  #site-wrapper {
+  #app {
     width: calc(100% - 6%);
     margin: auto;
   }
@@ -2574,30 +2574,29 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 0.9em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.25em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.25em;
-    }
+  .ledger-spans:first-of-type {
+    width: 16.2%;
+  }
 
-    span:first-of-type {
-      width: 16.2%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #about-content {
     width: 100%;
-
-    p {
-      font-size: 1em;
-      line-height: 2em;
-      width: 99%;
-    }
   }
+  .about-content-text {
+    font-size: 1em;
+    line-height: 2em;
+    width: 99%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -2692,7 +2691,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.25rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.9em;
     }
     address {
@@ -2831,7 +2830,7 @@ a[href*="linkedin"] {
 }
 
 /* 1024px to 1279px */
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
+@media screen and (width >= 1024px) and (width <= 1279px) {
   .modal-content {
     width: 70%;
 
@@ -2860,7 +2859,7 @@ a[href*="linkedin"] {
   .close {
     font-size: 40px;
   }
-  #site-wrapper {
+  #app {
     width: calc(100% - 2%);
     margin: auto;
   }
@@ -3062,19 +3061,18 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 0.85em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.2em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.2em;
-    }
+  .ledger-spans:first-of-type {
+    width: 16.2%;
+  }
 
-    span:first-of-type {
-      width: 16.2%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -3142,13 +3140,13 @@ a[href*="linkedin"] {
 
   #about-content {
     width: 100%;
-
-    p {
-      font-size: 0.95em;
-      line-height: 1.9em;
-      width: 99%;
-    }
   }
+  .about-content-text {
+    font-size: 0.95em;
+    line-height: 1.9em;
+    width: 99%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -3179,7 +3177,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.25rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.9em;
     }
     address {
@@ -3320,7 +3318,7 @@ a[href*="linkedin"] {
 }
 
 /* 1023px to 736px -46em */
-@media screen and (min-width: 736px) and (max-width: 1023px) {
+@media screen and (width >= 736px) and (width <= 1023px) {
   .modal-content {
     width: 60%;
 
@@ -3349,7 +3347,7 @@ a[href*="linkedin"] {
   .close {
     font-size: 40px;
   }
-  #site-wrapper {
+  #app {
     width: calc(100% - 2%);
     margin: auto;
   }
@@ -3557,19 +3555,18 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 0.8em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.2em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.2em;
-    }
+  .ledger-spans:first-of-type {
+    width: 15.1%;
+  }
 
-    span:first-of-type {
-      width: 15.1%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -3638,13 +3635,13 @@ a[href*="linkedin"] {
 
   #about-content {
     width: 100%;
-
-    p {
-      font-size: 0.95em;
-      line-height: 2em;
-      width: 99%;
-    }
   }
+  .about-content-text {
+    font-size: 0.95em;
+    line-height: 2em;
+    width: 99%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -3678,7 +3675,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.2rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.9em;
     }
     address {
@@ -3819,7 +3816,7 @@ a[href*="linkedin"] {
 }
 
 /* 37.5em - 600px */
-@media screen and (min-width: 601px) and (max-width: 735px) {
+@media screen and (width >= 601px) and (width <= 735px) {
   .modal-content {
     width: 60%;
 
@@ -3850,7 +3847,7 @@ a[href*="linkedin"] {
   .close {
     font-size: 40px;
   }
-  #site-wrapper {
+  #app {
     width: 100%;
     margin: 0;
   }
@@ -4050,19 +4047,18 @@ a[href*="linkedin"] {
     height: 40px;
     line-height: 40px;
     font-size: 0.75em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.15em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.15em;
-    }
+  .ledger-spans:first-of-type {
+    width: 17.6%;
+  }
 
-    span:first-of-type {
-      width: 17.6%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -4131,13 +4127,13 @@ a[href*="linkedin"] {
   #about-content {
     width: 96%;
     height: auto;
-
-    p {
-      font-size: 0.9em;
-      line-height: 2em;
-      width: 98%;
-    }
   }
+  .about-content-text {
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 98%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -4170,7 +4166,7 @@ a[href*="linkedin"] {
       font-size: 1.2rem;
     }
 
-    p {
+    .contact-details-text {
       font-size: 0.85em;
     }
 
@@ -4299,7 +4295,7 @@ a[href*="linkedin"] {
 }
 
 /* 30em - 599px -480px */
-@media screen and (min-width: 481px) and (max-width: 600px) {
+@media screen and (width >= 481px) and (width <= 600px) {
   .modal-content {
     width: 60%;
 
@@ -4334,7 +4330,7 @@ a[href*="linkedin"] {
     font-size: 40px;
   }
 
-  #site-wrapper {
+  #app {
     width: 100%;
     margin: 0;
   }
@@ -4537,19 +4533,18 @@ a[href*="linkedin"] {
     height: 35px;
     line-height: 35px;
     font-size: 0.7em;
+  }
+  .ledger-spans {
+    width: 20%;
+    text-indent: 0.15em;
+  }
 
-    span {
-      width: 20%;
-      text-indent: 0.15em;
-    }
+  .ledger-spans:first-of-type {
+    width: 17.7%;
+  }
 
-    span:first-of-type {
-      width: 17.7%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -4617,13 +4612,13 @@ a[href*="linkedin"] {
 
   #about-content {
     height: auto;
-
-    p {
-      font-size: 0.9em;
-      line-height: 2em;
-      width: 97.5%;
-    }
   }
+  .about-content-text {
+    font-size: 0.9em;
+    line-height: 2em;
+    width: 97.5%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -4661,7 +4656,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.2rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.85em;
     }
 
@@ -4785,7 +4780,7 @@ a[href*="linkedin"] {
 }
 
 /* 360px */
-@media screen and (min-width: 361px) and (max-width: 480px) {
+@media screen and (width >= 361px) and (width <= 480px) {
   .modal-content {
     width: 60%;
 
@@ -4820,7 +4815,7 @@ a[href*="linkedin"] {
     font-size: 40px;
   }
 
-  #site-wrapper {
+  #app {
     width: 100%;
     margin: 0;
   }
@@ -5026,19 +5021,18 @@ a[href*="linkedin"] {
     height: 35px;
     line-height: 35px;
     font-size: 0.65em;
+  }
+  .ledger-spans {
+    width: 19.5%;
+    text-indent: 0.15em;
+  }
 
-    span {
-      width: 19.5%;
-      text-indent: 0.15em;
-    }
+  .ledger-spans:first-of-type {
+    width: 19.7%;
+  }
 
-    span:first-of-type {
-      width: 19.7%;
-    }
-
-    span:last-of-type {
-      border-right: none;
-    }
+  .ledger-spans:last-of-type {
+    border-right: none;
   }
 
   #slider {
@@ -5106,13 +5100,13 @@ a[href*="linkedin"] {
 
   #about-content {
     height: auto;
-
-    p {
-      font-size: 0.85em;
-      line-height: 1.8em;
-      width: 97.5%;
-    }
   }
+  .about-content-text {
+    font-size: 0.85em;
+    line-height: 1.8em;
+    width: 97.5%;
+  }
+
   #about-page-image {
     width: auto;
   }
@@ -5150,7 +5144,7 @@ a[href*="linkedin"] {
     h3 {
       font-size: 1.15rem;
     }
-    p {
+    .contact-details-text {
       font-size: 0.85em;
     }
 
