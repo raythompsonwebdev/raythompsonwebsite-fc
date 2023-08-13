@@ -56,7 +56,7 @@
   h2 {
     color: $color-black;
     text-indent: 0;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 40px;
   }
 
@@ -378,7 +378,7 @@ a[href*="linkedin"] {
   align-items: center;
   width: 100%;
 
-  --bg-image: "";
+  /* --bg-image: ""; */
 }
 .banner-text {
   width: calc(100% - 10%);
@@ -433,10 +433,11 @@ a[href*="linkedin"] {
   height: 100%;
   opacity: 0.9;
   filter: grayscale(75%);
-  background-image: var(--bg-image);
+  background-image: url("/images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp");
   background-repeat: no-repeat;
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
 }
 
 /* projects section */
@@ -794,8 +795,8 @@ a[href*="linkedin"] {
   background-color: $color-white;
   height: 100%;
   line-height: 20px;
-  font-family: $font-text;
   word-wrap: break-word;
+  font-family: FontAwesome, $font-text;
 
   /* white-space: pre-wrap; */
   letter-spacing: 0.01em;
@@ -1332,12 +1333,13 @@ a[href*="linkedin"] {
 
 /* 1920px + */
 @media screen and (width >= 1920px) {
+
   /* Modal Content/Box */
   .modal-content {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 40px;
     }
 
@@ -1591,7 +1593,7 @@ a[href*="linkedin"] {
   .about-content-text {
     font-size: 1.1em;
     line-height: 2.2em;
-    width: 99%;
+    width: 100%;
   }
 
   #about-page-image {
@@ -1641,14 +1643,9 @@ a[href*="linkedin"] {
   .slider-text {
     width: 98%;
     padding: 0.5em;
-    display: block;
-    margin: 0 auto;
-    font-weight: bold;
     font-size: 1em;
-    color: $color-black;
     height: auto;
     line-height: 30px;
-    font-family: FontAwesome, $font-text;
   }
   .panel-image {
     padding: 0;
@@ -1848,7 +1845,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 40px;
     }
 
@@ -2131,6 +2128,7 @@ a[href*="linkedin"] {
     width: 98%;
     padding: 0.5em;
     font-size: 1em;
+    height: auto;
     line-height: 30px;
   }
   .panel-image {
@@ -2161,7 +2159,7 @@ a[href*="linkedin"] {
   .about-content-text {
     font-size: 1.05em;
     line-height: 2.2em;
-    width: 99%;
+    width: 100%;
   }
 
   #about-page-image {
@@ -2345,7 +2343,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 40px;
     }
 
@@ -2593,7 +2591,7 @@ a[href*="linkedin"] {
   .about-content-text {
     font-size: 1em;
     line-height: 2em;
-    width: 99%;
+    width: 100%;
   }
 
   #about-page-image {
@@ -2645,6 +2643,7 @@ a[href*="linkedin"] {
     padding: 0.5em;
     font-size: 1em;
     line-height: 25px;
+    height: auto;
   }
   .panel-image {
     padding: 0;
@@ -2834,7 +2833,7 @@ a[href*="linkedin"] {
     width: 70%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 40px;
     }
 
@@ -3114,6 +3113,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     font-size: 0.9em;
     line-height: 25px;
+    height: auto;
   }
   .panel-image {
     padding: 0;
@@ -3143,7 +3143,7 @@ a[href*="linkedin"] {
   .about-content-text {
     font-size: 0.95em;
     line-height: 1.9em;
-    width: 99%;
+    width: 100%;
   }
 
   #about-page-image {
@@ -3322,7 +3322,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.15em;
       line-height: 40px;
     }
 
@@ -3609,6 +3609,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     font-size: 0.85em;
     line-height: 25px;
+    height: auto;
   }
   .panel-image {
     padding: 0;
@@ -3638,7 +3639,7 @@ a[href*="linkedin"] {
   .about-content-text {
     font-size: 0.95em;
     line-height: 2em;
-    width: 99%;
+    width: 100%;
   }
 
   #about-page-image {
@@ -3820,7 +3821,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.15em;
       line-height: 40px;
     }
 
@@ -4100,6 +4101,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     font-size: 0.85em;
     line-height: 25px;
+    height: auto;
   }
   .panel-image {
     padding: 0;
@@ -4299,7 +4301,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.15em;
       line-height: 40px;
     }
 
@@ -4586,6 +4588,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     font-size: 0.8em;
     line-height: 25px;
+    height: 100%;
   }
   .panel-image {
     padding: 0;
@@ -4784,7 +4787,7 @@ a[href*="linkedin"] {
     width: 60%;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.1em;
       line-height: 40px;
     }
 
@@ -5074,6 +5077,7 @@ a[href*="linkedin"] {
     padding: 0.25em;
     font-size: 0.8em;
     line-height: 25px;
+    height: 100%;
   }
   .panel-image {
     padding: 0;

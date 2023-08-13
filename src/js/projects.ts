@@ -6,7 +6,7 @@ const tabs = document.querySelectorAll(".project-tab");
 const tabsArray = Array.from(tabs);
 const projectsArray = Array.from(projects);
 
-tabsArray.forEach((tab) => {
+const filteredProject = tabsArray.forEach((tab) => {
   tab.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -26,4 +26,5 @@ tabsArray.forEach((tab) => {
     });
   });
 });
-// }
+
+export {filteredProject}

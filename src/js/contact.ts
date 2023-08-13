@@ -19,20 +19,22 @@ const dirtyInputName = (e: {
   const { target } = e;
   // check if input matches pattern
 
-  if (
-    target.validity.patternMismatch ||
-    target.validity.tooShort ||
-    target.validity.tooLong
-  ) {
-    error?.classList.remove("hide-error");
-    error?.classList.add("show-error");
-    error.textContent =
-      "Name must not contain numbers or be less than 3 characters.";
+  if(error.textContent !== ""){
+    error.textContent = "";
+  }
 
+  if (  target.validity.patternMismatch ||
+        target.validity.tooShort ||
+        target.validity.tooLong
+    ) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent =
+      "Name must not contain numbers, special characters or be less than 5 characters.";
     target.classList.add("dirty");
   } else {
-    error?.classList.add("hide-error");
-    error?.classList.remove("show-error");
+    error.classList.add("hide-error");
+    error.classList.remove("show-error");
     error.textContent = "";
     target.classList.add("dirty");
   }
@@ -47,19 +49,29 @@ const dirtyInputEmail = (e: {
 
   const { target } = e;
 
+  if(error.textContent !== ""){
+    error.textContent = "";
+  }
+
   // regex to detect valid email
-  const emailRegExp =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  // const emailRegExp =
+  //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    const emailRegExp =
+    /^[A-Z0-9. _%+-]+@[A-Z0-9. -]+\. [A-Z]{2,}$/;
 
   // check if input matches pattern
-  if (!emailRegExp.test(target.value)) {
-    error?.classList.add("show-error");
-    error?.classList.remove("hide-error");
-    error.textContent = "Please provide a valid e-mail address!";
+  if( !emailRegExp.test(target.value) ||
+      target.validity.tooShort ||
+      target.validity.tooLong
+    ) {
+    error.classList.add("show-error");
+    error.classList.remove("hide-error");
+    error.textContent = "Please provide a valid e-mail address that is no more than 30 characters or less than 6";
     target.classList.add("dirty");
   } else {
-    error?.classList.add("hide-error");
-    error?.classList.remove("show-error");
+    error.classList.add("hide-error");
+    error.classList.remove("show-error");
     error.textContent = "";
     target.classList.add("dirty");
   }
@@ -74,20 +86,26 @@ const dirtyInputComments = (e: {
 
   const { target } = e;
 
+  if(error.textContent !== ""){
+    error.textContent = "";
+  }
+
   // regex to detect html tags
   const commentsRegExp = /<\/?[^>]+(>|$)/g;
 
   // check if input matches pattern
-  if (commentsRegExp.test(target.value)) {
-    error?.classList.remove("hide-error");
-    error?.classList.add("show-error");
-    error.textContent = "Naughty! No HTML Tags allowed.";
+  if (commentsRegExp.test(target.value) ||
+      target.validity.tooShort ||
+      target.validity.tooLong) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent = "No HTML Tags allowed. comment can be up to 250 characters and not less than 10";
     target.classList.add("dirty");
   } else {
-    error?.classList.add("hide-error");
-    error?.classList.remove("show-error");
+    error.classList.add("hide-error");
+    error.classList.remove("show-error");
     error.textContent = "";
-    target.classList.remove("dirty");
+    target.classList.add("dirty");
   }
 };
 
@@ -177,10 +195,10 @@ error.textContent = "";
 submitter.addEventListener("click", submitForm);
 
 // name field
-myname.addEventListener("blur", dirtyInputName);
+myname.addEventListener("focusout", dirtyInputName);
 
 // email field
-myemail.addEventListener("blur", dirtyInputEmail);
+myemail.addEventListener("focusout", dirtyInputEmail);
 
 // prevent spaces from being typed in the email field
 const blockspace = (evt: { key: string; preventDefault: () => void }) => {
@@ -192,8 +210,8 @@ const blockspace = (evt: { key: string; preventDefault: () => void }) => {
 myemail.addEventListener("keydown", blockspace);
 
 // comments field
-mycomments.addEventListener("input", dirtyInputComments);
-mycomments.addEventListener("blur", dirtyInputComments);
+// mycomments.addEventListener("input", dirtyInputComments);
+mycomments.addEventListener("focusout", dirtyInputComments);
 
 // name field
 openmodal.addEventListener("click", privacyBtn);

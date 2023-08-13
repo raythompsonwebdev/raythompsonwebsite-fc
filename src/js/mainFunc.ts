@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
+
+const MainFunc = () => {
+
   const navLinks = document.getElementsByClassName("site-nav-item");
 
   // const scrollScreen = document.querySelector(["body", "html"]);
@@ -174,4 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } // End if
     }
   );
-});
+};
+
+export default MainFunc;

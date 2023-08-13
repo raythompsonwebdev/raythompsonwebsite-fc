@@ -12,16 +12,16 @@ const sliderdata = [
   {
     id: "0",
     hash: "panel-0",
-    title: "Adobe Certified Associates",
-    text: "Online exam : \nSetting project requirements,\nIdentifying Design Elements,\nUnderstanding Photoshop Interface, \nManipulating Images,\nEvaluating Digital Images.",
-    buttonname: "Adobe",
-    bgimage: "./images/certificates/webp/adobe-photoshop-certificate.webp",
+    title: "WordCamp London 2018",
+    text: "Attended WordCamp 2018 at Holloway university as a volunteer - Green Room Monitor , Support sponsor setup and breakdown, Assist the design team with putting up all signs - see all attendees at this link: https://london.wordcamp.org/2018/attendees/",
+    buttonname: "Wordcamp",
+    bgimage: "./images/certificates/webp/wordcamp2018.webp",
   },
   {
     id: "1",
     hash: "panel-1",
     title: "City & Guilds ITQ Level 1, 2, 3 IT Users",
-    text: "6 month part-time course web design course at East London Technology Training Center :\nImproving productivity using IT,\nIT Communication Fundementals,\nWebsite Software(Dreamweaver),\nDatabase Software,\nDatabase Management,\nDesign Software(Photoshop).",
+    text: "6 month part-time course web design course at East London Technology Training Center :Improving productivity using IT,IT Communication Fundementals,Website Software(Dreamweaver),Database Software,Database Management,Design Software(Photoshop).",
     buttonname: "East London Advanced Technolgy Training",
     bgimage:
       "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
@@ -30,7 +30,7 @@ const sliderdata = [
     id: "2",
     hash: "panel-2",
     title: "Responsive Web Design",
-    text: "Online interacative curriculum course :\nHTML,\nCSS,\nFlexbox,\nCSS Grids, \nResponsive Web Design Principles.",
+    text: "Online interacative curriculum course :HTML,CSS,Flexbox,CSS Grids, Responsive Web Design Principles.",
     buttonname: "FreeCodeCamp",
     bgimage:
       "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
@@ -39,7 +39,7 @@ const sliderdata = [
     id: "3",
     hash: "panel-3",
     title: "JavaScript",
-    text: "Online interacative curriculum course :\nClasses,\nPromises,\nRegular Expressions, Data Structures,\nAlgorithim Scripting.",
+    text: "Online interacative curriculum course :Classes,Promises,Regular Expressions, Data Structures,Algorithim Scripting.",
     buttonname: "FreeCodeCamp",
     bgimage:
       "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
@@ -48,7 +48,7 @@ const sliderdata = [
     id: "4",
     hash: "panel-4",
     title: "Linkedin Learning",
-    text: "Online tutorial Become a Vanilla Javascript Web Developer : \nJavascript Essentials, \nClosures,\nWeb API,\nService Workers,\nPromises.",
+    text: "Online tutorial Become a Vanilla Javascript Web Developer : Javascript Essentials, Closures,Web API,Service Workers,Promises.",
     buttonname: "Lynda.com",
     bgimage:
       "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
@@ -57,7 +57,7 @@ const sliderdata = [
     id: "5",
     hash: "panel-5",
     title: "Learn Javascript",
-    text: "Online interacative curriculum course :\nData Types,\nLoops,\nArray Methods, \nObjects,\nConditionals.\nFunctions.",
+    text: "Online interacative curriculum course :Data Types,Loops,Array Methods, Objects,Conditionals.Functions.",
     buttonname: "CodeAcademy",
     bgimage:
       "./images/certificates/webp/codecademy-javascript-certificate.webp",
@@ -66,7 +66,7 @@ const sliderdata = [
     id: "6",
     hash: "panel-6",
     title: "Learn Ruby",
-    text: "Online interacative curriculum course :\nArrays,\nData Types,\nClasses,\nMethods, \nConditionals.",
+    text: "Online interacative curriculum course :Arrays,Data Types,Classes,Methods, Conditionals.",
     buttonname: "CodeAcademy",
     bgimage: "./images/certificates/webp/codecademy-ruby-certificate.webp",
   },
@@ -74,7 +74,7 @@ const sliderdata = [
     id: "7",
     hash: "panel-7",
     title: "Digital Futures 2017",
-    text: "Four week full-time IT employability course :\nInteractive Programming,\nDebate Skills with DebateMate,\nMusical Composition,\nNegotiation skills with CitizenUK,\nMusic creation using Sonic Pi.",
+    text: "Four week full-time IT employability course :Interactive Programming,Debate Skills with DebateMate,Musical Composition,Negotiation skills with CitizenUK,Music creation using Sonic Pi.",
     buttonname: "DigitalFutures",
     bgimage:
       "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
@@ -118,6 +118,8 @@ sliderdata.forEach(
     slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = `${text}`;
 
+
+
     panelContainer?.append(panel);
     panel.append(slidepanel);
 
@@ -129,6 +131,15 @@ sliderdata.forEach(
 );
 
 const panels = document.getElementsByClassName("panel");
+
+const panelsArray = Array.from(panels).map((ele:any)=>{   
+  if(ele.id === '#panel-0'){
+    ele.firstChild.lastChild.classList.add("captionshow")
+  }
+  return ele;  
+})
+
+console.log(panelsArray)
 
 const scrollerTo = (element: HTMLElement | null) => {
   mask?.scrollTo({
@@ -158,8 +169,8 @@ const undateIndex = () => {
   }
 };
 
-const addStyle = (element: Element | null) => {
-  if (!element?.lastElementChild?.classList.contains(".captionshow")) {
+const addStyle = (element: Element |  null) => {
+  if (!element?.lastElementChild?.classList.contains("captionshow")) {
     element?.lastElementChild?.classList.add("captionshow");
   }
 };
@@ -168,12 +179,11 @@ const addStyle = (element: Element | null) => {
 next?.addEventListener("click", (e: { preventDefault: () => void }) => {
   e.preventDefault();
   updateIndex();
-
-  for (let i = 0; i < panels.length; i += 1) {
+  for (let i = 0; i < panelsArray.length; i += 1) {
     // eslint-disable-next-line no-console
     if (i === currentIndex) {
-      scrollerTo(document.getElementById(`${panels[i].id}`));
-      addStyle(panels[i].firstElementChild);
+      scrollerTo(document.getElementById(`${panelsArray[i].id}`));
+      addStyle(panelsArray[i].firstElementChild);
     }
   }
 
@@ -184,13 +194,13 @@ next?.addEventListener("click", (e: { preventDefault: () => void }) => {
 prev?.addEventListener("click", (e: { preventDefault: () => void }) => {
   e.preventDefault();
   undateIndex();
-  for (let i = 0; i < panels.length; i += 1) {
+  for (let i = 0; i < panelsArray.length; i += 1) {
     if (i === currentIndex) {
-      scrollerTo(document.getElementById(`${panels[i].id}`));
+      scrollerTo(document.getElementById(`${panelsArray[i].id}`));
     }
   }
 
   // disable click event
   return false;
 });
-// }
+

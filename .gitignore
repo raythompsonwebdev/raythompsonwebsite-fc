@@ -110,21 +110,17 @@ typings/
 node_modules/
 .sass-cache/
 src/fonts/
-dist/
 .env
+dist/
 
+src/php/functions.php
 
-src/php/DatabaseConnection.php
-src/php/db_credentials.php
-src/php/private/
-src/php/_secure/
 src/images/Projects/
 src/images/map-of-hackney/
 src/images/profile/
 src/images/certificates/
 src/images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp
 
-public/
 public/images/
 public/fonts/
 
