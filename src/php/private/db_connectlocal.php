@@ -3,7 +3,7 @@
 $host_name = 'localhost';
 $database = 'raythompsonwebsite';
 $user_name = 'root';
-$password = 'suntzu100';
+$password = '';
 
 
 
