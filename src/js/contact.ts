@@ -10,10 +10,6 @@ const error = document.getElementById("form-error") as HTMLSpanElement;
 // deconstruct array of form elements
 const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
 
-// eslint-disable-next-line no-console
-console.log(myprivacy);
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const dirtyInputName = (e: {
   preventDefault: () => void;
   target: HTMLInputElement;
@@ -22,9 +18,6 @@ const dirtyInputName = (e: {
 
   const { target } = e;
   // check if input matches pattern
-
-  // eslint-disable-next-line no-console
-  console.log(target);
 
   if (
     target.validity.patternMismatch ||
@@ -46,7 +39,6 @@ const dirtyInputName = (e: {
 };
 
 // email field
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const dirtyInputEmail = (e: {
   preventDefault: () => void;
   target: HTMLInputElement;
@@ -74,7 +66,6 @@ const dirtyInputEmail = (e: {
 };
 
 // comments field
-
 const dirtyInputComments = (e: {
   preventDefault: () => void;
   target: HTMLInputElement;
@@ -123,14 +114,12 @@ const privacyBtn = (e: {
   }
 
   // When the user clicks on <span> (x), close the modal
-  // eslint-disable-next-line func-names
-  spanElement.onclick = function () {
+  spanElement.onclick = () => {
     modal.style.display = "none";
   };
 
   // When the user clicks anywhere outside of the modal, close it
-  // eslint-disable-next-line func-names
-  window.onclick = function (event) {
+  window.onclick = (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
@@ -139,8 +128,6 @@ const privacyBtn = (e: {
 
 // submit form
 const submitForm = (e: { preventDefault: () => void }): void => {
-  // eslint-disable-next-line no-console
-  console.log(e);
   e.preventDefault();
   if (myname.validity.valueMissing || myemail.validity.valueMissing) {
     error?.classList.add("show-error");

@@ -11,9 +11,6 @@ tabsArray.forEach((tab) => {
     e.preventDefault();
 
     projectsArray.filter((project: any) => {
-      // eslint-disable-next-line no-console
-      console.log(project.dataset);
-
       if (project.dataset.all === tab.id) {
         // eslint  - "no-param-reassign": "off"
         project.classList.remove("project-hide");

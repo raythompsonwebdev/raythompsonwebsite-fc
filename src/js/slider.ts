@@ -1,4 +1,3 @@
-// export default function slider() {
 const next: HTMLElement | null = document.getElementById("next");
 const prev: HTMLElement | null = document.getElementById("prev");
 const mask: HTMLDivElement | null = window.document.querySelector(

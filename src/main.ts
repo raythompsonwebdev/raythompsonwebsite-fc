@@ -1,22 +1,18 @@
-
 import "./styles/style.scss";
 import "./js/main.ts";
 import "./js/contact.ts";
 import "./js/projects.ts";
 import "./js/slider.ts";
-import Img from  "./images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp"
+import Img from "./images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp";
 
 window.addEventListener("load", () => {
   /**
    * home page background image
    *
    *  */
-  const bgImage = document.querySelector("#banner") as HTMLDivElement | null;
+  const bgImage = document.querySelector("#banner") as HTMLDivElement;
 
-  bgImage?.style.setProperty(
-    "--bg-image",
-    Img
-  );
+  bgImage.style.setProperty("--bg-image", Img);
 
   /**
    * Project Tabs
@@ -128,9 +124,6 @@ window.addEventListener("load", () => {
             // eslint-disable-next-line prefer-destructuring
             const bar = child.firstElementChild as HTMLElement | null;
 
-            // eslint-disable-next-line no-console
-            console.log(bar?.dataset.percentage);
-
             const result = Number(bar?.dataset.percentage);
 
             const frame = () => {
@@ -166,10 +159,8 @@ window.addEventListener("load", () => {
 });
 
 // get enviroment variables
-console.log(import.meta.env)
-// mode
-console.log(import.meta.env.MODE)
+// console.log(import.meta.env)
+// // mode
+// console.log(import.meta.env.MODE)
 
-console.log(import.meta.env.DEV)
-
-
+// console.log(import.meta.env.DEV)
