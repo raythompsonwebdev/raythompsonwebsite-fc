@@ -4,9 +4,7 @@ import ChartGraph from '../src/js/chart.ts'
 import "./js/contact.ts";
 import {filteredProject} from "../src/js/projects.ts";
 import "./js/slider.ts";
-
-
-//import Img from "./images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp";
+import srcSet from '../src/js/srcSet.ts'
 
 window.addEventListener("load", () => {
 
@@ -16,13 +14,7 @@ window.addEventListener("load", () => {
 
   ChartGraph();
 
-  /**
-   * home page background image
-   *
-   *  */
-  // const bgImage = document.querySelector("#banner") as HTMLDivElement;
-
-  // bgImage.style.setProperty("--bg-image", Img);
+  srcSet();
 
  
 });

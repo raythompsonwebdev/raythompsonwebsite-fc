@@ -146,7 +146,7 @@
   justify-content: flex-start;
 }
 .site-title {
-  width: 50%;
+  width: 65%;
   flex: 0 1 auto;
 }
 .site-title-name {
@@ -391,11 +391,11 @@ a[href*="linkedin"] {
   text-align: center;
   color: $color-black;
   line-height: 40px;
-  font-size: 1.263rem;
+  font-size: 0.9rem;
   margin: 0;
 }
 .banner-copy {
-  font-size: 0.85em;
+  font-size: 0.8em;
   width: 98%;
   color: $color-black;
   line-height: 1.8em;
@@ -405,7 +405,7 @@ a[href*="linkedin"] {
 
 #project-page-link {
   display: block;
-  width: 65%;
+  width: 55%;
   font-size: 1rem;
   line-height: 40px;
   text-align: center;
@@ -639,6 +639,7 @@ a[href*="linkedin"] {
 .project > img {
   margin: 0 auto;
   display: block;
+  width: 100%;
 }
 .project:hover img {
   margin: 0 auto;
@@ -974,7 +975,8 @@ a[href*="linkedin"] {
   display: block;
   background-color: $color-white;
   border-right: #000000 solid 1px;
-  text-indent: 0.15em;
+  text-indent: none;
+  text-align: center;
   flex: 1 0 auto;
 }
 
@@ -1069,7 +1071,7 @@ a[href*="linkedin"] {
           font-style: normal;
           line-height: 40px;
           display: inline-block;
-          width: 40px;
+          width: 20px;
           text-align: center;
           color: $color-white;
         }
@@ -1333,7 +1335,6 @@ a[href*="linkedin"] {
 
 /* 1920px + */
 @media screen and (width >= 1920px) {
-
   /* Modal Content/Box */
   .modal-content {
     width: 60%;
@@ -1446,7 +1447,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 42%);
+    width: calc(100% - 45%);
   }
   .banner-title {
     font-size: 1.563rem;
@@ -1459,7 +1460,7 @@ a[href*="linkedin"] {
   }
 
   #project-page-link {
-    width: 35%;
+    width: 30%;
     font-size: 1.5rem;
   }
 
@@ -1575,6 +1576,7 @@ a[href*="linkedin"] {
   .ledger-spans {
     width: 20%;
     text-indent: 0.25em;
+    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -1707,6 +1709,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.3em;
+            width: 40px;
           }
         }
       }
@@ -1955,7 +1958,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 52%);
+    width: calc(100% - 40%);
   }
   .banner-title {
     line-height: 60px;
@@ -1968,7 +1971,7 @@ a[href*="linkedin"] {
   }
 
   #project-page-link {
-    width: 26%;
+    width: 30%;
     font-size: 1.25rem;
   }
 
@@ -2078,6 +2081,7 @@ a[href*="linkedin"] {
   .ledger-spans {
     width: 20%;
     text-indent: 0.25em;
+    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -2209,6 +2213,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.4em;
+            width: 40px;
           }
         }
       }
@@ -2452,7 +2457,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 52%);
+    width: calc(100% - 40%);
   }
   .banner-title {
     line-height: 60px;
@@ -2465,7 +2470,7 @@ a[href*="linkedin"] {
   }
 
   #project-page-link {
-    width: 30%;
+    width: 35%;
     font-size: 1.25rem;
   }
 
@@ -2575,6 +2580,7 @@ a[href*="linkedin"] {
   .ledger-spans {
     width: 20%;
     text-indent: 0.25em;
+    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -2705,6 +2711,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.4em;
+            width: 40px;
           }
         }
       }
@@ -2943,7 +2950,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 20%);
+    width: calc(100% - 40%);
   }
   .banner-title {
     line-height: 60px;
@@ -2956,7 +2963,7 @@ a[href*="linkedin"] {
   }
 
   #project-page-link {
-    width: 55%;
+    width: 35%;
     font-size: 1.15rem;
   }
 
@@ -3063,6 +3070,7 @@ a[href*="linkedin"] {
   .ledger-spans {
     width: 20%;
     text-indent: 0.2em;
+    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -3192,6 +3200,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
+            width: 40px;
           }
         }
       }
@@ -3392,7 +3401,7 @@ a[href*="linkedin"] {
     width: 24%;
     a[href*="#"] {
       display: block;
-      font-size: 0.85em;
+      font-size: 0.8em;
       line-height: 50px;
     }
   }
@@ -3432,7 +3441,7 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 20%);
+    width: calc(100% - 30%);
   }
   .banner-title {
     line-height: 60px;
@@ -3558,6 +3567,7 @@ a[href*="linkedin"] {
   .ledger-spans {
     width: 20%;
     text-indent: 0.2em;
+    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -3691,6 +3701,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
+            width: 35px;
           }
         }
       }
@@ -3932,20 +3943,20 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 15%);
+    width: calc(100% - 35%);
   }
   .banner-title {
-    font-size: 1.363rem;
+    font-size: 1.1rem;
     line-height: 45px;
   }
   .banner-copy {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 2.1em;
     margin-bottom: 0.5em;
   }
 
   #project-page-link {
-    width: 70%;
+    width: 45%;
     font-size: 1.15rem;
   }
 
@@ -4050,7 +4061,8 @@ a[href*="linkedin"] {
   }
   .ledger-spans {
     width: 20%;
-    text-indent: 0.15em;
+    text-indent: none;
+    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -4181,6 +4193,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
+            width: 35px;
           }
         }
       }
@@ -4417,20 +4430,20 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 15%);
+    width: calc(100% - 25%);
   }
   .banner-title {
     line-height: 45px;
-    font-size: 1.363rem;
+    font-size: 1.1rem;
   }
   .banner-copy {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 2em;
     margin-bottom: 0.5em;
   }
 
   #project-page-link {
-    width: 70%;
+    width: 50%;
     font-size: 1.1rem;
   }
 
@@ -4537,7 +4550,8 @@ a[href*="linkedin"] {
   }
   .ledger-spans {
     width: 20%;
-    text-indent: 0.15em;
+    text-indent: none;
+    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -4672,6 +4686,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
+            width: 35px;
           }
         }
       }
@@ -4804,9 +4819,9 @@ a[href*="linkedin"] {
     }
   }
   .menu-toggle {
-    left: calc(86% - 20px);
+    left: calc(89% - 20px);
     font-size: 3em;
-    width: 18%;
+    width: 15%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4832,12 +4847,12 @@ a[href*="linkedin"] {
     width: 100%;
   }
   .site-title {
-    width: 40%;
+    width: 43%;
     text-align: left;
   }
   .site-title-name {
     line-height: 35px;
-    font-size: 1.453rem;
+    font-size: 1.35rem;
   }
   .site-title-text {
     font-size: 0.65rem;
@@ -4869,7 +4884,7 @@ a[href*="linkedin"] {
 
   #social {
     height: 45px;
-    width: 35%;
+    width: 39%;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -4908,16 +4923,16 @@ a[href*="linkedin"] {
   }
   .banner-title {
     line-height: 40px;
-    font-size: 1.363rem;
+    font-size: 1.1rem;
   }
   .banner-copy {
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 1.9em;
     margin-bottom: 0.5em;
   }
 
   #project-page-link {
-    width: 70%;
+    width: 50%;
     font-size: 1.1rem;
   }
 
@@ -5026,7 +5041,8 @@ a[href*="linkedin"] {
   }
   .ledger-spans {
     width: 19.5%;
-    text-indent: 0.15em;
+    text-indent: none;
+    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -5161,6 +5177,7 @@ a[href*="linkedin"] {
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
+            width: 30px;
           }
         }
       }

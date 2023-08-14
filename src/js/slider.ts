@@ -118,8 +118,6 @@ sliderdata.forEach(
     slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = `${text}`;
 
-
-
     panelContainer?.append(panel);
     panel.append(slidepanel);
 
@@ -138,8 +136,6 @@ const panelsArray = Array.from(panels).map((ele:any)=>{
   }
   return ele;  
 })
-
-console.log(panelsArray)
 
 const scrollerTo = (element: HTMLElement | null) => {
   mask?.scrollTo({
@@ -186,7 +182,6 @@ next?.addEventListener("click", (e: { preventDefault: () => void }) => {
       addStyle(panelsArray[i].firstElementChild);
     }
   }
-
   // disable click event
   return false;
 });
@@ -199,7 +194,6 @@ prev?.addEventListener("click", (e: { preventDefault: () => void }) => {
       scrollerTo(document.getElementById(`${panelsArray[i].id}`));
     }
   }
-
   // disable click event
   return false;
 });
