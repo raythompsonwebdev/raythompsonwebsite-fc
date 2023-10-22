@@ -83,7 +83,7 @@ const sliderdata = [
 
 sliderdata.forEach(
   (slide: {
-    id?: string;
+    id: string;
     hash: string;
     title: string;
     text: string;
@@ -130,9 +130,12 @@ sliderdata.forEach(
 
 const panels = document.getElementsByClassName("panel");
 
-const panelsArray = Array.from(panels).map((ele:any)=>{   
+const panelsArray : Element[] = Array.from(panels);
+
+panelsArray.map((ele:any)=>{   
+
   if(ele.id === '#panel-0'){
-    ele.firstChild.lastChild.classList.add("captionshow")
+    ele.firstChild?.lastChild?.classList.add("captionshow")
   }
   return ele;  
 })

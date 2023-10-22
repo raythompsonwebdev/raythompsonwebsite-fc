@@ -4,6 +4,8 @@ const MainFunc = () => {
 
   const navLinks = document.getElementsByClassName("site-nav-item");
 
+  // console.log(navLinks)
+
   // const scrollScreen = document.querySelector(["body", "html"]);
   const scrollScreen = document.querySelector("html");
   // get header element
@@ -126,12 +128,15 @@ const MainFunc = () => {
     }
   });
 
+  const navlinksArray :Element[] = Array.from(navLinks)
+
   // Iterated over array with forEach.
-  Array.from(navLinks).forEach((link) => {
+  navlinksArray.forEach((link:any) => {
+    
     // add event listener to each link
     link.addEventListener(
       "click",
-      (e: { preventDefault: () => void; target: any }) => {
+      (e: { target: {hash: string}; preventDefault: () => void })=> {
         // Store hash
         // eslint-disable-next-line prefer-destructuring
         const { hash } = e.target;

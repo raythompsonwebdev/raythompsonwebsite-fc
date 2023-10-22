@@ -5,24 +5,28 @@ const ChartGraph = () =>{
   const chartbars = [
     {
       id: "1",
-      datapercentage: 55,
+      datapercentage: 60,
       codeplatform: "HTML",
       link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       title: "Link to HTML docs",
+      skill_level:"/images/svg/html-doc.svg"
     },
     {
       id: "2",
-      datapercentage: 55,
+      datapercentage: 60,
       codeplatform: "CSS",
       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       title: "Link to CSS",
+      skill_level:"/images/svg/css-doc.svg"
     },
+    
     {
       id: 3,
-      datapercentage: 50,
+      datapercentage: 45,
       codeplatform: "Javascript",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       title: "Link to Javascript",
+      skill_level:"/images/svg/JS-DOC.svg"
     },
     {
       id: 4,
@@ -30,13 +34,15 @@ const ChartGraph = () =>{
       codeplatform: "PHP",
       link: "https://www.php.net/",
       title: "Link to PHP",
+      skill_level:"/images/svg/php-doc.svg"
     },
     {
       id: "5",
-      datapercentage: 30,
-      codeplatform: "Ruby",
-      link: "https://www.ruby-lang.org/en/",
-      title: "Link to Ruby",
+      datapercentage: 50,
+      codeplatform: "MySQL",
+      link: "https://www.mysql.com/",
+      title: "Link to MySQL",
+      skill_level:"/images/svg/mysql-edited.svg"
     },
   ];
 
@@ -44,6 +50,7 @@ const ChartGraph = () =>{
     "bars"
   ) as HTMLUListElement | null;
 
+ 
   // eslint-disable-next-line no-restricted-syntax
   chartbars.forEach((element) => {
     // create bar chart bar using div
@@ -52,13 +59,26 @@ const ChartGraph = () =>{
     // set bar attributes
     chartBar.setAttribute("data-percentage", `${element.datapercentage}`);
     chartBar.setAttribute("data-codeplatform", `${element.codeplatform}`);
+    chartBar.setAttribute("data-skill_level", `${element.skill_level}`);
     chartBar.setAttribute("class", "bar");
+
+    let span = document.createElement("span");
+
+    chartBar.after(span, "text")
 
     // create span
     const chartBarHeader = document.createElement("SPAN");
 
+    const chartBarHeaderImage = document.createElement("IMG");
+    chartBarHeaderImage.setAttribute("src", `${element.skill_level}`);
+    chartBarHeaderImage.setAttribute("alt", `${element.codeplatform}`);
+    chartBarHeaderImage.setAttribute("class", "code-icon");
+
+
+    chartBarHeader.appendChild(chartBarHeaderImage);
+
     // add text
-    chartBarHeader.textContent = `${element.codeplatform}`;
+    //chartBarHeader.textContent = `${element.codeplatform}`;
 
     // create list element to contain span and div
     const chartBarList = document.createElement("LI");
@@ -78,6 +98,7 @@ const ChartGraph = () =>{
     return chartBarContainer;
   });
 
+ 
   const barChartDiv = document.getElementById("barchart") as HTMLDivElement;
 
   // Create a new Observer

@@ -119,6 +119,7 @@ src/images/Projects/
 src/images/map-of-hackney/
 src/images/profile/
 src/images/certificates/
+src/images/svg/
 src/images/sergi-kabrera-2xU7rYxsTiM-unsplash-sqoosh.webp
 
 public/images/
@@ -126,5 +127,6 @@ public/fonts/
 assets/main.js
 assets/style.scss
 assets/srcset.txt
+assets/vercel-doc
 
 

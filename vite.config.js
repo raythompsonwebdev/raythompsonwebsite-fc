@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import sass from 'sass'
 import stylelint from 'vite-plugin-stylelint';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import svgr from 'vite-plugin-svgr'
 //import { resolve } from 'pathe';
 //const pathSrc = resolve(__dirname, "./src");
 
@@ -35,7 +36,7 @@ const DEFAULT_OPTIONS = {
         params: {
           attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
         },
-      },
+      },      
     ],
   },
   png: {
@@ -77,6 +78,7 @@ export default defineConfig({
       build:true,
       dev:true,  
     }),
+    svgr(),
     ViteImageOptimizer({
       /* pass your config */
       DEFAULT_OPTIONS,
