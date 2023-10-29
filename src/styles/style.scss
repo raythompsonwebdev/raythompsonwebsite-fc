@@ -1181,6 +1181,13 @@ $h1: $h2 * $ratio;
   margin: 0;
   font-family: $font-header;
 }
+
+#form-error {
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
 #myform-fields {
   list-style: none;
   margin: 0;
@@ -1401,7 +1408,6 @@ $h1: $h2 * $ratio;
 
 /* 1920px + */
 @media screen and (width >= 1920px) {
-
   /* Modal Content/Box */
   .modal-content {
     width: 60%;
@@ -1484,7 +1490,7 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 33.3%;
+    width: 32%;
     position: unset;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -1814,6 +1820,13 @@ $h1: $h2 * $ratio;
   #myform {
     width: 66%;
   }
+
+  #form-error {
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+
   #myform-fields {
     list-style: none;
   }

@@ -35,11 +35,11 @@
       $row = mysqli_fetch_assoc($res);
 
       if($myname == isset($row['myname'])){
-        echo "Sorry, name already exists";
+        echo "<h1>Sorry, name already exists.</h1> ";
       }
 
       if($myemail == isset($row['myemail'])) {
-            echo "email address already exists";
+            echo "<h1>email address already exists.</h1>";
       }
       
 
