@@ -13,84 +13,96 @@ const sliderdata = [
     id: "0",
     hash: "panel-0",
     title: "WordCamp London 2018",
-    text: "Attended WordCamp 2018 at Holloway university as a volunteer - Green Room Monitor , Support sponsor setup and breakdown, Assist the design team with putting up all signs - see all attendees at this link: https://london.wordcamp.org/2018/attendees/",
+    text: "Attended WordCamp 2018 at Holloway university as a volunteer - Green Room Monitor , Support sponsor setup and breakdown, Assist the design team with putting up all signs - see all attendees at this ",
     buttonname: "Wordcamp",
     bgimage: "./images/certificates/webp/wordcamp2018.webp",
+    sliderlink:"https://london.wordcamp.org/2018/attendees/",
+    sliderlinktext : "link here"
   },
   {
     id: "1",
     hash: "panel-1",
     title: "City & Guilds ITQ Level 1, 2, 3 IT Users",
-    text: "6 month part-time course web design course at East London Technology Training Center :Improving productivity using IT,IT Communication Fundementals,Website Software(Dreamweaver),Database Software,Database Management,Design Software(Photoshop).",
+    text: "6 month part-time course web design course at East London Technology Training Center : Improving productivity using IT, IT Communication Fundementals, Website Software(Dreamweaver), Database Software, Database Management, Design Software(Photoshop).",
     buttonname: "East London Advanced Technolgy Training",
-    bgimage:
-      "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
+    bgimage: "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
+    sliderlink: " ",
+    sliderlinktext : " "
   },
   {
     id: "2",
     hash: "panel-2",
     title: "Responsive Web Design",
-    text: "Online interacative curriculum course :HTML,CSS,Flexbox,CSS Grids, Responsive Web Design Principles.",
+    text: "Online interacative curriculum course : HTML, CSS, Flexbox, CSS Grids, Responsive Web Design Principles. see certificate at this ",
     buttonname: "FreeCodeCamp",
-    bgimage:
-      "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
+    bgimage: "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
+    sliderlink: "https://www.freecodecamp.org/certification/raythompsonwebdev/responsive-web-design",
+    sliderlinktext : "link here"
   },
   {
     id: "3",
     hash: "panel-3",
     title: "JavaScript",
-    text: "Online interacative curriculum course :Classes,Promises,Regular Expressions, Data Structures,Algorithim Scripting.",
+    text: "Online interacative curriculum course : Classes, Promises, Regular Expressions, Data Structures, Algorithim Scripting. See certificate at this ",
     buttonname: "FreeCodeCamp",
-    bgimage:
-      "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
+    bgimage: "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
+    sliderlink: "https://www.freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures",
+    sliderlinktext : "link here"
   },
   {
     id: "4",
     hash: "panel-4",
     title: "Linkedin Learning",
-    text: "Online tutorial Become a Vanilla Javascript Web Developer : Javascript Essentials, Closures,Web API,Service Workers,Promises.",
+    text: "Online tutorial Become a Vanilla Javascript Web Developer : Javascript Essentials, Closures,Web API,Service Workers,Promises. See certificate at this ",
     buttonname: "Lynda.com",
-    bgimage:
-      "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
+    bgimage: "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
+    sliderlink: "https://www.linkedin.com/learning/certificates/49ebce65c0bf606ec55fee010f2cf2383a99ed1a323ac7e62c578fa045161b84?trk=backfilled_certificate",
+    sliderlinktext : "link here"
   },
   {
     id: "5",
     hash: "panel-5",
     title: "Learn Javascript",
-    text: "Online interacative curriculum course :Data Types,Loops,Array Methods, Objects,Conditionals.Functions.",
+    text: "Online interacative curriculum course : Data Types, Loops, Array Methods, Objects, Conditionals.Functions. See certificate at this ",
     buttonname: "CodeAcademy",
-    bgimage:
-      "./images/certificates/webp/codecademy-javascript-certificate.webp",
+    bgimage: "./images/certificates/webp/codecademy-javascript-certificate.webp",
+    sliderlink: "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e",
+    sliderlinktext : "link here"
   },
   {
     id: "6",
     hash: "panel-6",
     title: "Learn Ruby",
-    text: "Online interacative curriculum course :Arrays,Data Types,Classes,Methods, Conditionals.",
+    text: "Online interacative curriculum course : Arrays, Data Types, Classes, Methods, Conditionals. see certificate at this ",
     buttonname: "CodeAcademy",
     bgimage: "./images/certificates/webp/codecademy-ruby-certificate.webp",
+    sliderlink: "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd",
+    sliderlinktext : "link here"
   },
   {
     id: "7",
     hash: "panel-7",
     title: "Digital Futures 2017",
-    text: "Four week full-time IT employability course :Interactive Programming,Debate Skills with DebateMate,Musical Composition,Negotiation skills with CitizenUK,Music creation using Sonic Pi.",
+    text: "Four week full-time IT employability course :Interactive Programming, Debate Skills with DebateMate, Musical Composition, Negotiation skills with CitizenUK, Music creation using Sonic Pi. See promo video at this ",
     buttonname: "DigitalFutures",
-    bgimage:
-      "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
+    bgimage: "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
+    sliderlink: "https://vimeo.com/232481032",
+    sliderlinktext : "link here"
   },
 ];
 
 sliderdata.forEach(
   (slide: {
-    id?: string;
+    id: string;
     hash: string;
     title: string;
     text: string;
     buttonname: string;
     bgimage: string;
+    sliderlink:string;
+    sliderlinktext:string;
   }) => {
-    const { hash, title, text, buttonname, bgimage } = slide;
+    const { hash, title, text, buttonname, bgimage, sliderlink, sliderlinktext } = slide;
     // panel
     const panel = document.createElement("ARTICLE");
     panel.setAttribute("class", "panel");
@@ -114,25 +126,37 @@ sliderdata.forEach(
     slidepanelHeadingThree.setAttribute("class", "slider-title");
     slidepanelHeadingThree.textContent = title;
 
+    const slidepanelLink = document.createElement("A");
+    slidepanelLink.setAttribute("class", "slider-link");
+    slidepanelLink.setAttribute("href", `${sliderlink}`);
+    slidepanelLink.setAttribute("title", `${title}`);
+    slidepanelLink.textContent = sliderlinktext;
+
     const slidepanelText = document.createElement("P");
     slidepanelText.setAttribute("class", "slider-text");
-    slidepanelText.textContent = `${text}`;
-
+    slidepanelText.textContent = text;
+    
+    
     panelContainer?.append(panel);
     panel.append(slidepanel);
 
     slidepanel.append(slidepanelImg);
     slidepanel.append(slidepanelCaption);
-    slidepanelCaption.append(slidepanelHeadingThree);
+    slidepanelCaption.append(slidepanelHeadingThree);    
     slidepanelCaption.append(slidepanelText);
+    slidepanelText.append(slidepanelLink)
+  
   }
 );
 
 const panels = document.getElementsByClassName("panel");
 
-const panelsArray = Array.from(panels).map((ele:any)=>{   
+const panelsArray : Element[] = Array.from(panels);
+
+panelsArray.map((ele:any)=>{   
+
   if(ele.id === '#panel-0'){
-    ele.firstChild.lastChild.classList.add("captionshow")
+    ele.firstChild?.lastChild?.classList.add("captionshow")
   }
   return ele;  
 })

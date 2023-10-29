@@ -35,8 +35,11 @@
   },
   "homepage": "https://github.com/raythompsonwebdev/raythompsonwebsite-fc#readme",
   "description": "portfolio website",
- 
   "keywords": [
     "portfolio"
-  ]
+  ],
+  "dependencies": {
+    "svgo": "^3.0.2",
+    "vite-plugin-svgr": "^3.2.0"
+  }
 }

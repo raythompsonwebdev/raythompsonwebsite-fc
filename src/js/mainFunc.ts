@@ -4,6 +4,8 @@ const MainFunc = () => {
 
   const navLinks = document.getElementsByClassName("site-nav-item");
 
+  // console.log(navLinks)
+
   // const scrollScreen = document.querySelector(["body", "html"]);
   const scrollScreen = document.querySelector("html");
   // get header element
@@ -100,8 +102,7 @@ const MainFunc = () => {
     ".menu-toggle"
   ) as HTMLButtonElement;
 
-  const slideoutMenu: HTMLElement | null =
-    document.querySelector(".site-navigation");
+  const slideoutMenu = document.querySelector(".site-navigation") as HTMLElement;
 
   // eslint-disable-next-line prefer-destructuring
   const slideoutMenuHeight = slideoutMenu?.offsetHeight;
@@ -111,27 +112,32 @@ const MainFunc = () => {
     event.preventDefault();
 
     // toggle open class
-    slideoutMenu?.classList.toggle("open");
+    slideoutMenu.classList.toggle("show");
+
+    slideoutMenu.style.top = "0px";
+    slideoutMenu.style.transition = "all 0.3s ease-in 0s";
 
     // add css transition to menu
     // slide menu
-    if (slideoutMenu?.classList.contains("open")) {
-      slideoutMenu.style.top = "0px";
-      slideoutMenu.style.transition = "all 0.3s ease-in 0s";
-    }
-
-    if (slideoutMenuHeight !== undefined && slideoutMenu !== null) {
+    if (!slideoutMenu.classList.contains("show")) {
       slideoutMenu.style.transition = "all 0.3s ease-in 0s";
       slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
     }
+
+     
+      
+   
   });
 
+  const navlinksArray :Element[] = Array.from(navLinks)
+
   // Iterated over array with forEach.
-  Array.from(navLinks).forEach((link) => {
+  navlinksArray.forEach((link:any) => {
+    
     // add event listener to each link
     link.addEventListener(
       "click",
-      (e: { preventDefault: () => void; target: any }) => {
+      (e: { target: {hash: string}; preventDefault: () => void })=> {
         // Store hash
         // eslint-disable-next-line prefer-destructuring
         const { hash } = e.target;
@@ -146,15 +152,11 @@ const MainFunc = () => {
         } // End if
 
         // hide menu when link is clicked
-        if (
-          slideoutMenuHeight !== undefined &&
-          slideoutMenu?.classList.contains("open")
-        ) {
-          slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
-          slideoutMenu.classList.remove("open");
-        } else if (slideoutMenu !== null) {
-          slideoutMenu.style.top = "0px";
-        }
+        if (slideoutMenu.classList.contains("show")) {
+           slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
+          // slideoutMenu.style.top = "0px";
+          slideoutMenu.classList.remove("show");
+        } 
       }
     );
   });

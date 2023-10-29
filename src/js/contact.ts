@@ -58,7 +58,7 @@ const dirtyInputEmail = (e: {
   //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     const emailRegExp =
-    /^[A-Z0-9. _%+-]+@[A-Z0-9. -]+\. [A-Z]{2,}$/;
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   // check if input matches pattern
   if( !emailRegExp.test(target.value) ||
@@ -67,7 +67,7 @@ const dirtyInputEmail = (e: {
     ) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
-    error.textContent = "Please provide a valid e-mail address that is no more than 30 characters or less than 6";
+    error.textContent = "Please provide a valid e-mail address that is no more than 50 characters or less than 8";
     target.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -183,7 +183,7 @@ const submitForm = (e: { preventDefault: () => void }): void => {
       .catch((err) => {
         error.classList.remove("hide-error");
         error.classList.add("show-error");
-        error.innerHTML = `<h1>Message not sent - Network ${err.message}</h1>`;
+        error.innerHTML = `<h1>Message not sent - Error ${err.message}</h1>`;
       });
   }
 };
