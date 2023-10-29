@@ -9,7 +9,7 @@ const ChartGraph = () =>{
       codeplatform: "HTML",
       link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       title: "Link to HTML docs",
-      skill_level:"/images/svg/html-doc.svg"
+      skill_level:"/src/images/svg/html-doc.svg"
     },
     {
       id: "2",
@@ -17,7 +17,7 @@ const ChartGraph = () =>{
       codeplatform: "CSS",
       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       title: "Link to CSS",
-      skill_level:"/images/svg/css-doc.svg"
+      skill_level:"/src/images/svg/css-doc.svg"
     },
     
     {
@@ -26,7 +26,7 @@ const ChartGraph = () =>{
       codeplatform: "Javascript",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       title: "Link to Javascript",
-      skill_level:"/images/svg/JS-DOC.svg"
+      skill_level:"/src/images/svg/JS-DOC.svg"
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const ChartGraph = () =>{
       codeplatform: "PHP",
       link: "https://www.php.net/",
       title: "Link to PHP",
-      skill_level:"/images/svg/php-doc.svg"
+      skill_level:"/src/images/svg/php-doc.svg"
     },
     {
       id: "5",
@@ -42,7 +42,7 @@ const ChartGraph = () =>{
       codeplatform: "MySQL",
       link: "https://www.mysql.com/",
       title: "Link to MySQL",
-      skill_level:"/images/svg/mysql-edited.svg"
+      skill_level:"/src/images/svg/mysql-logo-svgrepo-com.svg"
     },
   ];
 
