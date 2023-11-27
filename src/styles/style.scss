@@ -137,24 +137,24 @@ $h1: $h2 * $ratio;
   position: absolute;
   z-index: 105;
   display: block;
-  top: 0;
+  bottom: 0;
   font-family: $font-header;
-  font-size: 3em;
+  font-size: 1.1em;
   text-transform: uppercase;
   background-color: $green-color;
   color: $color-white;
   border: none;
   transition: all ease-out 0s;
-  line-height: 50px;
+  line-height: 40px;
   height: auto;
-  width: 20%;
+  width: 40%;
   text-align: center;
   padding: 0;
-  left: calc(86vw - 20px);
+  left: calc(62vw - 20px);
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
-  text-decoration: underline;
+  text-decoration: none;
   border: solid 2px $color-white;
   cursor: pointer;
 }
@@ -180,20 +180,22 @@ $h1: $h2 * $ratio;
 
 /* site header */
 .site-header {
+  position: relative;
   height: 100px;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  gap: 0.25em;
+  align-items: flex-start;
+  gap: 0;
 }
 .site-title {
-  width: 65%;
+  width: 58%;
   flex: 0 1 auto;
 }
 .site-title-name {
   height: auto;
-  line-height: 35px;
+  line-height: 40px;
   text-align: left;
   margin: 0;
   font-family: $font-header;
@@ -243,7 +245,7 @@ $h1: $h2 * $ratio;
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  gap: 0.2em;
+  gap: 0.1em;
 }
 .site-nav-item {
   height: 60px;
@@ -287,21 +289,19 @@ $h1: $h2 * $ratio;
 /* social media buttons */
 #social {
   height: 35px;
-  width: 100%;
+  width: 41%;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex: 0 1 auto;
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
-  gap: 0.1em;
 }
 .social-item {
-  width: 25%;
-  margin-right: 0;
+  width: 33.3%;
   text-align: center;
   flex: 0 1 auto;
 }
@@ -323,9 +323,9 @@ $h1: $h2 * $ratio;
   transition: all 0.2s ease-in 0s;
   color: $color-black;
   &::before {
-    font-size: 1.3em;
+    font-size: 1.1em;
     display: block;
-    line-height: 35px;
+    line-height: 30px;
   }
 
   &:link {
@@ -359,8 +359,7 @@ $h1: $h2 * $ratio;
   position: relative;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
   gap: 1em 0;
   min-height: 100vh;
   width: 100%;
@@ -543,8 +542,7 @@ $h1: $h2 * $ratio;
   padding: 0;
   margin: 1em auto;
   width: 100%;
-  column-gap: 0;
-  row-gap: 1em;
+  gap: 1em 0;
 }
 .project-show {
   display: block;
@@ -1453,6 +1451,7 @@ $h1: $h2 * $ratio;
   }
   .site-header {
     width: 100%;
+    align-items: center;
   }
   .site-title {
     width: 33.3%;
@@ -1477,6 +1476,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.2em;
   }
   .site-nav-item {
     height: 50px;
@@ -1489,8 +1489,8 @@ $h1: $h2 * $ratio;
   }
 
   #social {
-    height: 45px;
-    width: 32%;
+    height: 40px;
+    width: 30%;
     position: unset;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -1501,7 +1501,7 @@ $h1: $h2 * $ratio;
     text-align: center;
   }
   .social-item-link {
-    line-height: 45px;
+    line-height: 40px;
   }
   .fa-github,
   .fa-facebook,
@@ -1570,8 +1570,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 0.5%;
-    row-gap: 1em;
+    gap: 1em 0.5%;
   }
   .project {
     width: 24.5%;
@@ -1983,6 +1982,7 @@ $h1: $h2 * $ratio;
 
   .site-header {
     width: 100%;
+    align-items: center;
   }
   .site-title {
     width: 33.3%;
@@ -1997,7 +1997,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 33.3%;
+    width: 36%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -2007,6 +2007,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.2em;
   }
   .site-nav-item {
     height: 50px;
@@ -2021,7 +2022,7 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 32%;
+    width: 30%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
@@ -2030,7 +2031,6 @@ $h1: $h2 * $ratio;
   .social-item {
     width: 20%;
     text-align: center;
-    margin-right: 0.2em;
   }
   .social-item-link {
     line-height: 45px;
@@ -2097,8 +2097,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 0.5%;
-    row-gap: 1em;
+    gap: 1em 0.5%;
   }
   .project {
     width: 24.5%;
@@ -2494,6 +2493,7 @@ $h1: $h2 * $ratio;
 
   .site-header {
     width: 100%;
+    align-items: center;
   }
   .site-title {
     width: 33.3%;
@@ -2508,7 +2508,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 33.3%;
+    width: 36%;
     height: auto;
     top: 0;
     position: unset;
@@ -2519,6 +2519,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.2em;
   }
   .site-nav-item {
     height: 50px;
@@ -2532,7 +2533,7 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 32%;
+    width: 29%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
@@ -2541,7 +2542,6 @@ $h1: $h2 * $ratio;
   .social-item {
     width: 20%;
     text-align: center;
-    margin-right: 0.2em;
   }
   .social-item-link {
     line-height: 45px;
@@ -2609,8 +2609,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 0.5%;
-    row-gap: 1em;
+    gap: 1em 0.5%;
   }
   .project {
     width: 24.5%;
@@ -2998,6 +2997,7 @@ $h1: $h2 * $ratio;
 
   .site-header {
     width: 100%;
+    align-items: center;
   }
   .site-title {
     width: 33.3%;
@@ -3012,7 +3012,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 33.3%;
+    width: 38%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -3022,6 +3022,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.1em;
   }
   .site-nav-item {
     height: 50px;
@@ -3037,7 +3038,7 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 32%;
+    width: 28%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
@@ -3046,7 +3047,6 @@ $h1: $h2 * $ratio;
   .social-item {
     width: 20%;
     text-align: center;
-    margin-right: 0.2em;
   }
   .social-item-link {
     line-height: 45px;
@@ -3110,8 +3110,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    column-gap: 0.5%;
-    row-gap: 1em;
+    gap: 1em 0.5%;
   }
   .project {
     width: 31%;
@@ -3502,13 +3501,14 @@ $h1: $h2 * $ratio;
   .site-header {
     height: 100px;
     width: 100%;
+    align-items: center;
   }
   .site-title {
     width: 33.3%;
   }
   .site-title-name {
     line-height: 40px;
-    font-size: 1.653rem;
+    font-size: 1.753rem;
   }
   .site-title-text {
     font-size: 0.85rem;
@@ -3516,7 +3516,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 33.3%;
+    width: 38%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -3526,6 +3526,7 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.1em;
   }
   .site-nav-item {
     height: 50px;
@@ -3539,8 +3540,8 @@ $h1: $h2 * $ratio;
   }
 
   #social {
-    height: 45px;
-    width: 32%;
+    height: 40px;
+    width: 28%;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: flex-end;
@@ -3549,17 +3550,16 @@ $h1: $h2 * $ratio;
   .social-item {
     width: 25%;
     text-align: center;
-    margin-right: 0.2em;
   }
   .social-item-link {
-    line-height: 45px;
+    line-height: 40px;
   }
   .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
     &::before {
-      line-height: 45px;
+      line-height: 40px;
       font-size: 1.4em;
     }
   }
@@ -3613,8 +3613,7 @@ $h1: $h2 * $ratio;
     justify-content: center;
     align-items: flex-start;
     padding: 0;
-    column-gap: 3.5%;
-    row-gap: 1em;
+    gap: 1em 3.5%;
   }
   .project {
     width: 31%;
@@ -3988,9 +3987,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(87vw - 20px);
-    font-size: 3em;
-    width: 15%;
+    left: calc(71vw - 20px);
+    font-size: 1.1em;
+    width: 30%;
   }
 
   /* The Close Button */
@@ -4010,16 +4009,17 @@ $h1: $h2 * $ratio;
   }
   .site-header {
     width: 100%;
+    align-items: flex-start;
   }
   .site-title {
-    width: 35%;
+    width: 69%;
   }
   .site-title-name {
-    line-height: 35px;
-    font-size: 1.553rem;
+    line-height: 40px;
+    font-size: 1.653rem;
   }
   .site-title-text {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     line-height: 15px;
   }
 
@@ -4036,6 +4036,7 @@ $h1: $h2 * $ratio;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 0.1em;
   }
   .site-nav-item {
     height: 50px;
@@ -4047,8 +4048,8 @@ $h1: $h2 * $ratio;
   }
 
   #social {
-    height: 45px;
-    width: 38%;
+    height: 40px;
+    width: 29%;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -4056,8 +4057,7 @@ $h1: $h2 * $ratio;
   }
   .social-item {
     text-align: center;
-    width: 32%;
-    margin-right: 0;
+    width: 33.3%;
   }
   .social-item-link {
     line-height: 40px;
@@ -4067,7 +4067,7 @@ $h1: $h2 * $ratio;
   .fa-linkedin {
     width: 100%;
     &::before {
-      line-height: 35px;
+      line-height: 40px;
       font-size: 1.2em;
     }
   }
@@ -4109,8 +4109,7 @@ $h1: $h2 * $ratio;
     justify-content: center;
     align-items: flex-start;
     padding: 0;
-    column-gap: 2%;
-    row-gap: 1em;
+    gap: 1em 2%;
   }
   #project-tabs {
     padding: 0;
@@ -4477,9 +4476,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(86vw - 20px);
-    font-size: 3em;
-    width: 16%;
+    left: calc(61vw - 20px);
+    font-size: 1.1em;
+    width: 40%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4503,16 +4502,17 @@ $h1: $h2 * $ratio;
   }
   .site-header {
     width: 100%;
+    align-items: flex-start;
   }
   .site-title {
-    width: 35%;
+    width: 59%;
   }
   .site-title-name {
-    line-height: 35px;
-    font-size: 1.453rem;
+    line-height: 40px;
+    font-size: 1.653rem;
   }
   .site-title-text {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     line-height: 15px;
   }
 
@@ -4529,6 +4529,7 @@ $h1: $h2 * $ratio;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 0.1em;
   }
   .site-nav-item {
     height: 60px;
@@ -4540,8 +4541,8 @@ $h1: $h2 * $ratio;
   }
 
   #social {
-    height: 45px;
-    width: 38%;
+    height: 40px;
+    width: 40%;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -4549,8 +4550,7 @@ $h1: $h2 * $ratio;
   }
   .social-item {
     text-align: center;
-    width: 32%;
-    margin-right: 0;
+    width: 33.3%;
   }
   .social-item-link {
     line-height: 40px;
@@ -4603,8 +4603,7 @@ $h1: $h2 * $ratio;
     justify-content: center;
     align-items: flex-start;
     margin: auto;
-    column-gap: 2%;
-    row-gap: 1em;
+    gap: 1em 2%;
   }
   #project-tabs {
     padding: 0;
@@ -4972,9 +4971,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(89% - 20px);
-    font-size: 3em;
-    width: 15%;
+    left: calc(64% - 20px);
+    font-size: 1.1em;
+    width: 40%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4998,14 +4997,15 @@ $h1: $h2 * $ratio;
   }
   .site-header {
     width: 100%;
+    align-items: flex-start;
   }
   .site-title {
-    width: 50%;
+    width: 59%;
     text-align: left;
   }
   .site-title-name {
-    line-height: 35px;
-    font-size: 1.5rem;
+    line-height: 40px;
+    font-size: 1.553rem;
   }
   .site-title-text {
     font-size: 0.7rem;
@@ -5025,6 +5025,7 @@ $h1: $h2 * $ratio;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 0.1em;
   }
   .site-nav-item {
     height: 60px;
@@ -5036,28 +5037,27 @@ $h1: $h2 * $ratio;
   }
 
   #social {
-    height: 35px;
-    width: 100%;
+    height: 40px;
+    width: 40%;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 20%;
-    margin-right: 0;
+    width: 33.3%;
   }
   .social-item-link {
-    line-height: 35px;
+    line-height: 40px;
   }
   .fa-github,
   .fa-facebook,
   .fa-linkedin {
     width: 100%;
     &::before {
-      font-size: 1.3em;
-      line-height: 35px;
+      font-size: 1.15em;
+      line-height: 30px;
     }
   }
 
@@ -5099,8 +5099,7 @@ $h1: $h2 * $ratio;
     justify-content: flex-start;
     align-items: center;
     margin: auto;
-    column-gap: 0;
-    row-gap: 1em;
+    gap: 1em 0;
   }
   #project-tabs {
     padding: 0;

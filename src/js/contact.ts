@@ -10,44 +10,39 @@ const error = document.getElementById("form-error") as HTMLSpanElement;
 // deconstruct array of form elements
 const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
 
-const dirtyInputName = (e: {
-  preventDefault: () => void;
-  target: HTMLInputElement;
-}): void => {
+const dirtyInputName = (e: FocusEvent ) => {
   e.preventDefault();
 
-  const { target } = e;
+  //const { target } = e;
   // check if input matches pattern
 
   if(error.textContent !== ""){
     error.textContent = "";
   }
 
-  if (  target.validity.patternMismatch ||
-        target.validity.tooShort ||
-        target.validity.tooLong
+  if (  
+      myname.validity.patternMismatch ||
+      myname.validity.tooShort ||
+      myname.validity.tooLong
     ) {
-    error.classList.remove("hide-error");
-    error.classList.add("show-error");
-    error.textContent =
-      "Name must not contain numbers, special characters or be less than 5 characters.";
-    target.classList.add("dirty");
+      error.classList.remove("hide-error");
+      error.classList.add("show-error");
+      error.textContent =
+        "Name must not contain numbers, special characters or be less than 5 characters.";
+      myname.classList.add("dirty");
   } else {
-    error.classList.add("hide-error");
-    error.classList.remove("show-error");
-    error.textContent = "";
-    target.classList.add("dirty");
+      error.classList.add("hide-error");
+      error.classList.remove("show-error");
+      error.textContent = "";
+      myname.classList.add("dirty");
   }
 };
 
 // email field
-const dirtyInputEmail = (e: {
-  preventDefault: () => void;
-  target: HTMLInputElement;
-}): void => {
+const dirtyInputEmail = (e: FocusEvent) => {
   e.preventDefault();
 
-  const { target } = e;
+  // const { target } = e;
 
   if(error.textContent !== ""){
     error.textContent = "";
@@ -57,34 +52,30 @@ const dirtyInputEmail = (e: {
   // const emailRegExp =
   //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    const emailRegExp =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   // check if input matches pattern
-  if( !emailRegExp.test(target.value) ||
-      target.validity.tooShort ||
-      target.validity.tooLong
+  if( !emailRegExp.test(myemail.value) ||
+    myemail.validity.tooShort ||
+    myemail.validity.tooLong
     ) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
-    error.textContent = "Please provide a valid e-mail address that is no more than 50 characters or less than 8";
-    target.classList.add("dirty");
+    error.textContent = "Please provide a valid e-mail address";
+    myemail.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    target.classList.add("dirty");
+    myemail.classList.add("dirty");
   }
 };
 
 // comments field
-const dirtyInputComments = (e: {
-  preventDefault: () => void;
-  target: HTMLInputElement;
-}): void => {
+const dirtyInputComments = (e: FocusEvent) => {
   e.preventDefault();
 
-  const { target } = e;
+  //const { target } = e;
 
   if(error.textContent !== ""){
     error.textContent = "";
@@ -93,27 +84,27 @@ const dirtyInputComments = (e: {
   // regex to detect html tags
   const commentsRegExp = /<\/?[^>]+(>|$)/g;
 
+  //const noHtmlRegex = /<[^>]*>/g;
+
+
   // check if input matches pattern
-  if (commentsRegExp.test(target.value) ||
-      target.validity.tooShort ||
-      target.validity.tooLong) {
+  if (commentsRegExp.test(mycomments.value) ||
+  mycomments.validity.tooShort ||
+  mycomments.validity.tooLong) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent = "No HTML Tags allowed. comment can be up to 250 characters and not less than 10";
-    target.classList.add("dirty");
+    mycomments.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    target.classList.add("dirty");
+    mycomments.classList.add("dirty");
   }
 };
 
 // comments field
-const privacyBtn = (e: {
-  preventDefault: () => void;
-  target: string;
-}): void => {
+const privacyBtn = (e: MouseEvent) => {
   e.preventDefault();
   // Get the modal
   const modal = document.getElementById("myModal") as HTMLElement;
@@ -145,7 +136,7 @@ const privacyBtn = (e: {
 };
 
 // submit form
-const submitForm = (e: { preventDefault: () => void }): void => {
+const submitForm = (e: MouseEvent) => {
   e.preventDefault();
   if (myname.validity.valueMissing || myemail.validity.valueMissing) {
     error?.classList.add("show-error");

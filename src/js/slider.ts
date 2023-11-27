@@ -1,10 +1,8 @@
-const next: HTMLElement | null = document.getElementById("next");
-const prev: HTMLElement | null = document.getElementById("prev");
-const mask: HTMLDivElement | null = window.document.querySelector(
-  ".hero-slider > .mask"
-);
-const panelContainer: HTMLDivElement | null =
-  document.querySelector(".slider-body");
+const next = document.getElementById("next") as HTMLButtonElement;
+const prev = document.getElementById("prev") as HTMLButtonElement;
+const mask = document.querySelector( ".hero-slider > .mask") as HTMLDivElement;
+
+const panelContainer = document.querySelector(".slider-body") as HTMLDivElement;
 
 let currentIndex = 0;
 
@@ -149,23 +147,35 @@ sliderdata.forEach(
   }
 );
 
-const panels = document.getElementsByClassName("panel");
+const panels :HTMLCollectionOf<Element> = document.getElementsByClassName("panel");
 
 const panelsArray : Element[] = Array.from(panels);
 
-panelsArray.map((ele:any)=>{   
+panelsArray.map((panel:Element)=>{   
 
-  if(ele.id === '#panel-0'){
-    ele.firstChild?.lastChild?.classList.add("captionshow")
+  // find first panel in slide show and show caption on the first panel only at beginning of slide. 
+  if(panel.id === '#panel-0'){    
+    // find figure element - slider panel with image and caption
+    const firstChild = panel.firstChild;
+
+    if(firstChild){
+      // find caption  
+      const lastChild = firstChild.lastChild as HTMLElement;
+
+      if(lastChild){
+        // add caption show style to first slide at 0 index.
+        lastChild.classList.add("captionshow")
+      }
+    }
   }
-  return ele;  
+  return panel;  
 })
 
-const scrollerTo = (element: HTMLElement | null) => {
-  mask?.scrollTo({
+const scrollerTo = (element: HTMLElement) => {
+  mask.scrollTo({
     behavior: "smooth",
     left: 0,
-    top: element?.offsetTop,
+    top: element.offsetTop,
   });
 };
 
@@ -196,13 +206,16 @@ const addStyle = (element: Element |  null) => {
 };
 
 // Hero Slider
-next?.addEventListener("click", (e: { preventDefault: () => void }) => {
+next.addEventListener("click", (e: MouseEvent) => {
   e.preventDefault();
   updateIndex();
+
   for (let i = 0; i < panelsArray.length; i += 1) {
-    // eslint-disable-next-line no-console
-    if (i === currentIndex) {
-      scrollerTo(document.getElementById(`${panelsArray[i].id}`));
+    
+    let PanelId = document.getElementById(`${panelsArray[i].id}`)
+
+    if (i === currentIndex && PanelId !== null) {
+      scrollerTo(PanelId);
       addStyle(panelsArray[i].firstElementChild);
     }
   }
@@ -210,12 +223,16 @@ next?.addEventListener("click", (e: { preventDefault: () => void }) => {
   return false;
 });
 
-prev?.addEventListener("click", (e: { preventDefault: () => void }) => {
+prev.addEventListener("click", (e: MouseEvent ) => {
   e.preventDefault();
   undateIndex();
+
   for (let i = 0; i < panelsArray.length; i += 1) {
-    if (i === currentIndex) {
-      scrollerTo(document.getElementById(`${panelsArray[i].id}`));
+
+    let PanelId = document.getElementById(`${panelsArray[i].id}`)
+
+    if (i === currentIndex && PanelId !== null) {
+      scrollerTo(PanelId);
     }
   }
   // disable click event

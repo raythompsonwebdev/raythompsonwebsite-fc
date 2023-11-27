@@ -46,9 +46,7 @@ const ChartGraph = () =>{
     },
   ];
 
-  const chartBarContainer = document.getElementById(
-    "bars"
-  ) as HTMLUListElement | null;
+  const chartBarContainer = document.getElementById("bars") as HTMLUListElement;
 
  
   // eslint-disable-next-line no-restricted-syntax
@@ -99,7 +97,7 @@ const ChartGraph = () =>{
   });
 
  
-  const barChartDiv = document.getElementById("barchart") as HTMLDivElement;
+  const barChartDiv = document.getElementById("barchart") as HTMLDivElement
 
   // Create a new Observer
   const observer = new IntersectionObserver(
