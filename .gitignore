@@ -109,12 +109,15 @@ typings/
 
 node_modules/
 .sass-cache/
-src/fonts/
 .env
 dist/
 
 src/php/functions.php
+src/php/secure/
+src/php/private/db_connect-remote.php
+src/php/private/db_connect-local.php
 
+src/fonts/
 src/images/svg/
 src/images/Projects/
 src/images/map-of-hackney/
