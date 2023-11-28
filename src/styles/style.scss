@@ -150,7 +150,7 @@ $h1: $h2 * $ratio;
   width: 40%;
   text-align: center;
   padding: 0;
-  left: calc(62vw - 20px);
+  left: calc(65vw - 20px);
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
@@ -289,19 +289,19 @@ $h1: $h2 * $ratio;
 /* social media buttons */
 #social {
   height: 35px;
-  width: 41%;
+  width: 40%;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: center;
   flex: 0 1 auto;
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
 }
 .social-item {
-  width: 33.3%;
+  width: 30%;
   text-align: center;
   flex: 0 1 auto;
 }
@@ -310,7 +310,7 @@ $h1: $h2 * $ratio;
   text-decoration: none;
   display: block;
   width: 100%;
-  line-height: 35px;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -323,9 +323,9 @@ $h1: $h2 * $ratio;
   transition: all 0.2s ease-in 0s;
   color: $color-black;
   &::before {
-    font-size: 1.1em;
+    font-size: 1.25em;
     display: block;
-    line-height: 30px;
+    line-height: 35px;
   }
 
   &:link {
@@ -412,7 +412,7 @@ $h1: $h2 * $ratio;
   text-align: center;
   color: $color-black;
   line-height: 40px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
 }
 .banner-copy {
@@ -478,6 +478,14 @@ $h1: $h2 * $ratio;
   width: 100%;
   line-height: 50px;
 }
+
+#project-page-text {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
 #project-tabs {
   display: flex;
   flex-flow: row wrap;
@@ -695,7 +703,7 @@ $h1: $h2 * $ratio;
 }
 .about-content-text {
   font-size: 0.9em;
-  line-height: 2.2em;
+  line-height: 2em;
   word-wrap: break-word;
   white-space: normal;
   width: 97%;
@@ -1087,13 +1095,13 @@ $h1: $h2 * $ratio;
   align-items: flex-start;
   justify-content: stretch;
   flex: 0 0 auto;
-  width: 96%;
+  width: 100%;
   margin: 1em auto;
   padding: 0;
   gap: 0.25em;
   h3 {
     font-family: $font-header;
-    font-size: 1.15rem;
+    font-size: 1rem;
     width: 100%;
     line-height: 40px;
     margin: 0;
@@ -1490,11 +1498,11 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 30%;
+    width: 33.3%;
     position: unset;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
   }
   .social-item {
     width: 20%;
@@ -1548,9 +1556,8 @@ $h1: $h2 * $ratio;
   }
 
   #project-page-text {
-    flex: 0 0 auto;
-    align-self: flex-start;
     text-align: left;
+    font-size: 0.9rem;
   }
   #project-tabs {
     padding: 0;
@@ -1661,8 +1668,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: 0.25em;
-    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -1696,7 +1701,7 @@ $h1: $h2 * $ratio;
     float: right;
     display: block;
     h3 {
-      font-size: 1.25rem;
+      font-size: 1rem;
       line-height: 40px;
     }
   }
@@ -1997,7 +2002,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 36%;
+    width: 33.3%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -2022,10 +2027,10 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 30%;
+    width: 33.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
@@ -2078,8 +2083,8 @@ $h1: $h2 * $ratio;
   }
 
   #project-page-text {
-    align-self: flex-start;
     text-align: left;
+    font-size: 0.9rem;
   }
   #project-tabs {
     padding: 0;
@@ -2184,8 +2189,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: 0.25em;
-    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -2508,7 +2511,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 36%;
+    width: 33.3%;
     height: auto;
     top: 0;
     position: unset;
@@ -2533,10 +2536,10 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 29%;
+    width: 33.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
@@ -2587,10 +2590,10 @@ $h1: $h2 * $ratio;
     font-size: 1.463rem;
     text-align: left;
   }
+
   #project-page-text {
-    flex: 0 0 auto;
-    align-self: flex-start;
     text-align: left;
+    font-size: 0.9rem;
   }
   #project-tabs {
     width: 99.5%;
@@ -2695,8 +2698,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: 0.25em;
-    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -2711,7 +2712,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 2em;
     width: 100%;
   }
@@ -3012,7 +3013,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 38%;
+    width: 33.3%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -3038,10 +3039,10 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 28%;
+    width: 33.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
@@ -3072,7 +3073,7 @@ $h1: $h2 * $ratio;
   }
   .banner-title {
     line-height: 60px;
-    font-size: 1.463rem;
+    font-size: 1.563rem;
   }
   .banner-copy {
     font-size: 1em;
@@ -3138,8 +3139,8 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1.25rem;
-    line-height: 50px;
+    font-size: 1.2rem;
+    line-height: 40px;
   }
 
   #about-page {
@@ -3197,8 +3198,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: 0.2em;
-    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -3247,7 +3246,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 25px;
     height: auto;
   }
@@ -3277,8 +3276,8 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.95em;
-    line-height: 1.9em;
+    font-size: 0.9em;
+    line-height: 2em;
     width: 100%;
   }
 
@@ -3516,7 +3515,7 @@ $h1: $h2 * $ratio;
   }
 
   .site-navigation {
-    width: 38%;
+    width: 33.3%;
     height: auto;
     margin-bottom: 0.5em;
     top: 0;
@@ -3541,10 +3540,10 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 28%;
+    width: 33.3%;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
@@ -3595,6 +3594,10 @@ $h1: $h2 * $ratio;
     font-size: 1.463rem;
     text-align: center;
   }
+  #project-page-text {
+    text-align: center;
+    font-size: 0.85rem;
+  }
   #project-tabs {
     padding: 0;
     width: 98%;
@@ -3621,7 +3624,7 @@ $h1: $h2 * $ratio;
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.85em;
+      font-size: 0.7em;
       width: 96%;
     }
   }
@@ -3641,8 +3644,8 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1.2rem;
-    line-height: 50px;
+    font-size: 1.1rem;
+    line-height: 40px;
   }
 
   #about-page {
@@ -3656,7 +3659,7 @@ $h1: $h2 * $ratio;
     }
   }
   #barchart {
-    width: 75%;
+    width: 80%;
     display: block;
     margin: 1em auto;
 
@@ -3701,8 +3704,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: 0.2em;
-    text-align: left;
   }
 
   .ledger-spans:first-of-type {
@@ -3782,7 +3783,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 2em;
     width: 100%;
   }
@@ -3815,7 +3816,7 @@ $h1: $h2 * $ratio;
     gap: 2em;
   }
   #contact-details {
-    width: 77%;
+    width: 100%;
     margin: 0;
     h3 {
       font-size: 1.2rem;
@@ -4012,7 +4013,7 @@ $h1: $h2 * $ratio;
     align-items: flex-start;
   }
   .site-title {
-    width: 69%;
+    width: 50%;
   }
   .site-title-name {
     line-height: 40px;
@@ -4049,15 +4050,15 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 29%;
+    width: 50%;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 33.3%;
+    width: 25%;
   }
   .social-item-link {
     line-height: 40px;
@@ -4068,7 +4069,7 @@ $h1: $h2 * $ratio;
     width: 100%;
     &::before {
       line-height: 40px;
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
   }
 
@@ -4104,6 +4105,10 @@ $h1: $h2 * $ratio;
     font-size: 1.363rem;
     text-align: center;
   }
+  #project-page-text {
+    text-align: center;
+    font-size: 0.85rem;
+  }
   .projects {
     flex-flow: row wrap;
     justify-content: center;
@@ -4130,7 +4135,7 @@ $h1: $h2 * $ratio;
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.8em;
+      font-size: 0.7em;
       width: 98%;
     }
   }
@@ -4143,7 +4148,7 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     width: 96%;
     line-height: 40px;
   }
@@ -4203,7 +4208,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: none;
     text-align: center;
   }
 
@@ -4314,7 +4318,7 @@ $h1: $h2 * $ratio;
     align-items: center;
   }
   #contact-details {
-    width: 77%;
+    width: 100%;
     margin: 1em auto;
 
     h3 {
@@ -4476,9 +4480,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(61vw - 20px);
+    left: calc(67vw - 20px);
     font-size: 1.1em;
-    width: 40%;
+    width: 35%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4505,7 +4509,7 @@ $h1: $h2 * $ratio;
     align-items: flex-start;
   }
   .site-title {
-    width: 59%;
+    width: 50%;
   }
   .site-title-name {
     line-height: 40px;
@@ -4542,15 +4546,15 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 40%;
+    width: 50%;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 33.3%;
+    width: 25%;
   }
   .social-item-link {
     line-height: 40px;
@@ -4598,6 +4602,11 @@ $h1: $h2 * $ratio;
     font-size: 1.363rem;
     text-align: center;
   }
+
+  #project-page-text {
+    text-align: center;
+    font-size: 0.85rem;
+  }
   .projects {
     flex-flow: row wrap;
     justify-content: center;
@@ -4638,7 +4647,7 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 96%;
     line-height: 40px;
   }
@@ -4699,7 +4708,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-indent: none;
     text-align: center;
   }
 
@@ -4817,7 +4825,7 @@ $h1: $h2 * $ratio;
   }
   #contact-details {
     margin: 1em auto;
-    width: 87%;
+    width: 100%;
     h3 {
       font-size: 1.2rem;
     }
@@ -4971,9 +4979,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(64% - 20px);
+    left: calc(68% - 20px);
     font-size: 1.1em;
-    width: 40%;
+    width: 35%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -5000,7 +5008,7 @@ $h1: $h2 * $ratio;
     align-items: flex-start;
   }
   .site-title {
-    width: 59%;
+    width: 50%;
     text-align: left;
   }
   .site-title-name {
@@ -5038,15 +5046,15 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 40%;
+    width: 50%;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
     position: unset;
   }
   .social-item {
     text-align: center;
-    width: 33.3%;
+    width: 25%;
   }
   .social-item-link {
     line-height: 40px;
@@ -5056,8 +5064,8 @@ $h1: $h2 * $ratio;
   .fa-linkedin {
     width: 100%;
     &::before {
-      font-size: 1.15em;
-      line-height: 30px;
+      font-size: 1.3em;
+      line-height: 35px;
     }
   }
 
@@ -5084,16 +5092,22 @@ $h1: $h2 * $ratio;
 
   #project-page-link {
     width: 50%;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   #project-page {
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.263rem;
+    font-size: 1.163rem;
     text-align: center;
   }
+
+  #project-page-text {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
   .projects {
     flex-flow: column;
     justify-content: flex-start;
@@ -5134,7 +5148,7 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     width: 96%;
     line-height: 40px;
   }
@@ -5156,7 +5170,7 @@ $h1: $h2 * $ratio;
 
     h3 {
       height: 40px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       line-height: 40px;
     }
   }
@@ -5197,7 +5211,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 26%;
-    text-indent: 0;
     text-align: center;
   }
 
@@ -5215,7 +5228,7 @@ $h1: $h2 * $ratio;
     float: none;
     margin: 1em auto;
     h3 {
-      font-size: 1.15rem;
+      font-size: 1rem;
       line-height: 40px;
     }
   }
@@ -5247,7 +5260,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.8em;
+    font-size: 0.75em;
     line-height: 25px;
     height: 100%;
   }
@@ -5278,8 +5291,8 @@ $h1: $h2 * $ratio;
   }
   .about-content-text {
     font-size: 0.85em;
-    line-height: 1.8em;
-    width: 97.5%;
+    line-height: 2em;
+    width: 98.5%;
   }
 
   #about-page-image {
@@ -5315,9 +5328,9 @@ $h1: $h2 * $ratio;
   }
   #contact-details {
     margin: 1em auto;
-    width: 96%;
+    width: 100%;
     h3 {
-      font-size: 1.15rem;
+      font-size: 1rem;
     }
     .contact-details-text {
       font-size: 0.85em;
