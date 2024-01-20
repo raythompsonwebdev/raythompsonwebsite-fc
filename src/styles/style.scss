@@ -411,12 +411,12 @@ $h1: $h2 * $ratio;
   width: auto;
   text-align: center;
   color: $color-black;
-  line-height: 40px;
-  font-size: 1rem;
+  line-height: 50px;
+  font-size: 1.1rem;
   margin: 0;
 }
 .banner-copy {
-  font-size: 0.8em;
+  font-size: 0.85em;
   width: 98%;
   color: $color-black;
   line-height: 1.8em;
@@ -473,7 +473,7 @@ $h1: $h2 * $ratio;
 #project-page-title {
   align-self: flex-start;
   text-align: center;
-  font-size: 1.163rem;
+  font-size: 1.363rem;
   display: block;
   width: 100%;
   line-height: 50px;
@@ -481,8 +481,7 @@ $h1: $h2 * $ratio;
 
 #project-page-text {
   flex: 0 0 auto;
-  align-self: flex-start;
-  text-align: left;
+  align-self: center;
   font-size: 0.85rem;
 }
 
@@ -514,7 +513,7 @@ $h1: $h2 * $ratio;
       width: 100%;
       padding: 0;
       border: none;
-      font-size: 0.9em;
+      font-size: 1em;
       transition: all 0.2s ease-in 0s;
 
       &:link {
@@ -595,7 +594,7 @@ $h1: $h2 * $ratio;
     padding: 0.5em;
     margin: 0 auto;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.85em;
     flex: 0 1 auto;
     text-align: left;
     color: $color-black;
@@ -702,13 +701,14 @@ $h1: $h2 * $ratio;
   flex: 0 1 auto;
 }
 .about-content-text {
-  font-size: 0.9em;
+  font-size: 0.85rem;
   line-height: 2em;
   word-wrap: break-word;
   white-space: normal;
-  width: 97%;
+  width: 98%;
   text-align: left;
-  padding: 0 0.5em;
+  padding: 0 1%;
+  margin-bottom: 0.5em;
 }
 
 #about-widgets {
@@ -797,7 +797,7 @@ $h1: $h2 * $ratio;
 .slider-title {
   width: 100%;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background-color: $color-black;
   color: $color-white;
   text-indent: 0;
@@ -829,9 +829,11 @@ $h1: $h2 * $ratio;
   display: inline-block;
   text-decoration: none;
   color: $color-black;
+  font-size: 1em;
+  font-weight: bold;
   &:hover {
     cursor: pointer;
-    font-weight: bold;
+    text-decoration: underline;
   }
 }
 .panel-image {
@@ -1114,16 +1116,18 @@ $h1: $h2 * $ratio;
     background-color: $color-white;
     color: $color-black;
     width: 92%;
-    padding: 4%;
-    font-size: 0.8em;
+    padding: 0;
+    font-size: 0.85em;
+    margin: 0.25em auto;
   }
 
   address {
-    width: 100%;
+    width: 98%;
     flex: 0 0 auto;
-    padding: 0;
-    margin: 0;
+    padding: 0 1%;
+    margin: 0 auto;
     background-color: $color-black;
+    height: auto;
     ul {
       display: block;
       list-style: none;
@@ -1132,7 +1136,7 @@ $h1: $h2 * $ratio;
         height: auto;
         font-family: FontAwesome, $font-header;
         color: $color-white;
-        font-size: 0.8em;
+        font-size: 0.9em;
         &:hover {
           cursor: pointer;
           font-weight: bold;
@@ -1227,7 +1231,7 @@ $h1: $h2 * $ratio;
     border-bottom: 1px solid $color-white;
     margin-bottom: 0.5em;
     text-indent: 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -1537,7 +1541,7 @@ $h1: $h2 * $ratio;
   }
   .banner-copy {
     font-size: 1em;
-    line-height: 1.8em;
+    line-height: 2em;
     margin-bottom: 1em;
   }
 
@@ -1551,12 +1555,12 @@ $h1: $h2 * $ratio;
   }
 
   #project-page-title {
-    font-size: 1.563rem;
+    font-size: 1.463rem;
     text-align: left;
   }
 
   #project-page-text {
-    text-align: left;
+    align-self: flex-start;
     font-size: 0.9rem;
   }
   #project-tabs {
@@ -1685,6 +1689,7 @@ $h1: $h2 * $ratio;
   .about-content-text {
     font-size: 1.1rem;
     line-height: 2.4em;
+    padding: 0;
     width: 100%;
   }
 
@@ -1789,7 +1794,8 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
     address {
-      height: auto;
+      width: 98%;
+      margin: 0 auto;
 
       ul {
         padding: 0;
@@ -2065,7 +2071,7 @@ $h1: $h2 * $ratio;
   }
   .banner-copy {
     font-size: 1em;
-    line-height: 1.8em;
+    line-height: 2em;
     margin-bottom: 1em;
   }
 
@@ -2078,12 +2084,12 @@ $h1: $h2 * $ratio;
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.563rem;
+    font-size: 1.363rem;
     text-align: left;
   }
 
   #project-page-text {
-    text-align: left;
+    align-self: flex-start;
     font-size: 0.9rem;
   }
   #project-tabs {
@@ -2268,8 +2274,9 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 1.05em;
+    font-size: 1rem;
     line-height: 2.2em;
+    padding: 0;
     width: 100%;
   }
 
@@ -2308,7 +2315,7 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
     address {
-      height: auto;
+      width: 98%;
       margin: 0 auto;
       ul {
         display: block;
@@ -2574,7 +2581,7 @@ $h1: $h2 * $ratio;
   }
   .banner-copy {
     font-size: 1em;
-    line-height: 2.1em;
+    line-height: 2em;
     margin-bottom: 1em;
   }
 
@@ -2587,12 +2594,12 @@ $h1: $h2 * $ratio;
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.463rem;
+    font-size: 1.363rem;
     text-align: left;
   }
 
   #project-page-text {
-    text-align: left;
+    align-self: flex-start;
     font-size: 0.9rem;
   }
   #project-tabs {
@@ -2712,8 +2719,9 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 2em;
+    padding: 0;
     width: 100%;
   }
 
@@ -2816,7 +2824,7 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
     address {
-      height: auto;
+      width: 98%;
       margin: 0 auto;
       ul {
         display: block;
@@ -3077,7 +3085,7 @@ $h1: $h2 * $ratio;
   }
   .banner-copy {
     font-size: 1em;
-    line-height: 2.1em;
+    line-height: 2em;
     margin-bottom: 1em;
   }
 
@@ -3090,9 +3098,7 @@ $h1: $h2 * $ratio;
     gap: 1em;
   }
   #project-page-text {
-    flex: 0 0 auto;
     align-self: flex-start;
-    text-align: left;
   }
   #project-tabs {
     padding: 0;
@@ -3119,7 +3125,7 @@ $h1: $h2 * $ratio;
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.85em;
+      font-size: 0.8em;
       width: 96%;
     }
   }
@@ -3276,8 +3282,9 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 2em;
+    padding: 0;
     width: 100%;
   }
 
@@ -3315,7 +3322,7 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
     address {
-      height: auto;
+      width: 98%;
       margin: 0 auto;
       ul {
         display: block;
@@ -3577,9 +3584,9 @@ $h1: $h2 * $ratio;
     font-size: 1.363rem;
   }
   .banner-copy {
-    font-size: 1em;
-    line-height: 2.1em;
-    margin-bottom: 1em;
+    font-size: 0.9em;
+    line-height: 2em;
+    margin-bottom: 0.5em;
   }
 
   #project-page-link {
@@ -3591,11 +3598,11 @@ $h1: $h2 * $ratio;
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.463rem;
+    font-size: 1.363rem;
     text-align: center;
   }
   #project-page-text {
-    text-align: center;
+    align-self: center;
     font-size: 0.85rem;
   }
   #project-tabs {
@@ -3624,7 +3631,7 @@ $h1: $h2 * $ratio;
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.7em;
+      font-size: 0.75em;
       width: 96%;
     }
   }
@@ -3637,15 +3644,15 @@ $h1: $h2 * $ratio;
 
     .caption-link {
       width: 48%;
-      font-size: 1em;
+      font-size: 0.9em;
       &:hover {
         font-weight: bold;
       }
     }
   }
   .cover-title {
-    font-size: 1.1rem;
-    line-height: 40px;
+    font-size: 1rem;
+    line-height: 35px;
   }
 
   #about-page {
@@ -3783,8 +3790,9 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 2em;
+    padding: 0;
     width: 100%;
   }
 
@@ -3825,7 +3833,7 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
     address {
-      height: auto;
+      width: 98%;
       margin: 0 auto;
       ul {
         display: block;
@@ -4084,12 +4092,12 @@ $h1: $h2 * $ratio;
     width: calc(100% - 35%);
   }
   .banner-title {
-    font-size: 1.1rem;
+    font-size: 1.263rem;
     line-height: 45px;
   }
   .banner-copy {
     font-size: 0.9em;
-    line-height: 2.1em;
+    line-height: 2em;
     margin-bottom: 0.5em;
   }
 
@@ -4106,7 +4114,7 @@ $h1: $h2 * $ratio;
     text-align: center;
   }
   #project-page-text {
-    text-align: center;
+    align-self: center;
     font-size: 0.85rem;
   }
   .projects {
@@ -4135,7 +4143,7 @@ $h1: $h2 * $ratio;
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.7em;
+      font-size: 0.85em;
       width: 98%;
     }
   }
@@ -4144,13 +4152,13 @@ $h1: $h2 * $ratio;
     margin: 0 auto;
     width: 100%;
     .caption-link {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   }
   .cover-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     width: 96%;
-    line-height: 40px;
+    line-height: 35px;
   }
 
   #about-page {
@@ -4288,7 +4296,7 @@ $h1: $h2 * $ratio;
     height: auto;
   }
   .about-content-text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 2em;
     width: 98%;
   }
@@ -4330,7 +4338,8 @@ $h1: $h2 * $ratio;
     }
 
     address {
-      height: auto;
+      width: 98%;
+      margin: 0 auto;
       ul {
         padding: 0;
         li {
@@ -4582,7 +4591,7 @@ $h1: $h2 * $ratio;
   }
   .banner-title {
     line-height: 45px;
-    font-size: 1.1rem;
+    font-size: 1.163rem;
   }
   .banner-copy {
     font-size: 0.9em;
@@ -4604,7 +4613,7 @@ $h1: $h2 * $ratio;
   }
 
   #project-page-text {
-    text-align: center;
+    align-self: center;
     font-size: 0.85rem;
   }
   .projects {
@@ -4633,7 +4642,7 @@ $h1: $h2 * $ratio;
     position: absolute;
     gap: 0;
     p {
-      font-size: 0.8em;
+      font-size: 0.85em;
       width: 96%;
     }
   }
@@ -4752,7 +4761,7 @@ $h1: $h2 * $ratio;
     }
   }
   .slider-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .slider-text {
     width: 99%;
@@ -4787,9 +4796,9 @@ $h1: $h2 * $ratio;
     height: auto;
   }
   .about-content-text {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 2em;
-    width: 97.5%;
+    width: 98%;
   }
 
   #about-page-image {
@@ -4834,12 +4843,13 @@ $h1: $h2 * $ratio;
     }
 
     address {
-      height: auto;
+      width: 98%;
+      margin: 0 auto;
       ul {
         padding: 0;
         li {
           height: auto;
-          font-size: 0.85em;
+          font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
@@ -4875,7 +4885,7 @@ $h1: $h2 * $ratio;
     label,
     #comment-header {
       display: block;
-      font-size: 0.9em;
+      font-size: 1em;
     }
 
     label[for="questionitem"],
@@ -5082,7 +5092,7 @@ $h1: $h2 * $ratio;
   }
   .banner-title {
     line-height: 40px;
-    font-size: 1.1rem;
+    font-size: 1.163rem;
   }
   .banner-copy {
     font-size: 0.85em;
@@ -5099,12 +5109,12 @@ $h1: $h2 * $ratio;
     gap: 1em;
   }
   #project-page-title {
-    font-size: 1.163rem;
+    font-size: 1.363rem;
     text-align: center;
   }
 
   #project-page-text {
-    text-align: center;
+    align-self: center;
     font-size: 0.85rem;
   }
 
@@ -5134,7 +5144,7 @@ $h1: $h2 * $ratio;
     position: absolute;
     gap: 0;
     p {
-      font-size: 0.8em;
+      font-size: 0.85em;
       width: 96%;
     }
   }
@@ -5148,7 +5158,7 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 96%;
     line-height: 40px;
   }
@@ -5255,7 +5265,7 @@ $h1: $h2 * $ratio;
     }
   }
   .slider-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .slider-text {
     width: 99%;
@@ -5290,9 +5300,9 @@ $h1: $h2 * $ratio;
     height: auto;
   }
   .about-content-text {
-    font-size: 0.85em;
+    font-size: 0.85rem;
     line-height: 2em;
-    width: 98.5%;
+    width: 98%;
   }
 
   #about-page-image {
@@ -5337,12 +5347,13 @@ $h1: $h2 * $ratio;
     }
 
     address {
-      height: auto;
+      width: 98%;
+      margin: 0 auto;
       ul {
         padding: 0;
         li {
           height: auto;
-          font-size: 0.8em;
+          font-size: 0.9em;
           .fa-phone,
           .fa-envelope {
             font-size: 1.5em;
@@ -5373,7 +5384,7 @@ $h1: $h2 * $ratio;
     label,
     #comment-header {
       display: block;
-      font-size: 0.9em;
+      font-size: 1em;
     }
 
     p {

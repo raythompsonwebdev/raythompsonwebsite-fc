@@ -82,10 +82,9 @@ const dirtyInputComments = (e: FocusEvent) => {
   }
 
   // regex to detect html tags
-  const commentsRegExp = /<\/?[^>]+(>|$)/g;
+  //const commentsRegExp = /<\/?[^>]+(>|$)/g || /[a-zA-Z0-9@=\-'"]+/g;
 
-  //const noHtmlRegex = /<[^>]*>/g;
-
+  const commentsRegExp = /^[a-zA-Z0-9 .,?!@#$%^&*()_+-=;:'"|\\/]*$/g;
 
   // check if input matches pattern
   if (commentsRegExp.test(mycomments.value) ||

@@ -1,4 +1,4 @@
-![Ray Thompson Web Developer Website](/assets/raythompsonwebdev-home-page.png)
+![Ray Thompson Web Developer Website](/raythompsonwebdev-home-page.png)
 
 # Portfolio
 
@@ -6,15 +6,13 @@ Portfolio website. Single page scrolling website with portfolio gallery , contac
 
 Website built using current coding standards, mobile first responsive design that enables website to be viewed on most devices down to 360px width screens.
 
-## Technologies
+## Features
 
-- HTML - semantic
-- CSS - css transitions, custom properties , css keyframes
-- SASS - nesting , mixins, variable, partials
-- JavaScript - ES6
-- PHP - procedural
-- MYSQLi - PHP data objects
-- MYSQL Relation Database
+- Contact Form
+- Interactive Slider
+- CSS Animations
+- Responsive Design viewable on most mobile devices.
+- Responsive images
 
 ## Tools
 
@@ -24,7 +22,11 @@ Website built using current coding standards, mobile first responsive design tha
 - [Stylelint](https://stylelint.io/)
 - [NPM Scripts](https://docs.npmjs.com/cli/v7/using-npm/scripts)
 - [EditorConfig](https://editorconfig.org/)
-- [Composer](https://getcomposer.org/)
-- [MySQL](https://www.mysql.com/)
 - [PostCSS](https://postcss.org/)
 - [Vite](https://vitejs.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [PHP](https://www.php.net//)
+
+## Database
+
+- [MySQL](https://www.mysql.com/)
