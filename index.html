@@ -25,8 +25,11 @@
     />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/fonts/cabin-2--webfont/style.css">
-    <link rel="stylesheet" href="/src/fonts/open-sans-cufonfonts-webfont/style.css">
+    <link rel="stylesheet" href="/src/fonts/cabin-2--webfont/style.css" />
+    <link
+      rel="stylesheet"
+      href="/src/fonts/open-sans-cufonfonts-webfont/style.css"
+    />
     <script src="https://use.fontawesome.com/e987635b7e.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -273,16 +276,27 @@
         <nav id="site-navigation" class="site-navigation">
           <ul class="site-inner-nav">
             <li class="site-nav-item">
-              <a href="#banner" title="home page" class="site-inner-anchor">Home</a>
+              <a href="#banner" title="home page" class="site-inner-anchor"
+                >Home</a
+              >
             </li>
             <li class="site-nav-item">
-              <a href="#project-page" title="projects page" class="site-inner-anchor">Projects</a>
+              <a
+                href="#project-page"
+                title="projects page"
+                class="site-inner-anchor"
+                >Projects</a
+              >
             </li>
             <li class="site-nav-item">
-              <a href="#about-page" title="about page" class="site-inner-anchor">About</a>
+              <a href="#about-page" title="about page" class="site-inner-anchor"
+                >About</a
+              >
             </li>
             <li class="site-nav-item">
-              <a href="#contact" title="contact page" class="site-inner-anchor">Contact</a>
+              <a href="#contact" title="contact page" class="site-inner-anchor"
+                >Contact</a
+              >
             </li>
           </ul>
         </nav>
@@ -330,26 +344,38 @@
           aria-controls="site-navigation"
           aria-expanded="false"
         >
-         Menu
+          Menu
         </button>
       </header>
       <main id="site-content">
         <!--Banner-->
         <div id="banner" class="tabcontent scrolled">
           <article class="banner-text">
-            <h2 class="banner-title">Welcome to my corner of the web!</h2>
+            <h2 class="banner-title">Web Developer</h2>
+
             <p class="banner-copy">
-              I'm a web developer with a passion for creating innovative digital solutions. </p><p class="banner-copy">  My expertise lies in crafting dynamic and interactive websites using PHP and Javascript. I also specialize in building custom WordPress themes and plugins that can empower businesses and individuals to make their mark online. </p><p class="banner-copy"> My mission is to bring your digital dreams to life. Whether you're looking for a sleek website, a powerful plugin, or a custom theme, I have the skills and creativity to make it happen.
+              My expertise lies in crafting dynamic and interactive websites
+              using PHP and Javascript. I also specialize in building custom
+              WordPress themes and plugins that can empower businesses and
+              individuals to make their mark online.
+            </p>
+            <p class="banner-copy">
+              My mission is to bring your digital dreams to life. Whether you're
+              looking for a sleek website, a powerful plugin, or a custom theme,
+              I have the skills and creativity to make it happen.
             </p>
             <!--&#11015; -arrow html &#8659;&#8681;&dArr;-->
-            <a href="#project-page" id="project-page-link">See projects</a>
+            <a href="#project-page" id="project-page-link">See my projects</a>
           </article>
         </div>
 
         <!--Projects-->
         <section id="project-page" class="tabcontent">
           <h2 id="project-page-title">Projects</h2>
-          <p id="project-page-text" >Check out my project gallery to see how I turn concepts into reality.</p>
+          <!-- <p id="project-page-text">
+            Check out my project gallery to see how I turn concepts into
+            reality.
+          </p> -->
           <div id="project-page-container">
             <ul id="project-tabs">
               <li>
@@ -396,7 +422,7 @@
                   React
                 </button>
               </li>
-              <!-- <li>
+              <li>
                 <button
                   type="button"
                   id="vuejs"
@@ -406,7 +432,7 @@
                 >
                   VueJS
                 </button>
-              </li> -->
+              </li>
               <li>
                 <button
                   type="button"
@@ -423,13 +449,13 @@
             <div class="projects">
               <figure class="div1 project" data-id="react" data-all="all">
                 <img
-                  src="./images/Projects/webp/shoestore-webapp-380.webp"                  
+                  src="./images/Projects/webp/shoestore-webapp-380.webp"
                   alt="Shoestore Website Home Page"
                   class="projectImg"
                 />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">Shoestore</h3>
-                  <p> Online shoes store in progress.</p>
+                  <p>Online shoes store in progress.</p>
                   <p>HTML, CSS, Javascript, NextJs, MongoDB, Redux Tool Kit.</p>
                   <span class="caption-links">
                     <a
@@ -451,41 +477,70 @@
                   </span>
                 </figcaption>
               </figure>
-              <!-- <figure class="div2 project" data-id="vuejs" data-all="all">
-                <img src="./images/Projects/webp/travelagencywebapp-380.webp" srcset="./images/Projects/webp/travelagencywebapp-380.webp 380w,
+              <figure class="div2 project" data-id="vuejs" data-all="all">
+                <img
+                  src="./images/Projects/webp/travelagencywebapp-380.webp"
+                  srcset="
+                    ./images/Projects/webp/travelagencywebapp-380.webp 380w,
                     ./images/Projects/webp/travelagencywebapp-360.webp 360w,
                     ./images/Projects/webp/travelagencywebapp-340.webp 340w,
-                    ./images/Projects/webp/travelagencywebapp-320.webp 320w" sizes="(min-width: 120em) 380px,
+                    ./images/Projects/webp/travelagencywebapp-320.webp 320w
+                  "
+                  sizes="(min-width: 120em) 380px,
                     (min-width: 80em) and (max-width: 1919px) 360px,
                     (min-width: 64em) and (max-width: 1279px) 340px, 
                     (min-width: 46em) and (max-width: 1023px) 340px, 
                     (min-width: 37.5em) and (max-width: 735px) 320px,
                     (min-width: 30em) and (max-width: 599px) 320px, 
-                    (min-width: 22.5em) and (max-width: 479px) 320px, 100vw" loading="lazy" alt="Travel Agency Home Page"
-                  class="projectImg" />
+                    (min-width: 22.5em) and (max-width: 479px) 320px, 100vw"
+                  loading="lazy"
+                  alt="Travel Agency Home Page"
+                  class="projectImg"
+                />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">Travel Agency</h3>
-                  <p>Worldwide package reservation booking app in progress.<br /><strong>Tech:</strong> HTML, CSS, VueJs,
-                    Express, Node,
-                    MongoDB.</p>
+                  <p>
+                    Worldwide package reservation booking app in progress.<br /><strong
+                      >Tech:</strong
+                    >
+                    HTML, CSS, VueJs, Express, Node, MongoDB.
+                  </p>
                   <span class="caption-links">
-                    <a class="caption-link" href="" target="_blank" title="Link to travel agency" rel="noopener">Live
-                      Site</a>
-                    <a class="caption-link" href="https://github.com/raythompsonwebdev/travel-agency-vue"
-                      title="Link to travel agency github repo" target="_blank" rel="noopener">GitHub repo</a>
+                    <a
+                      class="caption-link"
+                      href=""
+                      target="_blank"
+                      title="Link to travel agency"
+                      rel="noopener"
+                      >Live Site</a
+                    >
+                    <a
+                      class="caption-link"
+                      href="https://github.com/raythompsonwebdev/travel-agency-vue"
+                      title="Link to travel agency github repo"
+                      target="_blank"
+                      rel="noopener"
+                      >GitHub repo</a
+                    >
                   </span>
                 </figcaption>
-              </figure> -->
+              </figure>
               <figure class="div3 project" data-id="php" data-all="all">
                 <img
-                  src="./images/Projects/webp/mannering-music-380.webp"                  
+                  src="./images/Projects/webp/mannering-music-380.webp"
                   alt="mannering-musicmvc-home-page"
                   class="projectImg"
                 />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">Mannering Music</h3>
-                  <p> Audio Player, Album Reviews, Registration &#38; Login in progress.</p>
-                  <p>HTML, CSS, Object Oriented PHP, MVC Design Pattern, MySQL, Javascript.</p>
+                  <p>
+                    Audio Player, Album Reviews, Registration &#38; Login in
+                    progress.
+                  </p>
+                  <p>
+                    HTML, CSS, Object Oriented PHP, MVC Design Pattern, MySQL,
+                    Javascript.
+                  </p>
                   <span class="caption-links">
                     <a
                       class="caption-link"
@@ -508,14 +563,17 @@
               </figure>
               <figure class="div4 project" data-id="wordpress" data-all="all">
                 <img
-                  src="./images/Projects/webp/clashvibes-380.webp"                  
+                  src="./images/Projects/webp/clashvibes-380.webp"
                   alt="Clashvibes Wordpress Theme"
                   class="projectImg"
                 />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">Clashvibes</h3>
                   <p>Custom Wordpress Theme in progress.</p>
-                    <p>HTML, CSS, PHP, Javascript, Block Pattterns, Block Audio &#38; Video player.</p>
+                  <p>
+                    HTML, CSS, PHP, Javascript, Block Pattterns, Block Audio
+                    &#38; Video player.
+                  </p>
 
                   <span class="caption-links">
                     <a
@@ -562,7 +620,7 @@
                   </span>
                 </figcaption>
               </figure> -->
-              <figure class="div6 project" data-id="javascript" data-all="all">
+              <!-- <figure class="div6 project" data-id="javascript" data-all="all">
                 <img
                   src="./images/Projects/webp/crimechecker-380.webp"
                   alt="Crime Checker app"
@@ -591,17 +649,20 @@
                     >
                   </span>
                 </figcaption>
-              </figure>
+              </figure> -->
               <figure class="div7 project" data-id="javascript" data-all="all">
                 <img
-                  src="./images/Projects/webp/local-storage-todo-app-380.webp"                  
+                  src="./images/Projects/webp/local-storage-todo-app-380.webp"
                   alt="Todo app"
                   class="projectImg"
                 />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">Todo App</h3>
-                  <p>Project in collab with Founders &#38; Coders cohort Miah Bates.</p>
-                  <p> HTML, CSS, Javascript, Local Storage</p>
+                  <p>
+                    Project in collab with Founders &#38; Coders cohort Miah
+                    Bates.
+                  </p>
+                  <p>HTML, CSS, Javascript, Local Storage</p>
                   <span class="caption-links">
                     <a
                       class="caption-link"
@@ -622,16 +683,19 @@
                   </span>
                 </figcaption>
               </figure>
-              <figure class="div8 project" data-id="javascript" data-all="all">
+              <!-- <figure class="div8 project" data-id="javascript" data-all="all">
                 <img
-                  src="./images/Projects/webp/oli-ray-agency-380.webp"                 
+                  src="./images/Projects/webp/oli-ray-agency-380.webp"
                   alt="OliRay web agency"
                   class="projectImg"
                 />
                 <figcaption class="project-caption">
                   <h3 class="cover-title">OliRay Agency</h3>
-                  <p>Project in collab with Founders &#38; Coders cohort Oli Jones.</p>
-                  <p> HTML, CSS, Javascript.</p>
+                  <p>
+                    Project in collab with Founders &#38; Coders cohort Oli
+                    Jones.
+                  </p>
+                  <p>HTML, CSS, Javascript.</p>
                   <span class="caption-links">
                     <a
                       class="caption-link"
@@ -651,7 +715,7 @@
                     >
                   </span>
                 </figcaption>
-              </figure>
+              </figure> -->
             </div>
           </div>
         </section>
@@ -682,13 +746,33 @@
               />
             </figure>
             <p class="about-content-text">
-              Hello! I'm Raymond, a web developer with a deep passion for creating innovative online experiences. 
-              My journey into the world of coding began after attending a short web design course in my local area which began a fascination for the power of technology to connect people and ideas.</p><p class="about-content-text"> Over the years, I've refined my skills in HTML, CSS, PHP, MYSQL and JavaScript, channeling my creativity into crafting custom WordPress themes and plugins , Full stack web applications and User Interfaces that not only look great but also function seamlessly.
+              Hello! I'm Raymond, a web developer with a deep passion for
+              creating innovative online experiences. My journey into the world
+              of coding began after attending a short web design course in my
+              local area which began a fascination for the power of technology
+              to connect people and ideas.
             </p>
             <p class="about-content-text">
-              I'm proud to have honed my skills in PHP and Javascript, enabling me to craft websites that are not just functional but also pleaseing to the eye.
-              My love for problem-solving led me to specialize in developing custom WordPress themes and plugins and full stack applications. I believe that the web should be a place where ideas can flourish, and that's what I aim to achieve with every project.</p><p class="about-content-text"> When I'm not behind a screen, you'll often find me exploring new technologies, enjoying a good book, or pursuing other creative interests. I'm dedicated to staying at the forefront of web development trends to provide users with cutting-edge solutions.           
-
+              Over the years, I've refined my skills in HTML, CSS, PHP, MYSQL
+              and JavaScript, channeling my creativity into crafting custom
+              WordPress themes and plugins , Full stack web applications and
+              User Interfaces that not only look great but also function
+              seamlessly.
+            </p>
+            <p class="about-content-text">
+              I'm proud to have honed my skills in PHP and Javascript, enabling
+              me to craft websites that are not just functional but also
+              pleaseing to the eye. My love for problem-solving led me to
+              specialize in developing custom WordPress themes and plugins and
+              full stack applications. I believe that the web should be a place
+              where ideas can flourish, and that's what I aim to achieve with
+              every project.
+            </p>
+            <p class="about-content-text">
+              When I'm not behind a screen, you'll often find me exploring new
+              technologies, enjoying a good book, or pursuing other creative
+              interests. I'm dedicated to staying at the forefront of web
+              development trends to provide users with cutting-edge solutions.
             </p>
           </div>
           <div id="about-widgets">
@@ -733,9 +817,15 @@
             <section id="contact-details">
               <h3>Have any question ?</h3>
               <p class="contact-details-text">
-                Let's connect and discuss how I can help you achieve your digital goals.
-              </p><p class="contact-details-text">Please use this form to contact me and I will get back to you as
-                soon as possible!</p> <p class="contact-details-text">You can also contact me using the details below :
+                Let's connect and discuss how I can help you achieve your
+                digital goals.
+              </p>
+              <p class="contact-details-text">
+                Please use this form to contact me and I will get back to you as
+                soon as possible!
+              </p>
+              <p class="contact-details-text">
+                You can also contact me using the details below :
               </p>
               <address>
                 <ul>

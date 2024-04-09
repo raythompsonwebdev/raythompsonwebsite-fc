@@ -1,50 +1,47 @@
-// type DataInput = {
-//   preventDefault?: () => void;
-//   srcElement?: HTMLInputElement | null;
-// };
-
 const myForm = document.getElementById("myform") as HTMLFormElement;
+
+//remove built in validation
+// myForm.setAttribute("novalidate", "");
 
 const error = document.getElementById("form-error") as HTMLSpanElement;
 
-// deconstruct array of form elements
 const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
 
-const dirtyInputName = (e: FocusEvent ) => {
+const dirtyInputName = (e: FocusEvent) => {
   e.preventDefault();
 
   //const { target } = e;
   // check if input matches pattern
 
-  if(error.textContent !== ""){
+  if (error.textContent !== "") {
     error.textContent = "";
   }
 
-  if (  
-      myname.validity.patternMismatch ||
-      myname.validity.tooShort ||
-      myname.validity.tooLong
-    ) {
-      error.classList.remove("hide-error");
-      error.classList.add("show-error");
-      error.textContent =
-        "Name must not contain numbers, special characters or be less than 5 characters.";
-      myname.classList.add("dirty");
+  if (
+    myname.validity.patternMismatch ||
+    myname.validity.tooShort ||
+    myname.validity.tooLong
+  ) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent =
+      "Name must not contain numbers, special characters or be less than 5 characters.";
+    myname.classList.add("dirty");
   } else {
-      error.classList.add("hide-error");
-      error.classList.remove("show-error");
-      error.textContent = "";
-      myname.classList.add("dirty");
+    error.classList.add("hide-error");
+    error.classList.remove("show-error");
+    error.textContent = "";
+    myname.classList.add("dirty");
   }
 };
 
-// email field
+// email
 const dirtyInputEmail = (e: FocusEvent) => {
   e.preventDefault();
 
   // const { target } = e;
 
-  if(error.textContent !== ""){
+  if (error.textContent !== "") {
     error.textContent = "";
   }
 
@@ -52,13 +49,14 @@ const dirtyInputEmail = (e: FocusEvent) => {
   // const emailRegExp =
   //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   // check if input matches pattern
-  if( !emailRegExp.test(myemail.value) ||
+  if (
+    !emailRegExp.test(myemail.value) ||
     myemail.validity.tooShort ||
     myemail.validity.tooLong
-    ) {
+  ) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address";
@@ -71,13 +69,13 @@ const dirtyInputEmail = (e: FocusEvent) => {
   }
 };
 
-// comments field
+// comments
 const dirtyInputComments = (e: FocusEvent) => {
   e.preventDefault();
 
   //const { target } = e;
 
-  if(error.textContent !== ""){
+  if (error.textContent !== "") {
     error.textContent = "";
   }
 
@@ -87,12 +85,15 @@ const dirtyInputComments = (e: FocusEvent) => {
   const commentsRegExp = /^[a-zA-Z0-9 .,?!@#$%^&*()_+-=;:'"|\\/]*$/g;
 
   // check if input matches pattern
-  if (commentsRegExp.test(mycomments.value) ||
-  mycomments.validity.tooShort ||
-  mycomments.validity.tooLong) {
+  if (
+    commentsRegExp.test(mycomments.value) ||
+    mycomments.validity.tooShort ||
+    mycomments.validity.tooLong
+  ) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent = "No HTML Tags allowed. comment can be up to 250 characters and not less than 10";
+    error.textContent =
+      "No HTML Tags allowed. comment can be up to 250 characters and not less than 10";
     mycomments.classList.add("dirty");
   } else {
     error.classList.add("hide-error");
@@ -102,7 +103,7 @@ const dirtyInputComments = (e: FocusEvent) => {
   }
 };
 
-// comments field
+// privacy button
 const privacyBtn = (e: MouseEvent) => {
   e.preventDefault();
   // Get the modal
@@ -134,7 +135,7 @@ const privacyBtn = (e: MouseEvent) => {
   };
 };
 
-// submit form
+// form submit button
 const submitForm = (e: MouseEvent) => {
   e.preventDefault();
   if (myname.validity.valueMissing || myemail.validity.valueMissing) {
@@ -178,18 +179,6 @@ const submitForm = (e: MouseEvent) => {
   }
 };
 
-error.classList.add("hide-error");
-error.textContent = "";
-
-// submit button
-submitter.addEventListener("click", submitForm);
-
-// name field
-myname.addEventListener("focusout", dirtyInputName);
-
-// email field
-myemail.addEventListener("focusout", dirtyInputEmail);
-
 // prevent spaces from being typed in the email field
 const blockspace = (evt: { key: string; preventDefault: () => void }) => {
   if (evt.key === " ") {
@@ -197,11 +186,24 @@ const blockspace = (evt: { key: string; preventDefault: () => void }) => {
   }
 };
 
+// clear errors and text in fields
+error.classList.add("hide-error");
+error.textContent = "";
+
+// form submit button
+submitter.addEventListener("click", submitForm);
+
+// name field focus out
+myname.addEventListener("focusout", dirtyInputName);
+
+// email field focus out
+myemail.addEventListener("focusout", dirtyInputEmail);
+
+// email field prevent spaces from being typed in the email field
 myemail.addEventListener("keydown", blockspace);
 
-// comments field
-// mycomments.addEventListener("input", dirtyInputComments);
+// comments field focus out
 mycomments.addEventListener("focusout", dirtyInputComments);
 
-// name field
+// open privacy policy modal
 openmodal.addEventListener("click", privacyBtn);

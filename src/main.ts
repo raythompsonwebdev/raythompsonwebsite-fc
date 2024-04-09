@@ -1,27 +1,17 @@
 import "./styles/style.scss";
 import MainFunc from "../src/js/mainFunc.ts";
-import ChartGraph from '../src/js/chart.ts'
+import ChartGraph from "../src/js/chart.ts";
 import "./js/contact.ts";
-import {filteredProject} from "../src/js/projects.ts";
+import { filteredProject } from "../src/js/projects.ts";
 import "./js/slider.ts";
-import srcSet from '../src/js/srcSet.ts'
+import srcSet from "../src/js/srcSet.ts";
 
 window.addEventListener("load", () => {
-
   MainFunc();
 
-  filteredProject
+  filteredProject;
 
   ChartGraph();
 
   srcSet();
-
- 
 });
-
-// get enviroment variables
-// console.log(import.meta.env)
-// // mode
-// console.log(import.meta.env.MODE)
-
-// console.log(import.meta.env.DEV)

@@ -1,4 +1,4 @@
-const ChartGraph = () =>{  
+const ChartGraph = () => {
   /**
    * Bar Chart
    *  */
@@ -9,7 +9,7 @@ const ChartGraph = () =>{
       codeplatform: "HTML",
       link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       title: "Link to HTML docs",
-      skill_level:"/src/images/svg/html-doc.svg"
+      skill_level: "/src/images/svg/html-doc.svg",
     },
     {
       id: "2",
@@ -17,16 +17,16 @@ const ChartGraph = () =>{
       codeplatform: "CSS",
       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       title: "Link to CSS",
-      skill_level:"/src/images/svg/css-doc.svg"
+      skill_level: "/src/images/svg/css-doc.svg",
     },
-    
+
     {
       id: 3,
       datapercentage: 45,
       codeplatform: "Javascript",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       title: "Link to Javascript",
-      skill_level:"/src/images/svg/JS-DOC.svg"
+      skill_level: "/src/images/svg/JS-DOC.svg",
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const ChartGraph = () =>{
       codeplatform: "PHP",
       link: "https://www.php.net/",
       title: "Link to PHP",
-      skill_level:"/src/images/svg/php-doc.svg"
+      skill_level: "/src/images/svg/php-doc.svg",
     },
     {
       id: "5",
@@ -42,14 +42,12 @@ const ChartGraph = () =>{
       codeplatform: "MySQL",
       link: "https://www.mysql.com/",
       title: "Link to MySQL",
-      skill_level:"/src/images/svg/mysql-logo-svgrepo-com.svg"
+      skill_level: "/src/images/svg/mysql-logo-svgrepo-com.svg",
     },
   ];
 
   const chartBarContainer = document.getElementById("bars") as HTMLUListElement;
 
- 
-  // eslint-disable-next-line no-restricted-syntax
   chartbars.forEach((element) => {
     // create bar chart bar using div
     const chartBar = document.createElement("DIV");
@@ -62,7 +60,7 @@ const ChartGraph = () =>{
 
     let span = document.createElement("span");
 
-    chartBar.after(span, "text")
+    chartBar.after(span, "text");
 
     // create span
     const chartBarHeader = document.createElement("SPAN");
@@ -72,11 +70,7 @@ const ChartGraph = () =>{
     chartBarHeaderImage.setAttribute("alt", `${element.codeplatform}`);
     chartBarHeaderImage.setAttribute("class", "code-icon");
 
-
     chartBarHeader.appendChild(chartBarHeaderImage);
-
-    // add text
-    //chartBarHeader.textContent = `${element.codeplatform}`;
 
     // create list element to contain span and div
     const chartBarList = document.createElement("LI");
@@ -96,14 +90,12 @@ const ChartGraph = () =>{
     return chartBarContainer;
   });
 
- 
-  const barChartDiv = document.getElementById("barchart") as HTMLDivElement
+  const barChartDiv = document.getElementById("barchart") as HTMLDivElement;
 
   // Create a new Observer
   const observer = new IntersectionObserver(
     (entries) => {
       // log the callback data to the console output
-
       if (entries[0].intersectionRatio >= 1) {
         // get node list
         // const { children }: HTMLElement[] = chartBarContainer;
@@ -115,8 +107,8 @@ const ChartGraph = () =>{
             let percentage = 0;
 
             // convert data.percentage type to number to match let percentage variable.
-            // eslint-disable-next-line prefer-destructuring
-            const bar = child.firstElementChild as HTMLElement | null;
+            const { firstElementChild } = child;
+            const bar = firstElementChild as HTMLElement | null;
 
             const result = Number(bar?.dataset.percentage);
 
@@ -128,10 +120,7 @@ const ChartGraph = () =>{
                   clearInterval(id);
                 } else {
                   percentage += 1;
-
                   bar.style.width = `${result}%`;
-                  // add styles to a tag
-                  // bar.style.width = "100%";
                   bar.style.display = "block";
                   bar.style.height = "100%";
                 }
@@ -150,7 +139,6 @@ const ChartGraph = () =>{
 
   // Start observing the target element
   return observer.observe(barChartDiv);
+};
 
-  }
-
-  export default ChartGraph;
+export default ChartGraph;

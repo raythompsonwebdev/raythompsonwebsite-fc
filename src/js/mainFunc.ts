@@ -1,16 +1,13 @@
 // document.addEventListener("DOMContentLoaded", () => {
 
 const MainFunc = () => {
-  
-  // const scrollScreen = document.querySelector(["body", "html"]);
   const scrollScreen = document.querySelector<HTMLHtmlElement>("html");
-  // get header element
-  const siteHeader =  document.querySelector<HTMLHeadingElement>(".site-header");
 
-  const scrollElements = document.querySelectorAll(".tabcontent");
+  const siteHeader = document.querySelector<HTMLHeadingElement>(".site-header"); //header
+
+  const scrollElements = document.querySelectorAll(".tabcontent"); // pages
 
   const elementInView = (el: Element, scrollOffset = 100) => {
-    // eslint-disable-next-line prefer-destructuring
     const elementTop = el.getBoundingClientRect().top;
     return (
       elementTop <=
@@ -69,7 +66,7 @@ const MainFunc = () => {
     const mqList = window.matchMedia("(max-width: 599px)");
 
     // check if width of browser window above 600px
-    // if so apply animation function to tab content. .
+    // if so, apply animation function to tab content. .
     if (mqList.matches === false) {
       handleScrollAnimation();
     }
@@ -91,17 +88,16 @@ const MainFunc = () => {
   };
 
   /**
-   * Mobile menu
+   * Mobile menu & Menu button
    */
-  const menuToggle = document.querySelector<HTMLButtonElement>(
-    ".menu-toggle"
-  );
+  const menuToggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
 
-  const slideoutMenu = document.querySelector<HTMLMenuElement>(".site-navigation");
+  const slideoutMenu =
+    document.querySelector<HTMLMenuElement>(".site-navigation");
 
-  if(slideoutMenu !== null){
-    // eslint-disable-next-line prefer-destructuring
-    const slideoutMenuHeight = slideoutMenu.offsetHeight;
+  if (slideoutMenu !== null) {
+    const { offsetHeight } = slideoutMenu;
+    const slideoutMenuHeight = offsetHeight;
 
     // mobile menu toggle button
     menuToggle?.addEventListener("click", (event) => {
@@ -114,73 +110,58 @@ const MainFunc = () => {
       slideoutMenu.style.transition = "all 0.3s ease-in 0s";
 
       // add css transition to menu
-      // slide menu
       if (!slideoutMenu.classList.contains("show")) {
         slideoutMenu.style.transition = "all 0.3s ease-in 0s";
         slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
-      }   
-    
+      }
     });
 
     // Main Navigation Links - Collection
-    const navLinks : NodeListOf<HTMLAnchorElement>  = document.querySelectorAll(".site-inner-anchor");
+    const navLinks: NodeListOf<HTMLAnchorElement> =
+      document.querySelectorAll(".site-inner-anchor");
     // Main Navigation Links - Collection coverted to an Array
-    const navlinksArray :HTMLAnchorElement[] = Array.from(navLinks)
+    const navlinksArray: HTMLAnchorElement[] = Array.from(navLinks);
 
     // Iterated over array with forEach.
-    navlinksArray.forEach((link : HTMLAnchorElement) => {    
-        
+    navlinksArray.forEach((link: HTMLAnchorElement) => {
       // add event listener to each link
-      link.addEventListener(
-        "click",
-        (e: MouseEvent )=> {
+      link.addEventListener("click", (e: MouseEvent) => {
+        // Store hash
+        const { hash } = link;
 
-          
-          // Store hash
-          const { hash } = link;
+        // check if hash empty
+        if (hash !== "") {
+          // if not, Prevent default anchor click behavior
+          e.preventDefault();
 
-          // check if hash empty
-          if (hash !== "") {
-
-            // if not, Prevent default anchor click behavior
-            e.preventDefault();
-            
-            // select element id converting hash to string using template literal and use as argument in scrolling function.
-            scrollTo(<HTMLElement>document.querySelector(`${hash}`));
-          } 
-
-          // hide menu when link to page is clicked
-          if (slideoutMenu !== null && slideoutMenu.classList.contains("show")) {
-            slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
-            // slideoutMenu.style.top = "0px";
-            slideoutMenu.classList.remove("show");
-          } 
+          // select element id converting hash to string using template literal and use as argument in scrolling function.
+          scrollTo(<HTMLElement>document.querySelector(`${hash}`));
         }
-      );
 
+        // hide menu when link to page is clicked
+        if (slideoutMenu !== null && slideoutMenu.classList.contains("show")) {
+          slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
+          slideoutMenu.classList.remove("show");
+        }
+      });
     });
-
   }
 
-  const testLink = document.querySelector<HTMLAnchorElement>("#project-page-link");
+  /**
+   * See Projects Button (Home Page)
+   */
+  const testLink =
+    document.querySelector<HTMLAnchorElement>("#project-page-link");
 
-  // testLink could be null
-  testLink?.addEventListener(
-    "click",
-    (e: MouseEvent) => {
+  testLink?.addEventListener("click", (e: MouseEvent) => {
+    const { hash } = testLink;
 
-      // Store hash
-      const { hash } = testLink;
+    if (hash !== "") {
+      e.preventDefault();
 
-      // check if has empty
-      if (hash !== "") {
-        // if not, Prevent default anchor click behavior
-        e.preventDefault();
-        // select element id converting hash to string using template literal and use as argument in scrolling function.
-        scrollTo(<HTMLElement>document.querySelector(`${hash}`));
-      } // End if
+      scrollTo(<HTMLElement>document.querySelector(`${hash}`));
     }
-  );
+  });
 };
 
 export default MainFunc;
