@@ -1,8 +1,5 @@
 const myForm = document.getElementById("myform") as HTMLFormElement;
 
-//remove built in validation
-// myForm.setAttribute("novalidate", "");
-
 const error = document.getElementById("form-error") as HTMLSpanElement;
 
 const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
@@ -10,28 +7,37 @@ const { myname, myemail, mycomments, openmodal, myprivacy, submitter } = myForm;
 const dirtyInputName = (e: FocusEvent) => {
   e.preventDefault();
 
-  //const { target } = e;
-  // check if input matches pattern
-
   if (error.textContent !== "") {
     error.textContent = "";
   }
 
-  if (
-    myname.validity.patternMismatch ||
-    myname.validity.tooShort ||
-    myname.validity.tooLong
-  ) {
+  const nameRegEx = /^[a-zA-Z\s]+$/;
+
+  if (myname.value.length <= 5) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
     error.textContent =
-      "Name must not contain numbers, special characters or be less than 5 characters.";
-    myname.classList.add("dirty");
+      "Name must not contain less than 5 characters or be empty.";
+    myname.classList.remove("dirty");
+    myname.classList.add("dirty-invalid");
+  } else if (myname.value.length > 30) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent = "Name must not contain more than 30 characters.";
+    myname.classList.remove("dirty-valid");
+    myname.classList.add("dirty-invalid");
+  } else if (!nameRegEx.test(myname.value)) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent = "Name must not contain numbers or special characters";
+    myname.classList.remove("dirty-valid");
+    myname.classList.add("dirty-invalid");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    myname.classList.add("dirty");
+    myname.classList.remove("dirty-invalid");
+    myname.classList.add("dirty-valid");
   }
 };
 
@@ -39,33 +45,46 @@ const dirtyInputName = (e: FocusEvent) => {
 const dirtyInputEmail = (e: FocusEvent) => {
   e.preventDefault();
 
-  // const { target } = e;
-
   if (error.textContent !== "") {
     error.textContent = "";
   }
-
   // regex to detect valid email
-  // const emailRegExp =
-  //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-  const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
+  const emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Basic Email Validation:
+  //const emailRegExpOne =
+  //  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/; //Strict Email Validation:
+  // const emailRegExpTwo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/; //Email Validation with Extended Characters:
+  //const emailRegExpThree =
+  //  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,}){0,1}$/; //Email Validation with More Strict Domain Part:
+  // const emailRegExpFour = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/; //Email Validation Allowing Single Quote and Double Quote
+  console.log(emailRegExp.test(myemail.value));
   // check if input matches pattern
-  if (
-    !emailRegExp.test(myemail.value) ||
-    myemail.validity.tooShort ||
-    myemail.validity.tooLong
-  ) {
+  if (!emailRegExp.test(myemail.value)) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
     error.textContent = "Please provide a valid e-mail address";
-    myemail.classList.add("dirty");
+    myemail.classList.remove("dirty-valid");
+    myemail.classList.add("dirty-invalid");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    myemail.classList.add("dirty");
+    myemail.classList.add("dirty-valid");
+    myemail.classList.remove("dirty-invalid");
+  }
+
+  if (myemail.value.length <= 7) {
+    error.classList.add("show-error");
+    error.classList.remove("hide-error");
+    error.textContent = "e-mail address should be no shorter than 4 characters";
+    myemail.classList.remove("dirty-valid");
+    myemail.classList.add("dirty-invalid");
+  }
+  if (myemail.value.length >= 50) {
+    error.classList.add("show-error");
+    error.classList.remove("hide-error");
+    error.textContent = "e-mail address should be no longer than 50 characters";
+    myemail.classList.remove("dirty-valid");
+    myemail.classList.add("dirty-invalid");
   }
 };
 
@@ -73,33 +92,38 @@ const dirtyInputEmail = (e: FocusEvent) => {
 const dirtyInputComments = (e: FocusEvent) => {
   e.preventDefault();
 
-  //const { target } = e;
-
   if (error.textContent !== "") {
     error.textContent = "";
   }
 
   // regex to detect html tags
-  //const commentsRegExp = /<\/?[^>]+(>|$)/g || /[a-zA-Z0-9@=\-'"]+/g;
-
-  const commentsRegExp = /^[a-zA-Z0-9 .,?!@#$%^&*()_+-=;:'"|\\/]*$/g;
+  const commentsRegExp = /<\/?[^>]+(>|$)/g || /[a-zA-Z0-9@=\-'"]+/g;
 
   // check if input matches pattern
-  if (
-    commentsRegExp.test(mycomments.value) ||
-    mycomments.validity.tooShort ||
-    mycomments.validity.tooLong
-  ) {
+  if (commentsRegExp.test(mycomments.value)) {
     error.classList.remove("hide-error");
     error.classList.add("show-error");
-    error.textContent =
-      "No HTML Tags allowed. comment can be up to 250 characters and not less than 10";
-    mycomments.classList.add("dirty");
+    error.textContent = "No HTML Tags allowed.";
+    mycomments.classList.remove("dirty-valid");
+    mycomments.classList.add("dirty-invalid");
+  } else if (mycomments.value.length < 10) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent = "Comment cannot be less than 10 Characters";
+    mycomments.classList.remove("dirty-valid");
+    mycomments.classList.add("dirty-invalid");
+  } else if (mycomments.value.length > 250) {
+    error.classList.remove("hide-error");
+    error.classList.add("show-error");
+    error.textContent = "Comment can be up to 250 characters";
+    mycomments.classList.remove("dirty-valid");
+    mycomments.classList.add("dirty-invalid");
   } else {
     error.classList.add("hide-error");
     error.classList.remove("show-error");
     error.textContent = "";
-    mycomments.classList.add("dirty");
+    mycomments.classList.remove("dirty-invalid");
+    mycomments.classList.add("dirty-valid");
   }
 };
 
@@ -138,7 +162,7 @@ const privacyBtn = (e: MouseEvent) => {
 // form submit button
 const submitForm = (e: MouseEvent) => {
   e.preventDefault();
-  if (myname.validity.valueMissing || myemail.validity.valueMissing) {
+  if (myname.validity.valueMissing && myemail.validity.valueMissing) {
     error?.classList.add("show-error");
     error?.classList.remove("hide-error");
     error.textContent = "Name and email address are required!";

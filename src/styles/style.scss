@@ -78,13 +78,9 @@ $h1: $h2 * $ratio;
 .modal-content {
   background-color: $color-white;
   margin: 0 auto;
-
-  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
-
-  /* Could be more or less, depending on screen size */
   font-family: $font-text;
   position: relative;
   top: 130px;
@@ -141,28 +137,27 @@ $h1: $h2 * $ratio;
   font-family: $font-header;
   font-size: 1.1em;
   text-transform: uppercase;
-  background-color: $green-color;
-  color: $color-white;
-  border: none;
+  color: $color-black;
+  border: 1px solid $color-black;
   transition: all ease-out 0s;
   line-height: 40px;
   height: auto;
-  width: 40%;
+  width: 25%;
   text-align: center;
   padding: 0;
-  left: calc(65vw - 20px);
+  left: calc(78vw - 20px);
 }
-.menu-toggle:hover,
-.menu-toggle:focus {
+.menu-toggle:hover {
   text-decoration: none;
-  border: solid 2px $color-white;
   cursor: pointer;
+  background-color: $green-color;
+  color: $color-white;
 }
 
 /* site wrapper */
 #app {
-  width: 100%;
-  margin: 0;
+  width: 99%;
+  margin: 0 auto;
 }
 
 /* fixed site header on scroll */
@@ -296,13 +291,16 @@ $h1: $h2 * $ratio;
   width: 40%;
   list-style: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: flex-end;
   align-items: center;
   flex: 0 1 auto;
   margin: 0;
   padding: 0;
   font-family: FontAwesome;
+  gap: 0.25em;
+  position: unset;
+  margin-top: 0.2em;
 }
 .social-item {
   width: 30%;
@@ -316,6 +314,7 @@ $h1: $h2 * $ratio;
   width: 100%;
   line-height: 40px;
   text-align: center;
+  border: 1px solid $color-black;
 }
 
 .fa-github,
@@ -332,14 +331,10 @@ $h1: $h2 * $ratio;
     line-height: 35px;
   }
 
-  &:link {
-    color: $color-black;
-    background-color: $color-white;
-  }
-
   /* visited link */
   &:visited {
     font-weight: bold;
+    border: none;
     cursor: pointer;
   }
   &:hover {
@@ -348,13 +343,12 @@ $h1: $h2 * $ratio;
     cursor: pointer;
     background-color: $green-color;
     color: $color-white;
-    text-shadow: 1px 1px 1px $color-black;
+    border: none;
   }
   &:active {
     font-weight: bold;
     background-color: $green-color;
     color: $color-white;
-    text-shadow: 1px 1px 1px $color-black;
   }
 }
 
@@ -436,7 +430,7 @@ $h1: $h2 * $ratio;
 
 #project-page-link {
   display: block;
-  width: 24%;
+  width: 65%;
   font-size: 1rem;
   line-height: 54px;
   text-align: center;
@@ -505,12 +499,12 @@ $h1: $h2 * $ratio;
   align-items: flex-start;
   list-style: none;
   padding: 0;
-  margin: 0.5em 0;
-  width: 98%;
+  margin: 1em 0;
+  width: 100%;
   background-color: $color-white;
   transition: all 0.2s ease-in 0s;
   gap: 0.25em;
-  height: 45px;
+  height: auto;
 
   li {
     width: 48%;
@@ -560,8 +554,8 @@ $h1: $h2 * $ratio;
 .projects {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -585,8 +579,7 @@ $h1: $h2 * $ratio;
   margin: 0;
   backface-visibility: hidden;
   background-color: $color-white;
-  width: 85%;
-  flex: 0 0 auto;
+  width: 90%;
 }
 .project-caption {
   position: absolute;
@@ -718,7 +711,7 @@ $h1: $h2 * $ratio;
 }
 .about-content-text {
   font-size: 0.85rem;
-  line-height: 2em;
+  line-height: 2.1em;
   word-wrap: break-word;
   white-space: normal;
   width: 98%;
@@ -730,18 +723,27 @@ $h1: $h2 * $ratio;
 #about-widgets {
   width: 100%;
   display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: auto;
   gap: 1em;
 }
 #about-page-image {
   float: left;
-  width: 250px;
-  height: 315px;
+  width: auto;
+  height: auto;
   display: block;
   margin: 0 0.5em 0 0;
 }
 #page-image {
-  display: block;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border: 1px solid #272643;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 /* Hero-Slider */
@@ -830,7 +832,7 @@ $h1: $h2 * $ratio;
   margin: 0 auto;
   color: $color-black;
   font-weight: normal;
-  font-size: 0.75em;
+  font-size: 0.85rem;
   background-color: $color-white;
   height: 100%;
   line-height: 20px;
@@ -1085,7 +1087,7 @@ $h1: $h2 * $ratio;
 
 /* contact section */
 #contact {
-  width: 99%;
+  width: 100%;
   padding: 0;
   background-color: $color-white;
   display: flex;
@@ -1104,7 +1106,7 @@ $h1: $h2 * $ratio;
 }
 #contact-container {
   display: flex;
-  width: 97%;
+  width: 100%;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
@@ -1127,8 +1129,8 @@ $h1: $h2 * $ratio;
     line-height: 40px;
     margin: 0;
     text-align: center;
-    color: $color-white;
-    background-color: $color-black;
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
   }
 
   .contact-details-text {
@@ -1145,8 +1147,8 @@ $h1: $h2 * $ratio;
     flex: 0 0 auto;
     padding: 0 1%;
     margin: 0 auto;
-    background-color: $color-black;
     height: auto;
+    border: 1px solid $color-black;
     ul {
       display: block;
       list-style: none;
@@ -1154,7 +1156,7 @@ $h1: $h2 * $ratio;
       li {
         height: auto;
         font-family: FontAwesome, $font-header;
-        color: $color-white;
+        color: $color-black;
         font-size: 0.9em;
         &:hover {
           cursor: pointer;
@@ -1168,21 +1170,16 @@ $h1: $h2 * $ratio;
           display: inline-block;
           width: 20px;
           text-align: center;
-          color: $color-white;
+          color: $color-black;
         }
       }
     }
   }
 }
-#map-image {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  img {
-    width: 100%;
-    height: auto;
-    filter: grayscale(100%);
+
+#form-error {
+  h1 {
+    font-size: 1.3rem;
   }
 }
 .hide-error {
@@ -1192,8 +1189,8 @@ $h1: $h2 * $ratio;
   line-height: 35px;
   margin-bottom: 0.2em;
   display: block;
-  color: #cc2727e3;
-  background-color: #ffcccc;
+  color: $red-color;
+  background-color: $error-color-bg;
   text-align: center;
   animation-name: example;
   animation-duration: 0.2s;
@@ -1202,66 +1199,70 @@ $h1: $h2 * $ratio;
   text-shadow: 1px 1px 1px $color-black;
   text-transform: uppercase;
 }
+
 #myform {
-  width: 96%;
+  width: 94%;
   flex: 1 0 auto;
-  padding: 0;
+  padding: 0.25em;
   background-color: $color-white;
   margin: 0;
   font-family: $font-header;
-}
-
-#form-error {
-  h1 {
-    font-size: 1.3rem;
-  }
+  border: 4px solid $color-black;
 }
 
 #myform-fields {
   list-style: none;
   margin: 0;
-  padding: 1%;
-  width: 98%;
-  background: $color-black;
-}
-
-#myform-fields myform-field:nth-of-type(6) {
-  height: 60px;
+  padding: 0;
+  width: 100%;
 }
 
 .myform-field {
   height: auto;
   margin-bottom: 0.5em;
 
+  // .dirty-invalid:not(:focus):valid {
+  //   background-color: $error-color-bg;
+  //   border: $error-color-border;
+  // }
+  // .dirty-valid:not(:focus):invalid {
+  //   background-color: $ok-color-bg;
+  //   border: $ok-color-border;
+  // }
+
+  .dirty-invalid {
+    background-color: $error-color-bg;
+    border: $error-color-border;
+  }
+  .dirty-valid {
+    background-color: $ok-color-bg;
+    border: $ok-color-border;
+  }
+
   p {
     display: inline-block;
     width: auto;
-    color: #ffffff;
+    color: $color-white;
     font-size: 0.8em;
   }
 
-  label,
-  #comment-header {
+  label {
     display: block;
     width: 100%;
     line-height: 40px;
-    color: $color-white;
-    background-color: $color-black;
-    border-bottom: 1px solid $color-white;
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
     margin-bottom: 0.5em;
     text-indent: 0;
     font-size: 0.9em;
-    cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.05em;
   }
 
-  label[for="questionitem"],
-  label[for="blogitem"],
-  label[for="generalitem"] {
+  label[for="myprivacy"] {
     float: left;
-    width: 80%;
-    line-height: 30px;
+    width: 27%;
+    line-height: 40px;
     border-bottom: none;
   }
 
@@ -1277,109 +1278,49 @@ $h1: $h2 * $ratio;
     border: none;
   }
 
-  select {
-    line-height: 40px;
-    height: 40px;
-    width: 100%;
-    font-size: 0.8em;
-    outline: none;
-    border: none;
-  }
-
   #myprivacy {
     margin-left: 1em;
   }
 
-  #myname:hover,
-  #myemail:hover,
-  #myurl:hover,
-  input[type="radio"]:hover,
-  input[type="radio"]:focus,
-  #myname:focus,
-  #myemail:focus,
-  #myurl:focus,
-  select:focus {
-    border-color: $bgcolor-white;
-  }
-
-  #comment-fields {
-    padding: 0;
-    display: flex;
-    flex-flow: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    .comment-field {
-      list-style: none;
-      width: 33%;
-      flex: 1 0 auto;
-      height: 30px;
-      margin: 0;
-      label {
-        width: 60%;
-        height: 100%;
-        font-size: 0.85em;
-      }
-
-      input[type="radio"] {
-        display: inline-block;
-        height: 30px;
-        flex: 1 0 auto;
-        width: 8%;
-        margin: 0 1em;
-        padding: 0;
-      }
-    }
-  }
-
   #mycomments {
     width: 100%;
-    border: var(--comment-error);
     padding: 0;
     font-size: 0.9em;
-  }
-
-  .dirty:not(:focus):valid {
-    background-color: $ok-color-bg;
-    border: $ok-color-border;
-  }
-
-  .dirty:not(:focus):invalid {
-    background-color: $error-color-bg;
-    border: $error-color-border;
+    border: none;
   }
 
   #openmodal {
-    background: $color-black;
-    color: $color-white;
+    color: $color-black;
     font-size: 0.8em;
-    border: none;
+    border: 1px solid $color-black;
+    line-height: 40px;
+    display: block;
     &:hover {
-      color: $color-black;
-      background: $color-white;
+      color: $color-white;
+      background: $green-color;
       cursor: pointer;
     }
   }
 }
+
+.myform-field:nth-of-type(5) {
+  height: 80px;
+}
+
 #submit {
   display: block;
-  width: 50%;
-  height: 35px;
-  margin: auto;
+  width: 80%;
+  height: 50px;
+  margin: 2em auto;
   font-size: 1em;
-  background-color: $green-color;
-  color: $color-white;
-  outline: none;
-  border: none;
-  &:active {
-    background-color: $red-color;
-    color: $color-white;
-    font-weight: bold;
-  }
+  color: $color-black;
+  border: 1px solid $color-black;
   &:hover {
-    background-color: $red-color;
+    background: $green-color;
     color: $color-white;
     cursor: pointer;
     font-weight: bold;
+    border: none;
   }
 }
 
@@ -1406,8 +1347,8 @@ $h1: $h2 * $ratio;
 
       .footer-href {
         line-height: 50px;
-        background-color: $color-black;
-        color: $color-white;
+        color: $color-black;
+        border: 1px solid $color-black;
         display: block;
         font-size: 0.7em;
         font-family: $font-header;
@@ -1421,13 +1362,13 @@ $h1: $h2 * $ratio;
         }
         &:hover {
           background-color: $green-color;
-          color: $color-black;
+          color: $color-white;
           cursor: pointer;
           font-weight: bold;
         }
         &:active {
           background-color: $green-color;
-          color: $color-black;
+          color: $color-white;
           font-weight: bold;
         }
       }
@@ -1525,9 +1466,9 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 33.3%;
+    width: 33%;
     position: unset;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
   }
@@ -1588,7 +1529,8 @@ $h1: $h2 * $ratio;
   #project-tabs {
     padding: 0;
     width: 60%;
-    height: 50px;
+    height: auto;
+    margin: 1em 0;
 
     li {
       width: 15%;
@@ -1612,7 +1554,7 @@ $h1: $h2 * $ratio;
     gap: 1em 1em;
   }
   .project {
-    width: 24.25%;
+    width: 24%;
   }
   .project-caption {
     position: absolute;
@@ -1655,7 +1597,7 @@ $h1: $h2 * $ratio;
   }
 
   #barchart {
-    width: 37%;
+    width: 47%;
     margin: 0;
 
     h3 {
@@ -1695,7 +1637,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 1em;
+    font-size: 1rem;
   }
   .ledger-spans {
     width: 27%;
@@ -1721,18 +1663,29 @@ $h1: $h2 * $ratio;
   }
 
   #about-page-image {
-    width: 250px;
+    width: auto;
+    height: auto;
+  }
+  #about-widgets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
   }
   #page-image {
-    display: block;
-    margin: auto;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #slider {
-    width: 60%;
+    width: 50%;
 
     h3 {
-      font-size: 1rem;
+      font-size: 1.3rem;
       line-height: 40px;
     }
   }
@@ -1766,7 +1719,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 98%;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 1rem;
     height: auto;
     line-height: 30px;
   }
@@ -1837,15 +1790,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
+
   .hide-error {
     display: none;
   }
@@ -1854,7 +1799,8 @@ $h1: $h2 * $ratio;
     font-size: 1.1rem;
   }
   #myform {
-    width: 66%;
+    width: 65%;
+    padding: 0.5em;
   }
 
   #form-error {
@@ -1873,72 +1819,21 @@ $h1: $h2 * $ratio;
       font-size: 1em;
     }
 
-    label,
-    #comment-header {
+    label {
       display: block;
-      font-size: 1.1em;
+      font-size: 1em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      float: left;
-      font-size: 100%;
+    label[for="myprivacy"] {
+      width: 27%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       display: block;
-      font-size: 1.1em;
-    }
-
-    select {
-      line-height: 40px;
       font-size: 1em;
-      option {
-        line-height: 30px;
-      }
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      .comment-field {
-        width: 33%;
-        flex: 1 0 auto;
-        height: 30px;
-        margin: 0;
-        label {
-          width: 35%;
-          height: 100%;
-          font-size: 1em;
-        }
-
-        input[type="radio"] {
-          display: inline-block;
-          height: 30px;
-          flex: 1 0 auto;
-          width: 8%;
-          margin: 0 1.5em;
-          padding: 0;
-        }
-      }
     }
 
     #mycomments {
@@ -1952,7 +1847,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1.3em;
-    width: 35%;
+    width: 70%;
   }
 
   #site-footer {
@@ -2061,8 +1956,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 33.3%;
-    flex-flow: row wrap;
+    width: 33%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -2122,7 +2017,8 @@ $h1: $h2 * $ratio;
   #project-tabs {
     padding: 0;
     width: 60%;
-    height: 50px;
+    height: auto;
+    margin: 1em 0;
 
     li {
       width: 14%;
@@ -2145,7 +2041,7 @@ $h1: $h2 * $ratio;
     gap: 1em 1em;
   }
   .project {
-    width: 24.25%;
+    width: 24%;
   }
   .project-caption {
     gap: 0.5em;
@@ -2185,7 +2081,7 @@ $h1: $h2 * $ratio;
     }
   }
   #barchart {
-    width: 50%;
+    width: 47%;
     margin: 0;
     h3 {
       height: 40px;
@@ -2224,7 +2120,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 1em;
+    font-size: 1rem;
   }
   .ledger-spans {
     width: 27%;
@@ -2276,7 +2172,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 98%;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 1rem;
     height: auto;
     line-height: 30px;
   }
@@ -2313,11 +2209,22 @@ $h1: $h2 * $ratio;
   }
 
   #about-page-image {
-    width: 250px;
+    width: auto;
+    height: auto;
+  }
+  #about-widgets {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   #page-image {
-    display: block;
-    margin: auto;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #contact {
@@ -2365,13 +2272,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
 
-    img {
-      width: 100%;
-    }
-  }
   .hide-error {
     display: none;
   }
@@ -2380,7 +2281,8 @@ $h1: $h2 * $ratio;
     font-size: 1rem;
   }
   #myform {
-    width: 65%;
+    width: 64%;
+    padding: 0.5em;
   }
   #myform-fields {
     list-style: none;
@@ -2391,71 +2293,21 @@ $h1: $h2 * $ratio;
     p {
       font-size: 1em;
     }
-    label,
-    #comment-header {
+    label {
       display: block;
       font-size: 1.1em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      float: left;
+    label[for="myprivacy"] {
+      width: 35%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       display: block;
-      font-size: 1.1em;
-    }
-
-    select {
-      line-height: 40px;
       font-size: 1em;
-      option {
-        line-height: 30px;
-      }
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      .comment-field {
-        width: 33%;
-        flex: 1 0 auto;
-        height: 30px;
-        margin: 0;
-        label {
-          width: 35%;
-          height: 100%;
-          font-size: 1em;
-        }
-
-        input[type="radio"] {
-          display: inline-block;
-          height: 30px;
-          flex: 1 0 auto;
-          width: 8%;
-          margin: 0 1.5em;
-          padding: 0;
-        }
-      }
     }
 
     #mycomments {
@@ -2469,7 +2321,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1.3em;
-    width: 30%;
+    width: 70%;
   }
 
   #site-footer {
@@ -2578,8 +2430,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 33.3%;
-    flex-flow: row wrap;
+    width: 33%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -2608,7 +2460,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 40%);
+    width: calc(100% - 30%);
   }
   .banner-title {
     line-height: 60px;
@@ -2639,7 +2491,8 @@ $h1: $h2 * $ratio;
   #project-tabs {
     width: 60%;
     padding: 0;
-    height: 50px;
+    height: auto;
+    margin: 1em 0;
 
     li {
       width: 14%;
@@ -2657,7 +2510,7 @@ $h1: $h2 * $ratio;
     gap: 1em 1em;
   }
   .project {
-    width: 24.25%;
+    width: 24%;
   }
   .project-caption {
     gap: 0.25em;
@@ -2697,7 +2550,7 @@ $h1: $h2 * $ratio;
     }
   }
   #barchart {
-    width: 35%;
+    width: 45%;
     display: inline-block;
     margin: 0;
     h3 {
@@ -2728,7 +2581,7 @@ $h1: $h2 * $ratio;
       }
       span {
         width: 16%;
-        font-size: 0.9em;
+        font-size: 1em;
       }
     }
   }
@@ -2736,7 +2589,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 1rem;
   }
   .ledger-spans {
     width: 27%;
@@ -2754,22 +2607,33 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 2em;
     padding: 0;
     width: 100%;
   }
 
   #about-page-image {
-    width: 250px;
+    width: auto;
+    height: auto;
+  }
+  #about-widgets {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   #page-image {
-    display: block;
-    margin: auto;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #slider {
-    width: 62%;
+    width: 52%;
     display: block;
     float: right;
     h3 {
@@ -2807,7 +2671,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 98%;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 25px;
     height: auto;
   }
@@ -2877,13 +2741,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
 
-    img {
-      width: 100%;
-    }
-  }
   .hide-error {
     display: none;
   }
@@ -2892,7 +2750,8 @@ $h1: $h2 * $ratio;
     font-size: 0.9rem;
   }
   #myform {
-    width: 64%;
+    width: 62%;
+    padding: 0.5em;
   }
   #myform-fields {
     list-style: none;
@@ -2903,66 +2762,20 @@ $h1: $h2 * $ratio;
     p {
       font-size: 0.9em;
     }
-    label,
-    #comment-header {
+    label {
       display: block;
-      font-size: 1.1em;
+      font-size: 1em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      float: left;
+    label[for="myprivacy"] {
+      width: 35%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       display: block;
-    }
-
-    select {
-      line-height: 40px;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      .comment-field {
-        width: 33%;
-        flex: 1 0 auto;
-        height: 30px;
-        margin: 0;
-        label {
-          width: 35%;
-          height: 100%;
-          font-size: 1em;
-        }
-
-        input[type="radio"] {
-          display: inline-block;
-          height: 30px;
-          flex: 1 0 auto;
-          width: 8%;
-          margin: 0 1.5em;
-          padding: 0;
-        }
-      }
     }
 
     #mycomments {
@@ -2976,6 +2789,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1.2em;
+    width: 75%;
   }
 
   #site-footer {
@@ -3075,7 +2889,7 @@ $h1: $h2 * $ratio;
 
     a[href*="#"] {
       line-height: 53px;
-      font-size: 0.9em;
+      font-size: 0.95em;
       &:hover {
         height: 55px;
       }
@@ -3084,8 +2898,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 45px;
-    width: 33.3%;
-    flex-flow: row wrap;
+    width: 33%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -3114,7 +2928,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 40%);
+    width: calc(100% - 30%);
   }
   .banner-title {
     line-height: 60px;
@@ -3128,6 +2942,7 @@ $h1: $h2 * $ratio;
 
   #project-page-link {
     font-size: 1.15rem;
+    width: 30%;
   }
 
   #project-page {
@@ -3139,6 +2954,8 @@ $h1: $h2 * $ratio;
   #project-tabs {
     padding: 0;
     width: 60%;
+    margin: 1em 0;
+    height: auto;
 
     li {
       width: 14%;
@@ -3153,15 +2970,15 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1em 0.5%;
+    gap: 1em 1em;
   }
   .project {
-    width: 31%;
+    width: 32%;
   }
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.8em;
+      font-size: 0.9em;
       width: 90%;
     }
   }
@@ -3236,7 +3053,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 0.85em;
+    font-size: 1rem;
   }
   .ledger-spans {
     width: 27%;
@@ -3255,7 +3072,7 @@ $h1: $h2 * $ratio;
     display: block;
     float: right;
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       line-height: 40px;
     }
   }
@@ -3288,7 +3105,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.85em;
+    font-size: 1rem;
     line-height: 25px;
     height: auto;
   }
@@ -3318,7 +3135,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .about-content-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 2em;
     padding: 0;
     width: 100%;
@@ -3326,10 +3143,22 @@ $h1: $h2 * $ratio;
 
   #about-page-image {
     width: auto;
+    height: auto;
   }
   #page-image {
-    display: block;
-    margin: auto;
+    width: 225px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  #about-widgets {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   #contact {
@@ -3376,14 +3205,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
-    padding: 0;
 
-    img {
-      width: 100%;
-    }
-  }
   .hide-error {
     display: none;
   }
@@ -3392,7 +3214,8 @@ $h1: $h2 * $ratio;
     font-size: 0.9rem;
   }
   #myform {
-    width: 63%;
+    width: 61%;
+    padding: 0.5em;
   }
   #myform-fields {
     list-style: none;
@@ -3403,66 +3226,20 @@ $h1: $h2 * $ratio;
     p {
       font-size: 0.9em;
     }
-    label,
-    #comment-header {
+    label {
       display: block;
-      font-size: 1em;
+      font-size: 0.95em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      float: left;
+    label[for="myprivacy"] {
+      width: 41%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       display: block;
-    }
-
-    select {
-      line-height: 40px;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      .comment-field {
-        width: 33%;
-        flex: 1 0 auto;
-        height: 30px;
-        margin: 0;
-        label {
-          width: 45%;
-          height: 100%;
-          font-size: 1em;
-        }
-
-        input[type="radio"] {
-          display: inline-block;
-          height: 30px;
-          flex: 1 0 auto;
-          width: 8%;
-          margin: 0 1.5em;
-          padding: 0;
-        }
-      }
     }
 
     #mycomments {
@@ -3476,7 +3253,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1.1em;
-    width: 35%;
+    width: 75%;
   }
 
   #site-footer {
@@ -3585,8 +3362,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 33.3%;
-    flex-flow: row wrap;
+    width: 33%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -3629,6 +3406,7 @@ $h1: $h2 * $ratio;
 
   #project-page-link {
     font-size: 1rem;
+    width: 35%;
   }
 
   #project-page {
@@ -3644,7 +3422,9 @@ $h1: $h2 * $ratio;
   }
   #project-tabs {
     padding: 0;
-    width: 98%;
+    width: 100%;
+    margin: 1em 0;
+    height: auto;
 
     li {
       width: 14%;
@@ -3659,16 +3439,15 @@ $h1: $h2 * $ratio;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0;
-    gap: 1em 3.5%;
+    gap: 1em 0.75em;
   }
   .project {
-    width: 31%;
+    width: 32%;
   }
   .project-caption {
     gap: 0.25em;
     p {
-      font-size: 0.75em;
+      font-size: 0.85em;
       width: 90%;
     }
   }
@@ -3688,7 +3467,7 @@ $h1: $h2 * $ratio;
     }
   }
   .cover-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 35px;
   }
 
@@ -3744,7 +3523,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 0.9em;
+    font-size: 1rem;
   }
   .ledger-spans {
     width: 27%;
@@ -3764,7 +3543,7 @@ $h1: $h2 * $ratio;
     float: none;
     margin: 1em auto;
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       line-height: 40px;
     }
   }
@@ -3797,7 +3576,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 25px;
     height: auto;
   }
@@ -3835,10 +3614,22 @@ $h1: $h2 * $ratio;
 
   #about-page-image {
     width: auto;
+    height: auto;
   }
+  #about-widgets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   #page-image {
-    display: block;
-    margin: auto;
+    width: 225px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #contact {
@@ -3867,7 +3658,7 @@ $h1: $h2 * $ratio;
       font-size: 1.2rem;
     }
     .contact-details-text {
-      font-size: 0.9em;
+      font-size: 1rem;
     }
     address {
       width: 98%;
@@ -3878,33 +3669,27 @@ $h1: $h2 * $ratio;
         padding: 0;
         li {
           height: auto;
-          font-size: 0.9em;
+          font-size: 1rem;
           .fa-phone,
           .fa-envelope {
-            font-size: 1.5em;
+            font-size: 1.5rem;
             width: 35px;
           }
         }
       }
     }
   }
-  #map-image {
-    width: 100%;
-    padding: 0;
 
-    img {
-      width: 100%;
-    }
-  }
   .hide-error {
     display: none;
   }
   .show-error {
     line-height: 35px;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   #myform {
     width: 100%;
+    padding: 0.5em;
   }
   #myform-fields {
     list-style: none;
@@ -3915,80 +3700,34 @@ $h1: $h2 * $ratio;
     p {
       font-size: 0.9em;
     }
-    label,
-    #comment-header {
+    label {
       display: block;
-      font-size: 1em;
+      font-size: 1rem;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      float: left;
+    label[for="myprivacy"] {
+      width: 35%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       display: block;
     }
 
-    select {
-      line-height: 40px;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      .comment-field {
-        width: 33%;
-        flex: 1 0 auto;
-        height: 30px;
-        margin: 0;
-        label {
-          width: 45%;
-          height: 100%;
-          font-size: 1em;
-        }
-
-        input[type="radio"] {
-          display: inline-block;
-          height: 30px;
-          flex: 1 0 auto;
-          width: 8%;
-          margin: 0 1.5em;
-          padding: 0;
-        }
-      }
-    }
-
     #mycomments {
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     #openmodal {
-      font-size: 0.85em;
+      font-size: 0.85rem;
     }
   }
 
   #submit {
-    font-size: 1.1em;
-    width: 35%;
+    font-size: 1.1rem;
+    width: 75%;
   }
 
   #site-footer {
@@ -4000,7 +3739,7 @@ $h1: $h2 * $ratio;
         margin: 0;
 
         .footer-href {
-          font-size: 1em;
+          font-size: 1rem;
         }
       }
     }
@@ -4010,7 +3749,7 @@ $h1: $h2 * $ratio;
 /* 37.5em - 600px */
 @media screen and (width >= 601px) and (width <= 735px) {
   .modal-content {
-    width: 60%;
+    width: 70%;
 
     h2 {
       font-size: 1.45em;
@@ -4033,9 +3772,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(71vw - 20px);
+    left: calc(80vw - 20px);
     font-size: 1.1em;
-    width: 30%;
+    width: 20%;
   }
 
   /* The Close Button */
@@ -4043,8 +3782,8 @@ $h1: $h2 * $ratio;
     font-size: 40px;
   }
   #app {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 auto;
   }
 
   .fixed-header {
@@ -4098,8 +3837,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 50%;
-    flex-flow: row wrap;
+    width: 49%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -4129,7 +3868,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 35%);
+    width: calc(100% - 25%);
   }
   .banner-title {
     font-size: 1.263rem;
@@ -4142,8 +3881,8 @@ $h1: $h2 * $ratio;
   }
 
   #project-page-link {
-    width: 45%;
-    font-size: 1.15rem;
+    width: 40%;
+    font-size: 1rem;
   }
 
   #project-page {
@@ -4162,11 +3901,15 @@ $h1: $h2 * $ratio;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0;
-    gap: 1em 2%;
+    width: 98%;
+    gap: 1em 0.75em;
+    margin: 0 auto;
   }
   #project-tabs {
     padding: 0;
-    width: 98%;
+    width: 100%;
+    margin: 1em 0;
+    height: auto;
 
     li {
       width: 23%;
@@ -4177,8 +3920,7 @@ $h1: $h2 * $ratio;
     }
   }
   .project {
-    width: 45%;
-    padding: 0.25em;
+    width: 48.5%;
   }
   .project-caption {
     gap: 0.25em;
@@ -4305,7 +4047,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 25px;
     height: auto;
   }
@@ -4337,16 +4079,26 @@ $h1: $h2 * $ratio;
   }
   .about-content-text {
     font-size: 0.9rem;
-    line-height: 2em;
+    line-height: 2.1em;
     width: 98%;
   }
 
   #about-page-image {
     width: auto;
   }
+  #about-widgets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   #page-image {
-    display: block;
-    margin: auto;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #contact {
@@ -4394,14 +4146,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
-    padding: 0;
 
-    img {
-      width: 100%;
-    }
-  }
   .hide-error {
     display: none;
   }
@@ -4425,53 +4170,21 @@ $h1: $h2 * $ratio;
     label,
     #comment-header {
       display: block;
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      width: 80%;
+    label[for="myprivacy"] {
+      width: 45%;
+      line-height: 40px;
+      border-bottom: none;
+      font-size: 0.9em;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       line-height: 35px;
     }
 
-    select {
-      line-height: 40px;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      .comment-field {
-        width: 33%;
-        height: 30px;
-        label {
-          width: 60%;
-          font-size: 0.9em;
-        }
-
-        input[type="radio"] {
-          height: 30px;
-          margin: 0 1.5em;
-        }
-      }
-    }
     #mycomments {
       font-size: 0.9em;
     }
@@ -4483,7 +4196,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1em;
-    width: 40%;
+    width: 80%;
   }
 
   #site-footer {
@@ -4506,7 +4219,7 @@ $h1: $h2 * $ratio;
 /* 30em - 599px -480px */
 @media screen and (width >= 481px) and (width <= 600px) {
   .modal-content {
-    width: 60%;
+    width: 70%;
 
     h2 {
       font-size: 1.45em;
@@ -4529,9 +4242,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(67vw - 20px);
+    left: calc(77vw - 20px);
     font-size: 1.1em;
-    width: 35%;
+    width: 25%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4543,8 +4256,8 @@ $h1: $h2 * $ratio;
   }
 
   #app {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 auto;
   }
 
   .fixed-header {
@@ -4598,8 +4311,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 50%;
-    flex-flow: row wrap;
+    width: 49%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -4664,11 +4377,13 @@ $h1: $h2 * $ratio;
     justify-content: space-between;
     align-items: flex-start;
     margin: auto;
-    gap: 1em 2%;
+    gap: 1em 0.75em;
   }
   #project-tabs {
     padding: 0;
-    width: 98%;
+    width: 100%;
+    margin: 1em 0;
+    height: auto;
 
     li {
       width: 48%;
@@ -4679,7 +4394,7 @@ $h1: $h2 * $ratio;
     }
   }
   .project {
-    width: 46%;
+    width: 48.5%;
   }
   .project-caption {
     position: absolute;
@@ -4809,7 +4524,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 25px;
     height: 100%;
   }
@@ -4840,16 +4555,26 @@ $h1: $h2 * $ratio;
   }
   .about-content-text {
     font-size: 0.9rem;
-    line-height: 2em;
+    line-height: 2.1em;
     width: 98%;
   }
 
   #about-page-image {
     width: auto;
   }
+  #about-widgets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   #page-image {
-    display: block;
-    margin: auto;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #contact {
@@ -4902,14 +4627,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
-    padding: 0;
 
-    img {
-      width: 100%;
-    }
-  }
   #myform {
     width: 98.25%;
   }
@@ -4925,57 +4643,24 @@ $h1: $h2 * $ratio;
       font-size: 0.9em;
     }
 
-    label,
-    #comment-header {
+    label {
       display: block;
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      width: 80%;
+    label[for="myprivacy"] {
+      width: 50%;
+      line-height: 40px;
+      border-bottom: none;
+      font-size: 0.9em;
     }
 
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       line-height: 35px;
       font-size: 0.9em;
     }
 
-    select {
-      line-height: 40px;
-      font-size: 0.9em;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      .comment-field {
-        width: 33%;
-        height: 30px;
-        label {
-          width: 60%;
-          font-size: 0.9em;
-        }
-
-        input[type="radio"] {
-          height: 30px;
-        }
-      }
-    }
     #mycomments {
       font-size: 0.9em;
     }
@@ -4987,6 +4672,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1em;
+    width: 80%;
   }
 
   #site-footer {
@@ -5009,7 +4695,7 @@ $h1: $h2 * $ratio;
 /* 360px */
 @media screen and (width >= 361px) and (width <= 480px) {
   .modal-content {
-    width: 60%;
+    width: 75%;
 
     h2 {
       font-size: 1.45em;
@@ -5032,9 +4718,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(68% - 20px);
+    left: calc(78% - 20px);
     font-size: 1.1em;
-    width: 35%;
+    width: 25%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -5046,8 +4732,8 @@ $h1: $h2 * $ratio;
   }
 
   #app {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 auto;
   }
 
   .fixed-header {
@@ -5103,8 +4789,8 @@ $h1: $h2 * $ratio;
 
   #social {
     height: 40px;
-    width: 50%;
-    flex-flow: row wrap;
+    width: 49%;
+    flex-flow: row;
     justify-content: flex-end;
     align-items: center;
     position: unset;
@@ -5174,7 +4860,9 @@ $h1: $h2 * $ratio;
   }
   #project-tabs {
     padding: 0;
-    width: 98%;
+    width: 100%;
+    margin: 1em 0;
+    height: auto;
 
     li {
       width: 48%;
@@ -5317,7 +5005,7 @@ $h1: $h2 * $ratio;
   .slider-text {
     width: 99%;
     padding: 0.25em;
-    font-size: 0.75em;
+    font-size: 0.85em;
     line-height: 25px;
     height: 100%;
   }
@@ -5348,16 +5036,26 @@ $h1: $h2 * $ratio;
   }
   .about-content-text {
     font-size: 0.85rem;
-    line-height: 2em;
+    line-height: 2.3em;
     width: 98%;
   }
 
   #about-page-image {
     width: auto;
   }
+  #about-widgets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   #page-image {
-    display: block;
-    margin: auto;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   #contact {
@@ -5410,14 +5108,7 @@ $h1: $h2 * $ratio;
       }
     }
   }
-  #map-image {
-    width: 100%;
-    padding: 0;
 
-    img {
-      width: 100%;
-    }
-  }
   #myform {
     width: 96%;
     padding: 0;
@@ -5428,60 +5119,26 @@ $h1: $h2 * $ratio;
   }
   .myform-field {
     height: auto;
-    label,
-    #comment-header {
+
+    label {
       display: block;
       font-size: 1em;
+    }
+
+    label[for="myprivacy"] {
+      width: 27%;
+      line-height: 40px;
+      border-bottom: none;
     }
 
     p {
       font-size: 0.85em;
     }
 
-    label[for="questionitem"],
-    label[for="blogitem"],
-    label[for="generalitem"] {
-      width: 80%;
-    }
-
     #myname,
-    #myemail,
-    #myurl {
+    #myemail {
       line-height: 35px;
       font-size: 0.9em;
-    }
-
-    select {
-      line-height: 40px;
-      font-size: 0.9em;
-    }
-
-    #myname:hover,
-    #myemail:hover,
-    #myurl:hover,
-    input[type="radio"]:hover,
-    input[type="radio"]:focus,
-    #myname:focus,
-    #myemail:focus,
-    #myurl:focus,
-    select:focus {
-      border-color: $bgcolor-white;
-    }
-
-    #comment-fields {
-      padding: 0;
-      .comment-field {
-        width: 33%;
-        height: 30px;
-        label {
-          width: 60%;
-          font-size: 0.9em;
-        }
-
-        input[type="radio"] {
-          height: 30px;
-        }
-      }
     }
 
     #mycomments {
@@ -5495,6 +5152,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1em;
+    width: 80%;
   }
 
   #site-footer {
