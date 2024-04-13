@@ -1,3 +1,4 @@
+/** @type {import('vite').UserConfig} */
 import { defineConfig } from "vite";
 import sass from "sass";
 import stylelint from "vite-plugin-stylelint";

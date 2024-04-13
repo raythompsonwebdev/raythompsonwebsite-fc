@@ -1,6 +1,6 @@
 const next = document.getElementById("next") as HTMLButtonElement;
 const prev = document.getElementById("prev") as HTMLButtonElement;
-const mask = document.querySelector( ".hero-slider > .mask") as HTMLDivElement;
+const mask = document.querySelector(".hero-slider > .mask") as HTMLDivElement;
 
 const panelContainer = document.querySelector(".slider-body") as HTMLDivElement;
 
@@ -10,82 +10,124 @@ const sliderdata = [
   {
     id: "0",
     hash: "panel-0",
-    title: "WordCamp London 2018",
-    text: "Attended WordCamp 2018 at Holloway university as a volunteer - Green Room Monitor , Support sponsor setup and breakdown, Assist the design team with putting up all signs - see all attendees at this ",
-    buttonname: "Wordcamp",
-    bgimage: "./images/certificates/webp/wordcamp2018.webp",
-    sliderlink:"https://london.wordcamp.org/2018/attendees/",
-    sliderlinktext : "link here"
+    title: "Founders & Coders",
+    text: "Software developer pre-Apprenticeship course - CV and interview preperation, pair programmming, class projects ",
+    buttonname: "Coders & Founders",
+    bgimage: "./images/certificates/webp/founders-and-coders.webp",
+    sliderlink: "https://london.wordcamp.org/2018/attendees/",
+    sliderlinktext: "link here",
   },
   {
     id: "1",
     hash: "panel-1",
-    title: "City & Guilds ITQ Level 1, 2, 3 IT Users",
-    text: "6 month part-time course web design course at East London Technology Training Center : Improving productivity using IT, IT Communication Fundementals, Website Software(Dreamweaver), Database Software, Database Management, Design Software(Photoshop).",
-    buttonname: "East London Advanced Technolgy Training",
-    bgimage: "./images/certificates/webp/city-and-guilds-level-1-web-design.webp",
-    sliderlink: " ",
-    sliderlinktext : " "
+    title: "Makers",
+    text: " ",
+    buttonname: "Makers",
+    bgimage: "./images/certificates/webp/makers-fellowship.webp",
+    sliderlink: "",
+    sliderlinktext: "link here",
   },
   {
     id: "2",
     hash: "panel-2",
-    title: "Responsive Web Design",
-    text: "Online interacative curriculum course : HTML, CSS, Flexbox, CSS Grids, Responsive Web Design Principles. see certificate at this ",
+    title: "Free Code Camp",
+    text: "Online Javascript curriculum course : Classes, Objects, Promises, Regular Expressions, Arrays, Algorithim Scripting. See certificate at this ",
     buttonname: "FreeCodeCamp",
-    bgimage: "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
-    sliderlink: "https://www.freecodecamp.org/certification/raythompsonwebdev/responsive-web-design",
-    sliderlinktext : "link here"
+    bgimage:
+      "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
+    sliderlink:
+      "https://www.freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures",
+    sliderlinktext: "link here",
   },
   {
     id: "3",
     hash: "panel-3",
-    title: "JavaScript",
-    text: "Online interacative curriculum course : Classes, Promises, Regular Expressions, Data Structures, Algorithim Scripting. See certificate at this ",
-    buttonname: "FreeCodeCamp",
-    bgimage: "./images/certificates/webp/freecodecamp-org-certification-javascript-algorithms-and-data-structures.webp",
-    sliderlink: "https://www.freecodecamp.org/certification/raythompsonwebdev/javascript-algorithms-and-data-structures",
-    sliderlinktext : "link here"
+    title: "Linkedin Learning",
+    text: "Become a Vanilla Javascript Web Developer online tutorial series : Javascript Essentials, Closures,Web API,Service Workers,Promises. See certificate at this ",
+    buttonname: "Lynda.com",
+    bgimage:
+      "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
+    sliderlink:
+      "https://www.linkedin.com/learning/certificates/49ebce65c0bf606ec55fee010f2cf2383a99ed1a323ac7e62c578fa045161b84?trk=backfilled_certificate",
+    sliderlinktext: "link here",
   },
   {
     id: "4",
     hash: "panel-4",
     title: "Linkedin Learning",
-    text: "Online tutorial Become a Vanilla Javascript Web Developer : Javascript Essentials, Closures,Web API,Service Workers,Promises. See certificate at this ",
+    text: "Javascript Essentials online tutorial : Javascript Essentials, Closures,Web API,Service Workers,Promises. See certificate at this ",
     buttonname: "Lynda.com",
-    bgimage: "./images/certificates/webp/become -a-vanilla-javaScript-developer-certificate-lynda-com.webp",
-    sliderlink: "https://www.linkedin.com/learning/certificates/49ebce65c0bf606ec55fee010f2cf2383a99ed1a323ac7e62c578fa045161b84?trk=backfilled_certificate",
-    sliderlinktext : "link here"
+    bgimage:
+      "./images/certificates/webp/JavaScript Essential Training 2017.webp",
+    sliderlink: "",
+    sliderlinktext: "link here",
   },
   {
     id: "5",
     hash: "panel-5",
-    title: "Learn Javascript",
-    text: "Online interacative curriculum course : Data Types, Loops, Array Methods, Objects, Conditionals.Functions. See certificate at this ",
-    buttonname: "CodeAcademy",
-    bgimage: "./images/certificates/webp/codecademy-javascript-certificate.webp",
-    sliderlink: "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e",
-    sliderlinktext : "link here"
+    title: "Linkedin Learning",
+    text: "Vue.js Creating and Hosting a FullStack Site online tutorial : Javascript Essentials, Closures,Web API,Service Workers,Promises. See certificate at this ",
+    buttonname: "Lynda.com",
+    bgimage:
+      "./images/certificates/webp/Vue.js Creating and Hosting a FullStack Site.webp",
+    sliderlink: "",
+    sliderlinktext: "link here",
   },
   {
     id: "6",
     hash: "panel-6",
-    title: "Learn Ruby",
-    text: "Online interacative curriculum course : Arrays, Data Types, Classes, Methods, Conditionals. see certificate at this ",
-    buttonname: "CodeAcademy",
-    bgimage: "./images/certificates/webp/codecademy-ruby-certificate.webp",
-    sliderlink: "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd",
-    sliderlinktext : "link here"
+    title: "Free Code Camp",
+    text: "Online Responsive Design curriculum course : HTML, CSS, Flexbox, CSS Grids, Responsive Web Design Principles. see certificate at this ",
+    buttonname: "FreeCodeCamp",
+    bgimage:
+      "./images/certificates/webp/freecodecamp-org-certification-responsive-web-design.webp",
+    sliderlink:
+      "https://www.freecodecamp.org/certification/raythompsonwebdev/responsive-web-design",
+    sliderlinktext: "link here",
   },
   {
     id: "7",
     hash: "panel-7",
+    title: "Learn Javascript",
+    text: "Online interacative curriculum course : Data Types, Loops, Array Methods, Objects, Conditionals.Functions. See certificate at this ",
+    buttonname: "CodeAcademy",
+    bgimage:
+      "./images/certificates/webp/codecademy-javascript-certificate.webp",
+    sliderlink:
+      "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/705dcb15de0da4dd9d9fc4f3274b430e",
+    sliderlinktext: "link here",
+  },
+  {
+    id: "8",
+    hash: "panel-8",
+    title: "Learn Ruby",
+    text: "Online interacative curriculum course : Arrays, Data Types, Classes, Methods, Conditionals. see certificate at this ",
+    buttonname: "CodeAcademy",
+    bgimage: "./images/certificates/webp/codecademy-ruby-certificate.webp",
+    sliderlink:
+      "https://www.codecademy.com/profiles/raythompsonwebdev/certificates/1c05e0382bc5681c824c4cbe85c126fd",
+    sliderlinktext: "link here",
+  },
+  {
+    id: "9",
+    hash: "panel-9",
+    title: "WordCamp London 2018",
+    text: "Attended WordCamp 2018 at Holloway university as a volunteer - Green Room Monitor , Support sponsor setup and breakdown, Assist the design team with putting up all signs - see all attendees at this ",
+    buttonname: "Wordcamp",
+    bgimage: "./images/certificates/webp/wordcamp2018.webp",
+    sliderlink: "https://london.wordcamp.org/2018/attendees/",
+    sliderlinktext: "link here",
+  },
+  {
+    id: "10",
+    hash: "panel-10",
     title: "Digital Futures 2017",
     text: "Four week full-time IT employability course :Interactive Programming, Debate Skills with DebateMate, Musical Composition, Negotiation skills with CitizenUK, Music creation using Sonic Pi. See promo video at this ",
     buttonname: "DigitalFutures",
-    bgimage: "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
+    bgimage:
+      "./images/certificates/webp/digital-futures-2017-certificate-of-participation.webp",
     sliderlink: "https://vimeo.com/232481032",
-    sliderlinktext : "link here"
+    sliderlinktext: "link here",
   },
 ];
 
@@ -97,10 +139,18 @@ sliderdata.forEach(
     text: string;
     buttonname: string;
     bgimage: string;
-    sliderlink:string;
-    sliderlinktext:string;
+    sliderlink: string;
+    sliderlinktext: string;
   }) => {
-    const { hash, title, text, buttonname, bgimage, sliderlink, sliderlinktext } = slide;
+    const {
+      hash,
+      title,
+      text,
+      buttonname,
+      bgimage,
+      sliderlink,
+      sliderlinktext,
+    } = slide;
     // panel
     const panel = document.createElement("ARTICLE");
     panel.setAttribute("class", "panel");
@@ -133,43 +183,41 @@ sliderdata.forEach(
     const slidepanelText = document.createElement("P");
     slidepanelText.setAttribute("class", "slider-text");
     slidepanelText.textContent = text;
-    
-    
+
     panelContainer?.append(panel);
     panel.append(slidepanel);
 
     slidepanel.append(slidepanelImg);
     slidepanel.append(slidepanelCaption);
-    slidepanelCaption.append(slidepanelHeadingThree);    
+    slidepanelCaption.append(slidepanelHeadingThree);
     slidepanelCaption.append(slidepanelText);
-    slidepanelText.append(slidepanelLink)
-  
+    slidepanelText.append(slidepanelLink);
   }
 );
 
-const panels :HTMLCollectionOf<Element> = document.getElementsByClassName("panel");
+const panels: HTMLCollectionOf<Element> =
+  document.getElementsByClassName("panel");
 
-const panelsArray : Element[] = Array.from(panels);
+const panelsArray: Element[] = Array.from(panels);
 
-panelsArray.map((panel:Element)=>{   
-
-  // find first panel in slide show and show caption on the first panel only at beginning of slide. 
-  if(panel.id === '#panel-0'){    
+panelsArray.map((panel: Element) => {
+  // find first panel in slide show and show caption on the first panel only at beginning of slide.
+  if (panel.id === "#panel-0") {
     // find figure element - slider panel with image and caption
     const firstChild = panel.firstChild;
 
-    if(firstChild){
-      // find caption  
+    if (firstChild) {
+      // find caption
       const lastChild = firstChild.lastChild as HTMLElement;
 
-      if(lastChild){
+      if (lastChild) {
         // add caption show style to first slide at 0 index.
-        lastChild.classList.add("captionshow")
+        lastChild.classList.add("captionshow");
       }
     }
   }
-  return panel;  
-})
+  return panel;
+});
 
 const scrollerTo = (element: HTMLElement) => {
   mask.scrollTo({
@@ -199,7 +247,7 @@ const undateIndex = () => {
   }
 };
 
-const addStyle = (element: Element |  null) => {
+const addStyle = (element: Element | null) => {
   if (!element?.lastElementChild?.classList.contains("captionshow")) {
     element?.lastElementChild?.classList.add("captionshow");
   }
@@ -211,8 +259,7 @@ next.addEventListener("click", (e: MouseEvent) => {
   updateIndex();
 
   for (let i = 0; i < panelsArray.length; i += 1) {
-    
-    let PanelId = document.getElementById(`${panelsArray[i].id}`)
+    let PanelId = document.getElementById(`${panelsArray[i].id}`);
 
     if (i === currentIndex && PanelId !== null) {
       scrollerTo(PanelId);
@@ -223,13 +270,12 @@ next.addEventListener("click", (e: MouseEvent) => {
   return false;
 });
 
-prev.addEventListener("click", (e: MouseEvent ) => {
+prev.addEventListener("click", (e: MouseEvent) => {
   e.preventDefault();
   undateIndex();
 
   for (let i = 0; i < panelsArray.length; i += 1) {
-
-    let PanelId = document.getElementById(`${panelsArray[i].id}`)
+    let PanelId = document.getElementById(`${panelsArray[i].id}`);
 
     if (i === currentIndex && PanelId !== null) {
       scrollerTo(PanelId);
@@ -238,4 +284,3 @@ prev.addEventListener("click", (e: MouseEvent ) => {
   // disable click event
   return false;
 });
-
