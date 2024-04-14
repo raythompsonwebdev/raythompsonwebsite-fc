@@ -133,7 +133,7 @@ $h1: $h2 * $ratio;
   width: 25%;
   text-align: center;
   padding: 0;
-  left: calc(78vw - 20px);
+  left: calc(79vw - 20px);
 }
 .menu-toggle:hover {
   text-decoration: none;
@@ -178,7 +178,7 @@ $h1: $h2 * $ratio;
 }
 .site-title-name {
   height: auto;
-  line-height: 40px;
+  line-height: 45px;
   text-align: left;
   margin: 0;
   font-family: $font-header;
@@ -638,10 +638,12 @@ $h1: $h2 * $ratio;
     &:hover {
       color: $color-white;
       background-color: $green-color;
+      border: none;
     }
     &:active {
       color: $color-white;
       background-color: $green-color;
+      border: none;
     }
   }
 }
@@ -805,16 +807,17 @@ $h1: $h2 * $ratio;
   }
 }
 .slider-title {
-  width: 100%;
+  width: 99%;
   font-weight: bold;
   font-size: 1rem;
-  background-color: $color-black;
-  color: $color-white;
+  color: $color-black;
+  background-color: $color-white;
+  border-bottom: 2px solid $color-black;
   text-indent: 0;
   margin: 0 auto;
   font-family: $font-header;
   text-align: center;
-  line-height: 40px;
+  line-height: 42px;
 }
 .slider-text {
   width: 98%;
@@ -1051,15 +1054,14 @@ $h1: $h2 * $ratio;
   flex-flow: row;
   height: 35px;
   line-height: 35px;
-  font-size: 0.75em;
+  font-size: 0.75rem;
+  text-align: center;
 }
 .ledger-spans {
   width: 25%;
   display: block;
   background-color: $color-white;
-  border-right: #000000 solid 1px;
-  text-indent: 0;
-  text-align: center;
+  border-right: 1px solid $color-black;
   flex: 1 0 auto;
 }
 
@@ -1145,7 +1147,7 @@ $h1: $h2 * $ratio;
         height: auto;
         font-family: FontAwesome, $font-header;
         color: $color-black;
-        font-size: 0.9em;
+        font-size: 0.85em;
         &:hover {
           cursor: pointer;
           font-weight: bold;
@@ -1258,7 +1260,7 @@ $h1: $h2 * $ratio;
     width: 99%;
     padding: 0;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     outline: none;
     border: 2px solid var(--name-error);
   }
@@ -1269,25 +1271,26 @@ $h1: $h2 * $ratio;
     width: 99%;
     padding: 0;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     outline: none;
     border: 2px solid var(--email-error);
   }
 
   #myprivacy {
-    margin-left: 1em;
+    margin-left: 1rem;
   }
 
   #mycomments {
     width: 99%;
     padding: 0;
-    font-size: 0.9em;
+    margin: 0;
+    font-size: 0.9rem;
     border: 2px solid var(--comments-error);
   }
 
   #openmodal {
     color: $color-black;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     border: 1px solid $color-black;
     line-height: 25px;
     display: block;
@@ -1307,7 +1310,7 @@ $h1: $h2 * $ratio;
 
 #submit {
   display: block;
-  width: 80%;
+  width: 50%;
   height: 50px;
   margin: 2em auto;
   font-size: 1rem;
@@ -1411,7 +1414,7 @@ $h1: $h2 * $ratio;
   }
 
   #app {
-    width: calc(100% - 15%);
+    width: calc(100% - 10%);
     margin: auto;
   }
   .fixed-header {
@@ -1836,7 +1839,8 @@ $h1: $h2 * $ratio;
     }
 
     #openmodal {
-      font-size: 0.9em;
+      font-size: 0.9rem;
+      line-height: 40px;
     }
   }
 
@@ -2315,7 +2319,8 @@ $h1: $h2 * $ratio;
     }
 
     #openmodal {
-      font-size: 0.9em;
+      font-size: 0.9rem;
+      line-height: 40px;
     }
   }
 
@@ -2788,7 +2793,8 @@ $h1: $h2 * $ratio;
     }
 
     #openmodal {
-      font-size: 0.9em;
+      font-size: 0.9rem;
+      line-height: 40px;
     }
   }
 
@@ -3064,7 +3070,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .ledger-spans {
     width: 27%;
@@ -3259,7 +3265,8 @@ $h1: $h2 * $ratio;
     }
 
     #openmodal {
-      font-size: 0.85em;
+      font-size: 0.85rem;
+      line-height: 40px;
     }
   }
 
@@ -3404,7 +3411,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 30%);
+    width: calc(100% - 20%);
   }
   .banner-title {
     line-height: 60px;
@@ -3536,7 +3543,7 @@ $h1: $h2 * $ratio;
   #ledger {
     height: 40px;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .ledger-spans {
     width: 27%;
@@ -3663,10 +3670,10 @@ $h1: $h2 * $ratio;
       font-size: 1.1rem;
     }
     .contact-details-text {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
     address {
-      width: 98%;
+      width: 93%;
       margin: 0 auto;
       ul {
         display: block;
@@ -3699,7 +3706,7 @@ $h1: $h2 * $ratio;
     font-size: 1rem;
   }
   #myform {
-    width: 100%;
+    width: 96%;
     padding: 0.5em;
   }
   #myform-fields {
@@ -3717,7 +3724,7 @@ $h1: $h2 * $ratio;
     }
 
     label[for="myprivacy"] {
-      width: 35%;
+      width: 38%;
       line-height: 40px;
       border-bottom: none;
     }
@@ -3735,12 +3742,13 @@ $h1: $h2 * $ratio;
 
     #openmodal {
       font-size: 0.85rem;
+      line-height: 40px;
     }
   }
 
   #submit {
     font-size: 1.1rem;
-    width: 75%;
+    width: 60%;
   }
 
   #site-footer {
@@ -3787,7 +3795,7 @@ $h1: $h2 * $ratio;
   .menu-toggle {
     left: calc(80vw - 20px);
     font-size: 1.1rem;
-    width: 20%;
+    width: 22%;
   }
 
   /* The Close Button */
@@ -3813,7 +3821,7 @@ $h1: $h2 * $ratio;
     width: 50%;
   }
   .site-title-name {
-    line-height: 40px;
+    line-height: 45px;
     font-size: 1.653rem;
   }
   .site-title-text {
@@ -3882,7 +3890,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 25%);
+    width: calc(100% - 20%);
   }
   .banner-title {
     font-size: 1.363rem;
@@ -4014,7 +4022,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -4205,13 +4212,14 @@ $h1: $h2 * $ratio;
     }
 
     #openmodal {
-      font-size: 0.85em;
+      font-size: 0.85rem;
+      line-height: 40px;
     }
   }
 
   #submit {
-    font-size: 1rem;
-    width: 80%;
+    font-size: 1.1rem;
+    width: 60%;
   }
 
   #site-footer {
@@ -4257,9 +4265,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(77vw - 20px);
+    left: calc(80vw - 20px);
     font-size: 1.1rem;
-    width: 25%;
+    width: 22%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4289,7 +4297,7 @@ $h1: $h2 * $ratio;
     width: 50%;
   }
   .site-title-name {
-    line-height: 40px;
+    line-height: 45px;
     font-size: 1.653rem;
   }
   .site-title-text {
@@ -4359,7 +4367,7 @@ $h1: $h2 * $ratio;
     width: 100%;
   }
   .banner-text {
-    width: calc(100% - 25%);
+    width: calc(100% - 20%);
   }
   .banner-title {
     line-height: 45px;
@@ -4493,7 +4501,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 27%;
-    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -4691,8 +4698,8 @@ $h1: $h2 * $ratio;
   }
 
   #submit {
-    font-size: 1rem;
-    width: 80%;
+    font-size: 1.1rem;
+    width: 50%;
   }
 
   #site-footer {
@@ -4738,9 +4745,9 @@ $h1: $h2 * $ratio;
     }
   }
   .menu-toggle {
-    left: calc(79% - 20px);
+    left: calc(82% - 20px);
     font-size: 1.1rem;
-    width: 25%;
+    width: 22%;
   }
   .menu-toggle.hide {
     left: 110vw;
@@ -4771,7 +4778,7 @@ $h1: $h2 * $ratio;
     text-align: left;
   }
   .site-title-name {
-    line-height: 40px;
+    line-height: 45px;
     font-size: 1.553rem;
   }
   .site-title-text {
@@ -4977,7 +4984,6 @@ $h1: $h2 * $ratio;
   }
   .ledger-spans {
     width: 26%;
-    text-align: center;
   }
 
   .ledger-spans:first-of-type {
@@ -5140,7 +5146,7 @@ $h1: $h2 * $ratio;
 
     label {
       display: block;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     label[for="myprivacy"] {
@@ -5175,7 +5181,7 @@ $h1: $h2 * $ratio;
 
   #submit {
     font-size: 1rem;
-    width: 80%;
+    width: 50%;
   }
 
   #site-footer {

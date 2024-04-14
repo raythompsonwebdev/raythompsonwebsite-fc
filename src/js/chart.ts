@@ -69,6 +69,8 @@ const ChartGraph = () => {
     chartBarHeaderImage.setAttribute("src", `${element.skill_level}`);
     chartBarHeaderImage.setAttribute("alt", `${element.codeplatform}`);
     chartBarHeaderImage.setAttribute("class", "code-icon");
+    chartBarHeaderImage.setAttribute("width", "50px");
+    chartBarHeaderImage.setAttribute("height", "50px");
 
     chartBarHeader.appendChild(chartBarHeaderImage);
 

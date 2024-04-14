@@ -4,6 +4,8 @@ import sass from "sass";
 import stylelint from "vite-plugin-stylelint";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import svgr from "vite-plugin-svgr";
+import * as path from "path";
+import { fileURLToPath } from "node:url";
 
 const DEFAULT_OPTIONS = {
   test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,

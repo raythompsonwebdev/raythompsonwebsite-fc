@@ -6,7 +6,7 @@
   // header("Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; base-uri 'self';form-action 'self';");
   header("Access-Control-Allow-Origin: <website>");
   header("Vary: Origin");
-  header("Content-Security-Policy: script-src 'self'; connect-src 'self'; form-action 'self';");
+  header("Content-Security-Policy: script-src 'self'; connect-src 'self';form-action 'self';");
   // header('Access-Control-Max-Age: 86400');    // cache for 1 day
     
   include 'private/db_connection.php';  
