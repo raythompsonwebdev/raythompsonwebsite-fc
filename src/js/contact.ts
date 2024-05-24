@@ -52,8 +52,6 @@ const dirtyInputEmail = (e: FocusEvent) => {
 
   const email = myemail.value.trim();
 
-  console.log(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email));
-
   if (email.value === "") {
     error.classList.remove("show-error");
     error.classList.add("hide-error");

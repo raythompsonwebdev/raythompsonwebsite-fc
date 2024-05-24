@@ -12,11 +12,11 @@ const SrcSet = () => {
   // function to create srcset markup string to add to images
   const makeSrcset = (imgSrc: string) => {
     const markup = [];
-    let width = 390;
+    let width = 377;
 
     for (let i = 0; i < 4; i++) {
       markup[i] = `${imgSrc}-${width}.webp ${width}w `;
-      width -= 20;
+      width -= 50;
     }
 
     return markup.join();
@@ -48,7 +48,7 @@ const SrcSet = () => {
     img.setAttribute("loading", "lazy");
     img.srcset = srcset;
     img.sizes =
-      "(min-width : 1920px) 390px, (min-width : 1440px) 370px,  (min-width : 1280px) 350px, (min-width : 1024px) 350px, (min-width : 736px) 330px,(min-width : 601px) 330px, (min-width : 361px) 330px, 100vw";
+      "(min-width : 1920px) 377px, (min-width : 1440px) 317px,  (min-width : 1280px) 377px, (min-width : 1024px) 377px, (min-width : 736px) 277px,(min-width : 601px) 317px, (min-width : 361px) 237px, 100vw";
   });
 };
 
