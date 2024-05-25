@@ -57,9 +57,12 @@ const dirtyInputEmail = (e: FocusEvent) => {
     error.classList.add("hide-error");
   }
   // check if input matches pattern
+  // if (
+  //   /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myemail.value) ===
   if (
-    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myemail.value) ===
-    false
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+      myemail.value
+    ) === false
   ) {
     error.classList.add("show-error");
     error.classList.remove("hide-error");
