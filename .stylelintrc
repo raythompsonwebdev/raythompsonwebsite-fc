@@ -32,7 +32,7 @@
     "comment-whitespace-inside": "always",
     "comment-empty-line-before": "always",
     "selector-pseudo-element-colon-notation": "double",
-    "no-descending-specificity": true,
+    "no-descending-specificity": null,
     "font-family-no-duplicate-names": true,
     "font-family-no-missing-generic-family-keyword": null,
     "keyframe-block-no-duplicate-selectors": true
