@@ -49,7 +49,7 @@ const SrcSet = () => {
     img.srcset = srcset;
     img.sizes =
       // "(min-width : 1920px) 377px, (min-width : 1440px) 317px,  (min-width : 1280px) 377px, (min-width : 1024px) 377px, (min-width : 736px) 277px,(min-width : 601px) 317px, (min-width : 361px) 237px, 100vw";
-      "(width >= 1920px) 377px, (width >= 1440px) and (width <= 1919px) 377px,  (width >= 1280px) and (width <= 1439px) 317px, (width >= 1024px) and (width <= 1279px) 377px, (width >= 736px) and (width <= 1023px) 317px,(width >= 601px) and (width <= 735px) 317px, (width >= 361px) and (width <= 480px) 277px, 100vw";
+      "(width >= 1920px) 377px, (width >= 1440px) and (width <= 1919px) 377px,  (width >= 1280px) and (width <= 1439px) 377px, (width >= 1024px) and (width <= 1279px) 317px, (width >= 736px) and (width <= 1023px) 317px,(width >= 601px) and (width <= 735px) 317px, (width >= 361px) and (width <= 480px) 237px, 100vw";
   });
 };
 

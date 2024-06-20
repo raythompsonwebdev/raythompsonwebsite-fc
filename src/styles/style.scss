@@ -563,7 +563,6 @@ $h1: $h2 * $ratio;
 }
 .project {
   position: relative;
-  cursor: pointer;
   overflow: hidden;
   margin: 0;
   backface-visibility: hidden;
@@ -625,7 +624,6 @@ $h1: $h2 * $ratio;
   .caption-link {
     width: 46%;
     font-size: 0.85em;
-    cursor: pointer;
     margin: 0;
     text-decoration: none;
     display: block;
@@ -640,6 +638,7 @@ $h1: $h2 * $ratio;
       color: $color-white;
       background-color: $green-color;
       border: none;
+      cursor: pointer;
     }
     &:active {
       color: $color-white;
@@ -1383,7 +1382,6 @@ $h1: $h2 * $ratio;
 
 /* 1920px + */
 @media screen and (width >= 1920px) {
-
   /* Modal Content/Box */
   .modal-content {
     width: 60%;
