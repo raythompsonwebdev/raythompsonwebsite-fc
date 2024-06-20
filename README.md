@@ -9,10 +9,9 @@ Website built using current coding standards, mobile first responsive design tha
 ## Features
 
 - Contact Form
-- Interactive Slider
+- Interactive Image Slider with Captions
 - CSS Animations
 - Responsive Design viewable on most mobile devices.
-- Responsive images
 
 ## Tools
 
