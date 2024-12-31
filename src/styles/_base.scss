@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 html {
   box-sizing: border-box;
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-color: $color-white;
+  background-color: variables.$color-white;
   margin: 0;
   padding: 0;
 }
@@ -39,13 +39,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $font-header;
+  font-family: variables.$font-header;
   padding: 0;
   margin: 0;
 }
 
 p {
-  font-family: $font-text;
+  font-family: variables.$font-text;
   line-height: 1.7em;
   margin: 0;
 }
@@ -57,7 +57,7 @@ hr {
 }
 
 a {
-  font-family: $font-header;
+  font-family: variables.$font-header;
 }
 
 h1 {

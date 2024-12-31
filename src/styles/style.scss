@@ -1,5 +1,6 @@
-@import "partials/normalize";
-@import "partials/base";
+@use "variables";
+@use "base";
+@use "normalize";
 
 :root {
   --name-error: #272643;
@@ -64,17 +65,17 @@ $h1: $h2 * $ratio;
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: $color-white;
+  background-color: variables.$color-white;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #888888;
   width: 80%;
-  font-family: $font-text;
+  font-family: variables.$font-text;
   position: relative;
   top: 130px;
 
   h2 {
-    color: $color-black;
+    color: variables.$color-black;
     text-indent: 0;
     font-size: 1.4em;
     line-height: 40px;
@@ -93,7 +94,7 @@ $h1: $h2 * $ratio;
   ul {
     margin: 0.5em 0;
     li {
-      color: $color-black;
+      color: variables.$color-black;
       line-height: 30px;
       font-size: 0.8em;
     }
@@ -122,11 +123,11 @@ $h1: $h2 * $ratio;
   z-index: 105;
   display: block;
   bottom: 0.2em;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   font-size: 1rem;
   text-transform: uppercase;
-  color: $color-black;
-  border: 1px solid $color-black;
+  color: variables.$color-black;
+  border: 1px solid variables.$color-black;
   transition: all ease-out 0s;
   line-height: 40px;
   height: auto;
@@ -138,8 +139,8 @@ $h1: $h2 * $ratio;
 .menu-toggle:hover {
   text-decoration: none;
   cursor: pointer;
-  background-color: $green-color;
-  color: $color-white;
+  background-color: variables.$green-color;
+  color: variables.$color-white;
 }
 
 /* site wrapper */
@@ -168,7 +169,7 @@ $h1: $h2 * $ratio;
   line-height: 45px;
   text-align: left;
   margin: 0;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   width: 100%;
   font-size: 1.253rem;
   text-indent: 0.1em;
@@ -192,7 +193,7 @@ $h1: $h2 * $ratio;
   text-align: left;
   font-size: 100%;
   z-index: 10;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   height: 100px;
 }
 
@@ -250,25 +251,25 @@ $h1: $h2 * $ratio;
     text-align: center;
     text-decoration: none;
     display: block;
-    background-color: $color-white;
-    color: $color-black;
-    font-family: $font-header;
+    background-color: variables.$color-white;
+    color: variables.$color-black;
+    font-family: variables.$font-header;
     &:link {
-      background-color: $color-white;
-      color: $color-black;
-      border: 1px solid $color-black;
+      background-color: variables.$color-white;
+      color: variables.$color-black;
+      border: 1px solid variables.$color-black;
     }
 
     &:hover {
-      background-color: $green-color;
-      color: $color-white;
+      background-color: variables.$green-color;
+      color: variables.$color-white;
       border: none;
       cursor: pointer;
       height: 57px;
     }
     &:active {
-      background-color: $green-color;
-      color: $color-black;
+      background-color: variables.$green-color;
+      color: variables.$color-black;
     }
   }
 }
@@ -311,8 +312,8 @@ $h1: $h2 * $ratio;
   width: 100%;
   text-align: center;
   transition: all 0.2s ease-in 0s;
-  color: $color-black;
-  border: 1px solid $color-black;
+  color: variables.$color-black;
+  border: 1px solid variables.$color-black;
   &::before {
     font-size: 1.25em;
     display: block;
@@ -329,14 +330,14 @@ $h1: $h2 * $ratio;
     transform: scale(0.95);
     font-weight: bold;
     cursor: pointer;
-    background-color: $green-color;
-    color: $color-white;
+    background-color: variables.$green-color;
+    color: variables.$color-white;
     border: none;
   }
   &:active {
     font-weight: bold;
-    background-color: $green-color;
-    color: $color-white;
+    background-color: variables.$green-color;
+    color: variables.$color-white;
   }
 }
 
@@ -393,7 +394,7 @@ $h1: $h2 * $ratio;
 .banner-text {
   width: calc(100% - 10%);
   position: relative;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   padding: 0.5em;
   box-shadow:
     rgb(0 0 0 / 30%) 0 19px 38px,
@@ -402,7 +403,7 @@ $h1: $h2 * $ratio;
 .banner-title {
   width: auto;
   text-align: center;
-  color: $color-black;
+  color: variables.$color-black;
   line-height: 50px;
   font-size: 1.163rem;
   margin: 0;
@@ -410,7 +411,7 @@ $h1: $h2 * $ratio;
 .banner-copy {
   font-size: 0.85em;
   width: 98%;
-  color: $color-black;
+  color: variables.$color-black;
   line-height: 1.8em;
   margin-bottom: 0.5em;
   padding: 0 0.25em;
@@ -425,14 +426,14 @@ $h1: $h2 * $ratio;
   font-weight: bolder;
   text-decoration: none;
   margin: 1em auto;
-  background-color: $color-white;
-  color: $color-black;
+  background-color: variables.$color-white;
+  color: variables.$color-black;
   text-transform: uppercase;
-  border: 1px solid $color-black;
+  border: 1px solid variables.$color-black;
   transition: color 0.2s ease-in 0s;
   &:hover {
-    background-color: $green-color;
-    color: $color-white;
+    background-color: variables.$green-color;
+    color: variables.$color-white;
     border: none;
     line-height: 60px;
     cursor: pointer;
@@ -491,7 +492,7 @@ $h1: $h2 * $ratio;
   padding: 0;
   margin: 1em 0;
   width: 100%;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   transition: all 0.2s ease-in 0s;
   gap: 0.25em;
   height: auto;
@@ -502,34 +503,34 @@ $h1: $h2 * $ratio;
     margin-right: 0;
     margin-bottom: 0;
     .project-tab {
-      font-family: $font-header;
+      font-family: variables.$font-header;
       display: block;
-      color: $color-black;
-      background-color: $color-white;
+      color: variables.$color-black;
+      background-color: variables.$color-white;
       line-height: 43px;
       width: 100%;
       padding: 0;
       font-size: 1rem;
       transition: all 0.2s ease-in 0s;
-      border: 1px solid $color-black;
+      border: 1px solid variables.$color-black;
 
       &:link {
         cursor: pointer;
-        color: $color-black;
-        background-color: $color-white;
+        color: variables.$color-black;
+        background-color: variables.$color-white;
       }
 
       &:hover {
         cursor: pointer;
         font-weight: bold;
-        color: $color-white;
-        background-color: $green-color;
+        color: variables.$color-white;
+        background-color: variables.$green-color;
         border: none;
       }
 
       &:active {
-        color: $color-white;
-        background-color: $green-color;
+        color: variables.$color-white;
+        background-color: variables.$green-color;
         font-weight: bold;
       }
     }
@@ -597,18 +598,18 @@ $h1: $h2 * $ratio;
     font-size: 0.85em;
     flex: 0 1 auto;
     text-align: left;
-    color: $color-black;
-    background: $color-white;
+    color: variables.$color-black;
+    background: variables.$color-white;
     line-height: 1.6em;
-    font-family: FontAwesome, $font-text;
+    font-family: FontAwesome, variables.$font-text;
 
     // &::before {
     //   content: "\f2bd";
     //   font-size: 100%;
     //   line-height: 1.6em;
     //   margin-right: 0.5em;
-    //   color: $color-black;
-    //   background: $color-white;
+    //   color: variables.$color-black;
+    //   background: variables.$color-white;
     // }
   }
 }
@@ -619,7 +620,7 @@ $h1: $h2 * $ratio;
   align-items: flex-start;
   margin: 0 auto;
   width: 96%;
-  font-family: $font-header;
+  font-family: variables.$font-header;
 
   .caption-link {
     width: 46%;
@@ -629,34 +630,34 @@ $h1: $h2 * $ratio;
     display: block;
     line-height: 35px;
     font-weight: normal;
-    background-color: $color-white;
-    color: $color-black;
+    background-color: variables.$color-white;
+    color: variables.$color-black;
     text-align: center;
     flex: 0 1 auto;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     &:hover {
-      color: $color-white;
-      background-color: $green-color;
+      color: variables.$color-white;
+      background-color: variables.$green-color;
       border: none;
       cursor: pointer;
     }
     &:active {
-      color: $color-white;
-      background-color: $green-color;
+      color: variables.$color-white;
+      background-color: variables.$green-color;
       border: none;
     }
   }
 }
 .cover-title {
-  font-family: $font-header;
+  font-family: variables.$font-header;
   width: 96%;
   font-size: 1rem;
   margin: 0 auto;
   line-height: 35px;
-  color: $color-black;
-  background-color: $color-white;
+  color: variables.$color-black;
+  background-color: variables.$color-white;
   text-align: center;
-  border: 1px solid $color-black;
+  border: 1px solid variables.$color-black;
   flex: 0 1 auto;
 }
 .project:hover .project-caption {
@@ -751,15 +752,15 @@ $h1: $h2 * $ratio;
   margin: 0 auto;
   height: auto;
   position: relative;
-  border: 4px solid $color-black;
+  border: 4px solid variables.$color-black;
   padding: 0.25em;
   h3 {
     font-size: 1rem;
     line-height: 40px;
-    color: $color-black;
-    background-color: $color-white;
+    color: variables.$color-black;
+    background-color: variables.$color-white;
     text-indent: 0.25em;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 1px solid variables.$color-black;
   }
 }
 .hero-slider {
@@ -782,7 +783,7 @@ $h1: $h2 * $ratio;
 .panel {
   width: 100%;
   height: 350px;
-  background-color: $color-white;
+  background-color: variables.$color-white;
 }
 .slider-panel {
   margin: 0;
@@ -814,11 +815,11 @@ $h1: $h2 * $ratio;
   width: 99%;
   font-weight: bold;
   font-size: 1rem;
-  color: $color-black;
-  background-color: $color-white;
-  border-bottom: 2px solid $color-black;
+  color: variables.$color-black;
+  background-color: variables.$color-white;
+  border-bottom: 2px solid variables.$color-black;
   margin: 0 auto;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   text-align: center;
   line-height: 42px;
 }
@@ -827,14 +828,14 @@ $h1: $h2 * $ratio;
   padding: 0.25em;
   display: block;
   margin: 0 auto;
-  color: $color-black;
+  color: variables.$color-black;
   font-weight: normal;
   font-size: 0.8rem;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   height: 100%;
   line-height: 1.8em;
   word-wrap: break-word;
-  font-family: FontAwesome, $font-text;
+  font-family: FontAwesome, variables.$font-text;
   letter-spacing: 0.01em;
   text-align: left;
 }
@@ -842,7 +843,7 @@ $h1: $h2 * $ratio;
 .slider-link {
   display: inline-block;
   text-decoration: none;
-  color: $color-black;
+  color: variables.$color-black;
   font-size: 0.85rem;
   font-weight: bold;
   &:hover {
@@ -869,7 +870,7 @@ $h1: $h2 * $ratio;
   display: flex;
   flex-flow: row;
   text-align: center;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   position: absolute;
   bottom: 4px;
   justify-content: space-between;
@@ -879,31 +880,31 @@ $h1: $h2 * $ratio;
   width: 60px;
   line-height: 60px;
   height: 60px;
-  color: $color-black;
+  color: variables.$color-black;
   font-weight: bolder;
   outline: none;
   border: none;
   padding: 0;
   margin: 0;
   &:link {
-    color: $color-black;
-    background-color: $color-black;
+    color: variables.$color-black;
+    background-color: variables.$color-black;
     font-weight: bold;
   }
   &:visited {
-    color: $color-black;
-    background-color: $green-color;
+    color: variables.$color-black;
+    background-color: variables.$green-color;
     text-shadow: none;
   }
   &:hover {
-    background-color: $color-black;
-    color: $color-white;
+    background-color: variables.$color-black;
+    color: variables.$color-white;
     font-weight: bold;
     cursor: pointer;
   }
   &:active {
-    background-color: $color-black;
-    color: $color-white;
+    background-color: variables.$color-black;
+    color: variables.$color-white;
     font-weight: bold;
   }
 }
@@ -912,30 +913,30 @@ $h1: $h2 * $ratio;
   line-height: 60px;
   height: 60px;
   font-weight: bolder;
-  color: $color-black;
+  color: variables.$color-black;
   outline: none;
   border: none;
   padding: 0;
   margin: 0;
   &:link {
-    color: $color-black;
-    background-color: $color-black;
+    color: variables.$color-black;
+    background-color: variables.$color-black;
     font-weight: bold;
   }
   &:visited {
-    color: $color-black;
-    background-color: $green-color;
+    color: variables.$color-black;
+    background-color: variables.$green-color;
     text-shadow: none;
   }
   &:hover {
-    background-color: $color-black;
-    color: $color-white;
+    background-color: variables.$color-black;
+    color: variables.$color-white;
     font-weight: bold;
     cursor: pointer;
   }
   &:active {
-    background-color: $color-black;
-    color: $color-white;
+    background-color: variables.$color-black;
+    color: variables.$color-white;
     font-weight: bold;
   }
 }
@@ -946,16 +947,16 @@ $h1: $h2 * $ratio;
   display: block;
   margin: 1em auto;
   padding: 0.25em;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   height: auto;
-  border: 4px solid $color-black;
+  border: 4px solid variables.$color-black;
 
   h3 {
     height: 40px;
     font-size: 1rem;
     line-height: 40px;
     letter-spacing: 0.05em;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 1px solid variables.$color-black;
   }
 }
 #bars {
@@ -966,7 +967,7 @@ $h1: $h2 * $ratio;
   list-style: none;
   margin: 0;
   padding: 0.5em 0;
-  background: $color-white;
+  background: variables.$color-white;
 
   li {
     width: 100%;
@@ -978,7 +979,7 @@ $h1: $h2 * $ratio;
     .bar {
       display: block;
       margin-left: 0;
-      border: 1px solid $color-black;
+      border: 1px solid variables.$color-black;
       position: absolute;
       left: 22%;
       height: 100%;
@@ -990,13 +991,13 @@ $h1: $h2 * $ratio;
       }
 
       &:hover {
-        background: $yellow-color;
+        background: variables.$yellow-color;
         cursor: pointer;
       }
 
       &:hover::after {
         display: block;
-        background: $color-white;
+        background: variables.$color-white;
         content: attr(data-percentage) "%";
         line-height: 50px;
         width: 50px;
@@ -1039,7 +1040,7 @@ $h1: $h2 * $ratio;
       line-height: 51px;
       height: 51px;
       font-size: 0.75em;
-      color: $color-black;
+      color: variables.$color-black;
       z-index: 3;
       text-indent: 0.25em;
       border-bottom: #000000 solid 1px;
@@ -1062,15 +1063,15 @@ $h1: $h2 * $ratio;
 .ledger-spans {
   width: 25%;
   display: block;
-  background-color: $color-white;
-  border-right: 1px solid $color-black;
+  background-color: variables.$color-white;
+  border-right: 1px solid variables.$color-black;
   flex: 1 0 auto;
 }
 
 .ledger-spans:first-of-type {
   width: 21.7%;
   display: block;
-  background-color: $color-white;
+  background-color: variables.$color-white;
 }
 
 .ledger-spans:last-of-type {
@@ -1081,7 +1082,7 @@ $h1: $h2 * $ratio;
 #contact {
   width: 100%;
   padding: 0;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -1115,19 +1116,19 @@ $h1: $h2 * $ratio;
   padding: 0;
   gap: 0.25em;
   h3 {
-    font-family: $font-header;
+    font-family: variables.$font-header;
     font-size: 0.9rem;
     width: 100%;
     line-height: 40px;
     margin: 0;
     text-align: center;
-    color: $color-black;
-    border-bottom: 1px solid $color-black;
+    color: variables.$color-black;
+    border-bottom: 1px solid variables.$color-black;
   }
 
   .contact-details-text {
-    background-color: $color-white;
-    color: $color-black;
+    background-color: variables.$color-white;
+    color: variables.$color-black;
     width: 94%;
     padding: 0;
     font-size: 0.8em;
@@ -1140,15 +1141,16 @@ $h1: $h2 * $ratio;
     padding: 0 0.25em;
     margin: 0 auto;
     height: auto;
-    border: 1px solid $color-black;
+    font-family: variables.$font-header;
+    border: 1px solid variables.$color-black;
     ul {
       display: block;
       list-style: none;
       padding: 0;
+
       li {
         height: auto;
-        font-family: FontAwesome, $font-header;
-        color: $color-black;
+        color: variables.$color-black;
         font-size: 0.8em;
         &:hover {
           cursor: pointer;
@@ -1162,7 +1164,7 @@ $h1: $h2 * $ratio;
           display: inline-block;
           width: 20px;
           text-align: center;
-          color: $color-black;
+          color: variables.$color-black;
         }
       }
     }
@@ -1181,12 +1183,12 @@ $h1: $h2 * $ratio;
   line-height: 35px;
   margin-bottom: 0.2em;
   display: block;
-  color: $red-color;
-  border: 2px solid $error-color-bg;
+  color: variables.$red-color;
+  border: 2px solid variables.$error-color-bg;
   text-align: center;
   animation-name: example;
   animation-duration: 0.2s;
-  font-family: $font-header;
+  font-family: variables.$font-header;
   font-size: 0.75em;
   text-transform: uppercase;
   font-weight: bold;
@@ -1196,10 +1198,10 @@ $h1: $h2 * $ratio;
   width: 92%;
   flex: 1 0 auto;
   padding: 0.25em;
-  background-color: $color-white;
+  background-color: variables.$color-white;
   margin: 0;
-  font-family: $font-header;
-  border: 4px solid $color-black;
+  font-family: variables.$font-header;
+  border: 4px solid variables.$color-black;
 }
 
 #myform-fields {
@@ -1214,25 +1216,25 @@ $h1: $h2 * $ratio;
   margin-bottom: 0.5em;
 
   // .dirty-invalid:not(:focus):valid {
-  //   background-color: $error-color-bg;
+  //   background-color: variables.$error-color-bg;
   //   border: $error-color-border;
   // }
   // .dirty-valid:not(:focus):invalid {
-  //   background-color: $ok-color-bg;
+  //   background-color: variables.$ok-color-bg;
   //   border: $ok-color-border;
   // }
 
   .dirty-invalid {
-    background-color: $error-color-bg;
+    background-color: variables.$error-color-bg;
   }
   .dirty-valid {
-    background-color: $ok-color-bg;
+    background-color: variables.$ok-color-bg;
   }
 
   p {
     display: inline-block;
     width: auto;
-    color: $color-white;
+    color: variables.$color-white;
     font-size: 0.8em;
   }
 
@@ -1240,8 +1242,8 @@ $h1: $h2 * $ratio;
     display: block;
     width: 100%;
     line-height: 40px;
-    color: $color-black;
-    border-bottom: 1px solid $color-black;
+    color: variables.$color-black;
+    border-bottom: 1px solid variables.$color-black;
     margin-bottom: 0.5em;
     text-indent: 0;
     font-size: 0.85em;
@@ -1292,14 +1294,14 @@ $h1: $h2 * $ratio;
   }
 
   #openmodal {
-    color: $color-black;
+    color: variables.$color-black;
     font-size: 0.8rem;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     line-height: 25px;
     display: block;
     &:hover {
-      color: $color-white;
-      background: $green-color;
+      color: variables.$color-white;
+      background: variables.$green-color;
       cursor: pointer;
       border: none;
       line-height: 42px;
@@ -1317,11 +1319,11 @@ $h1: $h2 * $ratio;
   height: 50px;
   margin: 2em auto;
   font-size: 1rem;
-  color: $color-black;
-  border: 1px solid $color-black;
+  color: variables.$color-black;
+  border: 1px solid variables.$color-black;
   &:hover {
-    background: $green-color;
-    color: $color-white;
+    background: variables.$green-color;
+    color: variables.$color-white;
     cursor: pointer;
     font-weight: bold;
     border: none;
@@ -1351,28 +1353,28 @@ $h1: $h2 * $ratio;
 
       .footer-href {
         line-height: 50px;
-        color: $color-black;
-        border: 1px solid $color-black;
+        color: variables.$color-black;
+        border: 1px solid variables.$color-black;
         display: block;
         font-size: 0.7em;
-        font-family: $font-header;
+        font-family: variables.$font-header;
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
         &:visited {
-          background-color: $green-color;
-          color: $color-white;
+          background-color: variables.$green-color;
+          color: variables.$color-white;
           font-weight: bold;
         }
         &:hover {
-          background-color: $green-color;
-          color: $color-white;
+          background-color: variables.$green-color;
+          color: variables.$color-white;
           cursor: pointer;
           font-weight: bold;
         }
         &:active {
-          background-color: $green-color;
-          color: $color-white;
+          background-color: variables.$green-color;
+          color: variables.$color-white;
           font-weight: bold;
         }
       }
@@ -1540,7 +1542,7 @@ $h1: $h2 * $ratio;
     li {
       width: 15%;
       flex: 1 0 auto;
-      font-family: $font-text;
+      font-family: variables.$font-text;
       height: 50px;
       .project-tab {
         line-height: 48px;
@@ -1620,7 +1622,7 @@ $h1: $h2 * $ratio;
       .bar {
         left: 16%;
         &:hover {
-          background: $yellow-color;
+          background: variables.$yellow-color;
           cursor: pointer;
         }
         &:hover::after {
@@ -1680,7 +1682,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: fill;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -2102,7 +2104,7 @@ $h1: $h2 * $ratio;
         left: 16%;
 
         &:hover {
-          background: $yellow-color;
+          background: variables.$yellow-color;
           cursor: pointer;
         }
         &:hover::after {
@@ -2214,7 +2216,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -2503,7 +2505,7 @@ $h1: $h2 * $ratio;
 
     li {
       width: 14%;
-      font-family: $font-text;
+      font-family: variables.$font-text;
       .project-tab {
         font-size: 1.1rem;
         line-height: 45px;
@@ -2635,7 +2637,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -2975,7 +2977,7 @@ $h1: $h2 * $ratio;
 
     li {
       width: 14%;
-      font-family: $font-text;
+      font-family: variables.$font-text;
       .project-tab {
         line-height: 45px;
         font-size: 1.1rem;
@@ -3155,7 +3157,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -3448,7 +3450,7 @@ $h1: $h2 * $ratio;
 
     li {
       width: 14%;
-      font-family: $font-text;
+      font-family: variables.$font-text;
       .project-tab {
         line-height: 45px;
         font-size: 1rem;
@@ -3636,7 +3638,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -4107,7 +4109,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -4582,7 +4584,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
@@ -5063,7 +5065,7 @@ $h1: $h2 * $ratio;
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid $color-black;
+    border: 1px solid variables.$color-black;
     border-radius: 4px;
     padding: 5px;
   }
