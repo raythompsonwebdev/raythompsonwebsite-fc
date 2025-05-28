@@ -12,7 +12,7 @@
     "autoprefixer": "^10.4.21",
     "pathe": "^2.0.3",
     "postcss": "^8.5.3",
-    "postcss-preset-env": "^10.1.6",
+    "postcss-preset-env": "^10.2.0",
     "prettier": "^3.5.3",
     "sass": "^1.89.0",
     "sharp": "^0.34.2",
