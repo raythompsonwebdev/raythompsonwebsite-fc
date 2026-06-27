@@ -39,7 +39,7 @@
     "portfolio"
   ],
   "dependencies": {
-    "svgo": "^3.3.2",
+    "svgo": "^3.3.3",
     "vite-plugin-svgr": "^4.3.0"
   }
 }
